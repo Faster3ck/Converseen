@@ -1,6 +1,6 @@
 # Converseen
 
--![alt text](http://converseen.sourceforge.net/res/converseen4.png "Converseen on Kde")
+![alt text](http://converseen.sourceforge.net/res/converseen1.png "Converseen on Kde")
 
 **Converseen** is an open source project written in **C++** with the powerful **Qt4** libraries.
 Thanks to the **Magick++** image libraries it supports more than **100 image formats**.
@@ -18,7 +18,8 @@ With converseen you can:
 
 ## Installing
 
-To install *Converseen* follow [these instructions](http://converseen.sourceforge.net/index.php?page=1).
+**Converseen** is available for both Linux and Windows platforms.
+To install **Converseen** follow [these instructions](http://converseen.sourceforge.net/index.php?page=1).
 
 ## Author
 
