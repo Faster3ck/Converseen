@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/Images">
+        <file>res/add.png</file>
+        <file>res/adept_purge.png</file>
+        <file>res/apply.png</file>
+        <file>res/cancel.png</file>
+        <file>res/exec.png</file>
+        <file>res/folder_documents.png</file>
+        <file>res/icon.png</file>
+        <file>res/reset.png</file>
+    </qresource>
+    <qresource prefix="/movies">
+        <file>res/loading.gif</file>
+    </qresource>
+</RCC>

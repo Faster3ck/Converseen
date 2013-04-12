@@ -1,0 +1,18 @@
+Converseen is an open source project written in C++ with the powerful Qt4 libraries.
+Thanks to the Magick++ image libraries it supports more than 100 image formats.
+You can convert an unlimited number of images and / or create thumbnails
+to any of the most popular formats: DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF.
+With Converseen you can save your time because it allows you to process more than one image with a mouse click!
+Converseen is very simple: it features a very simple user interface without strange options.
+
+
+With converseen you can:
+Carry out a single or a multiple conversion.
+Resize one or multiple images.
+Compress images for your web pages.
+ 
+ 
+Converseen is free and released under the GNU/GPL terms. 
+
+Faster
+faster3ck@gmail.com
