@@ -18,13 +18,13 @@ With converseen you can:
 
 ## Installing
 
-**Converseen** is available for both Linux and Windows platforms.
-To install **Converseen** follow [these instructions](http://converseen.sourceforge.net/index.php?page=1).
+**Converseen** is available for both Linux and Windows platforms.  
+To install **Converseen** follow [these instructions](http://converseen.sourceforge.net/index.php?page=1).  
 
 ## Author
 
-[Francesco Mondello](http://converseen.sourceforge.net/)
-To contact me you can use [this page](http://converseen.sourceforge.net/index.php?page=4)
+[Francesco Mondello](http://converseen.sourceforge.net/).  
+To contact me you can use [this page](http://converseen.sourceforge.net/index.php?page=4).  
 
 ## License
  
