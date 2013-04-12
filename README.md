@@ -1,5 +1,7 @@
 # Converseen
 
+-![alt text](http://converseen.sourceforge.net/res/converseen4.png "Converseen on Kde")
+
 **Converseen** is an open source project written in **C++** with the powerful **Qt4** libraries.
 Thanks to the **Magick++** image libraries it supports more than **100 image formats**.
 You can convert an unlimited number of images and / or create thumbnails
