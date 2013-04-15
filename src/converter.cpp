@@ -42,6 +42,8 @@ void Converter::reset()
 {
     m_zoom = false;
     m_density = false;
+    m_rotation = false;
+    m_flip = false;
 }
 
 Converter::~Converter()
@@ -55,25 +57,25 @@ void Converter::run()
     m_conv_status = 2;  // Jumped
 
     Image my_image;
-    QFileInfo fi(m_fileName);
+    QFileInfo fi(m_fileNameIn);
 
-    QString out = QString("%1/%2.%3").arg(m_outputDir).arg(fi.completeBaseName()).arg(m_format);
+    QString out = m_fileNameOut;
 
-    if (m_allow_rename)   // rinomina in base alla stringa #_copy
-        out = renameFileName(out);
-
-    if (!m_overwrite)   // modalità sovrascittura
+    if (!m_overwrite)   // modalità sovrascrittura
         out = overwriteOldFileName(out);
 
     if (!m_process_stopped) {
         try {
-
-            my_image.read(m_fileName.toStdString());
+            my_image.read(m_fileNameIn.toStdString());
 
             if (m_zoom)
                 resize(my_image);
             if (m_density)
                 changeDensity(my_image);
+            if (m_rotation)
+                rotate(my_image);
+            if (m_flip)
+                flip(my_image);
 
             if (writeImage(my_image, m_format, m_quality, out))
                 m_conv_status = 1;
@@ -101,9 +103,14 @@ void Converter::run()
     }
 }
 
-void Converter::setInputPicture(QString fileName)
+void Converter::setInputPicture(QString fileName)   //Name
 {
-    m_fileName = fileName;
+    m_fileNameIn = fileName;
+}
+
+void Converter::setOutputPictureName(QString fileName)
+{
+    m_fileNameOut = fileName;
 }
 
 void Converter::setFormat(QString format)
@@ -127,8 +134,34 @@ void Converter::setResize(QString resizingStr)
     m_zoom = true;
 }
 
+void Converter::setRotation(double deg)
+{
+    m_rotation = true;
+    m_rotation_deg = deg;
+}
+
+void Converter::rotate(Image &my_image)
+{
+    my_image.rotate(m_rotation_deg);
+}
+
+void Converter::setFlip(FlipOrientation orientation)
+{
+    m_flip = true;
+    m_orientation = orientation;
+}
+
+void Converter::flip(Image &my_image)
+{
+    if (m_orientation == VERTICAL)
+        my_image.flip();
+    if (m_orientation == HORIZONTAL)
+        my_image.flop();
+}
+
 void Converter::resize(Image &my_image)
 {
+    my_image.filterType(m_resamplingFilter);
     my_image.resize(resizingString.toStdString());
 }
 
@@ -138,17 +171,17 @@ void Converter::setDensity(QString densityStr)
     m_density = true;
 }
 
-void Converter::setBackgroundColor(QString bg_color, bool changeBg_color)
-{
-    m_bg_color = bg_color;
-    m_changeBg_color = changeBg_color;
-}
-
 void Converter::changeDensity(Image &my_image)
 {
     QString n_den = QString(m_densityString);
     my_image.resolutionUnits(PixelsPerInchResolution);
     my_image.density(n_den.toStdString());
+}
+
+void Converter::setBackgroundColor(QString bg_color, bool changeBg_color)
+{
+    m_bg_color = bg_color;
+    m_changeBg_color = changeBg_color;
 }
 
 void Converter::setOverwrite(bool overwrite)
@@ -181,26 +214,9 @@ void Converter::setNewBasename(QString newBaseName, bool ok)
     imageCondition.wakeAll();
 }
 
-void Converter::enableRenamingString(bool rename)
+void Converter::setResamplingFilter(FilterTypes resamplingFilter)
 {
-    m_allow_rename = rename;
-}
-
-void Converter::setRenamingString(QString renamingString)   // Rinomina il file secondo #_copy
-{
-    m_renamingString = renamingString;
-}
-
-QString Converter::renameFileName(QString oldFileName)
-{
-    QString t_renamingString = m_renamingString;
-
-    QFileInfo fi(oldFileName);
-    QString newFileName = QString("%1.%2")
-            .arg(t_renamingString.replace("#", fi.baseName()))
-            .arg(fi.suffix());
-
-    return QString("%1/%2").arg(fi.path()).arg(newFileName);
+    m_resamplingFilter = resamplingFilter;
 }
 
 bool Converter::writeImage(Image &my_image, QString format, int quality, QString out)
@@ -239,12 +255,12 @@ bool Converter::writeImage(Image &my_image, QString format, int quality, QString
             l'immagine con l'estensione maiuscola, non viene eliminata.
         */
         if (m_overwrite) {
-            QFileInfo fi1(m_fileName);
+            QFileInfo fi1(m_fileNameIn);
             QFileInfo fi2(out);
 
             if (fi1.suffix() != format)
                 if ((fi1.suffix().toLower() == format) && (fi1.path() == fi2.path()))
-                    QFile::remove(m_fileName);
+                    QFile::remove(m_fileNameIn);
         }
         #endif
 

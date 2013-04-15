@@ -22,6 +22,10 @@
 */
 
 #include "dialogquality.h"
+#include <Magick++.h>
+
+using namespace Magick;
+using namespace std;
 
 DialogQuality::DialogQuality(QWidget *parent) :
     QDialog(parent){
@@ -35,10 +39,13 @@ DialogQuality::DialogQuality(QWidget *parent) :
     connect(pushCancel, SIGNAL(clicked()), this, SLOT(close()));
 }
 
-void DialogQuality::setInitValues(int jpegVal, int pngVal)
+void DialogQuality::setInitValues(int jpegVal, int pngVal, FilterTypes filter)
 {
     spinJpegQ->setValue(jpegVal);
     spinPngQ->setValue(pngVal);
+
+    int filterIndex = comboFilters->searchFilterIndex(filter);
+    comboFilters->setCurrentIndex(filterIndex);
 }
 
 int DialogQuality::getJpegQuality()
@@ -49,6 +56,11 @@ int DialogQuality::getJpegQuality()
 int DialogQuality::getPngQuality()
 {
     return spinPngQ->value();
+}
+
+FilterTypes DialogQuality::getResamplingFilter()
+{
+    return comboFilters->currentFilter();
 }
 
 void DialogQuality::setJpegSpin(int value)

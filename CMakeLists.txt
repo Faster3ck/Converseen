@@ -15,42 +15,44 @@ SET(converseen_UIS
 )  
   
 SET(converseen_SRCS  
-    src/pushcolorchooser.cpp
     src/main.cpp
-    src/dialogoptions.cpp
-    src/inisettings.cpp
-    src/translator.cpp
+    src/cachingsystem.cpp
+    src/combofilters.cpp
     src/converter.cpp
+    src/dialogconversionstatus.cpp
+    src/dialoginfo.cpp
+    src/dialogoptions.cpp
+    src/dialogquality.cpp
+    src/formats.cpp
+    src/inisettings.cpp
+    src/mainwindowimpl.cpp
+    src/mylabelpreviewer.cpp
     src/pixtreewidget.cpp
-    src/imageinformations.cpp
+    src/pushcolorchooser.cpp
     src/sizeutil.cpp
     src/thumbnailgeneratorthread.cpp
-    src/dialogquality.cpp
-    src/mylabelpreviewer.cpp
-    src/mainwindowimpl.cpp
-    src/dialoginfo.cpp
+    src/translator.cpp
     src/whereiam.cpp
-    src/formats.cpp
-    src/dialogconversionstatus.cpp
 )  
   
 SET(converseen_MOC_HDRS  
-    src/pushcolorchooser.h
-    src/dialogoptions.h
-    src/inisettings.h
-    src/translator.h
+    src/cachingsystem.h
+    src/combofilters.h
     src/converter.h
+    src/dialogconversionstatus.h
+    src/dialoginfo.h
+    src/dialogoptions.h
+    src/dialogquality.h
+    src/formats.h
+    src/inisettings.h
+    src/mainwindowimpl.h
+    src/mylabelpreviewer.h
     src/pixtreewidget.h
-    src/imageinformations.h
+    src/pushcolorchooser.h
     src/sizeutil.h
     src/thumbnailgeneratorthread.h
-    src/dialogquality.h
-    src/mylabelpreviewer.h
-    src/mainwindowimpl.h
-    src/dialoginfo.h
+    src/translator.h
     src/whereiam.h
-    src/formats.h
-    src/dialogconversionstatus.h
 )
   
 SET(converseen_RESOURCES  
@@ -63,7 +65,6 @@ SET(converseen_LANG
     loc/converseen_es_CL.ts
     loc/converseen_pt_BR.ts
     loc/converseen_cs_CZ.ts
-    loc/converseen_pl_PL.ts
     loc/converseen_hu_HU.ts
     loc/converseen_de_DE.ts
     loc/converseen_it_IT.ts
@@ -86,6 +87,8 @@ ADD_DEFINITIONS(
 	-Wall
 	-W
 	-pthread
+	-DMAGICKCORE_HDRI_ENABLE=0
+	-DMAGICKCORE_QUANTUM_DEPTH=16
 	${QT_DEFINITIONS}
 )
 
@@ -111,7 +114,6 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_es_CL.qm DESTINATION ${CMAK
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_fr_FR.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_hu_HU.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_it_IT.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_pl_PL.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_pt_BR.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_tr_TR.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_ru_RU.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen)

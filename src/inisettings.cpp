@@ -160,6 +160,15 @@ bool IniSettings::bgColorChecked()
     return settings->value("Options/BgColor checked").toBool();
 }
 
+int IniSettings::latestInterpFiltIdx()
+{
+    int idx = 0;
+    if (settings->contains("Options/Interpolation filter"))
+        idx = settings->value("Options/Interpolation filter").toInt();
+
+    return idx;
+}
+
 void IniSettings::setOutputDir(QString path)
 {
     settings->setValue("General/Save directory", path);
@@ -238,4 +247,9 @@ void IniSettings::setRenameChecked(bool state)
 void IniSettings::setBgColorChecked(bool state)
 {
     settings->setValue("Options/BgColor checked", state);
+}
+
+void IniSettings::setLatestInterpFiltIdx(int index)
+{
+    settings->setValue("Options/Interpolation filter", index);
 }

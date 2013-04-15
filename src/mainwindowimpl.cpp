@@ -30,7 +30,6 @@
 #include "formats.h"
 #include "inisettings.h"
 #include "sizeutil.h"
-#include "imageinformations.h"
 
 using namespace Magick;
 using namespace std;
@@ -46,6 +45,8 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
     convertThread = new Converter(this);
     dlgCStatus = new DialogConversionStatus();
 
+    CachingSystem::init();
+
     connect(treeWidget, SIGNAL(dropped(QStringList)), this, SLOT(loadFiles(QStringList)));
 
     connect(bntSelDir, SIGNAL(clicked()), this, SLOT(openOutDirectory()));
@@ -59,6 +60,8 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
     connect(comboResizeValues, SIGNAL(currentIndexChanged(QString)), this, SLOT(selectGeometryUnit(QString)));
 
     connect(checkRename, SIGNAL(stateChanged(int)), this, SLOT(enableRenameLine()));
+    connect(radioPrefixSuffix, SIGNAL(clicked()), this, SLOT(enableProgressiveSpin()));
+    connect(radioProgressive, SIGNAL(clicked()), this, SLOT(enableProgressiveSpin()));
     connect(checkShowPreview, SIGNAL(stateChanged(int)), this, SLOT(enableShowPreview()));
 
     connect(pushReset, SIGNAL(clicked()), this, SLOT(onPushResetClick()));
@@ -70,6 +73,8 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
     connect(dlgCStatus, SIGNAL(stopProcess()), this, SLOT(stopProcess()));
 
     connect(pushColor, SIGNAL(clicked()), this, SLOT(choseBackgroundColor()));
+
+    connect(labelPreview, SIGNAL(previewReady(int, int, double, double)), this, SLOT(showImageInformations(int, int, double, double)));
 
     createActions();
     setupMenu();
@@ -191,7 +196,7 @@ void MainWindowImpl::createContextMenu()
 void MainWindowImpl::openFiles()
 {
     iAList->clear();
-    QPixmapCache::clear();
+    CachingSystem::clear();
     addFiles();
 }
 
@@ -294,17 +299,9 @@ void MainWindowImpl::startConversion()
     statusBar()->showMessage(tr("Processing..."));
     curr_index = 0;
 
-    convertThread->reset();
+    m_progressiveNren = spinProgressiveRen->value();    // Used when the progressive number renaming is checked
 
-    if (!checkRename->isChecked()) {
-        convertThread->setOverwrite(false);
-        convertThread->enableRenamingString(false);
-        convertThread->setOverwrite(checkOverwrite->isChecked());
-    }
-    else {
-        convertThread->enableRenamingString(true);
-        convertThread->setRenamingString(lineRename->text());   // Rinomina il file secondo #_copy
-    }
+    convertThread->reset();
 
     // Colore
     bool noTransparency = this->checkNoTransp->isChecked();
@@ -333,7 +330,6 @@ void MainWindowImpl::startConversion()
         convertThread->setResize(resizingString);
     }
 
-    /* FIXME */
     /* Change image density */
     if ((groupResolution->isChecked()) && ((m_xResolution != spin_resX->value()) || (m_yResolution != spin_resY->value()))) {
         QString densStr = QString("%1x%2")
@@ -342,6 +338,33 @@ void MainWindowImpl::startConversion()
 
         convertThread->setDensity(densStr);
     }
+
+    if (!radioRotNo->isChecked()) {
+        double rotation = 0;
+
+        if (radioRotPos90->isChecked())
+            rotation = 90.0;
+        if (radioRotNeg90->isChecked())
+            rotation = -90.0;
+        if (radioRot180->isChecked())
+            rotation = 180.0;
+
+        convertThread->setRotation(rotation);
+    }
+
+    if (!radioFlipNo->isChecked()) {
+        FlipOrientation fo;
+
+        if (radioFlipV->isChecked())
+            fo = VERTICAL;
+        if (radioFlipH->isChecked())
+            fo = HORIZONTAL;
+
+        convertThread->setFlip(fo);
+    }
+
+    convertThread->setResamplingFilter(m_resamplingFilter);
+
     convert();
 
     dlgCStatus->setup(treeWidget->countChecked());
@@ -356,30 +379,55 @@ void MainWindowImpl::convert()
 
         QString out_format;
 
+        QString inputFilename = iAList->at(curr_index).completeFileName;
+
+        QFileInfo fi(inputFilename);
+
         if (comboWFormats->currentIndex() != 0) {
             out_format = comboWFormats->currentText().split(" - ").at(0);
         }
         else {
-            QFileInfo fi(iAList->at(curr_index).fileName);
             QString suffix = fi.suffix();
 
             out_format = suffix;
         }
 
+        out_format = out_format.toLower();
+
+        QString outFileName = QString("%1/%2.%3").arg(destinationPath()).arg(fi.completeBaseName()).arg(out_format);
+
         int quality = -1;
 
-        if ((out_format == "JPG") || (out_format == "JPEG") || (out_format == "MPEG") || (out_format == "MPG")) {
+        if ((out_format == "jpg") || (out_format == "jpeg") || (out_format == "mpeg") || (out_format == "mpg")) {
             quality = jpgQuality;
         }
 
-        if ((out_format == "PNG") || (out_format == "MNG")) {
+        if ((out_format == "png") || (out_format == "mng")) {
             quality = pngQuality;
         }
 
-        convertThread->setInputPicture(iAList->at(curr_index).completeFileName);
-        convertThread->setFormat(out_format.toLower());
+        convertThread->setInputPicture(inputFilename);
+        convertThread->setFormat(out_format);
         convertThread->setQuality(quality);
         convertThread->setOutputDir(destinationPath());
+
+        if (checkRename->isChecked()) {
+            // Special renaming settings for the output file enabled
+            QString renamedOutFileName;
+
+            if (radioPrefixSuffix->isChecked())
+                renamedOutFileName = renameFileNameOnPrefixSuffix(outFileName);
+            else
+                renamedOutFileName = renameFileNameOnProgressiveN(outFileName);
+
+            convertThread->setOutputPictureName(renamedOutFileName);
+        }
+        else {
+            // No special renaming settings for the output file. Set it with tho original name + new extension
+
+            convertThread->setOutputPictureName(outFileName);
+            convertThread->setOverwrite(checkOverwrite->isChecked());
+        }
 
         convertThread->start();
     }
@@ -414,6 +462,32 @@ void MainWindowImpl::nextConversion(int conv_status)
             statusBar()->showMessage(tr("Processing finished!"), 5000);
         }
     }
+}
+
+QString MainWindowImpl::renameFileNameOnPrefixSuffix(QString oldFileName)
+{
+    QString t_renamingString = lineRename->text();
+
+    QFileInfo fi(oldFileName);
+    QString newFileName = QString("%1.%2")
+            .arg(t_renamingString.replace("#", fi.completeBaseName()))
+            .arg(fi.suffix());
+
+    return QString("%1/%2").arg(fi.path()).arg(newFileName);
+}
+
+QString MainWindowImpl::renameFileNameOnProgressiveN(QString oldFileName)
+{
+    QString t_renamingString = lineRename->text();
+
+    QFileInfo fi(oldFileName);  // For the output directory
+    QString newFileName = QString("%1.%2")
+            .arg(t_renamingString.replace("#", QString::number(m_progressiveNren)))
+            .arg(fi.suffix());
+
+    m_progressiveNren++;    // the key of progressive number renaming (set to start when the conversion in starded)
+
+    return QString("%1/%2").arg(fi.path()).arg(newFileName);
 }
 
 void MainWindowImpl::loadFormats()
@@ -476,6 +550,9 @@ void MainWindowImpl::loadOptions()
     checkSameDir->setChecked(IniSettings::imageDirChecked());
     checkRename->setChecked(IniSettings::renameChecked());
     checkNoTransp->setChecked(IniSettings::bgColorChecked());
+
+    enableRenameLine();
+    enableProgressiveSpin();
 }
 
 void MainWindowImpl::setQuality()
@@ -483,13 +560,16 @@ void MainWindowImpl::setQuality()
     loadQuality();
 
     DialogQuality *dlg = new DialogQuality();
-    dlg->setInitValues(jpgQuality, pngQuality);
+    dlg->setInitValues(jpgQuality, pngQuality, m_resamplingFilter);
     if (dlg->exec()) {
         jpgQuality = dlg->getJpegQuality();
         pngQuality = dlg->getPngQuality();
 
+        m_resamplingFilter = dlg->getResamplingFilter();
+
         IniSettings::setJpgQuality(jpgQuality);
         IniSettings::setPngQuality(pngQuality);
+        IniSettings::setLatestInterpFiltIdx((int)m_resamplingFilter);
     }
 }
 
@@ -497,21 +577,26 @@ void MainWindowImpl::loadQuality()
 {
     jpgQuality = IniSettings::jpgQuality();
     pngQuality = IniSettings::pngQuality();
+    m_resamplingFilter = (FilterTypes)IniSettings::latestInterpFiltIdx();
 }
 
 void MainWindowImpl::removeItems()
 {
-    treeWidget->removeItems(iAList);
-    resetDisplays();
+    if (!iAList->isEmpty()) {
+        treeWidget->removeItems(iAList);
+        resetDisplays();
+    }
 }
 
 void MainWindowImpl::removeAllItems()
 {
-    treeWidget->clear();
-    iAList->clear();
-    QPixmapCache::clear();
+    if (!iAList->isEmpty()) {
+        iAList->clear();
+        CachingSystem::clear();
+        treeWidget->clear();
 
-    resetDisplays();
+        resetDisplays();
+    }
 }
 
 void MainWindowImpl::relativeSizeW()
@@ -553,27 +638,43 @@ void MainWindowImpl::relativeSizeH()
 
 void MainWindowImpl::loadPreview(QString fileName)
 {
-    ImageInformations *imgInfo = new ImageInformations(fileName);
+    labelPreview->loadPreview(fileName, checkShowPreview->isChecked());
+}
 
-    img_width = imgInfo->imageWidth();
-    img_height = imgInfo->imageHeight();
+void MainWindowImpl::showImageInformations(int orig_w, int orig_h, double orig_dens_x, double orig_dens_y)
+{
+    /*
+        Method executed by the signal myLabelPreviewer::previewReady(orig_w, orig_h, orig_dens_x, orig_dens_y);
+    */
 
-    m_xResolution = imgInfo->x_Resolution();
-    m_yResolution = imgInfo->y_Resolution();
+    img_width = orig_w;
+    img_height = orig_h;
 
-    delete imgInfo;
+    m_xResolution = orig_dens_x;
+    m_yResolution = orig_dens_y;
 
-    if (checkShowPreview->isChecked()) {
-        labelPreview->loadPreview(fileName);
-    }
-    else
-        labelPreview->setText(tr("No preview!"));
+    int index = treeWidget->currentIndex().row();
+
+    labelType->setText(QString("<span style=\" font-size:8pt;\">%1</span>")
+                           .arg(iAList->at(index).suffix));
+
+        QString sSize = SizeUtil::simplifyFileSize(iAList->at(index).size);
+        labelFileSize->setText(QString("<span style=\" font-size:8pt;\">%1</span>")
+                               .arg(sSize));
+
+        label_ImageSize->setText(QString("<span style=\" font-size:8pt;\">%1 x %2 px</span>")
+                                 .arg(img_width)
+                                 .arg(img_height));
+
+        label_ImageResolution->setText(QString("<span style=\" font-size:8pt;\">X = %1 Y = %2</span>")
+                                       .arg(m_xResolution)
+                                       .arg(m_yResolution));
 }
 
 void MainWindowImpl::onItemSelection()
 {
     if (!iAList->isEmpty()) {
-        showImageInformations();
+        showPreviewAndInfos();
         showNewSizePreview();
     }
 }
@@ -585,25 +686,10 @@ void MainWindowImpl::onPushResetClick()
     spin_resY->setValue(m_yResolution);
 }
 
-void MainWindowImpl::showImageInformations()
+void MainWindowImpl::showPreviewAndInfos()
 {
     int index = treeWidget->currentIndex().row();
     loadPreview(iAList->at(index).completeFileName);
-
-    labelType->setText(QString("<span style=\" font-size:8pt;\">%1</span>")
-                       .arg(iAList->at(index).suffix));
-
-    QString sSize = SizeUtil::simplifyFileSize(iAList->at(index).size);
-    labelFileSize->setText(QString("<span style=\" font-size:8pt;\">%1</span>")
-                           .arg(sSize));
-
-    label_ImageSize->setText(QString("<span style=\" font-size:8pt;\">%1 x %2 px</span>")
-                             .arg(img_width)
-                             .arg(img_height));
-
-    label_ImageResolution->setText(QString("<span style=\" font-size:8pt;\">X = %1 Y = %2</span>")
-                                   .arg(m_xResolution)
-                                   .arg(m_yResolution));
 }
 
 void MainWindowImpl::editSettings()
@@ -622,10 +708,35 @@ void MainWindowImpl::about()
 
 void MainWindowImpl::enableRenameLine()
 {
-    if (checkRename->isChecked())
+    if (checkRename->isChecked()) {
         lineRename->setEnabled(true);
+        radioPrefixSuffix->setEnabled(true);
+        radioProgressive->setEnabled(true);
+        spinProgressiveRen->setEnabled(true);
+        labeStartWith->setEnabled(true);
+    }
     else
+    {
         lineRename->setEnabled(false);
+        radioPrefixSuffix->setEnabled(false);
+        radioProgressive->setEnabled(false);
+        spinProgressiveRen->setEnabled(false);
+        labeStartWith->setEnabled(false);
+    }
+
+    enableProgressiveSpin();
+}
+
+void MainWindowImpl::enableProgressiveSpin()
+{
+    if (radioProgressive->isChecked()) {
+        spinProgressiveRen->setEnabled(true);
+        labeStartWith->setEnabled(true);
+    }
+    else {
+        spinProgressiveRen->setEnabled(false);
+        labeStartWith->setEnabled(false);
+    }
 }
 
 void MainWindowImpl::enableShowPreview()
@@ -633,7 +744,7 @@ void MainWindowImpl::enableShowPreview()
     if(treeWidget->selectedItems().count() > 0)
         onItemSelection();
     else
-        labelPreview->setText(tr("No preview!"));
+        labelPreview->setText(tr("Preview"));
 }
 
 void MainWindowImpl::selectGeometryUnit(QString unit)
@@ -690,7 +801,7 @@ void MainWindowImpl::showNewSizePreview()
 
 void MainWindowImpl::resetDisplays()
 {
-    labelPreview->setText(tr("No preview!"));
+    labelPreview->setText(tr("Preview"));
 
     img_width = 0;
     img_height = 0;
@@ -806,6 +917,5 @@ QString MainWindowImpl::destinationPath()
 
 void MainWindowImpl::openPaypalLink()
 {
-//
     QDesktopServices::openUrl(QUrl("http://converseen.sourceforge.net/#donations", QUrl::TolerantMode));
 }

@@ -52,6 +52,7 @@ public:
     static bool imageDirChecked();
     static bool renameChecked();
     static bool bgColorChecked();
+    static int latestInterpFiltIdx();
 
     static void setOutputDir(QString path);
     static void setWindowGeometry(QByteArray geometry);
@@ -69,6 +70,7 @@ public:
     static void setImageDirChecked(bool state);
     static void setRenameChecked(bool state);
     static void setBgColorChecked(bool state);
+    static void setLatestInterpFiltIdx(int index);
 
 //private:
     static QSettings *settings;

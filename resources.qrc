@@ -8,6 +8,11 @@
         <file>res/folder_documents.png</file>
         <file>res/icon.png</file>
         <file>res/reset.png</file>
+        <file>res/90m.png</file>
+        <file>res/90p.png</file>
+        <file>res/180.png</file>
+        <file>res/h.png</file>
+        <file>res/v.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file>res/loading.gif</file>

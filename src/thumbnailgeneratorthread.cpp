@@ -24,6 +24,9 @@
 #include "formats.h"
 #include "thumbnailgeneratorthread.h"
 
+#define MAX_THUMB_W 320
+#define MAX_THUMB_H 240
+
 ThumbnailGeneratorThread::ThumbnailGeneratorThread(QObject *parent) :
     QThread(parent)
 {
@@ -31,7 +34,29 @@ ThumbnailGeneratorThread::ThumbnailGeneratorThread(QObject *parent) :
 
 void ThumbnailGeneratorThread::run()
 {
-    loadPreview();
+    if (CachingSystem::find(m_fileName)) {  // image informations already in cache
+        QImage thumbnail = CachingSystem::thumbnail();
+        if (thumbnail.isNull() && m_generateThumbnail) {
+            /*
+                If previously the "show preview" checkbox was unchecked end then checked
+                the old cached informations will be deleted and reloaded with the thumbnail
+            */
+
+            CachingSystem::remove(m_fileName);
+            createThumbnail();
+        }
+        else {
+            int orig_w = CachingSystem::originalWidth();
+            int orig_h = CachingSystem::originalHeight();
+            double orig_dens_x = CachingSystem::originalDensityX();
+            double orig_dens_y = CachingSystem::originalDensityY();
+
+            emit pixmapGenerated(thumbnail, orig_w, orig_h, orig_dens_x, orig_dens_y);
+        }
+    }
+    else {                                  // image informations not in cache
+        createThumbnail();
+    }
 }
 
 void ThumbnailGeneratorThread::setFileName(QString fileName)
@@ -57,54 +82,86 @@ QImage* ThumbnailGeneratorThread::toQImage(const Image &image)
     return newQImage;
 }
 
-void ThumbnailGeneratorThread::loadPreview()
-{  
-    QImage tmpImage;
+void ThumbnailGeneratorThread::setThumbnailGeneration(bool generate)
+{
+    m_generateThumbnail = generate;
+}
+
+void ThumbnailGeneratorThread::createThumbnail()
+{      
+    QImage tmpImage, thumbnail;
     Image my_image;
 
-    try
-    {
-        my_image.read(m_fileName.toStdString());
+    int img_width = 0;
+    int img_height = 0;
 
-        if (Formats::isNativeReadable(m_fileName))
-            tmpImage.load(m_fileName);
-        else {
-            QImage *aQImage = toQImage(my_image);
-            tmpImage = *aQImage;
-            delete aQImage;
+    double img_dens_x = 0.0;
+    double img_dens_y = 0.0;
+
+    if (Formats::isNativeReadable(m_fileName)) {
+        tmpImage.load(m_fileName);
+
+        img_width = tmpImage.width();
+        img_height = tmpImage.height();
+
+        img_dens_x = tmpImage.logicalDpiX();
+        img_dens_y = tmpImage.logicalDpiY();
+
+        if (m_generateThumbnail)
+            thumbnail = tmpImage;
+    }
+    else {
+        try
+        {
+            my_image.read(m_fileName.toStdString());
+
+            img_width = my_image.columns();
+            img_height = my_image.rows();
+
+            img_dens_x = my_image.xResolution();
+            img_dens_y = my_image.yResolution();
+
+            if (m_generateThumbnail) {
+                QImage *aQImage = toQImage(my_image);
+
+                thumbnail = *aQImage;
+                delete aQImage;
+            }
+        }
+        catch (Error& my_error) {
+            //setText(tr("Sorry! Selected image is damaged!"));
+        }
+        catch ( Magick::WarningCoder &warning )
+        {
+            //setText(tr("Sorry! Selected image is damaged!"));
+        }
+        catch ( Magick::Warning &warning )
+        {
+            //setText(tr("Sorry! Selected image is damaged!"));
         }
 
-        int img_width = my_image.columns();
-        int img_height = my_image.rows();
+    }
 
-        int n_heigth = (320 * img_height) / img_width;
+    if (m_generateThumbnail) {
+        int n_heigth = (MAX_THUMB_W * img_height) / img_width;
 
-        if (!((img_width <= 320) && (img_height <= 240))) {
+        if (!((img_width <= MAX_THUMB_W) && (img_height <= MAX_THUMB_H))) {
             if (img_width > img_height) {
-                tmpImage = tmpImage.scaled(QSize(320, n_heigth),
+                thumbnail = thumbnail.scaled(QSize(MAX_THUMB_W, n_heigth),
                                            Qt::IgnoreAspectRatio,
                                            Qt::SmoothTransformation);
             }
             else
-                if ((img_width <= img_height) || (n_heigth > 240)) {
-                    int n_width = (240 * img_width) / img_height;
-                    tmpImage = tmpImage.scaled(QSize(n_width, 240),
+                if ((img_width <= img_height) || (n_heigth > MAX_THUMB_H)) {
+                    int n_width = (MAX_THUMB_H * img_width) / img_height;
+                    thumbnail = thumbnail.scaled(QSize(n_width, MAX_THUMB_H),
                                                Qt::IgnoreAspectRatio,
                                                Qt::SmoothTransformation);
                 }
         }
     }
-    catch (Error& my_error) {
-        //setText(tr("Sorry! Selected image is damaged!"));
-    }
-    catch( Magick::WarningCoder &warning )
-    {
-        //setText(tr("Sorry! Selected image is damaged!"));
-    }
-    catch( Magick::Warning &warning )
-    {
-        //setText(tr("Sorry! Selected image is damaged!"));
-    }
 
-    emit pixmapGenerated(tmpImage);
+    CachingSystem::insert(m_fileName, thumbnail, img_width, img_height, img_dens_x, img_dens_y);
+
+    emit pixmapGenerated(thumbnail, img_width, img_height, img_dens_x, img_dens_y);
 }

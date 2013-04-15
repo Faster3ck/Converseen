@@ -32,6 +32,7 @@
 #include <QObject>
 #include <QPixmap>
 #include <QPixmapCache>
+#include "cachingsystem.h"
 
 using namespace Magick;
 using namespace std;
@@ -44,15 +45,17 @@ public:
     void run();
 
     void setFileName(QString fileName);
+    void setThumbnailGeneration(bool generate);
 
 private:
-    void loadPreview();
+    void createThumbnail();
 
     QImage* toQImage(const Image &image);
     QString m_fileName;
+    bool m_generateThumbnail;
 
 signals:
-    void pixmapGenerated(QImage pixmap);
+    void pixmapGenerated(QImage thumbnail, int orig_w, int orig_h, double orig_dens_x, double orig_dens_y);
 
 public slots:
 

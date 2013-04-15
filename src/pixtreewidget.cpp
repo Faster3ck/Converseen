@@ -28,12 +28,13 @@
 #include <QDir>
 #include <QFileInfo>
 #include <QUrl>
-#include <QPixmapCache>
 #include "pixtreewidget.h"
 #include "formats.h"
 #include "sizeutil.h"
+#include "cachingsystem.h"
 
-PixTreeWidget::PixTreeWidget(QWidget *parent):QTreeWidget(parent) {
+PixTreeWidget::PixTreeWidget(QWidget *parent):QTreeWidget(parent)
+{
     QStringList headers;
     headers.append(tr("To convert"));
     headers.append(tr("Status"));
@@ -67,7 +68,8 @@ void PixTreeWidget::addItems(QList<ImageAttributes> *iAList)
     }
 }
 
-void PixTreeWidget::dragMoveEvent(QDragMoveEvent *event) {
+void PixTreeWidget::dragMoveEvent(QDragMoveEvent *event)
+{
     event->acceptProposedAction();
 }
 
@@ -141,9 +143,11 @@ void PixTreeWidget::removeItems(QList<ImageAttributes> *iAList)
 {
     for (int i = this->topLevelItemCount() - 1; i >= 0; i--)
         if ((this->topLevelItem(i))->isSelected()) {
-            QPixmapCache::remove (iAList->at(i).completeFileName);
+            QString s = iAList->at(i).completeFileName;
+
             iAList->removeAt(i);
             this->takeTopLevelItem(i);
+            CachingSystem::remove(s);
         }
 }
 

@@ -25,9 +25,10 @@ CONFIG += qt \
     src/inisettings.h \
     src/sizeutil.h \
     src/mylabelpreviewer.h \
-    src/imageinformations.h \
     src/thumbnailgeneratorthread.h \
-    src/pushcolorchooser.h
+    src/pushcolorchooser.h \
+    src/cachingsystem.h \
+    src/combofilters.h
  SOURCES =  src/mainwindowimpl.cpp \
   src/main.cpp \
   src/converter.cpp \
@@ -42,9 +43,10 @@ CONFIG += qt \
     src/inisettings.cpp \
     src/sizeutil.cpp \
     src/mylabelpreviewer.cpp \
-    src/imageinformations.cpp \
     src/thumbnailgeneratorthread.cpp \
-    src/pushcolorchooser.cpp
+    src/pushcolorchooser.cpp \
+    src/cachingsystem.cpp \
+    src/combofilters.cpp
 
  QMAKE_CXXFLAGS += -O2 \
   -Wall \
@@ -53,27 +55,12 @@ CONFIG += qt \
   -DMAGICKCORE_HDRI_ENABLE=0 \
   -DMAGICKCORE_QUANTUM_DEPTH=16
   
- INCLUDEPATH +=  /usr/include/ImageMagick
+ INCLUDEPATH +=  /usr/include/ImageMagick-6
 
- if (exists(/usr/lib64)) {
-  if (exists(/usr/lib64/libMagick++-Q16.so)) {
-    LIBS +=  -L/usr/lib64  -lMagick++-Q16  -lMagickWand-Q16  -lMagickCore-Q16
-  }
-  else {
-    LIBS +=  -L/usr/lib64  -lMagick++  -lMagickWand  -lMagickCore
-  }
- }
- else {
-  if (exists(/usr/lib/libMagick++-Q16.so)) {
-    LIBS +=  -L/usr/lib  -lMagick++-Q16  -lMagickWand-Q16  -lMagickCore-Q16
-  }
-  else {
-    LIBS +=  -L/usr/lib  -lMagick++  -lMagickWand  -lMagickCore
-  }
- }
+ LIBS +=  -L/usr/lib  -lMagick++-6.Q16  -lMagickWand-6.Q16  -lMagickCore-6.Q16
+
 
  TRANSLATIONS +=  loc/converseen_it_IT.ts \
- loc/converseen_pl_PL.ts \
  loc/converseen_hu_HU.ts \
  loc/converseen_cs_CZ.ts \
  loc/converseen_fr_FR.ts \
@@ -81,7 +68,8 @@ CONFIG += qt \
  loc/converseen_de_DE.ts \
  loc/converseen_es_CL.ts \
  loc/converseen_tr_TR.ts \
- loc/converseen_ru_RU.ts
+ loc/converseen_ru_RU.ts \
+ loc/converseen_en_US.ts
  
  RESOURCES +=  resources.qrc
  INSTALL_PREFIX =  /usr
@@ -89,7 +77,6 @@ CONFIG += qt \
  SHARE_DIR =  $${INSTALL_PREFIX}/share
  translations.path = $${SHARE_DIR}/converseen
  translations.files = loc/converseen_it_IT.qm \
- loc/converseen_pl_PL.qm \
  loc/converseen_hu_HU.qm \
  loc/converseen_cs_CZ.qm \
  loc/converseen_fr_FR.qm \

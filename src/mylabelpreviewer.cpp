@@ -22,7 +22,6 @@
 */
 
 #include <QMovie>
-#include <QPixmapCache>
 #include "mylabelpreviewer.h"
 #include "formats.h"
 
@@ -30,30 +29,32 @@ myLabelPreviewer::myLabelPreviewer(QWidget *parent) : QLabel(parent)
 {
     thumbGen = new ThumbnailGeneratorThread(this);
 
-    connect(thumbGen, SIGNAL(pixmapGenerated(QImage)), this, SLOT(showPreview(QImage)));
-
-    setText("No preview!");
+    connect(thumbGen, SIGNAL(pixmapGenerated(QImage, int, int, double, double)), this, SLOT(showPreview(QImage, int, int, double, double)));
 }
 
-void myLabelPreviewer::loadPreview(QString fileName)
+void myLabelPreviewer::loadPreview(QString fileName, bool generateThumbnail)
 {
-    key = fileName;
+    m_generateThumbnail = generateThumbnail;
 
-    if (!QPixmapCache::find(key, m_pixmap)) {
+    if (generateThumbnail)
         showLoadingAnimation();
-        thumbGen->setFileName(fileName);
-        thumbGen->start();
-    }
-    else
-        this->setPixmap(m_pixmap);
+
+    thumbGen->setFileName(fileName);
+    thumbGen->setThumbnailGeneration(generateThumbnail);
+    thumbGen->start();
 }
 
-void myLabelPreviewer::showPreview(QImage image)
+void myLabelPreviewer::showPreview(QImage thumbnail, int orig_w, int orig_h, double orig_dens_x, double orig_dens_y)
 {
-    m_pixmap = QPixmap::fromImage(image);
-    QPixmapCache::insert(key, m_pixmap);
+    if (thumbnail.isNull() || !m_generateThumbnail) {
+        setText(tr("Preview"));
+    }
+    else {
+        QPixmap pixmap = QPixmap::fromImage(thumbnail);
+        this->setPixmap(pixmap);
+    }
 
-    this->setPixmap(m_pixmap);
+    emit previewReady(orig_w, orig_h, orig_dens_x, orig_dens_y);
 }
 
 void myLabelPreviewer::showLoadingAnimation()

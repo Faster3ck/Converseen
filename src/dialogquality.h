@@ -30,9 +30,10 @@ class DialogQuality : public QDialog, private Ui::DialogQuality {
     Q_OBJECT
 public:
     DialogQuality(QWidget *parent = 0);
-    void setInitValues(int jpegVal, int pngVal);
+    void setInitValues(int jpegVal, int pngVal, FilterTypes filter);
     int getJpegQuality();
     int getPngQuality();
+    FilterTypes getResamplingFilter();
 private:
 
     int jpegQuality;

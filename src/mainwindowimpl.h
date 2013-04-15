@@ -23,7 +23,7 @@
 
 #ifndef MAINWINDOWIMPL_H
 #define MAINWINDOWIMPL_H
-//
+
 #include <QMainWindow>
 #include <QtGui>
 #include <QFileInfo>
@@ -36,6 +36,7 @@
 #include "dialogconversionstatus.h"
 #include "pixtreewidget.h"
 #include "mylabelpreviewer.h"
+#include "cachingsystem.h"
 
 class QDropEvent;
 
@@ -62,10 +63,12 @@ private:
     void deleteItems(int selectedItems);
 
     void loadPreview(QString fileName);
-    void showImageInformations();   // quello che succede alla selezione dell'item.
+    void showPreviewAndInfos();   // quello che succede alla selezione dell'item.
 
     void resetDisplays();
 
+    QString renameFileNameOnPrefixSuffix(QString oldFileName);
+    QString renameFileNameOnProgressiveN(QString oldFileName);
     QString destinationPath();
 
     QList<ImageAttributes> *iAList;
@@ -84,7 +87,12 @@ private:
 
     bool abort_all;
 
+    int m_progressiveNren;      // Incremented when the progressive number renaming is checked
+
     QString m_bgColor;
+
+    FilterTypes m_resamplingFilter;
+
 private slots:
     void loadFiles(QStringList fileNames);
     void openFiles();
@@ -99,6 +107,8 @@ private slots:
     void relativeSizeW();
     void relativeSizeH();
 
+    void showImageInformations(int orig_w, int orig_h, double orig_dens_x, double orig_dens_y);
+
     void onItemSelection();
     void editSettings();
 
@@ -106,6 +116,7 @@ private slots:
 
     void enableRenameLine();
     void enableShowPreview();
+    void enableProgressiveSpin();
 
     void showNewSizePreview();
 

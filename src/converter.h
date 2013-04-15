@@ -33,6 +33,8 @@
 using namespace Magick;
 using namespace std;
 
+enum FlipOrientation { VERTICAL, HORIZONTAL };
+
 class Converter : public QThread
 {
     Q_OBJECT
@@ -43,37 +45,45 @@ public:
     void run();
 
     void setInputPicture(QString fileName);
+    void setOutputPictureName(QString fileName);
     void setFormat(QString format);
     void setQuality(int quality);
     void setOutputDir(QString outputDir);
     void setResize(QString resizingStr);
+    void setRotation(double deg);
+    void setFlip(FlipOrientation orientation);
     void setDensity(QString densityStr);
     void setBackgroundColor(QString bg_color, bool changeBg_color);
     void setOverwrite(bool overwrite);
-    void enableRenamingString(bool rename);
-    void setRenamingString(QString renamingString);
     void setNewBasename(QString newBaseName, bool ok);
+    void setResamplingFilter(FilterTypes resamplingFilter);
     void stopProcess();
 
     QMutex mutex;
 private:
     void resize(Image &my_image);
     void changeDensity(Image &my_image);
+    void rotate(Image &my_image);
+    void flip(Image &my_image);
     bool writeImage(Image &my_image, QString format, int quality, QString out);
     QString overwriteOldFileName(QString out);
-    QString renameFileName(QString oldFileName);
 
-    QString m_fileName;
+    QString m_fileNameIn;
+    QString m_fileNameOut;
     QString m_format;
     int m_quality;
     QString m_outputDir;
     QString m_bg_color;
     bool m_changeBg_color;
+    double m_rotation_deg;
+    bool m_flip;
+    FlipOrientation m_orientation;
 
     bool m_zoom;
     bool m_overwrite;
     bool m_allow_rename;
     bool m_density;
+    bool m_rotation;
     bool m_process_stopped;
 
     int m_conv_status;  // 1 = processed; 2 = jump/unchecked; -1 = Error;
@@ -86,6 +96,8 @@ private:
     QString m_newBaseName;
 
     QWaitCondition imageCondition;
+
+    FilterTypes m_resamplingFilter;
 signals:
     void nextConversion(int);
     void requestOverwrite(QString);
