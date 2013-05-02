@@ -252,45 +252,48 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialoginfo.ui" line="94"/>
         <source>&lt;strong&gt;Hungarian translation: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Ungarische Übersetzung:: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="101"/>
         <source>&lt;strong&gt;Czech translation: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Tschechische Übersetzung: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="108"/>
         <source>&lt;strong&gt;French Translation: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Französische Übersetzung: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
+</translation>
     </message>
     <message utf8="true">
         <location filename="../ui/dialoginfo.ui" line="116"/>
         <source>&lt;strong&gt;Brazilian Portuguese Translation: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Brasilianisch-Portugiesische Übersetzung: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="126"/>
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Deutsche Übersetzung: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
     <message utf8="true">
         <location filename="../ui/dialoginfo.ui" line="133"/>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Spanisch-Chilenische Übersetzung: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
+</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="141"/>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Türkische Übersetzung: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
+</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="149"/>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Russische Übersetzung: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -541,7 +544,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:10pt;&quot;&gt;(c) 2009 - 2013 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:10pt;&quot;&gt;(c) 2009 - 2013 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -711,12 +718,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogquality.ui" line="99"/>
         <source>Interpolation</source>
-        <translation type="unfinished"></translation>
+        <translation>Interpolation</translation>
     </message>
     <message>
         <location filename="../ui/dialogquality.ui" line="107"/>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filter:</translation>
     </message>
     <message>
         <location filename="../ui/dialogquality.ui" line="147"/>
@@ -979,7 +986,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="519"/>
         <source>Dimensions</source>
-        <translation type="unfinished">Abmessungen</translation>
+        <translation>Abmessungen</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="553"/>
@@ -1047,52 +1054,52 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/mainwindow.ui" line="740"/>
         <location filename="../ui/mainwindow.ui" line="746"/>
         <source>Rotate and flip</source>
-        <translation type="unfinished"></translation>
+        <translation>Drehen und Spiegeln</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="761"/>
         <source>Rotate image:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild drehen:</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="770"/>
         <source>No rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Keine Drehung</translation>
     </message>
     <message utf8="true">
         <location filename="../ui/mainwindow.ui" line="787"/>
         <source>+ 90°</source>
-        <translation type="unfinished"></translation>
+        <translation>+ 90°</translation>
     </message>
     <message utf8="true">
         <location filename="../ui/mainwindow.ui" line="801"/>
         <source>- 90°</source>
-        <translation type="unfinished"></translation>
+        <translation>- 90°</translation>
     </message>
     <message utf8="true">
         <location filename="../ui/mainwindow.ui" line="817"/>
         <source>180°</source>
-        <translation type="unfinished">180°</translation>
+        <translation>180°</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="842"/>
         <source>Flip image:</source>
-        <translation type="unfinished"></translation>
+        <translation>Bild spiegeln:</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="851"/>
         <source>No flip</source>
-        <translation type="unfinished"></translation>
+        <translation>Keine Spiegelung</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="869"/>
         <source>Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>horizontal</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="883"/>
         <source>Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>vertikal</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="933"/>
@@ -1127,12 +1134,13 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1009"/>
         <source>Prefix/Suffix</source>
-        <translation type="unfinished"></translation>
+        <translation>Präfix/Suffix</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1019"/>
         <source>Progressive Number</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Progressive Nummer</translatorcomment>
+        <translation>Progressive Number</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1036"/>
@@ -1142,7 +1150,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1043"/>
         <source>Start with:</source>
-        <translation type="unfinished"></translation>
+        <translation>Beginnen mit:</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1072"/>
@@ -1459,7 +1467,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/mainwindowimpl.cpp" line="747"/>
         <location filename="../src/mainwindowimpl.cpp" line="804"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorschau</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="844"/>
@@ -1556,7 +1564,7 @@ Klicke &quot;Abbrechen&quot;, um alle Operationen abzubrechen.</translation>
     <message>
         <location filename="../src/mylabelpreviewer.cpp" line="50"/>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorschau</translation>
     </message>
 </context>
 </TS>

@@ -68,8 +68,7 @@ CONFIG += qt \
  loc/converseen_de_DE.ts \
  loc/converseen_es_CL.ts \
  loc/converseen_tr_TR.ts \
- loc/converseen_ru_RU.ts \
- loc/converseen_en_US.ts
+ loc/converseen_ru_RU.ts
  
  RESOURCES +=  resources.qrc
  INSTALL_PREFIX =  /usr
