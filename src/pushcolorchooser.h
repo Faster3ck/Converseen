@@ -24,7 +24,7 @@
 #ifndef PUSHCOLORCHOOSER_H
 #define PUSHCOLORCHOOSER_H
 
-#include <QtGui>
+#include <QPushButton>
 
 class PushColorChooser : public QPushButton
 {

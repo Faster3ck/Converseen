@@ -28,7 +28,7 @@
 #include <iostream>
 #include <Magick++.h>
 
-#include <QtGui>
+#include <QThread>
 #include <QObject>
 #include <QPixmap>
 #include <QPixmapCache>

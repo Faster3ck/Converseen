@@ -24,7 +24,10 @@
 #ifndef __CONVERTER_H__
 #define __CONVERTER_H__
 
-#include <QtGui>
+#include <QThread>
+#include <QMutex>
+#include <QWaitCondition>
+#include <QDialog>
 #include <QObject>
 #include <Magick++.h>
 #include <string>

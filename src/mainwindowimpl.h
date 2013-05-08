@@ -25,11 +25,16 @@
 #define MAINWINDOWIMPL_H
 
 #include <QMainWindow>
-#include <QtGui>
 #include <QFileInfo>
 #include <QList>
 #include <QSettings>
 #include <QDropEvent>
+#include <QFileDialog>
+#include <QMessageBox>
+#include <QFileDialog>
+#include <QInputDialog>
+#include <QDesktopServices>
+#include <QUrl>
 #include "ui_mainwindow.h"
 #include "converter.h"
 #include "dialogquality.h"

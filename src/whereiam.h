@@ -24,7 +24,6 @@
 #ifndef __WHEREIAM_H__
 #define __WHEREIAM_H__
 
-#include <QtCore>
 #include <QDir>
 
 class WhereIAm

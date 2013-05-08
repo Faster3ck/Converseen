@@ -25,7 +25,7 @@
 
 QString SizeUtil::simplifyFileSize(qint64 size)
 {
-    QString sSize = "0";
+    QString sSize;
 
     sSize = QString("%1 Bytes").arg(size);
     if (size > 1024)

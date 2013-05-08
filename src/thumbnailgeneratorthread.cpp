@@ -30,6 +30,7 @@
 ThumbnailGeneratorThread::ThumbnailGeneratorThread(QObject *parent) :
     QThread(parent)
 {
+    m_generateThumbnail = true;
 }
 
 void ThumbnailGeneratorThread::run()
@@ -68,9 +69,9 @@ QImage* ThumbnailGeneratorThread::toQImage(const Image &image)
 {
     QImage *newQImage = new QImage(image.columns(), image.rows(), QImage::Format_RGB32);
 
-    const Magick::PixelPacket *pixels;
     Magick::ColorRGB rgb;
     for (int y = 0; y < newQImage->height(); y++) {
+        const Magick::PixelPacket *pixels;
         pixels = image.getConstPixels(0, y, newQImage->width(), 1);
         for (int x = 0; x < newQImage->width(); x++) {
             rgb = (*(pixels + x));
@@ -79,6 +80,7 @@ QImage* ThumbnailGeneratorThread::toQImage(const Image &image)
                                              , (int) (255 * rgb.blue())).rgb());
         }
     }
+
     return newQImage;
 }
 

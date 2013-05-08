@@ -68,7 +68,7 @@ void Formats::loadFormats()
                                  .arg(QString::fromStdString(entry->name()))
                                  .arg(QString::fromStdString(entry->description()));
 
-        entry++;
+        ++entry;
     }
 
     ////////////////////

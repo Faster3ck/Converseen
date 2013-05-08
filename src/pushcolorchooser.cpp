@@ -21,6 +21,7 @@
 *
 */
 
+#include <QPainter>
 #include "pushcolorchooser.h"
 
 PushColorChooser::PushColorChooser(QWidget *parent) :

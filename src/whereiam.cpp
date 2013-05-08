@@ -21,6 +21,7 @@
 *
 */
 
+#include <QCoreApplication>
 #include "whereiam.h"
 
 WhereIAm::WhereIAm()
@@ -42,9 +43,8 @@ QString WhereIAm::dataDir()
 #endif
 
 #ifdef Q_WS_WIN
-        dataDir = QCoreApplication::applicationDirPath() + "\\";
+        dataDir = dataDir + "\\";
 #endif
-
 
     return(dataDir);
 }

@@ -22,11 +22,12 @@
 */
 
 #include <QApplication>
+#include <QTextCodec>
 #include <Magick++.h>
 #include "mainwindowimpl.h"
 #include "translator.h"
 
-#define VERSION "0.6"
+#define VERSION "0.6.2"
 
 int main(int argc, char ** argv)
 {
