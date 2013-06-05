@@ -40,9 +40,7 @@ QString WhereIAm::dataDir()
     else
         if (binDir == "/usr/local/bin")
             dataDir = "/usr/local/share/";	// If linux /usr/local installed
-#endif
-
-#ifdef Q_WS_WIN
+#else   // Windows, Haiku etc...
         dataDir = dataDir + "\\";
 #endif
 

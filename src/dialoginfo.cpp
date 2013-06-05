@@ -21,6 +21,8 @@
 *
 */
 
+#include <QUrl>
+#include <QDesktopServices>
 #include "dialoginfo.h"
 
 DialogInfo::DialogInfo(QWidget *parent) :
@@ -28,6 +30,8 @@ DialogInfo::DialogInfo(QWidget *parent) :
     setupUi(this);
 
     connect(pushClose, SIGNAL(clicked()), this, SLOT(close()));
+    connect(pushFacebook, SIGNAL(clicked()), this, SLOT(openFacebookPage()));
+    connect(pushGPlus, SIGNAL(clicked()), this, SLOT(openGooglePlusPage()));
 
     QString title = QString("<p><span style=\" font-size:12pt; font-weight:600;\">Converseen %1</span><br />"
                             "<span style=\" font-size:10pt;\">%2</span></p>")
@@ -37,4 +41,14 @@ DialogInfo::DialogInfo(QWidget *parent) :
     labelTitle->setText(title);
 
     adjustSize();
+}
+
+void DialogInfo::openFacebookPage()
+{
+    QDesktopServices::openUrl(QUrl("https://www.facebook.com/converseen", QUrl::TolerantMode));
+}
+
+void DialogInfo::openGooglePlusPage()
+{
+    QDesktopServices::openUrl(QUrl("https://plus.google.com/u/0/b/112720480720840769800/", QUrl::TolerantMode));
 }

@@ -30,6 +30,10 @@ class DialogInfo : public QDialog, private Ui::DialogInfo {
     Q_OBJECT
 public:
     DialogInfo(QWidget *parent = 0);
+
+private slots:
+    void openFacebookPage();
+    void openGooglePlusPage();
 };
 
 #endif // DIALOGINFO_H

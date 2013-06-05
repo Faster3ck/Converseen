@@ -35,8 +35,27 @@ QStringList Formats::s_writableFilters;
 
 void Formats::loadFormats()
 {
-#ifdef Q_OS_LINUX
 
+#ifdef Q_OS_WIN32
+    QFile data1("Windows\\Readableformats.txt");
+    if (data1.open(QFile::ReadOnly)) {
+        QTextStream in(&data1);
+
+		s_readableFilters = in.readLine().split(" ");
+		s_readableFiltersString = in.readLine();
+    }
+
+    QFile data2("Windows\\WritableFormats.txt");
+    if (data2.open(QFile::ReadOnly)) {
+        QTextStream in(&data2);
+        QString line;
+        do {
+            line = in.readLine();
+            s_writableFilters << line;
+        } while (!line.isNull());
+    }
+    s_writableFilters.removeLast();
+#else
     list<CoderInfo> coderList;
     coderInfoList(&coderList,
                   CoderInfo::TrueMatch,
@@ -81,27 +100,6 @@ void Formats::loadFormats()
 
     s_readableFiltersString = readableFiltersList.join("");
     s_readableFiltersString.prepend(tr("All Supported Filters (%1)").arg(readableExts));
-#endif
-
-#ifdef Q_OS_WIN32
-    QFile data1("Windows\\Readableformats.txt");
-    if (data1.open(QFile::ReadOnly)) {
-        QTextStream in(&data1);
-
-		s_readableFilters = in.readLine().split(" ");
-		s_readableFiltersString = in.readLine();
-    }
-
-    QFile data2("Windows\\WritableFormats.txt");
-    if (data2.open(QFile::ReadOnly)) {
-        QTextStream in(&data2);
-        QString line;
-        do {
-            line = in.readLine();
-            s_writableFilters << line;
-        } while (!line.isNull());
-    }
-    s_writableFilters.removeLast();
 #endif
 
     s_writableFilters.prepend(tr("Don't change the format"));

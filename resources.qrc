@@ -13,6 +13,8 @@
         <file>res/180.png</file>
         <file>res/h.png</file>
         <file>res/v.png</file>
+        <file>res/facebook-icon.png</file>
+        <file>res/google-plus-icon.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file>res/loading.gif</file>
