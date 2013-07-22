@@ -670,6 +670,10 @@ p, li { white-space: pre-wrap; }
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Překlad do ruštiny: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
     </message>
+    <message utf8="true">
+        <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -880,11 +884,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation>&amp;Úpravy</translation>
+        <translation>Úp&amp;ravy</translation>
     </message>
     <message>
         <source>&amp;Actions</source>
-        <translation>&amp;Činnosti</translation>
+        <translation>Č&amp;innosti</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -1480,7 +1484,7 @@ Klepněte na Zrušit pro zrušení všech operací.</translation>
     <name>PixTreeWidget</name>
     <message>
         <source>To convert</source>
-        <translation>K převedení</translation>
+        <translation>Převod</translation>
     </message>
     <message>
         <source>Status</source>
@@ -1488,19 +1492,19 @@ Klepněte na Zrušit pro zrušení všech operací.</translation>
     </message>
     <message>
         <source>File name</source>
-        <translation>Název souboru</translation>
+        <translation>Název</translation>
     </message>
     <message>
         <source>Image type</source>
-        <translation>Formát obrázku</translation>
+        <translation>Formát</translation>
     </message>
     <message>
         <source>File size</source>
-        <translation>Velikost souboru</translation>
+        <translation>Velikost</translation>
     </message>
     <message>
         <source>File path</source>
-        <translation>Cesta k souboru</translation>
+        <translation>Cesta</translation>
     </message>
 </context>
 <context>

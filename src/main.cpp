@@ -27,7 +27,7 @@
 #include "mainwindowimpl.h"
 #include "translator.h"
 
-#define VERSION "0.6.3"
+#define VERSION "0.6.4"
 
 int main(int argc, char ** argv)
 {
