@@ -35,13 +35,13 @@ QString WhereIAm::dataDir()
     QString dataDir = binDir;
 
 #ifdef Q_OS_LINUX
-    if (binDir == QDir::cleanPath ("/usr/bin")) // If linux /usr installed
+    if (binDir == QDir::cleanPath("/usr/bin")) // If linux /usr installed
         dataDir = "/usr/share/";
     else
         if (binDir == "/usr/local/bin")
             dataDir = "/usr/local/share/";	// If linux /usr/local installed
 #else   // Windows, Haiku etc...
-        dataDir = dataDir + "\\";
+        dataDir = QDir::cleanPath(dataDir + "/");
 #endif
 
     return(dataDir);

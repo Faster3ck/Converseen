@@ -69,13 +69,13 @@ CONFIG += qt \
  loc/converseen_es_CL.ts \
  loc/converseen_tr_TR.ts \
  loc/converseen_ru_RU.ts \
- loc/converseen_pl_PL.ts
+ loc/converseen_pl_PL.ts \
  
  RESOURCES +=  resources.qrc
  INSTALL_PREFIX =  /usr
  target.path =  $${INSTALL_PREFIX}/bin
  SHARE_DIR =  $${INSTALL_PREFIX}/share
- translations.path = $${SHARE_DIR}/converseen
+ translations.path = $${SHARE_DIR}/converseen/loc
  translations.files = loc/converseen_it_IT.qm \
  loc/converseen_hu_HU.qm \
  loc/converseen_cs_CZ.qm \
@@ -85,7 +85,7 @@ CONFIG += qt \
  loc/converseen_es_CL.qm \
  loc/converseen_tr_TR.qm \
  loc/converseen_ru_RU.qm \
- loc/converseen_pl_PL.qm
+ loc/converseen_pl_PL.qm \
   
  icon.path = $${SHARE_DIR}/pixmaps
  icon.files = res/converseen.png

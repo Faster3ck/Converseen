@@ -44,12 +44,18 @@ Translator::Translator()
 #endif
 
     settings = new QSettings(iniPath, QSettings::IniFormat);
+
+#ifdef Q_OS_LINUX
+	m_loc = QString("%1/converseen/loc").arg(dataDir);
+#else
+	m_loc = QString("%1/loc").arg(dataDir);
+#endif
 }
 
 QTranslator *Translator::translation()
 {
     QTranslator *transl = new QTranslator;
-    QString translationFile = QString("%1/converseen/"+loadCurrentTranslationName()).arg(dataDir);
+    QString translationFile = QString("%1/%2").arg(m_loc).arg(loadCurrentTranslationName());
     transl->load(translationFile);
 
     return(transl);
@@ -80,7 +86,7 @@ QList<QPair<QString, QString> > Translator::loadTranslationFiles()
     language = tr("English");
     QTranslator transl;
 
-    QDir trPath(QString("%1/converseen").arg(dataDir));
+    QDir trPath(m_loc);
     QStringList fileNames = trPath.entryList(QStringList() << "*.qm", QDir::Files, QDir::Name);
 
     QList<QPair<QString, QString> > langsList;
@@ -89,7 +95,7 @@ QList<QPair<QString, QString> > Translator::loadTranslationFiles()
     for (int i = 0; i < fileNames.count(); i++) {
         lang.first = fileNames.at(i);
 
-        transl.load(fileNames.at(i), QString("%1/converseen").arg(dataDir));
+        transl.load(fileNames.at(i), m_loc);
         lang.second = transl.translate("Translator", "English");
 
         langsList << lang;

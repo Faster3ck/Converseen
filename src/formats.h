@@ -28,6 +28,7 @@
 #include <QStringList>
 #include <QObject>
 #include <QMap>
+#include <QDir>
 #include <Magick++.h>
 #include <string>
 #include <iostream>

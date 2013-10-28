@@ -24,6 +24,7 @@
 #include <QMessageBox>
 #include "dialogoptions.h"
 #include "translator.h"
+#include <QDebug>
 
 #define INIFILENAME ".converseen.conf"
 
@@ -101,6 +102,9 @@ void DialogOptions::loadSettings()
     }
 
     Translator t;
+    
+    qDebug() << "Lingua corrente " << t.currentLanguage();
+    
     int idx = comboLangs->findText(t.currentLanguage(), Qt::MatchExactly);
     comboLangs->setCurrentIndex(idx);
 }

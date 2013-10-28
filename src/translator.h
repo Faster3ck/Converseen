@@ -41,6 +41,7 @@ public:
         QString loadCurrentTranslationName();
 private:
         QSettings *settings;
+		QString m_loc;
 };
 
 #endif // __TRANSLATOR_H__

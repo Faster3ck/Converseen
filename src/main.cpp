@@ -24,10 +24,11 @@
 #include <QApplication>
 #include <QTextCodec>
 #include <Magick++.h>
+#include <QDebug>
 #include "mainwindowimpl.h"
 #include "translator.h"
 
-#define VERSION "0.6.4"
+#define VERSION "0.6.5"
 
 int main(int argc, char ** argv)
 {
@@ -49,6 +50,11 @@ int main(int argc, char ** argv)
     if (argc > 1) {
         if (QString::fromStdString(argv[1]) == "--list") {
             win.importListFromArgv(QString::fromStdString(argv[2]));
+        }
+    }
+    else {
+        for (int i = 0; i < argc; i++) {
+            qDebug() << "File " << argv[i];
         }
     }
 
