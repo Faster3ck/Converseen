@@ -70,6 +70,7 @@ SET(converseen_LANG
     loc/converseen_it_IT.ts
     loc/converseen_ru_RU.ts
     loc/converseen_pl_PL.ts
+    loc/converseen_ja_JP.ts
 )
 
 FIND_PACKAGE(Qt4 REQUIRED)
@@ -118,3 +119,4 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_pt_BR.qm DESTINATION ${CMAK
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_tr_TR.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_ru_RU.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_pl_PL.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_ja_JP.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)

@@ -1,16 +1,19 @@
 [Desktop Entry]
-Encoding=UTF-8
 ServiceTypes=KonqPopupMenu/Plugin,image/*
 TryExec=converseen
 Type=Service
 Actions=converseenImport;
 X-KDE-Submenu=Open with Converseen
 X-KDE-Submenu[it]=Apri con Converseen
+X-KDE-Submenu[ro]=Deschide cu Converseen
+X-KDE-Submenu[ru]=Открыть с помощью Converseen
 TryExec=convert
 
 [Desktop Action converseenImport]
 Name=Import
 Name[it]=Importa
+Name[ro]=Importați
+Name[ru]=Импортировать
 Name[x-test]=xxImportaxx
 Icon=converseen
 Exec=find %U>$HOME/.converseen_list.txt && converseen --list $HOME/.converseen_list.txt

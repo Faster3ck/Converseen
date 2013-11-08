@@ -28,7 +28,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;В общем:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Всего:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Image:</source>
@@ -36,7 +36,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Status...</source>
-        <translation>Статус...</translation>
+        <translation>Статус…</translation>
     </message>
     <message>
         <source>Conversion Status</source>
@@ -56,7 +56,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Сконвертированные:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Сконвертировано:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -84,7 +84,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Converted</source>
-        <translation>Сконвертированно</translation>
+        <translation>Сконвертировано</translation>
     </message>
 </context>
 <context>
@@ -95,7 +95,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>About Converseen...</source>
-        <translation>O Converseen...</translation>
+        <translation>O Converseen…</translation>
     </message>
     <message>
         <source>Informations</source>
@@ -133,7 +133,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Автор: &lt;/span&gt;Faster (Francesco Mondello)&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Сайт проекта: &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;converseen.sourceforge.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Моя домашняя страничка: &lt;/span&gt;&lt;a href=&quot;http://fasterindesign.altervista.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;fasterindesign.altervista.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Моя домашняя страница: &lt;/span&gt;&lt;a href=&quot;http://fasterindesign.altervista.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;fasterindesign.altervista.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -145,11 +145,11 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen это пакетный конвертер графических файлов. вы можете изменять размер и конвертировать изображения в более чем 100 форматов.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen — это пакетный конвертер графических файлов. Вы можете изменять размер и конвертировать изображения в более чем 100 форматов.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;donate via Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;пожертвовать через Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Если вы цените эту работу и хотите поддержать проект, вы можете внести материальную &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;поддержку через Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -169,48 +169,53 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;strong&gt;Hungarian translation: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на Венгерский: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Перевод на венгерский: &lt;/strong&gt;Charles Barcza — &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Czech translation: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на Чешский: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Перевод на чешский: &lt;/strong&gt;Pavel Fric — &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;French Translation: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Перевод на Французский: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
+        <translation>&lt;strong&gt;Перевод на французский: &lt;/strong&gt;Ludovic Troisi — &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
 </translation>
     </message>
     <message utf8="true">
         <source>&lt;strong&gt;Brazilian Portuguese Translation: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на Бразильский Португальский: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Перевод на бразильский португальский: &lt;/strong&gt;Márcio Moraes — &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на Немецкий: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Перевод на немецкий: &lt;/strong&gt;Marco Nickolai — &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
     <message utf8="true">
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Перевод на Испанский: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
+        <translation>&lt;strong&gt;Перевод на испанский: &lt;/strong&gt;Nelson Álvarez Sáez — &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </translation>
     </message>
     <message>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Перевод на турецкий: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
+        <translation>&lt;strong&gt;Перевод на турецкий: &lt;/strong&gt;Zeugma — &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </translation>
     </message>
     <message>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на Русский: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Перевод на русский: &lt;/strong&gt;Stasik Savorovsky — &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;,
+&lt;/strong&gt;Kyrill Detinov — &lt;a href=&quot;lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Следите за Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message utf8="true">
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
+        <translation>&lt;strong&gt;Перевод на польский: &lt;/strong&gt;Michał Olber from OSWorld.pl — &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -218,11 +223,11 @@ p, li { white-space: pre-wrap; }
     <name>DialogOptions</name>
     <message>
         <source>Ok</source>
-        <translation>Ok</translation>
+        <translation>OK</translation>
     </message>
     <message>
         <source>Please, restart Converseen to apply current language!</source>
-        <translation>Пожалуйсто перезапустите Converseen для применения текущего языка!</translation>
+        <translation>Пожалуйста, перезапустите Converseen для применения текущего языка!</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -238,7 +243,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Warning!</source>
-        <translation>Внимание!</translation>
+        <translation>Предупреждение!</translation>
     </message>
     <message>
         <source>Overwriting settings</source>
@@ -254,14 +259,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Ask first</source>
-        <translation>Спрашивать вначале</translation>
+        <translation>Спрашивать перед записью</translation>
     </message>
 </context>
 <context>
     <name>DialogQuality</name>
     <message>
         <source>Ok</source>
-        <translation>Ok</translation>
+        <translation>OK</translation>
     </message>
     <message>
         <source>Png compression level</source>
@@ -273,7 +278,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Quality 0 - 100:</source>
-        <translation>Качество 0 - 100:</translation>
+        <translation>Качество 0-100:</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -319,15 +324,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;File</source>
-        <translation>&amp;Фаил</translation>
+        <translation>&amp;Файл</translation>
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>П&amp;омощь</translation>
+        <translation>&amp;Справка</translation>
     </message>
     <message>
         <source>Show preview</source>
-        <translation>Показать предпросмотр</translation>
+        <translation>Предпросмотр</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -355,7 +360,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Show image settings dialog...</source>
-        <translation>Показать диалог настройки изображений...</translation>
+        <translation>Показать диалог настройки изображений…</translation>
     </message>
     <message>
         <source>Width:</source>
@@ -395,7 +400,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Converseen</source>
-        <translation></translation>
+        <translation>Converseen</translation>
     </message>
     <message>
         <source>Convert to:</source>
@@ -415,7 +420,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Choose color</source>
-        <translation>Выберите цвет</translation>
+        <translation>Выбрать цвет</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -503,7 +508,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>toolBar</source>
-        <translation>Панель Инструментов</translation>
+        <translation>Панель инструментов</translation>
     </message>
     <message>
         <source>&amp;Open images</source>
@@ -535,7 +540,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Remove &amp;all</source>
-        <translation>Удалить &amp;все</translation>
+        <translation>У&amp;далить все</translation>
     </message>
     <message>
         <source>Remove all pictures</source>
@@ -547,11 +552,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Check</source>
-        <translation>&amp;Проверить</translation>
+        <translation>&amp;Отметить</translation>
     </message>
     <message>
         <source>Check selected items</source>
-        <translation>Проверить выбранные элементы</translation>
+        <translation>Отметить выделенные элементы</translation>
     </message>
     <message>
         <source>Ctrl+H</source>
@@ -559,11 +564,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Check a&amp;ll</source>
-        <translation>Проверить в&amp;се</translation>
+        <translation>Отметить &amp;все</translation>
     </message>
     <message>
         <source>Check all items</source>
-        <translation>Проверить все элементы</translation>
+        <translation>Отметить все элементы</translation>
     </message>
     <message>
         <source>Ctrl+Alt+H</source>
@@ -595,7 +600,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Uncheck all &amp;items</source>
-        <translation>Снять выбор со всех &amp;элементов</translation>
+        <translation>Снять отметку со все&amp;х</translation>
     </message>
     <message>
         <source>Ctrl+Alt+J</source>
@@ -603,11 +608,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Uncheck Items</source>
-        <translation>&amp;Снять выбор с элементов</translation>
+        <translation>&amp;Снять отметку</translation>
     </message>
     <message>
         <source>Uncheck selected items</source>
-        <translation>Снять выбор с выделенных элементов</translation>
+        <translation>Снять отметку с выделенных элементов</translation>
     </message>
     <message>
         <source>Ctrl+J</source>
@@ -615,7 +620,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>&amp;Подробнее</translation>
+        <translation>&amp;О программе</translation>
     </message>
     <message>
         <source>F1</source>
@@ -623,7 +628,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Donate via Paypal</source>
-        <translation>Пожертвовать через Paypal</translation>
+        <translation>&amp;Пожертвовать через Paypal</translation>
     </message>
     <message>
         <source>Dimensions</source>
@@ -707,7 +712,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Warning!</source>
-        <translation>Внимание!</translation>
+        <translation>Предупреждение!</translation>
     </message>
     <message>
         <source>No preview!</source>
@@ -719,7 +724,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Warning</source>
-        <translation>Внимание</translation>
+        <translation>Предупреждение</translation>
     </message>
     <message>
         <source>No image checked!</source>
@@ -727,7 +732,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Processing...</source>
-        <translation>Обрабатывается...</translation>
+        <translation>Обрабатывается…</translation>
     </message>
     <message>
         <source>Open Directory</source>
@@ -743,7 +748,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Please, specify a name!</source>
-        <translation>Пожалуйсто, укажите имя!</translation>
+        <translation>Пожалуйста, укажите имя!</translation>
     </message>
     <message>
         <source>You should specify a name.

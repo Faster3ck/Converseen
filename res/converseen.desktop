@@ -1,15 +1,16 @@
 [Desktop Entry]
-Encoding=UTF-8
 Name=Converseen
 GenericName=Converseen
-Name[en_GB]=Converseen
-Name[it]=Converseen
+GenericName[it]=Converseen
+GenericName[ru]=Converseen
+GenericName[ro]=Converseen
 Comment=Batch image converter
 Comment[it]=Convertitore batch di immagini
+Comment[ru]=Пакетное преобразование изображений
+Comment[ro]=Batch converter pentru imagini
 Exec=converseen
-Icon=/usr/share/pixmaps/converseen.png
+Icon=converseen
+Categories=Qt;Graphics;RasterGraphics;
 StartupNotify=true
-X-KDE-StartupNotify=true
 Terminal=false
 Type=Application
-Categories=Qt;Graphics;
