@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Converseen
 GenericName=Converseen
+GenericName[en_GB]=Converseen
 GenericName[it]=Converseen
 GenericName[ru]=Converseen
 GenericName[ro]=Converseen
@@ -10,7 +11,6 @@ Comment[ru]=Пакетное преобразование изображений
 Comment[ro]=Batch converter pentru imagini
 Exec=converseen
 Icon=converseen
-Categories=Qt;Graphics;RasterGraphics;
-StartupNotify=true
 Terminal=false
 Type=Application
+Categories=Qt;Graphics;
