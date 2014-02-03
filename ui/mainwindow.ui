@@ -153,7 +153,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>19</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -176,6 +176,8 @@
      <string>&amp;Help</string>
     </property>
     <addaction name="actionDonate"/>
+    <addaction name="actionReportBug"/>
+    <addaction name="separator"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
@@ -231,9 +233,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-240</y>
-          <width>343</width>
-          <height>989</height>
+          <y>0</y>
+          <width>350</width>
+          <height>954</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -653,7 +655,14 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item>
-                 <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <layout class="QVBoxLayout" name="verticalLayout_19">
+                  <item>
+                   <widget class="QCheckBox" name="checkLinkAspect">
+                    <property name="text">
+                     <string>Link aspect with selected image</string>
+                    </property>
+                   </widget>
+                  </item>
                   <item>
                    <widget class="QCheckBox" name="checkRelative">
                     <property name="text">
@@ -1271,6 +1280,11 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>Donate via Paypal</string>
+   </property>
+  </action>
+  <action name="actionReportBug">
+   <property name="text">
+    <string>Report bug...</string>
    </property>
   </action>
  </widget>

@@ -1,8 +1,9 @@
 PROJECT(converseen)
 
-cmake_minimum_required(VERSION 2.4)
+cmake_minimum_required(VERSION 2.6)
   
 SET(GUI "converseen")  
+SET(QT_USE_QTNETWORK TRUE)
 
 ADD_DEFINITIONS( ${OPTIMIZATION_FLAGS} )
   
@@ -32,6 +33,7 @@ SET(converseen_SRCS
     src/sizeutil.cpp
     src/thumbnailgeneratorthread.cpp
     src/translator.cpp
+    src/updatechecker.cpp
     src/whereiam.cpp
 )  
   
@@ -52,6 +54,7 @@ SET(converseen_MOC_HDRS
     src/sizeutil.h
     src/thumbnailgeneratorthread.h
     src/translator.h
+    src/updatechecker.h
     src/whereiam.h
 )
   

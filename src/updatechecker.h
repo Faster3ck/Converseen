@@ -1,8 +1,8 @@
 /*
-* This file is part of Converseen, an open-source batch image converter
-* and resizer.
+* This file is part of Kawaii Emoji Messenger, a multiplatform Facebook client
+* based on the idea of bringing emoji on desktop.
 *
-* (C) Francesco Mondello 2009-2014
+* (C) Francesco Mondello 2014
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -21,28 +21,28 @@
 *
 */
 
-#ifndef DIALOGQUALITY_H
-#define DIALOGQUALITY_H
+#ifndef UPDATECHECKER_H
+#define UPDATECHECKER_H
 
-#include "ui_dialogquality.h"
+#include <QObject>
+#include <QNetworkAccessManager>
+#include <QUrl>
+#include <QNetworkReply>
 
-class DialogQuality : public QDialog, private Ui::DialogQuality {
+class UpdateChecker : public QObject
+{
     Q_OBJECT
 public:
-    DialogQuality(QWidget *parent = 0);
-    void setInitValues(int jpegVal, int pngVal, FilterTypes filter);
-    int getJpegQuality();
-    int getPngQuality();
-    FilterTypes getResamplingFilter();
+    explicit UpdateChecker(QObject *parent = 0);
+    void checkForUpdates();
+
 private:
+    void checkIfIsNewVersion(int version);
 
-    int jpegQuality;
+    QNetworkAccessManager* mNetworkManager;
+
 private slots:
-    void setJpegSpin(int value);
-    void setJpegSlider(int value);
-
-    void setPngSpin(int value);
-    void setPngSlider(int value);
+    void onNetworkReply(QNetworkReply* reply);
 };
 
-#endif // DIALOGQUALITY_H
+#endif // UPDATECHECKER_H

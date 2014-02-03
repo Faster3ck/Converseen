@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2013
+* (C) Francesco Mondello 2009-2014
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@
 */
 
 #include <QColorDialog>
+#include <QTimer>
 #include <string>
 #include <iostream>
 #include "mainwindowimpl.h"
@@ -30,6 +31,7 @@
 #include "formats.h"
 #include "inisettings.h"
 #include "sizeutil.h"
+#include "updatechecker.h"
 
 using namespace Magick;
 using namespace std;
@@ -76,6 +78,8 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
 
     connect(labelPreview, SIGNAL(previewReady(int, int, double, double)), this, SLOT(showImageInformations(int, int, double, double)));
 
+    connect(checkRelative, SIGNAL(stateChanged(int)), this, SLOT(setRelativeSizeCheckboxes(int)));
+
     createActions();
     setupMenu();
     createContextMenu();
@@ -92,6 +96,8 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
     loadOptions();
 
     resetDisplays();
+
+    QTimer::singleShot(10000, this, SLOT(checkForUpdates()));
 }
 
 MainWindowImpl::~MainWindowImpl()
@@ -154,6 +160,7 @@ void MainWindowImpl::createActions()
 
     connect(actionInfo, SIGNAL(triggered()), this, SLOT(about()));
     connect(actionDonate, SIGNAL(triggered()), this, SLOT(openPaypalLink()));
+    connect(actionReportBug, SIGNAL(triggered()), this, SLOT(bugReport()));
 }
 
 void MainWindowImpl::setupMenu()
@@ -603,10 +610,12 @@ void MainWindowImpl::relativeSizeW()
 {
     double value = spin_geoWidth->value();
 
-    if (checkRelative->isChecked()) {
-        if (comboResizeValues->currentText() == "px") {
-            double relative_H = ( ((double)img_height * value) / (double)img_width);
-            spin_geoHeight->setValue((double)qRound(relative_H));
+    if (checkLinkAspect->isChecked()) {
+        if (checkRelative->isChecked()) {
+            if (comboResizeValues->currentText() == "px") {
+                double relative_H = ( ((double)img_height * value) / (double)img_width);
+                spin_geoHeight->setValue((double)qRound(relative_H));
+            }
         }
     }
 
@@ -622,12 +631,15 @@ void MainWindowImpl::relativeSizeH()
 {
     double value = spin_geoHeight->value();
 
-    if (checkRelative->isChecked()) {
-        if (comboResizeValues->currentText() == "px") {
-            double relative_V = ( ((double)img_width * value) / (double)img_height);
-            spin_geoWidth->setValue((double)qRound(relative_V));
+    if (checkLinkAspect->isChecked()) {
+        if (checkRelative->isChecked()) {
+            if (comboResizeValues->currentText() == "px") {
+                double relative_V = ( ((double)img_width * value) / (double)img_height);
+                spin_geoWidth->setValue((double)qRound(relative_V));
+            }
         }
     }
+
     if (comboResizeValues->currentText() == "%") {
         if (checkRelative->isChecked())
             spin_geoWidth->setValue(spin_geoHeight->value());
@@ -769,6 +781,7 @@ void MainWindowImpl::selectGeometryUnit(QString unit)
     }
 }
 
+/* FIXME: Forse è meglio cambiare nome */
 void MainWindowImpl::showNewSizePreview()
 {
     if (comboResizeValues->currentText() == "%") {
@@ -918,4 +931,23 @@ QString MainWindowImpl::destinationPath()
 void MainWindowImpl::openPaypalLink()
 {
     QDesktopServices::openUrl(QUrl("http://converseen.sourceforge.net/#donations", QUrl::TolerantMode));
+}
+
+void MainWindowImpl::checkForUpdates()
+{
+    UpdateChecker *up = new UpdateChecker();
+    up->checkForUpdates();
+}
+
+void MainWindowImpl::bugReport()
+{
+    QDesktopServices::openUrl(QUrl("https://github.com/Faster3ck/Converseen/issues", QUrl::TolerantMode));
+}
+
+void MainWindowImpl::setRelativeSizeCheckboxes(int state)
+{
+    if (state == 0)
+        checkLinkAspect->setEnabled(false);
+    else
+        checkLinkAspect->setEnabled(true);
 }

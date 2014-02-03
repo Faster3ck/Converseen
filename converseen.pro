@@ -1,5 +1,5 @@
 TEMPLATE = app
-QT = gui core
+QT = gui core network
 CONFIG += qt \
  release \
  warn_on \
@@ -28,7 +28,8 @@ CONFIG += qt \
     src/thumbnailgeneratorthread.h \
     src/pushcolorchooser.h \
     src/cachingsystem.h \
-    src/combofilters.h
+    src/combofilters.h \
+    src/updatechecker.h
  SOURCES =  src/mainwindowimpl.cpp \
   src/main.cpp \
   src/converter.cpp \
@@ -46,7 +47,8 @@ CONFIG += qt \
     src/thumbnailgeneratorthread.cpp \
     src/pushcolorchooser.cpp \
     src/cachingsystem.cpp \
-    src/combofilters.cpp
+    src/combofilters.cpp \
+    src/updatechecker.cpp
 
  QMAKE_CXXFLAGS += -O2 \
   -Wall \
@@ -57,8 +59,7 @@ CONFIG += qt \
   
  INCLUDEPATH +=  /usr/include/ImageMagick-6
 
- LIBS +=  -L/usr/lib  -lMagick++-6.Q16  -lMagickWand-6.Q16  -lMagickCore-6.Q16
-
+ LIBS +=  -L/usr/lib  -lMagick++-6.Q16HDRI  -lMagickWand-6.Q16HDRI  -lMagickCore-6.Q16HDRI
 
  TRANSLATIONS +=  loc/converseen_it_IT.ts \
  loc/converseen_hu_HU.ts \
