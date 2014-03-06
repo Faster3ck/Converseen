@@ -1050,6 +1050,10 @@ p, li { white-space: pre-wrap; }
         <source>Report bug...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Link aspect with selected image</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindowImpl</name>

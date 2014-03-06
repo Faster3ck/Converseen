@@ -334,6 +334,7 @@
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\build\moc_%(Filename).cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="src\globals.h" />
     <ClInclude Include="src\sizeutil.h" />
     <CustomBuild Include="src\thumbnailgeneratorthread.h">
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Moc%27ing %(Filename)%(Extension)...</Message>

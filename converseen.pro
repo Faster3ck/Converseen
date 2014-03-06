@@ -29,7 +29,8 @@ CONFIG += qt \
     src/pushcolorchooser.h \
     src/cachingsystem.h \
     src/combofilters.h \
-    src/updatechecker.h
+    src/updatechecker.h \
+    src/globals.h
  SOURCES =  src/mainwindowimpl.cpp \
   src/main.cpp \
   src/converter.cpp \

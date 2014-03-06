@@ -27,14 +27,13 @@
 #include <QDebug>
 #include "mainwindowimpl.h"
 #include "translator.h"
-
-#define VERSION "0.6.7"
+#include "globals.h"
 
 int main(int argc, char ** argv)
 {
     InitializeMagick(*argv);
 
-    QCoreApplication::setApplicationVersion(VERSION);
+    QCoreApplication::setApplicationVersion(globals::VERSION);
 
     QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
     QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));

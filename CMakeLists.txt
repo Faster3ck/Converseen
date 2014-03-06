@@ -46,6 +46,7 @@ SET(converseen_MOC_HDRS
     src/dialogoptions.h
     src/dialogquality.h
     src/formats.h
+    src/globals.h
     src/inisettings.h
     src/mainwindowimpl.h
     src/mylabelpreviewer.h

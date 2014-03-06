@@ -1336,6 +1336,10 @@ p, li { white-space: pre-wrap; }
         <source>Report bug...</source>
         <translation>Segnala bug...</translation>
     </message>
+    <message>
+        <source>Link aspect with selected image</source>
+        <translation>Collega aspetto con l&apos;immagine selezionata</translation>
+    </message>
 </context>
 <context>
     <name>MainWindowImpl</name>

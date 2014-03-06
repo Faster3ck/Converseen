@@ -24,10 +24,10 @@
 #include "updatechecker.h"
 #include <QMessageBox>
 #include <QDesktopServices>
+#include "globals.h"
 
 #define VERSION_URL "http://fasterindesign.altervista.org/software-updates/converseen-version.txt"
 #define DESTINATION_URL "http://converseen.sf.net/"
-#define CURRENT_INTERNAL_VERSION 670
 
 UpdateChecker::UpdateChecker(QObject *parent) :
     QObject(parent)
@@ -59,10 +59,6 @@ void UpdateChecker::onNetworkReply(QNetworkReply* reply)
             checkIfIsNewVersion(replyString.toInt());
         }
         break;
-        /*case RESPONSE_ERROR:
-        case RESPONSE_BAD_REQUEST:
-        default:
-            break;*/
         }
     }
 
@@ -71,7 +67,7 @@ void UpdateChecker::onNetworkReply(QNetworkReply* reply)
 
 void UpdateChecker::checkIfIsNewVersion(int version)
 {
-    if (version > CURRENT_INTERNAL_VERSION) {
+    if (version > globals::CURRENT_INTERNAL_VERSION) {
         int ret = QMessageBox::warning(0, tr("New version is available!"),
                                        tr("A new version of Converseen is available!\nWould you download it?"),
                                        QMessageBox::Ok | QMessageBox::No);
