@@ -22,6 +22,7 @@
 */
 
 #include <QDir>
+#include <QDesktopServices>
 #include "inisettings.h"
 #define INIFILENAME ".converseen.conf"
 
@@ -35,13 +36,8 @@ IniSettings::IniSettings(QObject *parent) :
 
 void IniSettings::init()
 {
-    QString iniPath = QDir::homePath() + "/" + INIFILENAME;
-
-#ifdef Q_WS_WIN
-    if ((QSysInfo::windowsVersion() == QSysInfo::WV_VISTA) || (QSysInfo::windowsVersion() == QSysInfo::WV_WINDOWS7)) {
-        iniPath = QDir::homePath() + "/AppData/Roaming/Converseen/" + INIFILENAME;
-    }
-#endif
+	QString myPath =  QDesktopServices::storageLocation(QDesktopServices::DataLocation);
+	QString iniPath = QString("%1/%2").arg(myPath).arg(INIFILENAME);
 
     settings = new QSettings(iniPath, QSettings::IniFormat);
 }
@@ -69,7 +65,7 @@ int IniSettings::latestWrittenFormatIndex()
     return settings->value("General/Last Write Format").toInt();
 }
 
-bool IniSettings::isOverWriteMode()
+bool IniSettings::isOverwriteMode()
 {
     return settings->value("Options/Overwrite mode").toBool();
 }
@@ -169,6 +165,26 @@ int IniSettings::latestInterpFiltIdx()
     return idx;
 }
 
+int IniSettings::currentVersion()
+{
+    int version = 0;
+
+    if (settings->contains("General/Current version"))
+        version = settings->value("General/Current version").toInt();
+
+    return version;
+}
+
+QString IniSettings::language()
+{
+	QString language = "English";
+    if (settings->contains("Options/language")) {
+        language = settings->value("Options/language").value<QString>();
+    }
+
+    return language;
+}
+
 void IniSettings::setOutputDir(QString path)
 {
     settings->setValue("General/Save directory", path);
@@ -184,9 +200,9 @@ void IniSettings::setLatestWrittenFormatIndex(int index)
     settings->setValue("General/Last Write Format", index);
 }
 
-void IniSettings::isOverWriteMode(bool status)
+void IniSettings::setOverwriteMode(bool enabled)
 {
-    settings->setValue("Options/Overwrite mode", status);
+    settings->setValue("Options/Overwrite mode", enabled);
 }
 
 void IniSettings::setJpgQuality(int quality)
@@ -252,4 +268,14 @@ void IniSettings::setBgColorChecked(bool state)
 void IniSettings::setLatestInterpFiltIdx(int index)
 {
     settings->setValue("Options/Interpolation filter", index);
+}
+
+void IniSettings::setCurrentVersion(int version)
+{
+    settings->setValue("General/Current version", version);
+}
+
+void IniSettings::setLanguage(QString lang)
+{
+	settings->setValue("Options/language", lang);
 }

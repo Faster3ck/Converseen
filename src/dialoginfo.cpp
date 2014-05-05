@@ -52,3 +52,14 @@ void DialogInfo::openGooglePlusPage()
 {
     QDesktopServices::openUrl(QUrl("https://plus.google.com/u/0/b/112720480720840769800/", QUrl::TolerantMode));
 }
+
+
+void DialogInfo::on_pushDonatePayPal_clicked()
+{
+    QDesktopServices::openUrl(QUrl("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC", QUrl::TolerantMode));
+}
+
+void DialogInfo::on_pushDonateFlattr_clicked()
+{
+    QDesktopServices::openUrl(QUrl("http://converseen.sourceforge.net/#donations", QUrl::TolerantMode));
+}

@@ -1,8 +1,8 @@
 /*
-* This file is part of Kawaii Emoji Messenger, a multiplatform Facebook client
-* based on the idea of bringing emoji on desktop.
+* This file is part of Converseen, an open-source batch image converter
+* and resizer.
 *
-* (C) Francesco Mondello 2014
+* (C) Francesco Mondello 2009-2014
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -21,16 +21,39 @@
 *
 */
 
-#ifndef GLOBALS_H
-#define GLOBALS_H
+#ifndef MULTIPAGECONVERTER_H
+#define MULTIPAGECONVERTER_H
 
-#include <QString>
+#include <QObject>
+#include <QList>
+#include <Magick++.h>
+#include <string>
+#include <iostream>
 
-namespace globals
+using namespace Magick;
+using namespace std;
+
+class MultipageItem {
+public:
+    int w, h, xres, yres, depth;
+};
+
+class MultipageConverter : public QObject
 {
-    const QString PROGRAM_NAME = "Converseen";
-    const int CURRENT_INTERNAL_VERSION = 700;
-    const QString VERSION = "0.7.0";
-}
+    Q_OBJECT
+public:
+    explicit MultipageConverter(QObject *parent = 0);
 
-#endif // GLOBALS_H
+    void readFile(QString fileName);
+    QList<MultipageItem> pages();
+
+private:
+    QList<MultipageItem> m_pagesList;
+
+signals:
+
+public slots:
+
+};
+
+#endif // MULTIPAGECONVERTER_H

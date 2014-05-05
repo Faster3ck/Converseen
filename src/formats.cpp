@@ -21,6 +21,7 @@
 *
 */
 
+#include <QDebug>
 #include <QImageWriter>
 #include <QFileInfo>
 #include <QTextStream>
@@ -46,26 +47,36 @@ void Formats::loadFormats()
     QString readableExts;
 
     QStringList readableFiltersList;
+    QStringList blacklist;
+
+    blacklist << "pdf" << "ico" << "icon";
 
     while(entry != coderList.end())
     {
         if (entry->isReadable()) {
-            readableFiltersList << QString(";;%3 [*.%1] (*.%1 *.%2 )")
-                                   .arg(QString::fromStdString(entry->name()).toLower())   // Lower and upper filters for gnome compatibility (?)
-                                   .arg(QString::fromStdString(entry->name()))
-                                   .arg(QString::fromStdString(entry->description()));
+            QString currFormat = QString::fromStdString(entry->name()).toLower();
+            if (!(blacklist.contains(currFormat))) {
+                readableFiltersList << QString(";;%3 [*.%1] (*.%1 *.%2 )")
+                                       .arg(QString::fromStdString(entry->name()).toLower())   // Lower and upper filters for gnome compatibility (?)
+                                       .arg(QString::fromStdString(entry->name()))
+                                       .arg(QString::fromStdString(entry->description()));
 
-            s_readableFilters << QString::fromStdString(entry->name()).toLower();
+                s_readableFilters << QString::fromStdString(entry->name()).toLower();
 
-            readableExts += QString("*.%1 *.%2 ")
-                    .arg(QString::fromStdString(entry->name()).toLower())
-                    .arg(QString::fromStdString(entry->name()));
+                readableExts += QString("*.%1 *.%2 ")
+                        .arg(QString::fromStdString(entry->name()).toLower())
+                        .arg(QString::fromStdString(entry->name()));
+            }
         }
 
-        if (entry->isWritable())
-            s_writableFilters << QString("%1 - (%2)")
-                                 .arg(QString::fromStdString(entry->name()))
-                                 .arg(QString::fromStdString(entry->description()));
+        if (entry->isWritable()) {
+            QString currFormat = QString::fromStdString(entry->name()).toLower();
+            if (!(blacklist.contains(currFormat))) {
+                s_writableFilters << QString("%1 - (%2)")
+                                     .arg(QString::fromStdString(entry->name()))
+                                     .arg(QString::fromStdString(entry->description()));
+            }
+        }
 
         ++entry;
     }

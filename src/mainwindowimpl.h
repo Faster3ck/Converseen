@@ -72,6 +72,8 @@ private:
 
     void resetDisplays();
 
+    void checkVersion();
+
     QString renameFileNameOnPrefixSuffix(QString oldFileName);
     QString renameFileNameOnProgressiveN(QString oldFileName);
     QString destinationPath();
@@ -102,6 +104,10 @@ private slots:
     void loadFiles(QStringList fileNames);
     void openFiles();
     void addFiles();
+    void importIcoFile();
+    void importPdfFile();
+
+    void openMultipageFile(QString fileName);   // !
     void elabora();
     void setCurrentDirectory();
     void openOutDirectory();
@@ -138,6 +144,7 @@ private slots:
     void choseBackgroundColor();
 
     void openPaypalLink();
+    void openFlattrLink();
 
     void checkForUpdates();
     void bugReport();

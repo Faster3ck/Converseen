@@ -24,7 +24,7 @@
 #include <QMessageBox>
 #include "dialogoptions.h"
 #include "translator.h"
-#include <QDebug>
+#include "inisettings.h"
 
 #define INIFILENAME ".converseen.conf"
 
@@ -76,10 +76,9 @@ void DialogOptions::setLanguage()
 void DialogOptions::setOverwriteMode()
 {
     if (radioAskFirst->isChecked())
-        settings->setValue("Options/Overwrite mode", false);
-
-    if (radioOverwrite->isChecked())
-        settings->setValue("Options/Overwrite mode", true);
+        IniSettings::setOverwriteMode(true);
+	else
+		IniSettings::setOverwriteMode(false);
 }
 
 void DialogOptions::saveOptions()
@@ -92,18 +91,10 @@ void DialogOptions::saveOptions()
 
 void DialogOptions::loadSettings()
 {
-    if (!settings->contains("Options/Overwrite mode"))
-        radioAskFirst->setChecked(true);
-    else {
-        if (settings->value("Options/Overwrite mode").toBool())
-            radioOverwrite->setChecked(true);
-        else
-            radioAskFirst->setChecked(true);
-    }
+    bool overwriteMode = IniSettings::isOverwriteMode();
+	radioAskFirst->setChecked(overwriteMode);
 
     Translator t;
-    
-    qDebug() << "Lingua corrente " << t.currentLanguage();
     
     int idx = comboLangs->findText(t.currentLanguage(), Qt::MatchExactly);
     comboLangs->setCurrentIndex(idx);

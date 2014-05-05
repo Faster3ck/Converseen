@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="pt_BR">
+<TS version="2.1" language="pt_BR">
 <context>
     <name>Converter</name>
     <message>
@@ -12,9 +12,9 @@
         <translation type="obsolete">Convertido e processado!</translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="86"/>
-        <location filename="../src/converter.cpp" line="93"/>
-        <location filename="../src/converter.cpp" line="100"/>
+        <location filename="../src/converter.cpp" line="92"/>
+        <location filename="../src/converter.cpp" line="99"/>
+        <location filename="../src/converter.cpp" line="106"/>
         <source>Error: %1</source>
         <translation>Erro: %1</translation>
     </message>
@@ -136,7 +136,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>DialogInfo</name>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="14"/>
+        <location filename="../ui/dialoginfo.ui" line="20"/>
         <source>About Converseen...</source>
         <translation>Sobre o Converseen...</translation>
     </message>
@@ -221,7 +221,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;O conversor e redimensionador de imagens em lote.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt; {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {0&quot;?} {4p?} {4p?} {4p?} {4p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {12p?} {600;?} {0.4.2&lt;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?}</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="47"/>
+        <location filename="../ui/dialoginfo.ui" line="73"/>
         <source>Informations</source>
         <translation>Informações</translation>
     </message>
@@ -266,7 +266,6 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;O conversor e redimensionador de imagens em lote.&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="53"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -275,7 +274,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;converseen.sourceforge.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;My Homepage: &lt;/span&gt;&lt;a href=&quot;http://fasterindesign.altervista.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;fasterindesign.altervista.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -285,7 +284,18 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Página Pessoal: &lt;/span&gt;&lt;a href=&quot;http://fasterindesign.altervista.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;fasterindesign.altervista.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="83"/>
+        <location filename="../ui/dialoginfo.ui" line="79"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;http://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0057ae;&quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0057ae;&quot;&gt;converseen.sourceforge.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="95"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -298,60 +308,65 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tradutores:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="94"/>
+        <location filename="../ui/dialoginfo.ui" line="127"/>
         <source>&lt;strong&gt;Hungarian translation: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="101"/>
+        <location filename="../ui/dialoginfo.ui" line="134"/>
         <source>&lt;strong&gt;Czech translation: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="108"/>
-        <source>&lt;strong&gt;French Translation: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message utf8="true">
-        <location filename="../ui/dialoginfo.ui" line="116"/>
-        <source>&lt;strong&gt;Brazilian Portuguese Translation: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/dialoginfo.ui" line="126"/>
-        <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message utf8="true">
-        <location filename="../ui/dialoginfo.ui" line="133"/>
-        <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../ui/dialoginfo.ui" line="141"/>
-        <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
+        <source>&lt;strong&gt;French Translation: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="149"/>
-        <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
+        <source>&lt;strong&gt;Brazilian Portuguese Translation: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
-        <location filename="../ui/dialoginfo.ui" line="156"/>
-        <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="159"/>
+        <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="166"/>
+        <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="174"/>
+        <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="182"/>
+        <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="189"/>
+        <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="199"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="313"/>
+        <location filename="../ui/dialoginfo.ui" line="215"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal or Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="372"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -364,7 +379,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;(c) 2009 - 2011 Francesco Mondello GNU - GPL v.2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {2&apos;?} {8p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {10p?} {2009 ?} {2014 ?} {3&lt;?}</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="243"/>
+        <location filename="../ui/dialoginfo.ui" line="295"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -529,7 +544,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Tradução para Tcheco: &lt;/span&gt;&lt;span style=&quot; font-size:10pt; color:#141312;&quot;&gt;Pavel Fric - &lt;/span&gt;&lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0057ae;&quot;&gt;pavelfric@seznam.cz&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="38"/>
+        <location filename="../ui/dialoginfo.ui" line="44"/>
         <source>-</source>
         <translation>-</translation>
     </message>
@@ -557,7 +572,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tradução para Francês:&lt;/span&gt; Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;axalis@cegetel.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
-    <message utf8="true">
+    <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -581,7 +596,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tradução para Alemão:&lt;/span&gt; Matthias Loidolt - &lt;a href=&quot;mailto:kedapperdrake@googlemail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;kedapperdrake@googlemail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
-    <message utf8="true">
+    <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -606,9 +621,8 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Tradução para Turco: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Zeugma - &lt;/span&gt;&lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0057ae;&quot;&gt;sunder67@hotmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="200"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;donate via Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Se você apreciou este trabalho e gostaria de apoiar o projeto, você está convidado a &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;doar via Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Se você apreciou este trabalho e gostaria de apoiar o projeto, você está convidado a &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;doar via Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -627,7 +641,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tradução para Turco: &lt;/span&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;sunder67@hotmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="186"/>
+        <location filename="../ui/dialoginfo.ui" line="53"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -668,7 +682,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">(c) Faster  2010 GNU - GPL v.2</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="349"/>
+        <location filename="../ui/dialoginfo.ui" line="398"/>
         <source>Close</source>
         <translation>Fechar</translation>
     </message>
@@ -676,6 +690,69 @@ p, li { white-space: pre-wrap; }
         <location filename="../src/dialoginfo.cpp" line="39"/>
         <source>The batch image converter and resizer.</source>
         <translation>O conversor e redimensionador de imagens em lote.</translation>
+    </message>
+</context>
+<context>
+    <name>DialogMultipageEditor</name>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="14"/>
+        <source>Import multipage document</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="20"/>
+        <source>Check the pages or subimages you want to import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="42"/>
+        <source>Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="47"/>
+        <source>Pixel size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="52"/>
+        <source>Density</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="57"/>
+        <source>Depth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="80"/>
+        <source>Cancel</source>
+        <translation type="unfinished">Cancelar</translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="91"/>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="108"/>
+        <source>Check</source>
+        <translation type="unfinished">Marcar</translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="117"/>
+        <source>Check all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="126"/>
+        <source>Uncheck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogmultipageeditor.ui" line="135"/>
+        <source>Uncheck all</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -782,12 +859,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Formats</name>
     <message>
-        <location filename="../src/formats.cpp" line="82"/>
+        <location filename="../src/formats.cpp" line="93"/>
         <source>All Supported Filters (%1)</source>
         <translation>Todos Os Filtros Suportados (%1)</translation>
     </message>
     <message>
-        <location filename="../src/formats.cpp" line="104"/>
+        <location filename="../src/formats.cpp" line="115"/>
         <source>Don&apos;t change the format</source>
         <translation>Não alterar o formato</translation>
     </message>
@@ -924,12 +1001,12 @@ p, li { white-space: pre-wrap; }
         <translation>A&amp;juda</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="205"/>
+        <location filename="../ui/mainwindow.ui" line="207"/>
         <source>Actions Panel</source>
         <translation>Ações do Painel</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="245"/>
+        <location filename="../ui/mainwindow.ui" line="247"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -954,12 +1031,12 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Nenhuma visualização!&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="353"/>
+        <location filename="../ui/mainwindow.ui" line="355"/>
         <source>Show preview</source>
         <translation>Mostrar visualização</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="407"/>
+        <location filename="../ui/mainwindow.ui" line="409"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -972,10 +1049,10 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Tipo:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="418"/>
-        <location filename="../ui/mainwindow.ui" line="444"/>
-        <location filename="../ui/mainwindow.ui" line="470"/>
-        <location filename="../ui/mainwindow.ui" line="496"/>
+        <location filename="../ui/mainwindow.ui" line="420"/>
+        <location filename="../ui/mainwindow.ui" line="446"/>
+        <location filename="../ui/mainwindow.ui" line="472"/>
+        <location filename="../ui/mainwindow.ui" line="498"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -988,7 +1065,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; - &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="433"/>
+        <location filename="../ui/mainwindow.ui" line="435"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1001,7 +1078,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Tamanho do arquivo:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="459"/>
+        <location filename="../ui/mainwindow.ui" line="461"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1014,7 +1091,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Tamanho da imagem:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="485"/>
+        <location filename="../ui/mainwindow.ui" line="487"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1027,22 +1104,22 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Resolução da imagem:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="521"/>
+        <location filename="../ui/mainwindow.ui" line="523"/>
         <source>Dimensions</source>
         <translation type="unfinished">Dimensões</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="555"/>
+        <location filename="../ui/mainwindow.ui" line="557"/>
         <source>Width:</source>
         <translation>Largura:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="562"/>
+        <location filename="../ui/mainwindow.ui" line="564"/>
         <source>Height:</source>
         <translation>Altura:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="649"/>
+        <location filename="../ui/mainwindow.ui" line="651"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -1055,7 +1132,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 pixel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="669"/>
+        <location filename="../ui/mainwindow.ui" line="671"/>
         <source>Mantain aspect ratio</source>
         <translation>Manter proporção</translation>
     </message>
@@ -1064,7 +1141,7 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">Mostrar atributos da imagem</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1084"/>
+        <location filename="../ui/mainwindow.ui" line="1086"/>
         <source>Overwrite all</source>
         <translation>Substituir todas</translation>
     </message>
@@ -1083,295 +1160,320 @@ p, li { white-space: pre-wrap; }
         <translation>Escolher cor</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="539"/>
+        <location filename="../ui/mainwindow.ui" line="541"/>
         <source>Scale image</source>
         <translation>Escala da imagem</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="662"/>
+        <location filename="../ui/mainwindow.ui" line="664"/>
         <source>Link aspect with selected image</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="690"/>
+        <location filename="../ui/mainwindow.ui" line="692"/>
         <source>Resolution</source>
         <translation>Resolução</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="706"/>
+        <location filename="../ui/mainwindow.ui" line="708"/>
         <source>Resolution X:</source>
         <translation>Resolução X:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="713"/>
+        <location filename="../ui/mainwindow.ui" line="715"/>
         <source>Resolution Y:</source>
         <translation>Resolução Y:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="752"/>
-        <location filename="../ui/mainwindow.ui" line="758"/>
+        <location filename="../ui/mainwindow.ui" line="754"/>
+        <location filename="../ui/mainwindow.ui" line="760"/>
         <source>Rotate and flip</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="773"/>
+        <location filename="../ui/mainwindow.ui" line="775"/>
         <source>Rotate image:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="782"/>
+        <location filename="../ui/mainwindow.ui" line="784"/>
         <source>No rotation</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
-        <location filename="../ui/mainwindow.ui" line="799"/>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="801"/>
         <source>+ 90°</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
-        <location filename="../ui/mainwindow.ui" line="813"/>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="815"/>
         <source>- 90°</source>
         <translation type="unfinished"></translation>
     </message>
-    <message utf8="true">
-        <location filename="../ui/mainwindow.ui" line="829"/>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="831"/>
         <source>180°</source>
         <translation type="unfinished">180°</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="854"/>
+        <location filename="../ui/mainwindow.ui" line="856"/>
         <source>Flip image:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="863"/>
+        <location filename="../ui/mainwindow.ui" line="865"/>
         <source>No flip</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="881"/>
+        <location filename="../ui/mainwindow.ui" line="883"/>
         <source>Horizontally</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="895"/>
+        <location filename="../ui/mainwindow.ui" line="897"/>
         <source>Vertically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="945"/>
+        <location filename="../ui/mainwindow.ui" line="947"/>
         <source>Output options</source>
         <translation>Opções de saída</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="957"/>
+        <location filename="../ui/mainwindow.ui" line="959"/>
         <source>Save in:</source>
         <translation>Salvar em:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="969"/>
+        <location filename="../ui/mainwindow.ui" line="971"/>
         <source>Open output directory</source>
         <translation>Abrir diretório de saída</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="972"/>
+        <location filename="../ui/mainwindow.ui" line="974"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="983"/>
+        <location filename="../ui/mainwindow.ui" line="985"/>
         <source>Image&apos;s directory</source>
         <translation>Diretório de imagen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1012"/>
+        <location filename="../ui/mainwindow.ui" line="1014"/>
         <source>Rename:</source>
         <translation>Renomear:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1021"/>
+        <location filename="../ui/mainwindow.ui" line="1023"/>
         <source>Prefix/Suffix</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1031"/>
+        <location filename="../ui/mainwindow.ui" line="1033"/>
         <source>Progressive Number</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1048"/>
+        <location filename="../ui/mainwindow.ui" line="1050"/>
         <source>#_copy</source>
         <translation>#_copy</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1055"/>
+        <location filename="../ui/mainwindow.ui" line="1057"/>
         <source>Start with:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1113"/>
+        <location filename="../ui/mainwindow.ui" line="1115"/>
         <source>toolBar</source>
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1141"/>
+        <location filename="../ui/mainwindow.ui" line="1143"/>
         <source>&amp;Open images</source>
         <translation>&amp;Abrir imagens</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1144"/>
+        <location filename="../ui/mainwindow.ui" line="1146"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1153"/>
+        <location filename="../ui/mainwindow.ui" line="1155"/>
         <source>&amp;Add images</source>
         <translation>&amp;Adicionar imagens</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1156"/>
+        <location filename="../ui/mainwindow.ui" line="1158"/>
         <source>Ctrl+Alt+O</source>
         <translation>Ctrl+Alt+O</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1165"/>
+        <location filename="../ui/mainwindow.ui" line="1167"/>
         <source>&amp;Remove images</source>
         <translation>&amp;Remover imagens</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1168"/>
+        <location filename="../ui/mainwindow.ui" line="1170"/>
         <source>Remove selected pictures</source>
         <translation>Remover imagens selecionadas</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1171"/>
+        <location filename="../ui/mainwindow.ui" line="1173"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1180"/>
+        <location filename="../ui/mainwindow.ui" line="1182"/>
         <source>Remove &amp;all</source>
         <translation>Remover &amp;todas</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1183"/>
+        <location filename="../ui/mainwindow.ui" line="1185"/>
         <source>Remove all pictures</source>
         <translation>Remover todas as imagens</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1186"/>
+        <location filename="../ui/mainwindow.ui" line="1188"/>
         <source>Alt+Del</source>
         <translation>Alt+Del</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1195"/>
+        <location filename="../ui/mainwindow.ui" line="1197"/>
         <source>&amp;Check</source>
         <translation>&amp;Marcar</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1198"/>
+        <location filename="../ui/mainwindow.ui" line="1200"/>
         <source>Check selected items</source>
         <translation>Marcarr os itens selecionados</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1201"/>
+        <location filename="../ui/mainwindow.ui" line="1203"/>
         <source>Ctrl+H</source>
         <translation>Ctrl+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1210"/>
+        <location filename="../ui/mainwindow.ui" line="1212"/>
         <source>Check a&amp;ll</source>
         <translation>Marcar t&amp;odos</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1213"/>
+        <location filename="../ui/mainwindow.ui" line="1215"/>
         <source>Check all items</source>
         <translation>Macar todos os itens</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1216"/>
+        <location filename="../ui/mainwindow.ui" line="1218"/>
         <source>Ctrl+Alt+H</source>
         <translation>Ctrl+Alt+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1225"/>
+        <location filename="../ui/mainwindow.ui" line="1227"/>
         <source>&amp;Convert</source>
         <translation>&amp;Converter</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1228"/>
+        <location filename="../ui/mainwindow.ui" line="1230"/>
         <source>Start the conversion process</source>
         <translation>Iniciar o processo de conversão</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1231"/>
+        <location filename="../ui/mainwindow.ui" line="1233"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1236"/>
+        <location filename="../ui/mainwindow.ui" line="1238"/>
         <source>&amp;Settings</source>
         <translation>&amp;Concfigurações</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1239"/>
+        <location filename="../ui/mainwindow.ui" line="1241"/>
         <source>Open the settings dialog</source>
         <translation>Abrir o diálogo de configuração</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1244"/>
+        <location filename="../ui/mainwindow.ui" line="1246"/>
         <source>&amp;Exit</source>
         <translation>&amp;Sair</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1247"/>
+        <location filename="../ui/mainwindow.ui" line="1249"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1252"/>
+        <location filename="../ui/mainwindow.ui" line="1254"/>
         <source>Uncheck all &amp;items</source>
         <translation>Desmarcar todos os &amp;itens</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1255"/>
+        <location filename="../ui/mainwindow.ui" line="1257"/>
         <source>Ctrl+Alt+J</source>
         <translation>Ctrl+Alt+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1260"/>
+        <location filename="../ui/mainwindow.ui" line="1262"/>
         <source>&amp;Uncheck Items</source>
         <translation>&amp;Desmarcar Itens</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1263"/>
+        <location filename="../ui/mainwindow.ui" line="1265"/>
         <source>Uncheck selected items</source>
         <translation>Desmarcar os itens selecionados</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1266"/>
+        <location filename="../ui/mainwindow.ui" line="1268"/>
         <source>Ctrl+J</source>
         <translation>Ctrl+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1271"/>
+        <location filename="../ui/mainwindow.ui" line="1273"/>
         <source>&amp;About</source>
         <translation>&amp;Sobre</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1274"/>
+        <location filename="../ui/mainwindow.ui" line="1276"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1279"/>
-        <location filename="../ui/mainwindow.ui" line="1282"/>
+        <location filename="../ui/mainwindow.ui" line="1285"/>
+        <location filename="../ui/mainwindow.ui" line="1288"/>
         <source>Donate via Paypal</source>
         <translation>Doar via Paypal</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1287"/>
+        <location filename="../ui/mainwindow.ui" line="1293"/>
         <source>Report bug...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1298"/>
+        <source>Import PDF file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1303"/>
+        <source>Import windows icon (*.ico)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1306"/>
+        <source>Import windows icon (*.ico *.icon)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1315"/>
+        <source>Flattr This!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1318"/>
+        <source>Donate via Flattr</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1454,72 +1556,97 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">F1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="216"/>
+        <location filename="../src/mainwindowimpl.cpp" line="226"/>
         <source>Open Image</source>
         <translation>Abrir Imagem</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="273"/>
-        <location filename="../src/mainwindowimpl.cpp" line="279"/>
-        <location filename="../src/mainwindowimpl.cpp" line="288"/>
-        <location filename="../src/mainwindowimpl.cpp" line="292"/>
-        <location filename="../src/mainwindowimpl.cpp" line="296"/>
+        <location filename="../src/mainwindowimpl.cpp" line="323"/>
+        <location filename="../src/mainwindowimpl.cpp" line="329"/>
+        <location filename="../src/mainwindowimpl.cpp" line="338"/>
+        <location filename="../src/mainwindowimpl.cpp" line="342"/>
+        <location filename="../src/mainwindowimpl.cpp" line="346"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="293"/>
+        <location filename="../src/mainwindowimpl.cpp" line="343"/>
         <source>No image checked!</source>
         <translation>Nenhuma imagem marcada!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="297"/>
+        <location filename="../src/mainwindowimpl.cpp" line="347"/>
         <source>No images to convert!</source>
         <translation>Nemhuma imagem para converter!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="274"/>
+        <location filename="../src/mainwindowimpl.cpp" line="324"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>O diretório de saída não existe! Você quer criá-lo?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="280"/>
+        <location filename="../src/mainwindowimpl.cpp" line="238"/>
+        <source>Open Icon file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="238"/>
+        <source>Microsoft icon (*.ico *.icon)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="249"/>
+        <source>Open Pdf file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="249"/>
+        <source>Portable Document Format (*.pdf)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="259"/>
+        <source>Analyzing the file. It may take a while, please wait...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="330"/>
         <source>The directory cannot be created!</source>
         <translation>O diretório não pode ser criado!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="289"/>
+        <location filename="../src/mainwindowimpl.cpp" line="339"/>
         <source>Set an output directory!</source>
         <translation>Definir um diretório de saída!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="306"/>
+        <location filename="../src/mainwindowimpl.cpp" line="356"/>
         <source>Processing...</source>
         <translation>Processando...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="759"/>
-        <location filename="../src/mainwindowimpl.cpp" line="817"/>
+        <location filename="../src/mainwindowimpl.cpp" line="809"/>
+        <location filename="../src/mainwindowimpl.cpp" line="867"/>
         <source>Preview</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="857"/>
+        <location filename="../src/mainwindowimpl.cpp" line="918"/>
         <source>Suggest a new name!</source>
         <translation>Sugerir um novo nome!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="858"/>
+        <location filename="../src/mainwindowimpl.cpp" line="919"/>
         <source>New name:</source>
         <translation>Novo nome:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="863"/>
+        <location filename="../src/mainwindowimpl.cpp" line="924"/>
         <source>Please, specify a name!</source>
         <translation>Por favor, especifique um nome!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="864"/>
+        <location filename="../src/mainwindowimpl.cpp" line="925"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1530,23 +1657,23 @@ Clique em Ignorar para cancelar esta operação.
 Clique em Abortar para cancelar todas as operações.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="879"/>
-        <location filename="../src/mainwindowimpl.cpp" line="884"/>
+        <location filename="../src/mainwindowimpl.cpp" line="940"/>
+        <location filename="../src/mainwindowimpl.cpp" line="945"/>
         <source>Warning!</source>
         <translation>Aviso!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="880"/>
+        <location filename="../src/mainwindowimpl.cpp" line="941"/>
         <source>The filename should not be empty!</source>
         <translation>O nome do arquivo não deve ser vazio!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="885"/>
+        <location filename="../src/mainwindowimpl.cpp" line="946"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>O nome escolhido é idêntico ao inicial. Você deseja substituir o arquivo original?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="901"/>
+        <location filename="../src/mainwindowimpl.cpp" line="962"/>
         <source>Aborted!</source>
         <translation>Cancelado!</translation>
     </message>
@@ -1555,7 +1682,7 @@ Clique em Abortar para cancelar todas as operações.</translation>
         <translation type="obsolete">Por favor, aguarde! Processando %1</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="469"/>
+        <location filename="../src/mainwindowimpl.cpp" line="519"/>
         <source>Processing finished!</source>
         <translation>Processamento finalizado!</translation>
     </message>
@@ -1564,7 +1691,7 @@ Clique em Abortar para cancelar todas as operações.</translation>
         <translation type="obsolete">Todos Os Formatos Suportados (%1)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="523"/>
+        <location filename="../src/mainwindowimpl.cpp" line="573"/>
         <source>Open Directory</source>
         <translation>Abrir Diretório</translation>
     </message>
@@ -1613,8 +1740,8 @@ Clique em Abortar para cancelar todas as operações.</translation>
 <context>
     <name>Translator</name>
     <message>
-        <location filename="../src/translator.cpp" line="86"/>
-        <location filename="../src/translator.cpp" line="99"/>
+        <location filename="../src/translator.cpp" line="75"/>
+        <location filename="../src/translator.cpp" line="88"/>
         <source>English</source>
         <translatorcomment>Add your language here!</translatorcomment>
         <translation>Português do Brasil</translation>
@@ -1623,12 +1750,12 @@ Clique em Abortar para cancelar todas as operações.</translation>
 <context>
     <name>UpdateChecker</name>
     <message>
-        <location filename="../src/updatechecker.cpp" line="75"/>
+        <location filename="../src/updatechecker.cpp" line="71"/>
         <source>New version is available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/updatechecker.cpp" line="76"/>
+        <location filename="../src/updatechecker.cpp" line="72"/>
         <source>A new version of Converseen is available!
 Would you download it?</source>
         <translation type="unfinished"></translation>

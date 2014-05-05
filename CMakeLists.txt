@@ -10,6 +10,7 @@ ADD_DEFINITIONS( ${OPTIMIZATION_FLAGS} )
 SET(converseen_UIS  
     ui/dialogconversionstatus.ui
     ui/dialoginfo.ui
+    ui/dialogmultipageeditor.ui
     ui/dialogoptions.ui
     ui/dialogquality.ui
     ui/mainwindow.ui
@@ -22,6 +23,7 @@ SET(converseen_SRCS
     src/converter.cpp
     src/dialogconversionstatus.cpp
     src/dialoginfo.cpp
+    src/dialogmultipageeditor.cpp
     src/dialogoptions.cpp
     src/dialogquality.cpp
     src/formats.cpp
@@ -35,6 +37,7 @@ SET(converseen_SRCS
     src/translator.cpp
     src/updatechecker.cpp
     src/whereiam.cpp
+    src/Modules/multipageconverter.cpp
 )  
   
 SET(converseen_MOC_HDRS  
@@ -43,6 +46,7 @@ SET(converseen_MOC_HDRS
     src/converter.h
     src/dialogconversionstatus.h
     src/dialoginfo.h
+    src/dialogmultipageeditor.h
     src/dialogoptions.h
     src/dialogquality.h
     src/formats.h
@@ -57,6 +61,7 @@ SET(converseen_MOC_HDRS
     src/translator.h
     src/updatechecker.h
     src/whereiam.h
+    src/Modules/multipageconverter.h
 )
   
 SET(converseen_RESOURCES  

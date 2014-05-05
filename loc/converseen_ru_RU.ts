@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="ru_RU">
+<TS version="2.1" language="ru_RU">
 <context>
     <name>Converter</name>
     <message>
@@ -126,7 +126,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;converseen.sourceforge.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;My Homepage: &lt;/span&gt;&lt;a href=&quot;http://fasterindesign.altervista.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;fasterindesign.altervista.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -149,7 +149,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;donate via Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Если вы цените эту работу и хотите поддержать проект, вы можете внести материальную &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;поддержку через Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Если вы цените эту работу и хотите поддержать проект, вы можете внести материальную &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;поддержку через Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -181,7 +181,7 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;strong&gt;Перевод на французский: &lt;/strong&gt;Ludovic Troisi — &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
 </translation>
     </message>
-    <message utf8="true">
+    <message>
         <source>&lt;strong&gt;Brazilian Portuguese Translation: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Перевод на бразильский португальский: &lt;/strong&gt;Márcio Moraes — &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</translation>
     </message>
@@ -189,7 +189,7 @@ p, li { white-space: pre-wrap; }
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Перевод на немецкий: &lt;/strong&gt;Marco Nickolai — &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
-    <message utf8="true">
+    <message>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
         <translation>&lt;strong&gt;Перевод на испанский: &lt;/strong&gt;Nelson Álvarez Sáez — &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
@@ -210,7 +210,7 @@ p, li { white-space: pre-wrap; }
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Следите за Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
-    <message utf8="true">
+    <message>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Перевод на польский: &lt;/strong&gt;Michał Olber from OSWorld.pl — &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
     </message>
@@ -224,6 +224,71 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;(c) 2009 - 2014 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal or Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;http://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0057ae;&quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; color:#0057ae;&quot;&gt;converseen.sourceforge.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>DialogMultipageEditor</name>
+    <message>
+        <source>Check the pages or subimages you want to import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Page</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pixel size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Density</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Depth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">Отмена</translation>
+    </message>
+    <message>
+        <source>Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uncheck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uncheck all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import multipage document</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -654,15 +719,15 @@ p, li { white-space: pre-wrap; }
         <source>No rotation</source>
         <translation>Не вращать</translation>
     </message>
-    <message utf8="true">
+    <message>
         <source>+ 90°</source>
         <translation>+ 90°</translation>
     </message>
-    <message utf8="true">
+    <message>
         <source>- 90°</source>
         <translation>- 90°</translation>
     </message>
-    <message utf8="true">
+    <message>
         <source>180°</source>
         <translatorcomment>180°</translatorcomment>
         <translation>180°</translation>
@@ -701,6 +766,26 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Link aspect with selected image</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import PDF file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import windows icon (*.ico)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import windows icon (*.ico *.icon)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flattr This!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Donate via Flattr</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -791,6 +876,26 @@ Click Abort to cancel all operations.</source>
     <message>
         <source>Preview</source>
         <translation>Предпросмотр</translation>
+    </message>
+    <message>
+        <source>Open Icon file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Microsoft icon (*.ico *.icon)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open Pdf file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Portable Document Format (*.pdf)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Analyzing the file. It may take a while, please wait...</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

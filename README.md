@@ -1,3 +1,5 @@
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=faster3ck&url=https://github.com/Faster3ck/Converseen&title=Converseen&language=&tags=github&category=software)
+
 # Converseen
 
 ![alt text](http://converseen.sourceforge.net/res/converseen1.png "Converseen on Kde")

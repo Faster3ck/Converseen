@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DialogMultipageEditor</class>
+ <widget class="QDialog" name="DialogMultipageEditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>617</width>
+    <height>426</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Import multipage document</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Check the pages or subimages you want to import</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="rootIsDecorated">
+      <bool>false</bool>
+     </property>
+     <attribute name="headerVisible">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string notr="true">Subpage</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Page</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Pixel size</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Density</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Depth</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushCancel">
+       <property name="text">
+        <string>Cancel</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources.qrc">
+         <normaloff>:/Images/res/cancel.png</normaloff>:/Images/res/cancel.png</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushOk">
+       <property name="text">
+        <string>Import</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../resources.qrc">
+         <normaloff>:/Images/res/apply.png</normaloff>:/Images/res/apply.png</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+  <action name="actionCheck">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/res/apply.png</normaloff>:/Images/res/apply.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check</string>
+   </property>
+  </action>
+  <action name="actionCheckAll">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/res/apply.png</normaloff>:/Images/res/apply.png</iconset>
+   </property>
+   <property name="text">
+    <string>Check all</string>
+   </property>
+  </action>
+  <action name="actionUncheck">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/res/adept_purge.png</normaloff>:/Images/res/adept_purge.png</iconset>
+   </property>
+   <property name="text">
+    <string>Uncheck</string>
+   </property>
+  </action>
+  <action name="actionUncheckAll">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/res/adept_purge.png</normaloff>:/Images/res/adept_purge.png</iconset>
+   </property>
+   <property name="text">
+    <string>Uncheck all</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="../resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

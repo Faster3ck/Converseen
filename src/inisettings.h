@@ -38,7 +38,7 @@ public:
     static QString outputDir();
     static QByteArray windowGeometry();
     static int latestWrittenFormatIndex();
-    static bool isOverWriteMode();
+    static bool isOverwriteMode();
     static int jpgQuality();
     static int pngQuality();
     static QString latestOpenedDir();
@@ -53,11 +53,13 @@ public:
     static bool renameChecked();
     static bool bgColorChecked();
     static int latestInterpFiltIdx();
+    static int currentVersion();
+	static QString language();
 
     static void setOutputDir(QString path);
     static void setWindowGeometry(QByteArray geometry);
     static void setLatestWrittenFormatIndex(int index);
-    static void isOverWriteMode(bool status);
+    static void setOverwriteMode(bool status);
     static void setJpgQuality(int quality);
     static void setPngQuality(int quality);
     static void setLatestOpenedDir(QString path);
@@ -71,6 +73,8 @@ public:
     static void setRenameChecked(bool state);
     static void setBgColorChecked(bool state);
     static void setLatestInterpFiltIdx(int index);
+    static void setCurrentVersion(int version);
+	static void setLanguage(QString lang);
 
 //private:
     static QSettings *settings;

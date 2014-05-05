@@ -175,7 +175,9 @@
     <property name="title">
      <string>&amp;Help</string>
     </property>
-    <addaction name="actionDonate"/>
+    <addaction name="actionDonatePaypal"/>
+    <addaction name="actionDonateFlattr"/>
+    <addaction name="separator"/>
     <addaction name="actionReportBug"/>
     <addaction name="separator"/>
    </widget>
@@ -1274,7 +1276,11 @@ p, li { white-space: pre-wrap; }
     <string>F1</string>
    </property>
   </action>
-  <action name="actionDonate">
+  <action name="actionDonatePaypal">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/res/paypal_mini.png</normaloff>:/Images/res/paypal_mini.png</iconset>
+   </property>
    <property name="text">
     <string>Donate via Paypal</string>
    </property>
@@ -1285,6 +1291,31 @@ p, li { white-space: pre-wrap; }
   <action name="actionReportBug">
    <property name="text">
     <string>Report bug...</string>
+   </property>
+  </action>
+  <action name="actionImportPDFFile">
+   <property name="text">
+    <string>Import PDF file</string>
+   </property>
+  </action>
+  <action name="actionImportWindowsIconIco">
+   <property name="text">
+    <string>Import windows icon (*.ico)</string>
+   </property>
+   <property name="toolTip">
+    <string>Import windows icon (*.ico *.icon)</string>
+   </property>
+  </action>
+  <action name="actionDonateFlattr">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/res/flattr_mini.png</normaloff>:/Images/res/flattr_mini.png</iconset>
+   </property>
+   <property name="text">
+    <string>Flattr This!</string>
+   </property>
+   <property name="toolTip">
+    <string>Donate via Flattr</string>
    </property>
   </action>
  </widget>

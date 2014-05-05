@@ -11,7 +11,8 @@ CONFIG += qt \
   ui/dialogconversionstatus.ui \
   ui/dialogquality.ui \
   ui/dialogoptions.ui \
-  ui/dialoginfo.ui
+  ui/dialoginfo.ui \
+    ui/dialogmultipageeditor.ui
  HEADERS =  src/mainwindowimpl.h \
   src/converter.h \
   src/dialogconversionstatus.h \
@@ -30,7 +31,9 @@ CONFIG += qt \
     src/cachingsystem.h \
     src/combofilters.h \
     src/updatechecker.h \
-    src/globals.h
+    src/globals.h \
+    src/Modules/multipageconverter.h \
+    src/dialogmultipageeditor.h
  SOURCES =  src/mainwindowimpl.cpp \
   src/main.cpp \
   src/converter.cpp \
@@ -49,7 +52,9 @@ CONFIG += qt \
     src/pushcolorchooser.cpp \
     src/cachingsystem.cpp \
     src/combofilters.cpp \
-    src/updatechecker.cpp
+    src/updatechecker.cpp \
+    src/Modules/multipageconverter.cpp \
+    src/dialogmultipageeditor.cpp
 
  QMAKE_CXXFLAGS += -O2 \
   -Wall \

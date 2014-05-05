@@ -24,6 +24,7 @@
 #include <QDir>
 #include "translator.h"
 #include "whereiam.h"
+#include "inisettings.h"
 
 #define INIFILENAME ".converseen.conf"
 
@@ -32,18 +33,10 @@ QString language;
 
 Translator::Translator()
 {
+    IniSettings::init();
+
     WhereIAm w;
     dataDir = w.dataDir();
-
-    QString iniPath = QDir::homePath() + "/" + INIFILENAME;
-
-#ifdef Q_WS_WIN
-    if ((QSysInfo::windowsVersion() == QSysInfo::WV_VISTA) || (QSysInfo::windowsVersion() == QSysInfo::WV_WINDOWS7)) {
-        iniPath = QDir::homePath() + "/AppData/Roaming/Converseen/" + INIFILENAME;
-    }
-#endif
-
-    settings = new QSettings(iniPath, QSettings::IniFormat);
 
 #ifdef Q_OS_LINUX
 	m_loc = QString("%1/converseen/loc").arg(dataDir);
@@ -63,11 +56,7 @@ QTranslator *Translator::translation()
 
 QString Translator::loadCurrentTranslationName()
 {
-    QString language = "English";
-    if (settings->contains("Options/language")) {
-        language = settings->value("Options/language").value<QString>();
-    }
-    return(language);
+    return IniSettings::language();
 }
 
 void Translator::saveSettings(QString language)
@@ -75,10 +64,10 @@ void Translator::saveSettings(QString language)
     if (language != "English") {
         QString lang = language;
 
-        settings->setValue("Options/language", lang);
+		IniSettings::setLanguage(lang);
     }
     else
-        settings->setValue("Options/language", "English");
+		IniSettings::setLanguage("English");
 }
 
 QList<QPair<QString, QString> > Translator::loadTranslationFiles()

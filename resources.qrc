@@ -15,6 +15,10 @@
         <file>res/v.png</file>
         <file>res/facebook-icon.png</file>
         <file>res/google-plus-icon.png</file>
+        <file>res/flattr.png</file>
+        <file>res/btn_donateCC_LG.gif</file>
+        <file>res/flattr_mini.png</file>
+        <file>res/paypal_mini.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file>res/loading.gif</file>

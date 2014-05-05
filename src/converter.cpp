@@ -26,6 +26,8 @@
 #include <QFileInfo>
 #include "converter.h"
 
+#include <QDebug>
+
 Converter::Converter(QObject *parent)
     : QThread(parent)
 {
@@ -56,8 +58,12 @@ void Converter::run()
     m_process_stopped = 0;
     m_conv_status = 2;  // Jumped
 
+    //qDebug() << "Elementi iteratore:" << images.size();
+
     Image my_image;
     QFileInfo fi(m_fileNameIn);
+
+    //cout << my_image.ping(m_fileNameIn);
 
     QString out = m_fileNameOut;
 
@@ -224,7 +230,7 @@ bool Converter::writeImage(Image &my_image, QString format, int quality, QString
     my_image.magick(format.toUpper().toStdString());
 
     QStringList excludedFormats;
-    excludedFormats << "jpg" << "jpeg" << "bmp";
+    excludedFormats << "jpg" << "jpeg" << "bmp" << "svg";
 
     if (m_changeBg_color || (excludedFormats.contains(format, Qt::CaseInsensitive) && my_image.matte())) {
         Image bgImg;

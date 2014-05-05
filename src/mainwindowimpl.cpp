@@ -32,6 +32,8 @@
 #include "inisettings.h"
 #include "sizeutil.h"
 #include "updatechecker.h"
+#include "dialogmultipageeditor.h"
+#include "globals.h"
 
 using namespace Magick;
 using namespace std;
@@ -98,6 +100,8 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
     resetDisplays();
 
     QTimer::singleShot(10000, this, SLOT(checkForUpdates()));
+
+    checkVersion();
 }
 
 MainWindowImpl::~MainWindowImpl()
@@ -111,7 +115,7 @@ MainWindowImpl::~MainWindowImpl()
     IniSettings::setImageDirChecked(checkSameDir->isChecked());
     IniSettings::setRenameChecked(checkRename->isChecked());
     IniSettings::setBgColorChecked(checkNoTransp->isChecked());
-    IniSettings::isOverWriteMode(checkOverwrite->isChecked());
+    IniSettings::setOverwriteMode(checkOverwrite->isChecked());
 
     IniSettings::settings->sync();
 }
@@ -141,6 +145,8 @@ void MainWindowImpl::createActions()
     // "File" actions
     connect(actionOpenFiles, SIGNAL(triggered()), this, SLOT(openFiles()));
     connect(actionAddFiles, SIGNAL(triggered()), this, SLOT(addFiles()));
+    connect(actionImportWindowsIconIco, SIGNAL(triggered()), this, SLOT(importIcoFile()));
+    connect(actionImportPDFFile, SIGNAL(triggered()), this, SLOT(importPdfFile()));
 
     connect(actionShowOptions, SIGNAL(triggered()), this, SLOT(editSettings()));
     connect(actionClose, SIGNAL(triggered()), this, SLOT(close()));
@@ -159,7 +165,8 @@ void MainWindowImpl::createActions()
     connect(actionConvert, SIGNAL(triggered()), this, SLOT(elabora()));
 
     connect(actionInfo, SIGNAL(triggered()), this, SLOT(about()));
-    connect(actionDonate, SIGNAL(triggered()), this, SLOT(openPaypalLink()));
+    connect(actionDonatePaypal, SIGNAL(triggered()), this, SLOT(openPaypalLink()));
+    connect(actionDonateFlattr, SIGNAL(triggered()), this, SLOT(openFlattrLink()));
     connect(actionReportBug, SIGNAL(triggered()), this, SLOT(bugReport()));
 }
 
@@ -167,6 +174,9 @@ void MainWindowImpl::setupMenu()
 {
     menu_File->addAction(actionOpenFiles);
     menu_File->addAction(actionAddFiles);
+    menu_File->addSeparator();
+    menu_File->addAction(actionImportWindowsIconIco);
+    menu_File->addAction(actionImportPDFFile);
     menu_File->addSeparator();
     menu_File->addAction(actionShowOptions);
     menu_File->addSeparator();
@@ -218,6 +228,46 @@ void MainWindowImpl::addFiles()
 
     if (!fileNames.isEmpty())
         loadFiles(fileNames);
+}
+
+void MainWindowImpl::importIcoFile()
+{
+    QString path = IniSettings::latestOpenedDir();
+
+    QString fileName = QFileDialog::getOpenFileName(this,
+        tr("Open Icon file"), path, tr("Microsoft icon (*.ico *.icon)"));
+
+    if (!fileName.isEmpty())
+        openMultipageFile(fileName);
+}
+
+void MainWindowImpl::importPdfFile()
+{
+    QString path = IniSettings::latestOpenedDir();
+
+    QString fileName = QFileDialog::getOpenFileName(this,
+        tr("Open Pdf file"), path, tr("Portable Document Format (*.pdf)"));
+
+    if (!fileName.isEmpty())
+        openMultipageFile(fileName);
+}
+
+void MainWindowImpl::openMultipageFile(QString fileName)
+{
+    DialogMultipageEditor *dlg = new DialogMultipageEditor();
+
+    statusBar()->showMessage(tr("Analyzing the file. It may take a while, please wait..."));
+    QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
+    dlg->readFile(fileName);
+    QApplication::restoreOverrideCursor();
+    statusBar()->clearMessage();
+
+    dlg->exec();
+
+    if (dlg->result() == 1) {
+        QStringList fileNames = dlg->fileNames();
+        loadFiles(fileNames);
+    }
 }
 
 void MainWindowImpl::loadFiles(QStringList fileNames)
@@ -539,7 +589,7 @@ void MainWindowImpl::loadOptions()
 
     lineDirectory->setText(QDir::toNativeSeparators(IniSettings::outputDir()));
     comboWFormats->setCurrentIndex(IniSettings::latestWrittenFormatIndex());
-    checkOverwrite->setChecked(IniSettings::isOverWriteMode());
+    checkOverwrite->setChecked(IniSettings::isOverwriteMode());
 
     loadQuality();
 
@@ -845,6 +895,20 @@ void MainWindowImpl::resetDisplays()
     labelPixelGeometry->setText("");
 }
 
+void MainWindowImpl::checkVersion()
+{
+    int savedVersion = IniSettings::currentVersion();
+    int currentVersion = globals::CURRENT_INTERNAL_VERSION;
+
+    if (savedVersion < currentVersion) {
+		QString welcomePage = QString("http://fasterland.net/redirects/welcome.php?product=converseen&version=%1")
+			.arg(globals::VERSION);
+
+        QDesktopServices::openUrl(QUrl("http://converseen.sourceforge.net/index.php?page=6", QUrl::TolerantMode));
+        IniSettings::setCurrentVersion(currentVersion);
+    }
+}
+
 void MainWindowImpl::overwriteDialog(QString baseName)
 {
     /*
@@ -929,6 +993,11 @@ QString MainWindowImpl::destinationPath()
 }
 
 void MainWindowImpl::openPaypalLink()
+{
+    QDesktopServices::openUrl(QUrl("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC", QUrl::TolerantMode));
+}
+
+void MainWindowImpl::openFlattrLink()
 {
     QDesktopServices::openUrl(QUrl("http://converseen.sourceforge.net/#donations", QUrl::TolerantMode));
 }

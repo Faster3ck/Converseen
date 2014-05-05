@@ -34,6 +34,8 @@ public:
 private slots:
     void openFacebookPage();
     void openGooglePlusPage();
+    void on_pushDonatePayPal_clicked();
+    void on_pushDonateFlattr_clicked();
 };
 
 #endif // DIALOGINFO_H
