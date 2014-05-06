@@ -106,18 +106,7 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
 
 MainWindowImpl::~MainWindowImpl()
 {
-    IniSettings::setWindowGeometry(saveGeometry());
-    IniSettings::setPreviewChecked(checkShowPreview->isChecked());
-    IniSettings::setScaleChecked(groupDimensions->isChecked());
-    IniSettings::setMeasure(comboResizeValues->currentIndex());
-    IniSettings::setAspectRatioChecked(checkRelative->isChecked());
-    IniSettings::setResolutionChecked(groupResolution->isChecked());
-    IniSettings::setImageDirChecked(checkSameDir->isChecked());
-    IniSettings::setRenameChecked(checkRename->isChecked());
-    IniSettings::setBgColorChecked(checkNoTransp->isChecked());
-    IniSettings::setOverwriteMode(checkOverwrite->isChecked());
-
-    IniSettings::settings->sync();
+    saveSettings();
 }
 
 void MainWindowImpl::importListFromArgv(QString fileName)
@@ -759,7 +748,10 @@ void MainWindowImpl::editSettings()
     DialogOptions dlg;
     dlg.exec();
 
-    loadOptions();
+    if (dlg.result() == 1) {
+        saveSettings();
+        loadOptions();
+    }
 }
 
 void MainWindowImpl::about()
@@ -904,9 +896,25 @@ void MainWindowImpl::checkVersion()
 		QString welcomePage = QString("http://fasterland.net/redirects/welcome.php?product=converseen&version=%1")
 			.arg(globals::VERSION);
 
-        QDesktopServices::openUrl(QUrl("http://converseen.sourceforge.net/index.php?page=6", QUrl::TolerantMode));
+        QDesktopServices::openUrl(QUrl(welcomePage, QUrl::TolerantMode));
         IniSettings::setCurrentVersion(currentVersion);
     }
+}
+
+void MainWindowImpl::saveSettings()
+{
+    IniSettings::setWindowGeometry(saveGeometry());
+    IniSettings::setPreviewChecked(checkShowPreview->isChecked());
+    IniSettings::setScaleChecked(groupDimensions->isChecked());
+    IniSettings::setMeasure(comboResizeValues->currentIndex());
+    IniSettings::setAspectRatioChecked(checkRelative->isChecked());
+    IniSettings::setResolutionChecked(groupResolution->isChecked());
+    IniSettings::setImageDirChecked(checkSameDir->isChecked());
+    IniSettings::setRenameChecked(checkRename->isChecked());
+    IniSettings::setBgColorChecked(checkNoTransp->isChecked());
+    IniSettings::setOverwriteMode(checkOverwrite->isChecked());
+
+    IniSettings::settings->sync();
 }
 
 void MainWindowImpl::overwriteDialog(QString baseName)

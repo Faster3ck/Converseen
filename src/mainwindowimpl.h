@@ -74,6 +74,8 @@ private:
 
     void checkVersion();
 
+    void saveSettings();    // This method is called when the program is closed
+
     QString renameFileNameOnPrefixSuffix(QString oldFileName);
     QString renameFileNameOnProgressiveN(QString oldFileName);
     QString destinationPath();

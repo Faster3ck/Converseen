@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.0" language="pl_PL">
 <context>
     <name>Converter</name>
     <message>
@@ -180,7 +180,7 @@ p, li { white-space: pre-wrap; }
 </source>
         <translation>&lt;strong&gt;Tłumaczenie francuskie: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;</translation>
     </message>
-    <message>
+    <message utf8="true">
         <location filename="../ui/dialoginfo.ui" line="149"/>
         <source>&lt;strong&gt;Brazilian Portuguese Translation: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Tłumaczenie brazylijskie i portugalskie: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</translation>
@@ -190,7 +190,7 @@ p, li { white-space: pre-wrap; }
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Tłumaczenie niemieckie: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
-    <message>
+    <message utf8="true">
         <location filename="../ui/dialoginfo.ui" line="166"/>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
@@ -207,7 +207,7 @@ p, li { white-space: pre-wrap; }
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Tłumaczenie rosyjskie: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
     </message>
-    <message>
+    <message utf8="true">
         <location filename="../ui/dialoginfo.ui" line="189"/>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
@@ -370,12 +370,12 @@ p, li { white-space: pre-wrap; }
         <translation>Anuluj</translation>
     </message>
     <message>
-        <location filename="../src/dialogoptions.cpp" line="71"/>
+        <location filename="../src/dialogoptions.cpp" line="61"/>
         <source>Warning!</source>
         <translation>Otrzeżenie!</translation>
     </message>
     <message>
-        <location filename="../src/dialogoptions.cpp" line="72"/>
+        <location filename="../src/dialogoptions.cpp" line="62"/>
         <source>Please, restart Converseen to apply current language!</source>
         <translation>Uruchom ponownie program, aby zapisać ustawienia!</translation>
     </message>
@@ -659,17 +659,17 @@ p, li { white-space: pre-wrap; }
         <source>No rotation</source>
         <translation>Nie obracaj</translation>
     </message>
-    <message>
+    <message utf8="true">
         <location filename="../ui/mainwindow.ui" line="801"/>
         <source>+ 90°</source>
         <translation>W prawo o 90°</translation>
     </message>
-    <message>
+    <message utf8="true">
         <location filename="../ui/mainwindow.ui" line="815"/>
         <source>- 90°</source>
         <translation>W lewo o 90°</translation>
     </message>
-    <message>
+    <message utf8="true">
         <location filename="../ui/mainwindow.ui" line="831"/>
         <source>180°</source>
         <translation>o 180°</translation>
@@ -944,107 +944,107 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="226"/>
+        <location filename="../src/mainwindowimpl.cpp" line="215"/>
         <source>Open Image</source>
         <translation>Otwórz obraz</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="238"/>
+        <location filename="../src/mainwindowimpl.cpp" line="227"/>
         <source>Open Icon file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="238"/>
+        <location filename="../src/mainwindowimpl.cpp" line="227"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="249"/>
+        <location filename="../src/mainwindowimpl.cpp" line="238"/>
         <source>Open Pdf file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="249"/>
+        <location filename="../src/mainwindowimpl.cpp" line="238"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="259"/>
+        <location filename="../src/mainwindowimpl.cpp" line="248"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="323"/>
-        <location filename="../src/mainwindowimpl.cpp" line="329"/>
-        <location filename="../src/mainwindowimpl.cpp" line="338"/>
-        <location filename="../src/mainwindowimpl.cpp" line="342"/>
-        <location filename="../src/mainwindowimpl.cpp" line="346"/>
+        <location filename="../src/mainwindowimpl.cpp" line="312"/>
+        <location filename="../src/mainwindowimpl.cpp" line="318"/>
+        <location filename="../src/mainwindowimpl.cpp" line="327"/>
+        <location filename="../src/mainwindowimpl.cpp" line="331"/>
+        <location filename="../src/mainwindowimpl.cpp" line="335"/>
         <source>Warning</source>
         <translation>Ostrzeżenie</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="324"/>
+        <location filename="../src/mainwindowimpl.cpp" line="313"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>Brak katalogu docelowego! Utworzyć?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="330"/>
+        <location filename="../src/mainwindowimpl.cpp" line="319"/>
         <source>The directory cannot be created!</source>
         <translation>Nie można utworzyć katalogu!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="339"/>
+        <location filename="../src/mainwindowimpl.cpp" line="328"/>
         <source>Set an output directory!</source>
         <translation>Wybierz katalog docelowy!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="343"/>
+        <location filename="../src/mainwindowimpl.cpp" line="332"/>
         <source>No image checked!</source>
         <translation>Nie sprawdzono!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="347"/>
+        <location filename="../src/mainwindowimpl.cpp" line="336"/>
         <source>No images to convert!</source>
         <translation>Brak obrazków do konwersji!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="356"/>
+        <location filename="../src/mainwindowimpl.cpp" line="345"/>
         <source>Processing...</source>
         <translation>Przetwarzanie...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="519"/>
+        <location filename="../src/mainwindowimpl.cpp" line="508"/>
         <source>Processing finished!</source>
         <translation>Ukończono przetwarzanie!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="573"/>
+        <location filename="../src/mainwindowimpl.cpp" line="562"/>
         <source>Open Directory</source>
         <translation>Otwórz katalog</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="809"/>
-        <location filename="../src/mainwindowimpl.cpp" line="867"/>
+        <location filename="../src/mainwindowimpl.cpp" line="801"/>
+        <location filename="../src/mainwindowimpl.cpp" line="859"/>
         <source>Preview</source>
         <translation>Podgląd</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="918"/>
+        <location filename="../src/mainwindowimpl.cpp" line="929"/>
         <source>Suggest a new name!</source>
         <translation>Podaj nową nazwę!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="919"/>
+        <location filename="../src/mainwindowimpl.cpp" line="930"/>
         <source>New name:</source>
         <translation>Nowa nazwa:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="924"/>
+        <location filename="../src/mainwindowimpl.cpp" line="935"/>
         <source>Please, specify a name!</source>
         <translation>Proszę utworzyć nazwę!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="925"/>
+        <location filename="../src/mainwindowimpl.cpp" line="936"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1055,23 +1055,23 @@ Kliknij Ignoruj, aby zakończyć tą operację.
 Kliknij Porzuć, aby zakończyć wszystkie operacje.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="940"/>
-        <location filename="../src/mainwindowimpl.cpp" line="945"/>
+        <location filename="../src/mainwindowimpl.cpp" line="951"/>
+        <location filename="../src/mainwindowimpl.cpp" line="956"/>
         <source>Warning!</source>
         <translation>Ostrzeżenie!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="941"/>
+        <location filename="../src/mainwindowimpl.cpp" line="952"/>
         <source>The filename should not be empty!</source>
         <translation>Nazwa pliku nie może być pusta!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="946"/>
+        <location filename="../src/mainwindowimpl.cpp" line="957"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Wybrano taką samą nazwę, jak istniejąca już. Nadpisać orgyinalny plik?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="962"/>
+        <location filename="../src/mainwindowimpl.cpp" line="973"/>
         <source>Aborted!</source>
         <translation>Przerwano!</translation>
     </message>

@@ -32,18 +32,8 @@ DialogOptions::DialogOptions(QWidget *parent) :
     QDialog(parent){
     setupUi(this);
 
-    QString iniPath = QDir::homePath() + "/" + INIFILENAME;
-
-#ifdef Q_WS_WIN
-    if ((QSysInfo::windowsVersion() == QSysInfo::WV_VISTA) || (QSysInfo::windowsVersion() == QSysInfo::WV_WINDOWS7)) {
-        iniPath = QDir::homePath() + "/AppData/Roaming/Converseen" + INIFILENAME;
-    }
-#endif
-
-    settings = new QSettings(iniPath, QSettings::IniFormat);
-
     connect(pushOk, SIGNAL(clicked()), this, SLOT(saveOptions()));
-    connect(pushCancel, SIGNAL(clicked()), this, SLOT(close()));
+    connect(pushCancel, SIGNAL(clicked()), this, SLOT(reject()));
 
     Translator t;
     for (int i = 0; i < t.loadTranslationFiles().count(); i++)
@@ -86,7 +76,7 @@ void DialogOptions::saveOptions()
     setLanguage();
     setOverwriteMode();
 
-    close();
+    accept();
 }
 
 void DialogOptions::loadSettings()
