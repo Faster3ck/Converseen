@@ -2,7 +2,7 @@
 
 # Converseen
 
-![alt text](http://converseen.sourceforge.net/res/converseen1.png "Converseen on Kde")
+![alt text](http://converseen.fasterland.net/res/converseen_kde4_1.jpg "Converseen on Kde")
 
 **Converseen** is an open source project written in **C++** with the powerful **Qt4** libraries.
 Thanks to the **Magick++** image libraries it supports more than **100 image formats**.
@@ -21,16 +21,16 @@ With converseen you can:
 ## Installing
 
 **Converseen** is available for both **Linux** and **Windows** platforms.  
-To install **Converseen** source or binaries follow [these instructions](http://converseen.sourceforge.net/index.php?page=1).  
+To install **Converseen** source or binaries follow [these instructions](http://http://converseen.fasterland.net/download-for-linux/).  
 
 ## Author
 
-[Francesco Mondello](http://converseen.sourceforge.net/).  
-To contact me you can use [this page](http://converseen.sourceforge.net/index.php?page=4).  
+[Francesco Mondello](http://converseen.fasterland.net/).  
+To contact me you can use [this page](http://converseen.fasterland.net/contact-me/).  
   
   
-You can find more details about **Converseen** at [converseen.sf.net](http://converseen.sourceforge.net/).  
-If you appreciate this work and would like to support the project, you are welcome to [donate](http://converseen.sourceforge.net/#donations) **1 EUR** via **Paypal**.  
+You can find more details about **Converseen** at [converseen.sf.net](http://converseen.fasterland.net/).  
+If you appreciate this work and would like to support the project, you are welcome to [donate](http://converseen.fasterland.net/#donations) **1 EUR** via **Paypal**.  
 
 ## License
  

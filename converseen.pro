@@ -102,6 +102,8 @@ CONFIG += qt \
  desktopFile.files = res/converseen.desktop
  kdeservicemenu.path = $${SHARE_DIR}/kde4/services/ServiceMenus/
  kdeservicemenu.files = res/converseen_import.desktop
+ appdata.path = /usr/share/appdata/
+ appdata.files = converseen.appdata.xml
 
  isEmpty(QMAKE_LRELEASE) {
   QMAKE_LRELEASE = $$[QT_INSTALL_BINS]/lrelease
@@ -119,4 +121,5 @@ CONFIG += qt \
              translations \
 	     icon \
 	     desktopFile \
-	     kdeservicemenu
+	     kdeservicemenu \
+	     appdata
