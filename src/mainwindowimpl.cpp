@@ -1007,7 +1007,7 @@ void MainWindowImpl::openPaypalLink()
 
 void MainWindowImpl::openFlattrLink()
 {
-    QDesktopServices::openUrl(QUrl("http://converseen.sourceforge.net/#donations", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("http://converseen.fasterland.net/#donations", QUrl::TolerantMode));
 }
 
 void MainWindowImpl::checkForUpdates()

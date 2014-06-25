@@ -1,4 +1,6 @@
 [Desktop Entry]
+Type=Application
+Version=1.0
 Name=Converseen
 GenericName=Converseen
 GenericName[en_GB]=Converseen
@@ -12,5 +14,4 @@ Comment[ro]=Batch converter pentru imagini
 Exec=converseen
 Icon=converseen
 Terminal=false
-Type=Application
-Categories=Qt;Graphics;
+Categories=Qt;KDE;Graphics;
