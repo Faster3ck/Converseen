@@ -67,21 +67,26 @@ void ThumbnailGeneratorThread::setFileName(QString fileName)
 
 QImage* ThumbnailGeneratorThread::toQImage(const Image &image)
 {
-    QImage *newQImage = new QImage(image.columns(), image.rows(), QImage::Format_RGB32);
+    QImage *qmg = new QImage();
+    Image tmpImage = image;
 
-    Magick::ColorRGB rgb;
-    for (int y = 0; y < newQImage->height(); y++) {
-        const Magick::PixelPacket *pixels;
-        pixels = image.getConstPixels(0, y, newQImage->width(), 1);
-        for (int x = 0; x < newQImage->width(); x++) {
-            rgb = (*(pixels + x));
-            newQImage->setPixel(x, y, QColor((int) (255 * rgb.red())
-                                             , (int) (255 * rgb.green())
-                                             , (int) (255 * rgb.blue())).rgb());
-        }
-    }
+    Geometry geometry;
 
-    return newQImage;
+    geometry.width(MAX_THUMB_W);
+    geometry.height(MAX_THUMB_H);
+    geometry.aspect(false);
+
+    tmpImage.resize(geometry);
+
+    Blob blob;
+    tmpImage.magick("PNG"); // or PNG
+    tmpImage.write(&blob);
+    const QByteArray imageData((char*)(blob.data()),blob.length());
+
+    // Convert the data to a QPixmap in the vector
+    qmg->loadFromData(imageData);
+
+    return qmg;
 }
 
 void ThumbnailGeneratorThread::setThumbnailGeneration(bool generate)
@@ -109,8 +114,12 @@ void ThumbnailGeneratorThread::createThumbnail()
         img_dens_x = tmpImage.logicalDpiX();
         img_dens_y = tmpImage.logicalDpiY();
 
-        if (m_generateThumbnail)
-            thumbnail = tmpImage;
+        if (m_generateThumbnail) {
+            thumbnail = tmpImage.scaled(QSize(MAX_THUMB_W, MAX_THUMB_H),
+                                       Qt::KeepAspectRatio,
+                                       Qt::SmoothTransformation);
+
+        }
     }
     else {
         try
@@ -140,26 +149,6 @@ void ThumbnailGeneratorThread::createThumbnail()
         catch ( Magick::Warning &warning )
         {
             //setText(tr("Sorry! Selected image is damaged!"));
-        }
-
-    }
-
-    if (m_generateThumbnail) {
-        int n_heigth = (MAX_THUMB_W * img_height) / img_width;
-
-        if (!((img_width <= MAX_THUMB_W) && (img_height <= MAX_THUMB_H))) {
-            if (img_width > img_height) {
-                thumbnail = thumbnail.scaled(QSize(MAX_THUMB_W, n_heigth),
-                                           Qt::IgnoreAspectRatio,
-                                           Qt::SmoothTransformation);
-            }
-            else
-                if ((img_width <= img_height) || (n_heigth > MAX_THUMB_H)) {
-                    int n_width = (MAX_THUMB_H * img_width) / img_height;
-                    thumbnail = thumbnail.scaled(QSize(n_width, MAX_THUMB_H),
-                                               Qt::IgnoreAspectRatio,
-                                               Qt::SmoothTransformation);
-                }
         }
     }
 
