@@ -253,23 +253,6 @@ bool Converter::writeImage(Image &my_image, QString format, int quality, QString
     try {
         my_image.write(out.toStdString());
 
-        #ifndef Q_OS_WIN32
-        // Delete images with upper extension (not on Windows)
-        /*
-            L'operazione seguente ovviamente avviene solo se
-            la conversione è andata a buon fine. Quindi in caso di errore,
-            l'immagine con l'estensione maiuscola, non viene eliminata.
-        */
-        if (m_overwrite) {
-            QFileInfo fi1(m_fileNameIn);
-            QFileInfo fi2(out);
-
-            if (fi1.suffix() != format)
-                if ((fi1.suffix().toLower() == format) && (fi1.path() == fi2.path()))
-                    QFile::remove(m_fileNameIn);
-        }
-        #endif
-
         converted = true;
     }
     catch (Error& my_error) {
