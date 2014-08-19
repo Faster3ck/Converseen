@@ -36,7 +36,7 @@ QStringList Formats::s_writableFilters;
 
 void Formats::loadFormats()
 {
-#ifdef Q_OS_LINUX
+#ifdef Q_OS_LINUX || Q_OS_FREEBSD
     list<CoderInfo> coderList;
     coderInfoList(&coderList,
                   CoderInfo::TrueMatch,
@@ -70,12 +70,9 @@ void Formats::loadFormats()
         }
 
         if (entry->isWritable()) {
-            QString currFormat = QString::fromStdString(entry->name()).toLower();
-            if (!(blacklist.contains(currFormat))) {
-                s_writableFilters << QString("%1 - (%2)")
-                                     .arg(QString::fromStdString(entry->name()))
-                                     .arg(QString::fromStdString(entry->description()));
-            }
+            s_writableFilters << QString("%1 - (%2)")
+                                 .arg(QString::fromStdString(entry->name()))
+                                 .arg(QString::fromStdString(entry->description()));
         }
 
         ++entry;
