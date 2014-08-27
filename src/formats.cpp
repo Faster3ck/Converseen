@@ -36,7 +36,7 @@ QStringList Formats::s_writableFilters;
 
 void Formats::loadFormats()
 {
-#ifdef Q_OS_LINUX || Q_OS_FREEBSD
+#if defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
     list<CoderInfo> coderList;
     coderInfoList(&coderList,
                   CoderInfo::TrueMatch,
