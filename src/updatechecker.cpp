@@ -27,7 +27,7 @@
 #include "globals.h"
 
 #define VERSION_URL "http://fasterland.net/software-updates/converseen-version.txt"
-#define DESTINATION_URL "http://converseen.sf.net/"
+#define DESTINATION_URL "http://converseen.fasterland.net/update/"
 
 UpdateChecker::UpdateChecker(QObject *parent) :
     QObject(parent)
