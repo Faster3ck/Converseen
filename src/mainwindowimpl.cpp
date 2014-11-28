@@ -99,7 +99,7 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
 
     resetDisplays();
 
-    QTimer::singleShot(10000, this, SLOT(checkForUpdates()));
+    checkForUpdates();
 
     checkVersion();
 }
@@ -157,6 +157,7 @@ void MainWindowImpl::createActions()
     connect(actionDonatePaypal, SIGNAL(triggered()), this, SLOT(openPaypalLink()));
     connect(actionDonateFlattr, SIGNAL(triggered()), this, SLOT(openFlattrLink()));
     connect(actionReportBug, SIGNAL(triggered()), this, SLOT(bugReport()));
+    connect(actionCheckForUpdates, SIGNAL(triggered()), this, SLOT(checkForUpdates()));
 }
 
 void MainWindowImpl::setupMenu()
@@ -1012,8 +1013,10 @@ void MainWindowImpl::openFlattrLink()
 
 void MainWindowImpl::checkForUpdates()
 {
-    UpdateChecker *up = new UpdateChecker();
-    up->checkForUpdates();
+    if (IniSettings::isAutoChechUpdates()) {
+        UpdateChecker *up = new UpdateChecker();
+        up->checkForUpdates();
+    }
 }
 
 void MainWindowImpl::bugReport()

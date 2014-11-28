@@ -153,7 +153,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>21</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -178,6 +178,7 @@
     <addaction name="actionDonatePaypal"/>
     <addaction name="actionDonateFlattr"/>
     <addaction name="separator"/>
+    <addaction name="actionCheckForUpdates"/>
     <addaction name="actionReportBug"/>
     <addaction name="separator"/>
    </widget>
@@ -204,7 +205,7 @@
     <set>QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable</set>
    </property>
    <property name="windowTitle">
-    <string>Actions Panel</string>
+    <string>A&amp;ctions Panel</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -237,7 +238,7 @@
           <x>0</x>
           <y>0</y>
           <width>350</width>
-          <height>954</height>
+          <height>977</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -1020,7 +1021,7 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QRadioButton" name="radioPrefixSuffix">
                 <property name="text">
-                 <string>Prefix/Suffix</string>
+                 <string>Prefi&amp;x/Suffix</string>
                 </property>
                 <property name="checked">
                  <bool>true</bool>
@@ -1030,7 +1031,7 @@ p, li { white-space: pre-wrap; }
               <item>
                <widget class="QRadioButton" name="radioProgressive">
                 <property name="text">
-                 <string>Progressive Number</string>
+                 <string>Progressi&amp;ve Number</string>
                 </property>
                </widget>
               </item>
@@ -1282,7 +1283,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/Images/res/paypal_mini.png</normaloff>:/Images/res/paypal_mini.png</iconset>
    </property>
    <property name="text">
-    <string>Donate via Paypal</string>
+    <string>&amp;Donate via Paypal</string>
    </property>
    <property name="toolTip">
     <string>Donate via Paypal</string>
@@ -1290,7 +1291,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionReportBug">
    <property name="text">
-    <string>Report bug...</string>
+    <string>&amp;Report bug...</string>
    </property>
   </action>
   <action name="actionImportPDFFile">
@@ -1312,10 +1313,18 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/Images/res/flattr_mini.png</normaloff>:/Images/res/flattr_mini.png</iconset>
    </property>
    <property name="text">
-    <string>Flattr This!</string>
+    <string>&amp;Flattr This!</string>
    </property>
    <property name="toolTip">
     <string>Donate via Flattr</string>
+   </property>
+  </action>
+  <action name="actionCheckForUpdates">
+   <property name="text">
+    <string>Check for updates</string>
+   </property>
+   <property name="toolTip">
+    <string>Check if a new version of Converseen is available</string>
    </property>
   </action>
  </widget>

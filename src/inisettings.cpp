@@ -24,6 +24,7 @@
 #include <QDir>
 #include <QDesktopServices>
 #include "inisettings.h"
+
 #define INIFILENAME ".converseen.conf"
 
 QSettings *IniSettings::settings;
@@ -185,6 +186,21 @@ QString IniSettings::language()
     return language;
 }
 
+bool IniSettings::isAutoChechUpdates()
+{
+    bool enabled;
+
+    if (settings->contains("Options/Check updates")) {
+        enabled = settings->value("Options/Check updates").value<bool>();
+    }
+    else
+        enabled = true;
+
+    return enabled;
+}
+
+//
+
 void IniSettings::setOutputDir(QString path)
 {
     settings->setValue("General/Save directory", path);
@@ -278,4 +294,9 @@ void IniSettings::setCurrentVersion(int version)
 void IniSettings::setLanguage(QString lang)
 {
 	settings->setValue("Options/language", lang);
+}
+
+void IniSettings::setAutoChechUpdates(bool enabled)
+{
+    settings->setValue("Options/Check updates", enabled);
 }

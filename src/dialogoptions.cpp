@@ -68,13 +68,26 @@ void DialogOptions::setOverwriteMode()
     if (radioAskFirst->isChecked())
         IniSettings::setOverwriteMode(true);
 	else
-		IniSettings::setOverwriteMode(false);
+        IniSettings::setOverwriteMode(false);
+}
+
+void DialogOptions::setAutoUpdates()
+{
+    bool enabled;
+
+    if (checkCheckUpdates->isChecked())
+        enabled = true;
+    else
+        enabled = false;
+
+    IniSettings::setAutoChechUpdates(enabled);
 }
 
 void DialogOptions::saveOptions()
 {
     setLanguage();
     setOverwriteMode();
+    setAutoUpdates();
 
     accept();
 }
@@ -83,6 +96,12 @@ void DialogOptions::loadSettings()
 {
     bool overwriteMode = IniSettings::isOverwriteMode();
 	radioAskFirst->setChecked(overwriteMode);
+
+    bool autoUpdates = IniSettings::isAutoChechUpdates();
+    if (autoUpdates)
+        checkCheckUpdates->setCheckState(Qt::Checked);
+    else
+        checkCheckUpdates->setCheckState(Qt::Unchecked);
 
     Translator t;
     

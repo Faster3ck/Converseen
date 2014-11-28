@@ -802,11 +802,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Ask first</source>
-        <translation>Zeptat se nejprve</translation>
+        <translation type="vanished">Zeptat se nejprve</translation>
     </message>
     <message>
         <source>Overwrite all existing images</source>
-        <translation>Přepsat všechny stávající obrázky</translation>
+        <translation type="vanished">Přepsat všechny stávající obrázky</translation>
     </message>
     <message>
         <source>Ok</source>
@@ -823,6 +823,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Please, restart Converseen to apply current language!</source>
         <translation>Pro použití nynějšího jazyka spusťte, prosím, Converseen znovu!</translation>
+    </message>
+    <message>
+        <source>As&amp;k first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>O&amp;verwrite all existing images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checks for updates automatically</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -999,7 +1015,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Actions Panel</source>
-        <translation>Panel činností</translation>
+        <translation type="vanished">Panel činností</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1391,11 +1407,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Prefix/Suffix</source>
-        <translation>Předpona/Přípona</translation>
+        <translation type="vanished">Předpona/Přípona</translation>
     </message>
     <message>
         <source>Progressive Number</source>
-        <translation>Rostoucí číslo</translation>
+        <translation type="vanished">Rostoucí číslo</translation>
     </message>
     <message>
         <source>Start with:</source>
@@ -1403,7 +1419,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Report bug...</source>
-        <translation>Nahlásit chybu...</translation>
+        <translation type="vanished">Nahlásit chybu...</translation>
     </message>
     <message>
         <source>Link aspect with selected image</source>
@@ -1423,11 +1439,43 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Flattr This!</source>
-        <translation>Flattr toto!</translation>
+        <translation type="vanished">Flattr toto!</translation>
     </message>
     <message>
         <source>Donate via Flattr</source>
         <translation>Darovat přes Flattr</translation>
+    </message>
+    <message>
+        <source>A&amp;ctions Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefi&amp;x/Suffix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progressi&amp;ve Number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Donate via Paypal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Report bug...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Flattr This!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check if a new version of Converseen is available</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1674,8 +1722,15 @@ Klepněte na Zrušit pro zrušení všech operací.</translation>
     <message>
         <source>A new version of Converseen is available!
 Would you download it?</source>
-        <translation>Je dostupná nová verze Converseen!
+        <translation type="vanished">Je dostupná nová verze Converseen!
 Chcete ji stáhnout?</translation>
+    </message>
+    <message>
+        <source>A new version of Converseen is available!
+Would you download it?
+
+(You can disable automatic check for updates using the &apos;settings dialog&apos;).</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

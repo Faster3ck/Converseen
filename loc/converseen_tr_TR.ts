@@ -568,7 +568,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Overwrite all existing images</source>
-        <translation>Mevcut tüm görüntülerin üzerine yaz</translation>
+        <translation type="vanished">Mevcut tüm görüntülerin üzerine yaz</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -576,7 +576,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Ask first</source>
-        <translation>Önce sor</translation>
+        <translation type="vanished">Önce sor</translation>
+    </message>
+    <message>
+        <source>As&amp;k first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>O&amp;verwrite all existing images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checks for updates automatically</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -725,7 +741,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Actions Panel</source>
-        <translation>Eylemler Paneli</translation>
+        <translation type="vanished">Eylemler Paneli</translation>
     </message>
     <message>
         <source>Open output directory</source>
@@ -1096,19 +1112,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Prefix/Suffix</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Progressive Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Start with:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Report bug...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1128,11 +1132,39 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Flattr This!</source>
+        <source>Donate via Flattr</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Donate via Flattr</source>
+        <source>A&amp;ctions Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefi&amp;x/Suffix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progressi&amp;ve Number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Donate via Paypal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Report bug...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Flattr This!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check if a new version of Converseen is available</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1371,7 +1403,9 @@ Tüm işlemleri iptal etmek için iptal tıklayın.</translation>
     </message>
     <message>
         <source>A new version of Converseen is available!
-Would you download it?</source>
+Would you download it?
+
+(You can disable automatic check for updates using the &apos;settings dialog&apos;).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

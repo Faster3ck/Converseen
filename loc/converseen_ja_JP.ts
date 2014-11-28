@@ -346,7 +346,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Overwrite all existing images</source>
-        <translation>すべて上書き</translation>
+        <translation type="vanished">すべて上書き</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -354,7 +354,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Ask first</source>
-        <translation>確認する</translation>
+        <translation type="vanished">確認する</translation>
+    </message>
+    <message>
+        <source>As&amp;k first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>O&amp;verwrite all existing images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checks for updates automatically</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -527,11 +543,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Actions Panel</source>
-        <translation>操作パネル</translation>
+        <translation type="vanished">操作パネル</translation>
     </message>
     <message>
         <source>Prefix/Suffix</source>
-        <translation>プレフィクス/サフィクス</translation>
+        <translation type="vanished">プレフィクス/サフィクス</translation>
     </message>
     <message>
         <source>Open output directory</source>
@@ -747,7 +763,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Progressive Number</source>
-        <translation>連番</translation>
+        <translation type="vanished">連番</translation>
     </message>
     <message>
         <source>Height:</source>
@@ -787,7 +803,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Report bug...</source>
-        <translation>バグ報告...</translation>
+        <translation type="vanished">バグ報告...</translation>
     </message>
     <message>
         <source>Link aspect with selected image</source>
@@ -807,11 +823,43 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Flattr This!</source>
-        <translation>Flattr(寄付)!</translation>
+        <translation type="vanished">Flattr(寄付)!</translation>
     </message>
     <message>
         <source>Donate via Flattr</source>
         <translation>Flattr で寄付</translation>
+    </message>
+    <message>
+        <source>A&amp;ctions Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefi&amp;x/Suffix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progressi&amp;ve Number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Donate via Paypal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Report bug...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Flattr This!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check if a new version of Converseen is available</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -963,8 +1011,15 @@ Abortで操作の取り消し。</translation>
     <message>
         <source>A new version of Converseen is available!
 Would you download it?</source>
-        <translation>新しいバージョンの Converseen を利用できます!
+        <translation type="vanished">新しいバージョンの Converseen を利用できます!
 ダウンロードしますか?</translation>
+    </message>
+    <message>
+        <source>A new version of Converseen is available!
+Would you download it?
+
+(You can disable automatic check for updates using the &apos;settings dialog&apos;).</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -35,6 +35,7 @@ public:
 private:
     void setLanguage();
     void setOverwriteMode();
+    void setAutoUpdates();
     void loadSettings();
 
     QSettings *settings;

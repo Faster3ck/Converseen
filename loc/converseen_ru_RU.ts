@@ -324,7 +324,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Overwrite all existing images</source>
-        <translation>Перезаписать все существующие изображения</translation>
+        <translation type="vanished">Перезаписать все существующие изображения</translation>
     </message>
     <message>
         <source>Settings</source>
@@ -332,7 +332,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Ask first</source>
-        <translation>Спрашивать перед записью</translation>
+        <translation type="vanished">Спрашивать перед записью</translation>
+    </message>
+    <message>
+        <source>As&amp;k first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>O&amp;verwrite all existing images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checks for updates automatically</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -425,7 +441,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Actions Panel</source>
-        <translation>Панель действий</translation>
+        <translation type="vanished">Панель действий</translation>
     </message>
     <message>
         <source>Open output directory</source>
@@ -750,19 +766,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Prefix/Suffix</source>
-        <translation>Префикс/Суфикс</translation>
+        <translation type="vanished">Префикс/Суфикс</translation>
     </message>
     <message>
         <source>Progressive Number</source>
-        <translation>Порядковый номер</translation>
+        <translation type="vanished">Порядковый номер</translation>
     </message>
     <message>
         <source>Start with:</source>
         <translation>Начать с:</translation>
-    </message>
-    <message>
-        <source>Report bug...</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Link aspect with selected image</source>
@@ -781,11 +793,39 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Flattr This!</source>
+        <source>Donate via Flattr</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Donate via Flattr</source>
+        <source>A&amp;ctions Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefi&amp;x/Suffix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progressi&amp;ve Number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Donate via Paypal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Report bug...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Flattr This!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check if a new version of Converseen is available</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -940,7 +980,9 @@ Click Abort to cancel all operations.</source>
     </message>
     <message>
         <source>A new version of Converseen is available!
-Would you download it?</source>
+Would you download it?
+
+(You can disable automatic check for updates using the &apos;settings dialog&apos;).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

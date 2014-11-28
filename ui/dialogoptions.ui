@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>297</width>
-    <height>198</height>
+    <width>361</width>
+    <height>278</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -49,7 +49,7 @@
       <item>
        <widget class="QRadioButton" name="radioAskFirst">
         <property name="text">
-         <string>Ask first</string>
+         <string>As&amp;k first</string>
         </property>
         <property name="checked">
          <bool>true</bool>
@@ -59,7 +59,23 @@
       <item>
        <widget class="QRadioButton" name="radioOverwrite">
         <property name="text">
-         <string>Overwrite all existing images</string>
+         <string>O&amp;verwrite all existing images</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Updates</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="checkCheckUpdates">
+        <property name="text">
+         <string>Checks for updates automatically</string>
         </property>
        </widget>
       </item>

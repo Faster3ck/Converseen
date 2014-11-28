@@ -668,7 +668,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Overwrite all existing images</source>
-        <translation>Minden létező képfájl felülírása</translation>
+        <translation type="vanished">Minden létező képfájl felülírása</translation>
     </message>
     <message>
         <source>Ok</source>
@@ -680,7 +680,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Ask first</source>
-        <translation>Válasszon először</translation>
+        <translation type="vanished">Válasszon először</translation>
     </message>
     <message>
         <source>Warning!</source>
@@ -689,6 +689,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Please, restart Converseen to apply current language!</source>
         <translation>Kérem indítsa újra a Converseen-t az új nyelvi beállításokhoz!</translation>
+    </message>
+    <message>
+        <source>As&amp;k first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>O&amp;verwrite all existing images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checks for updates automatically</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -865,7 +881,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Actions Panel</source>
-        <translation>Műveletek panel</translation>
+        <translation type="vanished">Műveletek panel</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1261,19 +1277,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Prefix/Suffix</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Progressive Number</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Start with:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Report bug...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1293,11 +1297,39 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Flattr This!</source>
+        <source>Donate via Flattr</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Donate via Flattr</source>
+        <source>A&amp;ctions Panel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prefi&amp;x/Suffix</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Progressi&amp;ve Number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Donate via Paypal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Report bug...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Flattr This!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check for updates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Check if a new version of Converseen is available</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1544,7 +1576,9 @@ Kattintson megszakítás gombra, hogy az összes műveletet megszakísta.</trans
     </message>
     <message>
         <source>A new version of Converseen is available!
-Would you download it?</source>
+Would you download it?
+
+(You can disable automatic check for updates using the &apos;settings dialog&apos;).</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

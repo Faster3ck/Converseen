@@ -706,7 +706,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;(c) 2009 - 2014 Francesco Mondello GNU - GPL v.2&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;(c) 2009 - 2014 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -834,7 +834,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Overwrite all existing images</source>
-        <translation>Sovrascrivi tutte le immagini che già esistono</translation>
+        <translation type="vanished">Sovrascrivi tutte le immagini che già esistono</translation>
     </message>
     <message>
         <source>Ok</source>
@@ -846,7 +846,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Ask first</source>
-        <translation>Chiedi prima</translation>
+        <translation type="vanished">Chiedi prima</translation>
     </message>
     <message>
         <source>Warning!</source>
@@ -855,6 +855,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Please, restart Converseen to apply current language!</source>
         <translation>Per favore riavvia Converseen per utilizzare questa lingua!</translation>
+    </message>
+    <message>
+        <source>As&amp;k first</source>
+        <translation>Ch&amp;iedi prima</translation>
+    </message>
+    <message>
+        <source>O&amp;verwrite all existing images</source>
+        <translation>S&amp;ovrascrivi tutte le immagini esistenti</translation>
+    </message>
+    <message>
+        <source>Updates</source>
+        <translation>Aggiornamenti</translation>
+    </message>
+    <message>
+        <source>Checks for updates automatically</source>
+        <translation>Controlla automaticamente gli aggiornamenti</translation>
     </message>
 </context>
 <context>
@@ -1031,7 +1047,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Actions Panel</source>
-        <translation>Pannello delle azioni</translation>
+        <translation type="vanished">Pannello delle azioni</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -1427,11 +1443,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Prefix/Suffix</source>
-        <translation>Prefisso/Suffisso</translation>
+        <translation type="vanished">Prefisso/Suffisso</translation>
     </message>
     <message>
         <source>Progressive Number</source>
-        <translation>Numero progressivo</translation>
+        <translation type="vanished">Numero progressivo</translation>
     </message>
     <message>
         <source>Start with:</source>
@@ -1439,7 +1455,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Report bug...</source>
-        <translation>Segnala bug...</translation>
+        <translation type="vanished">Segnala bug...</translation>
     </message>
     <message>
         <source>Link aspect with selected image</source>
@@ -1459,11 +1475,43 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Flattr This!</source>
-        <translation>Dona con Flattr!</translation>
+        <translation type="vanished">Dona con Flattr!</translation>
     </message>
     <message>
         <source>Donate via Flattr</source>
         <translation>Dona via Flattr</translation>
+    </message>
+    <message>
+        <source>A&amp;ctions Panel</source>
+        <translation>&amp;Pannello delle azioni</translation>
+    </message>
+    <message>
+        <source>Prefi&amp;x/Suffix</source>
+        <translation>Pre&amp;fisso/Suffisso</translation>
+    </message>
+    <message>
+        <source>Progressi&amp;ve Number</source>
+        <translation>Numero progress&amp;ivo</translation>
+    </message>
+    <message>
+        <source>&amp;Donate via Paypal</source>
+        <translation>Dona con &amp;Paypal</translation>
+    </message>
+    <message>
+        <source>&amp;Report bug...</source>
+        <translation>&amp;Riporta bug...</translation>
+    </message>
+    <message>
+        <source>&amp;Flattr This!</source>
+        <translation>Dona con F&amp;lattr!</translation>
+    </message>
+    <message>
+        <source>Check for updates</source>
+        <translation>Controlla aggiornamenti</translation>
+    </message>
+    <message>
+        <source>Check if a new version of Converseen is available</source>
+        <translation>Controlla se sono disponibili nuove versioni di Converseen</translation>
     </message>
 </context>
 <context>
@@ -1710,7 +1758,17 @@ Click Abort per annullare tutte le operazioni.</translation>
     <message>
         <source>A new version of Converseen is available!
 Would you download it?</source>
-        <translation>Una nuova versione di Converseen è disponibile! La vuoi scaricare adesso?</translation>
+        <translation type="vanished">Una nuova versione di Converseen è disponibile! La vuoi scaricare adesso?</translation>
+    </message>
+    <message>
+        <source>A new version of Converseen is available!
+Would you download it?
+
+(You can disable automatic check for updates using the &apos;settings dialog&apos;).</source>
+        <translation>È disponibile una nuova versione di Converseen!
+Vuoi scaricarla?
+
+(Puoi disabilitare la ricerca automatica di aggiornamenti attraverso il pannello delle impostazioni).</translation>
     </message>
 </context>
 <context>

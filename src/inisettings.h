@@ -55,6 +55,7 @@ public:
     static int latestInterpFiltIdx();
     static int currentVersion();
 	static QString language();
+    static bool isAutoChechUpdates();
 
     static void setOutputDir(QString path);
     static void setWindowGeometry(QByteArray geometry);
@@ -75,6 +76,7 @@ public:
     static void setLatestInterpFiltIdx(int index);
     static void setCurrentVersion(int version);
 	static void setLanguage(QString lang);
+    static void setAutoChechUpdates(bool enabled);
 
 //private:
     static QSettings *settings;
