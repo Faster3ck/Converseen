@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2014
+* (C) Francesco Mondello 2009-2015
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -203,12 +203,13 @@ void MainWindowImpl::createContextMenu()
 void MainWindowImpl::openFiles()
 {
     iAList->clear();
-    CachingSystem::clear();
     addFiles();
 }
 
 void MainWindowImpl::addFiles()
 {
+    CachingSystem::clear();
+
     QString path = IniSettings::latestOpenedDir();
 
     QString readableFiltersString = Formats::readableFiltersString();

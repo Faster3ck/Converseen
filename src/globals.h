@@ -29,8 +29,8 @@
 namespace globals
 {
     const QString PROGRAM_NAME = "Converseen";
-    const int CURRENT_INTERNAL_VERSION = 850;
-    const QString VERSION = "0.8.5";
+    const int CURRENT_INTERNAL_VERSION = 860;
+    const QString VERSION = "0.8.6";
 }
 
 #endif // GLOBALS_H
