@@ -165,6 +165,7 @@
     <ClCompile Include="src\dialogoptions.cpp" />
     <ClCompile Include="src\dialogquality.cpp" />
     <ClCompile Include="src\formats.cpp" />
+    <ClCompile Include="src\globals.cpp" />
     <ClCompile Include="src\inisettings.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\mainwindowimpl.cpp" />

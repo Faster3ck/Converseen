@@ -53,6 +53,7 @@ CONFIG += qt \
     src/cachingsystem.cpp \
     src/combofilters.cpp \
     src/updatechecker.cpp \
+    src/globals.cpp \
     src/Modules/multipageconverter.cpp \
     src/dialogmultipageeditor.cpp
 

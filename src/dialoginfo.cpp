@@ -24,6 +24,7 @@
 #include <QUrl>
 #include <QDesktopServices>
 #include "dialoginfo.h"
+#include "globals.h"
 
 DialogInfo::DialogInfo(QWidget *parent) :
     QDialog(parent){
@@ -33,9 +34,19 @@ DialogInfo::DialogInfo(QWidget *parent) :
     connect(pushFacebook, SIGNAL(clicked()), this, SLOT(openFacebookPage()));
     connect(pushGPlus, SIGNAL(clicked()), this, SLOT(openGooglePlusPage()));
 
+    QString appVersion;
+
+#ifdef Q_OS_WIN32
+    appVersion = QString("%1%2")
+            .arg(QCoreApplication::applicationVersion())
+            .arg(globals::Globals::signature());
+#else
+    appVersion = QCoreApplication::applicationVersion();
+#endif
+
     QString title = QString("<p><span style=\" font-size:12pt; font-weight:600;\">Converseen %1</span><br />"
                             "<span style=\" font-size:10pt;\">%2</span></p>")
-            .arg(QCoreApplication::applicationVersion())
+            .arg(appVersion)
             .arg(tr("The batch image converter and resizer."));
 
     labelTitle->setText(title);
@@ -61,5 +72,5 @@ void DialogInfo::on_pushDonatePayPal_clicked()
 
 void DialogInfo::on_pushDonateFlattr_clicked()
 {
-    QDesktopServices::openUrl(QUrl("http://converseen.sourceforge.net/#donations", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("http://flattr.com/thing/3332139/Converseen", QUrl::TolerantMode));
 }

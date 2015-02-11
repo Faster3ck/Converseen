@@ -895,8 +895,18 @@ void MainWindowImpl::checkVersion()
     int currentVersion = globals::CURRENT_INTERNAL_VERSION;
 
     if (savedVersion < currentVersion) {
-		QString welcomePage = QString("http://fasterland.net/redirects/welcome.php?product=converseen&version=%1")
-			.arg(globals::VERSION);
+	        QString appVersion;
+
+    #ifdef Q_OS_WIN32
+        appVersion = QString("%1%2")
+                .arg(QCoreApplication::applicationVersion())
+                .arg(globals::Globals::signature());
+    #else
+        appVersion = QCoreApplication::applicationVersion();
+    #endif
+
+	QString welcomePage = QString("http://fasterland.net/redirects/welcome.php?product=converseen&version=%1")
+            .arg(appVersion);
 
         QDesktopServices::openUrl(QUrl(welcomePage, QUrl::TolerantMode));
         IniSettings::setCurrentVersion(currentVersion);
@@ -1009,7 +1019,7 @@ void MainWindowImpl::openPaypalLink()
 
 void MainWindowImpl::openFlattrLink()
 {
-    QDesktopServices::openUrl(QUrl("http://converseen.fasterland.net/#donations", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("http://flattr.com/thing/3332139/Converseen", QUrl::TolerantMode));
 }
 
 void MainWindowImpl::checkForUpdates()

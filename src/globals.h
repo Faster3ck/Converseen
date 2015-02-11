@@ -1,8 +1,8 @@
 /*
-* This file is part of Kawaii Emoji Messenger, a multiplatform Facebook client
-* based on the idea of bringing emoji on desktop.
+* This file is part of Converseen, an open-source batch image converter
+* and resizer.
 *
-* (C) Francesco Mondello 2014
+* (C) Francesco Mondello 2009-2015
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -29,8 +29,18 @@
 namespace globals
 {
     const QString PROGRAM_NAME = "Converseen";
-    const int CURRENT_INTERNAL_VERSION = 860;
-    const QString VERSION = "0.8.6";
+    const int CURRENT_INTERNAL_VERSION = 900;
+    const QString VERSION = "0.9.0";
+
+    class Globals
+    {
+    public:
+        static void setSignature(const QString &signature);
+        static QString signature();
+
+    private:
+        static QString m_sig;
+    };
 }
 
 #endif // GLOBALS_H

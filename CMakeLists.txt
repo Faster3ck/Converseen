@@ -27,6 +27,7 @@ SET(converseen_SRCS
     src/dialogoptions.cpp
     src/dialogquality.cpp
     src/formats.cpp
+    src/globals.cpp
     src/inisettings.cpp
     src/mainwindowimpl.cpp
     src/mylabelpreviewer.cpp
