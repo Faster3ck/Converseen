@@ -855,6 +855,29 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>DialogShowUpdateMsg</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Don&apos;t show again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update Now</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Not Now</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Formats</name>
     <message>
         <source>All Supported Filters (%1)</source>
@@ -1436,11 +1459,11 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check for updates</source>
+        <source>Check if a new version of Converseen is available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Check if a new version of Converseen is available</source>
+        <source>&amp;Check for updates</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -1686,10 +1709,8 @@ Klepněte na Zrušit pro zrušení všech operací.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A new version of Converseen is available!
-Would you download it?
-
-(You can disable automatic check for updates using the &apos;settings dialog&apos;).</source>
+        <source>A new version of %1 is available!
+Would you download it?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

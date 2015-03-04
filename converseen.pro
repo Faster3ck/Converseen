@@ -12,7 +12,8 @@ CONFIG += qt \
   ui/dialogquality.ui \
   ui/dialogoptions.ui \
   ui/dialoginfo.ui \
-    ui/dialogmultipageeditor.ui
+    ui/dialogmultipageeditor.ui \
+    ui/dialogshowupdatemsg.ui
  HEADERS =  src/mainwindowimpl.h \
   src/converter.h \
   src/dialogconversionstatus.h \
@@ -33,7 +34,8 @@ CONFIG += qt \
     src/updatechecker.h \
     src/globals.h \
     src/Modules/multipageconverter.h \
-    src/dialogmultipageeditor.h
+    src/dialogmultipageeditor.h \
+    src/dialogshowupdatemsg.h
  SOURCES =  src/mainwindowimpl.cpp \
   src/main.cpp \
   src/converter.cpp \
@@ -55,7 +57,8 @@ CONFIG += qt \
     src/updatechecker.cpp \
     src/globals.cpp \
     src/Modules/multipageconverter.cpp \
-    src/dialogmultipageeditor.cpp
+    src/dialogmultipageeditor.cpp \
+    src/dialogshowupdatemsg.cpp
 
  QMAKE_CXXFLAGS += -O2 \
   -Wall \

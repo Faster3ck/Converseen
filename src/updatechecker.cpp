@@ -21,9 +21,10 @@
 *
 */
 
-#include "updatechecker.h"
-#include <QMessageBox>
 #include <QDesktopServices>
+
+#include "updatechecker.h"
+#include "dialogshowupdatemsg.h"
 #include "globals.h"
 
 #define VERSION_URL "http://fasterland.net/software-updates/converseen-version.txt"
@@ -68,12 +69,14 @@ void UpdateChecker::onNetworkReply(QNetworkReply* reply)
 void UpdateChecker::checkIfIsNewVersion(int version)
 {
     if (version > globals::CURRENT_INTERNAL_VERSION) {
-        int ret = QMessageBox::warning(0, tr("New version is available!"),
-                                       tr("A new version of Converseen is available!\nWould you download it?\n\n"
-                                          "(You can disable automatic check for updates using the 'settings dialog')."),
-                                       QMessageBox::Ok | QMessageBox::No);
+        QString caption = QString(tr("New version is available!"));
+        QString message = QString(tr("A new version of %1 is available!\nWould you download it?"))
+                .arg(globals::PROGRAM_NAME);
 
-        if (ret == QMessageBox::Ok)
+        DialogShowUpdateMsg dlg(0, caption, message);
+
+        if (dlg.exec()) {
             QDesktopServices::openUrl(QUrl(DESTINATION_URL, QUrl::TolerantMode));
+        }
     }
 }

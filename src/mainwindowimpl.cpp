@@ -99,7 +99,9 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
 
     resetDisplays();
 
-    checkForUpdates();
+    if (IniSettings::isAutoChechUpdates()) {
+        checkForUpdates();
+    }
 
     checkVersion();
 }
@@ -908,8 +910,8 @@ void MainWindowImpl::checkVersion()
 	QString welcomePage = QString("http://fasterland.net/redirects/welcome.php?product=converseen&version=%1")
             .arg(appVersion);
 
-        QDesktopServices::openUrl(QUrl(welcomePage, QUrl::TolerantMode));
-        IniSettings::setCurrentVersion(currentVersion);
+    QDesktopServices::openUrl(QUrl(welcomePage, QUrl::TolerantMode));
+    IniSettings::setCurrentVersion(currentVersion);
     }
 }
 
@@ -1024,10 +1026,8 @@ void MainWindowImpl::openFlattrLink()
 
 void MainWindowImpl::checkForUpdates()
 {
-    if (IniSettings::isAutoChechUpdates()) {
-        UpdateChecker *up = new UpdateChecker();
-        up->checkForUpdates();
-    }
+    UpdateChecker *up = new UpdateChecker();
+    up->checkForUpdates();
 }
 
 void MainWindowImpl::bugReport()

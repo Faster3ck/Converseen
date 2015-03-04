@@ -11,6 +11,7 @@ SET(converseen_UIS
     ui/dialogconversionstatus.ui
     ui/dialoginfo.ui
     ui/dialogmultipageeditor.ui
+    ui/dialogshowupdatemsg.ui
     ui/dialogoptions.ui
     ui/dialogquality.ui
     ui/mainwindow.ui
@@ -26,6 +27,7 @@ SET(converseen_SRCS
     src/dialogmultipageeditor.cpp
     src/dialogoptions.cpp
     src/dialogquality.cpp
+    src/dialogshowupdatemsg.cpp
     src/formats.cpp
     src/globals.cpp
     src/inisettings.cpp
@@ -50,6 +52,7 @@ SET(converseen_MOC_HDRS
     src/dialogmultipageeditor.h
     src/dialogoptions.h
     src/dialogquality.h
+    src/dialogshowupdatemsg.h
     src/formats.h
     src/globals.h
     src/inisettings.h

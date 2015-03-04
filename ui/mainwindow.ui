@@ -153,7 +153,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>23</height>
+     <height>29</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -198,7 +198,7 @@
    <property name="minimumSize">
     <size>
      <width>375</width>
-     <height>287</height>
+     <height>296</height>
     </size>
    </property>
    <property name="features">
@@ -237,8 +237,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>350</width>
-          <height>977</height>
+          <width>339</width>
+          <height>1075</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -1115,6 +1115,9 @@ p, li { white-space: pre-wrap; }
    <property name="windowTitle">
     <string>toolBar</string>
    </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
    <property name="toolButtonStyle">
     <enum>Qt::ToolButtonTextBesideIcon</enum>
    </property>
@@ -1321,7 +1324,7 @@ p, li { white-space: pre-wrap; }
   </action>
   <action name="actionCheckForUpdates">
    <property name="text">
-    <string>Check for updates</string>
+    <string>&amp;Check for updates</string>
    </property>
    <property name="toolTip">
     <string>Check if a new version of Converseen is available</string>
