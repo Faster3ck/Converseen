@@ -928,23 +928,23 @@ p, li { white-space: pre-wrap; }
     <name>DialogShowUpdateMsg</name>
     <message>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialog</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>TextLabel</translation>
     </message>
     <message>
         <source>Don&apos;t show again</source>
-        <translation type="unfinished"></translation>
+        <translation>Non mostrare ancora</translation>
     </message>
     <message>
         <source>Update Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Aggiorna ora</translation>
     </message>
     <message>
         <source>Not Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Non ora</translation>
     </message>
 </context>
 <context>
@@ -1550,7 +1550,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Controlla Aggiornamenti</translation>
     </message>
 </context>
 <context>
@@ -1812,7 +1812,7 @@ Vuoi scaricarla?
     <message>
         <source>A new version of %1 is available!
 Would you download it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Una nuova versione di %1 è disponibile! Vuoi scaricarla?</translation>
     </message>
 </context>
 <context>
