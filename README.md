@@ -21,7 +21,7 @@ With converseen you can:
 ## Installing
 
 **Converseen** is available for both **Linux** and **Windows** platforms.  
-To install **Converseen** source or binaries follow [these instructions](http://http://converseen.fasterland.net/download-for-linux/).  
+To install **Converseen** source or binaries follow [these instructions](http://converseen.fasterland.net/download-for-linux/).  
 
 ## Author
 
