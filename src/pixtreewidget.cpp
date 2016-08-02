@@ -27,6 +27,7 @@
 #include <QDragMoveEvent>
 #include <QDir>
 #include <QFileInfo>
+#include <QMimeData>
 #include <QUrl>
 #include "pixtreewidget.h"
 #include "formats.h"

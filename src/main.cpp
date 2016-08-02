@@ -35,8 +35,6 @@ int main(int argc, char ** argv)
 
     QCoreApplication::setApplicationVersion(globals::VERSION);
 
-    QTextCodec::setCodecForTr(QTextCodec::codecForName("UTF-8"));
-    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("UTF-8"));
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
 
     QApplication app( argc, argv );
