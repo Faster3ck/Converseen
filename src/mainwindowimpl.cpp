@@ -40,7 +40,7 @@ using namespace std;
 
 // TODO: Inserire funzione per sostituire tutte le immagini
 
-MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
+MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WindowFlags f)
     : QMainWindow(parent, f)
 {
     setupUi(this);
@@ -93,7 +93,7 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WFlags f)
     adjustSize();
     dockWidget->adjustSize();
 
-    treeWidget->header()->setResizeMode(0, QHeaderView::ResizeToContents);
+    treeWidget->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
 
     loadOptions();
 

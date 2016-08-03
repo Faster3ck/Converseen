@@ -22,7 +22,7 @@
 */
 
 #include <QDir>
-#include <QDesktopServices>
+#include <QStandardPaths>
 #include "inisettings.h"
 
 #define INIFILENAME ".converseen.conf"
@@ -37,7 +37,7 @@ IniSettings::IniSettings(QObject *parent) :
 
 void IniSettings::init()
 {
-	QString myPath =  QDesktopServices::storageLocation(QDesktopServices::DataLocation);
+	QString myPath =  QStandardPaths::writableLocation(QStandardPaths::DataLocation);
 	QString iniPath = QString("%1/%2").arg(myPath).arg(INIFILENAME);
 
     settings = new QSettings(iniPath, QSettings::IniFormat);

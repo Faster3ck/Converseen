@@ -1,5 +1,5 @@
 TEMPLATE = app
-QT = gui core network
+QT = gui core network widgets
 CONFIG += qt \
  release \
  warn_on \
