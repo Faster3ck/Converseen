@@ -2,9 +2,9 @@
 
 # Converseen
 
-![alt text](http://converseen.fasterland.net/res/converseen_kde4_1.jpg "Converseen on Kde")
+![alt text](http://converseen.fasterland.net/res/converseen-linux.png "Converseen on Kde")
 
-**Converseen** is an open source project written in **C++** with the powerful **Qt4** libraries.
+**Converseen** is an open source project written in **C++** with the powerful **Qt5** libraries.
 Thanks to the **Magick++** image libraries it supports more than **100 image formats**.
 You can convert an unlimited number of images and / or create thumbnails
 to any of the most popular formats: DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF.
