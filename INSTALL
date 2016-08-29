@@ -1,12 +1,12 @@
-To compile Converseen you need Qt4, Magick++ development libraries, cmake and the gnu c++ compiler.
+To compile Converseen you need Qt5, Magick++ development libraries, cmake and the gnu c++ compiler.
 Download Converseen, extract the archive content, enter directory and build the executable using these commands:
 
  
- tar -xvf converseen_0.x-tar.bz2
- cd converseen_0.x
- mkdir build
- cd build
- cmake ..
- make
- su
- make install 
+    tar -xvf converseen_0.x-tar.bz2
+    cd converseen_0.x
+    mkdir build
+    cd build
+    cmake .. (to install on /usr/local/) or cmake -DCMAKE_INSTALL_PREFIX=/usr .. (to install on /usr/)
+    make
+    su
+    make install

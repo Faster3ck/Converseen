@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_CL">
+<TS version="2.1" language="es_CL">
 <context>
     <name>Converter</name>
     <message>
@@ -494,7 +494,7 @@ p, li { white-space: pre-wrap; }
 </source>
         <translation>&lt;strong&gt;Traducción al francés: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="../ui/dialoginfo.ui" line="149"/>
         <source>&lt;strong&gt;Brazilian Portuguese Translation: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Traducción al portugués brasileño: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</translation>
@@ -504,7 +504,7 @@ p, li { white-space: pre-wrap; }
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Traducción al alemán: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="../ui/dialoginfo.ui" line="166"/>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
@@ -521,7 +521,7 @@ p, li { white-space: pre-wrap; }
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Traducción al ruso: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="../ui/dialoginfo.ui" line="189"/>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Traducción al polaco: &lt;/strong&gt;Michał Olber, de OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
@@ -541,8 +541,8 @@ p, li { white-space: pre-wrap; }
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Oxygen-Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2015 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2016 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1167,17 +1167,17 @@ p, li { white-space: pre-wrap; }
         <source>No rotation</source>
         <translation>No rotar</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="../ui/mainwindow.ui" line="802"/>
         <source>+ 90°</source>
         <translation>+ 90°</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="../ui/mainwindow.ui" line="816"/>
         <source>- 90°</source>
         <translation>- 90°</translation>
     </message>
-    <message utf8="true">
+    <message>
         <location filename="../ui/mainwindow.ui" line="832"/>
         <source>180°</source>
         <translation>180°</translation>
@@ -1705,32 +1705,32 @@ Haz clic en Abortar para cancelar todas las operaciones.</translation>
 <context>
     <name>PixTreeWidget</name>
     <message>
-        <location filename="../src/pixtreewidget.cpp" line="39"/>
+        <location filename="../src/pixtreewidget.cpp" line="40"/>
         <source>To convert</source>
         <translation>Convertir</translation>
     </message>
     <message>
-        <location filename="../src/pixtreewidget.cpp" line="40"/>
+        <location filename="../src/pixtreewidget.cpp" line="41"/>
         <source>Status</source>
         <translation>Estado</translation>
     </message>
     <message>
-        <location filename="../src/pixtreewidget.cpp" line="41"/>
+        <location filename="../src/pixtreewidget.cpp" line="42"/>
         <source>File name</source>
         <translation>Nombre del archivo</translation>
     </message>
     <message>
-        <location filename="../src/pixtreewidget.cpp" line="42"/>
+        <location filename="../src/pixtreewidget.cpp" line="43"/>
         <source>Image type</source>
         <translation>Tipo de imagen</translation>
     </message>
     <message>
-        <location filename="../src/pixtreewidget.cpp" line="43"/>
+        <location filename="../src/pixtreewidget.cpp" line="44"/>
         <source>File size</source>
         <translation>Tamaño del archivo</translation>
     </message>
     <message>
-        <location filename="../src/pixtreewidget.cpp" line="44"/>
+        <location filename="../src/pixtreewidget.cpp" line="45"/>
         <source>File path</source>
         <translation>Ruta del archivo</translation>
     </message>
