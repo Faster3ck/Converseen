@@ -4,6 +4,7 @@ TryExec=converseen
 Type=Service
 Actions=converseenImport;
 X-KDE-Submenu=Open with Converseen
+X-KDE-Submenu[fr]=Ouvrir avec Converseen
 X-KDE-Submenu[it]=Apri con Converseen
 X-KDE-Submenu[ro]=Deschide cu Converseen
 X-KDE-Submenu[ru]=Открыть с помощью Converseen
@@ -11,6 +12,7 @@ TryExec=convert
 
 [Desktop Action converseenImport]
 Name=Import
+Name[fr]=Importer
 Name[it]=Importa
 Name[ro]=Importați
 Name[ru]=Импортировать
