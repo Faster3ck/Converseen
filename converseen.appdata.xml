@@ -1,35 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2016 Francesco Mondello <faster3ck@gmail.com> -->
-<application>
- <id type="desktop">converseen.desktop</id>
- <metadata_license>CC0-1.0</metadata_license>
- <project_license>GPL-3.0</project_license>
- <name>Converseen</name>
- <summary>A batch image processor</summary>
- <description>
-  <p>
-   Converseen is a free cross-platform batch image processor that allows you to convert, 
-   resize, rotate and flip an infinite number of images with a mouse click.
-   Moreover, Converseen is able to transform an entire PDF file into a bunch of images 
-   with the characteristics you prefer: you can choose one of the 100+ formats, 
-   you can set the size, resolution and the filename.
-  </p>
-  <p>What can I do with Converseen.</p>
-  <ul>
-   <li>Carry out a single or a multiple conversion</li>
-   <li>Resize one or multiple images</li>
-   <li>Compress images for your web pages</li>
-   <li>Rotate and flip images</li>
-   <li>Rename a bunch of images using a progressive number or a prefix/suffix</li>
-   <li>Selecting a resampling filter to resize images</li>
-   <li>Convert an entire PDF to a bunch of images</li>
-   <li>Extract an image from a Windows icon file (*ico)</li>
-  </ul>
- </description>
- <screenshots>
-  <screenshot type="default" width="1135" height="740">http://fasterland.net/images/converseen_kde4_1.jpg</screenshot>
-  <screenshot width="1135" height="740">http://fasterland.net/images/converseen_kde4_2.jpg</screenshot>
- </screenshots>
- <url type="homepage">http://converseen.fasterland.net/</url>
- <updatecontact>faster3ck_AT_gmail.com</updatecontact>
-</application>
+<component type="desktop">
+    <id>converseen.desktop</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0</project_license>
+    <name>Converseen</name>
+    <summary>A batch image processor</summary>
+    <description>
+    <p>
+        Converseen is a free cross-platform batch image processor that allows you to convert, 
+        resize, rotate and flip an infinite number of images with a mouse click.
+        Moreover, Converseen is able to transform an entire PDF file into a bunch of images 
+        with the characteristics you prefer: you can choose one of the 100+ formats, 
+        you can set the size, resolution and the filename.
+    </p>
+    <p>What can I do with Converseen.</p>
+    <ul>
+      <li>Carry out a single or a multiple conversion</li>
+      <li>Resize one or multiple images</li>
+      <li>Compress images for your web pages</li>
+      <li>Rotate and flip images</li>
+      <li>Rename a bunch of images using a progressive number or a prefix/suffix</li>
+      <li>Selecting a resampling filter to resize images</li>
+      <li>Convert an entire PDF to a bunch of images</li>
+      <li>Extract an image from a Windows icon file (*ico)</li>
+    </ul>
+    </description>
+    <screenshots>
+        <screenshot height="621" width="1104" type="default">
+            <image>http://fasterland.net/images/converseen-appdata-1.png</image>
+            <caption>The main window showing the application in action</caption>
+        </screenshot>
+        <screenshot height="621" width="1104">
+            <image>http://fasterland.net/images/converseen-appdata-2.png</image>
+            <caption>The program during the image processing</caption>
+        </screenshot>
+        <screenshot height="621" width="1104">
+            <image>http://fasterland.net/images/converseen-appdata-3.png</image>
+            <caption>The image preferences window where you can change the settings</caption>
+        </screenshot>
+    </screenshots>
+    <keywords>
+        <keyword>graphic</keyword>
+        <keyword>image</keyword>
+        <keyword>batch</keyword>
+        <keyword>processor</keyword>
+        <keyword>converter</keyword>
+        <keyword>resizer</keyword>
+        <keyword>compressor</keyword>
+        <keyword>picture</keyword>
+        <keyword>qt</keyword>
+    </keywords>
+    <url type="homepage">http://converseen.fasterland.net/</url>
+    <update_contact>faster3ck@gmail.com</update_contact>
+    <developer_name>Francesco Mondello</developer_name>
+    <url type="bugtracker">https://github.com/Faster3ck/Converseen/issues</url>
+    <url type="donation">http://converseen.fasterland.net/thank/</url>
+    <url type="help">http://converseen.fasterland.net/help/</url>
+</component>
