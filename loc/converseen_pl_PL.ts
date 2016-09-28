@@ -181,65 +181,69 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tłumaczenia:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="127"/>
+        <location filename="../ui/dialoginfo.ui" line="130"/>
         <source>&lt;strong&gt;Hungarian translation: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Tłumaczenie węgierskie: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="134"/>
+        <location filename="../ui/dialoginfo.ui" line="137"/>
         <source>&lt;strong&gt;Czech translation: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Tłumaczenie czeskie: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="141"/>
         <source>&lt;strong&gt;French Translation: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Tłumaczenie francuskie: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;</translation>
+        <translation type="vanished">&lt;strong&gt;Tłumaczenie francuskie: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="149"/>
+        <location filename="../ui/dialoginfo.ui" line="144"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="151"/>
         <source>&lt;strong&gt;Brazilian Portuguese Translation: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Tłumaczenie brazylijskie i portugalskie: &lt;/strong&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;marciopanto@gmail.com&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="159"/>
+        <location filename="../ui/dialoginfo.ui" line="161"/>
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Tłumaczenie niemieckie: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="166"/>
+        <location filename="../ui/dialoginfo.ui" line="168"/>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
         <translation>&lt;strong&gt;Tłumaczenie hiszpańskie (Chile): &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="174"/>
+        <location filename="../ui/dialoginfo.ui" line="176"/>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </source>
         <translation>&lt;strong&gt;Tłumaczenie tureckie: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="182"/>
+        <location filename="../ui/dialoginfo.ui" line="184"/>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Tłumaczenie rosyjskie: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="189"/>
+        <location filename="../ui/dialoginfo.ui" line="191"/>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="199"/>
+        <location filename="../ui/dialoginfo.ui" line="201"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Tłumaczenie japońskie:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="215"/>
+        <location filename="../ui/dialoginfo.ui" line="217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal or Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jeżeli podoba Ci się program i chciałbyś go wspomóc, zapraszmy do wpłacenia darowizny po przez Paypal lub Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="372"/>
+        <location filename="../ui/dialoginfo.ui" line="374"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -277,12 +281,12 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Jeżeli podoba Ci się program i chciałbyś go wspomóc, zapraszmy do &lt;/span&gt;&lt;a href=&quot;http://converseen.sourceforge.net/#donations&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline; color:#0057ae;&quot;&gt;wpłacenia darowizny po przez Paypal&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="295"/>
+        <location filename="../ui/dialoginfo.ui" line="297"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Śledź Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="398"/>
+        <location filename="../ui/dialoginfo.ui" line="400"/>
         <source>Close</source>
         <translation></translation>
     </message>

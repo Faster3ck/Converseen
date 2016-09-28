@@ -130,7 +130,7 @@ TARGET_LINK_LIBRARIES(${GUI} ${Qt5Network_LIBRARIES} ${Qt5Widgets_LIBRARIES} ${I
 install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 install(FILES res/converseen.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
 install(FILES res/converseen.png DESTINATION ${CMAKE_INSTALL_PREFIX}/share/pixmaps)
-install(FILES res/converseen_import.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/share/kde4/services/ServiceMenus)
+install(FILES res/converseen_import.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/share/kservices5/ServiceMenus)
 install(FILES converseen.appdata.xml DESTINATION /usr/share/appdata/)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_cs_CZ.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_de_DE.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)

@@ -50,8 +50,6 @@ DialogInfo::DialogInfo(QWidget *parent) :
             .arg(tr("The batch image converter and resizer."));
 
     labelTitle->setText(title);
-
-    adjustSize();
 }
 
 void DialogInfo::openFacebookPage()

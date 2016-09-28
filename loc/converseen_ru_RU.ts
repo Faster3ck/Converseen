@@ -178,7 +178,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&lt;strong&gt;French Translation: &lt;/strong&gt;Ludovic Troisi - &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Перевод на французский: &lt;/strong&gt;Ludovic Troisi — &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
+        <translation type="vanished">&lt;strong&gt;Перевод на французский: &lt;/strong&gt;Ludovic Troisi — &lt;a href=&quot;mailto:axalis@cegetel.net&quot;&gt;axalis@cegetel.net&lt;/a&gt;
 </translation>
     </message>
     <message>
@@ -238,6 +238,10 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2016 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
