@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2016
+* (C) Francesco Mondello 2009-2017
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -627,7 +627,7 @@ void MainWindowImpl::loadQuality()
 {
     jpgQuality = IniSettings::jpgQuality();
     pngQuality = IniSettings::pngQuality();
-    m_resamplingFilter = (FilterTypes)IniSettings::latestInterpFiltIdx();
+    m_resamplingFilter = (IMFilterType)IniSettings::latestInterpFiltIdx();
 }
 
 void MainWindowImpl::removeItems()

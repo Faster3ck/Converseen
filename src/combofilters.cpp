@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2016
+* (C) Francesco Mondello 2009-2017
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -28,12 +28,12 @@ Combofilters::Combofilters(QWidget *parent) : QComboBox(parent)
     populateList();
 }
 
-FilterTypes Combofilters::currentFilter()
+IMFilterType Combofilters::currentFilter()
 {
     return filtersList.at(currentIndex());
 }
 
-int Combofilters::searchFilterIndex(FilterTypes filter)
+int Combofilters::searchFilterIndex(IMFilterType filter)
 {
     return filtersList.indexOf(filter);
 }

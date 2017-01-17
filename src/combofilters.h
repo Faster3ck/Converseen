@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2016
+* (C) Francesco Mondello 2009-2017
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -29,6 +29,8 @@
 #include <QComboBox>
 #include <Magick++.h>
 
+#include "globals.h"
+
 using namespace Magick;
 using namespace std;
 
@@ -38,8 +40,8 @@ class Combofilters : public QComboBox
 public:
     explicit Combofilters(QWidget *parent = 0);
 
-    FilterTypes currentFilter();
-    int searchFilterIndex(FilterTypes filter);
+    IMFilterType currentFilter();
+    int searchFilterIndex(IMFilterType filter);
     
 signals:
 
@@ -48,7 +50,7 @@ public slots:
 private:
     void populateList();
 
-    QList<FilterTypes> filtersList;
+    QList<IMFilterType> filtersList;
 };
 
 #endif // COMBOFILTERS_H

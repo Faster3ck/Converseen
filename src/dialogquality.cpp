@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2016
+* (C) Francesco Mondello 2009-2017
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -39,7 +39,7 @@ DialogQuality::DialogQuality(QWidget *parent) :
     connect(pushCancel, SIGNAL(clicked()), this, SLOT(close()));
 }
 
-void DialogQuality::setInitValues(int jpegVal, int pngVal, FilterTypes filter)
+void DialogQuality::setInitValues(int jpegVal, int pngVal, IMFilterType filter)
 {
     spinJpegQ->setValue(jpegVal);
     spinPngQ->setValue(pngVal);
@@ -58,7 +58,7 @@ int DialogQuality::getPngQuality()
     return spinPngQ->value();
 }
 
-FilterTypes DialogQuality::getResamplingFilter()
+IMFilterType DialogQuality::getResamplingFilter()
 {
     return comboFilters->currentFilter();
 }

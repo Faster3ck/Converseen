@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2016
+* (C) Francesco Mondello 2009-2017
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -33,6 +33,8 @@
 #include <string>
 #include <iostream>
 
+#include "globals.h"
+
 using namespace Magick;
 using namespace std;
 
@@ -59,7 +61,7 @@ public:
     void setBackgroundColor(QString bg_color, bool changeBg_color);
     void setOverwrite(bool overwrite);
     void setNewBasename(QString newBaseName, bool ok);
-    void setResamplingFilter(FilterTypes resamplingFilter);
+    void setResamplingFilter(IMFilterType resamplingFilter);
     void stopProcess();
 
     QMutex mutex;
@@ -100,7 +102,7 @@ private:
 
     QWaitCondition imageCondition;
 
-    FilterTypes m_resamplingFilter;
+    IMFilterType m_resamplingFilter;
 signals:
     void nextConversion(int);
     void requestOverwrite(QString);

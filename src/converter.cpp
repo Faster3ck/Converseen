@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2016
+* (C) Francesco Mondello 2009-2017
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -220,7 +220,7 @@ void Converter::setNewBasename(QString newBaseName, bool ok)
     imageCondition.wakeAll();
 }
 
-void Converter::setResamplingFilter(FilterTypes resamplingFilter)
+void Converter::setResamplingFilter(IMFilterType resamplingFilter)
 {
     m_resamplingFilter = resamplingFilter;
 }
@@ -232,7 +232,15 @@ bool Converter::writeImage(Image &my_image, QString format, int quality, QString
     QStringList excludedFormats;
     excludedFormats << "jpg" << "jpeg" << "bmp" << "svg";
 
-    if (m_changeBg_color || (excludedFormats.contains(format, Qt::CaseInsensitive) && my_image.matte())) {
+    bool hasTransparency = false;
+
+#if MagickLibVersion < 0x700
+    hasTransparency = my_image.matte();
+#else
+    hasTransparency = my_image.alpha();
+#endif
+
+    if (m_changeBg_color || (excludedFormats.contains(format, Qt::CaseInsensitive) && hasTransparency)) {
         Image bgImg;
         bgImg.size(Magick::Geometry(my_image.columns(), my_image.rows()));
 

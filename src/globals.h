@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2016
+* (C) Francesco Mondello 2009-2017
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -25,12 +25,24 @@
 #define GLOBALS_H
 
 #include <QString>
+#include <Magick++.h>
+#include <string>
+#include <iostream>
+
+using namespace Magick;
+using namespace std;
+
+#if MagickLibVersion < 0x700
+    typedef FilterTypes IMFilterType;
+#else
+    typedef FilterType IMFilterType;
+#endif
 
 namespace globals
 {
     const QString PROGRAM_NAME = "Converseen";
-    const int CURRENT_INTERNAL_VERSION = 952;
-    const QString VERSION = "0.9.5.2";
+    const int CURRENT_INTERNAL_VERSION = 960;
+    const QString VERSION = "0.9.6.0";
 
     class Globals
     {
