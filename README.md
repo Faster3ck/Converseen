@@ -29,8 +29,8 @@ To install **Converseen** source or binaries follow [these instructions](http://
 To contact me you can use [this page](http://converseen.fasterland.net/contact-me/).  
   
   
-You can find more details about **Converseen** at [converseen.sf.net](http://converseen.fasterland.net/).  
-If you appreciate this work and would like to support the project, you are welcome to [donate](http://converseen.fasterland.net/#donations) **1 EUR** via **Paypal**.  
+You can find more details about **Converseen** at [converseen.fasterland.net](http://converseen.fasterland.net/).  
+If you appreciate this work and would like to support the project, you are welcome to [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC) **1 EUR** via **Paypal**.  
 
 ## License
  
