@@ -230,7 +230,7 @@ bool Converter::writeImage(Image &my_image, QString format, int quality, QString
     my_image.magick(format.toUpper().toStdString());
 
     QStringList excludedFormats;
-    excludedFormats << "jpg" << "jpeg" << "bmp" << "svg";
+    excludedFormats << "jpg" << "jpeg" << "bmp";
 
     bool hasTransparency = false;
 
