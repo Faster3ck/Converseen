@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="ru_RU">
+<TS version="2.1" language="uk_UA">
 <context>
     <name>Converter</name>
     <message>
         <source>Error: %1</source>
-        <translation>Ошибка: %1</translation>
+        <translation>Помилка: %1</translation>
     </message>
 </context>
 <context>
@@ -16,7 +16,7 @@
     </message>
     <message>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Зачинити</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -28,23 +28,23 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Всего:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Всього:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Image:</source>
-        <translation>Изображение:</translation>
+        <translation>Зображення:</translation>
     </message>
     <message>
         <source>Status...</source>
-        <translation>Статус…</translation>
+        <translation>Стан…</translation>
     </message>
     <message>
         <source>Conversion Status</source>
-        <translation>Статус конвертирования</translation>
+        <translation>Стан перетворення</translation>
     </message>
     <message>
         <source>Status:</source>
-        <translation>Статус:</translation>
+        <translation>Стан:</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -56,7 +56,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Сконвертировано:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перетворено:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -68,38 +68,38 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ошибки:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Помилки:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Open destination </source>
-        <translation>Открыть назначение</translation>
+        <translation>Відкрити місце призначення</translation>
     </message>
     <message>
         <source>Stop</source>
-        <translation>Остановить</translation>
+        <translation>Зупинити</translation>
     </message>
     <message>
         <source>Open all the destination folders</source>
-        <translation>Открыть все папки назначения</translation>
+        <translation>Відкрити всі теки призначення</translation>
     </message>
     <message>
         <source>Converted</source>
-        <translation>Сконвертировано</translation>
+        <translation>Перетворено</translation>
     </message>
 </context>
 <context>
     <name>DialogInfo</name>
     <message>
         <source>Close</source>
-        <translation>Закрыть</translation>
+        <translation>Зачинити</translation>
     </message>
     <message>
         <source>About Converseen...</source>
-        <translation>O Converseen…</translation>
+        <translation>Про Converseen…</translation>
     </message>
     <message>
         <source>Informations</source>
-        <translation>Информация</translation>
+        <translation>Інформація</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -111,7 +111,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Переводчики:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перекладачі:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>-</source>
@@ -127,39 +127,43 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen — это пакетный конвертер графических файлов. Вы можете изменять размер и конвертировать изображения в более чем 100 форматов.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen — це пакетний перетворювач графічних файлів. Ви маєте можливість змінювати розмір та конвертувати зображення в більше ніж 100 форматів.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>The batch image converter and resizer.</source>
-        <translation>Групповой конвертер графических файлов.</translation>
+        <translation>Груповий перетворювач графічних файлів.</translation>
+    </message>
+    <message>
+        <source>&lt;strong&gt;Ukrainian translation: &lt;/strong&gt;AleXKaN - &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</source>
+        <translation>&lt;strong&gt;Переклад на українську мову: &lt;/strong&gt;AleXKaN — &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Hungarian translation: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на венгерский: &lt;/strong&gt;Charles Barcza — &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Переклад на угорську мову: &lt;/strong&gt;Charles Barcza — &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Czech translation: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на чешский: &lt;/strong&gt;Pavel Fric — &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Переклад на чеську мову: &lt;/strong&gt;Pavel Fric — &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на немецкий: &lt;/strong&gt;Marco Nickolai — &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Переклад на німецьку мову: &lt;/strong&gt;Marco Nickolai — &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Перевод на испанский: &lt;/strong&gt;Nelson Álvarez Sáez — &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
+        <translation>&lt;strong&gt;Переклад на іспанську мову: &lt;/strong&gt;Nelson Álvarez Sáez — &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </translation>
     </message>
     <message>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Перевод на турецкий: &lt;/strong&gt;Zeugma — &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
+        <translation>&lt;strong&gt;Переклад на турецьку мову: &lt;/strong&gt;Zeugma — &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </translation>
     </message>
     <message>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на русский: &lt;/strong&gt;Stasik Savorovsky — &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;,
+        <translation>&lt;strong&gt;Переклад на російську мову: &lt;/strong&gt;Stasik Savorovsky — &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;,
 &lt;/strong&gt;Kyrill Detinov — &lt;a href=&quot;lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;</translation>
     </message>
     <message>
@@ -168,7 +172,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на польский: &lt;/strong&gt;Michał Olber from OSWorld.pl — &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Переклад на польську мову: &lt;/strong&gt;Michał Olber from OSWorld.pl — &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal or Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Якщо Ви цінуєте цю роботу та бажаєте підтримати проект, Ви можете пожертвувати нам через Paypal чи Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2017 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2017 Франческо Монделло GNU - GPL вер.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -178,31 +198,33 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;http://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;http://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Автор: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Франческо Монделло.(Faster) - &lt;/span&gt;&lt;a href=&quot;http://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Ел.пошта: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Вебсайт проекта: &lt;/span&gt;&lt;a href=&quot;http://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Французький переклад: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Бразильський португальський переклад: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Японський переклад:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Danish translation: &lt;/span&gt;Martin Eilsoe - &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;strong&gt;Ukrainian translation: &lt;/strong&gt;AleXKaN - &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Датський переклад: &lt;/span&gt;Martin Eilsoe - &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Якщо Ви цінуєте цю роботу та бажаєте підтримати проект, Ви можете пожертвувати нам через Paypal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -210,109 +232,113 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2018 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2018 Франческо Монделло GNU - GPL вер.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>DialogMultipageEditor</name>
     <message>
         <source>Check the pages or subimages you want to import</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевірте сторінки або вкладені зображення, які Ви бажаєте імпортувати</translation>
     </message>
     <message>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Сторінка</translation>
     </message>
     <message>
         <source>Pixel size</source>
-        <translation type="unfinished"></translation>
+        <translation>Розмір пікселя</translation>
     </message>
     <message>
         <source>Density</source>
-        <translation type="unfinished"></translation>
+        <translation>Щільність</translation>
     </message>
     <message>
         <source>Depth</source>
-        <translation type="unfinished"></translation>
+        <translation>Глибина</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Отмена</translation>
+        <translation>Відміна</translation>
     </message>
     <message>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Імпорт</translation>
     </message>
     <message>
         <source>Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевірити</translation>
     </message>
     <message>
         <source>Check all</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевірити все</translation>
     </message>
     <message>
         <source>Uncheck</source>
-        <translation type="unfinished"></translation>
+        <translation>Скасувати вибір</translation>
     </message>
     <message>
         <source>Uncheck all</source>
-        <translation type="unfinished"></translation>
+        <translation>Скасувати вибір всіх</translation>
     </message>
     <message>
         <source>Import multipage document</source>
-        <translation type="unfinished"></translation>
+        <translation>Імпортувати багатосторінковий документ</translation>
     </message>
 </context>
 <context>
     <name>DialogOptions</name>
     <message>
         <source>Ok</source>
-        <translation>OK</translation>
+        <translation>ОК</translation>
     </message>
     <message>
         <source>Please, restart Converseen to apply current language!</source>
-        <translation>Пожалуйста, перезапустите Converseen для применения текущего языка!</translation>
+        <translation>Для зміни мови перезавантажте Converseen!</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Відміна</translation>
     </message>
     <message>
         <source>Language:</source>
-        <translation>Язык:</translation>
+        <translation>Мова:</translation>
     </message>
     <message>
         <source>Language</source>
-        <translation>Язык</translation>
+        <translation>Мова</translation>
     </message>
     <message>
         <source>Warning!</source>
-        <translation>Предупреждение!</translation>
+        <translation>Попередження!</translation>
     </message>
     <message>
         <source>Overwriting settings</source>
-        <translation>Перезаписать настройки</translation>
+        <translation>Перезаписати налаштування</translation>
     </message>
     <message>
         <source>Settings</source>
-        <translation>Настройки</translation>
+        <translation>Налаштування</translation>
     </message>
     <message>
         <source>As&amp;k first</source>
-        <translation type="unfinished"></translation>
+        <translation>Запитати спочат&amp;ку</translation>
     </message>
     <message>
         <source>O&amp;verwrite all existing images</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезаписати &amp;всі існуючі зображення</translation>
     </message>
     <message>
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Оновлення</translation>
     </message>
     <message>
         <source>Checks for updates automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Автоматично перевіряти оновлення</translation>
     </message>
 </context>
 <context>
@@ -323,65 +349,65 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Png compression level</source>
-        <translation>Уровень сжатия PNG</translation>
+        <translation>Рівень стистення PNG</translation>
     </message>
     <message>
         <source>Jpeg compression level</source>
-        <translation>Уровень сжатия JPEG</translation>
+        <translation>Рівень стистення JPEG</translation>
     </message>
     <message>
         <source>Quality 0 - 100:</source>
-        <translation>Качество 0-100:</translation>
+        <translation>Якість 0-100:</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation>Отмена</translation>
+        <translation>Відміна</translation>
     </message>
     <message>
         <source>Image settings</source>
-        <translation>Настройки изображения</translation>
+        <translation>Налаштування зображення</translation>
     </message>
     <message>
         <source>Interpolation</source>
-        <translation>Интерполяция</translation>
+        <translation>Інтерполяція</translation>
     </message>
     <message>
         <source>Filter:</source>
-        <translation>Фильтр:</translation>
+        <translation>Фільтр:</translation>
     </message>
 </context>
 <context>
     <name>DialogShowUpdateMsg</name>
     <message>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Діалог</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Надпис</translation>
     </message>
     <message>
         <source>Don&apos;t show again</source>
-        <translation type="unfinished"></translation>
+        <translation>Не показувати знову</translation>
     </message>
     <message>
         <source>Update Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Оновити зараз</translation>
     </message>
     <message>
         <source>Not Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Не зараз</translation>
     </message>
 </context>
 <context>
     <name>Formats</name>
     <message>
         <source>All Supported Filters (%1)</source>
-        <translation>Все поддерживаемые фильтры (%1)</translation>
+        <translation>Всі підтримувані фільтри (%1)</translation>
     </message>
     <message>
         <source>Don&apos;t change the format</source>
-        <translation>Не изменять формат</translation>
+        <translation>Не змінювати формат</translation>
     </message>
 </context>
 <context>
@@ -392,11 +418,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation>&amp;Редактировать</translation>
+        <translation>&amp;Редагувати</translation>
     </message>
     <message>
         <source>&amp;Exit</source>
-        <translation>&amp;Выход</translation>
+        <translation>&amp;Вихід</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -404,11 +430,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Help</source>
-        <translation>&amp;Справка</translation>
+        <translation>&amp;Допомога</translation>
     </message>
     <message>
         <source>Show preview</source>
-        <translation>Предпросмотр</translation>
+        <translation>Передогляд</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -420,23 +446,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Conversion Formats</source>
-        <translation>Форматы конвертирования</translation>
+        <translation>Формати перетворення</translation>
     </message>
     <message>
         <source>#_copy</source>
-        <translation>#_копия</translation>
+        <translation>#_копія</translation>
     </message>
     <message>
         <source>Actions Panel</source>
-        <translation type="obsolete">Панель действий</translation>
+        <translation type="vanished">Смужка дій</translation>
     </message>
     <message>
         <source>Open output directory</source>
-        <translation>Открыть папку назначения</translation>
+        <translation>Відкрити теку призначення</translation>
     </message>
     <message>
         <source>Show image settings dialog...</source>
-        <translation>Показать диалог настройки изображений…</translation>
+        <translation>Показати діалог налаштувань зображень…</translation>
     </message>
     <message>
         <source>Width:</source>
@@ -444,23 +470,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Actions</source>
-        <translation>&amp;Действия</translation>
+        <translation>&amp;Дії</translation>
     </message>
     <message>
         <source>Rename:</source>
-        <translation>Переименовать:</translation>
+        <translation>Перейменувати:</translation>
     </message>
     <message>
         <source>Save in:</source>
-        <translation>Сохранить в:</translation>
+        <translation>Зберегти в:</translation>
     </message>
     <message>
         <source>Output options</source>
-        <translation>Выходные параметры</translation>
+        <translation>Вихідні параметри</translation>
     </message>
     <message>
         <source>Images settings</source>
-        <translation>Настройки изображений</translation>
+        <translation>Налаштування зображень</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -472,7 +498,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Предпросмотр:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Передогляд:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Converseen</source>
@@ -480,23 +506,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Convert to:</source>
-        <translation>Конвертировать в:</translation>
+        <translation>Перетворити в:</translation>
     </message>
     <message>
         <source>Height:</source>
-        <translation>Высота:</translation>
+        <translation>Висота:</translation>
     </message>
     <message>
         <source>Image&apos;s directory</source>
-        <translation>Папка изображений</translation>
+        <translation>Тека зображень</translation>
     </message>
     <message>
         <source>Replace transparent background</source>
-        <translation>Заменить прозрачный фон</translation>
+        <translation>Замінити прозоре тло</translation>
     </message>
     <message>
         <source>Choose color</source>
-        <translation>Выбрать цвет</translation>
+        <translation>Вибрати колір</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -520,7 +546,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Размер файла:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Розмір файлу:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -532,7 +558,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Размер изображения:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Розмір зображення:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -544,11 +570,11 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Разрешение изображения:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Роздільна здатність зображення:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Scale image</source>
-        <translation>Масштабировать изображение</translation>
+        <translation>Масштабувати зображення</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -560,55 +586,55 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 пиксель&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 піксель&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Mantain aspect ratio</source>
-        <translation>Сохранить пропорции</translation>
+        <translation>Зберегти пропорції</translation>
     </message>
     <message>
         <source>Resolution</source>
-        <translation>Разрешение</translation>
+        <translation>Роздільна здатність</translation>
     </message>
     <message>
         <source>Resolution X:</source>
-        <translation>Разрешение Х:</translation>
+        <translation>Роздільна здатність Х:</translation>
     </message>
     <message>
         <source>Resolution Y:</source>
-        <translation>Разрешение Y:</translation>
+        <translation>Роздільна здатність Y:</translation>
     </message>
     <message>
         <source>Overwrite all</source>
-        <translation>Переписать все</translation>
+        <translation>Переписати все</translation>
     </message>
     <message>
         <source>toolBar</source>
-        <translation>Панель инструментов</translation>
+        <translation>Смужка інструментів </translation>
     </message>
     <message>
         <source>&amp;Open images</source>
-        <translation>&amp;Открыть изображения</translation>
+        <translation>Відкрити з&amp;ображення</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
-        <translation>Ctrl+O</translation>
+        <translation>Ctrl+О</translation>
     </message>
     <message>
         <source>&amp;Add images</source>
-        <translation>&amp;Добавить изображения</translation>
+        <translation>&amp;Додати зображення</translation>
     </message>
     <message>
         <source>Ctrl+Alt+O</source>
-        <translation>Ctrl+Alt+O</translation>
+        <translation>Ctrl+Alt+О</translation>
     </message>
     <message>
         <source>&amp;Remove images</source>
-        <translation>&amp;Удалить изображения</translation>
+        <translation>&amp;Видалити зображення</translation>
     </message>
     <message>
         <source>Remove selected pictures</source>
-        <translation>Удалить выделенные изображения</translation>
+        <translation>Видалити помічені зображення</translation>
     </message>
     <message>
         <source>Del</source>
@@ -616,11 +642,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Remove &amp;all</source>
-        <translation>У&amp;далить все</translation>
+        <translation>В&amp;идалити все</translation>
     </message>
     <message>
         <source>Remove all pictures</source>
-        <translation>Удалить все изображения</translation>
+        <translation>Видалити всі зображення</translation>
     </message>
     <message>
         <source>Alt+Del</source>
@@ -628,11 +654,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Check</source>
-        <translation>&amp;Отметить</translation>
+        <translation>&amp;Позначити</translation>
     </message>
     <message>
         <source>Check selected items</source>
-        <translation>Отметить выделенные элементы</translation>
+        <translation>Позначити виділені елементи</translation>
     </message>
     <message>
         <source>Ctrl+H</source>
@@ -640,11 +666,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Check a&amp;ll</source>
-        <translation>Отметить &amp;все</translation>
+        <translation>Відмінити &amp;все</translation>
     </message>
     <message>
         <source>Check all items</source>
-        <translation>Отметить все элементы</translation>
+        <translation>Відмінити всі елементи</translation>
     </message>
     <message>
         <source>Ctrl+Alt+H</source>
@@ -652,11 +678,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Convert</source>
-        <translation>&amp;Конверитровать</translation>
+        <translation>&amp;Перетворити</translation>
     </message>
     <message>
         <source>Start the conversion process</source>
-        <translation>Запустить процесс преобразования</translation>
+        <translation>Почати процес перетворення</translation>
     </message>
     <message>
         <source>F5</source>
@@ -664,11 +690,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Settings</source>
-        <translation>&amp;Настройки</translation>
+        <translation>&amp;Налаштування</translation>
     </message>
     <message>
         <source>Open the settings dialog</source>
-        <translation>Открыть диалог настроек</translation>
+        <translation>Відкрити діалог налаштувань</translation>
     </message>
     <message>
         <source>Ctrl+X</source>
@@ -676,7 +702,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Uncheck all &amp;items</source>
-        <translation>Снять отметку со все&amp;х</translation>
+        <translation>Скасувати вибір всі&amp;х</translation>
     </message>
     <message>
         <source>Ctrl+Alt+J</source>
@@ -684,11 +710,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Uncheck Items</source>
-        <translation>&amp;Снять отметку</translation>
+        <translation>&amp;Скасувати вибір</translation>
     </message>
     <message>
         <source>Uncheck selected items</source>
-        <translation>Снять отметку с выделенных элементов</translation>
+        <translation>Скасувати вибір помічених елементів</translation>
     </message>
     <message>
         <source>Ctrl+J</source>
@@ -696,7 +722,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>&amp;О программе</translation>
+        <translation>&amp;Про програму</translation>
     </message>
     <message>
         <source>F1</source>
@@ -704,23 +730,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Donate via Paypal</source>
-        <translation>&amp;Пожертвовать через Paypal</translation>
+        <translation>Пожертвувати через Paypal</translation>
     </message>
     <message>
         <source>Dimensions</source>
-        <translation>Размеры</translation>
+        <translation>Розміри</translation>
     </message>
     <message>
         <source>Rotate and flip</source>
-        <translation>Вращение и отражение</translation>
+        <translation>Обертання і відображення</translation>
     </message>
     <message>
         <source>Rotate image:</source>
-        <translation>Повернуть изображение:</translation>
+        <translation>Повернути зображення:</translation>
     </message>
     <message>
         <source>No rotation</source>
-        <translation>Не вращать</translation>
+        <translation>Не обертати</translation>
     </message>
     <message>
         <source>+ 90°</source>
@@ -737,11 +763,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Flip image:</source>
-        <translation>Отразить изображение:</translation>
+        <translation>Перевернути зображення:</translation>
     </message>
     <message>
         <source>No flip</source>
-        <translation>Не отражать</translation>
+        <translation>Не відображати</translation>
     </message>
     <message>
         <source>Horizontally</source>
@@ -753,47 +779,51 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Start with:</source>
-        <translation>Начать с:</translation>
+        <translation>Почати з:</translation>
     </message>
     <message>
         <source>Link aspect with selected image</source>
-        <translation type="unfinished"></translation>
+        <translation>Зв&apos;язок з вибраним зображенням</translation>
     </message>
     <message>
         <source>Import PDF file</source>
-        <translation type="unfinished"></translation>
+        <translation>Імпортувати файл PDF</translation>
     </message>
     <message>
         <source>Import windows icon (*.ico)</source>
-        <translation type="unfinished"></translation>
+        <translation>Імпортувати іконку windows (*.ico)</translation>
     </message>
     <message>
         <source>Import windows icon (*.ico *.icon)</source>
-        <translation type="unfinished"></translation>
+        <translation>Імпортувати іконку windows (*.ico *.icon)</translation>
+    </message>
+    <message>
+        <source>Donate via Flattr</source>
+        <translation type="vanished">Пожертвувати через Flattr</translation>
     </message>
     <message>
         <source>Prefi&amp;x/Suffix</source>
-        <translation type="unfinished"></translation>
+        <translation>Префі&amp;кс/Суфікс</translation>
     </message>
     <message>
         <source>Progressi&amp;ve Number</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Порядковий номер</translation>
     </message>
     <message>
         <source>&amp;Donate via Paypal</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Пожертвувати через Paypal</translation>
     </message>
     <message>
         <source>&amp;Report bug...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Повідомити про помилку...</translation>
     </message>
     <message>
         <source>Check if a new version of Converseen is available</source>
-        <translation type="unfinished"></translation>
+        <translation>Перевіряти наявність нової версії Converseen</translation>
     </message>
     <message>
         <source>&amp;Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Перевірити наявність нової версії</translation>
     </message>
     <message>
         <source>Actio&amp;ns Panel</source>
@@ -816,158 +846,159 @@ p, li { white-space: pre-wrap; }
     <name>MainWindowImpl</name>
     <message>
         <source>Open Image</source>
-        <translation>Открыть изображение</translation>
+        <translation>Відкрити зображення</translation>
     </message>
     <message>
         <source>Set an output directory!</source>
-        <translation>Установить выходную директорию!</translation>
+        <translation>Встановити вихідну теку!</translation>
     </message>
     <message>
         <source>Processing finished!</source>
-        <translation>Обработка завершена!</translation>
+        <translation>Обробка завершена!</translation>
     </message>
     <message>
         <source>Suggest a new name!</source>
-        <translation>Введите новое имя!</translation>
+        <translation>Введіть нове ім&apos;я!</translation>
     </message>
     <message>
         <source>No images to convert!</source>
-        <translation>Нет изображений для конвертирования!</translation>
+        <translation>Немає зображень для перетворення!</translation>
     </message>
     <message>
         <source>Warning!</source>
-        <translation>Предупреждение!</translation>
+        <translation>Попередження!</translation>
     </message>
     <message>
         <source>New name:</source>
-        <translation>Новое имя:</translation>
+        <translation>Нове ім&apos;я:</translation>
     </message>
     <message>
         <source>Warning</source>
-        <translation>Предупреждение</translation>
+        <translation>Попередження</translation>
     </message>
     <message>
         <source>No image checked!</source>
-        <translation>Изображения не выбраны!</translation>
+        <translation>Зображення не вибрані!</translation>
     </message>
     <message>
         <source>Processing...</source>
-        <translation>Обрабатывается…</translation>
+        <translation>Обробка…</translation>
     </message>
     <message>
         <source>Open Directory</source>
-        <translation>Открыть каталог</translation>
+        <translation>Відкрити теку</translation>
     </message>
     <message>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
-        <translation>Каталог назначения не создан! Создать каталог?</translation>
+        <translation>Тека призначення не створена! Створити теку?</translation>
     </message>
     <message>
         <source>The directory cannot be created!</source>
-        <translation>Каталог не может быть создан!</translation>
+        <translation>Тека не створена!</translation>
     </message>
     <message>
         <source>Please, specify a name!</source>
-        <translation>Пожалуйста, укажите имя!</translation>
+        <translation>Будь ласка, вкажіть ім&apos;я!</translation>
     </message>
     <message>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
 Click Abort to cancel all operations.</source>
-        <translation>Вы должны указать имя.
-Нажмите Повтор чтобы указать новое имя.
-Нажмите Игнорировать для отмены этой операции.
-Нажмите Прервать для отмены всех операций.</translation>
+        <translation>Ви повинні вказати ім&apos;я.
+Натисніть Повторити щоб вказати нове ім&apos;я.
+Натисніть Ігнорувати для відміни цієї операції.
+Натисніть Скасувати для відміни усіх операцій.</translation>
     </message>
     <message>
         <source>The filename should not be empty!</source>
-        <translation>Имя файла не должно быть пустым!</translation>
+        <translation>І&apos;мя файлу не може бути порожнім!</translation>
     </message>
     <message>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
-        <translation>Выбранное имя соответствует уже существующему файлу. Заменить оригинальный файл?</translation>
+        <translation>Выбране і&apos;мя співпадає з початковим файлом. Ви бажаєте замінити оригінальний файл?</translation>
     </message>
     <message>
         <source>Aborted!</source>
-        <translation>Прервано!</translation>
+        <translation>Скасовано!</translation>
     </message>
     <message>
         <source>Preview</source>
-        <translation>Предпросмотр</translation>
+        <translation>Передогляд</translation>
     </message>
     <message>
         <source>Open Icon file</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити файл іконки</translation>
     </message>
     <message>
         <source>Microsoft icon (*.ico *.icon)</source>
-        <translation type="unfinished"></translation>
+        <translation>Значок Microsoft (*.ico *.icon)</translation>
     </message>
     <message>
         <source>Open Pdf file</source>
-        <translation type="unfinished"></translation>
+        <translation>Відкрити Pdf файл</translation>
     </message>
     <message>
         <source>Portable Document Format (*.pdf)</source>
-        <translation type="unfinished"></translation>
+        <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
         <source>Analyzing the file. It may take a while, please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Аналіз файлу. Це може зайняти деякий час, будь ласка, зачекайте...</translation>
     </message>
 </context>
 <context>
     <name>PixTreeWidget</name>
     <message>
         <source>File name</source>
-        <translation>Имя файла</translation>
+        <translation>Ім&apos;я файлу</translation>
     </message>
     <message>
         <source>File path</source>
-        <translation>Путь файла</translation>
+        <translation>Шлях до файлу</translation>
     </message>
     <message>
         <source>File size</source>
-        <translation>Размер файла</translation>
+        <translation>Розмір файлу</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation>Статус</translation>
+        <translation>Стан</translation>
     </message>
     <message>
         <source>To convert</source>
-        <translation>Конвертировать</translation>
+        <translation>Перетворювати</translation>
     </message>
     <message>
         <source>Image type</source>
-        <translation>Тип изображения</translation>
+        <translation>Тип зображення</translation>
     </message>
 </context>
 <context>
     <name>Translator</name>
     <message>
         <source>English</source>
-        <translation>Русский</translation>
+        <translation>Українська</translation>
     </message>
 </context>
 <context>
     <name>UpdateChecker</name>
     <message>
         <source>New version is available!</source>
-        <translation type="unfinished"></translation>
+        <translation>Маємо нову версію!</translation>
     </message>
     <message>
         <source>A new version of %1 is available!
 Would you download it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Маємо нову версію %1!
+Ви бажаєте завантажити її?</translation>
     </message>
 </context>
 <context>
     <name>myLabelPreviewer</name>
     <message>
         <source>Preview</source>
-        <translation>Предпросмотр</translation>
+        <translation>Передогляд</translation>
     </message>
 </context>
 </TS>

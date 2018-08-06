@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2017
+* (C) Francesco Mondello 2009 - 2018
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -68,7 +68,3 @@ void DialogInfo::on_pushDonatePayPal_clicked()
     QDesktopServices::openUrl(QUrl("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC", QUrl::TolerantMode));
 }
 
-void DialogInfo::on_pushDonateFlattr_clicked()
-{
-    QDesktopServices::openUrl(QUrl("http://flattr.com/thing/3332139/Converseen", QUrl::TolerantMode));
-}

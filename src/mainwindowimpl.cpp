@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2017
+* (C) Francesco Mondello 2009 - 2018
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -157,7 +157,6 @@ void MainWindowImpl::createActions()
 
     connect(actionInfo, SIGNAL(triggered()), this, SLOT(about()));
     connect(actionDonatePaypal, SIGNAL(triggered()), this, SLOT(openPaypalLink()));
-    connect(actionDonateFlattr, SIGNAL(triggered()), this, SLOT(openFlattrLink()));
     connect(actionReportBug, SIGNAL(triggered()), this, SLOT(bugReport()));
     connect(actionCheckForUpdates, SIGNAL(triggered()), this, SLOT(checkForUpdates()));
 }
@@ -899,18 +898,9 @@ void MainWindowImpl::checkVersion()
     if (savedVersion < currentVersion) {
 	        QString appVersion;
 
-    #ifdef Q_OS_WIN32
-        appVersion = QString("%1%2")
-                .arg(QCoreApplication::applicationVersion())
-                .arg(globals::Globals::signature());
-    #else
-        appVersion = QCoreApplication::applicationVersion();
-    #endif
+	/*QString welcomePage = QString("http://converseen.fasterland.net/thank/");
 
-	QString welcomePage = QString("http://fasterland.net/redirects/welcome.php?product=converseen&version=%1")
-            .arg(appVersion);
-
-    QDesktopServices::openUrl(QUrl(welcomePage, QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl(welcomePage, QUrl::TolerantMode));*/
     IniSettings::setCurrentVersion(currentVersion);
     }
 }
@@ -1017,11 +1007,6 @@ QString MainWindowImpl::destinationPath()
 void MainWindowImpl::openPaypalLink()
 {
     QDesktopServices::openUrl(QUrl("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC", QUrl::TolerantMode));
-}
-
-void MainWindowImpl::openFlattrLink()
-{
-    QDesktopServices::openUrl(QUrl("http://flattr.com/thing/3332139/Converseen", QUrl::TolerantMode));
 }
 
 void MainWindowImpl::checkForUpdates()

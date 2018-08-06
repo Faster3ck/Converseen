@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009-2017
+* (C) Francesco Mondello 2009 - 2018
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -36,7 +36,7 @@ QStringList Formats::s_writableFilters;
 
 void Formats::loadFormats()
 {
-#if defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
+//#if defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
     list<CoderInfo> coderList;
     coderInfoList(&coderList,
                   CoderInfo::TrueMatch,
@@ -88,7 +88,7 @@ void Formats::loadFormats()
 
     s_readableFiltersString = readableFiltersList.join("");
     s_readableFiltersString.prepend(tr("All Supported Filters (%1)").arg(readableExts));
-#else
+/*#else
     QFile data1(QDir::cleanPath("FileFormats/Readableformats.txt"));
     if (data1.open(QFile::ReadOnly)) {
         QTextStream in(&data1);
@@ -107,7 +107,7 @@ void Formats::loadFormats()
         } while (!line.isNull());
     }
     s_writableFilters.removeLast();
-#endif
+#endif*/
 
     s_writableFilters.prepend(tr("Don't change the format"));
 }

@@ -67,9 +67,9 @@ CONFIG += qt \
   -DMAGICKCORE_HDRI_ENABLE=0 \
   -DMAGICKCORE_QUANTUM_DEPTH=16
   
- INCLUDEPATH +=  /usr/include/ImageMagick-6
+ INCLUDEPATH +=  /usr/include/ImageMagick-7
 
- LIBS +=  -L/usr/lib  -lMagick++-6.Q16HDRI  -lMagickWand-6.Q16HDRI  -lMagickCore-6.Q16HDRI
+ LIBS +=  -L/usr/lib  -lMagick++-7.Q16HDRI  -lMagickWand-7.Q16HDRI  -lMagickCore-7.Q16HDRI
 
  TRANSLATIONS +=  loc/converseen_it_IT.ts \
  loc/converseen_hu_HU.ts \
@@ -82,7 +82,8 @@ CONFIG += qt \
  loc/converseen_ru_RU.ts \
  loc/converseen_pl_PL.ts \
  loc/converseen_ja_JP.ts \
- loc/converseen_da_DK.ts
+ loc/converseen_da_DK.ts \
+ loc/converseen_uk_UA.ts
  
  RESOURCES +=  resources.qrc
  INSTALL_PREFIX =  /usr
@@ -100,7 +101,8 @@ CONFIG += qt \
  loc/converseen_ru_RU.qm \
  loc/converseen_pl_PL.qm \
  loc/converseen_ja_JP.qm \
- loc/converseen_da_DK.qm
+ loc/converseen_da_DK.qm \
+loc/converseen_uk_UA.qm
   
  icon.path = $${SHARE_DIR}/pixmaps
  icon.files = res/converseen.png
