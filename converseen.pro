@@ -60,16 +60,26 @@ CONFIG += qt \
     src/dialogmultipageeditor.cpp \
     src/dialogshowupdatemsg.cpp
 
- QMAKE_CXXFLAGS += -O2 \
-  -Wall \
-  -W \
-  -pthread \
-  -DMAGICKCORE_HDRI_ENABLE=0 \
-  -DMAGICKCORE_QUANTUM_DEPTH=16
-  
- INCLUDEPATH +=  /usr/include/ImageMagick-7
+ !win32 {
+     QMAKE_CXXFLAGS += -O2 \
+      -Wall \
+      -W \
+      -pthread \
+      -DMAGICKCORE_HDRI_ENABLE=0 \
+      -DMAGICKCORE_QUANTUM_DEPTH=16
+ }
 
- LIBS +=  -L/usr/lib  -lMagick++-7.Q16HDRI  -lMagickWand-7.Q16HDRI  -lMagickCore-7.Q16HDRI
+ win32 {
+    INCLUDEPATH += "C:\Program Files (x86)\ImageMagick-7.0.8-Q16-HDRI\include"
+ } else {
+    INCLUDEPATH +=  /usr/include/ImageMagick-7
+ }
+
+ win32 {
+    LIBS += -L"C:\Program Files (x86)\ImageMagick-7.0.8-Q16-HDRI\lib" -lCORE_RL_Magick++_ -lCORE_RL_MagickCore_ -lCORE_RL_MagickWand_
+ } else {
+    LIBS += -L/usr/lib  -lMagick++-7.Q16HDRI  -lMagickWand-7.Q16HDRI  -lMagickCore-7.Q16HDRI
+ }
 
  TRANSLATIONS +=  loc/converseen_it_IT.ts \
  loc/converseen_hu_HU.ts \

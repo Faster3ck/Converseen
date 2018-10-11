@@ -37,7 +37,15 @@ IniSettings::IniSettings(QObject *parent) :
 
 void IniSettings::init()
 {
-	QString myPath =  QStandardPaths::writableLocation(QStandardPaths::DataLocation);
+	QString myPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
+
+#if defined(Q_OS_WIN)
+	QDir portableConfigDir(QDir::currentPath() + "/settings");
+
+	if (portableConfigDir.exists())
+		myPath = portableConfigDir.absolutePath();
+#endif
+
 	QString iniPath = QString("%1/%2").arg(myPath).arg(INIFILENAME);
 
     settings = new QSettings(iniPath, QSettings::IniFormat);
@@ -83,7 +91,7 @@ int IniSettings::jpgQuality()
 
 int IniSettings::pngQuality()
 {
-    int pngQuality = 7;
+    int pngQuality = 85;
 
     if (settings->contains("Quality/Png quality"))
         pngQuality = settings->value("Quality/Png quality").toInt();
