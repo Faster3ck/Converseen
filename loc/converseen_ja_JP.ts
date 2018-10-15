@@ -250,15 +250,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Check all</source>
-        <translation>すべてチェック</translation>
+        <translation>全てチェック</translation>
     </message>
     <message>
         <source>Uncheck</source>
-        <translation>チェックをはずす</translation>
+        <translation>チェックを外す</translation>
     </message>
     <message>
         <source>Uncheck all</source>
-        <translation>すべてのチェックをはずす</translation>
+        <translation>全てチェックを外す</translation>
     </message>
     <message>
         <source>Import multipage document</source>
@@ -273,7 +273,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Please, restart Converseen to apply current language!</source>
-        <translation>変更した言語を適用するために再起動!</translation>
+        <translation>言語の変更を適用するためにConverseenを再起動してください!</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -301,19 +301,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>As&amp;k first</source>
-        <translation type="unfinished"></translation>
+        <translation>最初に確認する(&amp;K)</translation>
     </message>
     <message>
         <source>O&amp;verwrite all existing images</source>
-        <translation type="unfinished"></translation>
+        <translation>既存のイメージを全て上書きする(&amp;O)</translation>
     </message>
     <message>
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>アップデート</translation>
     </message>
     <message>
         <source>Checks for updates automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>アップデートを自動的に確認する</translation>
     </message>
 </context>
 <context>
@@ -324,11 +324,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Png compression level</source>
-        <translation>Png圧縮レベル</translation>
+        <translation>PNG圧縮レベル</translation>
     </message>
     <message>
         <source>Jpeg compression level</source>
-        <translation>Jpeg圧縮レベル</translation>
+        <translation>JPEG圧縮レベル</translation>
     </message>
     <message>
         <source>Quality 0 - 100:</source>
@@ -355,23 +355,23 @@ p, li { white-space: pre-wrap; }
     <name>DialogShowUpdateMsg</name>
     <message>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>ダイアログ</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>テキストラベル</translation>
     </message>
     <message>
         <source>Don&apos;t show again</source>
-        <translation type="unfinished"></translation>
+        <translation>今後表示しない</translation>
     </message>
     <message>
         <source>Update Now</source>
-        <translation type="unfinished"></translation>
+        <translation>今すぐアップデート</translation>
     </message>
     <message>
         <source>Not Now</source>
-        <translation type="unfinished"></translation>
+        <translation>今はしない</translation>
     </message>
 </context>
 <context>
@@ -565,7 +565,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Check all items</source>
-        <translation>すべてチェック</translation>
+        <translation>全てチェック</translation>
     </message>
     <message>
         <source>Start with:</source>
@@ -577,7 +577,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Overwrite all</source>
-        <translation>すべて上書き</translation>
+        <translation>全て上書き</translation>
     </message>
     <message>
         <source>Flip image:</source>
@@ -633,7 +633,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Check a&amp;ll</source>
-        <translation>すべてチェック(&amp;l)</translation>
+        <translation>全てチェック(&amp;L)</translation>
     </message>
     <message>
         <source>&amp;Convert</source>
@@ -693,7 +693,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Remove &amp;all</source>
-        <translation>全て削除(&amp;a)</translation>
+        <translation>全て削除(&amp;A)</translation>
     </message>
     <message>
         <source>Dimensions</source>
@@ -729,7 +729,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Uncheck all &amp;items</source>
-        <translation>すべてチェックを外す(&amp;i)</translation>
+        <translation>全てチェックを外す(&amp;I)</translation>
     </message>
     <message>
         <source>Rotate and flip</source>
@@ -769,7 +769,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Import windows icon (*.ico)</source>
-        <translation>Windows アイコン (*.ico)のインポート</translation>
+        <translation>Windowsアイコン (*.ico) のインポート</translation>
     </message>
     <message>
         <source>Import windows icon (*.ico *.icon)</source>
@@ -781,43 +781,43 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Prefi&amp;x/Suffix</source>
-        <translation type="unfinished"></translation>
+        <translation>接頭辞/接尾辞(&amp;X)</translation>
     </message>
     <message>
         <source>Progressi&amp;ve Number</source>
-        <translation type="unfinished"></translation>
+        <translation>連番(&amp;V)</translation>
     </message>
     <message>
         <source>&amp;Donate via Paypal</source>
-        <translation type="unfinished"></translation>
+        <translation>Paypalで寄付(&amp;D)</translation>
     </message>
     <message>
         <source>&amp;Report bug...</source>
-        <translation type="unfinished"></translation>
+        <translation>バグを報告(&amp;R)...</translation>
     </message>
     <message>
         <source>Check if a new version of Converseen is available</source>
-        <translation type="unfinished"></translation>
+        <translation>Converseenの新しいバージョンが利用可能か確認する</translation>
     </message>
     <message>
         <source>&amp;Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>アップデートを確認(&amp;C)</translation>
     </message>
     <message>
         <source>Actio&amp;ns Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>動作パネル(&amp;N)</translation>
     </message>
     <message>
         <source>+ &amp;90°</source>
-        <translation type="unfinished"></translation>
+        <translation>+ 90°(&amp;9)</translation>
     </message>
     <message>
         <source>- 9&amp;0°</source>
-        <translation type="unfinished">- 90° {9&amp;0°?}</translation>
+        <translation>- 90°(&amp;0)</translation>
     </message>
     <message>
         <source>&amp;180°</source>
-        <translation type="unfinished"></translation>
+        <translation>180°(&amp;1)</translation>
     </message>
 </context>
 <context>
@@ -969,7 +969,8 @@ Abortで操作の取り消し。</translation>
     <message>
         <source>A new version of %1 is available!
 Would you download it?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 の新しいバージョンが利用可能です!
+ダウンロードしますか?</translation>
     </message>
 </context>
 <context>
