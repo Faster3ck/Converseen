@@ -209,10 +209,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal or Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Si te agrada este proyecto y quieres apoyarnos, agradeceremos  que envíes tu aporte mediante PayPal o Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../ui/dialoginfo.ui" line="53"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -514,10 +510,6 @@ p, li { white-space: pre-wrap; }
         <translation>Ayuda</translation>
     </message>
     <message>
-        <source>Actions Panel</source>
-        <translation type="obsolete">Panel de acciones</translation>
-    </message>
-    <message>
         <location filename="../ui/mainwindow.ui" line="247"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -691,18 +683,6 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/mainwindow.ui" line="784"/>
         <source>No rotation</source>
         <translation>No rotar</translation>
-    </message>
-    <message>
-        <source>+ 90°</source>
-        <translation type="vanished">+ 90°</translation>
-    </message>
-    <message>
-        <source>- 90°</source>
-        <translation type="vanished">- 90°</translation>
-    </message>
-    <message>
-        <source>180°</source>
-        <translation type="vanished">180°</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="856"/>
@@ -989,10 +969,6 @@ p, li { white-space: pre-wrap; }
         <source>Import windows icon (*.ico *.icon)</source>
         <translation>Importar ícono de Windows (*.ico *.icon)</translation>
     </message>
-    <message>
-        <source>Donate via Flattr</source>
-        <translation type="vanished">Donar via Flattr</translation>
-    </message>
 </context>
 <context>
     <name>MainWindowImpl</name>
@@ -1082,22 +1058,22 @@ p, li { white-space: pre-wrap; }
         <translation>Abrir carpeta</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="933"/>
+        <location filename="../src/mainwindowimpl.cpp" line="935"/>
         <source>Suggest a new name!</source>
         <translation>Sugiere un nuevo nombre.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="934"/>
+        <location filename="../src/mainwindowimpl.cpp" line="936"/>
         <source>New name:</source>
         <translation>Nuevo nombre:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="939"/>
+        <location filename="../src/mainwindowimpl.cpp" line="941"/>
         <source>Please, specify a name!</source>
         <translation>Por favor, especifica un nombre.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="940"/>
+        <location filename="../src/mainwindowimpl.cpp" line="942"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1108,23 +1084,23 @@ Haz clic en Ignorar para cancelar esta operación.
 Haz clic en Abortar para cancelar todas las operaciones.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="955"/>
-        <location filename="../src/mainwindowimpl.cpp" line="960"/>
+        <location filename="../src/mainwindowimpl.cpp" line="957"/>
+        <location filename="../src/mainwindowimpl.cpp" line="962"/>
         <source>Warning!</source>
         <translation>Advertencia</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="956"/>
+        <location filename="../src/mainwindowimpl.cpp" line="958"/>
         <source>The filename should not be empty!</source>
         <translation>El nombre de archivo no debería estar vacío.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="961"/>
+        <location filename="../src/mainwindowimpl.cpp" line="963"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>El nombre escogido es idéntico al original. ¿Deseas sobreescribir el archivo original?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="977"/>
+        <location filename="../src/mainwindowimpl.cpp" line="979"/>
         <source>Aborted!</source>
         <translation>Abortado</translation>
     </message>

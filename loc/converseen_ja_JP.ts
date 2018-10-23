@@ -168,10 +168,6 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Converseenをフォロー:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal or Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;このアプリが気に入ったらプロジェクトをサポートするための PayPal や Flattr での寄付を歓迎します&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -420,10 +416,6 @@ p, li { white-space: pre-wrap; }
         <translation>ヘルプ(&amp;H)</translation>
     </message>
     <message>
-        <source>180°</source>
-        <translation type="vanished">180°</translation>
-    </message>
-    <message>
         <source>Check selected items</source>
         <translation>選択したアイテムをチェック</translation>
     </message>
@@ -498,18 +490,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Horizontally</source>
         <translation>水平</translation>
-    </message>
-    <message>
-        <source>+ 90°</source>
-        <translation type="vanished">+ 90°</translation>
-    </message>
-    <message>
-        <source>- 90°</source>
-        <translation type="vanished">- 90°</translation>
-    </message>
-    <message>
-        <source>Actions Panel</source>
-        <translation type="obsolete">操作パネル</translation>
     </message>
     <message>
         <source>Open output directory</source>
@@ -774,10 +754,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Import windows icon (*.ico *.icon)</source>
         <translation>Windowsアイコン (*.ico *.icon)</translation>
-    </message>
-    <message>
-        <source>Donate via Flattr</source>
-        <translation type="vanished">Flattr で寄付</translation>
     </message>
     <message>
         <source>Prefi&amp;x/Suffix</source>

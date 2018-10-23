@@ -427,10 +427,6 @@ p, li { white-space: pre-wrap; }
         <translation>#_копия</translation>
     </message>
     <message>
-        <source>Actions Panel</source>
-        <translation type="obsolete">Панель действий</translation>
-    </message>
-    <message>
         <source>Open output directory</source>
         <translation>Открыть папку назначения</translation>
     </message>
@@ -721,19 +717,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>No rotation</source>
         <translation>Не вращать</translation>
-    </message>
-    <message>
-        <source>+ 90°</source>
-        <translation type="vanished">+ 90°</translation>
-    </message>
-    <message>
-        <source>- 90°</source>
-        <translation type="vanished">- 90°</translation>
-    </message>
-    <message>
-        <source>180°</source>
-        <translatorcomment>180°</translatorcomment>
-        <translation type="vanished">180°</translation>
     </message>
     <message>
         <source>Flip image:</source>

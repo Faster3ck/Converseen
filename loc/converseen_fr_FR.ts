@@ -204,22 +204,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal or Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Si vous appréciez ce travail et que vous voulez supporter le projet, vous pouvez effectuer un don via PayPal ou Flattr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2017 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2017 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
         <location filename="../ui/dialoginfo.ui" line="291"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Suivre Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
@@ -530,10 +514,6 @@ p, li { white-space: pre-wrap; }
         <translation>Ai&amp;de</translation>
     </message>
     <message>
-        <source>Actions Panel</source>
-        <translation type="vanished">Panneau d&apos;Actions</translation>
-    </message>
-    <message>
         <location filename="../ui/mainwindow.ui" line="247"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -727,18 +707,6 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/mainwindow.ui" line="784"/>
         <source>No rotation</source>
         <translation>Pas de rotation</translation>
-    </message>
-    <message>
-        <source>+ 90°</source>
-        <translation type="vanished">+90°</translation>
-    </message>
-    <message>
-        <source>- 90°</source>
-        <translation type="vanished">-90°</translation>
-    </message>
-    <message>
-        <source>180°</source>
-        <translation type="vanished">180°</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="856"/>
@@ -981,10 +949,6 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;Rapporter un bogue...</translation>
     </message>
     <message>
-        <source>&amp;Flattr This!</source>
-        <translation type="vanished">Faire un don sur &amp;Flattr !</translation>
-    </message>
-    <message>
         <location filename="../ui/mainwindow.ui" line="1314"/>
         <source>&amp;Check for updates</source>
         <translation>Vérifier les mises à &amp;jour</translation>
@@ -1008,10 +972,6 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/mainwindow.ui" line="1309"/>
         <source>Import windows icon (*.ico *.icon)</source>
         <translation>Importer un icône Windows (*.ico *.icon)</translation>
-    </message>
-    <message>
-        <source>Donate via Flattr</source>
-        <translation type="vanished">Faire un don via Flattr</translation>
     </message>
 </context>
 <context>
@@ -1092,22 +1052,22 @@ p, li { white-space: pre-wrap; }
         <translation>Prévisualiser</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="933"/>
+        <location filename="../src/mainwindowimpl.cpp" line="935"/>
         <source>Suggest a new name!</source>
         <translation>Entrez un Nouveau Nom !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="934"/>
+        <location filename="../src/mainwindowimpl.cpp" line="936"/>
         <source>New name:</source>
         <translation>Nouveau Nom:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="939"/>
+        <location filename="../src/mainwindowimpl.cpp" line="941"/>
         <source>Please, specify a name!</source>
         <translation>Veuillez spécifier un nom !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="940"/>
+        <location filename="../src/mainwindowimpl.cpp" line="942"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1118,23 +1078,23 @@ Cliquez sur Ignorer pour annuler cette opération.
 Cliquez sur Abandonner pour annuler toutes les opérations.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="955"/>
-        <location filename="../src/mainwindowimpl.cpp" line="960"/>
+        <location filename="../src/mainwindowimpl.cpp" line="957"/>
+        <location filename="../src/mainwindowimpl.cpp" line="962"/>
         <source>Warning!</source>
         <translation>Avertissement !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="956"/>
+        <location filename="../src/mainwindowimpl.cpp" line="958"/>
         <source>The filename should not be empty!</source>
         <translation>Le nom de fichier ne de devrait pas être vide !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="961"/>
+        <location filename="../src/mainwindowimpl.cpp" line="963"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Le nom choisi est identique à l&apos;original. Désirez-vous écraser le fichier original ?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="977"/>
+        <location filename="../src/mainwindowimpl.cpp" line="979"/>
         <source>Aborted!</source>
         <translation>Abandonné !</translation>
     </message>

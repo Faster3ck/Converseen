@@ -896,12 +896,14 @@ void MainWindowImpl::checkVersion()
     int currentVersion = globals::CURRENT_INTERNAL_VERSION;
 
     if (savedVersion < currentVersion) {
-	        QString appVersion;
+#if defined(Q_OS_WIN)
+	// Open thank you page on Windows
+		QString welcomePage = QString("http://converseen.fasterland.net/thank/");
 
-	/*QString welcomePage = QString("http://converseen.fasterland.net/thank/");
+		QDesktopServices::openUrl(QUrl(welcomePage, QUrl::TolerantMode));
+#endif
 
-    QDesktopServices::openUrl(QUrl(welcomePage, QUrl::TolerantMode));*/
-    IniSettings::setCurrentVersion(currentVersion);
+		IniSettings::setCurrentVersion(currentVersion);
     }
 }
 

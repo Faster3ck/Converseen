@@ -444,10 +444,6 @@ p, li { white-space: pre-wrap; }
         <translation>#_kopyala</translation>
     </message>
     <message>
-        <source>Actions Panel</source>
-        <translation type="obsolete">Eylemler Paneli</translation>
-    </message>
-    <message>
         <source>Open output directory</source>
         <translation>Çıktı dizinini aç</translation>
     </message>
@@ -722,10 +718,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>No rotation</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>180°</source>
-        <translation type="obsolete">180°</translation>
     </message>
     <message>
         <source>Flip image:</source>
