@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2018
+* (C) Francesco Mondello 2009 - 2019
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -25,7 +25,6 @@
 #define DIALOGQUALITY_H
 
 #include "ui_dialogquality.h"
-#include "globals.h"
 
 class DialogQuality : public QDialog, private Ui::DialogQuality {
     Q_OBJECT

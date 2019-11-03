@@ -2,7 +2,7 @@
 * This file is part of Kawaii Emoji Messenger, a multiplatform Facebook client
 * based on the idea of bringing emoji on desktop.
 *
-* (C) Francesco Mondello 2009 - 2018
+* (C) Francesco Mondello 2009 - 2019
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -34,4 +34,14 @@ QString globals::Globals::signature()
 {
     using namespace  globals;
     return m_sig;
+}
+
+QString globals::Globals::magickVersion()
+{
+    QString imVersion;
+    const char *version = MagickCore::GetMagickVersion(nullptr);
+
+    imVersion = QString::fromStdString(version);
+
+    return imVersion;
 }

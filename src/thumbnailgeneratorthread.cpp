@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2018
+* (C) Francesco Mondello 2009 - 2019
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -124,6 +124,7 @@ void ThumbnailGeneratorThread::createThumbnail()
     else {
         try
         {
+            my_image.quiet(true);
             my_image.read(m_fileName.toStdString());
 
             img_width = my_image.columns();

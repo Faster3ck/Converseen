@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2018
+* (C) Francesco Mondello 2009 - 2019
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -24,17 +24,15 @@
 #include <QApplication>
 #include <QTextCodec>
 #include <Magick++.h>
-#include <QDebug>
 #include "mainwindowimpl.h"
 #include "translator.h"
 #include "globals.h"
 
 int main(int argc, char ** argv)
 {
-    InitializeMagick(*argv);
+	InitializeMagick(*argv);
 
     QCoreApplication::setApplicationVersion(globals::VERSION);
-
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
 
     QApplication app( argc, argv );
@@ -47,11 +45,6 @@ int main(int argc, char ** argv)
     if (argc > 1) {
         if (QString::fromStdString(argv[1]) == "--list") {
             win.importListFromArgv(QString::fromStdString(argv[2]));
-        }
-    }
-    else {
-        for (int i = 0; i < argc; i++) {
-            qDebug() << "File " << argv[i];
         }
     }
 

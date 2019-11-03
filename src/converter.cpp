@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2018
+* (C) Francesco Mondello 2009 - 2019
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -25,8 +25,6 @@
 #include <QInputDialog>
 #include <QFileInfo>
 #include "converter.h"
-
-#include <QDebug>
 
 Converter::Converter(QObject *parent)
     : QThread(parent)
@@ -58,12 +56,8 @@ void Converter::run()
     m_process_stopped = 0;
     m_conv_status = 2;  // Jumped
 
-    //qDebug() << "Elementi iteratore:" << images.size();
-
     Image my_image;
     QFileInfo fi(m_fileNameIn);
-
-    //cout << my_image.ping(m_fileNameIn);
 
     QString out = m_fileNameOut;
 
@@ -72,6 +66,7 @@ void Converter::run()
 
     if (!m_process_stopped) {
         try {
+            my_image.quiet(true);
             my_image.read(m_fileNameIn.toStdString());
 
             if (m_zoom)

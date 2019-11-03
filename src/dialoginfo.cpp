@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2018
+* (C) Francesco Mondello 2009 - 2019
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -32,9 +32,10 @@ DialogInfo::DialogInfo(QWidget *parent) :
 
     connect(pushClose, SIGNAL(clicked()), this, SLOT(close()));
     connect(pushFacebook, SIGNAL(clicked()), this, SLOT(openFacebookPage()));
-    connect(pushGPlus, SIGNAL(clicked()), this, SLOT(openGooglePlusPage()));
 
     QString appVersion;
+    QString magickVersion;
+    QString iMVersionStrTr = tr("ImageMagick Version:");
 
 #ifdef Q_OS_WIN32
     appVersion = QString("%1%2")
@@ -50,18 +51,17 @@ DialogInfo::DialogInfo(QWidget *parent) :
             .arg(tr("The batch image converter and resizer."));
 
     labelTitle->setText(title);
+
+    magickVersion = globals::Globals::magickVersion();
+    QString versionString = QString("<p><span style=\" font-size:8pt; font-weight:600;\">%1 </span><span style=\" font-size:8pt;\">%2</span></p>").arg(iMVersionStrTr).arg(magickVersion);
+
+    labelMagickVersion->setText(versionString);
 }
 
 void DialogInfo::openFacebookPage()
 {
     QDesktopServices::openUrl(QUrl("https://www.facebook.com/converseen", QUrl::TolerantMode));
 }
-
-void DialogInfo::openGooglePlusPage()
-{
-    QDesktopServices::openUrl(QUrl("https://plus.google.com/u/0/b/112720480720840769800/", QUrl::TolerantMode));
-}
-
 
 void DialogInfo::on_pushDonatePayPal_clicked()
 {
