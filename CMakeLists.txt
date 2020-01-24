@@ -135,7 +135,7 @@ install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen DESTINATION ${CMAKE_INST
 install(FILES res/converseen.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/share/applications)
 install(FILES res/converseen.png DESTINATION ${CMAKE_INSTALL_PREFIX}/share/pixmaps)
 install(FILES res/converseen_import.desktop DESTINATION ${CMAKE_INSTALL_PREFIX}/share/kservices5/ServiceMenus)
-install(FILES converseen.appdata.xml DESTINATION /usr/share/appdata/)
+install(FILES converseen.appdata.xml DESTINATION /usr/share/metainfo/)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_cs_CZ.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_de_DE.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_es_CL.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
