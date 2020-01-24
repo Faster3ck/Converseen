@@ -86,6 +86,7 @@ SET(converseen_LANG
     loc/converseen_ja_JP.ts
     loc/converseen_da_DK.ts
     loc/converseen_uk_UA.ts
+    loc/converseen_sv_SE.ts
 )
 
 FIND_PACKAGE(Qt5Core REQUIRED)
@@ -148,3 +149,4 @@ install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_pl_PL.qm DESTINATION ${CMAK
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_ja_JP.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_da_DK.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
 install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_uk_UA.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
+install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_sv_SE.qm DESTINATION ${CMAKE_INSTALL_PREFIX}/share/converseen/loc)
