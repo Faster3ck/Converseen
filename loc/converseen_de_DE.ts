@@ -989,7 +989,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="218"/>
         <source>Open Image</source>
-        <translation>Öffne Bild</translation>
+        <translation>Bild Öffne</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="315"/>
