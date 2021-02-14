@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2020
+* (C) Francesco Mondello 2009 - 2021
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -21,6 +21,8 @@
 *
 */
 
+#include <QLibraryInfo>
+#include <QLocale>
 #include <QDir>
 #include "translator.h"
 #include "whereiam.h"
@@ -49,7 +51,13 @@ QTranslator *Translator::translation()
 {
     QTranslator *transl = new QTranslator;
     QString translationFile = QString("%1/%2").arg(m_loc).arg(loadCurrentTranslationName());
+    //QString translationFileQt = QLibraryInfo::location(QLibraryInfo::TranslationsPath) + "qt_" + QLocale::system().name();
     transl->load(translationFile);
+
+    //
+    /*transl->load("qt_" + QLocale::system().name(),
+        QLibraryInfo::location(QLibraryInfo::TranslationsPath));*/
+
 
     return(transl);
 }

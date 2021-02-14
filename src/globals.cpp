@@ -2,7 +2,7 @@
 * This file is part of Kawaii Emoji Messenger, a multiplatform Facebook client
 * based on the idea of bringing emoji on desktop.
 *
-* (C) Francesco Mondello 2009 - 2020
+* (C) Francesco Mondello 2009 - 2021
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by

@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2020
+* (C) Francesco Mondello 2009 - 2021
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -968,7 +968,7 @@ void MainWindowImpl::overwriteDialog(QString baseName)
             }
         }
     }
-    convertThread->mutex.unlock();
+    //convertThread->mutex.unlock();
     convertThread->setNewBasename(newBaseName, ok);
 }
 

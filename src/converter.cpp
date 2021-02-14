@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2020
+* (C) Francesco Mondello 2009 - 2021
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -199,7 +199,9 @@ QString Converter::overwriteOldFileName(QString out)
         if (!m_overwrite) {
             emit requestOverwrite(m_newBaseName);
 
+            mutex.lock();
             imageCondition.wait(&mutex);
+            mutex.unlock();
         }
         return QString("%1/%2.%3").arg(fi.path()).arg(m_newBaseName).arg(fi.suffix());
     }

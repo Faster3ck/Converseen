@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2020
+* (C) Francesco Mondello 2009 - 2021
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -41,8 +41,8 @@ using namespace std;
 namespace globals
 {
     const QString PROGRAM_NAME = "Converseen";
-    const int CURRENT_INTERNAL_VERSION = 981;
-    const QString VERSION = "0.9.8.1";
+    const int CURRENT_INTERNAL_VERSION = 990;
+    const QString VERSION = "0.9.9.0";
 
     class Globals
     {

@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2020
+* (C) Francesco Mondello 2009 - 2021
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@
 */
 
 #include <QApplication>
+#include <QLibraryInfo>
 #include <QTextCodec>
 #include <Magick++.h>
 #include "mainwindowimpl.h"
@@ -37,6 +38,13 @@ int main(int argc, char ** argv)
 
     QApplication app( argc, argv );
 
+    // Default traslations for Qt apps
+    QTranslator qtTranslator;
+    qtTranslator.load("qt_" + QLocale::system().name(),
+        QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+    app.installTranslator(&qtTranslator);
+
+    // Converseen translations
     Translator T;
     app.installTranslator(T.translation());
 
