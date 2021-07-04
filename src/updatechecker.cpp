@@ -27,8 +27,8 @@
 #include "dialogshowupdatemsg.h"
 #include "globals.h"
 
-#define VERSION_URL "http://fasterland.net/software-updates/converseen-version.txt"
-#define DESTINATION_URL "http://converseen.fasterland.net/update/"
+#define VERSION_URL "https://fasterland.net/software-updates/converseen-version.txt"
+#define DESTINATION_URL "https://converseen.fasterland.net/update/"
 
 UpdateChecker::UpdateChecker(QObject *parent) :
     QObject(parent)
@@ -40,7 +40,10 @@ UpdateChecker::UpdateChecker(QObject *parent) :
 void UpdateChecker::checkForUpdates()
 {
     QUrl url(VERSION_URL);
-    mNetworkManager->get(QNetworkRequest(url));
+    QNetworkRequest netReq(url);
+    netReq.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);    // Autoredirect
+
+    mNetworkManager->get(netReq);
 }
 
 void UpdateChecker::onNetworkReply(QNetworkReply* reply)
@@ -49,18 +52,24 @@ void UpdateChecker::onNetworkReply(QNetworkReply* reply)
     if(reply->error() == QNetworkReply::NoError)
     {
         int httpstatuscode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toUInt();
+        //qDebug() << "httpstatuscode: " << httpstatuscode;
+
+        //QVariant possibleRedirectUrl = reply->attribute(QNetworkRequest::RedirectionTargetAttribute);
+        //qDebug() << "possibleRedirectUrl: " << possibleRedirectUrl;
+
         switch(httpstatuscode)
         {
         case 200:
-        if (reply->isReadable())
-        {
-            //Assuming this is a human readable file replyString now contains the file
-            replyString = QString::fromUtf8(reply->readAll().data());
+            if (reply->isReadable())
+            {
+                replyString = QString::fromUtf8(reply->readAll().data());
 
-            checkIfIsNewVersion(replyString.toInt());
+                checkIfIsNewVersion(replyString.toInt());
+            }
+            break;
         }
-        break;
-        }
+
+        //qDebug() << "replyString: " << replyString;
     }
 
     reply->deleteLater();

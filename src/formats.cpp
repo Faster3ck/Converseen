@@ -78,11 +78,12 @@ void Formats::loadFormats()
     }
 
     ////////////////////
-    // Correct the leak of tif format
+    // Adding manually some missing but supported formats
     readableFiltersList << ";;Tagged Image File Format [*.tif] (*.tif *.TIF )";
+    readableFiltersList << ";;Joint Photographic Experts Group JFIF format [*.jfif] (*.jfif *.JFIF )";
     readableFiltersList = sortNonCaseSensitive(readableFiltersList);
 
-    readableExts += "*.tif *.TIF";
+    readableExts += "*.tif *.TIF *.jfif *.JFIF";
     ////////////////////
 
     s_readableFiltersString = readableFiltersList.join("");
@@ -107,6 +108,11 @@ void Formats::loadFormats()
     }
     s_writableFilters.removeLast();
 #endif*/
+
+    // Adding manually some missing but supported formats
+    s_writableFilters << "TIF - (Tagged Image File Format)";
+    s_writableFilters << "JFIF - (Joint Photographic Experts Group JFIF format)";
+    s_writableFilters = sortNonCaseSensitive(s_writableFilters);
 
     s_writableFilters.prepend(tr("Don't change the format"));
 }

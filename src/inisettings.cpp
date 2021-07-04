@@ -37,16 +37,17 @@ IniSettings::IniSettings(QObject *parent) :
 
 void IniSettings::init()
 {
-	QString myPath = QStandardPaths::writableLocation(QStandardPaths::DataLocation);
+    QString configLocationPath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
+    QString iniPath = QString("%1/converseen/%2").arg(configLocationPath).arg(INIFILENAME);
 
 #if defined(Q_OS_WIN)
 	QDir portableConfigDir(QDir::currentPath() + "/settings");
 
 	if (portableConfigDir.exists())
-		myPath = portableConfigDir.absolutePath();
-#endif
+        configLocationPath = portableConfigDir.absolutePath();
 
-	QString iniPath = QString("%1/%2").arg(myPath).arg(INIFILENAME);
+    iniPath = QString("%1/%2").arg(configLocationPath).arg(INIFILENAME);
+#endif
 
     settings = new QSettings(iniPath, QSettings::IniFormat);
 }
