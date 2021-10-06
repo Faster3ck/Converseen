@@ -1,6 +1,6 @@
 # Converseen
 
-![alt text](http://converseen.fasterland.net/res/converseen-linux.png "Converseen on Kde")
+![alt text](https://converseen.fasterland.net/res/converseen-linux.png "Converseen on Kde")
 
 **Converseen** is an open source project written in **C++** with the powerful **Qt5** libraries.
 Thanks to the **Magick++** image libraries it supports more than **100 image formats**.
@@ -19,21 +19,21 @@ With converseen you can:
 ## Installing
 
 **Converseen** is available for both **Linux** and **Windows** platforms.  
-To install **Converseen** source or binaries follow [these instructions](http://converseen.fasterland.net/download-for-linux/).  
+To install **Converseen** source or binaries follow [these instructions](https://converseen.fasterland.net/download-for-linux/).
 
 ## Author
 
-[Francesco Mondello](http://converseen.fasterland.net/).  
-To contact me you can use [this page](http://converseen.fasterland.net/contact-me/).  
+[Francesco Mondello](https://converseen.fasterland.net/).
+To contact me you can use [this page](https://converseen.fasterland.net/contact-me/).
   
   
-You can find more details about **Converseen** at [converseen.fasterland.net](http://converseen.fasterland.net/).  
+You can find more details about **Converseen** at [converseen.fasterland.net](https://converseen.fasterland.net/).
 If you appreciate this work and would like to support the project, you are welcome to [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC) **1 EUR** via **Paypal**.  
 
 ## License
  
     Converseen - The image batch converter and resizer
-    Copyright (C) 2009 - 2019  Francesco Mondello
+    Copyright (C) 2009 - 2021  Francesco Mondello
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

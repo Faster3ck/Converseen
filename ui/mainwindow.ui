@@ -166,7 +166,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>22</height>
+     <height>26</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -210,7 +210,7 @@
    <property name="minimumSize">
     <size>
      <width>375</width>
-     <height>296</height>
+     <height>298</height>
     </size>
    </property>
    <property name="features">
@@ -248,9 +248,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
-          <width>340</width>
-          <height>960</height>
+          <y>-360</y>
+          <width>347</width>
+          <height>1059</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -739,7 +739,7 @@ p, li { white-space: pre-wrap; }
                        <number>3</number>
                       </property>
                       <property name="maximum">
-                       <double>1000.000000000000000</double>
+                       <double>10000.000000000000000</double>
                       </property>
                      </widget>
                     </item>
@@ -749,7 +749,7 @@ p, li { white-space: pre-wrap; }
                        <number>3</number>
                       </property>
                       <property name="maximum">
-                       <double>1000.000000000000000</double>
+                       <double>10000.000000000000000</double>
                       </property>
                      </widget>
                     </item>
@@ -1353,7 +1353,7 @@ p, li { white-space: pre-wrap; }
  </resources>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroup_2"/>
   <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2"/>
  </buttongroups>
 </ui>
