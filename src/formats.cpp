@@ -37,11 +37,15 @@ void Formats::loadFormats()
 {
 //#if defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
     list<CoderInfo> coderList;
-    coderInfoList(&coderList,
-                  CoderInfo::TrueMatch,
-                  CoderInfo::AnyMatch,
-                  CoderInfo::AnyMatch);
-
+    try {
+        coderInfoList(&coderList,
+                      CoderInfo::TrueMatch,
+                      CoderInfo::AnyMatch,
+                      CoderInfo::AnyMatch);
+    }
+    catch (ErrorModule &e) {
+        cerr << e.what() << endl;
+    }
     list<CoderInfo>::iterator entry = coderList.begin();
     QString readableExts;
 
