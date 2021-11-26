@@ -20,11 +20,11 @@
     </message>
     <message>
         <source>Image:</source>
-        <translation>图像</translation>
+        <translation>图像：</translation>
     </message>
     <message>
         <source>Status:</source>
-        <translation>状态</translation>
+        <translation>状态：</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -36,7 +36,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Total:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;全部：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>0</source>
@@ -52,7 +52,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Converted:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;已转换：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -64,7 +64,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Errors:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;转换错误：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Open destination </source>
@@ -91,7 +91,7 @@ p, li { white-space: pre-wrap; }
     <name>DialogInfo</name>
     <message>
         <source>About Converseen...</source>
-        <translation>关于 Converseen</translation>
+        <translation>关于 Converseen...</translation>
     </message>
     <message>
         <source>-</source>
@@ -107,7 +107,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen 是一个图像批量缩放、转换工具。支持超过 100 种不同格式的图像。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen 是一个图像批量转换工具。支持超过 100 种不同格式图像的缩放与转换。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Informations</source>
@@ -151,11 +151,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;法语：&lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;法语：&lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org&lt;/span&gt;&lt;/a&gt; - David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;葡萄牙语（巴西）：&lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;葡萄牙语（巴西）：&lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; - &lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
@@ -305,11 +305,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>As&amp;k first</source>
-        <translation>覆盖前进行确认</translation>
+        <translation>覆盖前进行确认(&amp;K)</translation>
     </message>
     <message>
         <source>O&amp;verwrite all existing images</source>
-        <translation>覆盖所有已存在图像文件</translation>
+        <translation>覆盖所有已存在图像文件(&amp;V)</translation>
     </message>
     <message>
         <source>Updates</source>
@@ -333,7 +333,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Please, restart Converseen to apply current language!</source>
-        <translation>请重新启动 Converseen 以应用当前选中的语言！</translation>
+        <translation>请重新启动 Converseen 以应用当前设定的语言！</translation>
     </message>
 </context>
 <context>
@@ -453,7 +453,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Actio&amp;ns Panel</source>
-        <translation>操作面板</translation>
+        <translation>操作面板(&amp;N)</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -481,7 +481,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;图像类型：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;图像格式：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -561,11 +561,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Link aspect with selected image</source>
-        <translation></translation>
+        <translation>与选中图像保持一致</translation>
     </message>
     <message>
         <source>Mantain aspect ratio</source>
-        <translation>保持长宽比</translation>
+        <translation>保持宽高比</translation>
     </message>
     <message>
         <source>Resolution</source>
@@ -637,7 +637,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Image&apos;s directory</source>
-        <translation>“我的图片”</translation>
+        <translation>原图像目录</translation>
     </message>
     <message>
         <source>Rename:</source>
@@ -645,11 +645,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Prefi&amp;x/Suffix</source>
-        <translation>前缀/后缀</translation>
+        <translation>前缀/后缀(&amp;X)</translation>
     </message>
     <message>
         <source>Progressi&amp;ve Number</source>
-        <translation>自动编号</translation>
+        <translation>自动编号(&amp;V)</translation>
     </message>
     <message>
         <source>#_copy</source>
@@ -661,7 +661,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Overwrite all</source>
-        <translation>覆盖所有</translation>
+        <translation>全部覆盖</translation>
     </message>
     <message>
         <source>toolBar</source>
@@ -721,7 +721,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Check a&amp;ll</source>
-        <translation>全部勾选</translation>
+        <translation>全部勾选(&amp;A)</translation>
     </message>
     <message>
         <source>Check all items</source>
@@ -761,7 +761,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Uncheck all &amp;items</source>
-        <translation>全部取消勾选</translation>
+        <translation>全部取消勾选(&amp;I)</translation>
     </message>
     <message>
         <source>Ctrl+Alt+J</source>
@@ -941,7 +941,7 @@ Click Abort to cancel all operations.</source>
     </message>
     <message>
         <source>Image type</source>
-        <translation>图像类型</translation>
+        <translation>图像格式</translation>
     </message>
     <message>
         <source>File size</source>
