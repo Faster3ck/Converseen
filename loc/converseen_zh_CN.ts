@@ -229,6 +229,10 @@ p, li { white-space: pre-wrap; }
         <source>The batch image converter and resizer.</source>
         <translation>批量转换、缩放图像文件。</translation>
     </message>
+    <message>
+        <source>&lt;strong&gt;Simplified Chinese translation: &lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</source>
+        <translation>&lt;strong&gt;简体中文：&lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</translation>
+    </message>
 </context>
 <context>
     <name>DialogMultipageEditor</name>

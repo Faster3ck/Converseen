@@ -1026,7 +1026,7 @@
   </ImportGroup>
   <ProjectExtensions>
     <VisualStudio>
-      <UserProperties Qt5Version_x0020_Win32="5.15.1_msvc2019" QtVersion_x0020_Win32="4.8.6" RccDir=".\GeneratedFiles" />
+      <UserProperties Qt5Version_x0020_Win32="5.15.2_msvc2019" QtVersion_x0020_Win32="4.8.6" RccDir=".\GeneratedFiles" />
     </VisualStudio>
   </ProjectExtensions>
 </Project>
