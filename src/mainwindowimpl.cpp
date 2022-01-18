@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2021
+* (C) Francesco Mondello 2009 - 2022
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -81,6 +81,7 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WindowFlags f)
     connect(labelPreview, SIGNAL(previewReady(int, int, double, double)), this, SLOT(showImageInformations(int, int, double, double)));
 
     connect(checkRelative, SIGNAL(stateChanged(int)), this, SLOT(setRelativeSizeCheckboxes(int)));
+    connect(checkOverwrite, SIGNAL(stateChanged(int)), this, SLOT(setOverwriteStatus(int)));
 
     createActions();
     setupMenu();
@@ -752,8 +753,7 @@ void MainWindowImpl::editSettings()
     dlg.exec();
 
     if (dlg.result() == 1) {
-        saveSettings();
-        loadOptions();
+        checkOverwrite->setChecked(IniSettings::isOverwriteMode());
     }
 }
 
@@ -1028,4 +1028,12 @@ void MainWindowImpl::setRelativeSizeCheckboxes(int state)
         checkLinkAspect->setEnabled(false);
     else
         checkLinkAspect->setEnabled(true);
+}
+
+void MainWindowImpl::setOverwriteStatus(int state)
+{
+    bool isChecked = state == 0 ? false : true;
+
+    IniSettings::setOverwriteMode(isChecked);
+    IniSettings::settings->sync();
 }

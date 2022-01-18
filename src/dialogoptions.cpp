@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2021
+* (C) Francesco Mondello 2009 - 2022
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -66,9 +66,9 @@ void DialogOptions::setLanguage()
 void DialogOptions::setOverwriteMode()
 {
     if (radioAskFirst->isChecked())
-        IniSettings::setOverwriteMode(true);
-	else
         IniSettings::setOverwriteMode(false);
+    if (radioOverwrite->isChecked())
+        IniSettings::setOverwriteMode(true);
 }
 
 void DialogOptions::setAutoUpdates()
@@ -89,13 +89,18 @@ void DialogOptions::saveOptions()
     setOverwriteMode();
     setAutoUpdates();
 
+    IniSettings::settings->sync();
     accept();
 }
 
 void DialogOptions::loadSettings()
 {
     bool overwriteMode = IniSettings::isOverwriteMode();
-	radioAskFirst->setChecked(overwriteMode);
+
+    if (overwriteMode)
+        radioOverwrite->setChecked(true);
+    else
+        radioAskFirst->setChecked(true);
 
     bool autoUpdates = IniSettings::isAutoChechUpdates();
     if (autoUpdates)

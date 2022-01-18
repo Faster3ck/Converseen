@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2021
+* (C) Francesco Mondello 2009 - 2022
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -151,5 +151,6 @@ private slots:
     void bugReport();
 
     void setRelativeSizeCheckboxes(int state);
+    void setOverwriteStatus(int state);
 };
 #endif // MAINWINDOWIMPL_H

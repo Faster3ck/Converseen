@@ -211,15 +211,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="372"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;(c) 2009 - 2021 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../ui/dialoginfo.ui" line="44"/>
         <location filename="../ui/dialoginfo.ui" line="67"/>
         <source>-</source>
@@ -997,107 +988,107 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="218"/>
+        <location filename="../src/mainwindowimpl.cpp" line="219"/>
         <source>Open Image</source>
         <translation>Bild Öffne</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="315"/>
-        <location filename="../src/mainwindowimpl.cpp" line="321"/>
-        <location filename="../src/mainwindowimpl.cpp" line="330"/>
-        <location filename="../src/mainwindowimpl.cpp" line="334"/>
-        <location filename="../src/mainwindowimpl.cpp" line="338"/>
+        <location filename="../src/mainwindowimpl.cpp" line="316"/>
+        <location filename="../src/mainwindowimpl.cpp" line="322"/>
+        <location filename="../src/mainwindowimpl.cpp" line="331"/>
+        <location filename="../src/mainwindowimpl.cpp" line="335"/>
+        <location filename="../src/mainwindowimpl.cpp" line="339"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="335"/>
+        <location filename="../src/mainwindowimpl.cpp" line="336"/>
         <source>No image checked!</source>
         <translation>Kein Bild ausgewählt!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="339"/>
+        <location filename="../src/mainwindowimpl.cpp" line="340"/>
         <source>No images to convert!</source>
         <translation>Keine Bilder zum konvertieren!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="316"/>
+        <location filename="../src/mainwindowimpl.cpp" line="317"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>Das Ausgabe-Verzeichnis existiert nicht! Willst du es erstellen?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="230"/>
+        <location filename="../src/mainwindowimpl.cpp" line="231"/>
         <source>Open Icon file</source>
         <translation>Öffne Icon-Datei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="230"/>
+        <location filename="../src/mainwindowimpl.cpp" line="231"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Microsoft Icon (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="241"/>
+        <location filename="../src/mainwindowimpl.cpp" line="242"/>
         <source>Open Pdf file</source>
         <translation>Öffne PDF-Datei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="241"/>
+        <location filename="../src/mainwindowimpl.cpp" line="242"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="251"/>
+        <location filename="../src/mainwindowimpl.cpp" line="252"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Analysieren der Datei. Es kann eine Weile dauern, bitte warten...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="322"/>
+        <location filename="../src/mainwindowimpl.cpp" line="323"/>
         <source>The directory cannot be created!</source>
         <translation>Das Verzeichnis konnte nciht erstellt werden!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="331"/>
+        <location filename="../src/mainwindowimpl.cpp" line="332"/>
         <source>Set an output directory!</source>
         <translation>Ausgabe-Verzeichnis angeben!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="348"/>
+        <location filename="../src/mainwindowimpl.cpp" line="349"/>
         <source>Processing...</source>
         <translation>Berechne...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="511"/>
+        <location filename="../src/mainwindowimpl.cpp" line="512"/>
         <source>Processing finished!</source>
         <translation>Berechnung beendet!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="565"/>
+        <location filename="../src/mainwindowimpl.cpp" line="566"/>
         <source>Open Directory</source>
         <translation>Verzeichnis öffnen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="804"/>
-        <location filename="../src/mainwindowimpl.cpp" line="862"/>
+        <location filename="../src/mainwindowimpl.cpp" line="805"/>
+        <location filename="../src/mainwindowimpl.cpp" line="863"/>
         <source>Preview</source>
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="935"/>
+        <location filename="../src/mainwindowimpl.cpp" line="936"/>
         <source>Suggest a new name!</source>
         <translation>Schlage einen neuen Namen vor!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="936"/>
+        <location filename="../src/mainwindowimpl.cpp" line="937"/>
         <source>New name:</source>
         <translation>Neuer Name:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="941"/>
+        <location filename="../src/mainwindowimpl.cpp" line="942"/>
         <source>Please, specify a name!</source>
         <translation>Bitte gib einen Namen an!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="942"/>
+        <location filename="../src/mainwindowimpl.cpp" line="943"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1108,23 +1099,23 @@ Klicke &quot;Ignorieren&quot;, um diese Operation abzubrechen.
 Klicke &quot;Abbrechen&quot;, um alle Operationen abzubrechen.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="957"/>
-        <location filename="../src/mainwindowimpl.cpp" line="962"/>
+        <location filename="../src/mainwindowimpl.cpp" line="958"/>
+        <location filename="../src/mainwindowimpl.cpp" line="963"/>
         <source>Warning!</source>
         <translation>Warnung!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="958"/>
+        <location filename="../src/mainwindowimpl.cpp" line="959"/>
         <source>The filename should not be empty!</source>
         <translation>Der Dateiname muss angegeben werden!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="963"/>
+        <location filename="../src/mainwindowimpl.cpp" line="964"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Der ausgewählte Name ist identisch mit dem vorherigen. Willst du die Originaldatei überschreiben?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="979"/>
+        <location filename="../src/mainwindowimpl.cpp" line="980"/>
         <source>Aborted!</source>
         <translation>Abgebrochen!</translation>
     </message>

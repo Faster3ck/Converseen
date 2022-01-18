@@ -219,27 +219,6 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Seguir Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="372"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;(c) 2009 - 2021 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2019 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2017 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {2&apos;?} {2009 ?} {2018 ?} {3&lt;?} {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {2&apos;?} {2009 ?} {2019 ?} {3&lt;?}</translation>
-    </message>
-    <message>
         <location filename="../ui/dialoginfo.ui" line="44"/>
         <location filename="../ui/dialoginfo.ui" line="67"/>
         <source>-</source>
@@ -262,18 +241,6 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/dialoginfo.ui" line="258"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2020 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="obsolete">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Noto Sans&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;MS Shell Dlg 2&apos;;&quot;&gt;(c) 2009 - 2017 Francesco Mondello GNU - GPL v.3&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {2&apos;?} {2009 ?} {2018 ?} {3&lt;?} {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {2&apos;?} {2009 ?} {2019 ?} {3&lt;?} {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {2&apos;?} {2009 ?} {2020 ?} {3&lt;?}</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="398"/>
@@ -1018,97 +985,97 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="218"/>
+        <location filename="../src/mainwindowimpl.cpp" line="219"/>
         <source>Open Image</source>
         <translation>Abrir Imagem</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="315"/>
-        <location filename="../src/mainwindowimpl.cpp" line="321"/>
-        <location filename="../src/mainwindowimpl.cpp" line="330"/>
-        <location filename="../src/mainwindowimpl.cpp" line="334"/>
-        <location filename="../src/mainwindowimpl.cpp" line="338"/>
+        <location filename="../src/mainwindowimpl.cpp" line="316"/>
+        <location filename="../src/mainwindowimpl.cpp" line="322"/>
+        <location filename="../src/mainwindowimpl.cpp" line="331"/>
+        <location filename="../src/mainwindowimpl.cpp" line="335"/>
+        <location filename="../src/mainwindowimpl.cpp" line="339"/>
         <source>Warning</source>
         <translation>Aviso</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="335"/>
+        <location filename="../src/mainwindowimpl.cpp" line="336"/>
         <source>No image checked!</source>
         <translation>Nenhuma imagem marcada!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="339"/>
+        <location filename="../src/mainwindowimpl.cpp" line="340"/>
         <source>No images to convert!</source>
         <translation>Nemhuma imagem para converter!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="316"/>
+        <location filename="../src/mainwindowimpl.cpp" line="317"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>O diretório de saída não existe! Você quer criá-lo?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="230"/>
+        <location filename="../src/mainwindowimpl.cpp" line="231"/>
         <source>Open Icon file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="230"/>
+        <location filename="../src/mainwindowimpl.cpp" line="231"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="241"/>
+        <location filename="../src/mainwindowimpl.cpp" line="242"/>
         <source>Open Pdf file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="241"/>
+        <location filename="../src/mainwindowimpl.cpp" line="242"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="251"/>
+        <location filename="../src/mainwindowimpl.cpp" line="252"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="322"/>
+        <location filename="../src/mainwindowimpl.cpp" line="323"/>
         <source>The directory cannot be created!</source>
         <translation>O diretório não pode ser criado!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="331"/>
+        <location filename="../src/mainwindowimpl.cpp" line="332"/>
         <source>Set an output directory!</source>
         <translation>Definir um diretório de saída!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="348"/>
+        <location filename="../src/mainwindowimpl.cpp" line="349"/>
         <source>Processing...</source>
         <translation>Processando...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="804"/>
-        <location filename="../src/mainwindowimpl.cpp" line="862"/>
+        <location filename="../src/mainwindowimpl.cpp" line="805"/>
+        <location filename="../src/mainwindowimpl.cpp" line="863"/>
         <source>Preview</source>
         <translation>Preview</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="935"/>
+        <location filename="../src/mainwindowimpl.cpp" line="936"/>
         <source>Suggest a new name!</source>
         <translation>Sugerir um novo nome!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="936"/>
+        <location filename="../src/mainwindowimpl.cpp" line="937"/>
         <source>New name:</source>
         <translation>Novo nome:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="941"/>
+        <location filename="../src/mainwindowimpl.cpp" line="942"/>
         <source>Please, specify a name!</source>
         <translation>Por favor, especifique um nome!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="942"/>
+        <location filename="../src/mainwindowimpl.cpp" line="943"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1119,33 +1086,33 @@ Clique em Ignorar para cancelar esta operação.
 Clique em Abortar para cancelar todas as operações.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="957"/>
-        <location filename="../src/mainwindowimpl.cpp" line="962"/>
+        <location filename="../src/mainwindowimpl.cpp" line="958"/>
+        <location filename="../src/mainwindowimpl.cpp" line="963"/>
         <source>Warning!</source>
         <translation>Aviso!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="958"/>
+        <location filename="../src/mainwindowimpl.cpp" line="959"/>
         <source>The filename should not be empty!</source>
         <translation>O nome do arquivo não deve ser vazio!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="963"/>
+        <location filename="../src/mainwindowimpl.cpp" line="964"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>O nome escolhido é idêntico ao inicial. Você deseja substituir o arquivo original?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="979"/>
+        <location filename="../src/mainwindowimpl.cpp" line="980"/>
         <source>Aborted!</source>
         <translation>Cancelado!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="511"/>
+        <location filename="../src/mainwindowimpl.cpp" line="512"/>
         <source>Processing finished!</source>
         <translation>Processamento finalizado!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="565"/>
+        <location filename="../src/mainwindowimpl.cpp" line="566"/>
         <source>Open Directory</source>
         <translation>Abrir Diretório</translation>
     </message>
