@@ -70,13 +70,13 @@ CONFIG += qt \
  }
 
  win32 {
-    INCLUDEPATH += "C:\Program Files (x86)\ImageMagick-7.0.10-Q16-HDRI\include"
+    INCLUDEPATH += "C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\include"
  } else {
     INCLUDEPATH +=  /usr/include/ImageMagick-7
  }
 
  win32 {
-    LIBS += -L"C:\Program Files (x86)\ImageMagick-7.0.10-Q16-HDRI\lib" -lCORE_RL_Magick++_ -lCORE_RL_MagickCore_ -lCORE_RL_MagickWand_
+    LIBS += -L"C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\lib" -lCORE_RL_Magick++_ -lCORE_RL_MagickCore_ -lCORE_RL_MagickWand_
  } else {
     LIBS += -L/usr/lib  -lMagick++-7.Q16HDRI  -lMagickWand-7.Q16HDRI  -lMagickCore-7.Q16HDRI
  }

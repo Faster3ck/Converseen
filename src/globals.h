@@ -41,8 +41,8 @@ using namespace std;
 namespace globals
 {
     const QString PROGRAM_NAME = "Converseen";
-    const int CURRENT_INTERNAL_VERSION = 994;
-    const QString VERSION = "0.9.9.4";
+    const int CURRENT_INTERNAL_VERSION = 995;
+    const QString VERSION = "0.9.9.5";
 
     class Globals
     {
@@ -50,6 +50,7 @@ namespace globals
         static void setSignature(const QString &signature);
         static QString signature();
         static QString magickVersion();
+        static qreal scaleFactor();
 
     private:
         static QString m_sig;

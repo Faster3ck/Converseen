@@ -24,10 +24,13 @@
 #include <QMovie>
 #include "mylabelpreviewer.h"
 #include "formats.h"
+#include "globals.h"
 
 myLabelPreviewer::myLabelPreviewer(QWidget *parent) : QLabel(parent)
 {
     thumbGen = new ThumbnailGeneratorThread(this);
+
+    m_scaleFactor = globals::Globals::scaleFactor();
 
     connect(thumbGen, SIGNAL(pixmapGenerated(QImage, int, int, double, double)), this, SLOT(showPreview(QImage, int, int, double, double)));
 }
@@ -51,6 +54,9 @@ void myLabelPreviewer::showPreview(QImage thumbnail, int orig_w, int orig_h, dou
     }
     else {
         QPixmap pixmap = QPixmap::fromImage(thumbnail);
+        pixmap = pixmap.scaled(QSize(320, 240) * m_scaleFactor, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        pixmap.setDevicePixelRatio(m_scaleFactor);
+
         this->setPixmap(pixmap);
     }
 

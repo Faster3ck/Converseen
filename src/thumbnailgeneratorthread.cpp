@@ -23,6 +23,7 @@
 
 #include "formats.h"
 #include "thumbnailgeneratorthread.h"
+#include "globals.h"
 
 #define MAX_THUMB_W 320
 #define MAX_THUMB_H 240
@@ -114,8 +115,10 @@ void ThumbnailGeneratorThread::createThumbnail()
         img_dens_x = tmpImage.logicalDpiX();
         img_dens_y = tmpImage.logicalDpiY();
 
+        qreal scaleFactor = globals::Globals::scaleFactor();
+
         if (m_generateThumbnail) {
-            thumbnail = tmpImage.scaled(QSize(MAX_THUMB_W, MAX_THUMB_H),
+            thumbnail = tmpImage.scaled(QSize(MAX_THUMB_W, MAX_THUMB_H) * scaleFactor,
                                        Qt::KeepAspectRatio,
                                        Qt::SmoothTransformation);
 

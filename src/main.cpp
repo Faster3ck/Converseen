@@ -48,6 +48,8 @@ int main(int argc, char ** argv)
     Translator T;
     app.installTranslator(T.translation());
 
+    app.setAttribute(Qt::AA_UseHighDpiPixmaps, Qt::AA_EnableHighDpiScaling);
+
     MainWindowImpl win;
 
     if (argc > 1) {
@@ -58,5 +60,6 @@ int main(int argc, char ** argv)
 
     win.show();
     app.connect( &app, SIGNAL( lastWindowClosed() ), &app, SLOT( quit() ) );
+
     return app.exec();
 }
