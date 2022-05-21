@@ -51,6 +51,7 @@
         <keyword>picture</keyword>
         <keyword>qt</keyword>
     </keywords>
+    <content_rating type="oars-1.1" />
     <url type="homepage">http://converseen.fasterland.net/</url>
     <update_contact>faster3ck@gmail.com</update_contact>
     <developer_name>Francesco Mondello</developer_name>
