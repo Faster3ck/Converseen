@@ -51,10 +51,19 @@
         <keyword>picture</keyword>
         <keyword>qt</keyword>
     </keywords>
+    <content_rating type="oars-1.1" />
     <url type="homepage">http://converseen.fasterland.net/</url>
     <update_contact>faster3ck@gmail.com</update_contact>
     <developer_name>Francesco Mondello</developer_name>
     <url type="bugtracker">https://github.com/Faster3ck/Converseen/issues</url>
     <url type="donation">http://converseen.fasterland.net/thank/</url>
     <url type="help">http://converseen.fasterland.net/help/</url>
+    <releases>
+        <release version="0.9.9.5" date="2022-03-01" />
+        <release version="0.9.9.4" date="2022-01-18" />
+        <release version="0.9.9.3" date="2021-12-12" />
+        <release version="0.9.9.2" date="2021-10-06" />
+        <release version="0.9.9.1" date="2021-06-04" /> 
+        <release version="0.9.9.0" date="2021-02-14" />
+  </releases>
 </component>
