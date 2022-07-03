@@ -448,12 +448,19 @@ void MainWindowImpl::convert()
 
         int quality = -1;
 
+        /*
+            For further details:
+            http://www.imagemagick.org/script/command-line-options.php#quality
+        **/
+
+        // Compression level 1-100
         if ((out_format == "jpg") || (out_format == "jpeg") || (out_format == "mpeg") || (out_format == "mpg")) {
             quality = jpgQuality;
         }
 
+        // Compression level 0-9. For compression level 0 (quality value less than 10), the Huffman-only strategy is used
         if ((out_format == "png") || (out_format == "mng")) {
-            quality = pngQuality;
+            quality = pngQuality * 10;
         }
 
         convertThread->setInputPicture(inputFilename);

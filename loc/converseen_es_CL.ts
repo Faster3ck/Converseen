@@ -403,32 +403,52 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../ui/dialogquality.ui" line="28"/>
-        <location filename="../ui/dialogquality.ui" line="69"/>
-        <source>Quality 0 - 100:</source>
-        <translation>Calidad 0 - 100:</translation>
+        <source>Quality 1 - 100:</source>
+        <translation type="unfinished">Calidad 0 - 100: {1 ?} {100:?}</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="61"/>
-        <source>Png compression level</source>
-        <translation>Nivel de compresión PNG</translation>
+        <location filename="../ui/dialogquality.ui" line="35"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the JPEG image formats, quality is 1 (lowest image quality and highest compression) to 100 (best quality but least effective compression).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="38"/>
+        <location filename="../ui/dialogquality.ui" line="117"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/dialogquality.ui" line="99"/>
+        <source>Png/Mng compression level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="107"/>
+        <source>Quality 0 - 9:</source>
+        <translation type="unfinished">Calidad 0 - 100: {0 ?} {9:?}</translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="114"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a &apos;lossless&apos; compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="172"/>
         <source>Interpolation</source>
         <translation>Interpolación</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="107"/>
+        <location filename="../ui/dialogquality.ui" line="180"/>
         <source>Filter:</source>
         <translation>Filtro:</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="147"/>
+        <location filename="../ui/dialogquality.ui" line="223"/>
         <source>Ok</source>
         <translation>Aceptar</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="154"/>
+        <location filename="../ui/dialogquality.ui" line="230"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
@@ -1054,38 +1074,38 @@ p, li { white-space: pre-wrap; }
         <translation>Procesando...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="512"/>
+        <location filename="../src/mainwindowimpl.cpp" line="519"/>
         <source>Processing finished!</source>
         <translation>Proceso terminado.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="805"/>
-        <location filename="../src/mainwindowimpl.cpp" line="863"/>
+        <location filename="../src/mainwindowimpl.cpp" line="811"/>
+        <location filename="../src/mainwindowimpl.cpp" line="869"/>
         <source>Preview</source>
         <translation>Vista previa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="566"/>
+        <location filename="../src/mainwindowimpl.cpp" line="573"/>
         <source>Open Directory</source>
         <translation>Abrir carpeta</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="936"/>
+        <location filename="../src/mainwindowimpl.cpp" line="942"/>
         <source>Suggest a new name!</source>
         <translation>Sugiere un nuevo nombre.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="937"/>
+        <location filename="../src/mainwindowimpl.cpp" line="943"/>
         <source>New name:</source>
         <translation>Nuevo nombre:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="942"/>
+        <location filename="../src/mainwindowimpl.cpp" line="948"/>
         <source>Please, specify a name!</source>
         <translation>Por favor, especifica un nombre.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="943"/>
+        <location filename="../src/mainwindowimpl.cpp" line="949"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1096,23 +1116,23 @@ Haz clic en Ignorar para cancelar esta operación.
 Haz clic en Abortar para cancelar todas las operaciones.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="958"/>
-        <location filename="../src/mainwindowimpl.cpp" line="963"/>
+        <location filename="../src/mainwindowimpl.cpp" line="964"/>
+        <location filename="../src/mainwindowimpl.cpp" line="969"/>
         <source>Warning!</source>
         <translation>Advertencia</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="959"/>
+        <location filename="../src/mainwindowimpl.cpp" line="965"/>
         <source>The filename should not be empty!</source>
         <translation>El nombre de archivo no debería estar vacío.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="964"/>
+        <location filename="../src/mainwindowimpl.cpp" line="970"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>El nombre escogido es idéntico al original. ¿Deseas sobreescribir el archivo original?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="980"/>
+        <location filename="../src/mainwindowimpl.cpp" line="986"/>
         <source>Aborted!</source>
         <translation>Abortado</translation>
     </message>
@@ -1176,7 +1196,7 @@ Would you download it?</source>
 <context>
     <name>myLabelPreviewer</name>
     <message>
-        <location filename="../src/mylabelpreviewer.cpp" line="50"/>
+        <location filename="../src/mylabelpreviewer.cpp" line="53"/>
         <source>Preview</source>
         <translation>Vista previa</translation>
     </message>

@@ -134,7 +134,7 @@ ADD_EXECUTABLE(${GUI}
 TARGET_LINK_LIBRARIES(${GUI} ${Qt5Network_LIBRARIES} ${Qt5Widgets_LIBRARIES} ${ImageMagick_LIBRARY} ${ImageMagick_Magick++_LIBRARY} ${ImageMagick_MagickCore_LIBRARY})
 
 install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen DESTINATION ${CMAKE_INSTALL_BINDIR})
-install(FILES res/converseen.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
+install(FILES res/net.fasterland.converseen.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
 install(FILES res/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/pixmaps)
 install(FILES res/converseen_import.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/kservices5/ServiceMenus)
 install(FILES converseen.appdata.xml DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo/)

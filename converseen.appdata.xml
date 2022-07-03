@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright 2022 Francesco Mondello <faster3ck@gmail.com> -->
 <component type="desktop">
-    <id>converseen.desktop</id>
+    <id>net.fasterland.converseen</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0</project_license>
     <name>Converseen</name>
     <summary>A batch image processor</summary>
+    <launchable type="desktop-id">net.fasterland.converseen.desktop</launchable>
     <description>
     <p>
         Converseen is a free cross-platform batch image processor that allows you to convert, 
@@ -27,19 +28,29 @@
     </ul>
     </description>
     <screenshots>
-        <screenshot height="621" width="1104" type="default">
-            <image>http://fasterland.net/images/converseen-appdata-1.png</image>
+        <screenshot height="900" width="1600" type="default">
+            <image>https://fasterland.net/images/appstream/converseen-appdata-1.png</image>
             <caption>The main window showing the application in action</caption>
         </screenshot>
-        <screenshot height="621" width="1104">
-            <image>http://fasterland.net/images/converseen-appdata-2.png</image>
-            <caption>The program during the image processing</caption>
-        </screenshot>
-        <screenshot height="621" width="1104">
-            <image>http://fasterland.net/images/converseen-appdata-3.png</image>
+        <screenshot height="900" width="1600">
+            <image>https://fasterland.net/images/appstream/converseen-appdata-2.png</image>
             <caption>The image preferences window where you can change the settings</caption>
         </screenshot>
+        <screenshot height="900" width="1600">
+            <image>https://fasterland.net/images/appstream/converseen-appdata-3.png</image>
+            <caption>The program during the image processing</caption>
+        </screenshot>
+        <screenshot height="900" width="1600">
+            <image>https://fasterland.net/images/appstream/converseen-appdata-4.png</image>
+            <caption>The PDF import dialog</caption>
+        </screenshot>
     </screenshots>
+    <categories>
+        <category>Graphics</category>
+        <category>ImageProcessing</category>
+        <category>Photography</category>
+        <category>Qt</category>
+    </categories>
     <keywords>
         <keyword>graphic</keyword>
         <keyword>image</keyword>
@@ -52,13 +63,21 @@
         <keyword>qt</keyword>
     </keywords>
     <content_rating type="oars-1.1" />
-    <url type="homepage">http://converseen.fasterland.net/</url>
+    <url type="homepage">https://converseen.fasterland.net/</url>
     <update_contact>faster3ck@gmail.com</update_contact>
     <developer_name>Francesco Mondello</developer_name>
     <url type="bugtracker">https://github.com/Faster3ck/Converseen/issues</url>
-    <url type="donation">http://converseen.fasterland.net/thank/</url>
-    <url type="help">http://converseen.fasterland.net/help/</url>
+    <url type="donation">https://converseen.fasterland.net/thank/</url>
+    <url type="help">https://converseen.fasterland.net/help/</url>
     <releases>
+        <release version="0.9.9.6" date="2022-07-04">
+            <description>
+                <ol>
+                    <li>Improved quality and compression settings for JPEG and PNG formats.</li>
+                    <li>Various Bugfixes</li>
+                </ol>
+            </description>
+        </release>
         <release version="0.9.9.5" date="2022-03-01" />
         <release version="0.9.9.4" date="2022-01-18" />
         <release version="0.9.9.3" date="2021-12-12" />

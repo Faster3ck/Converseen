@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>311</width>
-    <height>312</height>
+    <height>381</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,36 +19,65 @@
      <property name="title">
       <string>Jpeg compression level</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_3">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
         <item>
          <widget class="QLabel" name="label">
           <property name="text">
-           <string>Quality 0 - 100:</string>
+           <string>Quality 1 - 100:</string>
           </property>
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QSlider" name="sliderJpegQ">
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="spinJpegQ">
-            <property name="maximum">
-             <number>100</number>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QLabel" name="labelJpegHelp">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the JPEG image formats, quality is 1 (lowest image quality and highest compression) to 100 (best quality but least effective compression).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QSlider" name="sliderJpegQ">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>75</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinJpegQ">
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -57,39 +86,83 @@
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox_2">
-     <property name="title">
-      <string>Png compression level</string>
+     <property name="toolTip">
+      <string/>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
+     <property name="toolTipDuration">
+      <number>-1</number>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="title">
+      <string>Png/Mng compression level</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string>Quality 0 - 100:</string>
+           <string>Quality 0 - 9:</string>
           </property>
          </widget>
         </item>
         <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_2">
-          <item>
-           <widget class="QSlider" name="sliderPngQ">
-            <property name="maximum">
-             <number>100</number>
-            </property>
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QSpinBox" name="spinPngQ">
-            <property name="maximum">
-             <number>100</number>
-            </property>
-           </widget>
-          </item>
-         </layout>
+         <widget class="QLabel" name="labelPngHelp">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a 'lossless' compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QSlider" name="sliderPngQ">
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="toolTipDuration">
+           <number>-1</number>
+          </property>
+          <property name="maximum">
+           <number>9</number>
+          </property>
+          <property name="value">
+           <number>7</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinPngQ">
+          <property name="toolTip">
+           <string/>
+          </property>
+          <property name="maximum">
+           <number>100</number>
+          </property>
+         </widget>
         </item>
        </layout>
       </item>
@@ -143,6 +216,9 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushOk">
+       <property name="toolTip">
+        <string/>
+       </property>
        <property name="text">
         <string>Ok</string>
        </property>

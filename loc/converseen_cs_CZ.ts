@@ -331,14 +331,6 @@ p, li { white-space: pre-wrap; }
         <translation>Úroveň stlačení JPEG</translation>
     </message>
     <message>
-        <source>Quality 0 - 100:</source>
-        <translation>Kvalita 0 - 100:</translation>
-    </message>
-    <message>
-        <source>Png compression level</source>
-        <translation>Úroveň stlačení PNG</translation>
-    </message>
-    <message>
         <source>Ok</source>
         <translation>OK</translation>
     </message>
@@ -353,6 +345,30 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Filter:</source>
         <translation>Filtr:</translation>
+    </message>
+    <message>
+        <source>Quality 1 - 100:</source>
+        <translation type="unfinished">Kvalita 0 - 100: {1 ?} {100:?}</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the JPEG image formats, quality is 1 (lowest image quality and highest compression) to 100 (best quality but least effective compression).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Png/Mng compression level</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quality 0 - 9:</source>
+        <translation type="unfinished">Kvalita 0 - 100: {0 ?} {9:?}</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a &apos;lossless&apos; compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

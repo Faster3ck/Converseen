@@ -82,7 +82,7 @@ bool IniSettings::isOverwriteMode()
 
 int IniSettings::jpgQuality()
 {
-    int jpgQuality = 85;
+    int jpgQuality = 75;
 
     if (settings->contains("Quality/Jpeg quality"))
         jpgQuality = settings->value("Quality/Jpeg quality").toInt();
@@ -92,7 +92,7 @@ int IniSettings::jpgQuality()
 
 int IniSettings::pngQuality()
 {
-    int pngQuality = 85;
+    int pngQuality = 7;
 
     if (settings->contains("Quality/Png quality"))
         pngQuality = settings->value("Quality/Png quality").toInt();

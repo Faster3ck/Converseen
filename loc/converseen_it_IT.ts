@@ -333,14 +333,6 @@ p, li { white-space: pre-wrap; }
         <translation>Livello di compressione Jpeg</translation>
     </message>
     <message>
-        <source>Quality 0 - 100:</source>
-        <translation>Qualità 0 - 100:</translation>
-    </message>
-    <message>
-        <source>Png compression level</source>
-        <translation>Livello di compressione Png</translation>
-    </message>
-    <message>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
@@ -355,6 +347,30 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Filter:</source>
         <translation>Filtro:</translation>
+    </message>
+    <message>
+        <source>Quality 1 - 100:</source>
+        <translation>Qualità 0 - 100:</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the JPEG image formats, quality is 1 (lowest image quality and highest compression) to 100 (best quality but least effective compression).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Per i formati di immagine JPEG, la qualità va da 1 (qualità dell&apos;immagine più bassa e compressione più alta) a 100 (qualità migliore ma meno efficace).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>Png/Mng compression level</source>
+        <translation>Livello di compressione Png/Mng</translation>
+    </message>
+    <message>
+        <source>Quality 0 - 9:</source>
+        <translation>Qualità 0 - 9:</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a &apos;lossless&apos; compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Imposta il livello di compressione zlib da 1 a 9 (1 è il più basso e 9 è il più alto).&lt;/p&gt;&lt;p&gt;Per il livello di compressione 0, viene utilizzata la strategia Huffman-only, che è la compressione più veloce ma non per forza la peggiore.&lt;/p&gt;&lt;p&gt;PNG utilizza un metodo di compressione &apos;lossless&apos;, quindi aumentare la compressione NON riduce la qualità dell&apos;immagine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
