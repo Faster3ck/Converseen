@@ -24,8 +24,11 @@
 #include <QLibraryInfo>
 #include <QLocale>
 #include <QDir>
+#include <QStorageInfo>
+#include <QCoreApplication>
+#include <QStandardPaths>
+
 #include "translator.h"
-#include "whereiam.h"
 #include "inisettings.h"
 
 #define INIFILENAME ".converseen.conf"
@@ -36,15 +39,7 @@ QString language;
 Translator::Translator()
 {
     IniSettings::init();
-
-    WhereIAm w;
-    dataDir = w.dataDir();
-
-#ifdef Q_OS_LINUX
-	m_loc = QString("%1/converseen/loc").arg(dataDir);
-#else
-	m_loc = QString("%1/loc").arg(dataDir);
-#endif
+    m_loc = findLangDir();
 }
 
 QTranslator *Translator::translation()
@@ -58,6 +53,7 @@ QTranslator *Translator::translation()
     /*transl->load("qt_" + QLocale::system().name(),
         QLibraryInfo::location(QLibraryInfo::TranslationsPath));*/
 
+    //qDebug() << "Locations " << QStandardPaths::standardLocations(QStandardPaths::AppLocalDataLocation);
 
     return(transl);
 }
@@ -65,6 +61,45 @@ QTranslator *Translator::translation()
 QString Translator::loadCurrentTranslationName()
 {
     return IniSettings::language();
+}
+
+QString Translator::findLangDir()
+{
+    QString binDir = QCoreApplication::applicationDirPath();
+    QString langDir = "";
+
+    QStorageInfo storage(qApp->applicationDirPath());
+    QString rootPath = storage.rootPath();
+
+#ifdef Q_OS_LINUX
+    QStringList langDirs;
+
+    langDirs.append(QString("%1/usr/share/converseen/loc").arg(rootPath));
+    langDirs.append(QString("%1/usr/local/share/converseen/loc").arg(rootPath));
+    langDirs.append(QString("%1/share/converseen/loc").arg(rootPath));
+    langDirs.append(QString("%1/local/share/converseen/loc").arg(rootPath));
+
+    foreach (langDir, langDirs) {
+        if (qmFilesFound(langDir))
+            return langDir;
+    }
+
+#else
+    langDir = QString("%1/loc").arg(binDir);
+#endif
+
+    return langDir;
+}
+
+bool Translator::qmFilesFound(const QString &path)
+{
+    QDir d(path);
+    QStringList entryList = d.entryList(QStringList() << "*.qm", QDir::Files);
+
+    if (entryList.count() > 0)
+        return true;
+    else
+        return false;
 }
 
 void Translator::saveSettings(QString language)

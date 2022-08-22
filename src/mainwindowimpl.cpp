@@ -132,6 +132,11 @@ void MainWindowImpl::importListFromArgv(QString fileName)
     loadFiles(list);
 }
 
+void MainWindowImpl::printSupportedFormats()
+{
+    Formats::printSupportedFormats();
+}
+
 void MainWindowImpl::createActions()
 {
     // "File" actions

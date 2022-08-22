@@ -52,6 +52,7 @@ public:
     MainWindowImpl( QWidget * parent = 0, Qt::WindowFlags f = 0 );
     ~MainWindowImpl();
     void importListFromArgv(QString fileName);
+    void printSupportedFormats();
 
 private:
     void createActions();

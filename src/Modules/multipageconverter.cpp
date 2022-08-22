@@ -22,6 +22,7 @@
 */
 
 #include "multipageconverter.h"
+#include <QDebug>
 
 MultipageConverter::MultipageConverter(QObject *parent) :
     QObject(parent)
@@ -60,17 +61,17 @@ void MultipageConverter::readFile(QString fileName)
             page_counter++;
         }
         catch (Error& my_error) {
-
+            qWarning() << "Warning: " << QString::fromStdString(my_error.what());
             break;
         }
         catch( Magick::WarningCoder &warning )
         {
-
+            qWarning() << "Warning: " << QString::fromStdString(warning.what());
             break;
         }
         catch( Magick::Warning &warning )
         {
-
+            qWarning() << "Warning: " << QString::fromStdString(warning.what());
             break;
         }
     }

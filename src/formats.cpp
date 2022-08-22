@@ -170,3 +170,68 @@ QStringList  Formats::sortNonCaseSensitive(QStringList list) {
 
     return list;
 }
+
+void Formats::printSupportedFormats()
+{
+    QTextStream out(stdout);
+
+    int n_readable = 0;
+    int n_writable = 0;
+
+    out << "+----------------------------------------------------------------------------------------------+\n";
+    out << "|                                         READABLE                                             |\n";
+    out << "+----------------------------------------------------------------------------------------------+\n";
+
+    list<CoderInfo> coderList;
+    try {
+        coderInfoList(&coderList,
+                      CoderInfo::TrueMatch,
+                      CoderInfo::AnyMatch,
+                      CoderInfo::AnyMatch);
+    }
+    catch (ErrorModule &e) {
+        cerr << e.what() << endl;
+    }
+
+    list<CoderInfo>::iterator entry = coderList.begin();
+    QString readableExts;
+
+    while(entry != coderList.end())
+    {
+        if (entry->isReadable()) {
+            QString name = QString::fromStdString(entry->name());
+            QString descr = QString::fromStdString(entry->description());
+
+            out << QString("|%1\t|%2\t\t|%3\n").arg(QString::number(n_readable + 1), name, descr);
+            n_readable++;
+        }
+
+        ++entry;
+    }
+
+    out << QString("|Total readable:\t%1\n\n").arg(QString::number(n_readable));
+
+
+    out << "+----------------------------------------------------------------------------------------------+\n";
+    out << "|                                         WRITABLE                                             |\n";
+    out << "+----------------------------------------------------------------------------------------------+\n";
+
+    entry = coderList.begin();
+
+    while(entry != coderList.end())
+    {
+        if (entry->isWritable()) {
+            QString name = QString::fromStdString(entry->name());
+            QString descr = QString::fromStdString(entry->description());
+
+            out << QString("|%1\t\t|%2\t\t|%3\n").arg(QString::number(n_writable + 1), name, descr);
+
+            n_writable++;
+        }
+        ++entry;
+    }
+
+    out << QString("|Total writable:\t%1\n\n").arg(QString::number(n_writable));
+}
+
+

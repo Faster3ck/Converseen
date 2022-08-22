@@ -56,6 +56,11 @@ int main(int argc, char ** argv)
         if (QString::fromStdString(argv[1]) == "--list") {
             win.importListFromArgv(QString::fromStdString(argv[2]));
         }
+
+        // Prints the readable/writable supported formats by IM
+        if (QString::fromStdString(argv[1]) == "--supported-formats") {
+            win.printSupportedFormats();
+        }
     }
 
     win.show();

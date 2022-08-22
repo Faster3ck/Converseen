@@ -62,7 +62,7 @@
         <keyword>picture</keyword>
         <keyword>qt</keyword>
     </keywords>
-    <content_rating type="oars-1.1" />
+    <content_rating type="oars-1.1">none</content_rating>
     <url type="homepage">https://converseen.fasterland.net/</url>
     <update_contact>faster3ck@gmail.com</update_contact>
     <developer_name>Francesco Mondello</developer_name>
@@ -70,14 +70,17 @@
     <url type="donation">https://converseen.fasterland.net/thank/</url>
     <url type="help">https://converseen.fasterland.net/help/</url>
     <releases>
-        <release version="0.9.9.6" date="2022-07-04">
+        <release version="0.9.9.7" date="2022-08-22">
             <description>
                 <ol>
-                    <li>Improved quality and compression settings for JPEG and PNG formats.</li>
+                    <li>Added hicolor icons on Linux</li>
+                    <li>The program is now adapted to be distributed as AppImage</li>
+                    <li>The program is now adapted to be distributed as Snap Package</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+        <release version="0.9.9.6" date="2022-07-04" />
         <release version="0.9.9.5" date="2022-03-01" />
         <release version="0.9.9.4" date="2022-01-18" />
         <release version="0.9.9.3" date="2021-12-12" />

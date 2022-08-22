@@ -39,6 +39,8 @@ public:
         QList<QPair<QString, QString> > loadTranslationFiles();
         QString currentLanguage();
         QString loadCurrentTranslationName();
+        QString findLangDir();
+        bool qmFilesFound(const QString &path);
 private:
         QSettings *settings;
 		QString m_loc;

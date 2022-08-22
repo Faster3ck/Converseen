@@ -20,7 +20,6 @@ CONFIG += qt \
   src/dialogquality.h \
   src/translator.h \
   src/dialogoptions.h \
-  src/whereiam.h \
   src/dialoginfo.h \
   src/pixtreewidget.h \
     src/formats.h \
@@ -43,7 +42,6 @@ CONFIG += qt \
   src/dialogquality.cpp \
   src/translator.cpp \
   src/dialogoptions.cpp \
-  src/whereiam.cpp \
   src/dialoginfo.cpp \
   src/pixtreewidget.cpp \
     src/formats.cpp \
@@ -65,20 +63,37 @@ CONFIG += qt \
       -Wall \
       -W \
       -pthread \
-      -DMAGICKCORE_HDRI_ENABLE=0 \
+      -DMAGICKCORE_HDRI_ENABLE=1 \
       -DMAGICKCORE_QUANTUM_DEPTH=16
  }
 
  win32 {
     INCLUDEPATH += "C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\include"
  } else {
-    INCLUDEPATH +=  /usr/include/ImageMagick-7
+    
+    isEmpty(IM_INSTALL_PREFIX) {
+        INCLUDEPATH +=  /usr/include/ImageMagick-7
+    }
+    else {
+	INCLUDEPATH +=  $$IM_INSTALL_PREFIX/include/ImageMagick-7
+    }
+    
+    message(ImageMagick Include path: $$INCLUDEPATH)
  }
 
  win32 {
     LIBS += -L"C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\lib" -lCORE_RL_Magick++_ -lCORE_RL_MagickCore_ -lCORE_RL_MagickWand_
  } else {
-    LIBS += -L/usr/lib  -lMagick++-7.Q16HDRI  -lMagickWand-7.Q16HDRI  -lMagickCore-7.Q16HDRI
+    isEmpty(IM_INSTALL_PREFIX) {
+        LIB_PREFIX +=  /usr/lib
+    }
+    else {
+        LIB_PREFIX +=  $$IM_INSTALL_PREFIX/lib
+    }
+    
+    message(ImageMagick Library path: $$LIB_PREFIX)
+
+    LIBS += -L$$LIB_PREFIX  -lMagick++-7.Q16HDRI  -lMagickWand-7.Q16HDRI  -lMagickCore-7.Q16HDRI
  }
 
  TRANSLATIONS +=  loc/converseen_it_IT.ts \
@@ -117,9 +132,21 @@ CONFIG += qt \
  loc/converseen_uk_UA.qm \
  loc/converseen_sv_SE.qm \
  loc/converseen_zh_CN.qm
-  
- icon.path = $${SHARE_DIR}/pixmaps
- icon.files = res/converseen.png
+ icon16.path = $${SHARE_DIR}/icons/hicolor/16x16/apps
+ icon16.files += res/icons/16x16/converseen.png
+ icon32.path = $${SHARE_DIR}/icons/hicolor/32x32/apps
+ icon32.files += res/icons/32x32/converseen.png
+ icon48.path = $${SHARE_DIR}/icons/hicolor/48x48/apps
+ icon48.files += res/icons/48x48/converseen.png
+ icon64.path = $${SHARE_DIR}/icons/hicolor/64x64/apps
+ icon64.files += res/icons/64x64/converseen.png
+ icon128.path = $${SHARE_DIR}/icons/hicolor/128x128/apps
+ icon128.files += res/icons/128x128/converseen.png
+ icon256.path = $${SHARE_DIR}/icons/hicolor/256x256/apps
+ icon256.files += res/icons/256x256/converseen.png
+ icon512.path = $${SHARE_DIR}/icons/hicolor/512x512/apps
+ icon512.files += res/icons/512x512/converseen.png
+
  desktopFile.path = $${SHARE_DIR}/applications
  desktopFile.files = res/converseen.desktop
  kdeservicemenu.path = $${SHARE_DIR}/kservices5/ServiceMenus
@@ -140,8 +167,15 @@ CONFIG += qt \
  PRE_TARGETDEPS += compiler_updateqm_make_all
 
  INSTALLS += target \
-             translations \
-	     icon \
-	     desktopFile \
-	     kdeservicemenu \
-	     appdata
+ translations \
+ icon16 \
+ icon22 \
+ icon32 \
+ icon48 \
+ icon64 \
+ icon128 \
+ icon256 \
+ icon512 \
+ desktopFile \
+ kdeservicemenu \
+ appdata

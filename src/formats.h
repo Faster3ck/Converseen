@@ -44,6 +44,7 @@ public:
     static QStringList writableFilters();
     static QStringList nativeReadableFormats();
     static bool isNativeReadable(QString fileName);
+    static void printSupportedFormats();
 
 private:
     static QString s_readableFiltersString;

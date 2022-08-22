@@ -223,7 +223,6 @@
     <ClCompile Include="src\thumbnailgeneratorthread.cpp" />
     <ClCompile Include="src\translator.cpp" />
     <ClCompile Include="src\updatechecker.cpp" />
-    <ClCompile Include="src\whereiam.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\cachingsystem.h" />
@@ -265,7 +264,6 @@
     </QtMoc>
     <QtMoc Include="src\updatechecker.h">
     </QtMoc>
-    <ClInclude Include="src\whereiam.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="build\moc_predefs.h.cbt">
