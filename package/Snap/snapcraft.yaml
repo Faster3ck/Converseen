@@ -1,0 +1,161 @@
+name: converseen
+version: '0.9.9.7'
+summary: Converseen - A Batch Image Converter, Resizer and Processor for your Pictures!
+description: |
+  Converseen is a free and cross-platform batch image processor that allows you to convert, resize, rotate  and flip an infinite number of images with a mouse click. Converseen is also able to transform an entire PDF file into a group of images with the characteristics you prefer: you can choose one of the 100+ formats, you can set the size, resolution and the filename.
+  Converseen, thanks to ImageMagick, supports more than 100 image formats including JPEG, GIF, PNG, TIFF, WEBP and many others.
+  
+  Project's Website: https://converseen.fasterland.net/
+  GitHub Page: https://github.com/Faster3ck/Converseen
+
+grade: stable
+confinement: strict
+base: core18
+icon: res/converseen.png
+license: GPL-3.0
+compression: lzo
+
+package-repositories:
+  - type: apt
+    ppa: strukturag/libde265
+      
+  - type: apt
+    ppa: strukturag/libheif
+    
+# Converseen Main Program
+parts:
+  converseen:
+    after:
+      - imagemagick7
+    plugin: cmake
+    build-snaps:
+      - kde-frameworks-5-core18-sdk
+      - kde-frameworks-5-core18
+    build-packages:
+      - libegl1-mesa-dev
+    stage-packages:
+      - libegl1
+    source: https://github.com/Faster3ck/Converseen.git
+    source-type: git
+    source-branch: main
+    configflags:
+      - "-DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
+      - "-DCMAKE_INSTALL_PREFIX=/usr"
+      - "-DCMAKE_BUILD_TYPE=Release"
+      - "-DENABLE_TESTING=OFF"
+      - "-DBUILD_TESTING=OFF"
+      - "-DKDE_SKIP_TEST_SETTINGS=ON"
+      
+# Compile ImageMagick 7 from Source
+  imagemagick7:
+    plugin: autotools
+    build-packages:
+      - libltdl-dev
+      - libfftw3-dev
+      - liblcms2-dev
+      - liblqr-1-0-dev
+      - libfreetype6-dev
+      - libfontconfig1-dev
+      - zlib1g-dev
+      - liblzma-dev
+      - libbz2-dev
+      - libdjvulibre-dev
+      - libexif-dev
+      - libjpeg-dev
+      - libopenexr-dev
+      - libperl-dev
+      - libpng-dev
+      - libtiff-dev
+      - libwmf-dev
+      - libpango1.0-dev
+      - librsvg2-bin 
+      - librsvg2-dev
+      - libxml2-dev
+      - fftw-dev
+      - libopenjp2-7-dev
+      - libraw-dev
+      - libwebp-dev
+      - libheif-dev
+    stage-packages:
+      - libltdl7
+      - libdjvulibre21
+      - libilmbase12
+      - liblqr-1-0
+      - libopenexr22
+      - libraw16
+      - libwmf0.2-7
+      - libheif1
+
+    source: https://imagemagick.org/archive/ImageMagick.tar.bz2
+    configflags: 
+      - "--enable-shared"
+      - "--disable-installed"
+      - "--enable-hdri"
+      - "--without-perl"
+      - "--disable-dependency-tracking"
+      - "--with-gslib=yes"
+      - "--with-openjp2"
+      - "--with-wmf"
+      - "--without-gvc"
+      - "--with-djvu"
+      - "--without-dps"
+      - "--without-fpx"
+      - "--with-heic=yes"
+      - "--with-jxl=yes"
+      - "--prefix=/usr"
+
+  cleanup:
+    after: 
+      - imagemagick7
+      - converseen
+    plugin: nil
+    build-snaps:  # List all content-snaps and base snaps you're using here
+      - core18
+      - kde-frameworks-5-core18-sdk
+      - kde-frameworks-5-core18
+    override-prime: |
+      set -eux
+
+      # Remove ImageMagick-7 unnecessary files:
+      rm -f $SNAPCRAFT_PRIME/usr/bin/animate
+      rm -f $SNAPCRAFT_PRIME/usr/bin/conjure
+      rm -f $SNAPCRAFT_PRIME/usr/bin/display
+      rm -f $SNAPCRAFT_PRIME/usr/bin/magick
+      rm -f $SNAPCRAFT_PRIME/usr/bin/magick-script
+      rm -f $SNAPCRAFT_PRIME/usr/bin/montage
+      rm -f $SNAPCRAFT_PRIME/usr/bin/compare
+      rm -f $SNAPCRAFT_PRIME/usr/bin/identify
+      rm -f $SNAPCRAFT_PRIME/usr/bin/Magick++-config
+      rm -f $SNAPCRAFT_PRIME/usr/bin/MagickWand-config
+      rm -f $SNAPCRAFT_PRIME/usr/bin/MagickWand
+      rm -f $SNAPCRAFT_PRIME/usr/bin/config
+      rm -f $SNAPCRAFT_PRIME/usr/bin/stream
+      rm -f $SNAPCRAFT_PRIME/usr/bin/composite
+      rm -f $SNAPCRAFT_PRIME/usr/bin/convert
+      rm -f $SNAPCRAFT_PRIME/usr/bin/import
+      rm -f $SNAPCRAFT_PRIME/usr/bin/MagickCore-config
+      rm -f $SNAPCRAFT_PRIME/usr/bin/mogrify
+      rm -rf $SNAPCRAFT_PRIME/usr/include
+      rm -f $SNAPCRAFT_PRIME/usr/lib/*.a
+      rm -rf $SNAPCRAFT_PRIME/usr/share/doc/ImageMagick-7/images
+      rm -rf $SNAPCRAFT_PRIME/usr/share/doc/ImageMagick-7/www
+      rm -rf $SNAPCRAFT_PRIME/usr/share/doc/ImageMagick-7/index.html
+
+apps:
+  converseen:
+    common-id: net.fasterland.converseen
+    command: usr/bin/converseen
+    desktop: usr/share/applications/net.fasterland.converseen.desktop
+    extensions:
+      - kde-neon
+    plugs:
+      - home
+      - opengl
+      - network
+      - network-bind
+      - pulseaudio
+      - desktop
+      - desktop-legacy
+      - wayland
+      - unity7
+

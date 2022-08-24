@@ -3,7 +3,7 @@
 set -x
 set -e
 
-export MAGICK_HOME=~/ImageMagick7-devel
+export MAGICK_HOME=$HOME/ImageMagick7-devel
 export PATH="$MAGICK_HOME/bin:$PATH"
 export LD_LIBRARY_PATH="$MAGICK_HOME/lib:$LD_LIBRARY_PATH"
 
@@ -34,7 +34,7 @@ cd "$BUILD_DIR"
 
 # configure build files with qmake
 # we need to explicitly set the install prefix, as CMake's default is /usr/local for some reason...
-qmake "$REPO_ROOT" IM_INSTALL_PREFIX=$HOME/ImageMagick7-devel
+qmake "$REPO_ROOT" IM_INSTALL_PREFIX=$MAGICK_HOME
 
 # build project and install files into AppDir
 make -j$(nproc)
