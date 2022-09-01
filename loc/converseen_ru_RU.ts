@@ -36,11 +36,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Status...</source>
-        <translation>Статус…</translation>
+        <translation>Статус...</translation>
     </message>
     <message>
         <source>Conversion Status</source>
-        <translation>Статус конвертирования</translation>
+        <translation>Статус преобразования</translation>
     </message>
     <message>
         <source>Status:</source>
@@ -95,7 +95,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>About Converseen...</source>
-        <translation>O Converseen…</translation>
+        <translation>O Converseen...</translation>
     </message>
     <message>
         <source>Informations</source>
@@ -148,7 +148,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Перевод на испанский: &lt;/strong&gt;Nelson Álvarez Sáez — &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
+        <translation>&lt;strong&gt;Перевод на испанский (Чили): &lt;/strong&gt;Nelson Álvarez Sáez — &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </translation>
     </message>
     <message>
@@ -159,8 +159,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на русский: &lt;/strong&gt;Stasik Savorovsky — &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;,
-&lt;/strong&gt;Kyrill Detinov — &lt;a href=&quot;lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Перевод на русский: &lt;/strong&gt;Stasik Savorovsky — &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov — &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn — &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -168,115 +167,121 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на польский: &lt;/strong&gt;Michał Olber from OSWorld.pl — &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Перевод на польский: &lt;/strong&gt;Michał Olber из OSWorld.pl — &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;http://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;https://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;http://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;https://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Автор: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) — &lt;/span&gt;&lt;a href=&quot;https://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Эл. почта: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Сайт проекта: &lt;/span&gt;&lt;a href=&quot;https://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на французский &lt;/span&gt;Adrien DAUGABEL — &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;, David GEIGER — &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на бразильский португальский: &lt;/span&gt;Paulo Guzmán — &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes — &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на японский:&lt;/span&gt; Xenolith0 — &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Danish translation: &lt;/span&gt;Martin Eilsoe - &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на датский: &lt;/span&gt;Martin Eilsoe — &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Ukrainian translation: &lt;/strong&gt;AleXKaN - &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Перевод на украиский: &lt;/strong&gt;AleXKaN — &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Если вы цените эту работу и хотели бы поддержать проект, вы можете сделать пожертвование через PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>ImageMagick Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия ImageMagick:</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Swedish translation: &lt;/span&gt;Åke Engelbrektson - &lt;a href=&quot;mailto:eson@svenskasprakfiler.se&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;eson@svenskasprakfiler.se&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на шведский: &lt;/span&gt;Åke Engelbrektson — &lt;a href=&quot;mailto:eson@svenskasprakfiler.se&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;eson@svenskasprakfiler.se&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Simplified Chinese translation: &lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Перевод на упрощенный китайский: &lt;/strong&gt;myd7349 — &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
     <name>DialogMultipageEditor</name>
     <message>
         <source>Check the pages or subimages you want to import</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверьте страницы или субизображения, которые вы хотите импортировать</translation>
     </message>
     <message>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Страница</translation>
     </message>
     <message>
         <source>Pixel size</source>
-        <translation type="unfinished"></translation>
+        <translation>Размер пикселя</translation>
     </message>
     <message>
         <source>Density</source>
-        <translation type="unfinished"></translation>
+        <translation>Плотность</translation>
     </message>
     <message>
         <source>Depth</source>
-        <translation type="unfinished"></translation>
+        <translation>Глубина</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">Отмена</translation>
+        <translation>Отмена</translation>
     </message>
     <message>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт</translation>
     </message>
     <message>
         <source>Check</source>
-        <translation type="unfinished"></translation>
+        <translation>Отметить</translation>
     </message>
     <message>
         <source>Check all</source>
-        <translation type="unfinished"></translation>
+        <translation>Отметить все</translation>
     </message>
     <message>
         <source>Uncheck</source>
-        <translation type="unfinished"></translation>
+        <translation>Снять отметку</translation>
     </message>
     <message>
         <source>Uncheck all</source>
-        <translation type="unfinished"></translation>
+        <translation>Снять отметку у всех</translation>
     </message>
     <message>
         <source>Import multipage document</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт многостраничного документа</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;How to enable the PDF conversion?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Как включить преобразование PDF?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>DialogOptions</name>
     <message>
         <source>Ok</source>
-        <translation>OK</translation>
+        <translation>Oк</translation>
     </message>
     <message>
         <source>Please, restart Converseen to apply current language!</source>
@@ -316,18 +321,18 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновления</translation>
     </message>
     <message>
         <source>Checks for updates automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Автоматическая проверка обновлений</translation>
     </message>
 </context>
 <context>
     <name>DialogQuality</name>
     <message>
         <source>Ok</source>
-        <translation>OK</translation>
+        <translation>Oк</translation>
     </message>
     <message>
         <source>Jpeg compression level</source>
@@ -351,11 +356,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Quality 1 - 100:</source>
-        <translation type="unfinished">Качество 0-100: {1 ?} {100:?}</translation>
+        <translation>Качество 0-100:</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the JPEG image formats, quality is 1 (lowest image quality and highest compression) to 100 (best quality but least effective compression).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Для форматов изображений JPEG качество составляет от 1 (самое низкое качество изображения и максимальное сжатие) до 100 (наилучшее качество, но наименее эффективное сжатие).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -363,11 +368,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Png/Mng compression level</source>
-        <translation type="unfinished"></translation>
+        <translation>Уровень сжатия PNG/Mng</translation>
     </message>
     <message>
         <source>Quality 0 - 9:</source>
-        <translation type="unfinished">Качество 0-100: {0 ?} {9:?}</translation>
+        <translation>Качество 0-9:</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a &apos;lossless&apos; compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -378,23 +383,23 @@ p, li { white-space: pre-wrap; }
     <name>DialogShowUpdateMsg</name>
     <message>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Диалоговое окно</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Метка текста</translation>
     </message>
     <message>
         <source>Don&apos;t show again</source>
-        <translation type="unfinished"></translation>
+        <translation>Не показывать снова</translation>
     </message>
     <message>
         <source>Update Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Обновить сейчас</translation>
     </message>
     <message>
         <source>Not Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Не сейчас</translation>
     </message>
 </context>
 <context>
@@ -412,7 +417,7 @@ p, li { white-space: pre-wrap; }
     <name>MainWindow</name>
     <message>
         <source>...</source>
-        <translation></translation>
+        <translation>...</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
@@ -456,7 +461,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Show image settings dialog...</source>
-        <translation>Показать диалог настройки изображений…</translation>
+        <translation>Показать диалог настройки изображений...</translation>
     </message>
     <message>
         <source>Width:</source>
@@ -508,7 +513,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Image&apos;s directory</source>
-        <translation>Папка изображений</translation>
+        <translation>Каталог изображений</translation>
     </message>
     <message>
         <source>Replace transparent background</source>
@@ -580,7 +585,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 пиксель&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 пикселей&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Mantain aspect ratio</source>
@@ -724,7 +729,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Donate via Paypal</source>
-        <translation>&amp;Пожертвовать через Paypal</translation>
+        <translation>Пожертвовать через Paypal</translation>
     </message>
     <message>
         <source>Dimensions</source>
@@ -768,19 +773,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Import PDF file</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт PDF-файла</translation>
     </message>
     <message>
         <source>Import windows icon (*.ico)</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт значка Windows (*.ico)</translation>
     </message>
     <message>
         <source>Import windows icon (*.ico *.icon)</source>
-        <translation type="unfinished"></translation>
+        <translation>Импорт значка Windows (*.ico *.icon)</translation>
     </message>
     <message>
         <source>Prefi&amp;x/Suffix</source>
-        <translation type="unfinished"></translation>
+        <translation>Префикс/суффикс</translation>
     </message>
     <message>
         <source>Progressi&amp;ve Number</source>
@@ -788,23 +793,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Donate via Paypal</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Пожертвовать через Paypal</translation>
     </message>
     <message>
         <source>&amp;Report bug...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сообщить об ошибке...</translation>
     </message>
     <message>
         <source>Check if a new version of Converseen is available</source>
-        <translation type="unfinished"></translation>
+        <translation>Проверьте, доступна ли новая версия Converseen</translation>
     </message>
     <message>
         <source>&amp;Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Проверить наличие обновлений</translation>
     </message>
     <message>
         <source>Actio&amp;ns Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>Панель &amp;действий</translation>
     </message>
     <message>
         <source>+ &amp;90°</source>
@@ -812,7 +817,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>- 9&amp;0°</source>
-        <translation type="unfinished">- 90° {9&amp;0°?}</translation>
+        <translation>- 9&amp;0°</translation>
     </message>
     <message>
         <source>&amp;180°</source>
@@ -859,7 +864,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Processing...</source>
-        <translation>Обрабатывается…</translation>
+        <translation>Обрабатывается...</translation>
     </message>
     <message>
         <source>Open Directory</source>
@@ -867,7 +872,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
-        <translation>Каталог назначения не создан! Создать каталог?</translation>
+        <translation>Каталог назначения не существует! Создать каталог?</translation>
     </message>
     <message>
         <source>The directory cannot be created!</source>
@@ -883,7 +888,7 @@ Click Retry to specify a new name.
 Click Ignore to cancel this operation.
 Click Abort to cancel all operations.</source>
         <translation>Вы должны указать имя.
-Нажмите Повтор чтобы указать новое имя.
+Нажмите Повтор, чтобы указать новое имя.
 Нажмите Игнорировать для отмены этой операции.
 Нажмите Прервать для отмены всех операций.</translation>
     </message>
@@ -905,23 +910,23 @@ Click Abort to cancel all operations.</source>
     </message>
     <message>
         <source>Open Icon file</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть файл значка</translation>
     </message>
     <message>
         <source>Microsoft icon (*.ico *.icon)</source>
-        <translation type="unfinished"></translation>
+        <translation>Формат значка Microsoft (*.ico *.icon)</translation>
     </message>
     <message>
         <source>Open Pdf file</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть PDF-файл</translation>
     </message>
     <message>
         <source>Portable Document Format (*.pdf)</source>
-        <translation type="unfinished"></translation>
+        <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
         <source>Analyzing the file. It may take a while, please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Анализ файла. Это может занять некоторое время, пожалуйста, подождите...</translation>
     </message>
 </context>
 <context>
@@ -962,12 +967,13 @@ Click Abort to cancel all operations.</source>
     <name>UpdateChecker</name>
     <message>
         <source>New version is available!</source>
-        <translation type="unfinished"></translation>
+        <translation>Доступна новая версия!</translation>
     </message>
     <message>
         <source>A new version of %1 is available!
 Would you download it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Доступна новая версия %1!
+Хотите скачать ее?</translation>
     </message>
 </context>
 <context>
