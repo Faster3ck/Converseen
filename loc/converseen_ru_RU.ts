@@ -36,15 +36,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Status...</source>
-        <translation>Статус...</translation>
+        <translation>Состояние...</translation>
     </message>
     <message>
         <source>Conversion Status</source>
-        <translation>Статус преобразования</translation>
+        <translation>Состояние конвертации</translation>
     </message>
     <message>
         <source>Status:</source>
-        <translation>Статус:</translation>
+        <translation>Состояние:</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -131,7 +131,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>The batch image converter and resizer.</source>
-        <translation>Групповой конвертер графических файлов.</translation>
+        <translation>Пакетный конвертер графических файлов.</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Hungarian translation: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</source>
@@ -274,7 +274,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;How to enable the PDF conversion?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Как включить преобразование PDF?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Как включить конвертацию PDF?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -313,11 +313,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>As&amp;k first</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Спросите</translation>
     </message>
     <message>
         <source>O&amp;verwrite all existing images</source>
-        <translation type="unfinished"></translation>
+        <translation>Пере&amp;записать все существующие изображения</translation>
     </message>
     <message>
         <source>Updates</source>
@@ -364,11 +364,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Png/Mng compression level</source>
-        <translation>Уровень сжатия PNG/Mng</translation>
+        <translation>Уровень сжатия PNG/MNG</translation>
     </message>
     <message>
         <source>Quality 0 - 9:</source>
@@ -376,7 +376,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a &apos;lossless&apos; compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Устанавливает уровень сжатия zlib от 1 до 9 (1 — самый низкий, 9 — самый высокий).&lt;/p&gt;&lt;p&gt;Для уровня сжатия 0 используется только стратегия Хаффмана, являющаяся самым быстрым, но не обязательно худшим процессом сжатия.&lt;/p&gt;&lt;p&gt;PNG использует метод сжатия &apos;без потерь&apos;, поэтому увеличение сжатия НЕ снижает качество изображения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -681,7 +681,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Start the conversion process</source>
-        <translation>Запустить процесс преобразования</translation>
+        <translation>Запустить процесс конвертации</translation>
     </message>
     <message>
         <source>F5</source>
@@ -729,7 +729,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Donate via Paypal</source>
-        <translation>Пожертвовать через Paypal</translation>
+        <translation>Пожертвовать через PayPal</translation>
     </message>
     <message>
         <source>Dimensions</source>
@@ -785,11 +785,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Prefi&amp;x/Suffix</source>
-        <translation>Префикс/суффикс</translation>
+        <translation>Пре&amp;фикс/суффикс</translation>
     </message>
     <message>
         <source>Progressi&amp;ve Number</source>
-        <translation type="unfinished"></translation>
+        <translation>По&amp;следовательное число</translation>
     </message>
     <message>
         <source>&amp;Donate via Paypal</source>
@@ -813,7 +813,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>+ &amp;90°</source>
-        <translation type="unfinished"></translation>
+        <translation>+ &amp;90°</translation>
     </message>
     <message>
         <source>- 9&amp;0°</source>
@@ -821,7 +821,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;180°</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;180°</translation>
     </message>
 </context>
 <context>
@@ -864,7 +864,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Processing...</source>
-        <translation>Обрабатывается...</translation>
+        <translation>Обработка...</translation>
     </message>
     <message>
         <source>Open Directory</source>
