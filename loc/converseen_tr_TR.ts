@@ -76,15 +76,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Open destination </source>
-        <translation type="unfinished"></translation>
+        <translation>Hedefi aç </translation>
     </message>
     <message>
         <source>Open all the destination folders</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm hedef klasörlerini aç</translation>
     </message>
     <message>
         <source>Converted</source>
-        <translation type="unfinished"></translation>
+        <translation>Dönüştürüldü</translation>
     </message>
 </context>
 <context>
@@ -123,49 +123,51 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen bir görüntü toplu dönüştürme aracı. 100&apos;den fazla farklı biçimlerde görüntüleri yeniden boyutlandırma ve dönüştürme.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen toplu görüntü dönüştürme aracıdır. 100&apos;den fazla farklı biçimlerde görüntüleri yeniden boyutlandırabilir ve dönüştürebilirsiniz.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>-</source>
-        <translation type="unfinished"></translation>
+        <translation>-</translation>
     </message>
     <message>
         <source>The batch image converter and resizer.</source>
-        <translation type="unfinished"></translation>
+        <translation>Toplu görüntü dönüştürücü ve yeniden boyutlandırıcı.</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Hungarian translation: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Macarca çeviri: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Czech translation: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Çekçe çeviri: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Almanca çeviri: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;İspanyolca (Şili) çeviri: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
+</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Türkçe çeviri: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
+</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Rusça çeviri: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Converseen&apos;ı Takip Et:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Lehçe çeviri: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -175,98 +177,105 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;http://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;http://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Yazar: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;http://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;E-posta: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Proje Web Sitesi: &lt;/span&gt;&lt;a href=&quot;http://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fransızca çeviri: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt; - David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brezilya Portekizcesi çeviri: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japonca çeviri:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Danish translation: &lt;/span&gt;Martin Eilsoe - &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Danca çeviri: &lt;/span&gt;Martin Eilsoe - &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Ukrainian translation: &lt;/strong&gt;AleXKaN - &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Ukraynaca çeviri: &lt;/strong&gt;AleXKaN - &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Bu çalışmayı takdir ediyorsanız ve projeyi desteklemek istiyorsanız, PayPal ile bağışta bulunabilirsiniz.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>ImageMagick Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>ImageMagick Sürümü:</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Swedish translation: &lt;/span&gt;Åke Engelbrektson - &lt;a href=&quot;mailto:eson@svenskasprakfiler.se&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;eson@svenskasprakfiler.se&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;İsveççe çeviri: &lt;/strong&gt;Åke Engelbrektson - &lt;a href=&quot;mailto:eson@svenskasprakfiler.se&quot;&gt;eson@svenskasprakfiler.se&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Simplified Chinese translation: &lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Basitleştirilmiş Çince çeviri: &lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</translation>
     </message>
 </context>
 <context>
     <name>DialogMultipageEditor</name>
     <message>
         <source>Check the pages or subimages you want to import</source>
-        <translation type="unfinished"></translation>
+        <translation>İçe aktarmak istediğiniz sayfaları veya alt görüntüleri işaretleyin</translation>
     </message>
     <message>
         <source>Page</source>
-        <translation type="unfinished"></translation>
+        <translation>Sayfa</translation>
     </message>
     <message>
         <source>Pixel size</source>
-        <translation type="unfinished"></translation>
+        <translation>Piksel boyutu</translation>
     </message>
     <message>
         <source>Density</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıklık</translation>
     </message>
     <message>
         <source>Depth</source>
-        <translation type="unfinished"></translation>
+        <translation>Derinlik</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished">İptal</translation>
+        <translation>İptal</translation>
     </message>
     <message>
         <source>Import</source>
-        <translation type="unfinished"></translation>
+        <translation>İçe aktar</translation>
     </message>
     <message>
         <source>Check</source>
-        <translation type="unfinished">Kontrol Et</translation>
+        <translatorcomment>Arayüzde işaretlemek için kullanılıyor</translatorcomment>
+        <translation>İşaretle</translation>
     </message>
     <message>
         <source>Check all</source>
-        <translation type="unfinished"></translation>
+        <translation>Tümünü işaretle</translation>
     </message>
     <message>
         <source>Uncheck</source>
-        <translation type="unfinished"></translation>
+        <translation>İşareti kaldır</translation>
     </message>
     <message>
         <source>Uncheck all</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm işaretleri kaldır</translation>
     </message>
     <message>
         <source>Import multipage document</source>
-        <translation type="unfinished"></translation>
+        <translation>Çok sayfalı belgeyi içe aktar</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;How to enable the PDF conversion?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;PDF dönüştürme nasıl etkinleştirilir?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -305,19 +314,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>As&amp;k first</source>
-        <translation type="unfinished"></translation>
+        <translation>Önce &amp;sor</translation>
     </message>
     <message>
         <source>O&amp;verwrite all existing images</source>
-        <translation type="unfinished"></translation>
+        <translation>Mevcut tüm görüntülerin &amp;üzerine yaz</translation>
     </message>
     <message>
         <source>Updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Güncellemeler</translation>
     </message>
     <message>
         <source>Checks for updates automatically</source>
-        <translation type="unfinished"></translation>
+        <translation>Güncellemeleri otomatik denetle</translation>
     </message>
 </context>
 <context>
@@ -328,7 +337,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Jpeg compression level</source>
-        <translation>Jpeg sıkıştırma seviyesi</translation>
+        <translation>Jpeg sıkıştırma düzeyi</translation>
     </message>
     <message>
         <source>Cancel</source>
@@ -340,69 +349,69 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Interpolation</source>
-        <translation type="unfinished"></translation>
+        <translation>Ara değerleme</translation>
     </message>
     <message>
         <source>Filter:</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtre:</translation>
     </message>
     <message>
         <source>Quality 1 - 100:</source>
-        <translation type="unfinished">Kalite 0 - 100: {1 ?} {100:?}</translation>
+        <translation>Kalite 1 - 100:</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the JPEG image formats, quality is 1 (lowest image quality and highest compression) to 100 (best quality but least effective compression).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;JPEG görüntü biçimleri için, kalite 1 (en düşük görüntü kalitesi ve en yüksek sıkıştırma) ile 100 (en iyi kalite ancak en etkisiz sıkıştırma) arasındadır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Png/Mng compression level</source>
-        <translation type="unfinished"></translation>
+        <translation>Png/Mng sıkıştırma düzeyi</translation>
     </message>
     <message>
         <source>Quality 0 - 9:</source>
-        <translation type="unfinished">Kalite 0 - 100: {0 ?} {9:?}</translation>
+        <translation>Kalite 0 - 9:</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a &apos;lossless&apos; compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Zlib sıkıştırma düzeyini 1 ile 9 arası ayarlar (1 en düşük ve 9 en yüksek).&lt;/p&gt;&lt;p&gt;Sıkıştırma düzeyi 0 için yalnızca Huffman stratejisi kullanılır, bu en hızlı yöntemdir, ancak mutlaka en kötü sıkıştırma değildir.&lt;/p&gt;&lt;p&gt;PNG, &apos;kayıpsız&apos; bir sıkıştırma yöntemi kullanır, bu nedenle sıkıştırmayı artırmak görüntü kalitenizi düşürmez.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
     <name>DialogShowUpdateMsg</name>
     <message>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>İletişim kutusu</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>TextLabel</translation>
     </message>
     <message>
         <source>Don&apos;t show again</source>
-        <translation type="unfinished"></translation>
+        <translation>Tekrar gösterme</translation>
     </message>
     <message>
         <source>Update Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Şimdi Güncelle</translation>
     </message>
     <message>
         <source>Not Now</source>
-        <translation type="unfinished"></translation>
+        <translation>Şimdi Değil</translation>
     </message>
 </context>
 <context>
     <name>Formats</name>
     <message>
         <source>All Supported Filters (%1)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm Desteklenen Biçimler (%1)</translation>
     </message>
     <message>
         <source>Don&apos;t change the format</source>
-        <translation type="unfinished"></translation>
+        <translation>Biçimi değiştirme</translation>
     </message>
 </context>
 <context>
@@ -433,7 +442,7 @@ p, li { white-space: pre-wrap; }
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Türü:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Tür:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Show preview</source>
@@ -465,7 +474,8 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>#_copy</source>
-        <translation>#_kopyala</translation>
+        <translatorcomment>Burada dosyaların sonuna eklenen bir bir ek, kopyala demek değil!</translatorcomment>
+        <translation>#_kopya</translation>
     </message>
     <message>
         <source>Open output directory</source>
@@ -473,7 +483,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Show image settings dialog...</source>
-        <translation>Görüntü ayarlar diyaloğunu göster</translation>
+        <translation>Görüntü ayarları iletişim kutusunu göster...</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -497,7 +507,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Overwrite all</source>
-        <translation>Tümü üzerine yaz</translation>
+        <translation>Tümünün üzerine yaz</translation>
     </message>
     <message>
         <source>&amp;Actions</source>
@@ -517,15 +527,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Mantain aspect ratio</source>
-        <translation>Oranlarını koru</translation>
+        <translation>En boy oranını koru</translation>
     </message>
     <message>
         <source>Rename:</source>
-        <translation>Yeniadı:</translation>
+        <translation>Yeniden adlandır:</translation>
     </message>
     <message>
         <source>Save in:</source>
-        <translation></translation>
+        <translation>Şuraya kaydet:</translation>
     </message>
     <message>
         <source>Output options</source>
@@ -573,7 +583,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Dimensions</source>
-        <translation type="unfinished">Boyutlar</translation>
+        <translation>Boyutlar</translation>
     </message>
     <message>
         <source>Converseen</source>
@@ -581,7 +591,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Convert to:</source>
-        <translation>Dönüştür:</translation>
+        <translation>Şuna dönüştür:</translation>
     </message>
     <message>
         <source>Height:</source>
@@ -593,231 +603,237 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Replace transparent background</source>
-        <translation type="unfinished"></translation>
+        <translation>Saydam arka planı değiştir</translation>
     </message>
     <message>
         <source>Choose color</source>
-        <translation type="unfinished"></translation>
+        <translation>Renk seç</translation>
     </message>
     <message>
         <source>Scale image</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntüyü ölçekle</translation>
     </message>
     <message>
         <source>toolBar</source>
-        <translation type="unfinished"></translation>
+        <translation>toolBar</translation>
     </message>
     <message>
         <source>&amp;Open images</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntüleri &amp;aç</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
-        <translation type="unfinished">Ctrl+O</translation>
+        <translation>Ctrl+O</translation>
     </message>
     <message>
         <source>&amp;Add images</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntüleri &amp;ekle</translation>
     </message>
     <message>
         <source>Ctrl+Alt+O</source>
-        <translation type="unfinished">Ctrl+Alt+O</translation>
+        <translation>Ctrl+Alt+O</translation>
     </message>
     <message>
         <source>&amp;Remove images</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntüleri &amp;kaldır</translation>
     </message>
     <message>
         <source>Remove selected pictures</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçilen görüntüleri kaldır</translation>
     </message>
     <message>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Del tuşu, sil olarak çevirmeyin!</translatorcomment>
+        <translation>Del</translation>
     </message>
     <message>
         <source>Remove &amp;all</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Tümünü kaldır</translation>
     </message>
     <message>
         <source>Remove all pictures</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Picture olmasına rağmen Görüntü diye çevirdim.</translatorcomment>
+        <translation>Tüm görüntüleri kaldır</translation>
     </message>
     <message>
         <source>Alt+Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Del</translation>
     </message>
     <message>
         <source>&amp;Check</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;İşaretle</translation>
     </message>
     <message>
         <source>Check selected items</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçilen ögeleri işaretle</translation>
     </message>
     <message>
         <source>Ctrl+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+H</translation>
     </message>
     <message>
         <source>Check a&amp;ll</source>
-        <translation type="unfinished"></translation>
+        <translation>Tü&amp;münü işaretle</translation>
     </message>
     <message>
         <source>Check all items</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm ögeleri işaretle</translation>
     </message>
     <message>
         <source>Ctrl+Alt+H</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+H</translation>
     </message>
     <message>
         <source>&amp;Convert</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Dönüştür</translation>
     </message>
     <message>
         <source>Start the conversion process</source>
-        <translation type="unfinished"></translation>
+        <translation>Dönüştürme işlemini başlat</translation>
     </message>
     <message>
         <source>F5</source>
-        <translation type="unfinished">F5</translation>
+        <translation>F5</translation>
     </message>
     <message>
         <source>&amp;Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ayarlar</translation>
     </message>
     <message>
         <source>Open the settings dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayarlar iletişim kutusunu aç</translation>
     </message>
     <message>
         <source>&amp;Exit</source>
-        <translation type="unfinished">&amp;Çıkış</translation>
+        <translation>&amp;Çık</translation>
     </message>
     <message>
         <source>Ctrl+X</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+X</translation>
     </message>
     <message>
         <source>Uncheck all &amp;items</source>
-        <translation type="unfinished"></translation>
+        <translation>Tüm ögelerin &amp;işaretini kaldır</translation>
     </message>
     <message>
         <source>Ctrl+Alt+J</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Alt+J</translation>
     </message>
     <message>
         <source>&amp;Uncheck Items</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Menü ögeleri için Tümce düzeni tercih edildi</translatorcomment>
+        <translation>Ögelerin işaretini &amp;kaldır</translation>
     </message>
     <message>
         <source>Uncheck selected items</source>
-        <translation type="unfinished"></translation>
+        <translation>Seçilen ögelerin işaretini kaldır</translation>
     </message>
     <message>
         <source>Ctrl+J</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+J</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hakkında</translation>
     </message>
     <message>
         <source>F1</source>
-        <translation type="unfinished">F1</translation>
+        <translation>F1</translation>
     </message>
     <message>
         <source>Donate via Paypal</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Menü ögeleri için Tümce düzeni tercih edildi</translatorcomment>
+        <translation>Paypal ile bağış yap</translation>
     </message>
     <message>
         <source>Rotate and flip</source>
-        <translation type="unfinished"></translation>
+        <translation>Döndür ve çevir</translation>
     </message>
     <message>
         <source>Rotate image:</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntüyü döndür:</translation>
     </message>
     <message>
         <source>No rotation</source>
-        <translation type="unfinished"></translation>
+        <translation>Döndürme yok</translation>
     </message>
     <message>
         <source>Flip image:</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntüyü çevir:</translation>
     </message>
     <message>
         <source>No flip</source>
-        <translation type="unfinished"></translation>
+        <translation>Çevirme yok</translation>
     </message>
     <message>
         <source>Horizontally</source>
-        <translation type="unfinished"></translation>
+        <translation>Yatay</translation>
     </message>
     <message>
         <source>Vertically</source>
-        <translation type="unfinished"></translation>
+        <translation>Dikey</translation>
     </message>
     <message>
         <source>Start with:</source>
-        <translation type="unfinished"></translation>
+        <translation>Şunla başlat:</translation>
     </message>
     <message>
         <source>Link aspect with selected image</source>
-        <translation type="unfinished"></translation>
+        <translation>En boy oranını seçili görüntüyle bağla</translation>
     </message>
     <message>
         <source>Import PDF file</source>
-        <translation type="unfinished"></translation>
+        <translation>PDF dosyası içe aktar</translation>
     </message>
     <message>
         <source>Import windows icon (*.ico)</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows simgesi içe aktar (*.ico)</translation>
     </message>
     <message>
         <source>Import windows icon (*.ico *.icon)</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows simgesi içe aktar (*.ico *.icon)</translation>
     </message>
     <message>
         <source>Prefi&amp;x/Suffix</source>
-        <translation type="unfinished"></translation>
+        <translation>Ön &amp;ek/Son ek</translation>
     </message>
     <message>
         <source>Progressi&amp;ve Number</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Dosyaları sıralı şekilde numaralandırırken kullanılıyor</translatorcomment>
+        <translation>&amp;İlerlemeli Numara</translation>
     </message>
     <message>
         <source>&amp;Donate via Paypal</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Menü ögeleri için Tümce düzeni tercih edildi</translatorcomment>
+        <translation>&amp;Paypal ile bağış yap</translation>
     </message>
     <message>
         <source>&amp;Report bug...</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Hata raporla...</translation>
     </message>
     <message>
         <source>Check if a new version of Converseen is available</source>
-        <translation type="unfinished"></translation>
+        <translation>Converseen&apos;in yeni bir sürümünün olup olmadığını denetle</translation>
     </message>
     <message>
         <source>&amp;Check for updates</source>
-        <translation type="unfinished"></translation>
+        <translation>Güncellemeleri &amp;denetle</translation>
     </message>
     <message>
         <source>Actio&amp;ns Panel</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Eylem Paneli</translation>
     </message>
     <message>
         <source>+ &amp;90°</source>
-        <translation type="unfinished"></translation>
+        <translation>+ &amp;90°</translation>
     </message>
     <message>
         <source>- 9&amp;0°</source>
-        <translation type="unfinished"></translation>
+        <translation>- 9&amp;0°</translation>
     </message>
     <message>
         <source>&amp;180°</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;180°</translation>
     </message>
 </context>
 <context>
@@ -828,33 +844,33 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Set an output directory!</source>
-        <translation>Çıkış dizinini ayarlayın!</translation>
+        <translation>Çıktı dizini ayarla!</translation>
     </message>
     <message>
         <source>Please, specify a name!</source>
-        <translation>Lütfen,bir ad belirtin!</translation>
+        <translation>Lütfen, bir ad belirtin!</translation>
     </message>
     <message>
         <source>Processing finished!</source>
-        <translation>İşlem bitti!</translation>
+        <translation>İşlem tamamlandı!</translation>
     </message>
     <message>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
 Click Abort to cancel all operations.</source>
-        <translation>Bir isim belirtmelisiniz.
-Yeni bir isim belirlemek için yeniden dene tıklayın.
-Bu işlemi iptal etmek için yoksay tıklayın.
-Tüm işlemleri iptal etmek için iptal tıklayın.</translation>
+        <translation>Bir ad belirtmelisiniz.
+Yeni bir ad belirlemek için Yeniden Dene&apos;ye tıklayın.
+Bu işlemi iptal etmek için Yoksay&apos;a tıklayın.
+Tüm işlemleri iptal etmek için Vazgeç&apos;e tıklayın.</translation>
     </message>
     <message>
         <source>Suggest a new name!</source>
-        <translation>Yeni bir ad öner</translation>
+        <translation>Yeni bir ad öner!</translation>
     </message>
     <message>
         <source>No images to convert!</source>
-        <translation>Dönüştürlülecek görüntü yok</translation>
+        <translation>Dönüştürülecek görüntü yok!</translation>
     </message>
     <message>
         <source>Warning!</source>
@@ -862,19 +878,19 @@ Tüm işlemleri iptal etmek için iptal tıklayın.</translation>
     </message>
     <message>
         <source>Aborted!</source>
-        <translation>İptal edildi!</translation>
+        <translation>Vazgeçildi!</translation>
     </message>
     <message>
         <source>New name:</source>
-        <translation>Yeni adı:</translation>
+        <translation>Yeni ad:</translation>
     </message>
     <message>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
-        <translation>Çıktı dizini mevcut değil!Oluşturacak mısın?</translation>
+        <translation>Çıktı dizini yok! Oluşturmak ister misin?</translation>
     </message>
     <message>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
-        <translation>Seçilen ilk isimle aynıdır. Özgün dosyanın üzerine yazmak istiyor musunuz?</translation>
+        <translation>Seçilen ad, ilk adla aynı. Özgün dosyanın üzerine yazmak istiyor musunuz?</translation>
     </message>
     <message>
         <source>Warning</source>
@@ -882,7 +898,7 @@ Tüm işlemleri iptal etmek için iptal tıklayın.</translation>
     </message>
     <message>
         <source>No image checked!</source>
-        <translation>Görüntü seçilmedi!</translation>
+        <translation>Görüntü işaretlenmedi!</translation>
     </message>
     <message>
         <source>The directory cannot be created!</source>
@@ -902,54 +918,55 @@ Tüm işlemleri iptal etmek için iptal tıklayın.</translation>
     </message>
     <message>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Önizleme</translation>
     </message>
     <message>
         <source>Open Icon file</source>
-        <translation type="unfinished"></translation>
+        <translation>Simge dosyası aç</translation>
     </message>
     <message>
         <source>Microsoft icon (*.ico *.icon)</source>
-        <translation type="unfinished"></translation>
+        <translation>Microsoft simge (*.ico *.icon)</translation>
     </message>
     <message>
         <source>Open Pdf file</source>
-        <translation type="unfinished"></translation>
+        <translation>PDF dosyası aç</translation>
     </message>
     <message>
         <source>Portable Document Format (*.pdf)</source>
-        <translation type="unfinished"></translation>
+        <translation>Taşınabilir Belge Biçimi (*.pdf)</translation>
     </message>
     <message>
         <source>Analyzing the file. It may take a while, please wait...</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya inceleniyor. Biraz zaman alabilir, lütfen bekleyin...</translation>
     </message>
 </context>
 <context>
     <name>PixTreeWidget</name>
     <message>
         <source>To convert</source>
-        <translation type="unfinished">Dönüştür</translation>
+        <translatorcomment>Liste görünümünde dönüştürme için işaretlerken kullanılıyor</translatorcomment>
+        <translation>Dönüştür</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished">Durum</translation>
+        <translation>Durum</translation>
     </message>
     <message>
         <source>File name</source>
-        <translation type="unfinished">Dosya adı</translation>
+        <translation>Dosya adı</translation>
     </message>
     <message>
         <source>Image type</source>
-        <translation type="unfinished">Görüntü türü</translation>
+        <translation>Görüntü türü</translation>
     </message>
     <message>
         <source>File size</source>
-        <translation type="unfinished">Dosya boyutu</translation>
+        <translation>Dosya boyutu</translation>
     </message>
     <message>
         <source>File path</source>
-        <translation type="unfinished">Dosya yolu</translation>
+        <translation>Dosya yolu</translation>
     </message>
 </context>
 <context>
@@ -963,19 +980,20 @@ Tüm işlemleri iptal etmek için iptal tıklayın.</translation>
     <name>UpdateChecker</name>
     <message>
         <source>New version is available!</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni sürüm var!</translation>
     </message>
     <message>
         <source>A new version of %1 is available!
 Would you download it?</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni %1 sürümü var!
+İndirilsin mi?</translation>
     </message>
 </context>
 <context>
     <name>myLabelPreviewer</name>
     <message>
         <source>Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Önizleme</translation>
     </message>
 </context>
 </TS>
