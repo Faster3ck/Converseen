@@ -229,23 +229,29 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;https://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;https://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Yazar: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;https://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;E-posta: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Proje Web Sitesi: &lt;/span&gt;&lt;a href=&quot;https://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL - &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fransızca çeviri: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt; - David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;İspanyolca (Şili) çeviri: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Türkçe çeviri: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;strong&gt;Rusça çeviri: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</translation>
     </message>
 </context>
 <context>

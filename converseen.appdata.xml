@@ -70,16 +70,15 @@
     <url type="donation">https://converseen.fasterland.net/thank/</url>
     <url type="help">https://converseen.fasterland.net/help/</url>
     <releases>
-        <release version="0.9.9.7" date="2022-08-22">
+        <release version="0.9.9.8" date="2022-09-14">
             <description>
                 <ol>
-                    <li>Added hicolor icons on Linux</li>
-                    <li>The program is now adapted to be distributed as AppImage</li>
-                    <li>The program is now adapted to be distributed as Snap Package</li>
+                    <li>Updated Russian, Turkish and Italian translations</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+        <release version="0.9.9.7" date="2022-08-22" />
         <release version="0.9.9.6" date="2022-07-04" />
         <release version="0.9.9.5" date="2022-03-01" />
         <release version="0.9.9.4" date="2022-01-18" />
