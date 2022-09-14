@@ -1,5 +1,5 @@
 name: converseen
-version: '0.9.9.7'
+version: '0.9.9.8'
 summary: Converseen - A Batch Image Converter, Resizer and Processor for your Pictures!
 description: |
   Converseen is a free and cross-platform batch image processor that allows you to convert, resize, rotate  and flip an infinite number of images with a mouse click. Converseen is also able to transform an entire PDF file into a group of images with the characteristics you prefer: you can choose one of the 100+ formats, you can set the size, resolution and the filename.

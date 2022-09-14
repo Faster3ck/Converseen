@@ -148,18 +148,18 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Перевод на испанский (Чили): &lt;/strong&gt;Nelson Álvarez Sáez — &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
+        <translation type="vanished">&lt;strong&gt;Перевод на испанский (Чили): &lt;/strong&gt;Nelson Álvarez Sáez — &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </translation>
     </message>
     <message>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Перевод на турецкий: &lt;/strong&gt;Zeugma — &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
+        <translation type="vanished">&lt;strong&gt;Перевод на турецкий: &lt;/strong&gt;Zeugma — &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </translation>
     </message>
     <message>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на русский: &lt;/strong&gt;Stasik Savorovsky — &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov — &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn — &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</translation>
+        <translation type="vanished">&lt;strong&gt;Перевод на русский: &lt;/strong&gt;Stasik Savorovsky — &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov — &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn — &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -187,11 +187,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на французский &lt;/span&gt;Adrien DAUGABEL — &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;, David GEIGER — &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на французский &lt;/span&gt;Adrien DAUGABEL — &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;, David GEIGER — &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на бразильский португальский: &lt;/span&gt;Paulo Guzmán — &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes — &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на бразильский португальский: &lt;/span&gt;Paulo Guzmán — &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes — &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -220,6 +220,26 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&lt;strong&gt;Simplified Chinese translation: &lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Перевод на упрощенный китайский: &lt;/strong&gt;myd7349 — &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL - &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на французский &lt;/span&gt;Adrien DAUGABEL — &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;, David GEIGER — &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на бразильский португальский: &lt;/span&gt;Paulo Guzmán — &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; &lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes — &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;</source>
+        <translation>&lt;strong&gt;Перевод на испанский (Чили): &lt;/strong&gt;Nelson Álvarez Sáez — &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</source>
+        <translation>&lt;strong&gt;Перевод на турецкий: &lt;/strong&gt;Zeugma — &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</source>
+        <translation>&lt;strong&gt;Перевод на русский: &lt;/strong&gt;Stasik Savorovsky — &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov — &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn — &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</translation>
     </message>
 </context>
 <context>

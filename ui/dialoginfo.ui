@@ -130,10 +130,10 @@ p, li { white-space: pre-wrap; }
         <widget class="QWidget" name="scrollAreaWidgetContents">
          <property name="geometry">
           <rect>
-           <x>0</x>
-           <y>0</y>
-           <width>872</width>
-           <height>449</height>
+           <x>-198</x>
+           <y>-180</y>
+           <width>875</width>
+           <height>407</height>
           </rect>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -187,12 +187,18 @@ p, li { white-space: pre-wrap; }
             <property name="text">
              <string>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</string>
             </property>
+            <property name="openExternalLinks">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="label_4">
             <property name="text">
              <string>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</string>
+            </property>
+            <property name="openExternalLinks">
+             <bool>true</bool>
             </property>
            </widget>
           </item>

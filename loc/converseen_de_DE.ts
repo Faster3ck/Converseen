@@ -118,6 +118,17 @@ p, li { white-space: pre-wrap; }
         <translation>Informationen</translation>
     </message>
     <message>
+        <location filename="../ui/dialoginfo.ui" line="92"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;https://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;https://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/dialoginfo.ui" line="108"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -141,22 +152,6 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;strong&gt;Tschechische Übersetzung: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="92"/>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Author: &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Francesco Mondello (Faster) - &lt;/span&gt;&lt;a href=&quot;http://fasterland.net/&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Email: &lt;/span&gt;&lt;a href=&quot;faster3ck@gmail.com&quot;&gt;&lt;span style=&quot; font-size:10pt; text-decoration: underline; &quot;&gt;faster3ck@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Project Website: &lt;/span&gt;&lt;a href=&quot;http://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/dialoginfo.ui" line="157"/>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <location filename="../ui/dialoginfo.ui" line="164"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -167,46 +162,43 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;strong&gt;Deutsche Übersetzung: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="181"/>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Spanisch-Chilenische Übersetzung: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
+        <translation type="vanished">&lt;strong&gt;Spanisch-Chilenische Übersetzung: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
 </translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="189"/>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </source>
-        <translation>&lt;strong&gt;Türkische Übersetzung: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
+        <translation type="vanished">&lt;strong&gt;Türkische Übersetzung: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
 </translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="197"/>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Russische Übersetzung: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
+        <translation type="vanished">&lt;strong&gt;Russische Übersetzung: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="204"/>
+        <location filename="../ui/dialoginfo.ui" line="208"/>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Polnische Übersetzung: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="214"/>
+        <location filename="../ui/dialoginfo.ui" line="218"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="221"/>
+        <location filename="../ui/dialoginfo.ui" line="225"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Danish translation: &lt;/span&gt;Martin Eilsoe - &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="228"/>
+        <location filename="../ui/dialoginfo.ui" line="232"/>
         <source>&lt;strong&gt;Ukrainian translation: &lt;/strong&gt;AleXKaN - &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="242"/>
+        <location filename="../ui/dialoginfo.ui" line="246"/>
         <source>&lt;strong&gt;Simplified Chinese translation: &lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -217,17 +209,37 @@ p, li { white-space: pre-wrap; }
         <translation>-</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="235"/>
+        <location filename="../ui/dialoginfo.ui" line="157"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL - &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="181"/>
+        <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="188"/>
+        <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="198"/>
+        <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="239"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Swedish translation: &lt;/span&gt;Åke Engelbrektson - &lt;a href=&quot;mailto:eson@svenskasprakfiler.se&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;eson@svenskasprakfiler.se&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="258"/>
+        <location filename="../ui/dialoginfo.ui" line="262"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="318"/>
+        <location filename="../ui/dialoginfo.ui" line="322"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Folgen Sie Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -245,7 +257,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseeen ist ein Batch-Konverter. Damit kannst Du Bilder Skalieren und in mehr als 100 Formate konvertieren.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="398"/>
+        <location filename="../ui/dialoginfo.ui" line="402"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
@@ -1008,107 +1020,107 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="219"/>
+        <location filename="../src/mainwindowimpl.cpp" line="224"/>
         <source>Open Image</source>
         <translation>Bild Öffne</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="316"/>
-        <location filename="../src/mainwindowimpl.cpp" line="322"/>
-        <location filename="../src/mainwindowimpl.cpp" line="331"/>
-        <location filename="../src/mainwindowimpl.cpp" line="335"/>
-        <location filename="../src/mainwindowimpl.cpp" line="339"/>
+        <location filename="../src/mainwindowimpl.cpp" line="321"/>
+        <location filename="../src/mainwindowimpl.cpp" line="327"/>
+        <location filename="../src/mainwindowimpl.cpp" line="336"/>
+        <location filename="../src/mainwindowimpl.cpp" line="340"/>
+        <location filename="../src/mainwindowimpl.cpp" line="344"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="336"/>
+        <location filename="../src/mainwindowimpl.cpp" line="341"/>
         <source>No image checked!</source>
         <translation>Kein Bild ausgewählt!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="340"/>
+        <location filename="../src/mainwindowimpl.cpp" line="345"/>
         <source>No images to convert!</source>
         <translation>Keine Bilder zum konvertieren!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="317"/>
+        <location filename="../src/mainwindowimpl.cpp" line="322"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>Das Ausgabe-Verzeichnis existiert nicht! Willst du es erstellen?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="231"/>
+        <location filename="../src/mainwindowimpl.cpp" line="236"/>
         <source>Open Icon file</source>
         <translation>Öffne Icon-Datei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="231"/>
+        <location filename="../src/mainwindowimpl.cpp" line="236"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Microsoft Icon (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="242"/>
+        <location filename="../src/mainwindowimpl.cpp" line="247"/>
         <source>Open Pdf file</source>
         <translation>Öffne PDF-Datei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="242"/>
+        <location filename="../src/mainwindowimpl.cpp" line="247"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="252"/>
+        <location filename="../src/mainwindowimpl.cpp" line="257"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Analysieren der Datei. Es kann eine Weile dauern, bitte warten...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="323"/>
+        <location filename="../src/mainwindowimpl.cpp" line="328"/>
         <source>The directory cannot be created!</source>
         <translation>Das Verzeichnis konnte nciht erstellt werden!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="332"/>
+        <location filename="../src/mainwindowimpl.cpp" line="337"/>
         <source>Set an output directory!</source>
         <translation>Ausgabe-Verzeichnis angeben!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="349"/>
+        <location filename="../src/mainwindowimpl.cpp" line="354"/>
         <source>Processing...</source>
         <translation>Berechne...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="519"/>
+        <location filename="../src/mainwindowimpl.cpp" line="524"/>
         <source>Processing finished!</source>
         <translation>Berechnung beendet!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="573"/>
+        <location filename="../src/mainwindowimpl.cpp" line="578"/>
         <source>Open Directory</source>
         <translation>Verzeichnis öffnen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="811"/>
-        <location filename="../src/mainwindowimpl.cpp" line="869"/>
+        <location filename="../src/mainwindowimpl.cpp" line="816"/>
+        <location filename="../src/mainwindowimpl.cpp" line="874"/>
         <source>Preview</source>
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="942"/>
+        <location filename="../src/mainwindowimpl.cpp" line="947"/>
         <source>Suggest a new name!</source>
         <translation>Schlage einen neuen Namen vor!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="943"/>
+        <location filename="../src/mainwindowimpl.cpp" line="948"/>
         <source>New name:</source>
         <translation>Neuer Name:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="948"/>
+        <location filename="../src/mainwindowimpl.cpp" line="953"/>
         <source>Please, specify a name!</source>
         <translation>Bitte gib einen Namen an!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="949"/>
+        <location filename="../src/mainwindowimpl.cpp" line="954"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1119,23 +1131,23 @@ Klicke &quot;Ignorieren&quot;, um diese Operation abzubrechen.
 Klicke &quot;Abbrechen&quot;, um alle Operationen abzubrechen.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="964"/>
         <location filename="../src/mainwindowimpl.cpp" line="969"/>
+        <location filename="../src/mainwindowimpl.cpp" line="974"/>
         <source>Warning!</source>
         <translation>Warnung!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="965"/>
+        <location filename="../src/mainwindowimpl.cpp" line="970"/>
         <source>The filename should not be empty!</source>
         <translation>Der Dateiname muss angegeben werden!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="970"/>
+        <location filename="../src/mainwindowimpl.cpp" line="975"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Der ausgewählte Name ist identisch mit dem vorherigen. Willst du die Originaldatei überschreiben?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="986"/>
+        <location filename="../src/mainwindowimpl.cpp" line="991"/>
         <source>Aborted!</source>
         <translation>Abgebrochen!</translation>
     </message>
@@ -1176,8 +1188,8 @@ Klicke &quot;Abbrechen&quot;, um alle Operationen abzubrechen.</translation>
 <context>
     <name>Translator</name>
     <message>
-        <location filename="../src/translator.cpp" line="83"/>
-        <location filename="../src/translator.cpp" line="96"/>
+        <location filename="../src/translator.cpp" line="118"/>
+        <location filename="../src/translator.cpp" line="131"/>
         <source>English</source>
         <translation>Deutsch</translation>
     </message>
