@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2022
+* (C) Francesco Mondello 2009 - 2023
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -438,6 +438,8 @@ void MainWindowImpl::convert()
 
         QFileInfo fi(inputFilename);
 
+        QList<MagickDefine> magickDefines;
+
         if (comboWFormats->currentIndex() != 0) {
             out_format = comboWFormats->currentText().split(" - ").at(0);
         }
@@ -460,17 +462,28 @@ void MainWindowImpl::convert()
 
         // Compression level 1-100
         if ((out_format == "jpg") || (out_format == "jpeg") || (out_format == "mpeg") || (out_format == "mpg")) {
-            quality = jpgQuality;
+            quality = m_jpgQuality;
         }
 
         // Compression level 0-9. For compression level 0 (quality value less than 10), the Huffman-only strategy is used
         if ((out_format == "png") || (out_format == "mng")) {
-            quality = pngQuality * 10;
+            quality = m_pngQuality * 10;
+        }
+
+        if ((out_format == "webp")) {
+            quality = m_webPQuality;
+
+            // magick, key, value
+            magickDefines << MagickDefine("webp", "lossless", (m_isWebPLosslessCompression) ? "true" : "false");
+            magickDefines << MagickDefine("webp", "method", QString::number(m_webPCompression));
+            magickDefines << MagickDefine("webp", "preprocessing", (m_iskWebPDithering) ? "1" : "0");
         }
 
         convertThread->setInputPicture(inputFilename);
         convertThread->setFormat(out_format);
         convertThread->setQuality(quality);
+        convertThread->setMagickDefines(magickDefines);
+        convertThread->setRemoveMetadata(m_removeMetadata);
         convertThread->setOutputDir(destinationPath());
 
         if (checkRename->isChecked()) {
@@ -486,10 +499,10 @@ void MainWindowImpl::convert()
         }
         else {
             // No special renaming settings for the output file. Set it with tho original name + new extension
-
             convertThread->setOutputPictureName(outFileName);
-            convertThread->setOverwrite(checkOverwrite->isChecked());
         }
+
+        convertThread->setOverwrite(checkOverwrite->isChecked());
 
         convertThread->start();
     }
@@ -622,24 +635,55 @@ void MainWindowImpl::setQuality()
     loadQuality();
 
     DialogQuality *dlg = new DialogQuality();
-    dlg->setInitValues(jpgQuality, pngQuality, m_resamplingFilter);
+    dlg->setInitValues(m_jpgQuality, m_pngQuality, m_resamplingFilter);
+
+    dlg->setIsWebPLosslessCompression(m_isWebPLosslessCompression);
+    dlg->setWebPCompression(m_webPCompression);
+    dlg->setWebPQuality(m_webPQuality);
+    dlg->setIskWebPDithering(m_iskWebPDithering);
+
+    dlg->setIsRemoveMetadata(m_removeMetadata);
+
     if (dlg->exec()) {
-        jpgQuality = dlg->getJpegQuality();
-        pngQuality = dlg->getPngQuality();
+        m_jpgQuality = dlg->getJpegQuality();
+        m_pngQuality = dlg->getPngQuality();
+
+        m_isWebPLosslessCompression = dlg->isWebPLosslessCompression();
+        m_webPCompression = dlg->getWebPCompression();
+        m_webPQuality = dlg->getWebPQuality();
+        m_iskWebPDithering = dlg->iskWebPDithering();
 
         m_resamplingFilter = dlg->getResamplingFilter();
 
-        IniSettings::setJpgQuality(jpgQuality);
-        IniSettings::setPngQuality(pngQuality);
+        m_removeMetadata = dlg->isRemoveMetadata();
+
+        IniSettings::setJpgQuality(m_jpgQuality);
+        IniSettings::setPngQuality(m_pngQuality);
         IniSettings::setLatestInterpFiltIdx((int)m_resamplingFilter);
+
+        IniSettings::setIsWebPLosslessCompression(m_isWebPLosslessCompression);
+        IniSettings::setWebPCompression(m_webPCompression);
+        IniSettings::setWebPQuality(m_webPQuality);
+        IniSettings::setIskWebPDithering(m_iskWebPDithering);
+
+        IniSettings::setIsRemoveMetadata(m_removeMetadata);
     }
+
+    delete dlg;
 }
 
 void MainWindowImpl::loadQuality()
 {
-    jpgQuality = IniSettings::jpgQuality();
-    pngQuality = IniSettings::pngQuality();
+    m_jpgQuality = IniSettings::jpgQuality();
+    m_pngQuality = IniSettings::pngQuality();
     m_resamplingFilter = (IMFilterType)IniSettings::latestInterpFiltIdx();
+
+    m_isWebPLosslessCompression = IniSettings::isWebPLosslessCompression();
+    m_webPCompression = IniSettings::webPCompression();
+    m_webPQuality = IniSettings::webPQuality();
+    m_iskWebPDithering = IniSettings::iskWebPDithering();
+
+    m_removeMetadata = IniSettings::isRemoveMetadata();
 }
 
 void MainWindowImpl::removeItems()

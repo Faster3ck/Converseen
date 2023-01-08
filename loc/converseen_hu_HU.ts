@@ -368,6 +368,46 @@ p, li { white-space: pre-wrap; }
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a &apos;lossless&apos; compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Jpeg</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Png/Mng</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>WebP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>WebP General Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Losseless Compression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compression Method:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quality:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable Dithering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove image&apos;s metadata</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogShowUpdateMsg</name>

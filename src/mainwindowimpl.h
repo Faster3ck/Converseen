@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2022
+* (C) Francesco Mondello 2009 - 2023
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -42,6 +42,7 @@
 #include "pixtreewidget.h"
 #include "mylabelpreviewer.h"
 #include "cachingsystem.h"
+#include "magickdefine.h"
 
 class QDropEvent;
 
@@ -87,8 +88,16 @@ private:
     DialogConversionStatus *dlgCStatus;
     int curr_index;             // Indice dell'immagine che si sta processando dalla lista iAList
 
-    int jpgQuality;             // Imposta la qualità jpg anche nel file ini
-    int pngQuality;             // Imposta la qualità png anche nel file ini
+    int m_jpgQuality;             // Imposta la qualità jpg anche nel file ini
+    int m_pngQuality;             // Imposta la qualità png anche nel file ini
+
+    bool m_isWebPLosslessCompression;
+    int m_webPCompression;
+    int m_webPQuality;
+    bool m_iskWebPDithering;
+
+    bool m_removeMetadata;
+
     int img_width,img_height;  /* vengono riempiti solo quando un'immagine è selezionata.
                                   Riempire con dati su ImageAttributes potrebbe essere lento e non conveniente! */
     int new_img_width,new_img_height; /* Vengono riempiti con numeri che rappresentano i pixel dato che non capisco come

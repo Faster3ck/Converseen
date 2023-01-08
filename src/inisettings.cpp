@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2022
+* (C) Francesco Mondello 2009 - 2023
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -98,6 +98,41 @@ int IniSettings::pngQuality()
         pngQuality = settings->value("Quality/Png quality").toInt();
 
     return pngQuality;
+}
+
+bool IniSettings::isWebPLosslessCompression()
+{
+    return settings->value("Quality/Webp lossless compression").toBool();
+}
+
+int IniSettings::webPCompression()
+{
+    int compression = 4;
+
+    if (settings->contains("Quality/Webp compression value"))
+        compression = settings->value("Quality/Webp compression value").toInt();
+
+    return compression;
+}
+
+int IniSettings::webPQuality()
+{
+    int quality = 50;
+
+    if (settings->contains("Quality/Webp quality level"))
+        quality = settings->value("Quality/Webp quality level").toInt();
+
+    return quality;
+}
+
+bool IniSettings::iskWebPDithering()
+{
+    return settings->value("Quality/Webp dithering").toBool();
+}
+
+bool IniSettings::isRemoveMetadata()
+{
+    return settings->value("Quality/Remove metadata").toBool();
 }
 
 QString IniSettings::latestOpenedDir()
@@ -308,4 +343,29 @@ void IniSettings::setLanguage(QString lang)
 void IniSettings::setAutoChechUpdates(bool enabled)
 {
     settings->setValue("Options/Check updates", enabled);
+}
+
+void IniSettings::setIsWebPLosslessCompression(const bool &value)
+{
+    settings->setValue("Quality/Webp lossless compression", value);
+}
+
+void IniSettings::setWebPCompression(const int &value)
+{
+    settings->setValue("Quality/Webp compression value", value);
+}
+
+void IniSettings::setWebPQuality(const int &value)
+{
+    settings->setValue("Quality/Webp quality level", value);
+}
+
+void IniSettings::setIskWebPDithering(const bool &value)
+{
+    settings->setValue("Quality/Webp dithering", value);
+}
+
+void IniSettings::setIsRemoveMetadata(const bool &value)
+{
+    settings->setValue("Quality/Remove metadata", value);
 }

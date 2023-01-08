@@ -40,6 +40,7 @@ SET(converseen_SRCS
     src/thumbnailgeneratorthread.cpp
     src/translator.cpp
     src/updatechecker.cpp
+    src/magickdefine.cpp
     src/Modules/multipageconverter.cpp
 )  
   
@@ -64,6 +65,7 @@ SET(converseen_MOC_HDRS
     src/thumbnailgeneratorthread.h
     src/translator.h
     src/updatechecker.h
+    src/magickdefine.cpp
     src/Modules/multipageconverter.h
 )
   

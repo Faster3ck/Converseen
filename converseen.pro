@@ -2,7 +2,8 @@ TEMPLATE = app
 QT = gui core network widgets
 CONFIG += qt \
  release \
- warn_on \
+ warn_on
+
  DESTDIR =  bin
  OBJECTS_DIR =  build
  MOC_DIR =  build
@@ -18,6 +19,7 @@ CONFIG += qt \
   src/converter.h \
   src/dialogconversionstatus.h \
   src/dialogquality.h \
+    src/magickdefine.h \
   src/translator.h \
   src/dialogoptions.h \
   src/dialoginfo.h \
@@ -36,6 +38,7 @@ CONFIG += qt \
     src/dialogmultipageeditor.h \
     src/dialogshowupdatemsg.h
  SOURCES =  src/mainwindowimpl.cpp \
+    src/magickdefine.cpp \
   src/main.cpp \
   src/converter.cpp \
   src/dialogconversionstatus.cpp \

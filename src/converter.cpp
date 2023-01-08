@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2022
+* (C) Francesco Mondello 2009 - 2023
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -25,6 +25,7 @@
 #include <QInputDialog>
 #include <QFileInfo>
 #include "converter.h"
+#include "qdebug.h"
 
 Converter::Converter(QObject *parent)
     : QThread(parent)
@@ -222,6 +223,16 @@ void Converter::setResamplingFilter(IMFilterType resamplingFilter)
     m_resamplingFilter = resamplingFilter;
 }
 
+void Converter::setMagickDefines(const QList<MagickDefine> &magickDefines)
+{
+    m_magickDefines = magickDefines;
+}
+
+void Converter::setRemoveMetadata(const bool &value)
+{
+    m_removeMetadata = value;
+}
+
 bool Converter::writeImage(Image &my_image, QString format, int quality, QString out)
 {
     my_image.magick(format.toUpper().toStdString());
@@ -245,7 +256,7 @@ bool Converter::writeImage(Image &my_image, QString format, int quality, QString
         bgImg.label("bgImg");
         bgImg.depth(my_image.depth());
 
-        bgImg.composite(my_image, Magick::Geometry(bgImg.columns(),bgImg.rows()), Magick::DissolveCompositeOp );
+        bgImg.composite(my_image, Magick::Geometry(bgImg.columns(),bgImg.rows()), Magick::DissolveCompositeOp);
 
         my_image = bgImg;
     }
@@ -254,6 +265,19 @@ bool Converter::writeImage(Image &my_image, QString format, int quality, QString
 
     if (quality != -1)
         my_image.quality(quality);
+
+    if (m_removeMetadata) {
+        my_image.strip();
+        my_image.autoOrient();
+    }
+
+    if (!m_magickDefines.empty()) {
+        for (int i = 0; i < m_magickDefines.count(); i++) {
+            MagickDefine mDef = m_magickDefines.at(i);
+
+            my_image.defineValue(mDef.magick().toStdString(), mDef.key().toStdString(), mDef.value().toStdString());
+        }
+    }
 
     try {
         my_image.write(out.toStdString());

@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2022
+* (C) Francesco Mondello 2009 - 2023
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -34,6 +34,7 @@
 #include <iostream>
 
 #include "globals.h"
+#include "magickdefine.h"
 
 using namespace Magick;
 using namespace std;
@@ -62,6 +63,8 @@ public:
     void setOverwrite(bool overwrite);
     void setNewBasename(QString newBaseName, bool ok);
     void setResamplingFilter(IMFilterType resamplingFilter);
+    void setMagickDefines(const QList<MagickDefine> &magickDefines);
+    void setRemoveMetadata(const bool &value);
     void stopProcess();
 
     QMutex mutex;
@@ -103,6 +106,9 @@ private:
     QWaitCondition imageCondition;
 
     IMFilterType m_resamplingFilter;
+    QList<MagickDefine> m_magickDefines;
+    bool m_removeMetadata;
+
 signals:
     void nextConversion(int);
     void requestOverwrite(QString);

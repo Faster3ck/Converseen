@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2022 Francesco Mondello <faster3ck@gmail.com> -->
+<!-- Copyright 2023 Francesco Mondello <faster3ck@gmail.com> -->
 <component type="desktop">
     <id>net.fasterland.converseen</id>
     <metadata_license>CC0-1.0</metadata_license>
@@ -62,7 +62,7 @@
         <keyword>picture</keyword>
         <keyword>qt</keyword>
     </keywords>
-    <content_rating type="oars-1.1">none</content_rating>
+    <content_rating type="oars-1.1" />
     <url type="homepage">https://converseen.fasterland.net/</url>
     <update_contact>faster3ck@gmail.com</update_contact>
     <developer_name>Francesco Mondello</developer_name>
@@ -70,14 +70,17 @@
     <url type="donation">https://converseen.fasterland.net/thank/</url>
     <url type="help">https://converseen.fasterland.net/help/</url>
     <releases>
-        <release version="0.9.9.8" date="2022-09-14">
+        <release version="0.9.10.0" date="2023-01-08">
             <description>
                 <ol>
-                    <li>Updated Russian, Turkish and Italian translations</li>
+                    <li>Added WebP support for quality, compression, etc</li>
+                    <li>Added a feature to remove metadata when images are processed</li>
+                    <li>Fixed a bug that inhibits the overwrite feature when the Rename option is checked</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+        <release version="0.9.9.8" date="2022-09-14" />
         <release version="0.9.9.7" date="2022-08-22" />
         <release version="0.9.9.6" date="2022-07-04" />
         <release version="0.9.9.5" date="2022-03-01" />

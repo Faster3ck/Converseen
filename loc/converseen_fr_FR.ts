@@ -4,9 +4,9 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../src/converter.cpp" line="87"/>
-        <location filename="../src/converter.cpp" line="94"/>
-        <location filename="../src/converter.cpp" line="101"/>
+        <location filename="../src/converter.cpp" line="88"/>
+        <location filename="../src/converter.cpp" line="95"/>
+        <location filename="../src/converter.cpp" line="102"/>
         <source>Error: %1</source>
         <translation>Erreur: %1</translation>
     </message>
@@ -162,20 +162,6 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;strong&gt;Traduction Allemande: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
     <message>
-        <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;
-</source>
-        <translation type="vanished">&lt;strong&gt;Traduction Espagnole (Chili): &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;
-</source>
-        <translation type="vanished">&lt;strong&gt;Traduction Turque: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt;</translation>
-    </message>
-    <message>
-        <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</source>
-        <translation type="vanished">&lt;strong&gt;Traduction Russe: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;</translation>
-    </message>
-    <message>
         <location filename="../ui/dialoginfo.ui" line="208"/>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Traduction Polonaise: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
@@ -255,7 +241,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="402"/>
+        <location filename="../ui/dialoginfo.ui" line="405"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>
@@ -404,63 +390,113 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>DialogQuality</name>
     <message>
-        <location filename="../ui/dialogquality.ui" line="14"/>
+        <location filename="../ui/dialogquality.ui" line="20"/>
         <source>Image settings</source>
         <translation>Paramètres des Images</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="20"/>
+        <location filename="../ui/dialogquality.ui" line="53"/>
+        <source>Jpeg</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="68"/>
         <source>Jpeg compression level</source>
         <translation>Niveau de compression Jpeg</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="28"/>
+        <location filename="../ui/dialogquality.ui" line="76"/>
         <source>Quality 1 - 100:</source>
         <translation type="unfinished">Qualité 0 - 100: {1 ?} {100:?}</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="35"/>
+        <location filename="../ui/dialogquality.ui" line="83"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;For the JPEG image formats, quality is 1 (lowest image quality and highest compression) to 100 (best quality but least effective compression).&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="38"/>
-        <location filename="../ui/dialogquality.ui" line="117"/>
+        <location filename="../ui/dialogquality.ui" line="86"/>
+        <location filename="../ui/dialogquality.ui" line="184"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="99"/>
+        <location filename="../ui/dialogquality.ui" line="145"/>
+        <source>Png/Mng</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="166"/>
         <source>Png/Mng compression level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="107"/>
+        <location filename="../ui/dialogquality.ui" line="174"/>
         <source>Quality 0 - 9:</source>
         <translation type="unfinished">Qualité 0 - 100: {0 ?} {9:?}</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="114"/>
+        <location filename="../ui/dialogquality.ui" line="181"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a &apos;lossless&apos; compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="172"/>
+        <location filename="../ui/dialogquality.ui" line="257"/>
+        <source>WebP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="269"/>
+        <source>WebP General Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="275"/>
+        <source>Enable Losseless Compression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="284"/>
+        <source>Compression Method:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="328"/>
+        <source>Quality:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="347"/>
+        <source>%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="361"/>
+        <source>Enable Dithering</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="401"/>
         <source>Interpolation</source>
         <translation>Interpolation</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="180"/>
+        <location filename="../ui/dialogquality.ui" line="409"/>
         <source>Filter:</source>
         <translation>Filtre: </translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="223"/>
+        <location filename="../ui/dialogquality.ui" line="431"/>
+        <source>Remove image&apos;s metadata</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogquality.ui" line="456"/>
         <source>Ok</source>
         <translation>Ok</translation>
     </message>
     <message>
-        <location filename="../ui/dialogquality.ui" line="230"/>
+        <location filename="../ui/dialogquality.ui" line="463"/>
         <source>Cancel</source>
         <translation>Annuler</translation>
     </message>
@@ -1086,28 +1122,28 @@ p, li { white-space: pre-wrap; }
         <translation>Transformation...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="816"/>
-        <location filename="../src/mainwindowimpl.cpp" line="874"/>
+        <location filename="../src/mainwindowimpl.cpp" line="860"/>
+        <location filename="../src/mainwindowimpl.cpp" line="918"/>
         <source>Preview</source>
         <translation>Prévisualiser</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="947"/>
+        <location filename="../src/mainwindowimpl.cpp" line="991"/>
         <source>Suggest a new name!</source>
         <translation>Entrez un Nouveau Nom !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="948"/>
+        <location filename="../src/mainwindowimpl.cpp" line="992"/>
         <source>New name:</source>
         <translation>Nouveau Nom:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="953"/>
+        <location filename="../src/mainwindowimpl.cpp" line="997"/>
         <source>Please, specify a name!</source>
         <translation>Veuillez spécifier un nom !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="954"/>
+        <location filename="../src/mainwindowimpl.cpp" line="998"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1118,33 +1154,33 @@ Cliquez sur Ignorer pour annuler cette opération.
 Cliquez sur Abandonner pour annuler toutes les opérations.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="969"/>
-        <location filename="../src/mainwindowimpl.cpp" line="974"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1013"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1018"/>
         <source>Warning!</source>
         <translation>Avertissement !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="970"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1014"/>
         <source>The filename should not be empty!</source>
         <translation>Le nom de fichier ne de devrait pas être vide !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="975"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1019"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Le nom choisi est identique à l&apos;original. Désirez-vous écraser le fichier original ?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="991"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1035"/>
         <source>Aborted!</source>
         <translation>Abandonné !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="524"/>
+        <location filename="../src/mainwindowimpl.cpp" line="537"/>
         <source>Processing finished!</source>
         <translation>Transformation terminée !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="578"/>
+        <location filename="../src/mainwindowimpl.cpp" line="591"/>
         <source>Open Directory</source>
         <translation>Ouvrir un répertoire</translation>
     </message>

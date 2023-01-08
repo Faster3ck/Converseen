@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2022
+* (C) Francesco Mondello 2009 - 2023
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -41,6 +41,11 @@ public:
     static bool isOverwriteMode();
     static int jpgQuality();
     static int pngQuality();
+    static bool isWebPLosslessCompression();
+    static int webPCompression();
+    static int webPQuality();
+    static bool iskWebPDithering();
+    static bool isRemoveMetadata();
     static QString latestOpenedDir();
     static QString backgroundColor();
 
@@ -77,6 +82,12 @@ public:
     static void setCurrentVersion(int version);
 	static void setLanguage(QString lang);
     static void setAutoChechUpdates(bool enabled);
+
+    static void setIsWebPLosslessCompression(const bool &value);
+    static void setWebPCompression(const int &value);
+    static void setWebPQuality(const int &value);
+    static void setIskWebPDithering(const bool &value);
+    static void setIsRemoveMetadata(const bool &value);
 
 //private:
     static QSettings *settings;

@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2022
+* (C) Francesco Mondello 2009 - 2023
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -31,18 +31,35 @@ class DialogQuality : public QDialog, private Ui::DialogQuality {
 public:
     DialogQuality(QWidget *parent = 0);
     void setInitValues(int jpegVal, int pngVal, IMFilterType filter);
+
+    void setIsWebPLosslessCompression(const bool &value);
+    void setWebPCompression(const int &value);
+    void setWebPQuality(const int &value);
+    void setIskWebPDithering(const bool &value);
+    void setIsRemoveMetadata(const bool &value);
+
     int getJpegQuality();
     int getPngQuality();
-    IMFilterType getResamplingFilter();
-private:
 
-    int jpegQuality;
+    bool isWebPLosslessCompression();
+    int getWebPCompression();
+    int getWebPQuality();
+    bool iskWebPDithering();
+    bool isRemoveMetadata();
+
+    IMFilterType getResamplingFilter();
+
 private slots:
     void setJpegSpin(int value);
     void setJpegSlider(int value);
 
     void setPngSpin(int value);
     void setPngSlider(int value);
+
+    void setWebpCompressionSpin(int value);
+    void setWebpCompressionSlider(int value);
+    void setWebpQualitySpin(int value);
+    void setWebpQualitySlider(int value);
 };
 
 #endif // DIALOGQUALITY_H
