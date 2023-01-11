@@ -170,8 +170,8 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;Сайт проекта: &lt;/span&gt;&lt;a href=&quot;https://converseen.fasterland.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;converseen.fasterland.net&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на японский:&lt;/span&gt; Xenolith0 — &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation: &lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на японский: &lt;/span&gt; Xenolith0 — &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Danish translation: &lt;/span&gt;Martin Eilsoe - &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -179,7 +179,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;strong&gt;Ukrainian translation: &lt;/strong&gt;AleXKaN - &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Перевод на украиский: &lt;/strong&gt;AleXKaN — &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Перевод на украинский: &lt;/strong&gt;AleXKaN — &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -199,7 +199,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL - &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на французский &lt;/span&gt;Adrien DAUGABEL — &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;, David GEIGER — &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на французский: &lt;/span&gt;Adrien DAUGABEL — &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;, David GEIGER — &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
@@ -262,7 +262,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Uncheck all</source>
-        <translation>Снять отметку у всех</translation>
+        <translation>Снять все отметки</translation>
     </message>
     <message>
         <source>Import multipage document</source>
@@ -376,43 +376,43 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Jpeg</source>
-        <translation type="unfinished"></translation>
+        <translation>JPEG</translation>
     </message>
     <message>
         <source>Png/Mng</source>
-        <translation type="unfinished"></translation>
+        <translation>PNG/MNG</translation>
     </message>
     <message>
         <source>WebP</source>
-        <translation type="unfinished"></translation>
+        <translation>WebP</translation>
     </message>
     <message>
         <source>WebP General Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Общие настройки WebP</translation>
     </message>
     <message>
         <source>Enable Losseless Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить сжатие без потерь</translation>
     </message>
     <message>
         <source>Compression Method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Метод сжатия:</translation>
     </message>
     <message>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Качество:</translation>
     </message>
     <message>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <source>Enable Dithering</source>
-        <translation type="unfinished"></translation>
+        <translation>Включить дизеринг</translation>
     </message>
     <message>
         <source>Remove image&apos;s metadata</source>
-        <translation type="unfinished"></translation>
+        <translation>Удалить метаданные изображения</translation>
     </message>
 </context>
 <context>
@@ -737,7 +737,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Uncheck all &amp;items</source>
-        <translation>Снять отметку со все&amp;х</translation>
+        <translation>Снять все&amp; отметки</translation>
     </message>
     <message>
         <source>Ctrl+Alt+J</source>
