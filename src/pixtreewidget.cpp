@@ -146,8 +146,8 @@ void PixTreeWidget::removeItems(QList<ImageAttributes> *iAList)
         if ((this->topLevelItem(i))->isSelected()) {
             QString s = iAList->at(i).completeFileName;
 
-            iAList->removeAt(i);
             this->takeTopLevelItem(i);
+            iAList->removeAt(i);
             CachingSystem::remove(s);
         }
 }

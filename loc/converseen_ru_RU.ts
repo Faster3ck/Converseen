@@ -72,7 +72,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Open destination </source>
-        <translation>Открыть назначение</translation>
+        <translation>Открыть назначение </translation>
     </message>
     <message>
         <source>Stop</source>
@@ -805,7 +805,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Link aspect with selected image</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Import PDF file</source>

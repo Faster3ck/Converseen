@@ -692,6 +692,7 @@ void MainWindowImpl::removeItems()
         treeWidget->removeItems(iAList);
         resetDisplays();
     }
+
 }
 
 void MainWindowImpl::removeAllItems()
@@ -766,6 +767,12 @@ void MainWindowImpl::showImageInformations(int orig_w, int orig_h, double orig_d
 
     int index = treeWidget->currentIndex().row();
 
+    if (index < 0) {
+        resetDisplays();
+
+        return;
+    }
+
     labelType->setText(QString("<span style=\" font-size:8pt;\">%1</span>")
                            .arg(iAList->at(index).suffix));
 
@@ -784,7 +791,9 @@ void MainWindowImpl::showImageInformations(int orig_w, int orig_h, double orig_d
 
 void MainWindowImpl::onItemSelection()
 {
-    if (!iAList->isEmpty()) {
+    int index = treeWidget->currentIndex().row();
+
+    if ((index > -1) && (!iAList->isEmpty())) {
         showPreviewAndInfos();
         showNewSizePreview();
     }
@@ -800,6 +809,7 @@ void MainWindowImpl::onPushResetClick()
 void MainWindowImpl::showPreviewAndInfos()
 {
     int index = treeWidget->currentIndex().row();
+
     loadPreview(iAList->at(index).completeFileName);
 }
 

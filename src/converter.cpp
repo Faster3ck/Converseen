@@ -25,7 +25,6 @@
 #include <QInputDialog>
 #include <QFileInfo>
 #include "converter.h"
-#include "qdebug.h"
 
 Converter::Converter(QObject *parent)
     : QThread(parent)

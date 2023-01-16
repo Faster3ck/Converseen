@@ -33,8 +33,13 @@ int main(int argc, char ** argv)
 {
 	InitializeMagick(*argv);
 
+
+
     QCoreApplication::setApplicationVersion(globals::VERSION);
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
+
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     QApplication app( argc, argv );
 
@@ -47,8 +52,6 @@ int main(int argc, char ** argv)
     // Converseen translations
     Translator T;
     app.installTranslator(T.translation());
-
-    app.setAttribute(Qt::AA_UseHighDpiPixmaps, Qt::AA_EnableHighDpiScaling);
 
     MainWindowImpl win;
 

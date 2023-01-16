@@ -70,16 +70,16 @@
     <url type="donation">https://converseen.fasterland.net/thank/</url>
     <url type="help">https://converseen.fasterland.net/help/</url>
     <releases>
-        <release version="0.9.10.0" date="2023-01-08">
+        <release version="0.9.10.1" date="2023-01-16">
             <description>
                 <ol>
-                    <li>Added WebP support for quality, compression, etc</li>
-                    <li>Added a feature to remove metadata when images are processed</li>
-                    <li>Fixed a bug that inhibits the overwrite feature when the Rename option is checked</li>
+                    <li>Fixed random crash that may happen when images are removed from the list</li>
+                    <li>Updated Russian translation</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+        <release version="0.9.10.0" date="2023-01-08" />
         <release version="0.9.9.8" date="2022-09-14" />
         <release version="0.9.9.7" date="2022-08-22" />
         <release version="0.9.9.6" date="2022-07-04" />
