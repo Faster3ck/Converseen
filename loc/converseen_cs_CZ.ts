@@ -385,7 +385,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enable Losseless Compression</source>
+        <source>Enable Lossless Compression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

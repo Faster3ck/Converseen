@@ -391,7 +391,7 @@ p, li { white-space: pre-wrap; }
         <translation>Общие настройки WebP</translation>
     </message>
     <message>
-        <source>Enable Losseless Compression</source>
+        <source>Enable Lossless Compression</source>
         <translation>Включить сжатие без потерь</translation>
     </message>
     <message>
