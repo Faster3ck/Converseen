@@ -377,43 +377,43 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Jpeg</source>
-        <translation type="unfinished"></translation>
+        <translation>Jpeg</translation>
     </message>
     <message>
         <source>Png/Mng</source>
-        <translation type="unfinished"></translation>
+        <translation>Png/Mng</translation>
     </message>
     <message>
         <source>WebP</source>
-        <translation type="unfinished"></translation>
+        <translation>WebP</translation>
     </message>
     <message>
         <source>WebP General Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>WebP Genel Ayarlar</translation>
     </message>
     <message>
         <source>Enable Losseless Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Kayıpsız Sıkıştırmayı Etkinleştir</translation>
     </message>
     <message>
         <source>Compression Method:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sıkıştırma Yöntemi:</translation>
     </message>
     <message>
         <source>Quality:</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalite:</translation>
     </message>
     <message>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <source>Enable Dithering</source>
-        <translation type="unfinished"></translation>
+        <translation>Titremeyi Etkinleştir</translation>
     </message>
     <message>
         <source>Remove image&apos;s metadata</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntülerin üst verilerini kaldır</translation>
     </message>
 </context>
 <context>
