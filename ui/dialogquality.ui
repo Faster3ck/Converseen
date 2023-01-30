@@ -272,7 +272,7 @@
           <item>
            <widget class="QCheckBox" name="checkWebPLCompression">
             <property name="text">
-             <string>Enable Losseless Compression</string>
+             <string>Enable Lossless Compression</string>
             </property>
            </widget>
           </item>
