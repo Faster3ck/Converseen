@@ -26,6 +26,8 @@
 #include <QFileInfo>
 #include "converter.h"
 
+#include <QDebug>
+
 Converter::Converter(QObject *parent)
     : QThread(parent)
 {
@@ -58,8 +60,9 @@ void Converter::run()
 
     Image my_image;
     QFileInfo fi(m_fileNameIn);
-
     QString out = m_fileNameOut;
+    QString err_read_status;
+    QString err_write_status;
 
     if (!m_overwrite)   // modalità sovrascrittura
         out = overwriteOldFileName(out);
@@ -68,39 +71,41 @@ void Converter::run()
         try {
             my_image.quiet(true);
             my_image.read(m_fileNameIn.toStdString());
-
-            if (m_zoom)
-                resize(my_image);
-            if (m_density)
-                changeDensity(my_image);
-            if (m_rotation)
-                rotate(my_image);
-            if (m_flip)
-                flip(my_image);
-
-            if (writeImage(my_image, m_format, m_quality, out))
-                m_conv_status = 1;
-        }
-        catch (Error& my_error) {
+        } catch (Error& my_error) {
             m_conv_status = -1;
 
-            QString err_status = tr("Error: %1").arg(QString::fromStdString(my_error.what()));
-            emit errorMessage(err_status);
+            err_read_status = tr("Error: %1").arg(QString::fromStdString(my_error.what()));
+            emit errorMessage(err_read_status);
         }
         catch( Magick::WarningCoder &warning )
         {
             m_conv_status = -1;
 
-            QString err_status = tr("Error: %1").arg(QString::fromStdString(warning.what()));
-            emit errorMessage(err_status);
+            err_read_status = tr("Error: %1").arg(QString::fromStdString(warning.what()));
+            emit errorMessage(err_read_status);
         }
         catch( Magick::Warning &warning )
         {
             m_conv_status = -1;
 
-            QString err_status = tr("Error: %1").arg(QString::fromStdString(warning.what()));
-            emit errorMessage(err_status);
+            err_read_status = tr("Error: %1").arg(QString::fromStdString(warning.what()));
+            emit errorMessage(err_read_status);
         }
+
+        if (m_zoom)
+            resize(my_image);
+        if (m_density)
+            changeDensity(my_image);
+        if (m_rotation)
+            rotate(my_image);
+        if (m_flip)
+            flip(my_image);
+
+        if (writeImage(my_image, m_format, m_quality, out, err_write_status))
+            m_conv_status = 1;
+
+        qDebug() << "Errore lettura: " << err_read_status;
+        qDebug() << "Errore scrittura: " << err_write_status;
     }
 }
 
@@ -232,7 +237,7 @@ void Converter::setRemoveMetadata(const bool &value)
     m_removeMetadata = value;
 }
 
-bool Converter::writeImage(Image &my_image, QString format, int quality, QString out)
+bool Converter::writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status)
 {
     my_image.magick(format.toUpper().toStdString());
 
@@ -240,6 +245,8 @@ bool Converter::writeImage(Image &my_image, QString format, int quality, QString
     excludedFormats << "jpg" << "jpeg" << "bmp";
 
     bool hasTransparency = false;
+
+    error_status = "";
 
 #if MagickLibVersion < 0x700
     hasTransparency = my_image.matte();
@@ -281,10 +288,14 @@ bool Converter::writeImage(Image &my_image, QString format, int quality, QString
     try {
         my_image.write(out.toStdString());
 
+        qDebug() << "qua";
+
         converted = true;
     }
     catch (Error& my_error) {
         converted = false;
+
+        error_status = QString::fromStdString(my_error.what());
     }
 
     return converted;

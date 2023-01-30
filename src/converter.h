@@ -73,7 +73,7 @@ private:
     void changeDensity(Image &my_image);
     void rotate(Image &my_image);
     void flip(Image &my_image);
-    bool writeImage(Image &my_image, QString format, int quality, QString out);
+    bool writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status);
     QString overwriteOldFileName(QString out);
 
     QString m_fileNameIn;
