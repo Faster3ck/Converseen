@@ -452,7 +452,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../ui/dialogquality.ui" line="275"/>
-        <source>Enable Losseless Compression</source>
+        <source>Enable Lossless Compression</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
