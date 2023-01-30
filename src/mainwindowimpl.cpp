@@ -520,7 +520,7 @@ void MainWindowImpl::nextConversion(int conv_status)
 
         QString msg = "";
         if (conv_status == 1) {
-            msg = "Converted";
+            msg = tr("Converted");
             // Add the destination dirs to DialogConversionStatus so them can be opened at the end of the image processing
             dlgCStatus->addOutputDirectory(QDir::toNativeSeparators(destinationPath()));
         }
