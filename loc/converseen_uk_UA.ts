@@ -958,6 +958,10 @@ Click Abort to cancel all operations.</source>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Аналіз файлу. Це може зайняти деякий час, будь ласка, зачекайте...</translation>
     </message>
+    <message>
+        <source>Converted</source>
+        <translation type="unfinished">Перетворено</translation>
+    </message>
 </context>
 <context>
     <name>PixTreeWidget</name>

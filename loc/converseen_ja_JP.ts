@@ -962,6 +962,10 @@ Abortで操作の取り消し。</translation>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>ファイルを解析中、しばらく時間がかかります...</translation>
     </message>
+    <message>
+        <source>Converted</source>
+        <translation type="unfinished">変換済み</translation>
+    </message>
 </context>
 <context>
     <name>PixTreeWidget</name>

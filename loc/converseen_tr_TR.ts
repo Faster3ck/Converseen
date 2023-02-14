@@ -393,7 +393,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Enable Losseless Compression</source>
-        <translation>Kayıpsız Sıkıştırmayı Etkinleştir</translation>
+        <translation type="vanished">Kayıpsız Sıkıştırmayı Etkinleştir</translation>
     </message>
     <message>
         <source>Compression Method:</source>
@@ -414,6 +414,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Remove image&apos;s metadata</source>
         <translation>Görüntülerin üst verilerini kaldır</translation>
+    </message>
+    <message>
+        <source>Enable Lossless Compression</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -975,6 +979,10 @@ Tüm işlemleri iptal etmek için Vazgeç&apos;e tıklayın.</translation>
     <message>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Dosya inceleniyor. Biraz zaman alabilir, lütfen bekleyin...</translation>
+    </message>
+    <message>
+        <source>Converted</source>
+        <translation>Dönüştürüldü</translation>
     </message>
 </context>
 <context>

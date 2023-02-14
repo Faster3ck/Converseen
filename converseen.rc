@@ -61,8 +61,8 @@ IDI_ICON1               ICON                    "res\\converseen.ico"
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,9,10,1
- PRODUCTVERSION 0,9,10,1
+ FILEVERSION 0,9,11,0
+ PRODUCTVERSION 0,9,11,0
  FILEFLAGSMASK 0x17L
 #ifdef _DEBUG
  FILEFLAGS 0x1L
@@ -75,23 +75,23 @@ VS_VERSION_INFO VERSIONINFO
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
-        BLOCK "041004b0"
+        BLOCK "000904b0"
         BEGIN
             VALUE "Comments", "The batch image converter and resizer"
             VALUE "CompanyName", "Francesco Mondello"
             VALUE "FileDescription", "Converseen - The batch converter and resizer"
-            VALUE "FileVersion", "0.9.10.1"
+            VALUE "FileVersion", "0.9.11.0"
             VALUE "InternalName", "Converseen"
             VALUE "LegalCopyright", "(C) 2009 - 2023 Francesco Mondello GNU - GPL"
             VALUE "LegalTrademarks", "(C) 2009 - 2023 Francesco Mondello GNU - GPL"
             VALUE "OriginalFilename", "converseen.exe"
             VALUE "ProductName", "Converseen"
-            VALUE "ProductVersion", "0.9.10.1"
+            VALUE "ProductVersion", "0.9.11.0"
         END
     END
     BLOCK "VarFileInfo"
     BEGIN
-        VALUE "Translation", 0x410, 1200
+        VALUE "Translation", 0x9, 1200
     END
 END
 

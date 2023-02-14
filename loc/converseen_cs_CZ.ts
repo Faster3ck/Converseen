@@ -958,6 +958,10 @@ Klepněte na Zrušit pro zrušení všech operací.</translation>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Converted</source>
+        <translation type="unfinished">Převedeno</translation>
+    </message>
 </context>
 <context>
     <name>PixTreeWidget</name>

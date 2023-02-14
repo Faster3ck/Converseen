@@ -75,21 +75,24 @@ void Converter::run()
             m_conv_status = -1;
 
             err_read_status = tr("Error: %1").arg(QString::fromStdString(my_error.what()));
-            emit errorMessage(err_read_status);
+            qWarning() << "Read Error: " << err_read_status;
+            //emit errorMessage(err_read_status);
         }
         catch( Magick::WarningCoder &warning )
         {
             m_conv_status = -1;
 
             err_read_status = tr("Error: %1").arg(QString::fromStdString(warning.what()));
-            emit errorMessage(err_read_status);
+            qWarning() << "Read Error: " << err_read_status;
+            //emit errorMessage(err_read_status);
         }
         catch( Magick::Warning &warning )
         {
             m_conv_status = -1;
 
             err_read_status = tr("Error: %1").arg(QString::fromStdString(warning.what()));
-            emit errorMessage(err_read_status);
+            qWarning() << "Read Error: " << err_read_status;
+            //emit errorMessage(err_read_status);
         }
 
         if (m_zoom)
@@ -101,11 +104,14 @@ void Converter::run()
         if (m_flip)
             flip(my_image);
 
-        if (writeImage(my_image, m_format, m_quality, out, err_write_status))
+        if (writeImage(my_image, m_format, m_quality, out, err_write_status)) {
             m_conv_status = 1;
+        }
+        else {
+            qWarning() << "Write Error: " << err_write_status;
 
-        qDebug() << "Errore lettura: " << err_read_status;
-        qDebug() << "Errore scrittura: " << err_write_status;
+            emit errorMessage(err_write_status);
+        }
     }
 }
 
@@ -287,14 +293,10 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
 
     try {
         my_image.write(out.toStdString());
-
-        qDebug() << "qua";
-
         converted = true;
     }
     catch (Error& my_error) {
         converted = false;
-
         error_status = QString::fromStdString(my_error.what());
     }
 

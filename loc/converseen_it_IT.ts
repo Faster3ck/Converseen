@@ -965,6 +965,10 @@ Click Abort per annullare tutte le operazioni.</translation>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Sto analizzando il file. Potrebbe volerci un po&apos;...</translation>
     </message>
+    <message>
+        <source>Converted</source>
+        <translation>Convertito</translation>
+    </message>
 </context>
 <context>
     <name>PixTreeWidget</name>

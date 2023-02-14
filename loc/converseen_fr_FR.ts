@@ -4,9 +4,9 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../src/converter.cpp" line="88"/>
-        <location filename="../src/converter.cpp" line="95"/>
-        <location filename="../src/converter.cpp" line="102"/>
+        <location filename="../src/converter.cpp" line="77"/>
+        <location filename="../src/converter.cpp" line="85"/>
+        <location filename="../src/converter.cpp" line="93"/>
         <source>Error: %1</source>
         <translation>Erreur: %1</translation>
     </message>
@@ -1122,28 +1122,33 @@ p, li { white-space: pre-wrap; }
         <translation>Transformation...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="860"/>
-        <location filename="../src/mainwindowimpl.cpp" line="918"/>
+        <location filename="../src/mainwindowimpl.cpp" line="523"/>
+        <source>Converted</source>
+        <translation type="unfinished">Convertis</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="870"/>
+        <location filename="../src/mainwindowimpl.cpp" line="928"/>
         <source>Preview</source>
         <translation>Prévisualiser</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="991"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1001"/>
         <source>Suggest a new name!</source>
         <translation>Entrez un Nouveau Nom !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="992"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1002"/>
         <source>New name:</source>
         <translation>Nouveau Nom:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="997"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1007"/>
         <source>Please, specify a name!</source>
         <translation>Veuillez spécifier un nom !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="998"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1008"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1154,23 +1159,23 @@ Cliquez sur Ignorer pour annuler cette opération.
 Cliquez sur Abandonner pour annuler toutes les opérations.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1013"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1018"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1023"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1028"/>
         <source>Warning!</source>
         <translation>Avertissement !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1014"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1024"/>
         <source>The filename should not be empty!</source>
         <translation>Le nom de fichier ne de devrait pas être vide !</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1019"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1029"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Le nom choisi est identique à l&apos;original. Désirez-vous écraser le fichier original ?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1035"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1045"/>
         <source>Aborted!</source>
         <translation>Abandonné !</translation>
     </message>

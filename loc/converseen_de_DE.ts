@@ -4,9 +4,9 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../src/converter.cpp" line="88"/>
-        <location filename="../src/converter.cpp" line="95"/>
-        <location filename="../src/converter.cpp" line="102"/>
+        <location filename="../src/converter.cpp" line="77"/>
+        <location filename="../src/converter.cpp" line="85"/>
+        <location filename="../src/converter.cpp" line="93"/>
         <source>Error: %1</source>
         <translation>Fehler:%1</translation>
     </message>
@@ -1123,6 +1123,11 @@ p, li { white-space: pre-wrap; }
         <translation>Berechne...</translation>
     </message>
     <message>
+        <location filename="../src/mainwindowimpl.cpp" line="523"/>
+        <source>Converted</source>
+        <translation type="unfinished">Konvertiert</translation>
+    </message>
+    <message>
         <location filename="../src/mainwindowimpl.cpp" line="537"/>
         <source>Processing finished!</source>
         <translation>Berechnung beendet!</translation>
@@ -1133,28 +1138,28 @@ p, li { white-space: pre-wrap; }
         <translation>Verzeichnis öffnen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="860"/>
-        <location filename="../src/mainwindowimpl.cpp" line="918"/>
+        <location filename="../src/mainwindowimpl.cpp" line="870"/>
+        <location filename="../src/mainwindowimpl.cpp" line="928"/>
         <source>Preview</source>
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="991"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1001"/>
         <source>Suggest a new name!</source>
         <translation>Schlage einen neuen Namen vor!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="992"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1002"/>
         <source>New name:</source>
         <translation>Neuer Name:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="997"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1007"/>
         <source>Please, specify a name!</source>
         <translation>Bitte gib einen Namen an!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="998"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1008"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1165,23 +1170,23 @@ Klicke &quot;Ignorieren&quot;, um diese Operation abzubrechen.
 Klicke &quot;Abbrechen&quot;, um alle Operationen abzubrechen.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1013"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1018"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1023"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1028"/>
         <source>Warning!</source>
         <translation>Warnung!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1014"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1024"/>
         <source>The filename should not be empty!</source>
         <translation>Der Dateiname muss angegeben werden!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1019"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1029"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Der ausgewählte Name ist identisch mit dem vorherigen. Willst du die Originaldatei überschreiben?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1035"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1045"/>
         <source>Aborted!</source>
         <translation>Abgebrochen!</translation>
     </message>

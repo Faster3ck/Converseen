@@ -967,6 +967,10 @@ Kattintson megszakítás gombra, hogy az összes műveletet megszakísta.</trans
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Converted</source>
+        <translation type="unfinished">Átalakított</translation>
+    </message>
 </context>
 <context>
     <name>PixTreeWidget</name>

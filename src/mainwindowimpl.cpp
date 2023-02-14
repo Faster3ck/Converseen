@@ -35,8 +35,6 @@
 #include "dialogmultipageeditor.h"
 #include "globals.h"
 
-#include <QDebug>
-
 using namespace Magick;
 using namespace std;
 
@@ -46,8 +44,6 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WindowFlags f)
     : QMainWindow(parent, f)
 {
     setupUi(this);
-
-    qDebug() << "Hola";
 
     iAList = new QList<ImageAttributes>;
     convertThread = new Converter(this);

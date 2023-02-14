@@ -962,6 +962,10 @@ Click Abort to cancel all operations.</source>
         <source>Aborted!</source>
         <translation>终止！</translation>
     </message>
+    <message>
+        <source>Converted</source>
+        <translation type="unfinished">已转换</translation>
+    </message>
 </context>
 <context>
     <name>PixTreeWidget</name>
