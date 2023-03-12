@@ -864,7 +864,7 @@ void MainWindowImpl::enableProgressiveSpin()
 
 void MainWindowImpl::enableShowPreview()
 {
-    if(treeWidget->selectedItems().count() > 0)
+    if (treeWidget->selectedItems().count() > 0)
         onItemSelection();
     else
         labelPreview->setText(tr("Preview"));
@@ -882,11 +882,11 @@ void MainWindowImpl::selectGeometryUnit(QString unit)
         spin_geoHeight->setValue((double)img_height);
     }
     if (unit == "%") {
-        //spin_geoWidth->setDecimals(2);
+        spin_geoWidth->setDecimals(2);
         spin_geoWidth->setSuffix(" %");
         spin_geoWidth->setValue(100.00);
 
-        //spin_geoHeight->setDecimals(2);
+        spin_geoHeight->setDecimals(2);
         spin_geoHeight->setSuffix(" %");
         spin_geoHeight->setValue(100.00);
     }

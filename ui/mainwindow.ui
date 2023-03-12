@@ -202,14 +202,14 @@
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QDockWidget" name="dockWidget">
    <property name="sizePolicy">
-    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Ignored">
+    <sizepolicy hsizetype="Fixed" vsizetype="Ignored">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
    </property>
    <property name="minimumSize">
     <size>
-     <width>375</width>
+     <width>446</width>
      <height>298</height>
     </size>
    </property>
@@ -227,7 +227,7 @@
      <item>
       <widget class="QScrollArea" name="scrollArea">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+        <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -248,10 +248,16 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-360</y>
-          <width>347</width>
-          <height>1059</height>
+          <y>0</y>
+          <width>407</width>
+          <height>1190</height>
          </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_12">
          <item>
@@ -288,7 +294,7 @@ p, li { white-space: pre-wrap; }
            </property>
            <property name="maximumSize">
             <size>
-             <width>320</width>
+             <width>420</width>
              <height>260</height>
             </size>
            </property>
@@ -305,6 +311,19 @@ p, li { white-space: pre-wrap; }
             <enum>QFrame::Plain</enum>
            </property>
            <layout class="QGridLayout" name="gridLayout">
+            <item row="0" column="0">
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>10</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
             <item row="0" column="1">
              <widget class="myLabelPreviewer" name="labelPreview">
               <property name="sizePolicy">
@@ -332,19 +351,6 @@ p, li { white-space: pre-wrap; }
                <bool>true</bool>
               </property>
              </widget>
-            </item>
-            <item row="0" column="0">
-             <spacer name="horizontalSpacer_4">
-              <property name="orientation">
-               <enum>Qt::Horizontal</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>10</width>
-                <height>20</height>
-               </size>
-              </property>
-             </spacer>
             </item>
             <item row="0" column="2">
              <spacer name="horizontalSpacer_5">
@@ -585,10 +591,16 @@ p, li { white-space: pre-wrap; }
                     <item>
                      <widget class="QDoubleSpinBox" name="spin_geoWidth">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>0</height>
+                       </size>
                       </property>
                       <property name="buttonSymbols">
                        <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -612,6 +624,18 @@ p, li { white-space: pre-wrap; }
                     </item>
                     <item>
                      <widget class="QDoubleSpinBox" name="spin_geoHeight">
+                      <property name="sizePolicy">
+                       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                        <horstretch>0</horstretch>
+                        <verstretch>0</verstretch>
+                       </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>100</width>
+                        <height>0</height>
+                       </size>
+                      </property>
                       <property name="decimals">
                        <number>0</number>
                       </property>
@@ -630,10 +654,16 @@ p, li { white-space: pre-wrap; }
                     <item>
                      <widget class="QComboBox" name="comboResizeValues">
                       <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                       <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
                         <horstretch>0</horstretch>
                         <verstretch>0</verstretch>
                        </sizepolicy>
+                      </property>
+                      <property name="minimumSize">
+                       <size>
+                        <width>30</width>
+                        <height>0</height>
+                       </size>
                       </property>
                       <property name="maximumSize">
                        <size>
@@ -655,6 +685,19 @@ p, li { white-space: pre-wrap; }
                       <normaloff>:/Images/res/reset.png</normaloff>:/Images/res/reset.png</iconset>
                     </property>
                    </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_2">
+                    <property name="orientation">
+                     <enum>Qt::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
                   </item>
                  </layout>
                 </item>

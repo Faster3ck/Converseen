@@ -41,8 +41,8 @@ using namespace std;
 namespace globals
 {
     const QString PROGRAM_NAME = "Converseen";
-    const int CURRENT_INTERNAL_VERSION = 1002;
-    const QString VERSION = "0.9.11.0";
+    const int CURRENT_INTERNAL_VERSION = 1003;
+    const QString VERSION = "0.9.11.1";
 
     class Globals
     {

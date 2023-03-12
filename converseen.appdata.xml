@@ -70,16 +70,16 @@
     <url type="donation">https://converseen.fasterland.net/thank/</url>
     <url type="help">https://converseen.fasterland.net/help/</url>
     <releases>
-        <release version="0.9.11.0" date="2023-02-14">
+        <release version="0.9.11.1" date="2023-03-13">
             <description>
                 <ol>
-                    <li>Now, it's possible to attempt to process corrupted images</li>
-                    <li>Updated Turkish translation</li>
-                    <li>Updated Italian translation</li>
+                    <li>Added decimal values in scaling by percentage</li>
+                    <li>Various improvements in the user interface</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+        <release version="0.9.11.0" date="2023-02-14" />
         <release version="0.9.10.1" date="2023-01-16" />
         <release version="0.9.10.0" date="2023-01-08" />
         <release version="0.9.9.8" date="2022-09-14" />

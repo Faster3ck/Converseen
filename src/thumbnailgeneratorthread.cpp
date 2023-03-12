@@ -25,8 +25,8 @@
 #include "thumbnailgeneratorthread.h"
 #include "globals.h"
 
-#define MAX_THUMB_W 320
-#define MAX_THUMB_H 240
+#define MAX_THUMB_W 420
+#define MAX_THUMB_H 315
 
 ThumbnailGeneratorThread::ThumbnailGeneratorThread(QObject *parent) :
     QThread(parent)

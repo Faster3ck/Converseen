@@ -268,7 +268,7 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
         bgImg.label("bgImg");
         bgImg.depth(my_image.depth());
 
-        bgImg.composite(my_image, Magick::Geometry(bgImg.columns(),bgImg.rows()), Magick::DissolveCompositeOp);
+        bgImg.composite(my_image, Magick::Geometry(bgImg.columns(), bgImg.rows()), Magick::DissolveCompositeOp);
 
         my_image = bgImg;
     }
