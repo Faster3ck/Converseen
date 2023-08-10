@@ -55,7 +55,7 @@ class PixTreeWidget : public QTreeWidget {
         int countChecked();
 
     signals:
-        void dropped(QStringList);
+        void dropped(QStringList, QStringList);
 
     public slots:
         void checkItems();

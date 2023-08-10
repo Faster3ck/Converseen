@@ -23,9 +23,10 @@
 
 #include <QFileInfo>
 #include <QFileIconProvider>
+#include <QDesktopServices>
+#include <QUrl>
 #include "dialogmultipageeditor.h"
 #include "ui_dialogmultipageeditor.h"
-
 
 DialogMultipageEditor::DialogMultipageEditor(QWidget *parent) :
     QDialog(parent),
@@ -43,6 +44,8 @@ DialogMultipageEditor::DialogMultipageEditor(QWidget *parent) :
     toolBar->addSeparator();
     toolBar->addAction(ui->actionUncheck);
     toolBar->addAction(ui->actionUncheckAll);
+    toolBar->addSeparator();
+    toolBar->addAction(ui->actionHelp);
 
     ui->treeWidget->setUniformRowHeights(true);
     ui->treeWidget->setAlternatingRowColors(true);
@@ -80,7 +83,7 @@ void DialogMultipageEditor::analyzeMultipageFile(QString fileName)
 
     for (int i = 0; i < pagesList.count(); i++) {
         QTreeWidgetItem *item = new QTreeWidgetItem(ui->treeWidget);
-        item->setCheckState(0, Qt::Unchecked);
+        item->setCheckState(0, Qt::Checked);
 
         QFileIconProvider qficon;
         QIcon icon = qficon.icon(fi);
@@ -166,3 +169,9 @@ void DialogMultipageEditor::on_actionUncheckAll_triggered()
 {
     selector(true, false);
 }
+
+void DialogMultipageEditor::on_actionHelp_triggered()
+{
+    QDesktopServices::openUrl(QUrl("https://converseen.fasterland.net/convert-a-pdf-into-images-with-converseen/", QUrl::TolerantMode));
+}
+

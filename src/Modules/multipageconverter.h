@@ -26,12 +26,6 @@
 
 #include <QObject>
 #include <QList>
-#include <Magick++.h>
-#include <string>
-#include <iostream>
-
-using namespace Magick;
-using namespace std;
 
 class MultipageItem {
 public:

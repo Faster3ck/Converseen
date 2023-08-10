@@ -273,6 +273,18 @@ p, li { white-space: pre-wrap; }
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;How to enable the PDF conversion?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;PDF dönüştürme nasıl etkinleştirilir?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
+    <message>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open online help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>F1</source>
+        <translation type="unfinished">F1</translation>
+    </message>
 </context>
 <context>
     <name>DialogOptions</name>
@@ -390,10 +402,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>WebP General Settings</source>
         <translation>WebP Genel Ayarlar</translation>
-    </message>
-    <message>
-        <source>Enable Losseless Compression</source>
-        <translation type="vanished">Kayıpsız Sıkıştırmayı Etkinleştir</translation>
     </message>
     <message>
         <source>Compression Method:</source>
@@ -875,6 +883,18 @@ p, li { white-space: pre-wrap; }
         <source>&amp;180°</source>
         <translation>&amp;180°</translation>
     </message>
+    <message>
+        <source>Import directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Online Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open online help</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindowImpl</name>
@@ -983,6 +1003,14 @@ Tüm işlemleri iptal etmek için Vazgeç&apos;e tıklayın.</translation>
     <message>
         <source>Converted</source>
         <translation>Dönüştürüldü</translation>
+    </message>
+    <message>
+        <source>Do you want to import subfolders as well?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

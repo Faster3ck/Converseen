@@ -166,7 +166,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>26</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -188,11 +188,14 @@
     <property name="title">
      <string>&amp;Help</string>
     </property>
+    <addaction name="actionHelp"/>
+    <addaction name="separator"/>
     <addaction name="actionDonatePaypal"/>
     <addaction name="separator"/>
     <addaction name="actionCheckForUpdates"/>
     <addaction name="actionReportBug"/>
     <addaction name="separator"/>
+    <addaction name="actionInfo"/>
    </widget>
    <addaction name="menu_File"/>
    <addaction name="menu_Edit"/>
@@ -250,7 +253,7 @@
           <x>0</x>
           <y>0</y>
           <width>407</width>
-          <height>1190</height>
+          <height>1181</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -602,11 +605,20 @@ p, li { white-space: pre-wrap; }
                         <height>0</height>
                        </size>
                       </property>
+                      <property name="locale">
+                       <locale language="English" country="UnitedStates"/>
+                      </property>
                       <property name="buttonSymbols">
                        <enum>QAbstractSpinBox::UpDownArrows</enum>
                       </property>
                       <property name="correctionMode">
-                       <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                       <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                      </property>
+                      <property name="keyboardTracking">
+                       <bool>false</bool>
+                      </property>
+                      <property name="showGroupSeparator" stdset="0">
+                       <bool>false</bool>
                       </property>
                       <property name="decimals">
                        <number>0</number>
@@ -616,6 +628,9 @@ p, li { white-space: pre-wrap; }
                       </property>
                       <property name="maximum">
                        <double>262144.000000000000000</double>
+                      </property>
+                      <property name="stepType">
+                       <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
                       </property>
                       <property name="value">
                        <double>100.000000000000000</double>
@@ -636,11 +651,26 @@ p, li { white-space: pre-wrap; }
                         <height>0</height>
                        </size>
                       </property>
+                      <property name="locale">
+                       <locale language="English" country="UnitedStates"/>
+                      </property>
+                      <property name="inputMethodHints">
+                       <set>Qt::ImhFormattedNumbersOnly</set>
+                      </property>
+                      <property name="correctionMode">
+                       <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                      </property>
+                      <property name="keyboardTracking">
+                       <bool>false</bool>
+                      </property>
                       <property name="decimals">
                        <number>0</number>
                       </property>
                       <property name="maximum">
                        <double>262144.000000000000000</double>
+                      </property>
+                      <property name="stepType">
+                       <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
                       </property>
                       <property name="value">
                        <double>100.000000000000000</double>
@@ -778,21 +808,39 @@ p, li { white-space: pre-wrap; }
                    <layout class="QVBoxLayout" name="verticalLayout_10">
                     <item>
                      <widget class="QDoubleSpinBox" name="spin_resX">
+                      <property name="specialValueText">
+                       <string/>
+                      </property>
+                      <property name="suffix">
+                       <string notr="true"> dpi</string>
+                      </property>
                       <property name="decimals">
-                       <number>3</number>
+                       <number>0</number>
                       </property>
                       <property name="maximum">
-                       <double>10000.000000000000000</double>
+                       <double>3000.000000000000000</double>
+                      </property>
+                      <property name="value">
+                       <double>96.000000000000000</double>
                       </property>
                      </widget>
                     </item>
                     <item>
                      <widget class="QDoubleSpinBox" name="spin_resY">
+                      <property name="specialValueText">
+                       <string/>
+                      </property>
+                      <property name="suffix">
+                       <string notr="true"> dpi</string>
+                      </property>
                       <property name="decimals">
-                       <number>3</number>
+                       <number>0</number>
                       </property>
                       <property name="maximum">
-                       <double>10000.000000000000000</double>
+                       <double>3000.000000000000000</double>
+                      </property>
+                      <property name="value">
+                       <double>96.000000000000000</double>
                       </property>
                      </widget>
                     </item>
@@ -1182,7 +1230,6 @@ p, li { white-space: pre-wrap; }
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionOpenFiles"/>
    <addaction name="actionAddFiles"/>
    <addaction name="separator"/>
    <addaction name="actionConvert"/>
@@ -1331,9 +1378,6 @@ p, li { white-space: pre-wrap; }
    <property name="text">
     <string>&amp;About</string>
    </property>
-   <property name="shortcut">
-    <string>F1</string>
-   </property>
   </action>
   <action name="actionDonatePaypal">
    <property name="icon">
@@ -1371,6 +1415,33 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="toolTip">
     <string>Check if a new version of Converseen is available</string>
+   </property>
+  </action>
+  <action name="actionAddDirectory">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/res/add_folder.png</normaloff>:/Images/res/add_folder.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import directory</string>
+   </property>
+   <property name="toolTip">
+    <string>Import directory</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/Images/res/help.png</normaloff>:/Images/res/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>Online Help</string>
+   </property>
+   <property name="toolTip">
+    <string>Open online help</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
    </property>
   </action>
  </widget>

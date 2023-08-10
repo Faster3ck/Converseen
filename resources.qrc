@@ -16,6 +16,8 @@
         <file>res/facebook-icon.png</file>
         <file>res/paypal_mini.png</file>
         <file>res/btn_donateCC_LG.png</file>
+        <file>res/add_folder.png</file>
+        <file>res/help.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file>res/loading.gif</file>

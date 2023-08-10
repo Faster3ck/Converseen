@@ -24,6 +24,7 @@
 #include <QApplication>
 #include <QLibraryInfo>
 #include <QTextCodec>
+#include <QDir>
 #include <Magick++.h>
 #include "mainwindowimpl.h"
 #include "translator.h"
@@ -33,8 +34,6 @@ int main(int argc, char ** argv)
 {
 	InitializeMagick(*argv);
 
-
-
     QCoreApplication::setApplicationVersion(globals::VERSION);
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
 
@@ -42,6 +41,32 @@ int main(int argc, char ** argv)
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
 
     QApplication app( argc, argv );
+
+#if defined(Q_OS_OSX)
+    QString appDirPath = QApplication::applicationDirPath();
+
+    QDir gs_dir(appDirPath + "/../Resources/ghostscript/10.01.2");
+    QString gs_path = gs_dir.absolutePath();
+
+    QString magick_configure_path = appDirPath + "/../Resources/ImageMagick-7";
+    QString gs_lib = gs_path + "/Resource/Init/";
+    QString gs_fontpath = gs_path + "/Resource/Font/";
+    QString gs_options = QString("-sGenericResourceDir=%1/Resource/ -sICCProfilesDir=%1/iccprofiles/").arg(gs_path);
+
+    qputenv("MAGICK_CONFIGURE_PATH", magick_configure_path.toLocal8Bit());
+    qputenv("GS_LIB", gs_lib.toLocal8Bit());
+    qputenv("GS_FONTPATH", gs_fontpath.toLocal8Bit());
+    qputenv("GS_OPTIONS", gs_options.toLocal8Bit());
+#endif
+
+#if defined(Q_OS_WIN)
+    QString resdir = QApplication::applicationDirPath() + "\\libraries";
+
+    qputenv("MAGICK_HOME", resdir.toLocal8Bit());
+    qputenv("MAGICK_CONFIGURE_PATH", resdir.toLocal8Bit());
+    qputenv("MAGICK_CODER_MODULE_PATH", resdir.toLocal8Bit() + "\\modules\\coders");
+    qputenv("MAGICK_CODER_FILTER_PATH", resdir.toLocal8Bit() + "\\modules\\filters");
+#endif
 
     // Default traslations for Qt apps
     QTranslator qtTranslator;
@@ -51,7 +76,11 @@ int main(int argc, char ** argv)
 
     // Converseen translations
     Translator T;
-    app.installTranslator(T.translation());
+
+    QTranslator *t = T.translation();
+
+    if (t != NULL)
+        app.installTranslator(t);
 
     MainWindowImpl win;
 

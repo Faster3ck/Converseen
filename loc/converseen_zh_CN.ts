@@ -266,6 +266,18 @@ p, li { white-space: pre-wrap; }
         <source>Uncheck all</source>
         <translation>全部取消勾选</translation>
     </message>
+    <message>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open online help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>F1</source>
+        <translation type="unfinished">F1</translation>
+    </message>
 </context>
 <context>
     <name>DialogOptions</name>
@@ -857,6 +869,18 @@ p, li { white-space: pre-wrap; }
         <source>Check if a new version of Converseen is available</source>
         <translation>检查是否有新版本</translation>
     </message>
+    <message>
+        <source>Import directory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Online Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Open online help</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindowImpl</name>
@@ -965,6 +989,14 @@ Click Abort to cancel all operations.</source>
     <message>
         <source>Converted</source>
         <translation type="unfinished">已转换</translation>
+    </message>
+    <message>
+        <source>Do you want to import subfolders as well?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -55,7 +55,7 @@ public:
     void setFormat(QString format);
     void setQuality(int quality);
     void setOutputDir(QString outputDir);
-    void setResize(QString resizingStr);
+    void setResize(const double &width, const double &height, const bool &percent, const bool &maintainAspectRatio);
     void setRotation(double deg);
     void setFlip(FlipOrientation orientation);
     void setDensity(QString densityStr);
@@ -74,6 +74,7 @@ private:
     void rotate(Image &my_image);
     void flip(Image &my_image);
     bool writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status);
+    Image convertPDFtoImage(Image &my_image);
     QString overwriteOldFileName(QString out);
 
     QString m_fileNameIn;
@@ -87,7 +88,12 @@ private:
     bool m_flip;
     FlipOrientation m_orientation;
 
-    bool m_zoom;
+    double m_width;
+    double m_height;
+    bool m_percent;
+    bool m_maintainAspectRatio;
+
+    bool m_resize;
     bool m_overwrite;
     bool m_allow_rename;
     bool m_density;
@@ -97,8 +103,6 @@ private:
     int m_conv_status;  // 1 = processed; 2 = jump/unchecked; -1 = Error;
 
     QString m_renamingString;
-
-    QString resizingString;
     QString m_densityString;
 
     QString m_newBaseName;

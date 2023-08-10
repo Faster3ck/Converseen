@@ -4,6 +4,11 @@ CONFIG += qt \
  release \
  warn_on
 
+macx {
+    QMAKE_MACOSX_DEPLOYMENT_TARGET=10.13
+    ICON = res/converseen.icns
+}
+
  DESTDIR =  bin
  OBJECTS_DIR =  build
  MOC_DIR =  build

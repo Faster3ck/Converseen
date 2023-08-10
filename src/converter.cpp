@@ -24,9 +24,8 @@
 #include <QMessageBox>
 #include <QInputDialog>
 #include <QFileInfo>
-#include "converter.h"
-
 #include <QDebug>
+#include "converter.h"
 
 Converter::Converter(QObject *parent)
     : QThread(parent)
@@ -42,7 +41,7 @@ void Converter::conversionCompleted()
 
 void Converter::reset()
 {
-    m_zoom = false;
+    m_resize = false;
     m_density = false;
     m_rotation = false;
     m_flip = false;
@@ -95,10 +94,10 @@ void Converter::run()
             //emit errorMessage(err_read_status);
         }
 
-        if (m_zoom)
+        if (m_resize)
             resize(my_image);
-        if (m_density)
-            changeDensity(my_image);
+        /*if (m_density)
+            changeDensity(my_image);*/
         if (m_rotation)
             rotate(my_image);
         if (m_flip)
@@ -140,10 +139,14 @@ void Converter::setOutputDir(QString outputDir)
     m_outputDir = outputDir;
 }
 
-void Converter::setResize(QString resizingStr)
+void Converter::setResize(const double &width, const double &height, const bool &percent, const bool &maintainAspectRatio)
 {
-    resizingString = resizingStr;
-    m_zoom = true;
+    m_resize = true;
+
+    m_width = width;
+    m_height = height;
+    m_percent = percent;
+    m_maintainAspectRatio = maintainAspectRatio;
 }
 
 void Converter::setRotation(double deg)
@@ -173,8 +176,25 @@ void Converter::flip(Image &my_image)
 
 void Converter::resize(Image &my_image)
 {
+    Magick::Geometry size;
     my_image.filterType(m_resamplingFilter);
-    my_image.resize(resizingString.toStdString());
+
+    if (m_percent) {
+        int p_w = qRound(my_image.columns() * (m_width / 100));
+        int p_h = qRound(my_image.rows() * (m_height / 100));
+
+        size.width(p_w);
+        size.height(p_h);
+    }
+    else {
+        size.width((int)m_width);
+        size.height((int)m_height);
+    }
+
+    //Resize without preserving aspect ratio (!)
+    size.aspect(!m_maintainAspectRatio);
+
+    my_image.resize(size);
 }
 
 void Converter::setDensity(QString densityStr)
@@ -245,6 +265,11 @@ void Converter::setRemoveMetadata(const bool &value)
 
 bool Converter::writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status)
 {
+    QString inputFormat = QString::fromLocal8Bit(my_image.magick().c_str());
+
+    if (inputFormat == "PDF")
+        my_image = convertPDFtoImage(my_image);
+
     my_image.magick(format.toUpper().toStdString());
 
     QStringList excludedFormats;
@@ -301,6 +326,38 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
     }
 
     return converted;
+}
+
+Image Converter::convertPDFtoImage(Image &my_image)
+{
+    // Transform PDF page to image
+
+    Image ximage;
+
+    ximage.magick(my_image.magick());
+
+    ximage.textAntiAlias(true);
+
+    ximage.quiet(false);
+
+    ximage.resolutionUnits(PixelsPerInchResolution);
+    if (m_density) {
+        QString n_den = QString(m_densityString);
+        ximage.density(n_den.toStdString());
+    }
+    else {
+        ximage.density("150");
+    }
+
+    ximage.read(m_fileNameIn.toStdString());
+
+    ximage.backgroundColor(Magick::Color("white"));
+    ximage.extent(Magick::Geometry(ximage.size().width(), ximage.size().height()), Magick::Color("white"));
+
+
+    ximage.sharpen(0.0, 1.0);
+
+    return ximage;
 }
 
 void Converter::stopProcess()

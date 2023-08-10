@@ -41,6 +41,7 @@ public:
 
     static QString readableFiltersString();
     static QStringList readableFilters();
+    static QStringList readableFormattedFilters();
     static QStringList writableFilters();
     static QStringList nativeReadableFormats();
     static bool isNativeReadable(QString fileName);
@@ -49,6 +50,7 @@ public:
 private:
     static QString s_readableFiltersString;
     static QStringList s_readableFilters;
+    static QStringList s_readableFormattedFilters;
     static QStringList s_writableFilters;
     static QStringList sortNonCaseSensitive(QStringList list);
 

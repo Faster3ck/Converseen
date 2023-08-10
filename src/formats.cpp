@@ -31,6 +31,7 @@ using namespace std;
 
 QString Formats::s_readableFiltersString;
 QStringList Formats::s_readableFilters;
+QStringList Formats::s_readableFormattedFilters;
 QStringList Formats::s_writableFilters;
 
 void Formats::loadFormats()
@@ -64,7 +65,10 @@ void Formats::loadFormats()
                                        .arg(QString::fromStdString(entry->name()))
                                        .arg(QString::fromStdString(entry->description()));
 
-                s_readableFilters << QString::fromStdString(entry->name()).toLower();
+                QString c_ext = QString::fromStdString(entry->name()).toLower();
+
+                s_readableFilters << c_ext;
+                s_readableFormattedFilters << QString("*.%1").arg(c_ext);
 
                 readableExts += QString("*.%1 *.%2 ")
                         .arg(QString::fromStdString(entry->name()).toLower())
@@ -80,6 +84,12 @@ void Formats::loadFormats()
 
         ++entry;
     }
+
+    // Fixme: Temporary fix (It avoids to import txt files when dropping folders)
+    s_readableFormattedFilters.removeAll("*.txt");
+
+    // Add missing but supported formats
+    s_readableFormattedFilters.append(QStringList() <<  "*.tif" << "*.jfif");
 
     ////////////////////
     // Adding manually some missing but supported formats
@@ -152,6 +162,11 @@ QString Formats::readableFiltersString()
 QStringList Formats::readableFilters()
 {
     return s_readableFilters;
+}
+
+QStringList Formats::readableFormattedFilters()
+{
+    return s_readableFormattedFilters;
 }
 
 QStringList Formats::writableFilters()

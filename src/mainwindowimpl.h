@@ -35,6 +35,7 @@
 #include <QInputDialog>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QDirIterator>
 #include "ui_mainwindow.h"
 #include "converter.h"
 #include "dialogquality.h"
@@ -59,6 +60,8 @@ private:
     void createActions();
     void setupMenu();
     void createContextMenu();
+    QStringList loadDirectoryFiles(const QString &directory, const QStringList &readableFiltersList, const QDirIterator::IteratorFlag &flag);
+    void loadFiles(QStringList fileNames);
     void setFileInList(QString fileName);
     bool checkDuplicates(QStringList fileNames, int e);
     void convert();
@@ -113,9 +116,10 @@ private:
     IMFilterType m_resamplingFilter;
 
 private slots:
-    void loadFiles(QStringList fileNames);
+    void dropped(QStringList fileNames, QStringList directories);
     void openFiles();
     void addFiles();
+    void openImportDirectoryDialog();
     void importIcoFile();
     void importPdfFile();
 
@@ -159,6 +163,7 @@ private slots:
 
     void checkForUpdates();
     void bugReport();
+    void onlineHelp();
 
     void setRelativeSizeCheckboxes(int state);
     void setOverwriteStatus(int state);

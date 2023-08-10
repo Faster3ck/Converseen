@@ -38,8 +38,6 @@
 using namespace Magick;
 using namespace std;
 
-// TODO: Inserire funzione per sostituire tutte le immagini
-
 MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WindowFlags f)
     : QMainWindow(parent, f)
 {
@@ -51,7 +49,7 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WindowFlags f)
 
     CachingSystem::init();
 
-    connect(treeWidget, SIGNAL(dropped(QStringList)), this, SLOT(loadFiles(QStringList)));
+    connect(treeWidget, SIGNAL(dropped(QStringList, QStringList)), this, SLOT(dropped(QStringList, QStringList)));
 
     connect(bntSelDir, SIGNAL(clicked()), this, SLOT(openOutDirectory()));
     connect(checkSameDir, SIGNAL(stateChanged(int)), this, SLOT(setCurrentDirectory()));
@@ -141,6 +139,7 @@ void MainWindowImpl::createActions()
 {
     // "File" actions
     connect(actionOpenFiles, SIGNAL(triggered()), this, SLOT(openFiles()));
+    connect(actionAddDirectory, SIGNAL(triggered()), this, SLOT(openImportDirectoryDialog()));
     connect(actionAddFiles, SIGNAL(triggered()), this, SLOT(addFiles()));
     connect(actionImportWindowsIconIco, SIGNAL(triggered()), this, SLOT(importIcoFile()));
     connect(actionImportPDFFile, SIGNAL(triggered()), this, SLOT(importPdfFile()));
@@ -165,6 +164,23 @@ void MainWindowImpl::createActions()
     connect(actionDonatePaypal, SIGNAL(triggered()), this, SLOT(openPaypalLink()));
     connect(actionReportBug, SIGNAL(triggered()), this, SLOT(bugReport()));
     connect(actionCheckForUpdates, SIGNAL(triggered()), this, SLOT(checkForUpdates()));
+    connect(actionHelp, SIGNAL(triggered()), this, SLOT(onlineHelp()));
+
+    // Create first toolbar button
+
+    QToolButton *openFileButton = new QToolButton(this);
+
+    openFileButton->setPopupMode(QToolButton::InstantPopup);
+    openFileButton->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
+
+    QMenu *openMenu = new QMenu(openFileButton);
+    openMenu->addAction(actionOpenFiles);
+    openMenu->addAction(actionAddDirectory);
+    openFileButton->setMenu(openMenu);
+
+    //toolBar->addWidget(openFileButton);
+    toolBar->insertWidget(toolBar->actions().first(), openFileButton);
+    openFileButton->setDefaultAction(actionOpenFiles);
 }
 
 void MainWindowImpl::setupMenu()
@@ -189,7 +205,7 @@ void MainWindowImpl::setupMenu()
 
     menu_Actions->addAction(actionConvert);
 
-    menu_About->addAction(actionInfo);
+    //menu_About->addAction(actionInfo);
 }
 
 void MainWindowImpl::createContextMenu()
@@ -226,6 +242,44 @@ void MainWindowImpl::addFiles()
 
     if (!fileNames.isEmpty())
         loadFiles(fileNames);
+}
+
+void MainWindowImpl::openImportDirectoryDialog()
+{
+    QStringList fileNames;
+    QDirIterator::IteratorFlag flag;
+
+    QStringList readableFiltersList = Formats::readableFormattedFilters();
+
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),
+                                                    QDir::homePath(),
+                                                    QFileDialog::ShowDirsOnly
+                                                    | QFileDialog::DontResolveSymlinks);
+
+    if (!dir.isNull()) {
+        int ret = QMessageBox::question(this, QApplication::applicationName(),
+                                       tr("Do you want to import subfolders as well?"),
+                                       QMessageBox::Yes | QMessageBox::No
+                                       | QMessageBox::Cancel);
+
+        switch (ret) {
+        case QMessageBox::Yes:
+            flag = QDirIterator::Subdirectories;
+            break;
+        case QMessageBox::No:
+            flag = QDirIterator::NoIteratorFlags;
+            break;
+        case QMessageBox::Cancel:
+            return;
+        default:
+            return;
+        }
+
+        fileNames = loadDirectoryFiles(dir, readableFiltersList, flag);
+
+        if (!fileNames.isEmpty())
+            loadFiles(fileNames);
+    }
 }
 
 void MainWindowImpl::importIcoFile()
@@ -266,6 +320,60 @@ void MainWindowImpl::openMultipageFile(QString fileName)
         QStringList fileNames = dlg->fileNames();
         loadFiles(fileNames);
     }
+}
+
+void MainWindowImpl::dropped(QStringList fileNames, QStringList directories)
+{
+    if (!fileNames.isEmpty())
+        loadFiles(fileNames);
+
+
+    if (!directories.isEmpty()) {
+        QDirIterator::IteratorFlag flag;
+        QStringList readableFiltersList = Formats::readableFormattedFilters();
+
+        QString msg = QString(tr("You are going to import %1 directories. Do you want to import subfolders as well?")
+                                  .arg(QString::number(directories.count())));
+
+        int ret = QMessageBox::question(this, QApplication::applicationName(),
+                                        msg,
+                                        QMessageBox::Yes | QMessageBox::No
+                                            | QMessageBox::Cancel);
+
+        switch (ret) {
+        case QMessageBox::Yes:
+            flag = QDirIterator::Subdirectories;
+            break;
+        case QMessageBox::No:
+            flag = QDirIterator::NoIteratorFlags;
+            break;
+        case QMessageBox::Cancel:
+            return;
+        default:
+            return;
+        }
+
+        for (int i = 0; i < directories.count(); i++) {
+            fileNames = loadDirectoryFiles(directories.at(i), readableFiltersList, flag);
+
+            if (!fileNames.isEmpty())
+                loadFiles(fileNames);
+        }
+    }
+}
+
+QStringList MainWindowImpl::loadDirectoryFiles(const QString &directory, const QStringList &readableFiltersList, const QDirIterator::IteratorFlag &flag)
+{
+    QStringList fileNames;
+    QDirIterator it(directory, readableFiltersList, QDir::Files, flag);
+
+    while (it.hasNext())
+        fileNames << it.next();
+
+    if (!fileNames.isEmpty())
+        loadFiles(fileNames);
+
+    return fileNames;
 }
 
 void MainWindowImpl::loadFiles(QStringList fileNames)
@@ -347,9 +455,17 @@ void MainWindowImpl::elabora()
 
 void MainWindowImpl::startConversion()
 {
+    double width;
+    double height;
+    bool percent = false;
+    bool maintainAspectRatio = false;
+    bool noTransparency;
+
+
     IniSettings::setOutputDir(lineDirectory->text());
 
     abort_all = false;
+
 
     statusBar()->showMessage(tr("Processing..."));
     curr_index = 0;
@@ -359,30 +475,27 @@ void MainWindowImpl::startConversion()
     convertThread->reset();
 
     // Colore
-    bool noTransparency = this->checkNoTransp->isChecked();
+    noTransparency = this->checkNoTransp->isChecked();
     convertThread->setBackgroundColor(m_bgColor, noTransparency);
+
+    // setResize(const double &width, const double &height, const bool &percent, const bool &maintainAspectRatio)
 
     /* Change image size */
     if (groupDimensions->isChecked()) {
-        QString aspectRatio = "!";
+        width = spin_geoWidth->value();
+        height = spin_geoHeight->value();
 
         if (checkRelative->isChecked())
-            aspectRatio = "";
+            maintainAspectRatio = true;
 
-        // "%1 x %2 % !"
-
-        QString resizingString;
         if (comboResizeValues->currentText() == "px")
-            resizingString = QString("%1x%2%3")
-                    .arg(new_img_width)
-                    .arg(new_img_height)
-                    .arg(aspectRatio);
-        if (comboResizeValues->currentText() == "%")
-            resizingString = QString("%1x%2%")
-                    .arg(spin_geoWidth->value())
-                    .arg(spin_geoHeight->value());
+            percent = false;
 
-        convertThread->setResize(resizingString);
+        if (comboResizeValues->currentText() == "%")
+            percent = true;
+
+        //if (!(((percent) && ((int)width == 100)) && ((int)height == 100)))
+        convertThread->setResize(width, height, percent, maintainAspectRatio);
     }
 
     /* Change image density */
@@ -936,8 +1049,8 @@ void MainWindowImpl::resetDisplays()
     m_xResolution = 0;
     m_yResolution = 0;
 
-    spin_resX->setValue(m_xResolution);
-    spin_resY->setValue(m_yResolution);
+    spin_resX->setValue(96);
+    spin_resY->setValue(96);
 
     if (comboResizeValues->currentText() == "%") {
         spin_geoWidth->setValue(100);
@@ -962,13 +1075,11 @@ void MainWindowImpl::checkVersion()
     int currentVersion = globals::CURRENT_INTERNAL_VERSION;
 
     if (savedVersion < currentVersion) {
-#if defined(Q_OS_WIN)
-	// Open thank you page on Windows
-		QString welcomePage = QString("http://converseen.fasterland.net/thank/");
-
+#if (defined(Q_OS_WIN) || defined(Q_OS_MACOS))
+        // Open thank you page
+        QString welcomePage = QString("https://converseen.fasterland.net/thank/");
 		QDesktopServices::openUrl(QUrl(welcomePage, QUrl::TolerantMode));
 #endif
-
 		IniSettings::setCurrentVersion(currentVersion);
     }
 }
@@ -1086,6 +1197,11 @@ void MainWindowImpl::checkForUpdates()
 void MainWindowImpl::bugReport()
 {
     QDesktopServices::openUrl(QUrl("https://github.com/Faster3ck/Converseen/issues", QUrl::TolerantMode));
+}
+
+void MainWindowImpl::onlineHelp()
+{
+    QDesktopServices::openUrl(QUrl("https://converseen.fasterland.net/help/", QUrl::TolerantMode));
 }
 
 void MainWindowImpl::setRelativeSizeCheckboxes(int state)

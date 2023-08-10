@@ -29,20 +29,20 @@
     </description>
     <screenshots>
         <screenshot height="900" width="1600" type="default">
-            <image>https://fasterland.net/images/appstream/converseen-appdata-1.png</image>
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-1.png</image>
             <caption>The main window showing the application in action</caption>
         </screenshot>
         <screenshot height="900" width="1600">
-            <image>https://fasterland.net/images/appstream/converseen-appdata-2.png</image>
-            <caption>The image preferences window where you can change the settings</caption>
-        </screenshot>
-        <screenshot height="900" width="1600">
-            <image>https://fasterland.net/images/appstream/converseen-appdata-3.png</image>
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-2.png</image>
             <caption>The program during the image processing</caption>
         </screenshot>
         <screenshot height="900" width="1600">
-            <image>https://fasterland.net/images/appstream/converseen-appdata-4.png</image>
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-3.png</image>
             <caption>The PDF import dialog</caption>
+        </screenshot>
+        <screenshot height="900" width="1600">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-4.png</image>
+            <caption>The image preferences window where you can change the settings</caption>
         </screenshot>
     </screenshots>
     <categories>
@@ -70,15 +70,20 @@
     <url type="donation">https://converseen.fasterland.net/thank/</url>
     <url type="help">https://converseen.fasterland.net/help/</url>
     <releases>
-        <release version="0.9.11.1" date="2023-03-13">
+        <release version="0.10.0.0" date="2023-08-10">
             <description>
                 <ol>
-                    <li>Added decimal values in scaling by percentage</li>
+                    <li>Now it's possible to import entire folders and subfolders</li>
+                    <li>Revamped PDF processor tool</li>
+                    <li>Fixed decimal values in scaling by percentage</li>
+                    <li>Added help pages for PDF conversion</li>
+                    <li>Updated Italian and French translations</li>
                     <li>Various improvements in the user interface</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+        <release version="0.9.11.1" date="2023-03-13" />
         <release version="0.9.11.0" date="2023-02-14" />
         <release version="0.9.10.1" date="2023-01-16" />
         <release version="0.9.10.0" date="2023-01-08" />

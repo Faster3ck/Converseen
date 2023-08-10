@@ -61,7 +61,7 @@ void PixTreeWidget::addItems(QList<ImageAttributes> *iAList)
 
     for (int i = 0; i < cnt; i++) {
         QTreeWidgetItem *item = new QTreeWidgetItem(this);
-        item->setCheckState(0, Qt::Unchecked);
+        item->setCheckState(0, Qt::Checked);
         item->setText(2, iAList->at(i).fileName);
         item->setText(3, iAList->at(i).suffix);
         item->setText(4, SizeUtil::simplifyFileSize(iAList->at(i).size));
@@ -87,19 +87,25 @@ void PixTreeWidget::dropEvent(QDropEvent *event)
         return;
 
     QStringList fileNames;
+    QStringList directories;
     QFileInfo fi;
 
     for (int i = 0; i < urls.count(); i++) {
         fi = urls.at(i).toLocalFile();
 
-        QStringList readableFomats = Formats::readableFilters();
+        if (fi.isDir()) {
+            directories << urls.at(i).toLocalFile().toLocal8Bit();
+        }
+        if (fi.isFile()) {
+            QStringList readableFomats = Formats::readableFilters();
 
-        if (readableFomats.contains(fi.suffix(), Qt::CaseInsensitive))
-            fileNames << urls.at(i).toLocalFile().toLocal8Bit();
+            if (readableFomats.contains(fi.suffix(), Qt::CaseInsensitive))
+                fileNames << urls.at(i).toLocalFile().toLocal8Bit();
+        }
     }
 
-    if (!fileNames.isEmpty())
-        emit dropped(fileNames);
+    if ((!fileNames.isEmpty()) || (!directories.isEmpty()))
+        emit dropped(fileNames, directories);
 }
 
 void PixTreeWidget::checkItems()

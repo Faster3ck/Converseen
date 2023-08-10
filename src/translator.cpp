@@ -47,7 +47,15 @@ QTranslator *Translator::translation()
     QTranslator *transl = new QTranslator;
     QString translationFile = QString("%1/%2").arg(m_loc).arg(loadCurrentTranslationName());
     //QString translationFileQt = QLibraryInfo::location(QLibraryInfo::TranslationsPath) + "qt_" + QLocale::system().name();
-    transl->load(translationFile);
+
+    QFileInfo fi(translationFile);
+
+    if (fi.exists()) {
+        transl->load(translationFile);
+        return transl;
+    }
+    else
+        return NULL;
 
     //
     /*transl->load("qt_" + QLocale::system().name(),
@@ -55,7 +63,7 @@ QTranslator *Translator::translation()
 
     //qDebug() << "Locations " << QStandardPaths::standardLocations(QStandardPaths::AppLocalDataLocation);
 
-    return(transl);
+
 }
 
 QString Translator::loadCurrentTranslationName()
@@ -83,7 +91,8 @@ QString Translator::findLangDir()
         if (qmFilesFound(langDir))
             return langDir;
     }
-
+#elifdef Q_OS_MACOS
+    langDir = QString("%1/../Resources/loc").arg(binDir);
 #else
     langDir = QString("%1/loc").arg(binDir);
 #endif

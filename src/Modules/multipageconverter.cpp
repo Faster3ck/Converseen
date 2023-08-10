@@ -22,7 +22,14 @@
 */
 
 #include "multipageconverter.h"
+#include <Magick++.h>
+#include <string>
+#include <iostream>
+#include <list>
 #include <QDebug>
+
+using namespace Magick;
+using namespace std;
 
 MultipageConverter::MultipageConverter(QObject *parent) :
     QObject(parent)
@@ -32,48 +39,39 @@ MultipageConverter::MultipageConverter(QObject *parent) :
 
 void MultipageConverter::readFile(QString fileName)
 {
-    int page_counter = 0;
-    QString tmpFileName;
     Image my_image;
 
     m_pagesList.clear();
 
-    for (;;) {
-        try {
+    list<Image> pdfPages;
+
+    try {
+        Magick::readImages(&pdfPages, fileName.toStdString());
+
+        for (std::list<Image>::iterator it = pdfPages.begin(); it != pdfPages.end(); ++it){
             MultipageItem mpi;
 
-            tmpFileName = QString("%1[%2]")
-                    .arg(fileName)
-                    .arg(QString::number(page_counter));
+            mpi.w = it->columns();
+            mpi.h = it->rows();
 
-            my_image.read(tmpFileName.toStdString());
+            mpi.xres = it->xResolution();
+            mpi.yres = it->yResolution();
 
-            mpi.w = my_image.columns();
-            mpi.h = my_image.rows();
-
-            mpi.xres = my_image.xResolution();
-            mpi.yres = my_image.yResolution();
-
-            mpi.depth = my_image.depth();
+            mpi.depth = it->depth();
 
             m_pagesList << mpi;
-
-            page_counter++;
         }
-        catch (Error& my_error) {
-            qWarning() << "Warning: " << QString::fromStdString(my_error.what());
-            break;
-        }
-        catch( Magick::WarningCoder &warning )
-        {
-            qWarning() << "Warning: " << QString::fromStdString(warning.what());
-            break;
-        }
-        catch( Magick::Warning &warning )
-        {
-            qWarning() << "Warning: " << QString::fromStdString(warning.what());
-            break;
-        }
+    }
+    catch (Error& my_error) {
+        qWarning() << "Warning: " << QString::fromStdString(my_error.what());
+    }
+    catch( Magick::WarningCoder &warning )
+    {
+        qWarning() << "Warning: " << QString::fromStdString(warning.what());
+    }
+    catch( Magick::Warning &warning )
+    {
+        qWarning() << "Warning: " << QString::fromStdString(warning.what());
     }
 }
 

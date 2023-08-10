@@ -2,4 +2,4 @@
 *.log
 *.qm
 *.user
-
+*.DS_Store

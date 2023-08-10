@@ -39,6 +39,7 @@ private:
 
 private slots:
     void acceptDialog();
+    void on_actionHelp_triggered();
 };
 
 #endif // DIALOGMULTIPAGEEDITOR_H

@@ -268,6 +268,18 @@ p, li { white-space: pre-wrap; }
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;How to enable the PDF conversion?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Come abilitare la conversione dei PDF?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
+    <message>
+        <source>Help</source>
+        <translation>Aiuto</translation>
+    </message>
+    <message>
+        <source>Open online help</source>
+        <translation>Apri aiuto online</translation>
+    </message>
+    <message>
+        <source>F1</source>
+        <translation>F1</translation>
+    </message>
 </context>
 <context>
     <name>DialogOptions</name>
@@ -860,6 +872,18 @@ p, li { white-space: pre-wrap; }
         <source>&amp;180°</source>
         <translation>&amp;180°</translation>
     </message>
+    <message>
+        <source>Import directory</source>
+        <translation>Importa cartella</translation>
+    </message>
+    <message>
+        <source>Online Help</source>
+        <translation>Aiuto Online</translation>
+    </message>
+    <message>
+        <source>Open online help</source>
+        <translation>Apri aiuto online</translation>
+    </message>
 </context>
 <context>
     <name>MainWindowImpl</name>
@@ -968,6 +992,14 @@ Click Abort per annullare tutte le operazioni.</translation>
     <message>
         <source>Converted</source>
         <translation>Convertito</translation>
+    </message>
+    <message>
+        <source>Do you want to import subfolders as well?</source>
+        <translation>Desideri importare anche le sottocartelle?</translation>
+    </message>
+    <message>
+        <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
+        <translation>Stai per importare %1 cartelle. Desideri importare anche le rispettive sottocartelle?</translation>
     </message>
 </context>
 <context>
