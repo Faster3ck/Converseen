@@ -79,7 +79,7 @@ QString Translator::findLangDir()
     QStorageInfo storage(qApp->applicationDirPath());
     QString rootPath = storage.rootPath();
 
-#ifdef Q_OS_LINUX
+#if defined(Q_OS_LINUX)
     QStringList langDirs;
 
     langDirs.append(QString("%1/usr/share/converseen/loc").arg(rootPath));
@@ -91,7 +91,7 @@ QString Translator::findLangDir()
         if (qmFilesFound(langDir))
             return langDir;
     }
-#elifdef Q_OS_MACOS
+#elif defined(Q_OS_MACOS)
     langDir = QString("%1/../Resources/loc").arg(binDir);
 #else
     langDir = QString("%1/loc").arg(binDir);

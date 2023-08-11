@@ -1,37 +1,42 @@
 # Converseen
 
-![alt text](https://converseen.fasterland.net/res/converseen-linux.png "Converseen on Kde")
+![alt text](https://converseen.fasterland.net/images/appstream/converseen-appdata-1.png "Converseen on Kde")
 
-**Converseen** is an open source project written in **C++** with the powerful **Qt5** libraries.
-Thanks to the **Magick++** image libraries it supports more than **100 image formats**.
-You can convert an unlimited number of images and / or create thumbnails
-to any of the most popular formats: DPX, EXR, GIF, JPEG, JPEG-2000, PDF, PhotoCD, PNG, Postscript, SVG, and TIFF.
-With **Converseen** you can save your time because it allows you to process more than one image with a mouse click!
-**Converseen** is very simple: it features a very simple user interface without strange options.
+**Converseen** is a free **cross-platform batch image processor** for **Windows**, **Linux**, **macOS**, **FreeBSD**, and other operating systems. It allows you to **convert**, **resize**, **rotate**, and **flip** an infinite number of images with a single mouse click. Moreover, **Converseen** can convert an entire **PDF** document into a set of images with your preferred characteristics. You can choose from over **100+ formats**, set the size, resolution, and the filename.
+
+Thanks to **ImageMagick**, the powerful image manipulation library, **Converseen** can handle more than **100 image formats**, including **DPX, EXR, GIF, JPEG, JPEG-2000, PNG, SVG, TIFF, WebP, HEIC/HEIF**, and many others. **Converseen** is designed to be user-friendly, fast, practical, and best of all, it’s available for **free**!
 
 ## What you can do with *Converseen*?
 
-With converseen you can:
+With **Converseen** you can:
 * Carry out a single or a multiple conversion.
 * Resize one or multiple images.
 * Compress images for your web pages.
+* Rotate and flip images.
+* Rename a set of images using a progressive number or a prefix/suffix.
+* Selecting a resampling filter to resize images.
+* Convert an entire PDF to a bunch of images
 
 ## Installing
 
-**Converseen** is available for both **Linux** and **Windows** platforms.  
-To install **Converseen** source or binaries follow [these instructions](https://converseen.fasterland.net/download-for-linux/).
+**Converseen** is available for free for several operating systems including **Windows 7/8/10/11**, all versions of **Linux** such as **Ubuntu, Mint, Fedora, Arch Linux, openSUSE** either through the **official repos** or through **AppImage**, **Snap** and **Flatpak** packages, **macOS 10.13+**, but also **FreeBSD**.
+
+* [Download for Windows](https://converseen.fasterland.net/download-for-windows/)
+* [Download for Linux](https://converseen.fasterland.net/download-for-linux/)
+* [Download for macOS](https://converseen.fasterland.net/download-for-macos/)
+* [Download for FreeBSD](https://converseen.fasterland.net/download-freebsd/)
 
 ## Author
 
 [Francesco Mondello](https://converseen.fasterland.net/).
 To contact me you can use [this page](https://converseen.fasterland.net/contact-me/).
-  
-  
+
+
 You can find more details about **Converseen** at [converseen.fasterland.net](https://converseen.fasterland.net/).
-If you appreciate this work and would like to support the project, you are welcome to [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC) **1 EUR** via **Paypal**.  
+If you appreciate this work and would like to support the project, you are welcome to [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC) via **Paypal**.
 
 ## License
- 
+
     Converseen - The image batch converter and resizer
     Copyright (C) 2009 - 2023  Francesco Mondello
 
@@ -46,4 +51,4 @@ If you appreciate this work and would like to support the project, you are welco
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
