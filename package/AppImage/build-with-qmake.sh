@@ -31,6 +31,10 @@ trap cleanup EXIT
 REPO_ROOT=$(readlink -f ../../)
 OLD_CWD=$(readlink -f .)
 
+# Fix content rating line in converseen.appdata.xml
+cp ../../converseen.appdata.xml ../../converseen.appdata_orig.xml
+sed -i 's/<content_rating type="oars-1.1" \/>/<content_rating type="oars-1.1">none<\/content_rating>/' ../../converseen.appdata.xml
+
 # switch to build dir
 cd "$BUILD_DIR"
 
@@ -70,7 +74,7 @@ cp $(ldconfig -p | grep libcrypto.so.1 | head -n1 | tr ' ' '\n' | grep /) $BUILD
 cp -rvf /usr/share/ghostscript $BUILD_DIR/AppDir/usr/share
 rm -rvf $BUILD_DIR/AppDir/usr/share/ghostscript/9.26/iccprofiles
 mkdir -p $BUILD_DIR/AppDir/usr/share/ghostscript/9.26/iccprofiles
-cp -rvf /usr/share/ghostscript/9.26/iccprofiles $BUILD_DIR/AppDir/usr/share/ghostscript/9.26/iccprofiles
+cp -rvf /usr/share/ghostscript/9.26/iccprofiles/* $BUILD_DIR/AppDir/usr/share/ghostscript/9.26/iccprofiles
 
 # Fix metadata directory and filename
 mv $BUILD_DIR/AppDir/usr/share/appdata $BUILD_DIR/AppDir/usr/share/metainfo

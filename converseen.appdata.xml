@@ -70,19 +70,15 @@
     <url type="donation">https://converseen.fasterland.net/thank/</url>
     <url type="help">https://converseen.fasterland.net/help/</url>
     <releases>
-        <release version="0.10.0.0" date="2023-08-10">
+        <release version="0.10.0.1" date="2023-08-15">
             <description>
                 <ol>
-                    <li>Now it's possible to import entire folders and subfolders</li>
-                    <li>Revamped PDF processor tool</li>
-                    <li>Fixed decimal values in scaling by percentage</li>
-                    <li>Added help pages for PDF conversion</li>
-                    <li>Updated Italian and French translations</li>
-                    <li>Various improvements in the user interface</li>
+                    <li>Fixed a compile error when using ImageMagick-6</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+	<release version="0.10.0.0" date="2023-08-10" />
         <release version="0.9.11.1" date="2023-03-13" />
         <release version="0.9.11.0" date="2023-02-14" />
         <release version="0.9.10.1" date="2023-01-16" />

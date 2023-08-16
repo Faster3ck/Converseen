@@ -335,8 +335,12 @@ Image Converter::convertPDFtoImage(Image &my_image)
     Image ximage;
 
     ximage.magick(my_image.magick());
-
+    
+#if MagickLibVersion < 0x700
+    ximage.antiAlias(true);
+#else
     ximage.textAntiAlias(true);
+#endif
 
     ximage.quiet(false);
 

@@ -1,3 +1,7 @@
+0.10.0.1 – 2023-08-15
+- Fixed a compile error when using ImageMagick-6
+- Various Bugfixes
+
 0.10.0.0 – 2023-08-10
 - Now it's possible to import entire folders and subfolders
 - Revamped PDF processor tool

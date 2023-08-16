@@ -59,15 +59,6 @@ int main(int argc, char ** argv)
     qputenv("GS_OPTIONS", gs_options.toLocal8Bit());
 #endif
 
-#if defined(Q_OS_WIN)
-    QString resdir = QApplication::applicationDirPath() + "\\libraries";
-
-    qputenv("MAGICK_HOME", resdir.toLocal8Bit());
-    qputenv("MAGICK_CONFIGURE_PATH", resdir.toLocal8Bit());
-    qputenv("MAGICK_CODER_MODULE_PATH", resdir.toLocal8Bit() + "\\modules\\coders");
-    qputenv("MAGICK_CODER_FILTER_PATH", resdir.toLocal8Bit() + "\\modules\\filters");
-#endif
-
     // Default traslations for Qt apps
     QTranslator qtTranslator;
     qtTranslator.load("qt_" + QLocale::system().name(),
