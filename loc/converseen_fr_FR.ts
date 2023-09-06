@@ -332,17 +332,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogmultipageeditor.ui" line="157"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Aide</translation>
     </message>
     <message>
         <location filename="../ui/dialogmultipageeditor.ui" line="160"/>
         <source>Open online help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir l&apos;aide en ligne</translation>
     </message>
     <message>
         <location filename="../ui/dialogmultipageeditor.ui" line="163"/>
         <source>F1</source>
-        <translation type="unfinished">F1</translation>
+        <translation>F1</translation>
     </message>
 </context>
 <context>
@@ -1029,17 +1029,17 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/mainwindow.ui" line="1426"/>
         <location filename="../ui/mainwindow.ui" line="1429"/>
         <source>Import directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Importer le répertoire</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1438"/>
         <source>Online Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Aide en ligne</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1441"/>
         <source>Open online help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ouvrir l&apos;aide en ligne</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1444"/>
@@ -1121,7 +1121,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="261"/>
         <source>Do you want to import subfolders as well?</source>
-        <translation type="unfinished"></translation>
+        <translation>Voulez-vous également importer des sous-dossiers ?</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="290"/>
@@ -1151,7 +1151,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="335"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
-        <translation type="unfinished"></translation>
+        <translation>Vous allez importer %1 répertoires. Voulez-vous également importer les sous-dossiers ?</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="436"/>
