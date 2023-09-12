@@ -33,6 +33,9 @@
 #include <string>
 #include <iostream>
 
+using namespace Magick;
+using namespace std;
+
 class Formats : public QObject
 {
     Q_OBJECT
@@ -53,6 +56,7 @@ private:
     static QStringList s_readableFormattedFilters;
     static QStringList s_writableFilters;
     static QStringList sortNonCaseSensitive(QStringList list);
+    static bool isVideo(list<CoderInfo>::iterator entry);
 
 signals:
 

@@ -26,9 +26,6 @@
 #include <QTextStream>
 #include "formats.h"
 
-using namespace Magick;
-using namespace std;
-
 QString Formats::s_readableFiltersString;
 QStringList Formats::s_readableFilters;
 QStringList Formats::s_readableFormattedFilters;
@@ -36,7 +33,6 @@ QStringList Formats::s_writableFilters;
 
 void Formats::loadFormats()
 {
-//#if defined(Q_OS_LINUX) || defined(Q_OS_FREEBSD)
     list<CoderInfo> coderList;
     try {
         coderInfoList(&coderList,
@@ -55,9 +51,12 @@ void Formats::loadFormats()
 
     blacklist << "pdf" << "ico" << "icon";
 
+    QString uuu = "";
+
     while(entry != coderList.end())
     {
-        if (entry->isReadable()) {
+        // Readable formats
+        if ((entry->isReadable()) && (!isVideo(entry))) {
             QString currFormat = QString::fromStdString(entry->name()).toLower();
             if (!(blacklist.contains(currFormat))) {
                 readableFiltersList << QString(";;%3 [*.%1] (*.%1 *.%2 )")
@@ -76,7 +75,8 @@ void Formats::loadFormats()
             }
         }
 
-        if (entry->isWritable()) {
+        // Writable formats
+        if ((entry->isWritable()) && (!isVideo(entry))) {
             s_writableFilters << QString("%1 - (%2)")
                                  .arg(QString::fromStdString(entry->name()))
                                  .arg(QString::fromStdString(entry->description()));
@@ -102,26 +102,6 @@ void Formats::loadFormats()
 
     s_readableFiltersString = readableFiltersList.join("");
     s_readableFiltersString.prepend(tr("All Supported Filters (%1)").arg(readableExts));
-/*#else
-    QFile data1(QDir::cleanPath("FileFormats/Readableformats.txt"));
-    if (data1.open(QFile::ReadOnly)) {
-        QTextStream in(&data1);
-
-        s_readableFilters = in.readLine().split(" ");
-        s_readableFiltersString = in.readLine();
-    }
-
-    QFile data2(QDir::cleanPath("FileFormats/WritableFormats.txt"));
-    if (data2.open(QFile::ReadOnly)) {
-        QTextStream in(&data2);
-        QString line;
-        do {
-            line = in.readLine();
-            s_writableFilters << line;
-        } while (!line.isNull());
-    }
-    s_writableFilters.removeLast();
-#endif*/
 
     // Adding manually some missing but supported formats
     s_writableFilters << "TIF - (Tagged Image File Format)";
@@ -184,6 +164,19 @@ QStringList  Formats::sortNonCaseSensitive(QStringList list) {
     list = map.values();
 
     return list;
+}
+
+bool Formats::isVideo(list<CoderInfo>::iterator entry)
+{
+#if MagickLibVersion < 0x700
+    // Support for ImageMagick-6. This will be removed sooner as Linux distros drop the support!
+    QString currFormat = QString::fromStdString(entry->name());
+    QStringList videoFormats(QStringList() << "3G2" << "3GP" << "APNG" << "AVI" << "FLV" << "M2V" << "M4V" << "MKV" << "MOV" << "MP4" << "MPEG" << "MPG" << "WEBM" << "WMV");
+
+    return videoFormats.contains(currFormat);
+#else
+    return (QString::fromStdString(entry->module()) == "VIDEO") ? true : false;
+#endif
 }
 
 void Formats::printSupportedFormats()

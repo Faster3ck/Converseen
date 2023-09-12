@@ -177,7 +177,6 @@ macx {
  INSTALLS += target \
  translations \
  icon16 \
- icon22 \
  icon32 \
  icon48 \
  icon64 \

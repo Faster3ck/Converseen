@@ -67,31 +67,31 @@ void Converter::run()
         out = overwriteOldFileName(out);
 
     if (!m_process_stopped) {
+        my_image.quiet(true);
         try {
-            my_image.quiet(true);
             my_image.read(m_fileNameIn.toStdString());
-        } catch (Error& my_error) {
+        } catch (Error &error) {
             m_conv_status = -1;
 
-            err_read_status = tr("Error: %1").arg(QString::fromStdString(my_error.what()));
+            err_read_status = tr("Error: %1").arg(QString::fromStdString(error.what()));
             qWarning() << "Read Error: " << err_read_status;
-            //emit errorMessage(err_read_status);
+            emit errorMessage(err_read_status);
+
+            return;
         }
         catch( Magick::WarningCoder &warning )
         {
             m_conv_status = -1;
 
             err_read_status = tr("Error: %1").arg(QString::fromStdString(warning.what()));
-            qWarning() << "Read Error: " << err_read_status;
-            //emit errorMessage(err_read_status);
+            qWarning() << "Read Warning: " << err_read_status;
         }
         catch( Magick::Warning &warning )
         {
             m_conv_status = -1;
 
             err_read_status = tr("Error: %1").arg(QString::fromStdString(warning.what()));
-            qWarning() << "Read Error: " << err_read_status;
-            //emit errorMessage(err_read_status);
+            qWarning() << "Read Warning: " << err_read_status;
         }
 
         if (m_resize)
@@ -109,6 +109,7 @@ void Converter::run()
         else {
             qWarning() << "Write Error: " << err_write_status;
 
+            m_conv_status = -1;
             emit errorMessage(err_write_status);
         }
     }
@@ -266,6 +267,16 @@ void Converter::setRemoveMetadata(const bool &value)
 bool Converter::writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status)
 {
     QString inputFormat = QString::fromLocal8Bit(my_image.magick().c_str());
+
+    Magick::CoderInfo formatCoderInfo(format.toUpper().toStdString());
+    bool is_writable = formatCoderInfo.isWritable();
+
+    if (!is_writable) {
+        error_status = tr("ERROR: Format %1 is not supported for writing, choose another output format. Skipping!")
+                           .arg(QString::fromStdString(my_image.magick().c_str()));
+
+        return false;
+    }
 
     if (inputFormat == "PDF")
         my_image = convertPDFtoImage(my_image);

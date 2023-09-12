@@ -7,6 +7,10 @@
         <source>Error: %1</source>
         <translation>Errore: %1</translation>
     </message>
+    <message>
+        <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
+        <translation>ERRORE: Il formato %1 non è supportato in scrittura, scegli un altro formato di output. Salto!</translation>
+    </message>
 </context>
 <context>
     <name>DialogConversionStatus</name>

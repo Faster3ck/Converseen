@@ -7,6 +7,10 @@
         <source>Error: %1</source>
         <translation>Ошибка: %1</translation>
     </message>
+    <message>
+        <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogConversionStatus</name>

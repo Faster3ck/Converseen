@@ -42,6 +42,8 @@ DialogConversionStatus::DialogConversionStatus(QWidget *parent) :
 
     connect(menu, SIGNAL(triggered(QAction*)), this, SLOT(openDir(QAction*)));
     connect(actionOpenAllDirs, SIGNAL(triggered()), this, SLOT(openAllDirs()));
+
+    treeWidget->header()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 }
 
 void DialogConversionStatus::setup(int n_images)

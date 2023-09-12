@@ -1,3 +1,10 @@
+0.11.0.0 – 2023-09-11
+- Various changes in the User Interface
+- Skipping conversion when "Don't change the format" is selected but the output format is not supported
+- Removed unused video formats
+- Updated Italian and French translations
+- Various Bugfixes
+
 0.10.0.1 – 2023-08-15
 - Fixed a compile error when using ImageMagick-6
 - Various Bugfixes

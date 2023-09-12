@@ -10,6 +10,11 @@
         <source>Error: %1</source>
         <translation>Fel: %1</translation>
     </message>
+    <message>
+        <location filename="../src/converter.cpp" line="275"/>
+        <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogConversionStatus</name>
@@ -24,17 +29,17 @@
         <translation>Konverteringsstatus</translation>
     </message>
     <message>
-        <location filename="../ui/dialogconversionstatus.ui" line="46"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="61"/>
         <source>Image:</source>
         <translation>Bild:</translation>
     </message>
     <message>
-        <location filename="../ui/dialogconversionstatus.ui" line="51"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="66"/>
         <source>Status:</source>
         <translation>Status:</translation>
     </message>
     <message>
-        <location filename="../ui/dialogconversionstatus.ui" line="70"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="85"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -47,14 +52,14 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Totalt:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialogconversionstatus.ui" line="81"/>
-        <location filename="../ui/dialogconversionstatus.ui" line="116"/>
-        <location filename="../ui/dialogconversionstatus.ui" line="151"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="96"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="131"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="166"/>
         <source>0</source>
         <translation>0</translation>
     </message>
     <message>
-        <location filename="../ui/dialogconversionstatus.ui" line="105"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="120"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -67,7 +72,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Konverterat:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialogconversionstatus.ui" line="140"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="155"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -80,17 +85,17 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fel:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialogconversionstatus.ui" line="191"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="206"/>
         <source>Open destination </source>
         <translation>Öppna målmapp </translation>
     </message>
     <message>
-        <location filename="../ui/dialogconversionstatus.ui" line="211"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="226"/>
         <source>Stop</source>
         <translation>Stoppa</translation>
     </message>
     <message>
-        <location filename="../ui/dialogconversionstatus.ui" line="218"/>
+        <location filename="../ui/dialogconversionstatus.ui" line="233"/>
         <source>Close</source>
         <translation>Stäng</translation>
     </message>
@@ -100,7 +105,7 @@ p, li { white-space: pre-wrap; }
         <translation>Öppna alla målmappar</translation>
     </message>
     <message>
-        <location filename="../src/dialogconversionstatus.cpp" line="75"/>
+        <location filename="../src/dialogconversionstatus.cpp" line="77"/>
         <source>Converted</source>
         <translation>Konverterat</translation>
     </message>
@@ -552,7 +557,7 @@ p, li { white-space: pre-wrap; }
         <translation>Alla filter som stöds (%1)</translation>
     </message>
     <message>
-        <location filename="../src/formats.cpp" line="131"/>
+        <location filename="../src/formats.cpp" line="111"/>
         <source>Don&apos;t change the format</source>
         <translation>Ändra inte format</translation>
     </message>
@@ -565,47 +570,47 @@ p, li { white-space: pre-wrap; }
         <translation>Converseen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="67"/>
+        <location filename="../ui/mainwindow.ui" line="65"/>
         <source>Conversion Formats</source>
         <translation>Konverteringsformat</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="75"/>
+        <location filename="../ui/mainwindow.ui" line="73"/>
         <source>Convert to:</source>
         <translation>Konvertera till:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="109"/>
+        <location filename="../ui/mainwindow.ui" line="90"/>
         <source>Show image settings dialog...</source>
         <translation>Visa bildinställningsdialog...</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="112"/>
+        <location filename="../ui/mainwindow.ui" line="93"/>
         <source>Images settings</source>
         <translation>Bildinställningar</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="174"/>
+        <location filename="../ui/mainwindow.ui" line="338"/>
         <source>&amp;File</source>
         <translation>&amp;Arkiv</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="179"/>
+        <location filename="../ui/mainwindow.ui" line="343"/>
         <source>&amp;Edit</source>
         <translation>&amp;Redigera</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="184"/>
+        <location filename="../ui/mainwindow.ui" line="348"/>
         <source>&amp;Actions</source>
         <translation>&amp;Åtgärder</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="189"/>
+        <location filename="../ui/mainwindow.ui" line="353"/>
         <source>&amp;Help</source>
         <translation>&amp;Hjälp</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="269"/>
+        <location filename="../ui/mainwindow.ui" line="433"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -618,12 +623,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Förhandsgranska:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="377"/>
+        <location filename="../ui/mainwindow.ui" line="541"/>
         <source>Show preview</source>
         <translation>Visa förhandsgranskning</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="431"/>
+        <location filename="../ui/mainwindow.ui" line="595"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -636,10 +641,10 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Typ:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="442"/>
-        <location filename="../ui/mainwindow.ui" line="468"/>
-        <location filename="../ui/mainwindow.ui" line="494"/>
-        <location filename="../ui/mainwindow.ui" line="520"/>
+        <location filename="../ui/mainwindow.ui" line="606"/>
+        <location filename="../ui/mainwindow.ui" line="632"/>
+        <location filename="../ui/mainwindow.ui" line="658"/>
+        <location filename="../ui/mainwindow.ui" line="684"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -652,7 +657,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; - &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="457"/>
+        <location filename="../ui/mainwindow.ui" line="621"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -665,7 +670,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Filstorlek:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="483"/>
+        <location filename="../ui/mainwindow.ui" line="647"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -678,7 +683,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Bildstorlek:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="509"/>
+        <location filename="../ui/mainwindow.ui" line="673"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -691,22 +696,22 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Bildupplösning:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="545"/>
+        <location filename="../ui/mainwindow.ui" line="709"/>
         <source>Dimensions</source>
         <translation>Dimensioner</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="579"/>
+        <location filename="../ui/mainwindow.ui" line="743"/>
         <source>Width:</source>
         <translation>Bredd:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="586"/>
+        <location filename="../ui/mainwindow.ui" line="750"/>
         <source>Height:</source>
         <translation>Höjd:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="737"/>
+        <location filename="../ui/mainwindow.ui" line="901"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -719,364 +724,364 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 pixel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="757"/>
+        <location filename="../ui/mainwindow.ui" line="921"/>
         <source>Mantain aspect ratio</source>
         <translation>Bevara proportioner</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="143"/>
+        <location filename="../ui/mainwindow.ui" line="124"/>
         <source>Replace transparent background</source>
         <translation>Ersätt transparent bakgrund</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="150"/>
+        <location filename="../ui/mainwindow.ui" line="131"/>
         <source>Choose color</source>
         <translation>Välj färg</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="223"/>
+        <location filename="../ui/mainwindow.ui" line="387"/>
         <source>Actio&amp;ns Panel</source>
         <translation>Åtg&amp;ärdspanel</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="563"/>
+        <location filename="../ui/mainwindow.ui" line="727"/>
         <source>Scale image</source>
         <translation>Skala bild</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="750"/>
+        <location filename="../ui/mainwindow.ui" line="914"/>
         <source>Link aspect with selected image</source>
         <translation>Länka proportion med markerad bild</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="778"/>
+        <location filename="../ui/mainwindow.ui" line="942"/>
         <source>Resolution</source>
         <translation>Upplösning</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="794"/>
+        <location filename="../ui/mainwindow.ui" line="958"/>
         <source>Resolution X:</source>
         <translation>Upplösning X:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="801"/>
+        <location filename="../ui/mainwindow.ui" line="965"/>
         <source>Resolution Y:</source>
         <translation>Upplösning Y:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="858"/>
-        <location filename="../ui/mainwindow.ui" line="864"/>
+        <location filename="../ui/mainwindow.ui" line="1022"/>
+        <location filename="../ui/mainwindow.ui" line="1028"/>
         <source>Rotate and flip</source>
         <translation>Rotera och vänd</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="879"/>
+        <location filename="../ui/mainwindow.ui" line="1043"/>
         <source>Rotate image:</source>
         <translation>Rotera bild:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="888"/>
+        <location filename="../ui/mainwindow.ui" line="1052"/>
         <source>No rotation</source>
         <translation>Ingen rotation</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="960"/>
+        <location filename="../ui/mainwindow.ui" line="1124"/>
         <source>Flip image:</source>
         <translation>Vänd bild:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="969"/>
+        <location filename="../ui/mainwindow.ui" line="1133"/>
         <source>No flip</source>
         <translation>Vänd inte</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="987"/>
+        <location filename="../ui/mainwindow.ui" line="1151"/>
         <source>Horizontally</source>
         <translation>Horisontellt</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1001"/>
+        <location filename="../ui/mainwindow.ui" line="1165"/>
         <source>Vertically</source>
         <translation>Vertikalt</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1051"/>
+        <location filename="../ui/mainwindow.ui" line="155"/>
         <source>Output options</source>
         <translation>Utdataalternativ</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1063"/>
+        <location filename="../ui/mainwindow.ui" line="169"/>
         <source>Save in:</source>
         <translation>Spara i:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1075"/>
+        <location filename="../ui/mainwindow.ui" line="181"/>
         <source>Open output directory</source>
         <translation>Öppna utdatamappen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1078"/>
+        <location filename="../ui/mainwindow.ui" line="184"/>
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1089"/>
+        <location filename="../ui/mainwindow.ui" line="195"/>
         <source>Image&apos;s directory</source>
         <translation>Bildmapp</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1118"/>
+        <location filename="../ui/mainwindow.ui" line="244"/>
         <source>Rename:</source>
         <translation>Byt namn:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1127"/>
+        <location filename="../ui/mainwindow.ui" line="253"/>
         <source>Prefi&amp;x/Suffix</source>
         <translation>Prefi&amp;x/Suffix</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1137"/>
+        <location filename="../ui/mainwindow.ui" line="263"/>
         <source>Progressi&amp;ve Number</source>
         <translation>Progressivt nummer</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1154"/>
+        <location filename="../ui/mainwindow.ui" line="280"/>
         <source>#_copy</source>
         <translation>#_kopia</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1161"/>
+        <location filename="../ui/mainwindow.ui" line="287"/>
         <source>Start with:</source>
         <translation>Börja med:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1190"/>
+        <location filename="../ui/mainwindow.ui" line="316"/>
         <source>Overwrite all</source>
         <translation>Skriv över alla</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1219"/>
+        <location filename="../ui/mainwindow.ui" line="1222"/>
         <source>toolBar</source>
         <translation>Verktygsfält</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1249"/>
+        <location filename="../ui/mainwindow.ui" line="1252"/>
         <source>&amp;Open images</source>
         <translation>&amp;Öppna bilder</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1252"/>
+        <location filename="../ui/mainwindow.ui" line="1255"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1261"/>
+        <location filename="../ui/mainwindow.ui" line="1264"/>
         <source>&amp;Add images</source>
         <translation>&amp;Lägg till bilder</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1264"/>
+        <location filename="../ui/mainwindow.ui" line="1267"/>
         <source>Ctrl+Alt+O</source>
         <translation>Ctrl+Alt+O</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1273"/>
+        <location filename="../ui/mainwindow.ui" line="1276"/>
         <source>&amp;Remove images</source>
         <translation>&amp;Ta bort bilder</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1276"/>
+        <location filename="../ui/mainwindow.ui" line="1279"/>
         <source>Remove selected pictures</source>
         <translation>Ta bort markerade bilder</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1279"/>
+        <location filename="../ui/mainwindow.ui" line="1282"/>
         <source>Del</source>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1288"/>
+        <location filename="../ui/mainwindow.ui" line="1291"/>
         <source>Remove &amp;all</source>
         <translation>Ta &amp;bort alla</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1291"/>
+        <location filename="../ui/mainwindow.ui" line="1294"/>
         <source>Remove all pictures</source>
         <translation>Ta bort alla bilder</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1294"/>
+        <location filename="../ui/mainwindow.ui" line="1297"/>
         <source>Alt+Del</source>
         <translation>Alt+Del</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1303"/>
+        <location filename="../ui/mainwindow.ui" line="1306"/>
         <source>&amp;Check</source>
         <translation>&amp;Välj</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1306"/>
+        <location filename="../ui/mainwindow.ui" line="1309"/>
         <source>Check selected items</source>
         <translation>Välj alla markerade objekt</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1309"/>
+        <location filename="../ui/mainwindow.ui" line="1312"/>
         <source>Ctrl+H</source>
         <translation>Ctrl+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1318"/>
+        <location filename="../ui/mainwindow.ui" line="1321"/>
         <source>Check a&amp;ll</source>
         <translation>Välj &amp;alla</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1321"/>
+        <location filename="../ui/mainwindow.ui" line="1324"/>
         <source>Check all items</source>
         <translation>Välj alla objekt</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1324"/>
+        <location filename="../ui/mainwindow.ui" line="1327"/>
         <source>Ctrl+Alt+H</source>
         <translation>Ctrl+Alt+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1333"/>
+        <location filename="../ui/mainwindow.ui" line="1336"/>
         <source>&amp;Convert</source>
         <translation>&amp;Konvertera</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1336"/>
+        <location filename="../ui/mainwindow.ui" line="1339"/>
         <source>Start the conversion process</source>
         <translation>Påbörja konverteringsprocessen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1339"/>
+        <location filename="../ui/mainwindow.ui" line="1342"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1344"/>
+        <location filename="../ui/mainwindow.ui" line="1347"/>
         <source>&amp;Settings</source>
         <translation>&amp;Inställningar</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1347"/>
+        <location filename="../ui/mainwindow.ui" line="1350"/>
         <source>Open the settings dialog</source>
         <translation>Öppna inställningsdialogen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1352"/>
+        <location filename="../ui/mainwindow.ui" line="1355"/>
         <source>&amp;Exit</source>
         <translation>A&amp;vsluta</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1355"/>
+        <location filename="../ui/mainwindow.ui" line="1358"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1360"/>
+        <location filename="../ui/mainwindow.ui" line="1363"/>
         <source>Uncheck all &amp;items</source>
         <translation>Välj inga &amp;objekt</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1363"/>
+        <location filename="../ui/mainwindow.ui" line="1366"/>
         <source>Ctrl+Alt+J</source>
         <translation>Ctrl+Alt+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1368"/>
+        <location filename="../ui/mainwindow.ui" line="1371"/>
         <source>&amp;Uncheck Items</source>
         <translation>V&amp;älj inte</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1371"/>
+        <location filename="../ui/mainwindow.ui" line="1374"/>
         <source>Uncheck selected items</source>
         <translation>Välj inga objekt</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1374"/>
+        <location filename="../ui/mainwindow.ui" line="1377"/>
         <source>Ctrl+J</source>
         <translation>Ctrl+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1379"/>
+        <location filename="../ui/mainwindow.ui" line="1382"/>
         <source>&amp;About</source>
         <translation>&amp;Om</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1426"/>
         <location filename="../ui/mainwindow.ui" line="1429"/>
+        <location filename="../ui/mainwindow.ui" line="1432"/>
         <source>Import directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1438"/>
+        <location filename="../ui/mainwindow.ui" line="1441"/>
         <source>Online Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1441"/>
+        <location filename="../ui/mainwindow.ui" line="1444"/>
         <source>Open online help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1444"/>
+        <location filename="../ui/mainwindow.ui" line="1447"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1388"/>
+        <location filename="../ui/mainwindow.ui" line="1391"/>
         <source>&amp;Donate via Paypal</source>
         <translation>&amp;Donera via Paypal</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1391"/>
+        <location filename="../ui/mainwindow.ui" line="1394"/>
         <source>Donate via Paypal</source>
         <translation>Donera via Paypal</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1396"/>
+        <location filename="../ui/mainwindow.ui" line="1399"/>
         <source>&amp;Report bug...</source>
         <translation>&amp;Rapportera ett fel...</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1414"/>
+        <location filename="../ui/mainwindow.ui" line="1417"/>
         <source>&amp;Check for updates</source>
         <translation>&amp;Sök efter uppdateringar</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1417"/>
+        <location filename="../ui/mainwindow.ui" line="1420"/>
         <source>Check if a new version of Converseen is available</source>
         <translation>Kontrollera om det finns någon ny version av Converseen tillgänglig</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1401"/>
+        <location filename="../ui/mainwindow.ui" line="1404"/>
         <source>Import PDF file</source>
         <translation>Importera PDF-fil</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="905"/>
+        <location filename="../ui/mainwindow.ui" line="1069"/>
         <source>+ &amp;90°</source>
         <translation>+ &amp;90°</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="919"/>
+        <location filename="../ui/mainwindow.ui" line="1083"/>
         <source>- 9&amp;0°</source>
         <translation>- 9&amp;0°</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="935"/>
+        <location filename="../ui/mainwindow.ui" line="1099"/>
         <source>&amp;180°</source>
         <translation>&amp;180°</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1406"/>
+        <location filename="../ui/mainwindow.ui" line="1409"/>
         <source>Import windows icon (*.ico)</source>
         <translation>Importera Windows-ikon (*.ico)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1409"/>
+        <location filename="../ui/mainwindow.ui" line="1412"/>
         <source>Import windows icon (*.ico *.icon)</source>
         <translation>Importera Windows-ikon (*.ico *.icon)</translation>
     </message>
