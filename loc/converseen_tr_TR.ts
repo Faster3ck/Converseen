@@ -9,7 +9,7 @@
     </message>
     <message>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
-        <translation type="unfinished"></translation>
+        <translation>HATA: %1 biçimi yazma için desteklenmiyor, başka bir çıktı biçimi seçin. Atlanıyor!</translation>
     </message>
 </context>
 <context>
@@ -279,15 +279,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Yardım</translation>
     </message>
     <message>
         <source>Open online help</source>
-        <translation type="unfinished"></translation>
+        <translation>Çevrim içi yardımı aç</translation>
     </message>
     <message>
         <source>F1</source>
-        <translation type="unfinished">F1</translation>
+        <translation>F1</translation>
     </message>
 </context>
 <context>
@@ -429,7 +429,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Enable Lossless Compression</source>
-        <translation type="unfinished"></translation>
+        <translation>Kayıpsız Sıkıştırmayı Etkinleştir</translation>
     </message>
 </context>
 <context>
@@ -889,15 +889,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Import directory</source>
-        <translation type="unfinished"></translation>
+        <translation>İçe aktarma dizini</translation>
     </message>
     <message>
         <source>Online Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Çevrim İçi Yardım</translation>
     </message>
     <message>
         <source>Open online help</source>
-        <translation type="unfinished"></translation>
+        <translation>Çevrim içi yardımı aç</translation>
     </message>
 </context>
 <context>
@@ -1010,11 +1010,11 @@ Tüm işlemleri iptal etmek için Vazgeç&apos;e tıklayın.</translation>
     </message>
     <message>
         <source>Do you want to import subfolders as well?</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt klasörleri de içe aktarmak istiyor musunuz?</translation>
     </message>
     <message>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 klasörü içe aktaracaksınız. Alt klasörleri de içe aktarmak istiyor musunuz?</translation>
     </message>
 </context>
 <context>
