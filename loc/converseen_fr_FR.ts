@@ -13,7 +13,7 @@
     <message>
         <location filename="../src/converter.cpp" line="275"/>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
-        <translation type="unfinished"></translation>
+        <translation>ERREUR : le format %1 n&apos;est pas pris en charge pour l&apos;écriture, choisissez un autre format de sortie. Ignoré!</translation>
     </message>
 </context>
 <context>
