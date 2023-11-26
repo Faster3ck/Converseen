@@ -34,7 +34,7 @@ void globals::Globals::setSignature(const QString &signature)
 
 QString globals::Globals::signature()
 {
-    using namespace  globals;
+    using namespace globals;
     return m_sig;
 }
 

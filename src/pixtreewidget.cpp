@@ -91,7 +91,9 @@ void PixTreeWidget::dropEvent(QDropEvent *event)
     QFileInfo fi;
 
     for (int i = 0; i < urls.count(); i++) {
-        fi = urls.at(i).toLocalFile();
+        QString localFile = urls.at(i).toLocalFile();
+
+        fi.setFile(localFile);
 
         if (fi.isDir()) {
             directories << urls.at(i).toLocalFile().toLocal8Bit();

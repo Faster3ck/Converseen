@@ -217,6 +217,10 @@ p, li { white-space: pre-wrap; }
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Traduzione russa: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</translation>
     </message>
+    <message>
+        <source>Qt Version:</source>
+        <translation>Versione di Qt:</translation>
+    </message>
 </context>
 <context>
     <name>DialogMultipageEditor</name>
@@ -820,10 +824,6 @@ p, li { white-space: pre-wrap; }
         <translation>Inizia da:</translation>
     </message>
     <message>
-        <source>Link aspect with selected image</source>
-        <translation>Collega aspetto con l&apos;immagine selezionata</translation>
-    </message>
-    <message>
         <source>Import PDF file</source>
         <translation>Importa file PDF</translation>
     </message>
@@ -887,6 +887,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Open online help</source>
         <translation>Apri aiuto online</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Load Image Sizes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;px&apos;&lt;/span&gt; is selected, the original image sizes will be loaded into the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields. &lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; is selected, it restores the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields to &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Carica Dimensione delle Immagini&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Se &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;px&apos;&lt;/span&gt; è selezionato, le dimensioni originali dell&apos;immagine verranno caricare all&apos;interno dei campi &lt;span style=&quot; font-weight:700;&quot;&gt;Larghezza/Altezza&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Se &lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; è selezionato, vengono ripristinati i campi &lt;span style=&quot; font-weight:700;&quot;&gt;Larghezza/Altezza&lt;/span&gt; al &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Collega rapporto di aspetto con l&apos;immagine selezionata&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Regola automaticamente i valori del rapporto d&apos;aspetto quando si inserisce un valore nei campi &lt;span style=&quot; font-weight:700;&quot;&gt;Larghezza/Altezza&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>

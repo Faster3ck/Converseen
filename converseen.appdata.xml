@@ -65,19 +65,26 @@
     <content_rating type="oars-1.1" />
     <url type="homepage">https://converseen.fasterland.net/</url>
     <update_contact>faster3ck@gmail.com</update_contact>
-    <developer_name>Francesco Mondello</developer_name>
+    <developer id="fasterland.net">
+        <name>Francesco Mondello</name>
+    </developer>
     <url type="bugtracker">https://github.com/Faster3ck/Converseen/issues</url>
     <url type="donation">https://converseen.fasterland.net/thank/</url>
     <url type="help">https://converseen.fasterland.net/help/</url>
     <releases>
-        <release version="0.11.0.1" date="2023-10-17">
+        <release version="0.12.0.0" date="2023-11-26">
             <description>
                 <ol>
-                    <li>Updated Turkish translation</li>
+                    <li>Porting to Qt6: Now the program can be compiled with both Qt5 and Qt6 (See the Install.md file for more information)</li>
+                    <li>Now, the program does not autoreset the image resolution settings when the list is emptied</li>
+                    <li>The "Link with Aspect Ratio with Selected Image" option is now a buttons</li>
+                    <li>Added some help information in the UI to clarify the operation of some buttons</li>
+                    <li>Updated French translation</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+        <release version="0.11.0.1" date="2023-10-17" />
         <release version="0.11.0.0" date="2023-09-12" />
         <release version="0.10.0.1" date="2023-08-15" />
         <release version="0.10.0.0" date="2023-08-10" />

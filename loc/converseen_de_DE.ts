@@ -5,8 +5,8 @@
     <name>Converter</name>
     <message>
         <location filename="../src/converter.cpp" line="76"/>
-        <location filename="../src/converter.cpp" line="84"/>
-        <location filename="../src/converter.cpp" line="92"/>
+        <location filename="../src/converter.cpp" line="86"/>
+        <location filename="../src/converter.cpp" line="93"/>
         <source>Error: %1</source>
         <translation>Fehler:%1</translation>
     </message>
@@ -118,12 +118,12 @@ p, li { white-space: pre-wrap; }
         <translation>Über Converseen...</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="86"/>
+        <location filename="../ui/dialoginfo.ui" line="99"/>
         <source>Informations</source>
         <translation>Informationen</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="92"/>
+        <location filename="../ui/dialoginfo.ui" line="105"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -134,7 +134,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="108"/>
+        <location filename="../ui/dialoginfo.ui" line="121"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -147,88 +147,89 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Übersetzer:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="143"/>
+        <location filename="../ui/dialoginfo.ui" line="156"/>
         <source>&lt;strong&gt;Hungarian translation: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Ungarische Übersetzung:: &lt;/strong&gt;Charles Barcza - &lt;a href=&quot;mailto:kbarcza@blackpanther.hu&quot;&gt;kbarcza@blackpanther.hu&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="150"/>
+        <location filename="../ui/dialoginfo.ui" line="163"/>
         <source>&lt;strong&gt;Czech translation: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Tschechische Übersetzung: &lt;/strong&gt;Pavel Fric - &lt;a href=&quot;mailto:pavelfric@seznam.cz&quot;&gt;pavelfric@seznam.cz&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="164"/>
+        <location filename="../ui/dialoginfo.ui" line="177"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Brazilian Portuguese Translation: &lt;/span&gt;Paulo Guzmán - &lt;a href=&quot;mailto:white.hat@msn.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;white.hat@msn.com&lt;/span&gt;&lt;/a&gt; -&lt;span style=&quot; font-weight:600;&quot;/&gt;Márcio Moraes - &lt;a href=&quot;mailto:marciopanto@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;marciopanto@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="174"/>
+        <location filename="../ui/dialoginfo.ui" line="187"/>
         <source>&lt;strong&gt;German Translation: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Deutsche Übersetzung: &lt;/strong&gt;Marco Nickolai - &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="208"/>
+        <location filename="../ui/dialoginfo.ui" line="221"/>
         <source>&lt;strong&gt;Polish Translation: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</source>
         <translation>&lt;strong&gt;Polnische Übersetzung: &lt;/strong&gt;Michał Olber from OSWorld.pl - &lt;a href=&quot;mailto:redakcja@osworld.pl&quot;&gt;redakcja@osworld.pl&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="218"/>
+        <location filename="../ui/dialoginfo.ui" line="231"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="225"/>
+        <location filename="../ui/dialoginfo.ui" line="238"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Danish translation: &lt;/span&gt;Martin Eilsoe - &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="232"/>
+        <location filename="../ui/dialoginfo.ui" line="245"/>
         <source>&lt;strong&gt;Ukrainian translation: &lt;/strong&gt;AleXKaN - &lt;a href=&quot;mailto:aws2@india.com&quot;&gt;aws2@india.com&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="246"/>
+        <location filename="../ui/dialoginfo.ui" line="259"/>
         <source>&lt;strong&gt;Simplified Chinese translation: &lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="44"/>
         <location filename="../ui/dialoginfo.ui" line="67"/>
+        <location filename="../ui/dialoginfo.ui" line="80"/>
         <source>-</source>
         <translation>-</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="157"/>
+        <location filename="../ui/dialoginfo.ui" line="170"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;French Translation: &lt;/span&gt;Adrien DAUGABEL - &lt;a href=&quot;mailto:adrien.d@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;adrien.d@mageialinux-online.org - &lt;/span&gt;&lt;/a&gt;David GEIGER &lt;a href=&quot;mailto:david.david@mageialinux-online.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;david.david@mageialinux-online.org&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="181"/>
+        <location filename="../ui/dialoginfo.ui" line="194"/>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="188"/>
+        <location filename="../ui/dialoginfo.ui" line="201"/>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="198"/>
+        <location filename="../ui/dialoginfo.ui" line="211"/>
         <source>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="239"/>
+        <location filename="../ui/dialoginfo.ui" line="252"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Swedish translation: &lt;/span&gt;Åke Engelbrektson - &lt;a href=&quot;mailto:eson@svenskasprakfiler.se&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0057ae;&quot;&gt;eson@svenskasprakfiler.se&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="262"/>
+        <location filename="../ui/dialoginfo.ui" line="275"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="322"/>
+        <location filename="../ui/dialoginfo.ui" line="335"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Folgen Sie Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -246,7 +247,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseeen ist ein Batch-Konverter. Damit kannst Du Bilder Skalieren und in mehr als 100 Formate konvertieren.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="405"/>
+        <location filename="../ui/dialoginfo.ui" line="418"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
@@ -256,7 +257,12 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/dialoginfo.cpp" line="51"/>
+        <location filename="../src/dialoginfo.cpp" line="39"/>
+        <source>Qt Version:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/dialoginfo.cpp" line="52"/>
         <source>The batch image converter and resizer.</source>
         <translatorcomment>Der Batch-Konverter und Skalierer für Bilder</translatorcomment>
         <translation>The batch image converter and resizer.</translation>
@@ -712,7 +718,7 @@ p, li { white-space: pre-wrap; }
         <translation>Höhe:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="901"/>
+        <location filename="../ui/mainwindow.ui" line="933"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -725,7 +731,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 Pixel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="921"/>
+        <location filename="../ui/mainwindow.ui" line="946"/>
         <source>Mantain aspect ratio</source>
         <translation>Seitenverhältnis beibehalten</translation>
     </message>
@@ -750,58 +756,53 @@ p, li { white-space: pre-wrap; }
         <translation>Bild Skalieren</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="914"/>
-        <source>Link aspect with selected image</source>
-        <translation>Link Ansicht mit ausgewähltem Bild</translation>
-    </message>
-    <message>
-        <location filename="../ui/mainwindow.ui" line="942"/>
+        <location filename="../ui/mainwindow.ui" line="967"/>
         <source>Resolution</source>
         <translation>Auflösung</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="958"/>
+        <location filename="../ui/mainwindow.ui" line="983"/>
         <source>Resolution X:</source>
         <translation>Auflösung X:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="965"/>
+        <location filename="../ui/mainwindow.ui" line="990"/>
         <source>Resolution Y:</source>
         <translation>Auflösung Y:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1022"/>
-        <location filename="../ui/mainwindow.ui" line="1028"/>
+        <location filename="../ui/mainwindow.ui" line="1047"/>
+        <location filename="../ui/mainwindow.ui" line="1053"/>
         <source>Rotate and flip</source>
         <translation>Drehen und Spiegeln</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1043"/>
+        <location filename="../ui/mainwindow.ui" line="1068"/>
         <source>Rotate image:</source>
         <translation>Bild drehen:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1052"/>
+        <location filename="../ui/mainwindow.ui" line="1077"/>
         <source>No rotation</source>
         <translation>Keine Drehung</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1124"/>
+        <location filename="../ui/mainwindow.ui" line="1149"/>
         <source>Flip image:</source>
         <translation>Bild spiegeln:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1133"/>
+        <location filename="../ui/mainwindow.ui" line="1158"/>
         <source>No flip</source>
         <translation>Keine Spiegelung</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1151"/>
+        <location filename="../ui/mainwindow.ui" line="1176"/>
         <source>Horizontally</source>
         <translation>horizontal</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1165"/>
+        <location filename="../ui/mainwindow.ui" line="1190"/>
         <source>Vertically</source>
         <translation>vertikal</translation>
     </message>
@@ -861,228 +862,238 @@ p, li { white-space: pre-wrap; }
         <translation>Alle überschreiben</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1222"/>
+        <location filename="../ui/mainwindow.ui" line="877"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Load Image Sizes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;px&apos;&lt;/span&gt; is selected, the original image sizes will be loaded into the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields. &lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; is selected, it restores the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields to &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="891"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1247"/>
         <source>toolBar</source>
         <translation>Symbolleiste</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1252"/>
+        <location filename="../ui/mainwindow.ui" line="1277"/>
         <source>&amp;Open images</source>
         <translation>&amp;Bilder öffnen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1255"/>
+        <location filename="../ui/mainwindow.ui" line="1280"/>
         <source>Ctrl+O</source>
         <translation>Strg+O</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1264"/>
+        <location filename="../ui/mainwindow.ui" line="1289"/>
         <source>&amp;Add images</source>
         <translation>Bilder &amp;hinzufügen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1267"/>
+        <location filename="../ui/mainwindow.ui" line="1292"/>
         <source>Ctrl+Alt+O</source>
         <translation>Strg+Alt+O</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1276"/>
+        <location filename="../ui/mainwindow.ui" line="1301"/>
         <source>&amp;Remove images</source>
         <translation>Bild &amp;entfernen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1279"/>
+        <location filename="../ui/mainwindow.ui" line="1304"/>
         <source>Remove selected pictures</source>
         <translation>Ausgewählte Einträge entfernen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1282"/>
+        <location filename="../ui/mainwindow.ui" line="1307"/>
         <source>Del</source>
         <translation>Entf</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1291"/>
+        <location filename="../ui/mainwindow.ui" line="1316"/>
         <source>Remove &amp;all</source>
         <translation>Alle &amp;entfernen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1294"/>
+        <location filename="../ui/mainwindow.ui" line="1319"/>
         <source>Remove all pictures</source>
         <translation>Alle Bilder entfernen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1297"/>
+        <location filename="../ui/mainwindow.ui" line="1322"/>
         <source>Alt+Del</source>
         <translation>Alt+Del</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1306"/>
+        <location filename="../ui/mainwindow.ui" line="1331"/>
         <source>&amp;Check</source>
         <translation>&amp;Auswählen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1309"/>
+        <location filename="../ui/mainwindow.ui" line="1334"/>
         <source>Check selected items</source>
         <translation>Markierte Einträge auswählen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1312"/>
+        <location filename="../ui/mainwindow.ui" line="1337"/>
         <source>Ctrl+H</source>
         <translation>Ctrl+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1321"/>
+        <location filename="../ui/mainwindow.ui" line="1346"/>
         <source>Check a&amp;ll</source>
         <translation>Alle &amp;Auswählen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1324"/>
+        <location filename="../ui/mainwindow.ui" line="1349"/>
         <source>Check all items</source>
         <translation>Alle Einträge auswählen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1327"/>
+        <location filename="../ui/mainwindow.ui" line="1352"/>
         <source>Ctrl+Alt+H</source>
         <translation>Ctrl+Alt+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1336"/>
+        <location filename="../ui/mainwindow.ui" line="1361"/>
         <source>&amp;Convert</source>
         <translation>&amp;Konvertieren</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1339"/>
+        <location filename="../ui/mainwindow.ui" line="1364"/>
         <source>Start the conversion process</source>
         <translation>Startet den Konvertierungsprozess</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1342"/>
+        <location filename="../ui/mainwindow.ui" line="1367"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1347"/>
+        <location filename="../ui/mainwindow.ui" line="1372"/>
         <source>&amp;Settings</source>
         <translation>&amp;Einstellungen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1350"/>
+        <location filename="../ui/mainwindow.ui" line="1375"/>
         <source>Open the settings dialog</source>
         <translation>Öffnet den Einstellungsdialog</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1355"/>
+        <location filename="../ui/mainwindow.ui" line="1380"/>
         <source>&amp;Exit</source>
         <translation>&amp;Beenden</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1358"/>
+        <location filename="../ui/mainwindow.ui" line="1383"/>
         <source>Ctrl+X</source>
         <translation>Ctrl+X</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1363"/>
+        <location filename="../ui/mainwindow.ui" line="1388"/>
         <source>Uncheck all &amp;items</source>
         <translation>Auswahl für alle &amp;Einträge entfernen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1366"/>
+        <location filename="../ui/mainwindow.ui" line="1391"/>
         <source>Ctrl+Alt+J</source>
         <translation>Ctrl+Alt+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1371"/>
+        <location filename="../ui/mainwindow.ui" line="1396"/>
         <source>&amp;Uncheck Items</source>
         <translation>&amp;Auswahl der Einträge entfernen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1374"/>
+        <location filename="../ui/mainwindow.ui" line="1399"/>
         <source>Uncheck selected items</source>
         <translation>Auswahl für markierte Einträge entfernen</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1377"/>
+        <location filename="../ui/mainwindow.ui" line="1402"/>
         <source>Ctrl+J</source>
         <translation>Ctrl+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1382"/>
+        <location filename="../ui/mainwindow.ui" line="1407"/>
         <source>&amp;About</source>
         <translation>&amp;Über</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1429"/>
-        <location filename="../ui/mainwindow.ui" line="1432"/>
+        <location filename="../ui/mainwindow.ui" line="1454"/>
+        <location filename="../ui/mainwindow.ui" line="1457"/>
         <source>Import directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1441"/>
+        <location filename="../ui/mainwindow.ui" line="1466"/>
         <source>Online Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1444"/>
+        <location filename="../ui/mainwindow.ui" line="1469"/>
         <source>Open online help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1447"/>
+        <location filename="../ui/mainwindow.ui" line="1472"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1391"/>
+        <location filename="../ui/mainwindow.ui" line="1416"/>
         <source>&amp;Donate via Paypal</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1394"/>
+        <location filename="../ui/mainwindow.ui" line="1419"/>
         <source>Donate via Paypal</source>
         <translation>Spenden via Paypal</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1399"/>
+        <location filename="../ui/mainwindow.ui" line="1424"/>
         <source>&amp;Report bug...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1417"/>
+        <location filename="../ui/mainwindow.ui" line="1442"/>
         <source>&amp;Check for updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1420"/>
+        <location filename="../ui/mainwindow.ui" line="1445"/>
         <source>Check if a new version of Converseen is available</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1404"/>
+        <location filename="../ui/mainwindow.ui" line="1429"/>
         <source>Import PDF file</source>
         <translation>Importieren PDF-Datei</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1069"/>
+        <location filename="../ui/mainwindow.ui" line="1094"/>
         <source>+ &amp;90°</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1083"/>
+        <location filename="../ui/mainwindow.ui" line="1108"/>
         <source>- 9&amp;0°</source>
         <translation type="unfinished">- 90° {9&amp;0°?}</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1099"/>
+        <location filename="../ui/mainwindow.ui" line="1124"/>
         <source>&amp;180°</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1409"/>
+        <location filename="../ui/mainwindow.ui" line="1434"/>
         <source>Import windows icon (*.ico)</source>
         <translation>Importieren Windows-Icon (*.ico)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1412"/>
+        <location filename="../ui/mainwindow.ui" line="1437"/>
         <source>Import windows icon (*.ico *.icon)</source>
         <translation>Importieren Windows-Icon (*.ico *.ico)</translation>
     </message>
@@ -1090,123 +1101,125 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="240"/>
+        <location filename="../src/mainwindowimpl.cpp" line="242"/>
         <source>Open Image</source>
         <translation>Bild Öffne</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="429"/>
-        <location filename="../src/mainwindowimpl.cpp" line="435"/>
-        <location filename="../src/mainwindowimpl.cpp" line="444"/>
-        <location filename="../src/mainwindowimpl.cpp" line="448"/>
-        <location filename="../src/mainwindowimpl.cpp" line="452"/>
+        <location filename="../src/mainwindowimpl.cpp" line="431"/>
+        <location filename="../src/mainwindowimpl.cpp" line="437"/>
+        <location filename="../src/mainwindowimpl.cpp" line="446"/>
+        <location filename="../src/mainwindowimpl.cpp" line="450"/>
+        <location filename="../src/mainwindowimpl.cpp" line="454"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="449"/>
+        <location filename="../src/mainwindowimpl.cpp" line="451"/>
         <source>No image checked!</source>
         <translation>Kein Bild ausgewählt!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="453"/>
+        <location filename="../src/mainwindowimpl.cpp" line="455"/>
         <source>No images to convert!</source>
         <translation>Keine Bilder zum konvertieren!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="430"/>
+        <location filename="../src/mainwindowimpl.cpp" line="432"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>Das Ausgabe-Verzeichnis existiert nicht! Willst du es erstellen?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="261"/>
+        <location filename="../src/mainwindowimpl.cpp" line="263"/>
         <source>Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="290"/>
+        <location filename="../src/mainwindowimpl.cpp" line="292"/>
         <source>Open Icon file</source>
         <translation>Öffne Icon-Datei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="290"/>
+        <location filename="../src/mainwindowimpl.cpp" line="292"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Microsoft Icon (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="301"/>
+        <location filename="../src/mainwindowimpl.cpp" line="303"/>
         <source>Open Pdf file</source>
         <translation>Öffne PDF-Datei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="301"/>
+        <location filename="../src/mainwindowimpl.cpp" line="303"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="311"/>
+        <location filename="../src/mainwindowimpl.cpp" line="313"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Analysieren der Datei. Es kann eine Weile dauern, bitte warten...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="335"/>
+        <location filename="../src/mainwindowimpl.cpp" line="337"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="436"/>
+        <location filename="../src/mainwindowimpl.cpp" line="438"/>
         <source>The directory cannot be created!</source>
         <translation>Das Verzeichnis konnte nciht erstellt werden!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="445"/>
+        <location filename="../src/mainwindowimpl.cpp" line="447"/>
         <source>Set an output directory!</source>
         <translation>Ausgabe-Verzeichnis angeben!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="470"/>
+        <location filename="../src/mainwindowimpl.cpp" line="472"/>
         <source>Processing...</source>
         <translation>Berechne...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="636"/>
+        <location filename="../src/mainwindowimpl.cpp" line="638"/>
         <source>Converted</source>
         <translation type="unfinished">Konvertiert</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="650"/>
+        <location filename="../src/mainwindowimpl.cpp" line="652"/>
         <source>Processing finished!</source>
         <translation>Berechnung beendet!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="254"/>
-        <location filename="../src/mainwindowimpl.cpp" line="704"/>
+        <location filename="../src/mainwindowimpl.cpp" line="256"/>
+        <location filename="../src/mainwindowimpl.cpp" line="706"/>
         <source>Open Directory</source>
         <translation>Verzeichnis öffnen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="983"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1041"/>
+        <location filename="../src/mainwindowimpl.cpp" line="809"/>
+        <location filename="../src/mainwindowimpl.cpp" line="827"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1000"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1057"/>
         <source>Preview</source>
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1112"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1128"/>
         <source>Suggest a new name!</source>
         <translation>Schlage einen neuen Namen vor!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1113"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1129"/>
         <source>New name:</source>
         <translation>Neuer Name:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1118"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1134"/>
         <source>Please, specify a name!</source>
         <translation>Bitte gib einen Namen an!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1119"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1135"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1217,23 +1230,23 @@ Klicke &quot;Ignorieren&quot;, um diese Operation abzubrechen.
 Klicke &quot;Abbrechen&quot;, um alle Operationen abzubrechen.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1134"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1139"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1150"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1155"/>
         <source>Warning!</source>
         <translation>Warnung!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1135"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1151"/>
         <source>The filename should not be empty!</source>
         <translation>Der Dateiname muss angegeben werden!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1140"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1156"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Der ausgewählte Name ist identisch mit dem vorherigen. Willst du die Originaldatei überschreiben?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1156"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1172"/>
         <source>Aborted!</source>
         <translation>Abgebrochen!</translation>
     </message>

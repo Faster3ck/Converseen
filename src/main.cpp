@@ -23,10 +23,16 @@
 
 #include <QApplication>
 #include <QLibraryInfo>
-#include <QTextCodec>
 #include <QDir>
+#include <QCommandLineParser>
 #include <Magick++.h>
+
 #include "mainwindowimpl.h"
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#include <QTextCodec>
+#endif
+
 #include "translator.h"
 #include "globals.h"
 
@@ -34,13 +40,31 @@ int main(int argc, char ** argv)
 {
 	InitializeMagick(*argv);
 
+    QCoreApplication::setApplicationName("Converseen");
     QCoreApplication::setApplicationVersion(globals::VERSION);
+
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("UTF-8"));
 
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QCoreApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
+#endif
 
     QApplication app( argc, argv );
+
+    QCommandLineOption winMagickPathOption({{"m", "debugMagickWindowsPath"}, "Set the default ImageMagick path on Windows (for debug purpose only!).", "C:\\MagickInstallPath"});
+    QCommandLineOption importTxtListOption({{"l", "list"}, "Reads a txt file with a list of files to be imported.", "list.txt"});
+    QCommandLineOption printSupportedFormats({{"p", "supported-formats"}, "Prints a list of readable/writable supported formats."});
+
+    QCommandLineParser parser;
+    parser.setApplicationDescription("Converseen - The Batch Converter and Resizer");
+    parser.addHelpOption();
+    parser.addVersionOption();
+    parser.addOption(winMagickPathOption);
+    parser.addOption(importTxtListOption);
+    parser.addOption(printSupportedFormats);
+
+    parser.process(app);
 
 #if defined(Q_OS_OSX)
     QString appDirPath = QApplication::applicationDirPath();
@@ -59,6 +83,21 @@ int main(int argc, char ** argv)
     qputenv("GS_OPTIONS", gs_options.toLocal8Bit());
 #endif
 
+#if defined(Q_OS_WIN)
+    // example: --debugMagickWindowsPath "C:\Program Files\ImageMagick-7.1.1-Q16-HDRI"
+
+    QString resdir = QApplication::applicationDirPath();
+
+    if (parser.isSet(winMagickPathOption))
+        resdir = parser.value(winMagickPathOption);
+
+    qputenv("LD_LIBRARY_PATH", resdir.toLocal8Bit());
+    qputenv("MAGICK_HOME", resdir.toLocal8Bit());
+    qputenv("MAGICK_CONFIGURE_PATH", resdir.toLocal8Bit());
+    qputenv("MAGICK_CODER_MODULE_PATH", resdir.toLocal8Bit() + "\\modules\\coders");
+    qputenv("MAGICK_CODER_FILTER_PATH", resdir.toLocal8Bit() + "\\modules\\filters");
+#endif
+
     // Default traslations for Qt apps
     QTranslator qtTranslator;
     qtTranslator.load("qt_" + QLocale::system().name(),
@@ -75,15 +114,14 @@ int main(int argc, char ** argv)
 
     MainWindowImpl win;
 
-    if (argc > 1) {
-        if (QString::fromStdString(argv[1]) == "--list") {
-            win.importListFromArgv(QString::fromStdString(argv[2]));
-        }
+    // Used in kde context menu
+    if (parser.isSet(importTxtListOption)) {
+        win.importListFromArgv(parser.value(importTxtListOption));
+    }
 
-        // Prints the readable/writable supported formats by IM
-        if (QString::fromStdString(argv[1]) == "--supported-formats") {
-            win.printSupportedFormats();
-        }
+    // Prints the readable/writable supported formats by IM
+    if (parser.isSet(printSupportedFormats)) {
+        win.printSupportedFormats();
     }
 
     win.show();

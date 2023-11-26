@@ -38,8 +38,8 @@
 using namespace Magick;
 using namespace std;
 
-MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WindowFlags f)
-    : QMainWindow(parent, f)
+MainWindowImpl::MainWindowImpl(QWidget * parent)
+    : QMainWindow(parent)
 {
     setupUi(this);
 
@@ -59,7 +59,7 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WindowFlags f)
     connect(spin_geoWidth, SIGNAL(editingFinished()), this, SLOT(relativeSizeW()));
     connect(spin_geoHeight, SIGNAL(editingFinished()), this, SLOT(relativeSizeH()));
 
-    connect(comboResizeValues, SIGNAL(currentIndexChanged(QString)), this, SLOT(selectGeometryUnit(QString)));
+    connect(comboResizeValues, SIGNAL(currentTextChanged(QString)), this, SLOT(selectGeometryUnit(QString)));
 
     connect(checkRename, SIGNAL(stateChanged(int)), this, SLOT(enableRenameLine()));
     connect(radioPrefixSuffix, SIGNAL(clicked()), this, SLOT(enableProgressiveSpin()));
@@ -103,6 +103,8 @@ MainWindowImpl::MainWindowImpl(QWidget * parent, Qt::WindowFlags f)
     }
 
     checkVersion();
+
+    //pushLinkAspect->setToolTip("ciaones");
 }
 
 MainWindowImpl::~MainWindowImpl()
@@ -803,9 +805,16 @@ void MainWindowImpl::removeItems()
 {
     if (!iAList->isEmpty()) {
         treeWidget->removeItems(iAList);
-        resetDisplays();
-    }
 
+        labelPreview->setText(tr("Preview"));
+
+        labelType->setText(" - ");
+        label_ImageSize->setText(" - ");
+        labelFileSize->setText(" - ");
+        label_ImageResolution->setText(" - ");
+
+        labelPixelGeometry->setText("");
+    }
 }
 
 void MainWindowImpl::removeAllItems()
@@ -815,7 +824,16 @@ void MainWindowImpl::removeAllItems()
         CachingSystem::clear();
         treeWidget->clear();
 
-        resetDisplays();
+        labelPreview->setText(tr("Preview"));
+
+        labelType->setText(" - ");
+        label_ImageSize->setText(" - ");
+        labelFileSize->setText(" - ");
+        label_ImageResolution->setText(" - ");
+
+        labelPixelGeometry->setText("");
+
+        //resetDisplays();
     }
 }
 
@@ -823,7 +841,7 @@ void MainWindowImpl::relativeSizeW()
 {
     double value = spin_geoWidth->value();
 
-    if (checkLinkAspect->isChecked()) {
+    if (pushLinkAspect->isChecked()) {
         if (checkRelative->isChecked()) {
             if (comboResizeValues->currentText() == "px") {
                 double relative_H = ( ((double)img_height * value) / (double)img_width);
@@ -844,7 +862,7 @@ void MainWindowImpl::relativeSizeH()
 {
     double value = spin_geoHeight->value();
 
-    if (checkLinkAspect->isChecked()) {
+    if (pushLinkAspect->isChecked()) {
         if (checkRelative->isChecked()) {
             if (comboResizeValues->currentText() == "px") {
                 double relative_V = ( ((double)img_width * value) / (double)img_height);
@@ -915,8 +933,7 @@ void MainWindowImpl::onItemSelection()
 void MainWindowImpl::onPushResetClick()
 {
     selectGeometryUnit(comboResizeValues->currentText());
-    spin_resX->setValue(m_xResolution);
-    spin_resY->setValue(m_yResolution);
+    showNewSizePreview();
 }
 
 void MainWindowImpl::showPreviewAndInfos()
@@ -1005,7 +1022,6 @@ void MainWindowImpl::selectGeometryUnit(QString unit)
     }
 }
 
-/* FIXME: Forse è meglio cambiare nome */
 void MainWindowImpl::showNewSizePreview()
 {
     if (comboResizeValues->currentText() == "%") {
@@ -1046,8 +1062,8 @@ void MainWindowImpl::resetDisplays()
     new_img_width = 0;
     new_img_height = 0;
 
-    m_xResolution = 0;
-    m_yResolution = 0;
+    m_xResolution = 96;
+    m_yResolution = 96;
 
     spin_resX->setValue(96);
     spin_resY->setValue(96);
@@ -1207,9 +1223,9 @@ void MainWindowImpl::onlineHelp()
 void MainWindowImpl::setRelativeSizeCheckboxes(int state)
 {
     if (state == 0)
-        checkLinkAspect->setEnabled(false);
+        pushLinkAspect->setEnabled(false);
     else
-        checkLinkAspect->setEnabled(true);
+        pushLinkAspect->setEnabled(true);
 }
 
 void MainWindowImpl::setOverwriteStatus(int state)

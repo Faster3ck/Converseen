@@ -4,6 +4,8 @@ CONFIG += qt \
  release \
  warn_on
 
+win32:CONFIG += entrypoint
+
 macx {
     QMAKE_MACOSX_DEPLOYMENT_TARGET=10.13
     ICON = res/converseen.icns
@@ -76,7 +78,7 @@ macx {
  }
 
  win32 {
-    INCLUDEPATH += "C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\include"
+    INCLUDEPATH += "$$IM_INSTALL_PREFIX\include"
  } else {
     
     isEmpty(IM_INSTALL_PREFIX) {
@@ -90,7 +92,7 @@ macx {
  }
 
  win32 {
-    LIBS += -L"C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\lib" -lCORE_RL_Magick++_ -lCORE_RL_MagickCore_ -lCORE_RL_MagickWand_
+    LIBS += -L"$$IM_INSTALL_PREFIX\lib" -lCORE_RL_Magick++_ -lCORE_RL_MagickCore_ -lCORE_RL_MagickWand_
  } else {
     isEmpty(IM_INSTALL_PREFIX) {
         LIB_PREFIX +=  /usr/lib

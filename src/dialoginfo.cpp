@@ -36,6 +36,7 @@ DialogInfo::DialogInfo(QWidget *parent) :
     QString appVersion;
     QString magickVersion;
     QString iMVersionStrTr = tr("ImageMagick Version:");
+    QString qtVersionStrTr = tr("Qt Version:");
 
 #ifdef Q_OS_WIN32
     appVersion = QString("%1%2")
@@ -53,9 +54,16 @@ DialogInfo::DialogInfo(QWidget *parent) :
     labelTitle->setText(title);
 
     magickVersion = globals::Globals::magickVersion();
-    QString versionString = QString("<p><span style=\" font-size:8pt; font-weight:600;\">%1 </span><span style=\" font-size:8pt;\">%2</span></p>").arg(iMVersionStrTr).arg(magickVersion);
+    QString im_versionString = QString("<p><span style=\" font-size:8pt; font-weight:600;\">%1 </span><span style=\" font-size:8pt;\">%2</span></p>")
+                                   .arg(iMVersionStrTr)
+                                   .arg(magickVersion);
 
-    labelMagickVersion->setText(versionString);
+    labelMagickVersion->setText(im_versionString);
+
+    QString qt_versionString = QString("<p><span style=\" font-size:8pt; font-weight:600;\">%1 </span><span style=\" font-size:8pt;\">%2</span></p>")
+                                   .arg(qtVersionStrTr)
+                                   .arg(QT_VERSION_STR);
+    labelQtVersion->setText(qt_versionString);
 }
 
 void DialogInfo::openFacebookPage()

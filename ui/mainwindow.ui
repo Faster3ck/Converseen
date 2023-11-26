@@ -330,7 +330,7 @@
      <x>0</x>
      <y>0</y>
      <width>1482</width>
-     <height>25</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -415,9 +415,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-123</y>
-          <width>407</width>
-          <height>872</height>
+          <y>0</y>
+          <width>428</width>
+          <height>769</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -708,7 +708,7 @@ p, li { white-space: pre-wrap; }
             <attribute name="title">
              <string>Dimensions</string>
             </attribute>
-            <layout class="QVBoxLayout" name="verticalLayout_6">
+            <layout class="QVBoxLayout" name="verticalLayout_11">
              <item>
               <widget class="QGroupBox" name="groupDimensions">
                <property name="sizePolicy">
@@ -732,7 +732,7 @@ p, li { white-space: pre-wrap; }
                <property name="checked">
                 <bool>false</bool>
                </property>
-               <layout class="QVBoxLayout" name="verticalLayout_11">
+               <layout class="QVBoxLayout" name="verticalLayout_6">
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_5">
                   <item>
@@ -870,15 +870,48 @@ p, li { white-space: pre-wrap; }
                    </layout>
                   </item>
                   <item>
-                   <widget class="QPushButton" name="pushReset">
-                    <property name="text">
-                     <string/>
-                    </property>
-                    <property name="icon">
-                     <iconset resource="../resources.qrc">
-                      <normaloff>:/Images/res/reset.png</normaloff>:/Images/res/reset.png</iconset>
-                    </property>
-                   </widget>
+                   <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <item>
+                     <widget class="QPushButton" name="pushReset">
+                      <property name="toolTip">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Load Image Sizes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If '&lt;span style=&quot; font-weight:700;&quot;&gt;px'&lt;/span&gt; is selected, the original image sizes will be loaded into the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields. &lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:700;&quot;&gt;'%'&lt;/span&gt; is selected, it restores the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields to &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources.qrc">
+                        <normaloff>:/Images/res/reset.png</normaloff>:/Images/res/reset.png</iconset>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pushLinkAspect">
+                      <property name="toolTip">
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                      </property>
+                      <property name="toolTipDuration">
+                       <number>-1</number>
+                      </property>
+                      <property name="statusTip">
+                       <string/>
+                      </property>
+                      <property name="whatsThis">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="../resources.qrc">
+                        <normaloff>:/Images/res/lock.png</normaloff>:/Images/res/lock.png</iconset>
+                      </property>
+                      <property name="checkable">
+                       <bool>true</bool>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </item>
                   <item>
                    <spacer name="horizontalSpacer_2">
@@ -908,13 +941,6 @@ p, li { white-space: pre-wrap; }
                 </item>
                 <item>
                  <layout class="QVBoxLayout" name="verticalLayout_19">
-                  <item>
-                   <widget class="QCheckBox" name="checkLinkAspect">
-                    <property name="text">
-                     <string>Link aspect with selected image</string>
-                    </property>
-                   </widget>
-                  </item>
                   <item>
                    <widget class="QCheckBox" name="checkRelative">
                     <property name="text">

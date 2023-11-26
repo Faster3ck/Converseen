@@ -1,24 +1,25 @@
-PROJECT(converseen)
+cmake_minimum_required(VERSION 3.16.0)
 
-cmake_minimum_required(VERSION 2.6)
-  
-SET(GUI "converseen")  
-SET(QT_USE_QTNETWORK TRUE)
+project(converseen)
+
+option(USE_QT6 "Enable this if you want to use Qt6, instead of Qt5" NO)
+
+set(GUI "converseen")
+set(QT_USE_QTNETWORK TRUE)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(GNUInstallDirs)
-ADD_DEFINITIONS( ${OPTIMIZATION_FLAGS} )
-  
-SET(converseen_UIS  
-    ui/dialogconversionstatus.ui
-    ui/dialoginfo.ui
-    ui/dialogmultipageeditor.ui
-    ui/dialogshowupdatemsg.ui
-    ui/dialogoptions.ui
-    ui/dialogquality.ui
-    ui/mainwindow.ui
-)  
-  
-SET(converseen_SRCS  
+
+if (USE_QT6)
+    find_package(Qt6 COMPONENTS Core Gui Network Widgets LinguistTools REQUIRED)
+else ()
+    find_package(Qt5 COMPONENTS Core Gui Network Widgets LinguistTools REQUIRED)
+endif()
+
+find_package(ImageMagick REQUIRED COMPONENTS Magick++ MagickWand MagickCore)
+
+set(converseen_SOURCES
     src/main.cpp
     src/cachingsystem.cpp
     src/combofilters.cpp
@@ -42,9 +43,9 @@ SET(converseen_SRCS
     src/updatechecker.cpp
     src/magickdefine.cpp
     src/Modules/multipageconverter.cpp
-)  
-  
-SET(converseen_MOC_HDRS  
+)
+
+set(converseen_HEADERS
     src/cachingsystem.h
     src/combofilters.h
     src/converter.h
@@ -68,12 +69,22 @@ SET(converseen_MOC_HDRS
     src/magickdefine.cpp
     src/Modules/multipageconverter.h
 )
-  
-SET(converseen_RESOURCES  
+
+set(converseen_UIS
+    ui/dialogconversionstatus.ui
+    ui/dialoginfo.ui
+    ui/dialogmultipageeditor.ui
+    ui/dialogshowupdatemsg.ui
+    ui/dialogoptions.ui
+    ui/dialogquality.ui
+    ui/mainwindow.ui
+)
+
+set(converseen_RESOURCES
     resources.qrc
 )
 
-SET(converseen_LANG
+set(converseen_LANG
     loc/converseen_tr_TR.ts
     loc/converseen_fr_FR.ts
     loc/converseen_es_CL.ts
@@ -91,48 +102,61 @@ SET(converseen_LANG
     loc/converseen_zh_CN.ts
 )
 
-FIND_PACKAGE(Qt5Core REQUIRED)
-FIND_PACKAGE(Qt5Gui REQUIRED)
-FIND_PACKAGE(Qt5Network REQUIRED)
-FIND_PACKAGE(Qt5Widgets REQUIRED)
-FIND_PACKAGE(Qt5LinguistTools REQUIRED)
-FIND_PACKAGE(ImageMagick REQUIRED)
-FIND_PACKAGE(ImageMagick COMPONENTS Magick++)
-FIND_PACKAGE(ImageMagick COMPONENTS MagickWand)
-FIND_PACKAGE(ImageMagick COMPONENTS MagickCore)
+if (USE_QT6)
+    qt6_wrap_ui(converseen_UIS_H ${converseen_UIS})
+    qt6_wrap_cpp(converseen_MOC_SRCS ${converseen_HEADERS})
+    qt6_add_resources(converseen_RESOURCES ${converseen_RESOURCES})
+    qt6_add_translation(converseen_RESOURCES ${converseen_LANG})
+else ()
+    qt5_wrap_ui(converseen_UIS_H ${converseen_UIS})
+    qt5_wrap_cpp(converseen_MOC_SRCS ${converseen_HEADERS})
+    qt5_add_resources(converseen_RESOURCES ${converseen_RESOURCES})
+    qt5_add_translation(converseen_RESOURCES ${converseen_LANG})
+endif()
 
-INCLUDE_DIRECTORIES(${Qt5Core_INCLUDE_DIRS})
-INCLUDE_DIRECTORIES(${Qt5Gui_INCLUDE_DIRS})
-INCLUDE_DIRECTORIES(${Qt5Network_INCLUDE_DIRS})
-INCLUDE_DIRECTORIES(${Qt5Widgets_INCLUDE_DIRS})
-QT5_WRAP_UI(converseen_UIS_H ${converseen_UIS})
-QT5_WRAP_CPP(converseen_MOC_SRCS ${converseen_MOC_HDRS})
-QT5_ADD_RESOURCES(converseen_RESOURCES ${converseen_RESOURCES})
-QT5_ADD_TRANSLATION(converseen_RESOURCES ${converseen_LANG})
-
-ADD_DEFINITIONS(
-	-Wall
-	-W
-	-std=c++11
-	-fPIC
-	-DMAGICKCORE_HDRI_ENABLE=0
-	-DMAGICKCORE_QUANTUM_DEPTH=16
-	${QT_DEFINITIONS}
+add_definitions(
+    -Wall
+    -std=c++17
+    -fPIC
+    -DMAGICKCORE_HDRI_ENABLE=0
+    -DMAGICKCORE_QUANTUM_DEPTH=16
+    ${QT_DEFINITIONS}
 )
 
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR} ${ImageMagick_INCLUDE_DIRS} ${ImageMagick_Magick++_INCLUDE_DIRS} ${ImageMagick_MagickCore_INCLUDE_DIRS} . )
-  
-ADD_EXECUTABLE(${GUI}  
-    ${converseen_SRCS}  
-    ${converseen_UIS_H}  
-    ${converseen_MOC_SRCS}  
-    ${converseen_RESOURCES}  
-    ${converseen_RCS} 
-)  
-  
-TARGET_LINK_LIBRARIES(${GUI} ${Qt5Network_LIBRARIES} ${Qt5Widgets_LIBRARIES} ${ImageMagick_LIBRARY} ${ImageMagick_Magick++_LIBRARY} ${ImageMagick_MagickCore_LIBRARY})
+include_directories(
+    ${CMAKE_CURRENT_BINARY_DIR}
+    ${ImageMagick_INCLUDE_DIRS}
+    ${ImageMagick_Magick++_INCLUDE_DIRS}
+    ${ImageMagick_MagickCore_INCLUDE_DIRS}
+    .
+)
 
-install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen DESTINATION ${CMAKE_INSTALL_BINDIR})
+add_executable(${GUI}
+    ${converseen_SOURCES}
+    ${converseen_UIS_H}
+    ${converseen_MOC_SRCS}
+    ${converseen_RESOURCES}
+)
+
+if (USE_QT6)
+    target_link_libraries(${GUI}
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Network
+        Qt6::Widgets
+        ${ImageMagick_LIBRARIES}
+    )
+else ()
+    target_link_libraries(${GUI}
+        Qt5::Core
+        Qt5::Gui
+        Qt5::Network
+        Qt5::Widgets
+        ${ImageMagick_LIBRARIES}
+    )
+endif()
+
+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${GUI} DESTINATION ${CMAKE_INSTALL_BINDIR})
 install(FILES res/net.fasterland.converseen.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
 install(FILES res/converseen_import.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/kservices5/ServiceMenus)
 install(FILES converseen.appdata.xml DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo/)
@@ -143,18 +167,9 @@ install(FILES res/icons/64x64/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROO
 install(FILES res/icons/128x128/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/128x128/apps)
 install(FILES res/icons/256x256/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/256x256/apps)
 install(FILES res/icons/512x512/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/512x512/apps)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_cs_CZ.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_de_DE.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_es_CL.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_fr_FR.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_hu_HU.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_it_IT.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_pt_BR.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_tr_TR.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_ru_RU.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_pl_PL.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_ja_JP.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_da_DK.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_uk_UA.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_sv_SE.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/converseen_zh_CN.qm DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
+
+foreach(LANG ${converseen_LANG})
+    string(REGEX REPLACE ".*/" "" TS_FILE ${LANG})
+    string(REGEX REPLACE ".ts" ".qm" QM_FILE ${TS_FILE})
+    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
+endforeach()

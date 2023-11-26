@@ -1,6 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -8,6 +12,10 @@
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -28,7 +36,25 @@
     <IntermediateDirectory>build\</IntermediateDirectory>
     <PrimaryOutput>converseen</PrimaryOutput>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\</IntermediateDirectory>
+    <PrimaryOutput>converseen</PrimaryOutput>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>bin\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>build\</IntermediateDirectory>
+    <PrimaryOutput>converseen</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <PlatformToolset>v143</PlatformToolset>
     <OutputDirectory>bin\</OutputDirectory>
     <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
@@ -45,7 +71,13 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -58,9 +90,18 @@
     <TargetName>converseen</TargetName>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>converseen</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>bin\</OutDir>
     <IntDir>build\</IntDir>
+    <TargetName>converseen</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <TargetName>converseen</TargetName>
     <IgnoreImportLibrary>true</IgnoreImportLibrary>
     <LinkIncremental>false</LinkIncremental>
@@ -69,8 +110,16 @@
     <QtInstall>5.15.2_msvc2019</QtInstall>
     <QtModules>core;network;gui;widgets</QtModules>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019</QtInstall>
+    <QtModules>core;network;gui;widgets</QtModules>
+  </PropertyGroup>
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <QtInstall>5.15.2_msvc2019</QtInstall>
+    <QtModules>core;network;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="QtSettings">
+    <QtInstall>6.6.0_msvc2019_64</QtInstall>
     <QtModules>core;network;gui;widgets</QtModules>
   </PropertyGroup>
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
@@ -140,7 +189,131 @@
       <QtUicFileName>ui_%(Filename).h</QtUicFileName>
     </QtUic>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\include;build;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>build\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>build\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_NO_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\lib\CORE_RL_Magick++_.lib";"C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\lib\CORE_RL_MagickCore_.lib";"C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\lib\CORE_RL_MagickWand_.lib";shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files\ImageMagick-7.1.1-Q16-HDRI\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.7.25-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\converseen.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;NDEBUG;QT_NO_DEBUG;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./build/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>build</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>resources</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>build</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\include;build;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>build\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4577;4467;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>build\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>"C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\lib\CORE_RL_Magick++_.lib";"C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\lib\CORE_RL_MagickCore_.lib";"C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\lib\CORE_RL_MagickWand_.lib";shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\lib;C:\opensslx86\lib;C:\Utils\my_sql\mysql-5.7.25-win32\lib;C:\Utils\postgresqlx86\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\converseen.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;QT_WIDGETS_LIB;QT_GUI_LIB;QT_NETWORK_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./build/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>build</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>resources</InitFuncName>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>build</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>.;C:\Program Files (x86)\ImageMagick-7.1.0-Q16-HDRI\include;build;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
@@ -272,165 +445,293 @@
     <CustomBuild Include="build\moc_predefs.h.cbt">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;build\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;build\moc_predefs.h</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\moc_predefs.h;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;build\moc_predefs.h</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;build\moc_predefs.h</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Generate moc_predefs.h</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\moc_predefs.h;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\moc_predefs.h;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="loc\converseen_cs_CZ.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_cs_CZ.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_cs_CZ.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_cs_CZ.ts -qm loc/converseen_cs_CZ.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_cs_CZ.ts -qm loc/converseen_cs_CZ.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_cs_CZ.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_cs_CZ.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_cs_CZ.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_cs_CZ.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_cs_CZ.ts -qm loc/converseen_cs_CZ.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_cs_CZ.ts -qm loc/converseen_cs_CZ.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_cs_CZ.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_cs_CZ.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_da_DK.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_da_DK.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_da_DK.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_da_DK.ts -qm loc/converseen_da_DK.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_da_DK.ts -qm loc/converseen_da_DK.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_da_DK.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_da_DK.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_da_DK.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_da_DK.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_da_DK.ts -qm loc/converseen_da_DK.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_da_DK.ts -qm loc/converseen_da_DK.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_da_DK.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_da_DK.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_de_DE.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_de_DE.ts -qm loc/converseen_de_DE.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_de_DE.ts -qm loc/converseen_de_DE.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_de_DE.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_de_DE.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_de_DE.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_de_DE.ts -qm loc/converseen_de_DE.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_de_DE.ts -qm loc/converseen_de_DE.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_de_DE.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_de_DE.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_es_CL.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_es_CL.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_es_CL.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_es_CL.ts -qm loc/converseen_es_CL.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_es_CL.ts -qm loc/converseen_es_CL.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_es_CL.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_es_CL.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_es_CL.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_es_CL.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_es_CL.ts -qm loc/converseen_es_CL.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_es_CL.ts -qm loc/converseen_es_CL.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_es_CL.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_es_CL.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_fr_FR.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_fr_FR.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_fr_FR.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_fr_FR.ts -qm loc/converseen_fr_FR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_fr_FR.ts -qm loc/converseen_fr_FR.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_fr_FR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_fr_FR.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_fr_FR.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_fr_FR.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_fr_FR.ts -qm loc/converseen_fr_FR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_fr_FR.ts -qm loc/converseen_fr_FR.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_fr_FR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_fr_FR.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_hu_HU.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_hu_HU.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_hu_HU.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_hu_HU.ts -qm loc/converseen_hu_HU.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_hu_HU.ts -qm loc/converseen_hu_HU.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_hu_HU.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_hu_HU.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_hu_HU.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_hu_HU.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_hu_HU.ts -qm loc/converseen_hu_HU.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_hu_HU.ts -qm loc/converseen_hu_HU.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_hu_HU.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_hu_HU.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_it_IT.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_it_IT.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_it_IT.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_it_IT.ts -qm loc/converseen_it_IT.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_it_IT.ts -qm loc/converseen_it_IT.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_it_IT.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_it_IT.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_it_IT.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_it_IT.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_it_IT.ts -qm loc/converseen_it_IT.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_it_IT.ts -qm loc/converseen_it_IT.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_it_IT.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_it_IT.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_ja_JP.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_ja_JP.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_ja_JP.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_ja_JP.ts -qm loc/converseen_ja_JP.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_ja_JP.ts -qm loc/converseen_ja_JP.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_ja_JP.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_ja_JP.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_ja_JP.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_ja_JP.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_ja_JP.ts -qm loc/converseen_ja_JP.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_ja_JP.ts -qm loc/converseen_ja_JP.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_ja_JP.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_ja_JP.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_pl_PL.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_pl_PL.ts -qm loc/converseen_pl_PL.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_pl_PL.ts -qm loc/converseen_pl_PL.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_pl_PL.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_pl_PL.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_pl_PL.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_pl_PL.ts -qm loc/converseen_pl_PL.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_pl_PL.ts -qm loc/converseen_pl_PL.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_pl_PL.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_pl_PL.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_pt_BR.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_pt_BR.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_pt_BR.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_pt_BR.ts -qm loc/converseen_pt_BR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_pt_BR.ts -qm loc/converseen_pt_BR.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_pt_BR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_pt_BR.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_pt_BR.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_pt_BR.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_pt_BR.ts -qm loc/converseen_pt_BR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_pt_BR.ts -qm loc/converseen_pt_BR.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_pt_BR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_pt_BR.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_ru_RU.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_ru_RU.ts -qm loc/converseen_ru_RU.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_ru_RU.ts -qm loc/converseen_ru_RU.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_ru_RU.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_ru_RU.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_ru_RU.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_ru_RU.ts -qm loc/converseen_ru_RU.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_ru_RU.ts -qm loc/converseen_ru_RU.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_ru_RU.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_ru_RU.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_sv_SE.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_sv_SE.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_sv_SE.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_sv_SE.ts -qm loc/converseen_sv_SE.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_sv_SE.ts -qm loc/converseen_sv_SE.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_sv_SE.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_sv_SE.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_sv_SE.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_sv_SE.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_sv_SE.ts -qm loc/converseen_sv_SE.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_sv_SE.ts -qm loc/converseen_sv_SE.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_sv_SE.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_sv_SE.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_tr_TR.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_tr_TR.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_tr_TR.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_tr_TR.ts -qm loc/converseen_tr_TR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_tr_TR.ts -qm loc/converseen_tr_TR.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_tr_TR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_tr_TR.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_tr_TR.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_tr_TR.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_tr_TR.ts -qm loc/converseen_tr_TR.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_tr_TR.ts -qm loc/converseen_tr_TR.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_tr_TR.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_tr_TR.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_uk_UA.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_uk_UA.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_uk_UA.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_uk_UA.ts -qm loc/converseen_uk_UA.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_uk_UA.ts -qm loc/converseen_uk_UA.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_uk_UA.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_uk_UA.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_uk_UA.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_uk_UA.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_uk_UA.ts -qm loc/converseen_uk_UA.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_uk_UA.ts -qm loc/converseen_uk_UA.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_uk_UA.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_uk_UA.qm;%(Outputs)</Outputs>
     </CustomBuild>
     <CustomBuild Include="loc\converseen_zh_CN.ts">
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_zh_CN.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_zh_CN.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease loc\converseen_zh_CN.ts -qm loc/converseen_zh_CN.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease loc\converseen_zh_CN.ts -qm loc/converseen_zh_CN.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">loc\converseen_zh_CN.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">loc\converseen_zh_CN.qm;%(Outputs)</Outputs>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_zh_CN.ts;%(AdditionalInputs)</AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_zh_CN.ts;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease loc\converseen_zh_CN.ts -qm loc/converseen_zh_CN.qm</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease loc\converseen_zh_CN.ts -qm loc/converseen_zh_CN.qm</Command>
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(QTDIR)/bin/lrelease</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)/bin/lrelease</Message>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">loc\converseen_zh_CN.qm;%(Outputs)</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">loc\converseen_zh_CN.qm;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

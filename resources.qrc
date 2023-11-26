@@ -18,6 +18,7 @@
         <file>res/btn_donateCC_LG.png</file>
         <file>res/add_folder.png</file>
         <file>res/help.png</file>
+        <file>res/lock.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file>res/loading.gif</file>
