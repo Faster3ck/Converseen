@@ -65,9 +65,7 @@
     <content_rating type="oars-1.1" />
     <url type="homepage">https://converseen.fasterland.net/</url>
     <update_contact>faster3ck@gmail.com</update_contact>
-    <developer id="fasterland.net">
-        <name>Francesco Mondello</name>
-    </developer>
+    <developer_name>Francesco Mondello</developer_name>
     <url type="bugtracker">https://github.com/Faster3ck/Converseen/issues</url>
     <url type="donation">https://converseen.fasterland.net/thank/</url>
     <url type="help">https://converseen.fasterland.net/help/</url>
