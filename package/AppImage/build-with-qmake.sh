@@ -3,7 +3,9 @@
 set -x
 set -e
 
-export QT_SELECT=opt-qt514
+#export QT_SELECT=opt-qt514
+
+export GS_VERSION="9.55.0"
 
 export MAGICK_HOME=$HOME/ImageMagick7-devel
 export PATH="$MAGICK_HOME/bin:$PATH"
@@ -66,15 +68,26 @@ mkdir -p $BUILD_DIR/AppDir/usr/lib
 
 cp $(ldconfig -p | grep libssl.so.1 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 cp $(ldconfig -p | grep libcrypto.so.1 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libx265.so.199 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libde265.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+
+cp $(ldconfig -p | grep libdav1d.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libaom.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libavcodec.so.58 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libsharpyuv.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+
+cp -rv /usr/lib/x86_64-linux-gnu/libheif $BUILD_DIR/AppDir/usr/lib
+
+
 #cp $(ldconfig -p | grep libicui18n.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 #cp $(ldconfig -p | grep libicuuc.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 #cp $(ldconfig -p | grep libicudata.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 
 # Add Ghostscript Resources
 cp -rvf /usr/share/ghostscript $BUILD_DIR/AppDir/usr/share
-rm -rvf $BUILD_DIR/AppDir/usr/share/ghostscript/9.26/iccprofiles
-mkdir -p $BUILD_DIR/AppDir/usr/share/ghostscript/9.26/iccprofiles
-cp -rvf /usr/share/ghostscript/9.26/iccprofiles/* $BUILD_DIR/AppDir/usr/share/ghostscript/9.26/iccprofiles
+rm -rvf $BUILD_DIR/AppDir/usr/share/ghostscript/${GS_VERSION}/iccprofiles
+mkdir -p $BUILD_DIR/AppDir/usr/share/ghostscript/${GS_VERSION}/iccprofiles
+cp -rvf /usr/share/ghostscript/${GS_VERSION}/iccprofiles/* $BUILD_DIR/AppDir/usr/share/ghostscript/${GS_VERSION}/iccprofiles
 
 # Fix metadata directory and filename
 mv $BUILD_DIR/AppDir/usr/share/appdata $BUILD_DIR/AppDir/usr/share/metainfo
