@@ -2,92 +2,55 @@ name: converseen
 version: '0.12.0.0'
 summary: Converseen - A Batch Image Converter, Resizer and Processor for your Pictures!
 description: |
-  Converseen is a free and cross-platform batch image processor that allows you to convert, resize, rotate  and flip an infinite number of images with a mouse click. Converseen is also able to transform an entire PDF file into a group of images with the characteristics you prefer: you can choose one of the 100+ formats, you can set the size, resolution and the filename.
-  Converseen, thanks to ImageMagick, supports more than 100 image formats including JPEG, GIF, PNG, TIFF, WEBP and many others.
+  Converseen is a free and cross-platform batch image processor that allows you to convert, resize, rotate, and flip an infinite number of images with a     mouse click. Converseen is also able to transform an entire PDF file into a group of images with the characteristics you prefer: you can choose one of the 100+ formats, set the size, resolution, and the filename.
+  Converseen, thanks to ImageMagick, supports more than 100 image formats including JPEG, GIF, PNG, TIFF, WEBP, and many others.
   
   Project's Website: https://converseen.fasterland.net/
   GitHub Page: https://github.com/Faster3ck/Converseen
 
 grade: stable
 confinement: strict
-base: core18
+base: core20
 icon: res/converseen.png
 license: GPL-3.0
 compression: lzo
 
 package-repositories:
   - type: apt
-    ppa: strukturag/libde265
-      
-  - type: apt
-    ppa: strukturag/libheif
-    
+    ppa: savoury1/graphics
+
 # Converseen Main Program
 parts:
   converseen:
-    after:
-      - imagemagick7
     plugin: cmake
+    source: https://github.com/Faster3ck/Converseen.git
+    source-type: git
+    source-branch: main
     build-snaps:
-      - kde-frameworks-5-core18-sdk
-      - kde-frameworks-5-core18
+      - kde-frameworks-5-99-qt-5-15-7-core20-sdk
+      - kde-frameworks-5-99-qt-5-15-7-core20
     build-packages:
       - libegl1-mesa-dev
     stage-packages:
       - libegl1
-    source: https://github.com/Faster3ck/Converseen.git
-    source-type: git
-    source-branch: main
-    configflags:
+      - libssl1.1
+      - libimath-3-1-29
+      - libopenexr-3-2-31
+      - libraw23
+    cmake-parameters:
       - "-DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
       - "-DCMAKE_INSTALL_PREFIX=/usr"
       - "-DCMAKE_BUILD_TYPE=Release"
       - "-DENABLE_TESTING=OFF"
       - "-DBUILD_TESTING=OFF"
       - "-DKDE_SKIP_TEST_SETTINGS=ON"
-      
-# Compile ImageMagick 7 from Source
+    after:
+      - imagemagick7
+
   imagemagick7:
     plugin: autotools
-    build-packages:
-      - libltdl-dev
-      - libfftw3-dev
-      - liblcms2-dev
-      - liblqr-1-0-dev
-      - libfreetype6-dev
-      - libfontconfig1-dev
-      - zlib1g-dev
-      - liblzma-dev
-      - libbz2-dev
-      - libdjvulibre-dev
-      - libexif-dev
-      - libjpeg-dev
-      - libopenexr-dev
-      - libperl-dev
-      - libpng-dev
-      - libtiff-dev
-      - libwmf-dev
-      - libpango1.0-dev
-      - librsvg2-bin 
-      - librsvg2-dev
-      - libxml2-dev
-      - fftw-dev
-      - libopenjp2-7-dev
-      - libraw-dev
-      - libwebp-dev
-      - libheif-dev
-    stage-packages:
-      - libltdl7
-      - libdjvulibre21
-      - libilmbase12
-      - liblqr-1-0
-      - libopenexr22
-      - libraw16
-      - libwmf0.2-7
-      - libheif1
-
-    source: https://imagemagick.org/archive/ImageMagick.tar.bz2
-    configflags: 
+    source: https://imagemagick.org/download/ImageMagick.tar.gz
+    autotools-configure-parameters:
       - "--enable-shared"
       - "--disable-installed"
       - "--enable-hdri"
@@ -102,17 +65,93 @@ parts:
       - "--without-fpx"
       - "--with-heic=yes"
       - "--with-jxl=yes"
+      - "--with-fftw=yes"
+      - "--with-freetype=yes"
       - "--prefix=/usr"
+    build-packages:
+      - libtool
+      - pkg-config
+      - build-essential
+      - libssl-dev
+      - libffi-dev
+      - zlib1g-dev
+      - libpng-dev
+      - libjpeg-dev
+      - liblcms2-dev
+      - libtiff-dev
+      - libopenjp2-7-dev
+      - libwebp-dev
+      - libde265-dev
+      - libheif-dev
+      - libgif-dev
+      - libfreetype6-dev
+      - libfontconfig1-dev
+      - libxext-dev
+      - libx11-dev
+      - libdjvulibre-dev
+      - libgs-dev
+      - libwmf-dev
+      #- libpango1.0-dev
+      #- librsvg2-bin
+      #- librsvg2-dev
+      - libxml2-dev
+      - fftw-dev
+      - liblqr-1-0-dev
+      - libraw-dev
+      #- libilmbase-dev
+      - libimath-dev
+      - libopenexr-dev
+      - libdeflate-dev
+      - libraqm-dev
+      - libjxl-dev
+    stage-packages:
+      - libffi7
+      - zlib1g
+      - libpng16-16 
+      - libjpeg8 
+      - liblcms2-2
+      - libtiff5
+      - libopenjp2-7
+      - libwebp6
+      - libde265-0
+      - libheif1
+      - libgif7
+      - libfreetype6
+      - libfontconfig1
+      - libxext6
+      - libdjvulibre21
+      - libgs9
+      - libwmf0.2-7
+      #- libpango1.0-0
+      #- librsvg2-2
+      - libxml2
+      - fftw2
+      - liblqr-1-0
+      - libraw23
+      #- libilmbase24
+      #- libimath
+      - libopenexr-3-2-31
+      - libdeflate0
+      - libraqm0
+      - libpsm-infinipath1
+      - libgl1-mesa-dri
+      - libx265-199
+      - libheif-plugin-aomdec
+      - libheif-plugin-aomenc
+      - libheif-plugin-dav1d
+      - libheif-plugin-libde265
+      - libheif-plugin-x265
+      - libjxl0.8
 
   cleanup:
     after: 
       - imagemagick7
       - converseen
     plugin: nil
-    build-snaps:  # List all content-snaps and base snaps you're using here
-      - core18
-      - kde-frameworks-5-core18-sdk
-      - kde-frameworks-5-core18
+    build-snaps:
+      - core20
+      - kde-frameworks-5-99-qt-5-15-7-core20-sdk
+      - kde-frameworks-5-99-qt-5-15-7-core20
     override-prime: |
       set -eux
 
@@ -145,9 +184,11 @@ apps:
   converseen:
     common-id: net.fasterland.converseen
     command: usr/bin/converseen
-    desktop: usr/share/applications/net.fasterland.converseen.desktop
+    environment:
+      LIBHEIF_PLUGIN_PATH: $SNAP/usr/lib/x86_64-linux-gnu/libheif/plugins
     extensions:
       - kde-neon
+    desktop: usr/share/applications/net.fasterland.converseen.desktop
     plugs:
       - home
       - opengl
