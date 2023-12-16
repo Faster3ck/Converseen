@@ -219,6 +219,14 @@ p, li { white-space: pre-wrap; }
         <source>Qt Version:</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Make a Donation!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Donate using PayPal, Ko-Fi or Cryptocurrencies.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>DialogMultipageEditor</name>
@@ -791,10 +799,6 @@ p, li { white-space: pre-wrap; }
         <translation>F1</translation>
     </message>
     <message>
-        <source>Donate via Paypal</source>
-        <translation>Támogatás Paypal-al</translation>
-    </message>
-    <message>
         <source>Rotate and flip</source>
         <translation type="unfinished"></translation>
     </message>
@@ -847,10 +851,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&amp;Donate via Paypal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Report bug...</source>
         <translation type="unfinished"></translation>
     </message>
@@ -896,6 +896,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Donate!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

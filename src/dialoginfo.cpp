@@ -23,8 +23,10 @@
 
 #include <QUrl>
 #include <QDesktopServices>
+#include <QTextDocument>
 #include "dialoginfo.h"
 #include "globals.h"
+#include "qpainter.h"
 
 DialogInfo::DialogInfo(QWidget *parent) :
     QDialog(parent){
@@ -64,6 +66,53 @@ DialogInfo::DialogInfo(QWidget *parent) :
                                    .arg(qtVersionStrTr)
                                    .arg(QT_VERSION_STR);
     labelQtVersion->setText(qt_versionString);
+
+    // This section generates a Text + Png pixmap icon for the donazion button!
+
+    QString donateText = tr("Make a Donation!");
+    QString donateDescriptionText = tr("Donate using PayPal, Ko-Fi or Cryptocurrencies.");
+
+    QString htmlDonationText = QString(R"(
+        <style>
+            table {
+                border-collapse: collapse;
+            }
+            td {
+                text-align: center;
+                vertical-align: middle;
+                padding: 5px;
+            }
+        </style>
+
+        <table>
+            <tr>
+                <td><img src=':/Images/res/heart.png' width='52' height='52'></td>
+                <td>
+                    <span style='font-weight: bold; font-size:18pt; text-align: center;'>%1</span><br />
+                    <span style='font-style: italic; font-size:8pt; text-align: center;'>%2</span>
+                </td>
+            </tr>
+        </table>
+    )")
+    .arg(donateText, donateDescriptionText);
+
+    QTextDocument donateHtmlText;
+    donateHtmlText.setHtml(htmlDonationText);
+
+    QPixmap pixmapDonationText(donateHtmlText.size().width(), donateHtmlText.size().height());
+    pixmapDonationText.fill( Qt::transparent );
+
+    QPainter painter( &pixmapDonationText );
+    painter.setRenderHint(QPainter::Antialiasing, true);
+
+    donateHtmlText.drawContents(&painter, pixmapDonationText.rect());
+
+    QIcon donateButtonIcon(pixmapDonationText);
+    pushDonatePayPal->setIcon(donateButtonIcon);
+    pushDonatePayPal->setIconSize(pixmapDonationText.rect().size());
+
+    adjustSize();
+    this->resize(512, 800);
 }
 
 void DialogInfo::openFacebookPage()
@@ -73,6 +122,6 @@ void DialogInfo::openFacebookPage()
 
 void DialogInfo::on_pushDonatePayPal_clicked()
 {
-    QDesktopServices::openUrl(QUrl("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("https://converseen.fasterland.net/donate/", QUrl::TolerantMode));
 }
 

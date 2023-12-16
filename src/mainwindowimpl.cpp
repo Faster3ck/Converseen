@@ -183,6 +183,8 @@ void MainWindowImpl::createActions()
     //toolBar->addWidget(openFileButton);
     toolBar->insertWidget(toolBar->actions().first(), openFileButton);
     openFileButton->setDefaultAction(actionOpenFiles);
+
+
 }
 
 void MainWindowImpl::setupMenu()
@@ -1201,7 +1203,7 @@ QString MainWindowImpl::destinationPath()
 
 void MainWindowImpl::openPaypalLink()
 {
-    QDesktopServices::openUrl(QUrl("https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC", QUrl::TolerantMode));
+    QDesktopServices::openUrl(QUrl("https://converseen.fasterland.net/donate/", QUrl::TolerantMode));
 }
 
 void MainWindowImpl::checkForUpdates()

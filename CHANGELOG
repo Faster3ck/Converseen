@@ -1,3 +1,9 @@
+0.12.0.1 – 2023-12-16
+- Added new options for contributing to project development
+- Added slight improvements to the user interface
+- Updated Italian translation
+- Various Bugfixes
+
 0.12.0.0 – 2023-11-26
 - Porting to Qt6: Now the program can be compiled with both Qt5 and Qt6 (See the Install.md file for more information).
 - Now, the program does not autoreset the image resolution settings when the list is emptied

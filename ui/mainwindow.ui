@@ -330,7 +330,7 @@
      <x>0</x>
      <y>0</y>
      <width>1482</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -376,7 +376,7 @@
    </property>
    <property name="minimumSize">
     <size>
-     <width>446</width>
+     <width>512</width>
      <height>298</height>
     </size>
    </property>
@@ -416,8 +416,8 @@
          <rect>
           <x>0</x>
           <y>0</y>
-          <width>428</width>
-          <height>769</height>
+          <width>473</width>
+          <height>839</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -1411,13 +1411,13 @@ p, li { white-space: pre-wrap; }
   <action name="actionDonatePaypal">
    <property name="icon">
     <iconset resource="../resources.qrc">
-     <normaloff>:/Images/res/paypal_mini.png</normaloff>:/Images/res/paypal_mini.png</iconset>
+     <normaloff>:/Images/res/heart.png</normaloff>:/Images/res/heart.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Donate via Paypal</string>
+    <string>&amp;Donate!</string>
    </property>
    <property name="toolTip">
-    <string>Donate via Paypal</string>
+    <string>Donate via Paypal, Ko-Fi, Cryptocurrencies</string>
    </property>
   </action>
   <action name="actionReportBug">

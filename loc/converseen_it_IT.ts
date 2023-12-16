@@ -221,6 +221,14 @@ p, li { white-space: pre-wrap; }
         <source>Qt Version:</source>
         <translation>Versione di Qt:</translation>
     </message>
+    <message>
+        <source>Make a Donation!</source>
+        <translation>Fai una Donazione!</translation>
+    </message>
+    <message>
+        <source>Donate using PayPal, Ko-Fi or Cryptocurrencies.</source>
+        <translation>Dona con PayPal, Ko-Fi o Criptovalute.</translation>
+    </message>
 </context>
 <context>
     <name>DialogMultipageEditor</name>
@@ -788,10 +796,6 @@ p, li { white-space: pre-wrap; }
         <translation>F1</translation>
     </message>
     <message>
-        <source>Donate via Paypal</source>
-        <translation>Dona via Paypal</translation>
-    </message>
-    <message>
         <source>Rotate and flip</source>
         <translation>Ruota e rifletti</translation>
     </message>
@@ -844,10 +848,6 @@ p, li { white-space: pre-wrap; }
         <translation>Numero progress&amp;ivo</translation>
     </message>
     <message>
-        <source>&amp;Donate via Paypal</source>
-        <translation>Dona con &amp;Paypal</translation>
-    </message>
-    <message>
         <source>&amp;Report bug...</source>
         <translation>&amp;Riporta bug...</translation>
     </message>
@@ -895,6 +895,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Collega rapporto di aspetto con l&apos;immagine selezionata&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Regola automaticamente i valori del rapporto d&apos;aspetto quando si inserisce un valore nei campi &lt;span style=&quot; font-weight:700;&quot;&gt;Larghezza/Altezza&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&amp;Donate!</source>
+        <translation>&amp;Dona!</translation>
+    </message>
+    <message>
+        <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
+        <translation>Dona con PayPal, Ko-Fi o Criptovalute</translation>
     </message>
 </context>
 <context>
