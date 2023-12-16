@@ -33,7 +33,7 @@ To contact me you can use [this page](https://converseen.fasterland.net/contact-
 
 
 You can find more details about **Converseen** at [converseen.fasterland.net](https://converseen.fasterland.net/).
-If you appreciate this work and would like to support the project, you are welcome to [donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQA6TBT5354FC) via **Paypal**.
+If you enjoy this work, feel free to contribute to its development by making a **donation** on [**PayPal**, **Ko-Fi**, or using **Cryptocurrencies**](https://converseen.fasterland.net/donate/)!
 
 ## License
 
