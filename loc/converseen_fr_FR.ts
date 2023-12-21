@@ -265,7 +265,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/dialoginfo.cpp" line="41"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Version Qt :</translation>
     </message>
     <message>
         <location filename="../src/dialoginfo.cpp" line="54"/>
@@ -275,12 +275,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/dialoginfo.cpp" line="72"/>
         <source>Make a Donation!</source>
-        <translation type="unfinished"></translation>
+        <translation>Faire un don !</translation>
     </message>
     <message>
         <location filename="../src/dialoginfo.cpp" line="73"/>
         <source>Donate using PayPal, Ko-Fi or Cryptocurrencies.</source>
-        <translation type="unfinished"></translation>
+        <translation>Faites un don en utilisant PayPal, Ko-Fi ou Crypto-monnaies.</translation>
     </message>
 </context>
 <context>
@@ -894,12 +894,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="877"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Load Image Sizes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;px&apos;&lt;/span&gt; is selected, the original image sizes will be loaded into the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields. &lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; is selected, it restores the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields to &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Charger les tailles d&apos;image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Si &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;px&apos;&lt;/span&gt; est sélectionné, les tailles d&apos;image originales seront chargées dans les champs &lt;span style=&quot; font-weight:700;&quot;&gt;Largeur/Hauteur&lt;/span&gt;. &lt;/p&gt;&lt;p&gt;Si &lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; est sélectionné, les champs &lt;span style=&quot; font-weight:700;&quot;&gt;Largeur/Hauteur&lt;/span&gt; sont restaurés à &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="891"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Lier les proportions avec l’image sélectionnée&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Ajuste automatiquement les valeurs de proportion lorsque vous entrez une valeur dans les champs &lt;span style=&quot; font-weight:700;&quot;&gt;Largeur/Hauteur&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1248"/>
@@ -1054,12 +1054,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1417"/>
         <source>&amp;Donate!</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Faire un don !</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1420"/>
         <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Faites un don via Paypal, Ko-Fi, Crypto-monnaies</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1455"/>
