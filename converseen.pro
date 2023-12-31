@@ -7,7 +7,6 @@ CONFIG += qt \
 win32:CONFIG += entrypoint
 
 macx {
-    QMAKE_MACOSX_DEPLOYMENT_TARGET=10.13
     ICON = res/converseen.icns
 }
 
