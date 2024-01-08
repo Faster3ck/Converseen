@@ -10,7 +10,7 @@ permissions:
   contents: write
 
 jobs:
-  sourceforge-prepare:
+  snap-build-release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,7 +21,7 @@ jobs:
         with:
           path: package/Snap
 
-      - name: Plublish Snap
+      - name: Publish Snap
         uses: snapcore/action-publish@v1
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPSTORE_LOGIN }}
