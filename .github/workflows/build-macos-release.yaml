@@ -45,7 +45,7 @@ jobs:
     - name: Set Environment
       id: set-env
       run: |
-        file_content=$(<converseen/package/macOS/version.txt)
+        file_content=$(tr -d '\r' <converseen/package/macOS/version.txt)
 
         VERSION=$(echo "$file_content" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
         BUILD=$(echo "$file_content" | grep -oE '[0-9]+$')
@@ -290,5 +290,3 @@ jobs:
           echo "url: $c_url"
           
           curl -H "Accept: application/json" -X PUT -d "default=mac" -d "api_key=${{ secrets.SF_API_KEY }}" $c_url
-
-          
