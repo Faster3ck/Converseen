@@ -48,7 +48,7 @@ jobs:
         file_content=$(<converseen/package/macOS/version.txt)
 
         VERSION=$(echo "$file_content" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
-        BUILD=$(echo "$file_content" | grep -oE '[0-9]+$')
+        BUILD=$(echo "$file_content" | grep -oE '[0-9].$')
 
         export LIB_DIR="${BASE_DIR}/lib"
         export LOCAL_LIB="/usr/local/lib"
