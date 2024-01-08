@@ -19,7 +19,7 @@ With **Converseen** you can:
 
 ## Installing
 
-**Converseen** is available for free for several operating systems including **Windows 7/8/10/11**, all versions of **Linux** such as **Ubuntu, Mint, Fedora, Arch Linux, openSUSE** either through the **official repos** or through **AppImage**, **Snap** and **Flatpak** packages, **macOS 10.13+**, but also **FreeBSD**.
+**Converseen** is available for free for several operating systems including **Windows 7/8/10/11**, all versions of **Linux** such as **Ubuntu, Mint, Fedora, Arch Linux, openSUSE** either through the **official repos** or through **AppImage**, **Snap** and **Flatpak** packages, **macOS 11+**, but also **FreeBSD**.
 
 * [Download for Windows](https://converseen.fasterland.net/download-for-windows/)
 * [Download for Linux](https://converseen.fasterland.net/download-for-linux/)
