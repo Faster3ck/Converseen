@@ -21,7 +21,10 @@ jobs:
         with:
           path: package/Snap
 
-      - uses: actions/upload-artifact@v4
+      - name: Plublish Snap
+        uses: snapcore/action-publish@v1
+        env:
+          SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPSTORE_LOGIN }}
         with:
-          name: snap
-          path: ${{ steps.snapcraft.outputs.snap }}
+          snap: ${{ steps.snapcraft.outputs.snap }}
+          release: stable
