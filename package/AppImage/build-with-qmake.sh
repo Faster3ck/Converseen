@@ -73,8 +73,8 @@ cp $(ldconfig -p | grep libde265.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DI
 
 cp $(ldconfig -p | grep libdav1d.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 cp $(ldconfig -p | grep libaom.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
-cp $(ldconfig -p | grep libavcodec.so.58 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
-cp $(ldconfig -p | grep libsharpyuv.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+# cp $(ldconfig -p | grep libavcodec.so.58 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+# cp $(ldconfig -p | grep libsharpyuv.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 
 cp -rv /usr/lib/x86_64-linux-gnu/libheif $BUILD_DIR/AppDir/usr/lib
 
