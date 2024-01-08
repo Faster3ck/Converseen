@@ -1,0 +1,271 @@
+name: Build and Release Converseen for Windows
+
+on:
+  push:
+    tags:        
+      - '**'
+  workflow_dispatch:
+      
+permissions:
+  contents: write
+
+jobs:
+  build-converseen:
+    name: Converseen Windows Build
+    runs-on: windows-2022
+    outputs:
+      output_version: ${{ steps.converseen-version.outputs.version }}
+
+    steps:
+      - name: Clone ImageMagick-Windows
+        uses: actions/checkout@v4
+        with:
+          repository: ImageMagick/ImageMagick-Windows
+          path: ImageMagick-Windows
+          ref: refs/heads/main
+  
+      - name: Clone ImageMagick Deps
+        shell: cmd
+        run: |
+          cd ImageMagick-Windows
+          CloneRepositories.cmd https://github.com/ImageMagick shallow
+          
+      - name: Build Configure ImageMagick
+        shell: cmd
+        run: |
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
+          cd ImageMagick-Windows\VisualMagick\configure
+          msbuild configure.2022.sln /m /t:Rebuild /p:Configuration=Release,Platform=x64
+          
+      - name: Configure ImageMagick
+        shell: cmd
+        run: |
+          cd ImageMagick-Windows\VisualMagick\configure
+          configure.exe /noWizard /VS2022 /x86 /dmt /Q16 /hdri /incompatibleLicense /includeOptional
+          
+      - name: Build ImageMagick
+        shell: cmd
+        run: |
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
+          cd ImageMagick-Windows\VisualMagick
+          dir /B *.sln > solution
+          set /p solution=<solution
+          msbuild %solution% /m /t:Rebuild /p:Configuration=Release,Platform=x86
+    
+      - name: Clone Converseen
+        uses: actions/checkout@v4
+        with:
+          path: Converseen
+
+      - name: Get Converseen Version Number
+        id: converseen-version
+        run: |
+          cd Converseen
+          $fileContent = Get-Content package\Windows\converseen_win32_setup.iss
+  
+          # Estract Version Number
+          $patternVersion = '^\s*#define MyAppVersion\s+"([^"]+)"\s*$'
+          $versionLine = $fileContent | Where-Object { $_ -match $patternVersion }
+  
+          if ($versionLine) {
+            $versionNumber = $Matches[1]
+            Write-Output "Found version: $versionNumber"
+            echo "version=$versionNumber" >> $env:GITHUB_OUTPUT
+          } else {
+            Write-Error "Version not found."
+            exit 1
+          }
+
+          # Estract Build Number
+          $patternBuild = '^\s*#define MyAppBuild\s+"([^"]+)"\s*$'
+          $buildLine = $fileContent | Where-Object { $_ -match $patternBuild }
+  
+          if ($buildLine) {
+            $buildNumber = $Matches[1]
+            Write-Output "Build found: $buildNumber"
+            echo "build=$buildNumber" >> $env:GITHUB_OUTPUT
+          } else {
+            Write-Error "Build not found."
+            exit 1
+          }
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '5.15.2'
+          host: 'windows'
+          target: 'desktop'
+          arch: 'win32_msvc2019'
+          install-deps: 'true'
+          set-env: 'true'
+          
+      - name: Install Inno Setup
+        shell: cmd
+        run: |
+          powershell Invoke-WebRequest -Uri https://jrsoftware.org/download.php/is.exe -OutFile is.exe
+          is.exe /SILENT /SUPPRESSMSGBOXES /NORESTART /SP-
+
+      - name: Build Converseen
+        shell: cmd
+        run: |
+          cd Converseen
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
+          ls
+          qmake converseen.pro IM_INSTALL_PREFIX="..\ImageMagick-Windows" IM_LIB_PATH="..\ImageMagick-Windows\VisualMagick\lib"
+          lrelease converseen.pro
+          nmake
+
+      - name: Download OpenSSL (x86)
+        shell: powershell
+        run: |
+          Invoke-WebRequest -Uri https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip -OutFile openssl-1.1.1w.zip
+          Expand-Archive -Path openssl-1.1.1w.zip -DestinationPath .
+
+      - name: Deploy Converseen
+        shell: cmd
+        run: |
+          cd Converseen
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
+          
+          set IM_PATH=..\..\ImageMagick-Windows
+          set CONV_ARCH="x86"
+
+          cd bin
+          
+          mkdir loc
+          mkdir settings
+          mkdir modules
+          mkdir modules\coders
+          mkdir modules\filters
+          
+          copy %IM_PATH%\VisualMagick\bin\*CORE_RL_*.dll
+          copy %IM_PATH%\VisualMagick\bin\*IM_MOD_RL_*.dll modules\coders
+          copy %IM_PATH%\VisualMagick\bin\*FILTER_*.dll modules\filters
+          copy %IM_PATH%\VisualMagick\bin\X11.dll
+          copy %IM_PATH%\VisualMagick\bin\Xext.dll
+          copy %IM_PATH%\VisualMagick\bin\ImageMagick.rdf
+          copy %IM_PATH%\VisualMagick\bin\sRGB.icc
+          copy %IM_PATH%\VisualMagick\bin\*.xml
+          copy %IM_PATH%\VisualMagick\NOTICE.txt ImageMagick_License.txt
+
+          copy ..\..\openssl-1.1\x86\bin\*.dll
+          
+          copy ..\COPYING COPYING.txt
+          copy ..\loc\*.qm loc
+          copy package\Windows\qt.conf
+          
+          windeployqt converseen.exe --no-compiler-runtime
+          
+          copy "%VCToolsRedistDir%%CONV_ARCH%\Microsoft.VC143.CRT\vcruntime14*.dll"
+          copy "%VCToolsRedistDir%%CONV_ARCH%\Microsoft.VC143.CRT\msvcp14*.dll"
+          copy "%VCToolsRedistDir%%CONV_ARCH%\Microsoft.VC143.OPENMP\vcomp140.dll"
+          copy "%VCToolsRedistDir%%CONV_ARCH%\Microsoft.VC143.MFC\mfc140u.dll"
+
+      - name: Create Converseen Installer
+        shell: cmd
+        run: |
+          cd Converseen
+          copy package\Windows\converseen_win32_setup.iss converseen_win32_setup.iss
+          rename bin converseen
+          "C:\Program Files (x86)\Inno Setup 6\iscc.exe" converseen_win32_setup.iss
+
+      - name: Create Converseen Portable
+        shell: cmd
+        run: |
+          cd Converseen
+          rename converseen converseen-${{ steps.converseen-version.outputs.version }}-${{ steps.converseen-version.outputs.build }}-win32-portable
+          powershell -command "Compress-Archive -Path 'converseen-${{ steps.converseen-version.outputs.version }}-${{ steps.converseen-version.outputs.build }}-win32-portable' -DestinationPath 'converseen-${{ steps.converseen-version.outputs.version }}-${{ steps.converseen-version.outputs.build }}-win32-portable.zip'
+
+      - name: Prepare Artifacts
+        shell: cmd
+        run: |
+          cd Converseen
+          mkdir artifacts
+          copy Output\Converseen-*-win32-setup.exe artifacts
+          copy converseen-*.zip artifacts
+        
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Converseen-Win32
+          path: Converseen\artifacts
+
+  create_release:
+    name: 'Create release'
+    needs:
+      - build-converseen
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Converseen
+      uses: actions/checkout@v4
+      
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: Converseen-Win32
+        path: artifacts
+
+    - name: 'Get Previous tag'
+      id: previoustag
+      uses: "WyriHaximus/github-action-get-previous-tag@v1"
+      with:
+        fallback: "v${{ needs.build-converseen.outputs.output_version }}"
+
+    - name: Publish Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: "${{ steps.previoustag.outputs.tag }}"
+        files: |
+          artifacts/Converseen-*-win32-setup.exe
+          artifacts/converseen-*.zip
+
+  sf-release:
+    name: Sourceforge Release
+    needs:
+      - build-converseen
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Known Hosts
+        id: known-hosts
+        run: |
+          SF_HOSTS=$(ssh-keyscan -H frs.sourceforge.net)
+          echo "known-hosts=$SF_HOSTS" >> $GITHUB_OUTPUT
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: Converseen-Win32
+          path: artifacts
+        
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SF_SSH_KEY }}
+          known_hosts: ${{ steps.known-hosts.outputs.known-hosts }}
+          if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+          
+      - name: rsync over SSH
+        id: rsync
+        run: |
+          cd artifacts
+        
+          c_ver=${{ needs.build-converseen.outputs.output_version }}
+          v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
+          
+          c_target=$(echo $(ls Converseen-*-win32-setup.exe))
+          echo "target-file=$c_target" >> $GITHUB_OUTPUT
+          
+          rsync -r Converseen-*-win32-setup.exe converseen-*.zip ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
+
+      - name: Set Platform
+        run: |
+          c_ver=${{ needs.build-converseen.outputs.output_version }}
+          c_target=${{ steps.rsync.outputs.target-file }}
+          
+          v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
+          c_url=https://sourceforge.net/projects/converseen/files/Converseen/Converseen%20${v_dir}/c_target
+
+          echo "url: $c_url"
+          
+          curl -H "Accept: application/json" -X PUT -d "default=windows" -d "api_key=${{ secrets.SF_API_KEY }}" $c_url

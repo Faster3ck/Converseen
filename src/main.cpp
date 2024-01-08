@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2023
+* (C) Francesco Mondello 2009 - 2024
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -69,7 +69,7 @@ int main(int argc, char ** argv)
 #if defined(Q_OS_OSX)
     QString appDirPath = QApplication::applicationDirPath();
 
-    QDir gs_dir(appDirPath + "/../Resources/ghostscript/10.01.2");
+    QDir gs_dir(appDirPath + "/../Resources/ghostscript/gs");
     QString gs_path = gs_dir.absolutePath();
 
     QString magick_configure_path = appDirPath + "/../Resources/ImageMagick-7";

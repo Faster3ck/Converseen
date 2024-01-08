@@ -1,0 +1,294 @@
+name: Build and Release Converseen for MacOS
+
+on:
+  push:
+    tags:        
+      - '**'
+  workflow_dispatch:
+      
+permissions:
+  contents: write
+
+jobs:
+  build_converseen_macos:
+    name: Build MacOS Deps
+    runs-on: macos-11
+    outputs:
+      output_version: ${{ steps.set-env.outputs.ver }}
+
+    env:
+      BASE_DIR: ${{ github.workspace }}/im_build 
+      WORKING_DIR: ${{ github.workspace }}
+
+    steps:
+    - name: Install dependencies
+      run: |
+        set -e
+        
+        export HOMEBREW_NO_AUTO_UPDATE=1
+        brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool openexr openexr openjpeg webp libraw ghostscript
+
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        aqtversion: '==3.1.*'
+        version: '6.6.1'
+        host: 'mac'
+        target: 'desktop'
+        arch: 'clang_64'
+
+    - name: Checkout Converseen
+      uses: actions/checkout@v4
+      with:
+        path: converseen
+
+    - name: Set Environment
+      id: set-env
+      run: |
+        file_content=$(<converseen/package/macOS/version.txt)
+
+        VERSION=$(echo "$file_content" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+        BUILD=$(echo "$file_content" | grep -oE '[0-9]+$')
+
+        export LIB_DIR="${BASE_DIR}/lib"
+        export LOCAL_LIB="/usr/local/lib"
+
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+        echo "BUILD=$BUILD" >> $GITHUB_ENV
+        echo "LIB_DIR=$LIB_DIR" >> $GITHUB_ENV
+        echo "LOCAL_LIB=$LOCAL_LIB" >> $GITHUB_ENV
+
+        echo "ver=$VERSION" >> "$GITHUB_OUTPUT"
+
+        echo "Version: $VERSION"
+        echo "Build Number: $BUILD"
+
+    - name: Checkout ImageMagick
+      uses: actions/checkout@v4
+      with:
+        path: ImageMagick
+        repository: ImageMagick/ImageMagick
+        
+    - name: Build ImageMagick
+      run: |      
+        cd ImageMagick
+        ./configure --prefix=${{ github.workspace }}/im_build \
+                              --with-quantum-depth=16 \
+                              --disable-dependency-tracking \
+                              --without-perl \
+                              --without-x \
+                              --disable-static \
+                              --disable-installed \
+                              --enable-shared \
+                              --with-flif=yes \
+                              --with-gslib=yes
+
+        make
+        make install
+      
+    - name: Build Converseen
+      run: |
+        mkdir build
+        cd build
+
+        qmake ../converseen/converseen.pro -spec macx-clang QMAKE_MACOSX_DEPLOYMENT_TARGET=11.0 IM_INSTALL_PREFIX=${{ github.workspace }}/im_build
+        make
+      
+    - name: Copy Dependencies
+      shell: python {0}
+      run: |
+        import os
+        import shutil
+
+        working_dir = os.environ['WORKING_DIR']
+        os.chdir(working_dir + "/build/bin")
+
+        print("Working dir:" + working_dir + "/build/bin")
+        
+        # Define the destination folder where symbolic links will be copied
+        destination_folder = "converseen.app/Contents/Frameworks"
+        os.mkdir(destination_folder)
+        
+        # Define the folders to scan
+        folders_to_scan = [
+            "/usr/local/Cellar/aom",
+            "/usr/local/Cellar/brotli",
+            "/usr/local/Cellar/fontconfig",
+            "/usr/local/Cellar/freetype",
+            "/usr/local/Cellar/gettext",
+            "/usr/local/Cellar/ghostscript",
+            "/usr/local/Cellar/giflib",
+            "/usr/local/Cellar/highway",
+            "/usr/local/Cellar/imath",
+            "/usr/local/Cellar/jasper",
+            "/usr/local/Cellar/jbig2dec",
+            "/usr/local/Cellar/jpeg-turbo",
+            "/usr/local/Cellar/jpeg-xl",
+            "/usr/local/Cellar/libde265",
+            "/usr/local/Cellar/libheif",
+            "/usr/local/Cellar/libidn",
+            "/usr/local/Cellar/libomp",
+            "/usr/local/Cellar/libpng",
+            "/usr/local/Cellar/libraw",
+            "/usr/local/Cellar/libtiff",
+            "/usr/local/Cellar/libtool",
+            "/usr/local/Cellar/libvmaf",
+            "/usr/local/Cellar/little-cms2",
+            "/usr/local/Cellar/lz4",
+            "/usr/local/Cellar/openexr",
+            "/usr/local/Cellar/openjpeg",
+            "/usr/local/Cellar/pcre2",
+            "/usr/local/Cellar/webp",
+            "/usr/local/Cellar/x265",
+            "/usr/local/Cellar/xz",
+            "/usr/local/Cellar/zstd"
+        ]
+        
+        # Function to find and copy symbolic links with a dylib extension
+        def copy_dylib_from_folder(folder):
+            try:
+                if os.path.exists(folder):
+                    for root, dirs, files in os.walk(folder):
+                        for file in files:
+                            if file.endswith(".dylib"): 
+                                dylib_path = os.path.join(root, file)
+                                dylib_name = os.path.basename(dylib_path)
+                                if os.path.islink(os.path.join(root, file)):
+                                    # Copy the symbolic link to the destination folder
+                                    shutil.copy(dylib_path, os.path.join(destination_folder, dylib_name), follow_symlinks=False)
+                                    print(f"Copied link {dylib_name} from {folder} to {destination_folder}")
+                                else:
+                                    # Copy library to the destination folder
+                                    shutil.copy(dylib_path, os.path.join(destination_folder, dylib_name))
+                                    print(f"Copied file {dylib_name} from {folder} to {destination_folder}")
+                else:
+                    print(f"The folder {folder} does not exist.")
+            except Exception as e:
+                print(f"An error occurred: {str(e)} while copying from {folder}")
+        
+        # Execute the function for each folder to scan
+        for folder in folders_to_scan:
+            copy_dylib_from_folder(folder)
+
+    - name: Deploy Qt
+      run: |
+        cd build/bin
+        sudo chmod -Rv a+rwx converseen.app/Contents/Frameworks/
+        macdeployqt converseen.app -libpath=${{ github.workspace }}/im_build/lib
+
+        # Fix libzip rpaths
+        cd converseen.app/Contents/Frameworks/
+        install_name_tool -change /usr/lib/libbz2.1.0.dylib @rpath/libbz2.1.0.dylib libzip.5.dylib
+        install_name_tool -change @loader_path/../../../../opt/xz/lib/liblzma.5.dylib @rpath/liblzma.5.dylib libzip.5.dylib
+        install_name_tool -change @loader_path/../../../../opt/zstd/lib/libzstd.1.dylib @rpath/libzstd.1.dylib libzip.5.dylib
+
+    - name: Copy Resources
+      run: |
+        cd build/bin
+        echo "--- Copying res files ---"
+        cp -rvf ${{ github.workspace }}/im_build/etc/ImageMagick-7 converseen.app/Contents/Resources
+        cp -rvf /usr/local/Cellar/ghostscript/10.02.1/share/ghostscript converseen.app/Contents/Resources
+        
+        echo "--- Copying loc files ---"
+        mkdir converseen.app/Contents/Resources/loc
+        cp -rvf ../../converseen/loc/*.qm converseen.app/Contents/Resources/loc
+
+        echo "--- Rename Ghostscript Resource Dir ---"
+        cd converseen.app/Contents/Resources/ghostscript
+        gs_ver=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+        mv $gs_ver gs
+        ls
+
+    - name: Compress Converseen
+      run: |
+        cd build/bin
+        zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
+        pwd
+        ls
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ConverseenMacOSIntel
+        path: build/bin/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip
+        
+  create_release:
+    name: 'Create Release'
+    needs:
+      - build_converseen_macos
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Converseen
+      uses: actions/checkout@v4
+      
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: ConverseenMacOSIntel
+
+    - name: 'Get Previous tag'
+      id: previoustag
+      uses: "WyriHaximus/github-action-get-previous-tag@v1"
+      with:
+        fallback: "v${{ needs.build_converseen_macos.outputs.output_version }}"
+
+    - name: Publish Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: "${{ steps.previoustag.outputs.tag }}"
+        files: |
+          *macos-x86_64.zip
+
+  sf-release:
+    name: Sourceforge Release
+    needs:
+      - build_converseen_macos
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Known Hosts
+        id: known-hosts
+        run: |
+          SF_HOSTS=$(ssh-keyscan -H frs.sourceforge.net)
+          echo "known-hosts=$SF_HOSTS" >> $GITHUB_OUTPUT
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: ConverseenMacOSIntel
+          path: artifacts
+        
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SF_SSH_KEY }}
+          known_hosts: ${{ steps.known-hosts.outputs.known-hosts }}
+          if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+          
+      - name: rsync over SSH
+        id: rsync
+        run: |
+          cd artifacts
+        
+          c_ver=${{ needs.build_converseen_macos.outputs.output_version }}
+          v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
+          
+          c_target=$(echo $(ls converseen-*macos-x86_64.zip))
+          echo "target-file=$c_target" >> $GITHUB_OUTPUT
+          
+          rsync -r *.zip* ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
+
+      - name: Set Platform
+        run: |
+          c_ver=${{ needs.build_converseen_macos.outputs.output_version }}
+          c_target=${{ steps.rsync.outputs.target-file }}
+          
+          v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
+          c_url=https://sourceforge.net/projects/converseen/files/Converseen/Converseen%20${v_dir}/c_target
+
+          echo "url: $c_url"
+          
+          curl -H "Accept: application/json" -X PUT -d "default=mac" -d "api_key=${{ secrets.SF_API_KEY }}" $c_url
+
+          

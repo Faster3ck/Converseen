@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Copyright 2023 Francesco Mondello <faster3ck@gmail.com> -->
+<!-- Copyright 2024 Francesco Mondello <faster3ck@gmail.com> -->
 <component type="desktop">
     <id>net.fasterland.converseen</id>
     <metadata_license>CC0-1.0</metadata_license>
@@ -71,17 +71,17 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.12.0.1" date="2023-12-16">
+        <release version="0.12.0.2" date="2024-01-08">
             <description>
                 <ol>
-                    <li>Added new options for contributing to project development</li>
-                    <li>Added slight improvements to the user interface</li>
-                    <li>Updated Italian translation</li>
+                    <li>Added small improvements and optimizations</li>
+                    <li>Updated French translation</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
-         <release version="0.12.0.0" date="2023-11-26" />
+        <release version="0.12.0.1" date="2023-12-16" />
+        <release version="0.12.0.0" date="2023-11-26" />
         <release version="0.11.0.1" date="2023-10-17" />
         <release version="0.11.0.0" date="2023-09-12" />
         <release version="0.10.0.1" date="2023-08-15" />

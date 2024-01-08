@@ -1,0 +1,155 @@
+name: Create Release Notes and Upload sourcecode to SourceForge.net
+
+on:
+  push:
+    tags:        
+      - '**'
+  workflow_dispatch:
+      
+permissions:
+  contents: write
+
+jobs:
+  sourceforge-prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      output_version: ${{ steps.version.outputs.version }}
+    steps:
+      - name: Get Version
+        id: version
+        run: |
+          tag_val=${{ github.ref }}
+          v=$(echo ${{ github.ref }} | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+
+          echo "version=$v" >> "$GITHUB_OUTPUT"
+
+      - name: Check Tag
+        if: startsWith(github.ref, 'refs/tags/') == false
+        run: exit 1
+          
+      - uses: actions/checkout@v4
+        with:
+          path: converseen
+
+      - name: Clean Directory
+        run: |
+          cd converseen
+          rm -rvf .git .github .gitattributes
+
+      - name: Create Changelog
+        id: create-changelog
+        shell: python {0}
+        run: |
+          import re
+          import os
+
+          def generateSFReadme(changelogText, version, date):
+              changelogLines = '\n'.join(changelogText.splitlines()[1:])
+              
+              changelog_text = f'What\'s New in Converseen {version} ({date})\n\n{changelogLines}\n\nFor more informations: http://converseen.fasterland.net/\n'
+          
+              with open("README", 'w', encoding='utf8') as file:
+                  file.write(changelog_text)
+                  
+          def generateGithubReadme(changelogText):
+              changelogLines = '\n'.join(changelogText.splitlines()[1:])
+              
+              changelog_text = f'## Changelog\n{changelogLines}\n'
+          
+              with open("release_notes.md", 'w', encoding='utf8') as file:
+                  file.write(changelog_text)
+          
+          def extractInfo(changelogText):
+              pattern = r'(\d+\.\d+\.\d+\.\d+)\s*–\s*(\d{4}-\d{2}-\d{2})'
+          
+              match = re.match(pattern, changelogText)
+          
+              if match:
+                  version, date = match.groups()
+                  print(f"Version: {version}")
+                  print(f"Date: {date}")
+                  return version, date
+          
+              print("No match found!")
+              return '', ''
+
+          def extract_latest_changes(filename):
+              latest_changes = ''
+          
+              with open(filename, 'r', encoding='utf8') as file:
+                  changelog = file.read()
+                  pattern = re.compile(r'^\d+\.\d+\.\d+\.\d+\s*–\s*\d{4}-\d{2}-\d{2}\n(?:-.*(?:\n|$))*', re.MULTILINE)
+                  match = re.search(pattern, changelog)
+          
+                  if match:
+                      latest_changes = match.group(0)
+                  else:
+                      print("No block found on CHANGELOG")
+
+              return latest_changes
+          
+          filename = 'converseen/CHANGELOG'
+          latest_changes = extract_latest_changes(filename)
+          print(latest_changes)
+
+          # Generate README for SourceForge.net
+          changelogInfo = extractInfo(latest_changes)
+          generateSFReadme(latest_changes, changelogInfo[0], changelogInfo[1])
+
+          # Save Changelog for Github Release Notes 
+          generateGithubReadme(latest_changes)
+
+      - name: Create Tarball
+        run: |
+          mv converseen converseen-${{ steps.version.outputs.version }}
+          tar -cjvf converseen-${{ steps.version.outputs.version }}.tar.bz2 converseen-${{ steps.version.outputs.version }}
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ConverseenSF
+          path: |
+            converseen-*.tar.bz2
+            README
+
+      - name: Publish Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: Version ${{ steps.version.outputs.version }}
+          body_path: release_notes.md
+
+  sf-release:
+    name: Sourceforge Release
+    needs:
+      - sourceforge-prepare
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Known Hosts
+        id: known-hosts
+        run: |
+          SF_HOSTS=$(ssh-keyscan -H frs.sourceforge.net)
+          echo "known-hosts=$SF_HOSTS" >> $GITHUB_OUTPUT
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: ConverseenSF
+          path: artifacts
+        
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SF_SSH_KEY }}
+          known_hosts: ${{ steps.known-hosts.outputs.known-hosts }}
+          if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+          
+      - name: rsync over SSH
+        id: rsync
+        run: |
+          cd artifacts
+        
+          c_ver=${{ needs.sourceforge-prepare.outputs.output_version }}
+          v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
+          
+          rsync -r * ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"

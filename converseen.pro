@@ -10,6 +10,10 @@ macx {
     ICON = res/converseen.icns
 }
 
+win32 {
+    RC_FILE = converseen.rc
+}
+
  DESTDIR =  bin
  OBJECTS_DIR =  build
  MOC_DIR =  build
@@ -75,9 +79,16 @@ macx {
       -DMAGICKCORE_HDRI_ENABLE=1 \
       -DMAGICKCORE_QUANTUM_DEPTH=16
  }
+ 
+ win32 {
+    QMAKE_CXXFLAGS += -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458
+ }
 
  win32 {
-    INCLUDEPATH += "$$IM_INSTALL_PREFIX\include"
+        INCLUDEPATH += "$$IM_INSTALL_PREFIX\ImageMagick" \
+            "$$IM_INSTALL_PREFIX\ImageMagick\Magick++\lib"
+	
+	message(ImageMagick Windows Include: $$INCLUDEPATH)
  } else {
     
     isEmpty(IM_INSTALL_PREFIX) {
@@ -91,7 +102,7 @@ macx {
  }
 
  win32 {
-    LIBS += -L"$$IM_INSTALL_PREFIX\lib" -lCORE_RL_Magick++_ -lCORE_RL_MagickCore_ -lCORE_RL_MagickWand_
+    LIBS += -L"$$IM_LIB_PATH" -lCORE_RL_Magick++_ -lCORE_RL_MagickCore_ -lCORE_RL_MagickWand_
  } else {
     isEmpty(IM_INSTALL_PREFIX) {
         LIB_PREFIX +=  /usr/lib

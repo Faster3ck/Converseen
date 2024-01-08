@@ -38,7 +38,7 @@ If you enjoy this work, feel free to contribute to its development by making a *
 ## License
 
     Converseen - The image batch converter and resizer
-    Copyright (C) 2009 - 2023  Francesco Mondello
+    Copyright (C) 2009 - 2024  Francesco Mondello
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

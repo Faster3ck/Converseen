@@ -1,0 +1,27 @@
+name: Build and Release Snap Package
+
+on:
+  push:
+    tags:        
+      - '**'
+  workflow_dispatch:
+      
+permissions:
+  contents: write
+
+jobs:
+  sourceforge-prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Build Snap
+        uses: snapcore/action-build@v1
+        id: snapcraft
+        with:
+          path: package/Snap
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: snap
+          path: ${{ steps.snapcraft.outputs.snap }}
