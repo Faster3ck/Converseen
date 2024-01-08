@@ -48,7 +48,7 @@ jobs:
         file_content=$(<converseen/package/macOS/version.txt)
 
         VERSION=$(echo "$file_content" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
-        BUILD=$(echo "$file_content" | grep -oE '[0-9].$')
+        BUILD=$(echo "$file_content" | grep -oE '[0-9]+$')
 
         export LIB_DIR="${BASE_DIR}/lib"
         export LOCAL_LIB="/usr/local/lib"
@@ -285,7 +285,7 @@ jobs:
           c_target=${{ steps.rsync.outputs.target-file }}
           
           v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
-          c_url=https://sourceforge.net/projects/converseen/files/Converseen/Converseen%20${v_dir}/c_target
+          c_url=https://sourceforge.net/projects/converseen/files/Converseen/Converseen%20${v_dir}/$c_target
 
           echo "url: $c_url"
           
