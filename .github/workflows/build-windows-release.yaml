@@ -17,40 +17,23 @@ jobs:
       output_version: ${{ steps.converseen-version.outputs.version }}
 
     steps:
-      - name: Clone ImageMagick-Windows
-        uses: actions/checkout@v4
-        with:
-          repository: ImageMagick/ImageMagick-Windows
-          path: ImageMagick-Windows
-          ref: refs/heads/main
-  
-      - name: Clone ImageMagick Deps
-        shell: cmd
+      - name: Download ImageMagick for Windows
+        shell: powershell
         run: |
-          cd ImageMagick-Windows
-          CloneRepositories.cmd https://github.com/ImageMagick shallow
+          # Get latest version number from GitHub
+          $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
+          $lastTagLine = $gitTags[-1]
+          $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
+          $latestVersionNumber = $lastTagVersion
           
-      - name: Build Configure ImageMagick
-        shell: cmd
-        run: |
-          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
-          cd ImageMagick-Windows\VisualMagick\configure
-          msbuild configure.2022.sln /m /t:Rebuild /p:Configuration=Release,Platform=x64
+          Write-Host "Latest ImageMagick Version Found: $latestVersionNumber"
           
-      - name: Configure ImageMagick
+          Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x86-dll.exe -OutFile ImageMagick-Installer.exe
+
+      - name: Install ImageMagick for Windows
         shell: cmd
         run: |
-          cd ImageMagick-Windows\VisualMagick\configure
-          configure.exe /noWizard /VS2022 /x86 /dmt /Q16 /hdri /incompatibleLicense /includeOptional
-          
-      - name: Build ImageMagick
-        shell: cmd
-        run: |
-          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
-          cd ImageMagick-Windows\VisualMagick
-          dir /B *.sln > solution
-          set /p solution=<solution
-          msbuild %solution% /m /t:Rebuild /p:Configuration=Release,Platform=x86
+          ImageMagick-Installer.exe /MERGETASKS=install_devel /VERYSILENT /DIR=ImageMagick
     
       - name: Clone Converseen
         uses: actions/checkout@v4
@@ -110,8 +93,8 @@ jobs:
         run: |
           cd Converseen
           call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
-          ls
-          qmake converseen.pro IM_INSTALL_PREFIX="..\ImageMagick-Windows" IM_LIB_PATH="..\ImageMagick-Windows\VisualMagick\lib"
+          
+          qmake converseen.pro IM_INSTALL_PREFIX="..\ImageMagick"
           lrelease converseen.pro
           nmake
 
@@ -127,7 +110,7 @@ jobs:
           cd Converseen
           call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
           
-          set IM_PATH=..\..\ImageMagick-Windows
+          set IM_PATH=..\..\ImageMagick
           set CONV_ARCH="x86"
 
           cd bin
@@ -138,15 +121,13 @@ jobs:
           mkdir modules\coders
           mkdir modules\filters
           
-          copy %IM_PATH%\VisualMagick\bin\*CORE_RL_*.dll
-          copy %IM_PATH%\VisualMagick\bin\*IM_MOD_RL_*.dll modules\coders
-          copy %IM_PATH%\VisualMagick\bin\*FILTER_*.dll modules\filters
-          copy %IM_PATH%\VisualMagick\bin\X11.dll
-          copy %IM_PATH%\VisualMagick\bin\Xext.dll
-          copy %IM_PATH%\VisualMagick\bin\ImageMagick.rdf
-          copy %IM_PATH%\VisualMagick\bin\sRGB.icc
-          copy %IM_PATH%\VisualMagick\bin\*.xml
-          copy %IM_PATH%\VisualMagick\NOTICE.txt ImageMagick_License.txt
+          copy %IM_PATH%\*CORE_RL_*.dll
+          copy %IM_PATH%\modules\coders\*IM_MOD_RL_*.dll modules\coders
+          copy %IM_PATH%\modules\coders\*FILTER_*.dll modules\filters
+          copy %IM_PATH%\ImageMagick.rdf
+          copy %IM_PATH%\sRGB.icc
+          copy %IM_PATH%\*.xml
+          copy %IM_PATH%\NOTICE.txt ImageMagick_License.txt
 
           copy ..\..\openssl-1.1\x86\bin\*.dll
           
