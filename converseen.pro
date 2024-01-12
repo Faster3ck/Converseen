@@ -85,8 +85,7 @@ win32 {
  }
 
  win32 {
-        INCLUDEPATH += "$$IM_INSTALL_PREFIX\ImageMagick" \
-            "$$IM_INSTALL_PREFIX\ImageMagick\Magick++\lib"
+        INCLUDEPATH += "$$IM_INSTALL_PREFIX\include"
 	
 	message(ImageMagick Windows Include: $$INCLUDEPATH)
  } else {
@@ -102,6 +101,7 @@ win32 {
  }
 
  win32 {
+    IM_LIB_PATH = "$$IM_INSTALL_PREFIX\lib"
     LIBS += -L"$$IM_LIB_PATH" -lCORE_RL_Magick++_ -lCORE_RL_MagickCore_ -lCORE_RL_MagickWand_
  } else {
     isEmpty(IM_INSTALL_PREFIX) {
