@@ -21,9 +21,8 @@ build_script:
     
     ls ../
     ls C:\Qt\5.15.2\msvc2019
-    
-    & "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
-    
-    
+- cmd:
+    call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
+
     qmake converseen.pro IM_INSTALL_PREFIX="C:\projects\ImageMagick"
     nmake
