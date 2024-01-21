@@ -1,6 +1,13 @@
 cmake_minimum_required(VERSION 3.16.0)
+#cmake_policy(SET CMP0135 NEW)
 
-project(converseen)
+set(CONVERSEEN_VERSION 0.12.0.2)
+
+project(
+    converseen
+    VERSION ${CONVERSEEN_VERSION}
+    LANGUAGES CXX)
+set(PROJECT_NAME_CAPITALIZED "Converseen")
 
 option(USE_QT6 "Enable this if you want to use Qt6, instead of Qt5" NO)
 
@@ -114,14 +121,36 @@ else ()
     qt5_add_translation(converseen_RESOURCES ${converseen_LANG})
 endif()
 
-add_definitions(
-    -Wall
-    -std=c++17
-    -fPIC
-    -DMAGICKCORE_HDRI_ENABLE=0
-    -DMAGICKCORE_QUANTUM_DEPTH=16
-    ${QT_DEFINITIONS}
-)
+if(WIN32)
+    find_program(windeployqt_exe windeployqt REQUIRED)
+    configure_file(cmake/windeployqt.cmake.in ${CMAKE_BINARY_DIR}/windeployqt.cmake @ONLY)
+    set(app_icon_resource_windows "converseen.rc")
+
+    set(CMAKE_WIN32_EXECUTABLE TRUE)
+    add_definitions(${QT_DEFINITIONS})
+
+    include(ExternalProject)
+    ExternalProject_Add(
+        OpenSSL_Win32
+        PREFIX ${CMAKE_BINARY_DIR}/external 
+        URL https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip 
+        DOWNLOAD_DIR ${CMAKE_BINARY_DIR}/downloads
+        DOWNLOAD_NAME openssl-1.1.1w.zip
+        CONFIGURE_COMMAND ""
+        BUILD_COMMAND ""
+        INSTALL_COMMAND ""
+        # DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+    )
+else()
+    add_definitions(
+        -Wall
+        -std=c++17
+        -fPIC
+        -DMAGICKCORE_HDRI_ENABLE=0
+        -DMAGICKCORE_QUANTUM_DEPTH=16
+        ${QT_DEFINITIONS}
+    )
+endif()
 
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
@@ -136,6 +165,7 @@ add_executable(${GUI}
     ${converseen_UIS_H}
     ${converseen_MOC_SRCS}
     ${converseen_RESOURCES}
+    $<$<BOOL:${WIN32}>:${app_icon_resource_windows}>
 )
 
 if (USE_QT6)
@@ -146,7 +176,7 @@ if (USE_QT6)
         Qt6::Widgets
         ${ImageMagick_LIBRARIES}
     )
-else ()
+else()
     target_link_libraries(${GUI}
         Qt5::Core
         Qt5::Gui
@@ -156,20 +186,93 @@ else ()
     )
 endif()
 
-install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${GUI} DESTINATION ${CMAKE_INSTALL_BINDIR})
-install(FILES res/net.fasterland.converseen.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
-install(FILES res/converseen_import.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/kservices5/ServiceMenus)
-install(FILES converseen.appdata.xml DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo/)
-install(FILES res/icons/16x16/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/16x16/apps)
-install(FILES res/icons/32x32/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/32x32/apps)
-install(FILES res/icons/48x48/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps)
-install(FILES res/icons/64x64/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/64x64/apps)
-install(FILES res/icons/128x128/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/128x128/apps)
-install(FILES res/icons/256x256/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/256x256/apps)
-install(FILES res/icons/512x512/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/512x512/apps)
 
-foreach(LANG ${converseen_LANG})
-    string(REGEX REPLACE ".*/" "" TS_FILE ${LANG})
-    string(REGEX REPLACE ".ts" ".qm" QM_FILE ${TS_FILE})
-    install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-endforeach()
+if(WIN32)
+    set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP TRUE)
+    include(InstallRequiredSystemLibraries)
+
+    file(GLOB ImageMagick_DLLs ${ImageMagick_EXECUTABLE_DIR}/CORE_RL_*.dll)
+    file(GLOB ImageMagick_Filters ${ImageMagick_EXECUTABLE_DIR}/modules/filters/*.dll)
+    file(GLOB ImageMagick_Coders ${ImageMagick_EXECUTABLE_DIR}/modules/coders/*.dll)
+    file(GLOB ImageMagick_XMLs ${ImageMagick_EXECUTABLE_DIR}/*.xml)
+    file(GLOB OpenSSL_x86_DLLs ${CMAKE_BINARY_DIR}external/src/OpenSSL_Win32/x86/bin/*.dll)
+    file(GLOB Win32_DLLs ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS}/*.dll)
+
+    install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen.exe DESTINATION .)
+    install(FILES package/Windows/qt.conf DESTINATION .)
+    install(FILES ${ImageMagick_DLLs} DESTINATION .)
+    install(FILES ${ImageMagick_Filters} DESTINATION ./modules/filters)
+    install(FILES ${ImageMagick_Coders} DESTINATION ./modules/coders)
+    install(FILES ${ImageMagick_XMLs} DESTINATION .)
+    install(FILES ${ImageMagick_EXECUTABLE_DIR}/sRGB.icc DESTINATION .)
+    install(FILES ${ImageMagick_EXECUTABLE_DIR}/NOTICE.txt RENAME ImageMagick_License.txt DESTINATION .)
+    install(FILES ${OpenSSL_x86_DLLs} DESTINATION .)
+    install(FILES ${Win32_DLLs} DESTINATION .)
+    
+    install(SCRIPT ${CMAKE_BINARY_DIR}/windeployqt.cmake)
+
+    install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/qtdeploy/ DESTINATION . FILES_MATCHING PATTERN "*")
+
+    foreach(LANG ${converseen_LANG})
+        string(REGEX REPLACE ".*/" "" TS_FILE ${LANG})
+        string(REGEX REPLACE ".ts" ".qm" QM_FILE ${TS_FILE})
+        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION ./loc)
+    endforeach()
+else()
+    install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${GUI} DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install(FILES res/net.fasterland.converseen.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
+    install(FILES res/converseen_import.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/kservices5/ServiceMenus)
+    install(FILES converseen.appdata.xml DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo/)
+    install(FILES res/icons/16x16/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/16x16/apps)
+    install(FILES res/icons/32x32/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/32x32/apps)
+    install(FILES res/icons/48x48/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps)
+    install(FILES res/icons/64x64/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/64x64/apps)
+    install(FILES res/icons/128x128/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/128x128/apps)
+    install(FILES res/icons/256x256/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/256x256/apps)
+    install(FILES res/icons/512x512/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/512x512/apps)
+
+    foreach(LANG ${converseen_LANG})
+        string(REGEX REPLACE ".*/" "" TS_FILE ${LANG})
+        string(REGEX REPLACE ".ts" ".qm" QM_FILE ${TS_FILE})
+        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
+    endforeach()
+endif()
+
+    # CPack
+    set(CPACK_PACKAGE_VENDOR "Francesco Mondello")
+    set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Converseen the Batch Image Converter and Resizer")
+    set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
+    set(CPACK_PACKAGE_HOMEPAGE_URL "https:/converseen.fasterland.net")
+    set(CPACK_PACKAGE_CONTACT "Contact Author <faster3ck@gmail.net>")
+    set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/COPYING.txt")
+    set(CPACK_GENERATOR WIX ZIP)
+    set(CPACK_PACKAGE_NAME "${PROJECT_NAME_CAPITALIZED}")
+    set(CPACK_PACKAGE_INSTALL_DIRECTORY "${PROJECT_NAME_CAPITALIZED}")
+    set(CPACK_PACKAGE_EXECUTABLES ${PROJECT_NAME} "${PROJECT_NAME_CAPITALIZED}")
+    set(CPACK_CREATE_DESKTOP_LINKS ${PROJECT_NAME} "${PROJECT_NAME_CAPITALIZED}")
+    set(CPACK_PACKAGE_FILE_NAME "${PROJECT_NAME_CAPITALIZED}")
+
+if(WIN32)
+    # WIX (Windows .msi installer)
+    set(CPACK_WIX_PRODUCT_ICON "${CMAKE_SOURCE_DIR}/res/converseen.ico")
+    set(CPACK_WIX_UI_BANNER "${CMAKE_SOURCE_DIR}/package/Windows/wix/CPACK_WIX_UI_BANNER.BMP")
+    set(CPACK_WIX_UI_DIALOG "${CMAKE_SOURCE_DIR}/package/Windows/wix/CPACK_WIX_UI_DIALOG.BMP")
+    set(CPACK_WIX_PROPERTY_ARPHELPLINK "${CPACK_PACKAGE_HOMEPAGE_URL}")
+    set(CPACK_WIX_PROPERTY_ARPURLINFOABOUT "${CPACK_PACKAGE_HOMEPAGE_URL}")
+    set(CPACK_WIX_ROOT_FEATURE_DESCRIPTION "${CPACK_PACKAGE_DESCRIPTION_SUMMARY}")
+    set(CPACK_WIX_LIGHT_EXTRA_FLAGS "-dcl:high")
+
+    set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/COPYING.txt")
+    set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/COPYING.txt")
+
+    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51EC180F")
+    set(CPACK_WIX_UPGRADE_GUID "B35C58D3-FBD2-4A81-8371-588F51EC1810")
+
+    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/wixCheckInnoVersion.xml.in" wixCheckInnoVersion.xml)
+    set(CPACK_WIX_PATCH_FILE "wixCheckInnoVersion.xml")
+
+    configure_file(cmake/RemoveInnoVersion.vbs.in ${CMAKE_BINARY_DIR}/RemoveInnoVersion.vbs)
+
+    include(CPack)
+endif()
+

@@ -1,0 +1,33 @@
+' This file is part of Converseen, an open-source batch image converter
+' and resizer.
+'
+' (C) Francesco Mondello 2009 - 2024
+' 
+' This vbs is part of the CPack Wix Installer and is intended to automatically remove old installers created with Inno Setup.
+
+Public Function FindRemoveOldInnoSetup()
+    Dim objShell
+    Set objShell = CreateObject("WScript.Shell")
+
+    ' Inno Setup registry key
+    Dim regKeyPath
+    regKeyPath = "SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{B35C58D3-FBD2-4A81-8371-588F51EC180F}_is1"
+
+    ' Registry key value containing the uninstall command
+    Dim valueName
+    valueName = "QuietUninstallString"
+
+    ' Read value
+    Dim regValue
+    regValue = objShell.RegRead("HKLM\" & regKeyPath & "\" & valueName)
+
+    ' If the key is available, uninstall the previous Inno Installer version!
+    If Len(regValue) > 0 Then
+        msgbox("A previous installation of Converseen was detected on the system, and the installation system will now remove it.")
+
+        Dim returnCode
+        returnCode = objShell.Run(regValue, 1, True)
+    End If
+    
+    Return 0
+End Function

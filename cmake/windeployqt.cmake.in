@@ -1,0 +1,2 @@
+# deploy.cmake.in
+execute_process(COMMAND "@windeployqt_exe@" converseen.exe --dir qtdeploy --release --no-compiler-runtime --verbose 0)
