@@ -131,7 +131,7 @@ jobs:
 
           copy ..\..\openssl-1.1\x86\bin\*.dll
           
-          copy ..\COPYING COPYING.txt
+          copy ..\COPYING.txt COPYING.txt
           copy ..\loc\*.qm loc
           copy package\Windows\qt.conf
           
