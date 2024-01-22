@@ -23,7 +23,7 @@
 
 #define MyAppName "Converseen"
 #define MyAppVersion "0.12.0.2"
-#define MyAppBuild "2"
+#define MyAppBuild "3"
 #define MyAppPublisher "Francesco Mondello"
 #define MyAppURL "http://converseen.fasterland.net/"
 #define MyAppExeName "converseen.exe"
