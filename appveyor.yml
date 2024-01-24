@@ -41,3 +41,8 @@ build_script:
 artifacts:
 - path: build/artifact.zip
   name: artifact
+deploy:
+- provider: Webhook
+  url: https://app.signpath.io/API/v1/71fbb5b8-055f-4882-ae15-f3a8a2951f83/Integrations/AppVeyor?ProjectSlug=Converseen&SigningPolicySlug=test-signing
+  authorization:
+     secure: QTFYJvYodG62yrls8aroh498Mvq4kg/InkHlf272MXVYfqgeU6zY/EJzeNTfWyPv
