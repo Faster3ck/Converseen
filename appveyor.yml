@@ -1,0 +1,43 @@
+version: '{branch}-{build}'
+skip_non_tags: true
+image: Visual Studio 2022
+environment:
+  Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
+build_script:
+- ps: |
+    $env:PATH += ";C:\Qt\5.15.2\msvc2019\bin"
+
+    # Get latest version number from GitHub
+    $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
+    $lastTagLine = $gitTags[-1]
+    $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
+    $latestVersionNumber = $lastTagVersion
+
+    Write-Host "---`nLatest ImageMagick Version Found: $latestVersionNumber`n---"
+
+    Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x86-dll.exe -OutFile ImageMagick-Installer.exe
+    
+    Start-Process -FilePath ".\ImageMagick-Installer.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick" -NoNewWindow -Wait
+- cmd: >-
+    call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
+
+    mkdir build
+
+    cd build
+
+    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick" ..
+
+    nmake
+
+    cpack -B package
+
+    mkdir artifact
+
+    cp package/*.msi artifact/.
+
+    cp package/*.zip artifact/.
+
+    7z a -tzip artifact.zip artifact/
+artifacts:
+- path: build/artifact.zip
+  name: artifact
