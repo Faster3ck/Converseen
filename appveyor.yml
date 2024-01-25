@@ -29,24 +29,22 @@ build_script:
 
     nmake
 
-    cpack -B package -V
-
-    ls external\src\OpenSSL_Win32\x86\bin
+    cpack -B package
 
     mkdir artifact
 
-    cp package/*.msi artifact/.
+    cp package\*.msi artifact
 
-    cp package/*.zip artifact/.
+    cp package\*.zip artifact
 
-    7z a -tzip artifact.zip artifact/
+    7z a -tzip artifact.zip artifact\
 
 artifacts:
 - path: build/artifact.zip
   name: artifact
 
-#deploy:
-#- provider: Webhook
-#  url: https://app.signpath.io/API/v1/71fbb5b8-055f-4882-ae15-f3a8a2951f83/Integrations/AppVeyor?ProjectSlug=Converseen&SigningPolicySlug=test-signing&ArtifactConfigurationSlug=initial
-#  authorization:
-#     secure: YoYalnXJBOqOYvwfVK1CtgGyCk5oeNQNyr+8ru9xjnEbydKxGokat+WO47aGhq6vaT0tx0cWUZBTJYwsaVmWbA==
+deploy:
+- provider: Webhook
+  url: https://app.signpath.io/API/v1/71fbb5b8-055f-4882-ae15-f3a8a2951f83/Integrations/AppVeyor?ProjectSlug=Converseen&SigningPolicySlug=test-signing&ArtifactConfigurationSlug=initial
+  authorization:
+     secure: YoYalnXJBOqOYvwfVK1CtgGyCk5oeNQNyr+8ru9xjnEbydKxGokat+WO47aGhq6vaT0tx0cWUZBTJYwsaVmWbA==
