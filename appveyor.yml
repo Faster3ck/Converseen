@@ -33,11 +33,11 @@ build_script:
 
     mkdir artifact
 
-    cp package\*.msi artifact
-
-    cp package\*.zip artifact
-
-    7z a -tzip artifact.zip artifact\
+    cp package/*.msi artifact/.
+    
+    cp package/*.zip artifact/.
+    
+    7z a -tzip artifact.zip artifact/
 
 artifacts:
 - path: build/artifact.zip
