@@ -29,7 +29,9 @@ build_script:
 
     nmake
 
-    cpack -B package
+    cpack -B package -V
+
+    ls external\src\OpenSSL_Win32\x86\bin
 
     mkdir artifact
 
