@@ -195,7 +195,7 @@ if(WIN32)
     file(GLOB ImageMagick_Filters ${ImageMagick_EXECUTABLE_DIR}/modules/filters/*.dll)
     file(GLOB ImageMagick_Coders ${ImageMagick_EXECUTABLE_DIR}/modules/coders/*.dll)
     file(GLOB ImageMagick_XMLs ${ImageMagick_EXECUTABLE_DIR}/*.xml)
-    file(GLOB OpenSSL_x86_DLLs ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/*.dll)
+    file(GLOB OpenSSL_x86_DLLs ${CMAKE_CURRENT_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/*.dll)
     file(GLOB Win32_DLLs ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS}/*.dll)
 
     install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen.exe DESTINATION .)
