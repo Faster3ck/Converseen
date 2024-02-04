@@ -188,14 +188,21 @@ endif()
 
 
 if(WIN32)
-    set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP TRUE)
-    include(InstallRequiredSystemLibraries)
+    #set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP TRUE)
+
+    #include(InstallRequiredSystemLibraries)
 
     file(GLOB ImageMagick_DLLs ${ImageMagick_EXECUTABLE_DIR}/CORE_RL_*.dll)
     file(GLOB ImageMagick_Filters ${ImageMagick_EXECUTABLE_DIR}/modules/filters/*.dll)
     file(GLOB ImageMagick_Coders ${ImageMagick_EXECUTABLE_DIR}/modules/coders/*.dll)
     file(GLOB ImageMagick_XMLs ${ImageMagick_EXECUTABLE_DIR}/*.xml)
-    file(GLOB Win32_DLLs ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS}/*.dll)
+    file(GLOB OpenSSL_x86_DLLs ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/*.dll)
+    #file(GLOB Win32_DLLs ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS}/*.dll)
+    file(GLOB Win32_DLLs 
+        ${ImageMagick_EXECUTABLE_DIR}/mfc140*.dll
+        ${ImageMagick_EXECUTABLE_DIR}/msvcp140*.dll
+        ${ImageMagick_EXECUTABLE_DIR}/vc*140.dll
+    )
 
     install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen.exe DESTINATION .)
     install(FILES package/Windows/qt.conf DESTINATION .)
@@ -205,9 +212,9 @@ if(WIN32)
     install(FILES ${ImageMagick_XMLs} DESTINATION .)
     install(FILES ${ImageMagick_EXECUTABLE_DIR}/sRGB.icc DESTINATION .)
     install(FILES ${ImageMagick_EXECUTABLE_DIR}/NOTICE.txt RENAME ImageMagick_License.txt DESTINATION .)
-    install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libcrypto-1_1.dll DESTINATION .)
-    install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libssl-1_1.dll DESTINATION .)
+    install(FILES ${OpenSSL_x86_DLLs} DESTINATION .)
     install(FILES ${Win32_DLLs} DESTINATION .)
+    #install(FILES ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} DESTINATION .)
     
     install(SCRIPT ${CMAKE_BINARY_DIR}/windeployqt.cmake)
 
