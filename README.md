@@ -35,6 +35,14 @@ To contact me you can use [this page](https://converseen.fasterland.net/contact-
 You can find more details about **Converseen** at [converseen.fasterland.net](https://converseen.fasterland.net/).
 If you enjoy this work, feel free to contribute to its development by making a **donation** on [**PayPal**, **Ko-Fi**, or using **Cryptocurrencies**](https://converseen.fasterland.net/donate/)!
 
+## Privacy Policy
+
+This program will not transfer any information to other networked systems.
+
+## Code Signing
+
+For the **Windows** binaries for **Converseen**, this program uses free code signing provided by [SignPath.io](https://signpath.io/), certificate by the [SignPath Foundation](https://signpath.org/).
+
 ## License
 
     Converseen - The image batch converter and resizer
