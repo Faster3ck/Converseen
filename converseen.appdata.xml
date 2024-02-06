@@ -28,20 +28,20 @@
     </ul>
     </description>
     <screenshots>
-        <screenshot height="900" width="1600" type="default">
-            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-1.png</image>
+        <screenshot height="1200" width="2000" type="default">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde_1.png</image>
             <caption>The main window showing the application in action</caption>
         </screenshot>
-        <screenshot height="900" width="1600">
-            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-2.png</image>
+        <screenshot height="1200" width="2000">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde_2.png</image>
             <caption>The program during the image processing</caption>
         </screenshot>
-        <screenshot height="900" width="1600">
-            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-3.png</image>
+        <screenshot height="1200" width="2000">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde_3.png</image>
             <caption>The PDF import dialog</caption>
         </screenshot>
-        <screenshot height="900" width="1600">
-            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-4.png</image>
+        <screenshot height="1200" width="2000">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde_4.png</image>
             <caption>The image preferences window where you can change the settings</caption>
         </screenshot>
     </screenshots>
@@ -71,15 +71,18 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.12.0.2" date="2024-01-08">
+        <release version="0.12.1.0" date="2024-02-06">
             <description>
                 <ol>
-                    <li>Added small improvements and optimizations</li>
-                    <li>Updated French translation</li>
+                    <li>Fixed an issue with setting the resolution accurately when supported by images</li>
+                    <li>Fixed an issue with setting the correct resolution when converting PDF to image files</li>
+                    <li>Updated icon to modern design, aligning with contemporary styles</li>
+                    <li>Updated Italian translation</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+        <release version="0.12.0.2" date="2024-01-08" />
         <release version="0.12.0.1" date="2023-12-16" />
         <release version="0.12.0.0" date="2023-11-26" />
         <release version="0.11.0.1" date="2023-10-17" />

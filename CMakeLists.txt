@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.16.0)
 cmake_policy(SET CMP0135 NEW)
 
-set(CONVERSEEN_VERSION 0.12.0.2)
+set(CONVERSEEN_VERSION 0.12.1.0)
 
 project(
     converseen

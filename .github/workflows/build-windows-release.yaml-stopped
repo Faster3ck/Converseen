@@ -1,3 +1,9 @@
+#############################################
+#
+# The Windows version of Converseen is now built using AppVeyor
+#
+#############################################
+
 name: Build and Release Converseen for Windows
 
 on:
