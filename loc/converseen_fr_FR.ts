@@ -203,7 +203,7 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;strong&gt;Traduction Chinoise simplifiée : &lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="366"/>
+        <location filename="../ui/dialoginfo.ui" line="369"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Suivre Converseen :&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -253,7 +253,7 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Si vous appréciez Converseen et souhaitez soutenir le projet, vous pouvez faire un don via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="449"/>
+        <location filename="../ui/dialoginfo.ui" line="455"/>
         <source>Close</source>
         <translation>Fermer</translation>
     </message>
@@ -364,6 +364,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/dialogmultipageeditor.ui" line="163"/>
         <source>F1</source>
         <translation>F1</translation>
+    </message>
+    <message>
+        <location filename="../src/dialogmultipageeditor.cpp" line="139"/>
+        <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows (%1)&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;                               Please install the correct version of Ghostscript.&lt;br&gt;                               Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

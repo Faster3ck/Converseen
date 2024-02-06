@@ -296,6 +296,10 @@ p, li { white-space: pre-wrap; }
         <source>F1</source>
         <translation>F1</translation>
     </message>
+    <message>
+        <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows (%1)&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;                               Please install the correct version of Ghostscript.&lt;br&gt;                               Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
+        <translation>Per effettuare la conversione dei file &lt;b&gt;PDF&lt;/b&gt; in immagini, &lt;b&gt;Ghostscript per Windows (%1)&lt;/b&gt; deve essere installato sul tuo sistema.&lt;br&gt;&lt;br&gt; Si prega di installare la versione corretta di Ghostscript.&lt;br&gt; Fare clic sul pulsante &lt;b&gt;Aiuto&lt;/b&gt; per ulteriori dettagli.</translation>
+    </message>
 </context>
 <context>
     <name>DialogOptions</name>

@@ -229,7 +229,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="366"/>
+        <location filename="../ui/dialoginfo.ui" line="369"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Folgen Sie Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -247,7 +247,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseeen ist ein Batch-Konverter. Damit kannst Du Bilder Skalieren und in mehr als 100 Formate konvertieren.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="449"/>
+        <location filename="../ui/dialoginfo.ui" line="455"/>
         <source>Close</source>
         <translation>Schließen</translation>
     </message>
@@ -359,6 +359,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/dialogmultipageeditor.ui" line="163"/>
         <source>F1</source>
         <translation type="unfinished">F1</translation>
+    </message>
+    <message>
+        <location filename="../src/dialogmultipageeditor.cpp" line="139"/>
+        <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows (%1)&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;                               Please install the correct version of Ghostscript.&lt;br&gt;                               Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
