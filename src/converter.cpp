@@ -96,8 +96,8 @@ void Converter::run()
 
         if (m_resize)
             resize(my_image);
-        /*if (m_density)
-            changeDensity(my_image);*/
+        if (m_density)
+            changeDensity(my_image);
         if (m_rotation)
             rotate(my_image);
         if (m_flip)
@@ -278,10 +278,11 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
         return false;
     }
 
-    if (inputFormat == "PDF")
-        my_image = convertPDFtoImage(my_image);
-
     my_image.magick(format.toUpper().toStdString());
+
+    if (inputFormat == "PDF") {
+        my_image = convertPDFtoImage(my_image);
+    }
 
     QStringList excludedFormats;
     excludedFormats << "jpg" << "jpeg" << "bmp";
@@ -299,6 +300,12 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
     if (m_changeBg_color || (excludedFormats.contains(format, Qt::CaseInsensitive) && hasTransparency)) {
         Image bgImg;
         bgImg.size(Magick::Geometry(my_image.columns(), my_image.rows()));
+
+        if (m_density) {
+            bgImg.resolutionUnits(PixelsPerInchResolution);
+            QString n_den = QString(m_densityString);
+            bgImg.density(n_den.toStdString());
+        }
 
         bgImg.read("xc:" + m_bg_color.toStdString());
         bgImg.label("bgImg");
@@ -339,7 +346,7 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
     return converted;
 }
 
-Image Converter::convertPDFtoImage(Image &my_image)
+Image Converter::convertPDFtoImage(const Image &my_image)
 {
     // Transform PDF page to image
 
@@ -361,14 +368,13 @@ Image Converter::convertPDFtoImage(Image &my_image)
         ximage.density(n_den.toStdString());
     }
     else {
-        ximage.density("150");
+        ximage.density("150x150");
     }
 
     ximage.read(m_fileNameIn.toStdString());
 
     ximage.backgroundColor(Magick::Color("white"));
     ximage.extent(Magick::Geometry(ximage.size().width(), ximage.size().height()), Magick::Color("white"));
-
 
     ximage.sharpen(0.0, 1.0);
 

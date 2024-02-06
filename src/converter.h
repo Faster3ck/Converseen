@@ -74,7 +74,7 @@ private:
     void rotate(Image &my_image);
     void flip(Image &my_image);
     bool writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status);
-    Image convertPDFtoImage(Image &my_image);
+    Image convertPDFtoImage(const Image &my_image);
     QString overwriteOldFileName(QString out);
 
     QString m_fileNameIn;

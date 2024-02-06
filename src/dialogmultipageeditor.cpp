@@ -25,6 +25,8 @@
 #include <QFileIconProvider>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QProcess>
+#include <QMessageBox>
 #include "dialogmultipageeditor.h"
 #include "ui_dialogmultipageeditor.h"
 
@@ -52,6 +54,10 @@ DialogMultipageEditor::DialogMultipageEditor(QWidget *parent) :
 
     connect(ui->pushOk, SIGNAL(clicked()), this, SLOT(acceptDialog()));
     connect(ui->pushCancel, SIGNAL(clicked()), this, SLOT(reject()));
+
+#if defined(Q_OS_WIN)
+    checkGsWinInstalled();
+#endif
 }
 
 DialogMultipageEditor::~DialogMultipageEditor()
@@ -110,6 +116,39 @@ void DialogMultipageEditor::analyzeMultipageFile(QString fileName)
         QString depth = QString("%1 bit")
                         .arg(pagesList.at(i).depth);
         item->setText(4, depth);            // depth in bit
+    }
+}
+
+void DialogMultipageEditor::checkGsWinInstalled()
+{
+    // Check if Ghostscript is installed on Windows
+    QString command = "gswin32c";
+    QStringList arguments;
+    arguments << "--version";
+
+    QProcess process;
+    process.start(command, arguments);
+    process.waitForFinished();
+
+    QByteArray output = process.readAllStandardOutput();
+
+    if (process.exitCode() == 0) {
+        if (output.isNull()) {
+            QString gs_version = "32-bit";
+
+            QString gs_msg = tr("In order to perform the conversion of <b>PDF</b> files to images, <b>Ghostscript for Windows (%1)</b> must be installed on your system.<br><br> \
+                              Please install the correct version of Ghostscript.<br> \
+                              Click on the <b>Help</b> button for more details.")
+                                 .arg(gs_version);
+
+            int ret = QMessageBox::warning(this, QApplication::applicationName(),
+                                    gs_msg,
+                                    QMessageBox::Help | QMessageBox::Cancel);
+
+            if (ret == QMessageBox::Help) {
+                QDesktopServices::openUrl(QUrl("https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/#windows", QUrl::TolerantMode));
+            }
+        }
     }
 }
 

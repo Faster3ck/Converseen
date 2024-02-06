@@ -37,6 +37,8 @@ private:
     void selector(bool select_all, bool action_select);
     void analyzeMultipageFile(QString fileName);
 
+    void checkGsWinInstalled();
+
 private slots:
     void acceptDialog();
     void on_actionHelp_triggered();
