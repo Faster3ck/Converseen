@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.16.0)
-cmake_policy(SET CMP0135 NEW)
+
+if(WIN32)
+    cmake_policy(SET CMP0135 NEW)
+endif()
 
 set(CONVERSEEN_VERSION 0.12.1.0)
 
