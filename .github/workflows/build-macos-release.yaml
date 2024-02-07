@@ -12,7 +12,7 @@ permissions:
 jobs:
   build_converseen_macos:
     name: Build MacOS Deps
-    runs-on: macos-11
+    runs-on: macos-12
     outputs:
       output_version: ${{ steps.set-env.outputs.ver }}
 
