@@ -2,7 +2,7 @@
 - Fixed an issue with setting the resolution accurately when supported by images
 - Fixed an issue with setting the correct resolution when converting PDF to image files
 - The program now verifies correct installation of Ghostscript on Windows
-- The Windows versions of Converseen are now codesigned by SighPath
+- The Windows versions of Converseen are now codesigned by SignPath
 - The Windows installer is now built using MSI (via cpack WIX)
 - Updated icon to modern design, aligning with contemporary styles
 - Updated Italian translation
