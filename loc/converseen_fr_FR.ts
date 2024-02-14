@@ -368,7 +368,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/dialogmultipageeditor.cpp" line="139"/>
         <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows (%1)&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;                               Please install the correct version of Ghostscript.&lt;br&gt;                               Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Afin d&apos;effectuer la conversion de fichiers &lt;b&gt;PDF&lt;/b&gt; en images, &lt;b&gt;Ghostscript pour Windows (%1)&lt;/b&gt; doit être installé sur votre système.&lt;br&gt;&lt;br&gt;                               Veuillez installer la bonne version de Ghostscript.&lt;br&gt;                               Cliquez sur le bouton &lt;b&gt;Aide&lt;/b&gt; pour plus de détails.</translation>
     </message>
 </context>
 <context>
