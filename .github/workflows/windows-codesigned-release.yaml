@@ -1,0 +1,194 @@
+name: Release Codesigned Converseen for Windows
+
+on:
+  repository_dispatch:
+    types: [signature-response]
+
+permissions:
+  contents: write
+
+jobs:
+  prepare-codesigned-artifacts:
+    runs-on: windows-latest
+    outputs:
+      output_version: ${{ steps.converseen-version.outputs.version }}
+    steps:
+      - name: Install Cmdlets
+        shell: powershell
+        run: Install-Module -Name SignPath -Scope CurrentUser -Force
+
+      - name: Checkout Converseen
+        uses: actions/checkout@v4
+        with:
+          repository: Faster3ck/Converseen
+          path: Converseen
+
+      - name: Get Converseen Version Number
+        id: converseen-version
+        shell: powershell
+        run: |
+          $versionNumber = Get-Content -Path "Converseen\package\Windows\version.txt" -TotalCount 1
+
+          $pattern = '^(\d+\.\d+\.\d+\.\d+)-(\d+)$'
+          
+          if ($versionNumber -match $pattern) {
+              $versionNumber = $matches[1]
+              $buildNumber = $matches[2]
+
+              echo "version=$versionNumber" >> $env:GITHUB_OUTPUT
+              echo "build=$buildNumber" >> $env:GITHUB_OUTPUT
+          
+              Write-Host "Version: $versionNumber"
+              Write-Host "Build Number: $buildNumber"
+          } else {
+              Write-Host "Warning: No match found."
+          }
+
+      - name: Download Signed Artifact
+        shell: powershell
+        run: |
+          $ORGANIZATION_ID="${{ github.event.client_payload.OrganizationId }}"
+          $signingRequestID="${{ github.event.client_payload.SigningRequestId }}"
+          $status="${{ github.event.client_payload.Status }}"
+          $SP_API_TOKEN="${{ secrets.SP_API_TOKEN }}"
+
+          if ($status -eq "Completed") {
+              Write-Output "The artifact has been signed correctly! ($status)"
+
+              Get-SignedArtifact `
+                -OrganizationId $ORGANIZATION_ID -ApiToken $SP_API_TOKEN `
+                -SigningRequestId $signingRequestID `
+                -OutputArtifactPath artifact.zip
+          } else {
+              Write-Output "The artifact was not signed correctly! ($status)"
+              exit 1
+          }
+
+      - name: Create Release Versions
+        shell: powershell
+        run: |
+          $env:versionNumber='${{ steps.converseen-version.outputs.version }}'
+          $env:buildNumber='${{ steps.converseen-version.outputs.build }}'
+
+          $env:installerName="Converseen-$env:versionNumber-$env:buildNumber-win32-setup"
+          $env:portableName="converseen-$env:versionNumber-$env:buildNumber-win32-portable"
+
+          Write-Output "--- Version: $env:versionNumber ---"
+          Write-Output "--- Installer Name: $env:installerName ---"
+          Write-Output "--- Portable Name: $env:portableName ---"
+        
+          Expand-Archive -Path artifact.zip -DestinationPath . -Force
+          cd artifact
+
+          # Extract portable version
+          Expand-Archive -Path Converseen.zip -DestinationPath . -Force
+          Remove-Item -Path Converseen.zip
+          # Create settings directory for portable version
+          mkdir Converseen\settings
+
+          # Rename files
+          Rename-Item -Path "Converseen" -NewName "$env:portableName"
+          Rename-Item -Path "Converseen.msi" -NewName "$env:installerName.msi"
+
+          # Compress portable version
+          Compress-Archive -Path "$env:portableName" -DestinationPath "$env:portableName.zip"
+
+          # Prepare release artifact
+          cd ../
+
+          mkdir release
+          cp artifact\*.zip release
+          cp artifact\*.msi release
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: signed-artifacts
+          path: release
+
+  create_release:
+    name: 'Create release'
+    needs:
+      - prepare-codesigned-artifacts
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Converseen
+      uses: actions/checkout@v4
+      
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: signed-artifacts
+        path: artifacts
+
+    - name: Read Version
+      run: |
+        echo "Version: v${{ needs.prepare-codesigned-artifacts.outputs.output_version }}"
+
+    - name: Get Previous tag
+      id: previoustag
+      uses: "WyriHaximus/github-action-get-previous-tag@v1"
+      with:
+        fallback: "v${{ needs.prepare-codesigned-artifacts.outputs.output_version }}"
+
+    - name: Publish Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: "${{ steps.previoustag.outputs.tag }}"
+        files: |
+          artifacts/Converseen-*-win32-setup.msi
+          artifacts/converseen-*.zip
+
+  sf-release:
+    name: Sourceforge Release
+    needs:
+      - prepare-codesigned-artifacts
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Known Hosts
+        id: known-hosts
+        run: |
+          SF_HOSTS=$(ssh-keyscan -H frs.sourceforge.net)
+          echo "known-hosts=$SF_HOSTS" >> $GITHUB_OUTPUT
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: signed-artifacts
+          path: artifacts
+        
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SF_SSH_KEY }}
+          known_hosts: ${{ steps.known-hosts.outputs.known-hosts }}
+          if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+          
+      - name: rsync over SSH
+        id: rsync
+        run: |
+          cd artifacts
+        
+          c_ver=${{ needs.prepare-codesigned-artifacts.outputs.output_version }}
+          # v_dir is the SourceForge dest dir in the form X.Y
+          v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
+          
+          c_target=$(echo $(ls Converseen-*-win32-setup.msi))
+          echo "target-file=$c_target" >> $GITHUB_OUTPUT
+          
+          rsync -r Converseen-*-win32-setup.exe converseen-*.zip ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
+
+      - name: Set Platform
+        run: |
+          c_ver=${{ needs.build-converseen.outputs.output_version }}
+          c_target=${{ steps.rsync.outputs.target-file }}
+
+          # v_dir is the SourceForge dest dir in the form X.Y
+          v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
+          c_url=https://sourceforge.net/projects/converseen/files/Converseen/Converseen%20${v_dir}/$c_target
+
+          echo "url: $c_url"
+          
+          curl -H "Accept: application/json" -X PUT -d "default=windows" -d "api_key=${{ secrets.SF_API_KEY }}" $c_url
