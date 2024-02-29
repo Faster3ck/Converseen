@@ -177,7 +177,7 @@ jobs:
           c_target=$(echo $(ls Converseen-*-win32-setup.msi))
           echo "target-file=$c_target" >> $GITHUB_OUTPUT
           
-          rsync -r Converseen-*-win32-setup.exe converseen-*.zip ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
+          rsync -r Converseen-*-win32-setup.msi converseen-*.zip ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
 
       - name: Set Platform
         run: |
