@@ -71,17 +71,20 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.12.1.0" date="2024-02-06">
+        <release version="0.12.2.0" date="2024-03-10">
             <description>
                 <ol>
-                    <li>Fixed an issue with setting the resolution accurately when supported by images</li>
-                    <li>Fixed an issue with setting the correct resolution when converting PDF to image files</li>
-                    <li>Updated icon to modern design, aligning with contemporary styles</li>
+                    <li>Fixed problem with resolution settings when converting from PDF to image</li>
+                    <li>Fixed bug with the resolution setting of PNG images</li>
+                    <li>Fixed bug with displaying the resolution correctly in the UI</li>
+                    <li>Fixed problem with program icon display in Wayland</li>
+                    <li>Fixed problem with displaying dialogs in Wayland</li>
                     <li>Updated Italian translation</li>
                     <li>Various Bugfixes</li>
                 </ol>
             </description>
         </release>
+        <release version="0.12.1.0" date="2024-02-06" />
         <release version="0.12.0.2" date="2024-01-08" />
         <release version="0.12.0.1" date="2023-12-16" />
         <release version="0.12.0.0" date="2023-11-26" />

@@ -106,14 +106,18 @@ void ThumbnailGeneratorThread::createThumbnail()
     double img_dens_x = 0.0;
     double img_dens_y = 0.0;
 
+    my_image.quiet(true);
+
     if (Formats::isNativeReadable(m_fileName)) {
         tmpImage.load(m_fileName);
 
         img_width = tmpImage.width();
         img_height = tmpImage.height();
 
-        img_dens_x = tmpImage.logicalDpiX();
-        img_dens_y = tmpImage.logicalDpiY();
+        my_image.ping(m_fileName.toStdString());
+
+        img_dens_x = my_image.xResolution();
+        img_dens_y = my_image.yResolution();
 
         qreal scaleFactor = globals::Globals::scaleFactor();
 
@@ -121,14 +125,14 @@ void ThumbnailGeneratorThread::createThumbnail()
             thumbnail = tmpImage.scaled(QSize(MAX_THUMB_W, MAX_THUMB_H) * scaleFactor,
                                        Qt::KeepAspectRatio,
                                        Qt::SmoothTransformation);
-
         }
     }
     else {
         try
         {
-            my_image.quiet(true);
             my_image.read(m_fileName.toStdString());
+
+            my_image.resolutionUnits(PixelsPerInchResolution);
 
             img_width = my_image.columns();
             img_height = my_image.rows();

@@ -70,7 +70,6 @@ public:
     QMutex mutex;
 private:
     void resize(Image &my_image);
-    void changeDensity(Image &my_image);
     void rotate(Image &my_image);
     void flip(Image &my_image);
     bool writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status);

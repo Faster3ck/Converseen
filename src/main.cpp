@@ -51,6 +51,7 @@ int main(int argc, char ** argv)
 #endif
 
     QApplication app( argc, argv );
+    app.setDesktopFileName("net.fasterland.converseen");
 
     QCommandLineOption winMagickPathOption({{"m", "debugMagickWindowsPath"}, "Set the default ImageMagick path on Windows (for debug purpose only!).", "C:\\MagickInstallPath"});
     QCommandLineOption importTxtListOption({{"l", "list"}, "Reads a txt file with a list of files to be imported.", "list.txt"});

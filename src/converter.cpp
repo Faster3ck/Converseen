@@ -96,8 +96,6 @@ void Converter::run()
 
         if (m_resize)
             resize(my_image);
-        if (m_density)
-            changeDensity(my_image);
         if (m_rotation)
             rotate(my_image);
         if (m_flip)
@@ -200,15 +198,8 @@ void Converter::resize(Image &my_image)
 
 void Converter::setDensity(QString densityStr)
 {
-    m_densityString = densityStr;
+    m_densityString = densityStr;//.replace(".", ",");
     m_density = true;
-}
-
-void Converter::changeDensity(Image &my_image)
-{
-    QString n_den = QString(m_densityString);
-    my_image.resolutionUnits(PixelsPerInchResolution);
-    my_image.density(n_den.toStdString());
 }
 
 void Converter::setBackgroundColor(QString bg_color, bool changeBg_color)
@@ -302,9 +293,8 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
         bgImg.size(Magick::Geometry(my_image.columns(), my_image.rows()));
 
         if (m_density) {
-            bgImg.resolutionUnits(PixelsPerInchResolution);
-            QString n_den = QString(m_densityString);
-            bgImg.density(n_den.toStdString());
+            //bgImg.resolutionUnits(PixelsPerInchResolution);
+            bgImg.density(m_densityString.toStdString());
         }
 
         bgImg.read("xc:" + m_bg_color.toStdString());
@@ -318,13 +308,13 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
 
     bool converted = false;
 
-    if (quality != -1)
-        my_image.quality(quality);
-
     if (m_removeMetadata) {
         my_image.strip();
         my_image.autoOrient();
     }
+
+    if (quality != -1)
+        my_image.quality(quality);
 
     if (!m_magickDefines.empty()) {
         for (int i = 0; i < m_magickDefines.count(); i++) {
@@ -332,6 +322,11 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
 
             my_image.defineValue(mDef.magick().toStdString(), mDef.key().toStdString(), mDef.value().toStdString());
         }
+    }
+
+    if (m_density) {
+        //my_image.resolutionUnits(PixelsPerInchResolution);
+        my_image.density(m_densityString.toStdString());
     }
 
     try {
@@ -351,7 +346,6 @@ Image Converter::convertPDFtoImage(const Image &my_image)
     // Transform PDF page to image
 
     Image ximage;
-
     ximage.magick(my_image.magick());
     
 #if MagickLibVersion < 0x700
@@ -362,10 +356,9 @@ Image Converter::convertPDFtoImage(const Image &my_image)
 
     ximage.quiet(false);
 
-    ximage.resolutionUnits(PixelsPerInchResolution);
+    //ximage.resolutionUnits(PixelsPerInchResolution);
     if (m_density) {
-        QString n_den = QString(m_densityString);
-        ximage.density(n_den.toStdString());
+        ximage.density(m_densityString.toStdString());
     }
     else {
         ximage.density("150x150");

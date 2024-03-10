@@ -45,7 +45,7 @@ MainWindowImpl::MainWindowImpl(QWidget * parent)
 
     iAList = new QList<ImageAttributes>;
     convertThread = new Converter(this);
-    dlgCStatus = new DialogConversionStatus();
+    dlgCStatus = new DialogConversionStatus(this);
 
     CachingSystem::init();
 
@@ -310,7 +310,7 @@ void MainWindowImpl::importPdfFile()
 
 void MainWindowImpl::openMultipageFile(QString fileName)
 {
-    DialogMultipageEditor *dlg = new DialogMultipageEditor();
+    DialogMultipageEditor *dlg = new DialogMultipageEditor(this);
 
     statusBar()->showMessage(tr("Analyzing the file. It may take a while, please wait..."));
     QApplication::setOverrideCursor(QCursor(Qt::WaitCursor));
@@ -505,8 +505,8 @@ void MainWindowImpl::startConversion()
     /* Change image density */
     if ((groupResolution->isChecked()) && ((m_xResolution != spin_resX->value()) || (m_yResolution != spin_resY->value()))) {
         QString densStr = QString("%1x%2")
-                .arg(spin_resX->value())
-                .arg(spin_resY->value());
+                              .arg(spin_resX->value())
+                              .arg(spin_resY->value());
 
         convertThread->setDensity(densStr);
     }
@@ -751,7 +751,7 @@ void MainWindowImpl::setQuality()
 {
     loadQuality();
 
-    DialogQuality *dlg = new DialogQuality();
+    DialogQuality *dlg = new DialogQuality(this);
     dlg->setInitValues(m_jpgQuality, m_pngQuality, m_resamplingFilter);
 
     dlg->setIsWebPLosslessCompression(m_isWebPLosslessCompression);
@@ -947,7 +947,7 @@ void MainWindowImpl::showPreviewAndInfos()
 
 void MainWindowImpl::editSettings()
 {
-    DialogOptions dlg;
+    DialogOptions dlg(this);
     dlg.exec();
 
     if (dlg.result() == 1) {
@@ -957,7 +957,7 @@ void MainWindowImpl::editSettings()
 
 void MainWindowImpl::about()
 {
-    DialogInfo dlg;
+    DialogInfo dlg(this);
     dlg.exec();
 }
 
@@ -1064,11 +1064,11 @@ void MainWindowImpl::resetDisplays()
     new_img_width = 0;
     new_img_height = 0;
 
-    m_xResolution = 96;
-    m_yResolution = 96;
+    m_xResolution = 0;
+    m_yResolution = 0;
 
-    spin_resX->setValue(96);
-    spin_resY->setValue(96);
+    spin_resX->setValue(0);
+    spin_resY->setValue(0);
 
     if (comboResizeValues->currentText() == "%") {
         spin_geoWidth->setValue(100);

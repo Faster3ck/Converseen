@@ -330,7 +330,7 @@
      <x>0</x>
      <y>0</y>
      <width>1482</width>
-     <height>25</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu_File">
@@ -376,7 +376,7 @@
    </property>
    <property name="minimumSize">
     <size>
-     <width>512</width>
+     <width>480</width>
      <height>298</height>
     </size>
    </property>
@@ -391,6 +391,9 @@
    </attribute>
    <widget class="QWidget" name="dockWidgetContents">
     <layout class="QVBoxLayout" name="verticalLayout_7">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
      <item>
       <widget class="QScrollArea" name="scrollArea">
        <property name="sizePolicy">
@@ -415,9 +418,9 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
-          <width>473</width>
-          <height>839</height>
+          <y>-15</y>
+          <width>448</width>
+          <height>782</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -998,6 +1001,9 @@ p, li { white-space: pre-wrap; }
                    <layout class="QVBoxLayout" name="verticalLayout_10">
                     <item>
                      <widget class="QDoubleSpinBox" name="spin_resX">
+                      <property name="locale">
+                       <locale language="English" country="UnitedStates"/>
+                      </property>
                       <property name="specialValueText">
                        <string/>
                       </property>
@@ -1011,12 +1017,15 @@ p, li { white-space: pre-wrap; }
                        <double>3000.000000000000000</double>
                       </property>
                       <property name="value">
-                       <double>96.000000000000000</double>
+                       <double>0.000000000000000</double>
                       </property>
                      </widget>
                     </item>
                     <item>
                      <widget class="QDoubleSpinBox" name="spin_resY">
+                      <property name="locale">
+                       <locale language="English" country="UnitedStates"/>
+                      </property>
                       <property name="specialValueText">
                        <string/>
                       </property>
@@ -1030,7 +1039,7 @@ p, li { white-space: pre-wrap; }
                        <double>3000.000000000000000</double>
                       </property>
                       <property name="value">
-                       <double>96.000000000000000</double>
+                       <double>0.000000000000000</double>
                       </property>
                      </widget>
                     </item>
@@ -1464,7 +1473,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/Images/res/help.png</normaloff>:/Images/res/help.png</iconset>
    </property>
    <property name="text">
-    <string>Online Help</string>
+    <string>&amp;Online Help</string>
    </property>
    <property name="toolTip">
     <string>Open online help</string>
@@ -1496,7 +1505,7 @@ p, li { white-space: pre-wrap; }
  </resources>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroup_2"/>
   <buttongroup name="buttonGroup"/>
+  <buttongroup name="buttonGroup_2"/>
  </buttongroups>
 </ui>
