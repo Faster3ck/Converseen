@@ -885,10 +885,6 @@ p, li { white-space: pre-wrap; }
         <translation>Importa cartella</translation>
     </message>
     <message>
-        <source>Online Help</source>
-        <translation>Aiuto Online</translation>
-    </message>
-    <message>
         <source>Open online help</source>
         <translation>Apri aiuto online</translation>
     </message>
@@ -907,6 +903,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
         <translation>Dona con PayPal, Ko-Fi o Criptovalute</translation>
+    </message>
+    <message>
+        <source>&amp;Online Help</source>
+        <translation>&amp;Aiuto Online</translation>
     </message>
 </context>
 <context>

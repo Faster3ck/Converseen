@@ -9,7 +9,9 @@ Download Converseen, extract the archive content, enter directory and build the 
 > 
 > cd converseen-0.x
 > 
-> mkdir build cd build
+> mkdir build
+>
+> cd build
 > 
 > cmake .. (to install on /usr/local/)
 > 
@@ -26,7 +28,9 @@ Download Converseen, extract the archive content, enter directory and build the 
 > 
 > cd converseen-0.x
 > 
-> mkdir build cd build
+> mkdir build
+>
+> cd build
 > 
 > cmake .. -DUSE_QT6=yes (to install on /usr/local/)
 > 

@@ -1,3 +1,8 @@
+0.12.2.1 – 2024-03-18
+- Fixed problem with language file path in some Linux-based operating systems
+- Updated Italian Translation
+- Various Bugfixes
+
 0.12.2.0 – 2024-03-10
 - Fixed problem with resolution settings when converting from PDF to image
 - Fixed bug with the resolution setting of PNG images

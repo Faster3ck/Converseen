@@ -894,10 +894,6 @@ p, li { white-space: pre-wrap; }
         <translation>İçe aktarma dizini</translation>
     </message>
     <message>
-        <source>Online Help</source>
-        <translation>Çevrim İçi Yardım</translation>
-    </message>
-    <message>
         <source>Open online help</source>
         <translation>Çevrim içi yardımı aç</translation>
     </message>
@@ -915,6 +911,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Online Help</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

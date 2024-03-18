@@ -86,6 +86,7 @@ QString Translator::findLangDir()
     langDirs.append(QString("%1/usr/local/share/converseen/loc").arg(rootPath));
     langDirs.append(QString("%1/share/converseen/loc").arg(rootPath));
     langDirs.append(QString("%1/local/share/converseen/loc").arg(rootPath));
+    langDirs.append(QString("%1/usr/share/locale/converseen/loc").arg(rootPath));
 
     foreach (langDir, langDirs) {
         if (qmFilesFound(langDir))

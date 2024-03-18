@@ -884,10 +884,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Online Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Open online help</source>
         <translation type="unfinished"></translation>
     </message>
@@ -905,6 +901,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Online Help</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
