@@ -181,7 +181,7 @@ jobs:
 
       - name: Set Platform
         run: |
-          c_ver=${{ needs.build-converseen.outputs.output_version }}
+          c_ver=${{ needs.prepare-codesigned-artifacts.outputs.output_version }}
           c_target=${{ steps.rsync.outputs.target-file }}
 
           # v_dir is the SourceForge dest dir in the form X.Y
