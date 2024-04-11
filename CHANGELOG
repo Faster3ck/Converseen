@@ -1,3 +1,9 @@
+0.12.2.2 – 2024-04-11
+- Reading PDF files during import is now much faster
+- Service Menu is now compatible with KDE Plasma 6
+- Fixed keyboard shortcuts
+- Various Bugfixes
+
 0.12.2.1 – 2024-03-18
 - Fixed problem with language file path in some Linux-based operating systems
 - Updated Italian Translation

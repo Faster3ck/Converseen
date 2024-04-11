@@ -169,7 +169,7 @@ win32 {
 
  desktopFile.path = $${SHARE_DIR}/applications
  desktopFile.files = res/converseen.desktop
- kdeservicemenu.path = $${SHARE_DIR}/kservices5/ServiceMenus
+ kdeservicemenu.path = $${SHARE_DIR}/kio/servicemenus
  kdeservicemenu.files = res/converseen_import.desktop
  appdata.path = /usr/share/appdata/
  appdata.files = converseen.appdata.xml

@@ -418,7 +418,7 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-15</y>
+          <y>0</y>
           <width>448</width>
           <height>782</height>
          </rect>
@@ -1390,7 +1390,7 @@ p, li { white-space: pre-wrap; }
     <string>&amp;Exit</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+X</string>
+    <string>Ctrl+Q</string>
    </property>
   </action>
   <action name="actionUncheckAllItems">
@@ -1505,7 +1505,7 @@ p, li { white-space: pre-wrap; }
  </resources>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroup"/>
   <buttongroup name="buttonGroup_2"/>
+  <buttongroup name="buttonGroup"/>
  </buttongroups>
 </ui>

@@ -1,15 +1,17 @@
 [Desktop Entry]
+Actions=converseenImport;
+MimeType=image/*
 ServiceTypes=KonqPopupMenu/Plugin,image/*
+name=Open with Converseen
 TryExec=converseen
 Type=Service
-Actions=converseenImport;
 X-KDE-Submenu=Open with Converseen
 X-KDE-Submenu[fr]=Ouvrir avec Converseen
 X-KDE-Submenu[it]=Apri con Converseen
 X-KDE-Submenu[ro]=Deschide cu Converseen
 X-KDE-Submenu[ru]=Открыть с помощью Converseen
 X-KDE-Submenu[da]=Åbn med Converseen
-TryExec=convert
+TryExec=converseen
 
 [Desktop Action converseenImport]
 Name=Import
@@ -20,4 +22,6 @@ Name[ru]=Импортировать
 Name[da]=Importér
 Name[x-test]=xxImportaxx
 Icon=converseen
+Type=Application
+Terminal=false
 Exec=find %U>$HOME/.converseen_list.txt && converseen --list $HOME/.converseen_list.txt

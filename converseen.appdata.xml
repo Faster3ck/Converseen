@@ -7,12 +7,16 @@
     <name>Converseen</name>
     <summary>Convert and resize images in batch</summary>
     <launchable type="desktop-id">net.fasterland.converseen.desktop</launchable>
+    <branding>
+        <color type="primary" scheme_preference="light">#5266ff</color>
+        <color type="primary" scheme_preference="dark">#fffca3</color>
+    </branding>
     <description>
     <p>
-        Converseen is a free cross-platform batch image processor that allows you to convert, 
+        Converseen is a free cross-platform batch image processor that allows you to convert,
         resize, rotate and flip an infinite number of images with a mouse click.
-        Moreover, Converseen is able to transform an entire PDF file into a bunch of images 
-        with the characteristics you prefer: you can choose one of the 100+ formats, 
+        Moreover, Converseen is able to transform an entire PDF file into a bunch of images
+        with the characteristics you prefer: you can choose one of the 100+ formats,
         you can set the size, resolution and the filename.
     </p>
     <p>What can I do with Converseen.</p>
@@ -28,21 +32,25 @@
     </ul>
     </description>
     <screenshots>
-        <screenshot height="1200" width="2000" type="default">
-            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde_1.png</image>
-            <caption>The main window showing the application in action</caption>
+        <screenshot height="900" width="1570" type="default">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde6_1.png</image>
+            <caption>Main window showing the application in action</caption>
         </screenshot>
-        <screenshot height="1200" width="2000">
-            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde_2.png</image>
+        <screenshot height="900" width="1570">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde6_2.png</image>
+            <caption>Main window with resize and resolution settings</caption>
+        </screenshot>
+        <screenshot height="900" width="1570">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde6_3.png</image>
             <caption>The program during the image processing</caption>
         </screenshot>
-        <screenshot height="1200" width="2000">
-            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde_3.png</image>
+        <screenshot height="900" width="1570">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde6_4.png</image>
             <caption>The PDF import dialog</caption>
         </screenshot>
-        <screenshot height="1200" width="2000">
-            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde_4.png</image>
-            <caption>The image preferences window where you can change the settings</caption>
+        <screenshot height="900" width="1570">
+            <image>https://converseen.fasterland.net/images/appstream/converseen-appdata-kde6_5.png</image>
+            <caption>Image settings dialog</caption>
         </screenshot>
     </screenshots>
     <categories>
@@ -71,15 +79,19 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.12.2.1" date="2024-03-18">
+        <release version="0.12.2.2" date="2024-04-11">
+        <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <ol>
-                    <li>Fixed problem with language file path in some Linux-based operating systems</li>
-                    <li>Updated Italian Translation</li>
+                <p>Changelog for 0.12.2.2</p>
+                <ul>
+                    <li>Reading PDF files during import is now much faster</li>
+                    <li>Service Menu is now compatible with KDE Plasma 6</li>
+                    <li>Fixed keyboard shortcuts</li>
                     <li>Various Bugfixes</li>
-                </ol>
+                </ul>
             </description>
         </release>
+        <release version="0.12.2.1" date="2024-03-18" />
         <release version="0.12.2.0" date="2024-03-10" />
         <release version="0.12.1.0" date="2024-02-06" />
         <release version="0.12.0.2" date="2024-01-08" />
