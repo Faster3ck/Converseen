@@ -1,5 +1,5 @@
-0.12.2.2 – 2024-04-11
-- Reading PDF files during import is now much faster
+0.12.2.2 – 2024-04-15
+- Reading PDF files during import is now much faster (Works only with ImageMagick7)
 - Service Menu is now compatible with KDE Plasma 6
 - Fixed keyboard shortcuts
 - Various Bugfixes
