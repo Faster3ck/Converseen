@@ -184,9 +184,12 @@ jobs:
     - name: Copy Resources
       run: |
         cd build/bin
+
+        gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+        
         echo "--- Copying res files ---"
         cp -rvf ${{ github.workspace }}/im_build/etc/ImageMagick-7 converseen.app/Contents/Resources
-        cp -rvf /usr/local/Cellar/ghostscript/10.02.1/share/ghostscript converseen.app/Contents/Resources
+        cp -rvf /usr/local/Cellar/ghostscript/$gs_ver/share/ghostscript converseen.app/Contents/Resources
         
         echo "--- Copying loc files ---"
         mkdir converseen.app/Contents/Resources/loc
@@ -194,7 +197,7 @@ jobs:
 
         echo "--- Rename Ghostscript Resource Dir ---"
         cd converseen.app/Contents/Resources/ghostscript
-        gs_ver=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+        # gs_ver=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
         mv $gs_ver gs
         ls
 
