@@ -63,11 +63,10 @@ jobs:
         echo "Version: $VERSION"
         echo "Build Number: $BUILD"
 
-    - name: Checkout ImageMagick
-      uses: actions/checkout@v4
-      with:
-        path: ImageMagick
-        repository: ImageMagick/ImageMagick
+    - name: Download ImageMagick
+      run: |
+        wget https://imagemagick.org/archive/ImageMagick.tar.gz
+        tar -xzvf ImageMagick.tar.gz
         
     - name: Build ImageMagick
       run: |      
