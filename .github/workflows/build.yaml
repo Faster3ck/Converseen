@@ -1,0 +1,277 @@
+# Test build process on various OS and Configutations
+name: Build
+
+on:
+  push:
+    tags:        
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  build-linux:
+    name: Converseen Linux Build (AppImage)
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout Converseen
+        uses: actions/checkout@v4
+        with:
+          path: Converseen
+
+      - name: Install Dependencies
+        run: |
+          sudo add-apt-repository -y ppa:savoury1/graphics
+          
+          sudo apt-get update
+          sudo apt-get upgrade
+          
+          sudo apt install -y binutils coreutils desktop-file-utils fakeroot fuse libgdk-pixbuf2.0-dev patchelf python3-pip python3-setuptools squashfs-tools strace util-linux zsync gnupg2
+          sudo apt install -y git cmake zlib1g-dev qtdeclarative5-dev qml-module-qtquick2 qml-module-qtquick-window2 qml-module-qtquick-layouts qml-module-qtquick-layouts qml-module-qtquick-controls2 qttools5-dev-tools qtmultimedia5-dev
+          sudo apt install -y libtool pkg-config build-essential libssl-dev libffi-dev zlib1g-dev libpng-dev libjpeg-dev liblcms2-dev libtiff-dev libopenjp2-7-dev libwebp-dev libde265-dev libheif-dev libgif-dev libfreetype6-dev libfontconfig1-dev libxext-dev libx11-dev libdjvulibre-dev libgs-dev libwmf-dev libpango1.0-dev librsvg2-bin librsvg2-dev libxml2-dev fftw-dev liblqr-1-0-dev libraw-dev libopenexr-dev libdeflate-dev libraqm-dev libjxl-dev libimath-dev libffi7 zlib1g libpng16-16 libjpeg8 liblcms2-2 libtiff5 libopenjp2-7 libwebp6 libde265-0 libheif1 libgif7 libfreetype6 libfontconfig1 libxext6 libdjvulibre21 libgs9 libwmf0.2-7 libpango1.0-0 librsvg2-2 libxml2 fftw2 liblqr-1-0 libraw19 libimath-3-1-29 libopenexr24 libdeflate0 libraqm0 libpsm-infinipath1 libgl1-mesa-dri 
+      
+      - name: Build ImageMagick
+        run: |
+          wget https://mirror.dogado.de/imagemagick/ImageMagick.tar.bz2
+          tar -xvf ImageMagick.tar.bz2
+          cd ImageMagick-*/
+          ./configure --enable-shared --disable-installed --enable-hdri --without-perl --disable-dependency-tracking --with-gslib=yes --with-openjp2 --with-wmf --without-gvc --with-djvu --without-dps --without-fpx --with-heic=yes --prefix=$HOME/ImageMagick7-devel
+          make -j$(nproc)
+          make install
+
+      - name: Build Converseen
+        run: |
+          cd Converseen
+          cd package/AppImage
+          
+          chmod a+x build-with-qmake.sh
+          
+          ./build-with-qmake.sh
+
+  build-linux-qt6-im6:
+    name: Converseen Linux Build (Qt6 + ImageMagick6)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Converseen
+        uses: actions/checkout@v4
+        with:
+          path: Converseen
+
+      - name: Install Dependencies
+        run: |
+          sudo add-apt-repository universe
+        
+          sudo apt-get update
+          sudo apt-get upgrade
+          
+          sudo apt install -y git cmake libglx-dev libgl1-mesa-dev qt6-base-dev qt6-tools-dev qt6-tools-dev-tools qt6-base-dev-tools qt6-l10n-tools qt6-multimedia-dev
+          sudo apt install -y libtool pkg-config build-essential libssl-dev
+          sudo apt install -y libmagick++-dev libmagickcore-dev libmagickwand-dev imagemagick
+
+      - name: Build Converseen
+        run: |
+          cd Converseen
+          
+          mkdir build
+          cd build
+
+          cmake .. -DUSE_QT6=yes
+          make
+
+  snap-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Build Snap
+        uses: snapcore/action-build@v1
+        id: snapcraft
+        with:
+          path: package/Snap
+
+  build-windows:
+    name: Converseen Windows Build
+    runs-on: windows-2022
+
+    steps:
+      - name: Download ImageMagick for Windows
+        shell: powershell
+        run: |
+          # Get latest version number from GitHub
+          $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
+          $lastTagLine = $gitTags[-1]
+          $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
+          $latestVersionNumber = $lastTagVersion
+          
+          Write-Host "Latest ImageMagick Version Found: $latestVersionNumber"
+          
+          Invoke-WebRequest -Uri "https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x86-dll.exe" -OutFile ImageMagick-Installer.exe
+
+      - name: Install ImageMagick for Windows
+        shell: cmd
+        run: |
+          ImageMagick-Installer.exe /MERGETASKS=install_devel /VERYSILENT /DIR=ImageMagick
+
+      - name: Recreate lib Files
+        shell: powershell
+        run: |
+          # .lib files with linker symbols have been removed from the latest versions of IM for Windows 
+          # so we need to recreate them using dumpbin and lib commands
+          
+          & 'C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\Launch-VsDevShell.ps1'
+        
+          cd "${{ github.workspace }}\ImageMagick"
+          mkdir lib
+        
+          $imPath = "${{ github.workspace }}\ImageMagick"
+          $destDir = "lib"
+          $ImageMagickTargets = @("CORE_RL_Magick++_", "CORE_RL_MagickCore_", "CORE_RL_MagickWand_")
+          $arch = "x86"
+          
+          foreach ($imTarget in $ImageMagickTargets) {
+              Write-Host "*--- Processing $imTarget.dll`n---"
+          	
+          	# dumpbin ImageMagick DLL
+          	dumpbin /exports "$imPath\$imTarget.dll" > $destDir\$imTarget.txt
+          	
+          	# Print useful data from dump
+          	Get-Content -Path "$destDir\$imTarget.txt" | Select-Object -Skip 4 -First 12
+          	
+          	# Create def file
+          	$filePath = "$destDir\$imTarget.txt"
+          	$outputFilePath = "$destDir\$imTarget.def"
+          
+          	$lines = Get-Content -Path $filePath
+          
+          	$filteredLines = @()
+          	$filteredLines += "EXPORTS"
+          
+          	foreach ($line in $lines) {
+          		if ($line -match "^\s+\d+\s+[0-9A-Fa-f]+\s[0-9A-Fa-f]+\s.*$") {
+          			$strLine = $matches[0] -split '\s+'
+          
+          			$filteredLines += $strLine[4]
+          		}
+          	}
+          	
+          	$filteredLines | Out-File -FilePath $outputFilePath
+          	
+          	# Get number of lines to match number of functions
+          	$nLines = (Get-Content -Path $outputFilePath | Measure-Object -Line).Lines - 1
+          	Write-Host "$filePath functions found: $nLines"
+          	
+          	# Finally, create the missing .lib files for the linker!
+          	Write-Host "*** Creating $imTarget.lib"
+          	lib /MACHINE:$arch /def:lib\$imTarget.def /OUT:lib\$imTarget.lib
+          	
+          	Write-Host "---"
+          }
+    
+      - name: Checkout Converseen
+        uses: actions/checkout@v4
+        with:
+          path: Converseen
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v3
+        with:
+          version: '5.15.2'
+          host: 'windows'
+          target: 'desktop'
+          arch: 'win32_msvc2019'
+          install-deps: 'true'
+          set-env: 'true'
+
+      - name: Build Converseen
+        shell: cmd
+        run: |
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
+          
+          cd Converseen
+          mkdir build
+          cd build
+
+          ls ${{ github.workspace }}\ImageMagick
+      
+          cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="${{ github.workspace }}\ImageMagick" ..
+          nmake
+
+  build-macos:
+    name: Converseen macOS Build
+    runs-on: macos-12
+
+    env:
+      BASE_DIR: ${{ github.workspace }}/im_build 
+      WORKING_DIR: ${{ github.workspace }}
+
+    steps:
+    - name: Install dependencies
+      run: |
+        set -e
+        
+        export HOMEBREW_NO_AUTO_UPDATE=1
+        brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool openexr openexr openjpeg webp libraw ghostscript
+
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v3
+      with:
+        aqtversion: '==3.1.*'
+        version: '6.7.0'
+        host: 'mac'
+        target: 'desktop'
+        arch: 'clang_64'
+
+    - name: Checkout Converseen
+      uses: actions/checkout@v4
+      with:
+        path: Converseen
+
+    - name: Set Environment
+      id: set-env
+      run: |
+        file_content=$(tr -d '\r' <converseen/package/macOS/version.txt)
+
+        VERSION=$(echo "$file_content" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+        BUILD=$(echo "$file_content" | grep -oE '[0-9]+$')
+
+        export LIB_DIR="${BASE_DIR}/lib"
+        export LOCAL_LIB="/usr/local/lib"
+
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+        echo "BUILD=$BUILD" >> $GITHUB_ENV
+        echo "LIB_DIR=$LIB_DIR" >> $GITHUB_ENV
+        echo "LOCAL_LIB=$LOCAL_LIB" >> $GITHUB_ENV
+
+        echo "ver=$VERSION" >> "$GITHUB_OUTPUT"
+
+        echo "Version: $VERSION"
+        echo "Build Number: $BUILD"
+
+    - name: Download ImageMagick
+      run: |
+        wget https://imagemagick.org/archive/ImageMagick.tar.gz
+        tar -xzvf ImageMagick.tar.gz
+        
+    - name: Build ImageMagick
+      run: |      
+        ls
+        cd ImageMagick-*
+        ./configure --prefix=${{ github.workspace }}/im_build \
+                              --with-quantum-depth=16 \
+                              --disable-dependency-tracking \
+                              --without-perl \
+                              --without-x \
+                              --disable-static \
+                              --disable-installed \
+                              --enable-shared \
+                              --with-flif=yes \
+                              --with-gslib=yes
+
+        make
+        make install
+      
+    - name: Build Converseen
+      run: |
+        mkdir build
+        cd build
+
+        qmake ../converseen/converseen.pro -spec macx-clang QMAKE_MACOSX_DEPLOYMENT_TARGET=12.0 IM_INSTALL_PREFIX=${{ github.workspace }}/im_build
+        make
