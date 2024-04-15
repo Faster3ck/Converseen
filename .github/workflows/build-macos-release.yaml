@@ -70,7 +70,7 @@ jobs:
         
     - name: Build ImageMagick
       run: |      
-        cd ImageMagick
+        cd ImageMagick-*
         ./configure --prefix=${{ github.workspace }}/im_build \
                               --with-quantum-depth=16 \
                               --disable-dependency-tracking \
