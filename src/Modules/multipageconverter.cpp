@@ -46,7 +46,11 @@ void MultipageConverter::readFile(QString fileName)
     list<Image> pdfPages;
 
     try {
+    #if MagickLibVersion < 0x700
+        Magick::readImages(&pdfPages, fileName.toStdString());
+    #else
         Magick::pingImages(&pdfPages, fileName.toStdString());
+    #endif
 
         for (std::list<Image>::iterator it = pdfPages.begin(); it != pdfPages.end(); ++it){
             MultipageItem mpi;
