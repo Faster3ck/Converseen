@@ -1075,7 +1075,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1476"/>
         <source>&amp;Online Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Aide en ligne</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1479"/>
