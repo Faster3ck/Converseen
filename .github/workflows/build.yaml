@@ -43,6 +43,13 @@ jobs:
           install-deps: 'true'
           set-env: 'true'
 
+      - name: Import GPG key
+        uses: crazy-max/ghaction-import-gpg@v6
+        with:
+          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.GPG_PASSPHRASE }}
+          git_user_signingkey: true
+
       - name: Build AppImage
         run: |
           cd package/AppImage
