@@ -199,14 +199,12 @@ jobs:
         cd converseen.app/Contents/Resources/ghostscript
         # gs_ver=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
         mv $gs_ver gs
-        ls
 
     - name: Compress Converseen
       run: |
         cd build/bin
         zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
         pwd
-        ls
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
