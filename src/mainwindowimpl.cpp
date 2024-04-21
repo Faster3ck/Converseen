@@ -103,8 +103,6 @@ MainWindowImpl::MainWindowImpl(QWidget * parent)
     }
 
     checkVersion();
-
-    //pushLinkAspect->setToolTip("ciaones");
 }
 
 MainWindowImpl::~MainWindowImpl()
@@ -183,8 +181,6 @@ void MainWindowImpl::createActions()
     //toolBar->addWidget(openFileButton);
     toolBar->insertWidget(toolBar->actions().first(), openFileButton);
     openFileButton->setDefaultAction(actionOpenFiles);
-
-
 }
 
 void MainWindowImpl::setupMenu()

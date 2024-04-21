@@ -1,3 +1,9 @@
+0.12.2.3 – 2024-04-21
+- Updated French translation
+- AppImage version ported to Qt6
+- Flatpak version ported to Q6 with libjxl support for ImageMagick
+- Various Bugfixes
+
 0.12.2.2 – 2024-04-15
 - Reading PDF files during import is now much faster (Works only with ImageMagick7)
 - Service Menu is now compatible with KDE Plasma 6

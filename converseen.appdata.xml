@@ -8,8 +8,8 @@
     <summary>Convert and resize images in batch</summary>
     <launchable type="desktop-id">net.fasterland.converseen.desktop</launchable>
     <branding>
-        <color type="primary" scheme_preference="light">#5266ff</color>
-        <color type="primary" scheme_preference="dark">#fffca3</color>
+        <color type="primary" scheme_preference="light">#f1ffad</color>
+        <color type="primary" scheme_preference="dark">#a052ff</color>
     </branding>
     <description>
     <p>
@@ -79,18 +79,17 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.12.2.2" date="2024-04-15">
+        <release version="0.12.2.3" date="2024-04-21">
         <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.12.2.2</p>
+                <p>Changelog for 0.12.2.3</p>
                 <ul>
-                    <li>Reading PDF files during import is now much faster</li>
-                    <li>Service Menu is now compatible with KDE Plasma 6</li>
-                    <li>Fixed keyboard shortcuts</li>
+                    <li>Updated French translation</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.12.2.2" date="2024-04-15" />
         <release version="0.12.2.1" date="2024-03-18" />
         <release version="0.12.2.0" date="2024-03-10" />
         <release version="0.12.1.0" date="2024-02-06" />
