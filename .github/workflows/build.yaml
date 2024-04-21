@@ -203,8 +203,6 @@ jobs:
           cd Converseen
           mkdir build
           cd build
-
-          ls ${{ github.workspace }}\ImageMagick
       
           cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="${{ github.workspace }}\ImageMagick" ..
           nmake
