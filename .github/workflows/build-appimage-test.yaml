@@ -1,9 +1,6 @@
 name: Build AppImage (Test)
 
 on:
-  push:
-    tags:        
-      - '**'
   workflow_dispatch:
       
 permissions:
