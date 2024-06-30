@@ -18,58 +18,6 @@ build_script:
     Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x86-dll.exe -OutFile ImageMagick-Installer.exe
     
     Start-Process -FilePath ".\ImageMagick-Installer.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick" -NoNewWindow -Wait
-
-    # .lib files with linker symbols have been removed from the latest versions of IM for Windows 
-    # so we need to recreate them using dumpbin and lib commands
-    
-    & 'C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\Launch-VsDevShell.ps1'
-            
-    cd C:\projects\ImageMagick
-    mkdir lib
-            
-    $imPath = "C:\projects\ImageMagick"
-    $destDir = "lib"
-    $ImageMagickTargets = @("CORE_RL_Magick++_", "CORE_RL_MagickCore_", "CORE_RL_MagickWand_")
-    $arch = "x86"
-    
-    foreach ($imTarget in $ImageMagickTargets) {
-        Write-Host "*--- Processing $imTarget.dll`n---"
-    	
-    	# dumpbin ImageMagick DLL
-    	dumpbin /exports "$imPath\$imTarget.dll" > $destDir\$imTarget.txt
-    	
-    	# Print useful data from dump
-    	Get-Content -Path "$destDir\$imTarget.txt" | Select-Object -Skip 4 -First 12
-    	
-    	# Create def file
-    	$filePath = "$destDir\$imTarget.txt"
-    	$outputFilePath = "$destDir\$imTarget.def"
-    
-    	$lines = Get-Content -Path $filePath
-    
-    	$filteredLines = @()
-    	$filteredLines += "EXPORTS"
-    
-    	foreach ($line in $lines) {
-    		if ($line -match "^\s+\d+\s+[0-9A-Fa-f]+\s[0-9A-Fa-f]+\s.*$") {
-    			$strLine = $matches[0] -split '\s+'
-    
-    			$filteredLines += $strLine[4]
-    		}
-    	}
-    	
-    	$filteredLines | Out-File -FilePath $outputFilePath
-    	
-    	# Get number of lines to match number of functions
-    	$nLines = (Get-Content -Path $outputFilePath | Measure-Object -Line).Lines - 1
-    	Write-Host "$filePath functions found: $nLines"
-    	
-    	# Finally, create the missing .lib files for the linker!
-    	Write-Host "*** Creating $imTarget.lib"
-    	lib /MACHINE:$arch /def:lib\$imTarget.def /OUT:lib\$imTarget.lib
-    	
-    	Write-Host "---"
-    }
     
 - cmd: >-
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
