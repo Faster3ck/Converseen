@@ -68,7 +68,7 @@ mkdir -p $BUILD_DIR/AppDir/usr/lib
 
 cp $(ldconfig -p | grep libssl.so.1 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 cp $(ldconfig -p | grep libcrypto.so.1 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
-cp $(ldconfig -p | grep libx265.so.199 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libx265.so.209 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 cp $(ldconfig -p | grep libde265.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 
 cp $(ldconfig -p | grep libdav1d.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
