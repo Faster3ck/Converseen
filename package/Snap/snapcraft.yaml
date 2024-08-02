@@ -135,7 +135,7 @@ parts:
       - libraqm0
       - libpsm-infinipath1
       - libgl1-mesa-dri
-      - libx265-199
+      - x265
       - libheif-plugin-aomdec
       - libheif-plugin-aomenc
       - libheif-plugin-dav1d
