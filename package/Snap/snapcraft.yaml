@@ -104,6 +104,7 @@ parts:
       - libdeflate-dev
       - libraqm-dev
       - libjxl-dev
+      - libx265-dev
     stage-packages:
       - libffi7
       - zlib1g
@@ -135,7 +136,7 @@ parts:
       - libraqm0
       - libpsm-infinipath1
       - libgl1-mesa-dri
-      - x265
+      - libx265-209
       - libheif-plugin-aomdec
       - libheif-plugin-aomenc
       - libheif-plugin-dav1d
