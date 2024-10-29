@@ -4,7 +4,7 @@ if(WIN32)
     cmake_policy(SET CMP0135 NEW)
 endif()
 
-set(CONVERSEEN_VERSION 0.12.2.3)
+set(CONVERSEEN_VERSION 0.12.2.4)
 
 project(
     converseen
@@ -76,7 +76,7 @@ set(converseen_HEADERS
     src/thumbnailgeneratorthread.h
     src/translator.h
     src/updatechecker.h
-    src/magickdefine.cpp
+    src/magickdefine.h
     src/Modules/multipageconverter.h
 )
 
@@ -275,7 +275,7 @@ if(WIN32)
     set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/COPYING.txt")
     set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/COPYING.txt")
 
-    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000007")
+    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000008")
     set(CPACK_WIX_UPGRADE_GUID "B35C58D3-FBD2-4A81-8371-588F51EC180F")
 
     configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/wixCheckInnoVersion.xml.in" wixCheckInnoVersion.xml)

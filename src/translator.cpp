@@ -87,6 +87,7 @@ QString Translator::findLangDir()
     langDirs.append(QString("%1/share/converseen/loc").arg(rootPath));
     langDirs.append(QString("%1/local/share/converseen/loc").arg(rootPath));
     langDirs.append(QString("%1/usr/share/locale/converseen/loc").arg(rootPath));
+    langDirs.append(QString("%1/usr/share/converseen/loc").arg(QString::fromLocal8Bit(qgetenv("SNAP"))));   // For snapcraft loc search
 
     foreach (langDir, langDirs) {
         if (qmFilesFound(langDir))

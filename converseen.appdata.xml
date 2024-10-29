@@ -79,12 +79,12 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.12.2.3" date="2024-04-21">
-        <url type="details">https://converseen.fasterland.net/changelog/</url>
+        <release version="0.12.2.4" date="2024-10-29">
+            <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.12.2.3</p>
+                <p>Changelog for 0.12.2.4</p>
                 <ul>
-                    <li>Updated French translation</li>
+                    <li>Fixed a bug affecting localization file access</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
