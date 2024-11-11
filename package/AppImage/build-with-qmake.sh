@@ -19,11 +19,13 @@ BUILD_DIR=$(mktemp -d -p "$TEMP_BASE" appimage-build-XXXXXX)
 
 # make sure to clean up build dir, even if errors occur
 cleanup () {
-
     if [ -d "$BUILD_DIR" ]; then
-
-        rm -rf "$BUILD_DIR"
-
+        if [[ "$BUILD_DIR" == /tmp/appimage-build-* ]]; then
+            rm -rf "$BUILD_DIR"
+        # Debugging notice for safety check.
+        #else
+        #    echo "Safety check failed: $BUILD_DIR is not in /tmp/appimage-build-*"
+        fi
     fi
 }
 
