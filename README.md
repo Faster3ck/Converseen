@@ -46,7 +46,7 @@ For the **Windows** binaries for **Converseen**, this program uses free code sig
 ## License
 
     Converseen - The image batch converter and resizer
-    Copyright (C) 2009 - 2024  Francesco Mondello
+    Copyright (C) 2009 - 2025  Francesco Mondello
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
