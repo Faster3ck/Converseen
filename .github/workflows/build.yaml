@@ -60,6 +60,29 @@ jobs:
           ./build-with-qmake.sh
           ./finalize-appimage.sh
 
+      - name: Get Program Info
+        run: |
+          cd package/AppImage
+          chmod a+x Converseen-*-x86_64.AppImage
+          ./Converseen-*-x86_64.AppImage -p
+
+          result=0
+          ./Converseen-*-x86_64.AppImage -p "$@" || result=$?
+          if [[ $result -ne 0 ]]; then
+              echo "Error!"
+              exit $result
+          fi
+
+      - name: Prepare Artifacts
+        run: |
+          mkdir artifacts
+          cp package/AppImage/*.AppImage* artifacts
+          
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AppImage
+          path: 'artifacts'
+
   build-linux-qt6-im6:
     name: Converseen Linux Build (Qt6 + ImageMagick6)
     runs-on: ubuntu-latest
