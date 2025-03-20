@@ -141,7 +141,7 @@ parts:
       - libheif-plugin-aomenc
       - libheif-plugin-dav1d
       - libheif-plugin-libde265
-      - libheif-plugin-x265
+      # - libheif-plugin-x265
       - libjxl0.11
 
   cleanup:
