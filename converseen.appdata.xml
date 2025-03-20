@@ -79,17 +79,18 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.12.2.5" date="2025-01-22">
+        <release version="0.13.0.0" date="2025-03-20">
             <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.12.2.5</p>
+                <p>Changelog for 0.13.0.0</p>
                 <ul>
-                    <li>Minor UI fixes</li>
+                    <li>Added options for handling existing files during conversion</li>
                     <li>Updated Italian translations</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.12.2.5" date="2025-01-22" />
         <release version="0.12.2.4" date="2024-10-29" />
         <release version="0.12.2.2" date="2024-04-15" />
         <release version="0.12.2.1" date="2024-03-18" />

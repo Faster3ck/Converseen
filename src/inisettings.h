@@ -38,7 +38,7 @@ public:
     static QString outputDir();
     static QByteArray windowGeometry();
     static int latestWrittenFormatIndex();
-    static bool isOverwriteMode();
+    static int overwriteMode();
     static int jpgQuality();
     static int pngQuality();
     static bool isWebPLosslessCompression();
@@ -65,7 +65,7 @@ public:
     static void setOutputDir(QString path);
     static void setWindowGeometry(QByteArray geometry);
     static void setLatestWrittenFormatIndex(int index);
-    static void setOverwriteMode(bool status);
+    static void setOverwriteMode(int overwriteMode);
     static void setJpgQuality(int quality);
     static void setPngQuality(int quality);
     static void setLatestOpenedDir(QString path);

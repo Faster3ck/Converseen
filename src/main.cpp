@@ -123,6 +123,8 @@ int main(int argc, char ** argv)
     // Prints the readable/writable supported formats by IM
     if (parser.isSet(printSupportedFormats)) {
         win.printSupportedFormats();
+
+        return 0;
     }
 
     win.show();

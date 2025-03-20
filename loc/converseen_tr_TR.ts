@@ -4,14 +4,19 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../src/converter.cpp" line="76"/>
-        <location filename="../src/converter.cpp" line="86"/>
-        <location filename="../src/converter.cpp" line="93"/>
+        <location filename="../src/converter.cpp" line="69"/>
+        <source>Skipped: %1 already esists.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/converter.cpp" line="88"/>
+        <location filename="../src/converter.cpp" line="98"/>
+        <location filename="../src/converter.cpp" line="105"/>
         <source>Error: %1</source>
         <translation>Hata: %1</translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="266"/>
+        <location filename="../src/converter.cpp" line="289"/>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
         <translation>HATA: %1 biçimi yazma için desteklenmiyor, başka bir çıktı biçimi seçin. Atlanıyor!</translation>
     </message>
@@ -598,22 +603,22 @@ p, li { white-space: pre-wrap; }
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="343"/>
+        <location filename="../ui/mainwindow.ui" line="414"/>
         <source>&amp;Edit</source>
         <translation>&amp;Düzenle</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="338"/>
+        <location filename="../ui/mainwindow.ui" line="409"/>
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="353"/>
+        <location filename="../ui/mainwindow.ui" line="424"/>
         <source>&amp;Help</source>
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="598"/>
+        <location filename="../ui/mainwindow.ui" line="669"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -626,15 +631,15 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Tür:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="544"/>
+        <location filename="../ui/mainwindow.ui" line="615"/>
         <source>Show preview</source>
         <translation>Önizleme göster</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="609"/>
-        <location filename="../ui/mainwindow.ui" line="635"/>
-        <location filename="../ui/mainwindow.ui" line="661"/>
-        <location filename="../ui/mainwindow.ui" line="687"/>
+        <location filename="../ui/mainwindow.ui" line="680"/>
+        <location filename="../ui/mainwindow.ui" line="706"/>
+        <location filename="../ui/mainwindow.ui" line="732"/>
+        <location filename="../ui/mainwindow.ui" line="758"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -647,12 +652,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; - &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="987"/>
+        <location filename="../ui/mainwindow.ui" line="1058"/>
         <source>Resolution X:</source>
         <translation>Çözünürlük X:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="994"/>
+        <location filename="../ui/mainwindow.ui" line="1065"/>
         <source>Resolution Y:</source>
         <translation>Çözünürlük Y:</translation>
     </message>
@@ -678,7 +683,7 @@ p, li { white-space: pre-wrap; }
         <translation>Görüntü ayarları iletişim kutusunu göster...</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="624"/>
+        <location filename="../ui/mainwindow.ui" line="695"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -691,27 +696,22 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Dosya boyutu:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="746"/>
+        <location filename="../ui/mainwindow.ui" line="817"/>
         <source>Width:</source>
         <translation>Genişlik:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="971"/>
+        <location filename="../ui/mainwindow.ui" line="1042"/>
         <source>Resolution</source>
         <translation>Çözünürlük</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="316"/>
-        <source>Overwrite all</source>
-        <translation>Tümünün üzerine yaz</translation>
-    </message>
-    <message>
-        <location filename="../ui/mainwindow.ui" line="348"/>
+        <location filename="../ui/mainwindow.ui" line="419"/>
         <source>&amp;Actions</source>
         <translation>&amp;Eylemler</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="937"/>
+        <location filename="../ui/mainwindow.ui" line="1008"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -724,7 +724,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 piksel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="950"/>
+        <location filename="../ui/mainwindow.ui" line="1021"/>
         <source>Mantain aspect ratio</source>
         <translation>En boy oranını koru</translation>
     </message>
@@ -749,7 +749,7 @@ p, li { white-space: pre-wrap; }
         <translation>Görüntü ayarları</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="436"/>
+        <location filename="../ui/mainwindow.ui" line="507"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -762,7 +762,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Önizleme:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="676"/>
+        <location filename="../ui/mainwindow.ui" line="747"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -775,7 +775,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Görüntü çözünürlüğü:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="650"/>
+        <location filename="../ui/mainwindow.ui" line="721"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -788,7 +788,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;Görüntü boyutu:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="712"/>
+        <location filename="../ui/mainwindow.ui" line="783"/>
         <source>Dimensions</source>
         <translation>Boyutlar</translation>
     </message>
@@ -803,7 +803,7 @@ p, li { white-space: pre-wrap; }
         <translation>Şuna dönüştür:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="753"/>
+        <location filename="../ui/mainwindow.ui" line="824"/>
         <source>Height:</source>
         <translation>Yükseklik:</translation>
     </message>
@@ -823,196 +823,231 @@ p, li { white-space: pre-wrap; }
         <translation>Renk seç</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="730"/>
+        <location filename="../ui/mainwindow.ui" line="316"/>
+        <source>File Overwrite Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="324"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the destination folder, you will be prompted to choose an action manually.&lt;/p&gt;&lt;p&gt;You can either rename it or overwrite the existing file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="327"/>
+        <source>Always Ask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="350"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the same folder, the conversion process will automatically &lt;span style=&quot; font-weight:700;&quot;&gt;skip&lt;/span&gt; it to &lt;span style=&quot; font-weight:700;&quot;&gt;preserve&lt;/span&gt; the one in the destination directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="353"/>
+        <source>Skip Existing Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="376"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the same folder, the conversion process will &lt;span style=&quot; font-weight:700;&quot;&gt;overwrite&lt;/span&gt; the original file, &lt;span style=&quot; font-weight:700;&quot;&gt;permanently deleting it&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Please, use caution when selecting this option!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="379"/>
+        <source>Overwrite Existing Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="801"/>
         <source>Scale image</source>
         <translation>Görüntüyü ölçekle</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1257"/>
+        <location filename="../ui/mainwindow.ui" line="1328"/>
         <source>toolBar</source>
         <translation>toolBar</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1287"/>
+        <location filename="../ui/mainwindow.ui" line="1358"/>
         <source>&amp;Open images</source>
         <translation>Görüntüleri &amp;aç</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1290"/>
+        <location filename="../ui/mainwindow.ui" line="1361"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1299"/>
+        <location filename="../ui/mainwindow.ui" line="1370"/>
         <source>&amp;Add images</source>
         <translation>Görüntüleri &amp;ekle</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1302"/>
+        <location filename="../ui/mainwindow.ui" line="1373"/>
         <source>Ctrl+Alt+O</source>
         <translation>Ctrl+Alt+O</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1311"/>
+        <location filename="../ui/mainwindow.ui" line="1382"/>
         <source>&amp;Remove images</source>
         <translation>Görüntüleri &amp;kaldır</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1314"/>
+        <location filename="../ui/mainwindow.ui" line="1385"/>
         <source>Remove selected pictures</source>
         <translation>Seçilen görüntüleri kaldır</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1317"/>
+        <location filename="../ui/mainwindow.ui" line="1388"/>
         <source>Del</source>
         <translatorcomment>Del tuşu, sil olarak çevirmeyin!</translatorcomment>
         <translation>Del</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1326"/>
+        <location filename="../ui/mainwindow.ui" line="1397"/>
         <source>Remove &amp;all</source>
         <translation>&amp;Tümünü kaldır</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1329"/>
+        <location filename="../ui/mainwindow.ui" line="1400"/>
         <source>Remove all pictures</source>
         <translatorcomment>Picture olmasına rağmen Görüntü diye çevirdim.</translatorcomment>
         <translation>Tüm görüntüleri kaldır</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1332"/>
+        <location filename="../ui/mainwindow.ui" line="1403"/>
         <source>Alt+Del</source>
         <translation>Alt+Del</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1341"/>
+        <location filename="../ui/mainwindow.ui" line="1412"/>
         <source>&amp;Check</source>
         <translation>&amp;İşaretle</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1344"/>
+        <location filename="../ui/mainwindow.ui" line="1415"/>
         <source>Check selected items</source>
         <translation>Seçilen ögeleri işaretle</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1347"/>
+        <location filename="../ui/mainwindow.ui" line="1418"/>
         <source>Ctrl+H</source>
         <translation>Ctrl+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1356"/>
+        <location filename="../ui/mainwindow.ui" line="1427"/>
         <source>Check a&amp;ll</source>
         <translation>Tü&amp;münü işaretle</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1359"/>
+        <location filename="../ui/mainwindow.ui" line="1430"/>
         <source>Check all items</source>
         <translation>Tüm ögeleri işaretle</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1362"/>
+        <location filename="../ui/mainwindow.ui" line="1433"/>
         <source>Ctrl+Alt+H</source>
         <translation>Ctrl+Alt+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1371"/>
+        <location filename="../ui/mainwindow.ui" line="1442"/>
         <source>&amp;Convert</source>
         <translation>&amp;Dönüştür</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1374"/>
+        <location filename="../ui/mainwindow.ui" line="1445"/>
         <source>Start the conversion process</source>
         <translation>Dönüştürme işlemini başlat</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1377"/>
+        <location filename="../ui/mainwindow.ui" line="1448"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1382"/>
+        <location filename="../ui/mainwindow.ui" line="1453"/>
         <source>&amp;Settings</source>
         <translation>&amp;Ayarlar</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1385"/>
+        <location filename="../ui/mainwindow.ui" line="1456"/>
         <source>Open the settings dialog</source>
         <translation>Ayarlar iletişim kutusunu aç</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1390"/>
+        <location filename="../ui/mainwindow.ui" line="1461"/>
         <source>&amp;Exit</source>
         <translation>&amp;Çık</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1398"/>
+        <location filename="../ui/mainwindow.ui" line="1469"/>
         <source>Uncheck all &amp;items</source>
         <translation>Tüm ögelerin &amp;işaretini kaldır</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1401"/>
+        <location filename="../ui/mainwindow.ui" line="1472"/>
         <source>Ctrl+Alt+J</source>
         <translation>Ctrl+Alt+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1406"/>
+        <location filename="../ui/mainwindow.ui" line="1477"/>
         <source>&amp;Uncheck Items</source>
         <translatorcomment>Menü ögeleri için Tümce düzeni tercih edildi</translatorcomment>
         <translation>Ögelerin işaretini &amp;kaldır</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1409"/>
+        <location filename="../ui/mainwindow.ui" line="1480"/>
         <source>Uncheck selected items</source>
         <translation>Seçilen ögelerin işaretini kaldır</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1412"/>
+        <location filename="../ui/mainwindow.ui" line="1483"/>
         <source>Ctrl+J</source>
         <translation>Ctrl+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1417"/>
+        <location filename="../ui/mainwindow.ui" line="1488"/>
         <source>&amp;About</source>
         <translation>&amp;Hakkında</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1482"/>
+        <location filename="../ui/mainwindow.ui" line="1553"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1057"/>
-        <location filename="../ui/mainwindow.ui" line="1063"/>
+        <location filename="../ui/mainwindow.ui" line="1128"/>
+        <location filename="../ui/mainwindow.ui" line="1134"/>
         <source>Rotate and flip</source>
         <translation>Döndür ve çevir</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1078"/>
+        <location filename="../ui/mainwindow.ui" line="1149"/>
         <source>Rotate image:</source>
         <translation>Görüntüyü döndür:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1087"/>
+        <location filename="../ui/mainwindow.ui" line="1158"/>
         <source>No rotation</source>
         <translation>Döndürme yok</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1159"/>
+        <location filename="../ui/mainwindow.ui" line="1230"/>
         <source>Flip image:</source>
         <translation>Görüntüyü çevir:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1168"/>
+        <location filename="../ui/mainwindow.ui" line="1239"/>
         <source>No flip</source>
         <translation>Çevirme yok</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1186"/>
+        <location filename="../ui/mainwindow.ui" line="1257"/>
         <source>Horizontally</source>
         <translation>Yatay</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1200"/>
+        <location filename="../ui/mainwindow.ui" line="1271"/>
         <source>Vertically</source>
         <translation>Dikey</translation>
     </message>
@@ -1022,17 +1057,17 @@ p, li { white-space: pre-wrap; }
         <translation>Şunla başlat:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1439"/>
+        <location filename="../ui/mainwindow.ui" line="1510"/>
         <source>Import PDF file</source>
         <translation>PDF dosyası içe aktar</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1444"/>
+        <location filename="../ui/mainwindow.ui" line="1515"/>
         <source>Import windows icon (*.ico)</source>
         <translation>Windows simgesi içe aktar (*.ico)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1447"/>
+        <location filename="../ui/mainwindow.ui" line="1518"/>
         <source>Import windows icon (*.ico *.icon)</source>
         <translation>Windows simgesi içe aktar (*.ico *.icon)</translation>
     </message>
@@ -1048,78 +1083,78 @@ p, li { white-space: pre-wrap; }
         <translation>&amp;İlerlemeli Numara</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1434"/>
+        <location filename="../ui/mainwindow.ui" line="1505"/>
         <source>&amp;Report bug...</source>
         <translation>&amp;Hata raporla...</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1455"/>
+        <location filename="../ui/mainwindow.ui" line="1526"/>
         <source>Check if a new version of Converseen is available</source>
         <translation>Converseen&apos;in yeni bir sürümünün olup olmadığını denetle</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1452"/>
+        <location filename="../ui/mainwindow.ui" line="1523"/>
         <source>&amp;Check for updates</source>
         <translation>Güncellemeleri &amp;denetle</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="387"/>
+        <location filename="../ui/mainwindow.ui" line="458"/>
         <source>Actio&amp;ns Panel</source>
         <translation>&amp;Eylem Paneli</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1104"/>
+        <location filename="../ui/mainwindow.ui" line="1175"/>
         <source>+ &amp;90°</source>
         <translation>+ &amp;90°</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1118"/>
+        <location filename="../ui/mainwindow.ui" line="1189"/>
         <source>- 9&amp;0°</source>
         <translation>- 9&amp;0°</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1134"/>
+        <location filename="../ui/mainwindow.ui" line="1205"/>
         <source>&amp;180°</source>
         <translation>&amp;180°</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1393"/>
+        <location filename="../ui/mainwindow.ui" line="1464"/>
         <source>Ctrl+Q</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1464"/>
-        <location filename="../ui/mainwindow.ui" line="1467"/>
+        <location filename="../ui/mainwindow.ui" line="1535"/>
+        <location filename="../ui/mainwindow.ui" line="1538"/>
         <source>Import directory</source>
         <translation>İçe aktarma dizini</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1479"/>
+        <location filename="../ui/mainwindow.ui" line="1550"/>
         <source>Open online help</source>
         <translation>Çevrim içi yardımı aç</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="880"/>
+        <location filename="../ui/mainwindow.ui" line="951"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Load Image Sizes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;px&apos;&lt;/span&gt; is selected, the original image sizes will be loaded into the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields. &lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; is selected, it restores the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields to &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="894"/>
+        <location filename="../ui/mainwindow.ui" line="965"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1426"/>
+        <location filename="../ui/mainwindow.ui" line="1497"/>
         <source>&amp;Donate!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1429"/>
+        <location filename="../ui/mainwindow.ui" line="1500"/>
         <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1476"/>
+        <location filename="../ui/mainwindow.ui" line="1547"/>
         <source>&amp;Online Help</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1127,27 +1162,27 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="240"/>
+        <location filename="../src/mainwindowimpl.cpp" line="243"/>
         <source>Open Image</source>
         <translation>Görüntü Aç</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="445"/>
+        <location filename="../src/mainwindowimpl.cpp" line="448"/>
         <source>Set an output directory!</source>
         <translation>Çıktı dizini ayarla!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1132"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1158"/>
         <source>Please, specify a name!</source>
         <translation>Lütfen, bir ad belirtin!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="650"/>
+        <location filename="../src/mainwindowimpl.cpp" line="662"/>
         <source>Processing finished!</source>
         <translation>İşlem tamamlandı!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1133"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1159"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1158,121 +1193,131 @@ Bu işlemi iptal etmek için Yoksay&apos;a tıklayın.
 Tüm işlemleri iptal etmek için Vazgeç&apos;e tıklayın.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1126"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1152"/>
         <source>Suggest a new name!</source>
         <translation>Yeni bir ad öner!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="453"/>
+        <location filename="../src/mainwindowimpl.cpp" line="456"/>
         <source>No images to convert!</source>
         <translation>Dönüştürülecek görüntü yok!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1148"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1153"/>
+        <location filename="../src/mainwindowimpl.cpp" line="651"/>
+        <source>Skipped</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="653"/>
+        <source>Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="1176"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1181"/>
         <source>Warning!</source>
         <translation>Uyarı!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1170"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1198"/>
         <source>Aborted!</source>
         <translation>Vazgeçildi!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1127"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1153"/>
         <source>New name:</source>
         <translation>Yeni ad:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="430"/>
+        <location filename="../src/mainwindowimpl.cpp" line="433"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>Çıktı dizini yok! Oluşturmak ister misin?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1154"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1182"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Seçilen ad, ilk adla aynı. Özgün dosyanın üzerine yazmak istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="429"/>
-        <location filename="../src/mainwindowimpl.cpp" line="435"/>
-        <location filename="../src/mainwindowimpl.cpp" line="444"/>
-        <location filename="../src/mainwindowimpl.cpp" line="448"/>
-        <location filename="../src/mainwindowimpl.cpp" line="452"/>
+        <location filename="../src/mainwindowimpl.cpp" line="432"/>
+        <location filename="../src/mainwindowimpl.cpp" line="438"/>
+        <location filename="../src/mainwindowimpl.cpp" line="447"/>
+        <location filename="../src/mainwindowimpl.cpp" line="451"/>
+        <location filename="../src/mainwindowimpl.cpp" line="455"/>
         <source>Warning</source>
         <translation>Uyarı</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="449"/>
+        <location filename="../src/mainwindowimpl.cpp" line="452"/>
         <source>No image checked!</source>
         <translation>Görüntü işaretlenmedi!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="436"/>
+        <location filename="../src/mainwindowimpl.cpp" line="439"/>
         <source>The directory cannot be created!</source>
         <translation>Dizin oluşturulmadı!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1149"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1177"/>
         <source>The filename should not be empty!</source>
         <translation>Dosya adı boş olmamalı!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="470"/>
+        <location filename="../src/mainwindowimpl.cpp" line="473"/>
         <source>Processing...</source>
         <translation>İşleniyor...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="254"/>
-        <location filename="../src/mainwindowimpl.cpp" line="704"/>
+        <location filename="../src/mainwindowimpl.cpp" line="257"/>
+        <location filename="../src/mainwindowimpl.cpp" line="716"/>
         <source>Open Directory</source>
         <translation>Dizin Aç</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="807"/>
-        <location filename="../src/mainwindowimpl.cpp" line="825"/>
-        <location filename="../src/mainwindowimpl.cpp" line="998"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1055"/>
+        <location filename="../src/mainwindowimpl.cpp" line="835"/>
+        <location filename="../src/mainwindowimpl.cpp" line="853"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1026"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1083"/>
         <source>Preview</source>
         <translation>Önizleme</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="290"/>
+        <location filename="../src/mainwindowimpl.cpp" line="293"/>
         <source>Open Icon file</source>
         <translation>Simge dosyası aç</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="290"/>
+        <location filename="../src/mainwindowimpl.cpp" line="293"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Microsoft simge (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="301"/>
+        <location filename="../src/mainwindowimpl.cpp" line="304"/>
         <source>Open Pdf file</source>
         <translation>PDF dosyası aç</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="301"/>
+        <location filename="../src/mainwindowimpl.cpp" line="304"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Taşınabilir Belge Biçimi (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="311"/>
+        <location filename="../src/mainwindowimpl.cpp" line="314"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Dosya inceleniyor. Biraz zaman alabilir, lütfen bekleyin...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="636"/>
+        <location filename="../src/mainwindowimpl.cpp" line="646"/>
         <source>Converted</source>
         <translation>Dönüştürüldü</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="261"/>
+        <location filename="../src/mainwindowimpl.cpp" line="264"/>
         <source>Do you want to import subfolders as well?</source>
         <translation>Alt klasörleri de içe aktarmak istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="335"/>
+        <location filename="../src/mainwindowimpl.cpp" line="338"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation>%1 klasörü içe aktaracaksınız. Alt klasörleri de içe aktarmak istiyor musunuz?</translation>
     </message>

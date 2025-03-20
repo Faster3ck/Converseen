@@ -40,6 +40,7 @@ using namespace Magick;
 using namespace std;
 
 enum FlipOrientation { VERTICAL, HORIZONTAL };
+enum OverwriteMode { ASK, SKIP, OVERWRITE };
 
 class Converter : public QThread
 {
@@ -60,7 +61,7 @@ public:
     void setFlip(FlipOrientation orientation);
     void setDensity(QString densityStr);
     void setBackgroundColor(QString bg_color, bool changeBg_color);
-    void setOverwrite(bool overwrite);
+    void setOverwrite(OverwriteMode overwrite);
     void setNewBasename(QString newBaseName, bool ok);
     void setResamplingFilter(IMFilterType resamplingFilter);
     void setMagickDefines(const QList<MagickDefine> &magickDefines);
@@ -75,6 +76,7 @@ private:
     bool writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status);
     Image convertPDFtoImage(const Image &my_image);
     QString overwriteOldFileName(QString out);
+    bool skipExisting(QString out);
 
     QString m_fileNameIn;
     QString m_fileNameOut;
@@ -93,7 +95,7 @@ private:
     bool m_maintainAspectRatio;
 
     bool m_resize;
-    bool m_overwrite;
+    OverwriteMode m_overwrite;
     bool m_allow_rename;
     bool m_density;
     bool m_rotation;

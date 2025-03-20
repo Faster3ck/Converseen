@@ -75,9 +75,9 @@ int IniSettings::latestWrittenFormatIndex()
     return settings->value("General/Last Write Format").toInt();
 }
 
-bool IniSettings::isOverwriteMode()
+int IniSettings::overwriteMode()
 {
-    return settings->value("Options/Overwrite mode").toBool();
+    return settings->value("Options/Overwrite mode").toInt();
 }
 
 int IniSettings::jpgQuality()
@@ -260,9 +260,9 @@ void IniSettings::setLatestWrittenFormatIndex(int index)
     settings->setValue("General/Last Write Format", index);
 }
 
-void IniSettings::setOverwriteMode(bool enabled)
+void IniSettings::setOverwriteMode(int overwriteMode)
 {
-    settings->setValue("Options/Overwrite mode", enabled);
+    settings->setValue("Options/Overwrite mode", overwriteMode);
 }
 
 void IniSettings::setJpgQuality(int quality)

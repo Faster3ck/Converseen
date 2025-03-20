@@ -79,7 +79,10 @@ MainWindowImpl::MainWindowImpl(QWidget * parent)
     connect(labelPreview, SIGNAL(previewReady(int, int, double, double)), this, SLOT(showImageInformations(int, int, double, double)));
 
     connect(checkRelative, SIGNAL(stateChanged(int)), this, SLOT(setRelativeSizeCheckboxes(int)));
-    connect(checkOverwrite, SIGNAL(stateChanged(int)), this, SLOT(setOverwriteStatus(int)));
+    /*connect(radioOverwriteAsk, SIGNAL(clicked()), this, SLOT(setOverwriteStatus()));
+    connect(radioSkipExisting, SIGNAL(clicked()), this, SLOT(setOverwriteStatus()));
+    connect(radioOverwriteExisting, SIGNAL(clicked()), this, SLOT(setOverwriteStatus()));*/
+    //connect(radioOverwriteExisting, SIGNAL(stateChanged(int)), this, SLOT(setOverwriteStatus(int)));
 
     createActions();
     setupMenu();
@@ -615,7 +618,14 @@ void MainWindowImpl::convert()
             convertThread->setOutputPictureName(outFileName);
         }
 
-        convertThread->setOverwrite(checkOverwrite->isChecked());
+        OverwriteMode manageOverwrite = ASK;
+
+        if (radioOverwriteExisting->isChecked())
+            manageOverwrite = OVERWRITE;
+        if (radioSkipExisting->isChecked())
+            manageOverwrite = SKIP;
+
+        convertThread->setOverwrite(manageOverwrite);
 
         convertThread->start();
     }
@@ -637,8 +647,10 @@ void MainWindowImpl::nextConversion(int conv_status)
             // Add the destination dirs to DialogConversionStatus so them can be opened at the end of the image processing
             dlgCStatus->addOutputDirectory(QDir::toNativeSeparators(destinationPath()));
         }
+        else if (conv_status == 2)
+            msg = tr("Skipped");
         else if (conv_status == -1)
-            msg = "Error";
+            msg = tr("Error");
 
         (treeWidget->topLevelItem(curr_index))->setText(1, msg);
 
@@ -720,7 +732,23 @@ void MainWindowImpl::loadOptions()
 
     lineDirectory->setText(QDir::toNativeSeparators(IniSettings::outputDir()));
     comboWFormats->setCurrentIndex(IniSettings::latestWrittenFormatIndex());
-    checkOverwrite->setChecked(IniSettings::isOverwriteMode());
+
+    int overwriteMode = IniSettings::overwriteMode();
+
+    switch (overwriteMode) {
+    case 0:
+        radioOverwriteAsk->setChecked(true);
+        break;
+    case 1:
+        radioSkipExisting->setChecked(true);
+        break;
+    case 2:
+        radioOverwriteExisting->setChecked(true);
+        break;
+    default:
+        radioOverwriteAsk->setChecked(true);
+        break;
+    }
 
     loadQuality();
 
@@ -947,7 +975,7 @@ void MainWindowImpl::editSettings()
     dlg.exec();
 
     if (dlg.result() == 1) {
-        checkOverwrite->setChecked(IniSettings::isOverwriteMode());
+        radioOverwriteExisting->setChecked(IniSettings::overwriteMode());
     }
 }
 
@@ -1109,16 +1137,14 @@ void MainWindowImpl::saveSettings()
     IniSettings::setImageDirChecked(checkSameDir->isChecked());
     IniSettings::setRenameChecked(checkRename->isChecked());
     IniSettings::setBgColorChecked(checkNoTransp->isChecked());
-    IniSettings::setOverwriteMode(checkOverwrite->isChecked());
+    //IniSettings::setOverwriteMode(radioOverwriteExisting->isChecked());
+    setOverwriteStatus();
 
     IniSettings::settings->sync();
 }
 
 void MainWindowImpl::overwriteDialog(QString baseName)
 {
-    /*
-        TODO: Sostituisci tutte (vedi sotto)
-    */
     bool ok;
     QString newBaseName;
 
@@ -1130,8 +1156,10 @@ void MainWindowImpl::overwriteDialog(QString baseName)
         if (!ok) {
             QMessageBox::StandardButton msg;
             msg = QMessageBox::question(this, tr("Please, specify a name!"),
-                                        /* FIXME: tradurre meglio! */ tr("You should specify a name.\nClick Retry to specify a new name.\nClick Ignore to cancel this operation.\nClick Abort to cancel all operations."),
+                                        tr("You should specify a name.\nClick Retry to specify a new name.\nClick Ignore to cancel this operation.\nClick Abort to cancel all operations."),
                                         QMessageBox::Retry | QMessageBox::Ignore | QMessageBox::Abort);
+
+
 
             if (msg == QMessageBox::Ignore) {
                 convertThread->stopProcess();
@@ -1226,10 +1254,17 @@ void MainWindowImpl::setRelativeSizeCheckboxes(int state)
         pushLinkAspect->setEnabled(true);
 }
 
-void MainWindowImpl::setOverwriteStatus(int state)
+void MainWindowImpl::setOverwriteStatus()
 {
-    bool isChecked = state == 0 ? false : true;
+    OverwriteMode manageOverwrite = ASK;
 
-    IniSettings::setOverwriteMode(isChecked);
+    if (radioOverwriteAsk->isChecked())
+        manageOverwrite = ASK;
+    else if (radioOverwriteExisting->isChecked())
+        manageOverwrite = OVERWRITE;
+    else if (radioSkipExisting->isChecked())
+        manageOverwrite = SKIP;
+
+    IniSettings::setOverwriteMode(manageOverwrite);
     IniSettings::settings->sync();
 }

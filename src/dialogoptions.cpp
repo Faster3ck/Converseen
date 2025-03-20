@@ -95,7 +95,7 @@ void DialogOptions::saveOptions()
 
 void DialogOptions::loadSettings()
 {
-    bool overwriteMode = IniSettings::isOverwriteMode();
+    bool overwriteMode = IniSettings::overwriteMode();
 
     if (overwriteMode)
         radioOverwrite->setChecked(true);

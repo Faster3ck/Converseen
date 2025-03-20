@@ -55,7 +55,6 @@ Converter::~Converter()
 void Converter::run()
 {
     m_process_stopped = 0;
-    m_conv_status = 2;  // Jumped
 
     Image my_image;
     QFileInfo fi(m_fileNameIn);
@@ -63,7 +62,20 @@ void Converter::run()
     QString err_read_status;
     QString err_write_status;
 
-    if (!m_overwrite)   // modalità sovrascrittura
+    // Skip existing files
+    if (m_overwrite == SKIP) {
+        if (skipExisting(out)) {
+            m_conv_status = 2;  // Skipped
+            QString skipMsg = QString(tr("Skipped: %1 already esists."))
+                                  .arg(fi.fileName());
+            emit errorMessage(skipMsg);
+
+            return;
+        }
+    }
+
+    // Overwrite existing files
+    if (m_overwrite == ASK)
         out = overwriteOldFileName(out);
 
     if (!m_process_stopped) {
@@ -208,7 +220,7 @@ void Converter::setBackgroundColor(QString bg_color, bool changeBg_color)
     m_changeBg_color = changeBg_color;
 }
 
-void Converter::setOverwrite(bool overwrite)
+void Converter::setOverwrite(OverwriteMode overwrite)
 {
     m_overwrite = overwrite;
 }
@@ -219,7 +231,7 @@ QString Converter::overwriteOldFileName(QString out)
     m_newBaseName = fi.baseName();
 
     if (fi.exists()) {
-        if (!m_overwrite) {
+        if (m_overwrite == ASK) {
             emit requestOverwrite(m_newBaseName);
 
             mutex.lock();
@@ -230,6 +242,17 @@ QString Converter::overwriteOldFileName(QString out)
     }
     else
         return out;
+}
+
+bool Converter::skipExisting(QString out)
+{
+    QFileInfo fi(out);
+    m_newBaseName = fi.baseName();
+
+    if (fi.exists())
+        return true;
+    else
+        return false;
 }
 
 void Converter::setNewBasename(QString newBaseName, bool ok)

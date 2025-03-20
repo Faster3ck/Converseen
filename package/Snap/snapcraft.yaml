@@ -142,7 +142,7 @@ parts:
       - libheif-plugin-dav1d
       - libheif-plugin-libde265
       - libheif-plugin-x265
-      - libjxl0.8
+      - libjxl0.11
 
   cleanup:
     after: 

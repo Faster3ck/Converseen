@@ -166,6 +166,6 @@ private slots:
     void onlineHelp();
 
     void setRelativeSizeCheckboxes(int state);
-    void setOverwriteStatus(int state);
+    void setOverwriteStatus();
 };
 #endif // MAINWINDOWIMPL_H
