@@ -1,6 +1,6 @@
 # Converseen
 
-![alt text](https://converseen.fasterland.net/images/appstream/converseen-appdata-1.png "Converseen on Kde")
+![alt text](https://converseen.fasterland.net/images/converseen_013_github.png "Converseen on Kde")
 
 **Converseen** is a free **cross-platform batch image processor** for **Windows**, **Linux**, **macOS**, **FreeBSD**, and other operating systems. It allows you to **convert**, **resize**, **rotate**, and **flip** an infinite number of images with a single mouse click. Moreover, **Converseen** can convert an entire **PDF** document into a set of images with your preferred characteristics. You can choose from over **100+ formats**, set the size, resolution, and the filename.
 
