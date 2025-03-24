@@ -161,6 +161,18 @@ jobs:
       
           cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="${{ github.workspace }}\ImageMagick" ..
           nmake
+          cpack -B package
+
+      - name: Prepare Artifacts
+        run: |
+          mkdir artifact
+          cp Converseen/build/package/*.msi artifact/.
+          cp Converseen/build/package/*.zip artifact/.
+          
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Windows
+          path: 'artifacts'
 
   build-macos:
     name: Converseen macOS Build
