@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/converter.cpp" line="69"/>
         <source>Skipped: %1 already esists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignoré : %1 existe déjà.</translation>
     </message>
     <message>
         <location filename="../src/converter.cpp" line="88"/>
@@ -899,37 +899,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="316"/>
         <source>File Overwrite Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration d&apos;écrasement de fichier</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="324"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the destination folder, you will be prompted to choose an action manually.&lt;/p&gt;&lt;p&gt;You can either rename it or overwrite the existing file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si le fichier de sortie traité porte le même nom qu&apos;un fichier existant dans le dossier de destination, vous serez invité à choisir une action manuellement.&lt;/p&gt;&lt;p&gt;Vous pouvez soit le renommer, soit écraser le fichier existant.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="327"/>
         <source>Always Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Toujours demander</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="350"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the same folder, the conversion process will automatically &lt;span style=&quot; font-weight:700;&quot;&gt;skip&lt;/span&gt; it to &lt;span style=&quot; font-weight:700;&quot;&gt;preserve&lt;/span&gt; the one in the destination directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si le fichier de sortie traité porte le même nom qu&apos;un fichier existant dans le même dossier, le processus de conversion &lt;span style=&quot; font-weight:700;&quot;&gt;l&apos;ignorera&lt;/span&gt; automatiquement pour &lt;span style=&quot; font-weight:700;&quot;&gt;conserver&lt;/span&gt; celui du répertoire de destination.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="353"/>
         <source>Skip Existing Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorer les fichiers existants</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="376"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the same folder, the conversion process will &lt;span style=&quot; font-weight:700;&quot;&gt;overwrite&lt;/span&gt; the original file, &lt;span style=&quot; font-weight:700;&quot;&gt;permanently deleting it&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Please, use caution when selecting this option!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Si le fichier de sortie traité porte le même nom qu&apos;un fichier existant dans le même dossier, le processus de conversion &lt;span style=&quot; font-weight:700;&quot;&gt;écrasera&lt;/span&gt; le fichier d&apos;origine, &lt;span style=&quot; font-weight:700;&quot;&gt;et le supprimera définitivement&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Soyez prudent lorsque vous sélectionnez cette option !&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="379"/>
         <source>Overwrite Existing Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Écraser les fichiers existants</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="951"/>
@@ -1125,7 +1125,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1464"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1523"/>
@@ -1242,12 +1242,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="651"/>
         <source>Skipped</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignoré</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="653"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="835"/>
