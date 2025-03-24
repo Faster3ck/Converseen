@@ -164,14 +164,17 @@ jobs:
           cpack -B package
 
       - name: Prepare Artifacts
+        shell: cmd
         run: |
           ls
 
           ls Converseen/build/package/
         
-          mkdir artifact
-          cp Converseen/build/package/*.msi artifact/
-          cp Converseen/build/package/*.zip artifact/
+          mkdir artifacts
+          cp Converseen/build/package/*.msi artifacts/
+          cp Converseen/build/package/*.zip artifacts/
+
+          ls artifacts
           
       - uses: actions/upload-artifact@v4
         with:
