@@ -165,6 +165,10 @@ jobs:
 
       - name: Prepare Artifacts
         run: |
+          ls
+
+          ls Converseen/build/package/
+        
           mkdir artifact
           cp Converseen/build/package/*.msi artifact/
           cp Converseen/build/package/*.zip artifact/
