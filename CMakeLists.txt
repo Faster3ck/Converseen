@@ -4,7 +4,7 @@ if(WIN32)
     cmake_policy(SET CMP0135 NEW)
 endif()
 
-set(CONVERSEEN_VERSION 0.13.0.0)
+set(CONVERSEEN_VERSION 0.13.0.1)
 
 project(
     converseen
@@ -199,7 +199,7 @@ if(WIN32)
     file(GLOB ImageMagick_Filters ${ImageMagick_EXECUTABLE_DIR}/modules/filters/*.dll)
     file(GLOB ImageMagick_Coders ${ImageMagick_EXECUTABLE_DIR}/modules/coders/*.dll)
     file(GLOB ImageMagick_XMLs ${ImageMagick_EXECUTABLE_DIR}/*.xml)
-    file(GLOB OpenSSL_x86_DLLs ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/*.dll)
+    #file(GLOB OpenSSL_x86_DLLs ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/*.dll)
     #file(GLOB Win32_DLLs ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS}/*.dll)
     file(GLOB Win32_DLLs 
         ${ImageMagick_EXECUTABLE_DIR}/mfc140*.dll
@@ -215,7 +215,9 @@ if(WIN32)
     install(FILES ${ImageMagick_XMLs} DESTINATION .)
     install(FILES ${ImageMagick_EXECUTABLE_DIR}/sRGB.icc DESTINATION .)
     install(FILES ${ImageMagick_EXECUTABLE_DIR}/NOTICE.txt RENAME ImageMagick_License.txt DESTINATION .)
-    install(FILES ${OpenSSL_x86_DLLs} DESTINATION .)
+    #install(FILES ${OpenSSL_x86_DLLs} DESTINATION .)
+    install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libcrypto-1_1.dll DESTINATION .)
+	install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libssl-1_1.dll DESTINATION .)
     install(FILES ${Win32_DLLs} DESTINATION .)
     #install(FILES ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} DESTINATION .)
     
@@ -275,7 +277,7 @@ if(WIN32)
     set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/COPYING.txt")
     set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/COPYING.txt")
 
-    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000011")
+    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000023")
     set(CPACK_WIX_UPGRADE_GUID "B35C58D3-FBD2-4A81-8371-588F51EC180F")
 
     configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/wixCheckInnoVersion.xml.in" wixCheckInnoVersion.xml)
