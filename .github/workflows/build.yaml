@@ -52,6 +52,8 @@ jobs:
 
       - name: Build AppImage
         run: |
+          find . -type f -exec chmod -v -x {} \;
+          
           cd package/AppImage
           
           chmod a+x build-with-qmake.sh
