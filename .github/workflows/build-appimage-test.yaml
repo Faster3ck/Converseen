@@ -54,7 +54,7 @@ jobs:
         uses: jurplel/install-qt-action@v3
         with:
           aqtversion: '==3.1.*'
-          version: '6.7.*'
+          version: '6.8.*'
           host: 'linux'
           target: 'desktop'
           arch: 'linux_gcc_64'
@@ -68,10 +68,8 @@ jobs:
           chmod a+x build-with-qmake.sh
           chmod a+x finalize-appimage.sh
           
-          ./build-with-qmake.sh
+          ./build-with-cmake.sh
           ./finalize-appimage.sh
-
-          ls -ld ../../loc/*
 
       - name: Prepare Artifacts
         run: |
