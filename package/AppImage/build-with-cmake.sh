@@ -43,7 +43,7 @@ sed -i 's/<content_rating type="oars-1.1" \/>/<content_rating type="oars-1.1">no
 cd "$BUILD_DIR"
 
 # configure build files with cmake
-cmake "$REPO_ROOT" -DUSE_QT6=yes -DCMAKE_INSTALL_PREFIX="$BUILD_DIR/AppDir/usr"
+cmake "$REPO_ROOT" -DUSE_QT6=yes -DCMAKE_INSTALL_PREFIX="$BUILD_DIR/AppDir/usr" -DImageMagick_INCLUDE_DIRS="$MAGICK_HOME/include" -DImageMagick_LIBRARIES="$MAGICK_HOME/lib"
 
 # build project and install files into AppDir
 make -j$(nproc)
