@@ -64,14 +64,14 @@ jobs:
       - name: Build AppImage
         run: |
           cd package/AppImage
-
-          ls -ld loc/*
           
           chmod a+x build-with-qmake.sh
           chmod a+x finalize-appimage.sh
           
           ./build-with-qmake.sh
           ./finalize-appimage.sh
+
+          ls -ld ../../loc/*
 
       - name: Prepare Artifacts
         run: |
