@@ -24,6 +24,8 @@ CURR_DIR=$(readlink -f $(dirname $(dirname $0)))
 mv squashfs-root AppDir
 cp -vf AppRun AppDir/AppRun
 
+tree AppDir
+
 # Recreate AppImage
 ./appimagetool-x86_64.AppImage -v AppDir --sign
 mv Converseen-x86_64.AppImage $OUTPUT_NAME
