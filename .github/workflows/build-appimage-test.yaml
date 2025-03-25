@@ -64,6 +64,8 @@ jobs:
       - name: Build AppImage
         run: |
           cd package/AppImage
+
+          ls -ld loc/*
           
           chmod a+x build-with-qmake.sh
           chmod a+x finalize-appimage.sh
