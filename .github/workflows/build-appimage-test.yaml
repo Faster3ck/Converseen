@@ -31,6 +31,15 @@ jobs:
           passphrase: ${{ secrets.GPG_PASSPHRASE }}
           git_user_signingkey: true
 
+      - name: Build ImageMagick
+        run: |
+          wget https://mirror.dogado.de/imagemagick/ImageMagick.tar.bz2
+          tar -xvf ImageMagick.tar.bz2
+          cd ImageMagick-*/
+          ./configure --enable-shared --disable-installed --enable-hdri --without-perl --disable-dependency-tracking --with-gslib=yes --with-openjp2 --with-wmf --without-gvc --with-djvu --without-dps --without-fpx --with-heic=yes --prefix=$HOME/ImageMagick7-devel
+          make -j$(nproc)
+          make install
+
       - name: Install Qt
         uses: jurplel/install-qt-action@v4
         with:
@@ -51,15 +60,6 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
   
           echo "Version: $VERSION"
-      
-      - name: Build ImageMagick
-        run: |
-          wget https://mirror.dogado.de/imagemagick/ImageMagick.tar.bz2
-          tar -xvf ImageMagick.tar.bz2
-          cd ImageMagick-*/
-          ./configure --enable-shared --disable-installed --enable-hdri --without-perl --disable-dependency-tracking --with-gslib=yes --with-openjp2 --with-wmf --without-gvc --with-djvu --without-dps --without-fpx --with-heic=yes --prefix=$HOME/ImageMagick7-devel
-          make -j$(nproc)
-          make install
 
       - name: Build AppImage
         run: |
