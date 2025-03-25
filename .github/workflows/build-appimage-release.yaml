@@ -43,6 +43,17 @@ jobs:
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
   
           echo "Version: $VERSION"
+
+      - name: Install Qt
+        uses: jurplel/install-qt-action@v4
+        with:
+          aqtversion: '==3.1.*'
+          version: '6.7.*'
+          host: 'linux'
+          target: 'desktop'
+          arch: 'linux_gcc_64'
+          install-deps: 'true'
+          set-env: 'true'
       
       - name: Build ImageMagick
         run: |
@@ -53,25 +64,14 @@ jobs:
           make -j$(nproc)
           make install
 
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v3
-        with:
-          aqtversion: '==3.1.*'
-          version: '6.7.*'
-          host: 'linux'
-          target: 'desktop'
-          arch: 'linux_gcc_64'
-          install-deps: 'true'
-          set-env: 'true'
-
       - name: Build AppImage
         run: |
           cd package/AppImage
           
-          chmod a+x build-with-qmake.sh
+          chmod a+x build-with-cmake.sh
           chmod a+x finalize-appimage.sh
           
-          ./build-with-qmake.sh
+          ./build-with-cmake.sh
           ./finalize-appimage.sh
 
       - name: Prepare Artifacts
