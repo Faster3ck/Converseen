@@ -48,7 +48,7 @@ qmake "$REPO_ROOT" IM_INSTALL_PREFIX=$MAGICK_HOME
 
 # build project and install files into AppDir
 make -j$(nproc)
-make install INSTALL_ROOT=AppDir
+make install INSTALL_ROOT=AppDir VERBOSE=1
 
 # now, build AppImage using linuxdeploy and linuxdeploy-plugin-qt
 # download linuxdeploy and its Qt plugin
