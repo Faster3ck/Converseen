@@ -95,6 +95,8 @@ cp -rvf /usr/share/ghostscript/${GS_VERSION}/iccprofiles/* $BUILD_DIR/AppDir/usr
 mv $BUILD_DIR/AppDir/usr/share/appdata $BUILD_DIR/AppDir/usr/share/metainfo
 mv $BUILD_DIR/AppDir/usr/share/metainfo/converseen.appdata.xml $BUILD_DIR/AppDir/usr/share/metainfo/net.fasterland.converseen.appdata.xml
 
+tree AppDir
+
 # Create AppImage package
 ./linuxdeploy-x86_64.AppImage --appdir AppDir -i "$REPO_ROOT"/res/converseen.png -d "$REPO_ROOT"/res/net.fasterland.converseen.desktop  --plugin qt --output appimage
 
