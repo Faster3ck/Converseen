@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/converter.cpp" line="69"/>
         <source>Skipped: %1 already esists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Пропущено: %1 уже существует.</translation>
     </message>
     <message>
         <location filename="../src/converter.cpp" line="88"/>
@@ -18,7 +18,7 @@
     <message>
         <location filename="../src/converter.cpp" line="289"/>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
-        <translation type="unfinished"></translation>
+        <translation>ОШИБКА: формат %1 не поддерживается для записи, выберите другой формат вывода. Пропускается.</translation>
     </message>
 </context>
 <context>
@@ -270,22 +270,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialoginfo.ui" line="237"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Japanese translation:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Перевод на японский:&lt;/span&gt; Xenolith0 - &lt;a href=&quot;mailto:xenolith0bytetestcomgreen@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;xenolith0bytetestcomgreen@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../src/dialoginfo.cpp" line="41"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Версия Qt:</translation>
     </message>
     <message>
         <location filename="../src/dialoginfo.cpp" line="72"/>
         <source>Make a Donation!</source>
-        <translation type="unfinished"></translation>
+        <translation>Сделать пожертвование</translation>
     </message>
     <message>
         <location filename="../src/dialoginfo.cpp" line="73"/>
         <source>Donate using PayPal, Ko-Fi or Cryptocurrencies.</source>
-        <translation type="unfinished"></translation>
+        <translation>Сделайте пожертвование с помощью PayPal, Ko-Fi или криптовалют.</translation>
     </message>
 </context>
 <context>
@@ -358,22 +358,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogmultipageeditor.ui" line="157"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Справка</translation>
     </message>
     <message>
         <location filename="../ui/dialogmultipageeditor.ui" line="160"/>
         <source>Open online help</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть онлайн-справку</translation>
     </message>
     <message>
         <location filename="../ui/dialogmultipageeditor.ui" line="163"/>
         <source>F1</source>
-        <translation type="unfinished">F1</translation>
+        <translation>F1</translation>
     </message>
     <message>
         <location filename="../src/dialogmultipageeditor.cpp" line="139"/>
         <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows (%1)&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;                               Please install the correct version of Ghostscript.&lt;br&gt;                               Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Чтобы выполнить конвертацию файлов &lt;b&gt;PDF&lt;/b&gt; в изображения, необходимо установить &lt;b&gt;Ghostscript для Windows (%1)&lt;/b&gt; в вашей системе.&lt;br&gt;&lt;br&gt;                               Установите правильную версию Ghostscript.&lt;br&gt;                               Для получения более подробной информации нажмите кнопку &lt;b&gt;Справка&lt;/b&gt;.</translation>
     </message>
 </context>
 <context>
@@ -386,7 +386,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/dialogoptions.cpp" line="62"/>
         <source>Please, restart Converseen to apply current language!</source>
-        <translation>Пожалуйста, перезапустите Converseen для применения текущего языка!</translation>
+        <translation>Перезапустите Converseen для применения текущего языка.</translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="110"/>
@@ -411,7 +411,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogoptions.ui" line="46"/>
         <source>Overwriting settings</source>
-        <translation>Перезаписать настройки</translation>
+        <translation>Перезапись настроек</translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="14"/>
@@ -421,12 +421,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogoptions.ui" line="52"/>
         <source>As&amp;k first</source>
-        <translation>&amp;Спросите</translation>
+        <translation>Сн&amp;ачала спрашивать</translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="62"/>
         <source>O&amp;verwrite all existing images</source>
-        <translation>Пере&amp;записать все существующие изображения</translation>
+        <translation>Пере&amp;записывать все существующие изображения</translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="72"/>
@@ -444,7 +444,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogquality.ui" line="456"/>
         <source>Ok</source>
-        <translation>Oк</translation>
+        <translation>OК</translation>
     </message>
     <message>
         <location filename="../ui/dialogquality.ui" line="68"/>
@@ -500,7 +500,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogquality.ui" line="181"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sets the zlib compression level from 1 to 9 (1 is lowest and 9 is highest).&lt;/p&gt;&lt;p&gt;For compression level 0, the Huffman-only strategy is used, which is fastest but not necessarily the worst compression.&lt;/p&gt;&lt;p&gt;PNG uses a &apos;lossless&apos; compression method, so increasing the compression does NOT reduce your image quality.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Устанавливает уровень сжатия zlib от 1 до 9 (1 — самый низкий, 9 — самый высокий).&lt;/p&gt;&lt;p&gt;Для уровня сжатия 0 используется только стратегия Хаффмана, являющаяся самым быстрым, но не обязательно худшим процессом сжатия.&lt;/p&gt;&lt;p&gt;PNG использует метод сжатия &apos;без потерь&apos;, поэтому увеличение сжатия НЕ снижает качество изображения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Устанавливает уровень сжатия zlib от 1 до 9 (1 — самый низкий, 9 — самый высокий).&lt;/p&gt;&lt;p&gt;Для уровня сжатия 0 используется только стратегия Хаффмана, являющаяся самым быстрым, но не обязательно худшим процессом сжатия.&lt;/p&gt;&lt;p&gt;PNG использует метод сжатия «без потерь», поэтому увеличение сжатия НЕ снижает качество изображения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialogquality.ui" line="53"/>
@@ -604,7 +604,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="414"/>
         <source>&amp;Edit</source>
-        <translation>&amp;Редактировать</translation>
+        <translation>&amp;Правка</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1461"/>
@@ -734,37 +734,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="316"/>
         <source>File Overwrite Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Настройки перезаписи файла</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="324"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the destination folder, you will be prompted to choose an action manually.&lt;/p&gt;&lt;p&gt;You can either rename it or overwrite the existing file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если обрабатываемый выходной файл имеет то же имя, что и существующий файл в папке назначения, вам будет предложено выбрать действие вручную.&lt;/p&gt;&lt;p&gt;Вы можете переименовать его или перезаписать существующий файл.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="327"/>
         <source>Always Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Всегда спрашивать</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="350"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the same folder, the conversion process will automatically &lt;span style=&quot; font-weight:700;&quot;&gt;skip&lt;/span&gt; it to &lt;span style=&quot; font-weight:700;&quot;&gt;preserve&lt;/span&gt; the one in the destination directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если обрабатываемый выходной файл имеет то же имя, что и существующий файл в той же папке, процесс преобразования автоматически &lt;span style=&quot; font-weight:700;&quot;&gt;пропустит&lt;/span&gt; его, чтобы &lt;span style=&quot; font-weight:700;&quot;&gt;сохранить&lt;/span&gt; файл в каталоге назначения.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="353"/>
         <source>Skip Existing Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Пропускать существующие файлы</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="376"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the same folder, the conversion process will &lt;span style=&quot; font-weight:700;&quot;&gt;overwrite&lt;/span&gt; the original file, &lt;span style=&quot; font-weight:700;&quot;&gt;permanently deleting it&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Please, use caution when selecting this option!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Если обрабатываемый выходной файл имеет то же имя, что и существующий файл в той же папке, процесс преобразования &lt;span style=&quot; font-weight:700;&quot;&gt;перезапишет&lt;/span&gt; исходный файл, &lt;span style=&quot; font-weight:700;&quot;&gt;безвозвратно удалив его&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Будьте осторожны при выборе этой опции.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="379"/>
         <source>Overwrite Existing Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Перезаписывать существующие файлы</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="669"/>
@@ -944,7 +944,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1442"/>
         <source>&amp;Convert</source>
-        <translation>&amp;Конверитровать</translation>
+        <translation>&amp;Конвертировать</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1445"/>
@@ -1110,43 +1110,43 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1464"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1535"/>
         <location filename="../ui/mainwindow.ui" line="1538"/>
         <source>Import directory</source>
-        <translation type="unfinished"></translation>
+        <translation>Каталог импорта</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1550"/>
         <source>Open online help</source>
-        <translation type="unfinished"></translation>
+        <translation>Открыть онлайн-справку</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="951"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Load Image Sizes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;px&apos;&lt;/span&gt; is selected, the original image sizes will be loaded into the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields. &lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; is selected, it restores the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields to &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Загрузить размеры изображения&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Если выбрано значение &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;пкс&lt;/span&gt;, в поля &lt;span style=&quot; font-weight:700;&quot;&gt;Ширина/Высота&lt;/span&gt; будут загружены исходные размеры изображения. &lt;/p&gt;&lt;p&gt;Если выбрано значение&lt;span style=&quot; font-weight:700;&quot;&gt;%&lt;/span&gt;, поля &lt;span style=&quot; font-weight:700;&quot;&gt;Ширина/Высота&lt;/span&gt; будут восстановлены до &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="965"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Связать соотношение сторон с выбранным изображением&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Автоматически настраивает значения соотношения сторон, когда вы вводите значение в поля &lt;span style=&quot; font-weight:700;&quot;&gt;Ширина/Высота&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1497"/>
         <source>&amp;Donate!</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Сделать пожертвование</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1500"/>
         <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Сделайте пожертвование с помощью PayPal, Ko-Fi или криптовалют</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1547"/>
         <source>&amp;Online Help</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Онлайн-справка</translation>
     </message>
 </context>
 <context>
@@ -1159,22 +1159,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="448"/>
         <source>Set an output directory!</source>
-        <translation>Установить выходную директорию!</translation>
+        <translation>Установите выходной каталог.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="662"/>
         <source>Processing finished!</source>
-        <translation>Обработка завершена!</translation>
+        <translation>Обработка завершена.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1152"/>
         <source>Suggest a new name!</source>
-        <translation>Введите новое имя!</translation>
+        <translation>Введите новое имя.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="456"/>
         <source>No images to convert!</source>
-        <translation>Нет изображений для конвертирования!</translation>
+        <translation>Нет изображений для конвертирования.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1176"/>
@@ -1199,7 +1199,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="452"/>
         <source>No image checked!</source>
-        <translation>Изображения не выбраны!</translation>
+        <translation>Изображения не выбраны.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="473"/>
@@ -1215,27 +1215,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="433"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
-        <translation>Каталог назначения не существует! Создать каталог?</translation>
+        <translation>Выходной каталог не существует. Создать его?</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="439"/>
         <source>The directory cannot be created!</source>
-        <translation>Каталог не может быть создан!</translation>
+        <translation>Каталог не может быть создан.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="651"/>
         <source>Skipped</source>
-        <translation type="unfinished"></translation>
+        <translation>Пропущено</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="653"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Ошибка</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1158"/>
         <source>Please, specify a name!</source>
-        <translation>Пожалуйста, укажите имя!</translation>
+        <translation>Укажите имя.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1159"/>
@@ -1244,14 +1244,14 @@ Click Retry to specify a new name.
 Click Ignore to cancel this operation.
 Click Abort to cancel all operations.</source>
         <translation>Вы должны указать имя.
-Нажмите Повтор, чтобы указать новое имя.
-Нажмите Игнорировать для отмены этой операции.
-Нажмите Прервать для отмены всех операций.</translation>
+Нажмите «Повтор», чтобы указать новое имя.
+Нажмите «Игнорировать» для отмены этой операции.
+Нажмите «Прервать» для отмены всех операций.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1177"/>
         <source>The filename should not be empty!</source>
-        <translation>Имя файла не должно быть пустым!</translation>
+        <translation>Имя файла не должно быть пустым.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1182"/>
@@ -1261,7 +1261,7 @@ Click Abort to cancel all operations.</source>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1198"/>
         <source>Aborted!</source>
-        <translation>Прервано!</translation>
+        <translation>Прервано.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="835"/>
@@ -1294,22 +1294,22 @@ Click Abort to cancel all operations.</source>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="314"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
-        <translation>Анализ файла. Это может занять некоторое время, пожалуйста, подождите...</translation>
+        <translation>Анализ файла. Это может занять некоторое время, подождите...</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="646"/>
         <source>Converted</source>
-        <translation type="unfinished">Сконвертировано</translation>
+        <translation>Сконвертировано</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="264"/>
         <source>Do you want to import subfolders as well?</source>
-        <translation type="unfinished"></translation>
+        <translation>Импортировать также вложенные папки?</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="338"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
-        <translation type="unfinished"></translation>
+        <translation>Вы собираетесь импортировать каталоги (%1). Импортировать также вложенные папки?</translation>
     </message>
 </context>
 <context>
@@ -1322,7 +1322,7 @@ Click Abort to cancel all operations.</source>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="45"/>
         <source>File path</source>
-        <translation>Путь файла</translation>
+        <translation>Путь к файлу</translation>
     </message>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="44"/>
@@ -1359,14 +1359,14 @@ Click Abort to cancel all operations.</source>
     <message>
         <location filename="../src/updatechecker.cpp" line="81"/>
         <source>New version is available!</source>
-        <translation>Доступна новая версия!</translation>
+        <translation>Доступна новая версия.</translation>
     </message>
     <message>
         <location filename="../src/updatechecker.cpp" line="82"/>
         <source>A new version of %1 is available!
 Would you download it?</source>
-        <translation>Доступна новая версия %1!
-Хотите скачать ее?</translation>
+        <translation>Доступна новая версия %1.
+Хотите скачать её?</translation>
     </message>
 </context>
 <context>
