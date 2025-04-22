@@ -67,13 +67,13 @@ cp -v $MAGICK_HOME/etc/ImageMagick-7/* $BUILD_DIR/AppDir/.config/ImageMagick
 # Add SSL libraries
 mkdir -p $BUILD_DIR/AppDir/usr/lib
 
-cp $(ldconfig -p | grep libssl.so.1 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
-cp $(ldconfig -p | grep libcrypto.so.1 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
-cp $(ldconfig -p | grep libx265.so.209 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libssl.so.3 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libcrypto.so.3 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libx265.so.215 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 cp $(ldconfig -p | grep libde265.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 
-cp $(ldconfig -p | grep libdav1d.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
-cp $(ldconfig -p | grep libaom.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libdav1d.so.7 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
+cp $(ldconfig -p | grep libaom.so.3 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 # cp $(ldconfig -p | grep libavcodec.so.58 | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 # cp $(ldconfig -p | grep libsharpyuv.so | head -n1 | tr ' ' '\n' | grep /) $BUILD_DIR/AppDir/usr/lib
 
