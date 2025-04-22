@@ -21,6 +21,7 @@
 *
 */
 
+#include <QImageReader>
 #include "formats.h"
 #include "thumbnailgeneratorthread.h"
 #include "globals.h"
@@ -109,19 +110,24 @@ void ThumbnailGeneratorThread::createThumbnail()
     my_image.quiet(true);
 
     if (Formats::isNativeReadable(m_fileName)) {
-        tmpImage.load(m_fileName);
+        QImageReader imgReader(m_fileName);
+        tmpImage = imgReader.read();
 
         img_width = tmpImage.width();
         img_height = tmpImage.height();
 
         my_image.ping(m_fileName.toStdString());
+        int orientation = my_image.orientation();
+        my_image.autoOrient();
 
         img_dens_x = my_image.xResolution();
         img_dens_y = my_image.yResolution();
 
-        qreal scaleFactor = globals::Globals::scaleFactor();
-
         if (m_generateThumbnail) {
+            qreal scaleFactor = globals::Globals::scaleFactor();
+
+            tmpImage = autoOrientImage(tmpImage, orientation);
+
             thumbnail = tmpImage.scaled(QSize(MAX_THUMB_W, MAX_THUMB_H) * scaleFactor,
                                        Qt::KeepAspectRatio,
                                        Qt::SmoothTransformation);
@@ -131,8 +137,8 @@ void ThumbnailGeneratorThread::createThumbnail()
         try
         {
             my_image.read(m_fileName.toStdString());
-
             my_image.resolutionUnits(PixelsPerInchResolution);
+            my_image.autoOrient();
 
             img_width = my_image.columns();
             img_height = my_image.rows();
@@ -163,4 +169,50 @@ void ThumbnailGeneratorThread::createThumbnail()
     CachingSystem::insert(m_fileName, thumbnail, img_width, img_height, img_dens_x, img_dens_y);
 
     emit pixmapGenerated(thumbnail, img_width, img_height, img_dens_x, img_dens_y);
+}
+
+QImage ThumbnailGeneratorThread::autoOrientImage(const QImage &image, const int &orientation)
+{
+    QTransform transform;
+
+    switch (orientation) {
+    case 1:
+        // No transformation
+        break;
+    case 2:
+        // Flip horizontally
+        transform.scale(-1, 1);
+        break;
+    case 3:
+        // Rotate 180 degrees
+        transform.rotate(180);
+        break;
+    case 4:
+        // Flip vertically
+        transform.scale(1, -1);
+        break;
+    case 5:
+        // Rotate 90 CW and flip horizontally
+        transform.rotate(90);
+        transform.scale(1, -1);
+        break;
+    case 6:
+        // Rotate 90 CW
+        transform.rotate(90);
+        break;
+    case 7:
+        // Rotate 90 CW and flip vertically
+        transform.rotate(90);
+        transform.scale(-1, 1);
+        break;
+    case 8:
+        // Rotate 270 CW (== rotate -90)
+        transform.rotate(270);
+        break;
+    default:
+        // Orientation not recognized; return original image
+        return image;
+    }
+
+    return image.transformed(transform);
 }

@@ -150,8 +150,8 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>0</y>
-           <width>793</width>
+           <y>-112</y>
+           <width>882</width>
            <height>348</height>
           </rect>
          </property>
@@ -214,7 +214,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QLabel" name="label_4">
             <property name="text">
-             <string>&lt;strong&gt;Russian Translation: &lt;/strong&gt;Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;stas_stv@mail.ru&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;lazy.kent@opensuse.org&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;ViktorOn&lt;/a&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Russian Translation: &lt;/span&gt;&lt;a href=&quot;https://github.com/alevtina-karashokova&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alevtina Karashokova&lt;/span&gt;&lt;/a&gt;, Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;stas_stv@mail.ru&lt;/span&gt;&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;lazy.kent@opensuse.org&lt;/span&gt;&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;ViktorOn&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="openExternalLinks">
              <bool>true</bool>

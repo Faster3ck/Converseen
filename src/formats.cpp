@@ -89,6 +89,7 @@ void Formats::loadFormats()
     s_readableFormattedFilters.removeAll("*.txt");
 
     // Add missing but supported formats
+    s_readableFilters.append(QStringList() <<  "tif" << "jfif");
     s_readableFormattedFilters.append(QStringList() <<  "*.tif" << "*.jfif");
 
     ////////////////////

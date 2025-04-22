@@ -49,7 +49,7 @@ public:
 
 private:
     void createThumbnail();
-
+    QImage autoOrientImage(const QImage &image, const int &orientation);
     QImage* toQImage(const Image &image);
     QString m_fileName;
     bool m_generateThumbnail;

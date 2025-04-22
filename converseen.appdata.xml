@@ -79,16 +79,19 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.13.0.1" date="2025-03-24">
+        <release version="0.14.0.0" date="2025-04-22">
             <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.13.0.1</p>
+                <p>Changelog for 0.14.0.0</p>
                 <ul>
-                    <li>Updated French translation</li>
+                    <li>Images are now displayed and converted with the correct orientation when Exif orientation data is present</li>
+                    <li>Fixed a bug when importing TIF files</li>
+                    <li>Updated Russian translation</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.13.0.1" date="2025-03-24" />
         <release version="0.13.0.0" date="2025-03-20" />
         <release version="0.12.2.5" date="2025-01-22" />
         <release version="0.12.2.4" date="2024-10-29" />

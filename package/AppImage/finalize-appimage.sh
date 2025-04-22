@@ -4,7 +4,7 @@ set -x
 set -e
 
 PROGRAM_NAME="Converseen"
-PROGRAM_VERSION="0.13.0.1"
+PROGRAM_VERSION="0.14.0.0"
 BUILD_VERSION="1"
 ARCH=$(uname -m)
 

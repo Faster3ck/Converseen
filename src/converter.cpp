@@ -82,6 +82,7 @@ void Converter::run()
         my_image.quiet(true);
         try {
             my_image.read(m_fileNameIn.toStdString());
+            my_image.autoOrient();
         } catch (Error &error) {
             m_conv_status = -1;
 
