@@ -200,8 +200,8 @@ jobs:
 
         ls -la
         
-        # gs_ver=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
-        mv $gs_ver gs
+        gs_ver_t=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+        mv $gs_ver_t gs
 
     - name: Compress Converseen
       run: |
