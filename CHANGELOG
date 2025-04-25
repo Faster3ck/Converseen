@@ -1,4 +1,4 @@
-0.14.0.0 – 2025-04-22
+0.14.0.0 – 2025-04-25
 - Images are now displayed and converted with the correct orientation when Exif orientation data is present
 - Fixed a bug when importing TIF files
 - Updated Russian translation
