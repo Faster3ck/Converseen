@@ -185,7 +185,7 @@ jobs:
       run: |
         cd build/bin
 
-        gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+        gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+_[0-9]+')
         
         echo "--- Copying res files ---"
         cp -rvf ${{ github.workspace }}/im_build/etc/ImageMagick-7 converseen.app/Contents/Resources
