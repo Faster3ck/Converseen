@@ -25,9 +25,12 @@
 #include <QLibraryInfo>
 #include <QDir>
 #include <QCommandLineParser>
+#include <QWidget>
+#include <QStyleFactory>
 #include <Magick++.h>
 
 #include "mainwindowimpl.h"
+#include "inisettings.h"
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <QTextCodec>
@@ -51,6 +54,12 @@ int main(int argc, char ** argv)
 #endif
 
     QApplication app( argc, argv );
+
+    IniSettings::init();
+    QString theme = IniSettings::theme();
+    if (theme != "none")
+        app.setStyle(QStyleFactory::create(theme));
+
     app.setDesktopFileName("net.fasterland.converseen");
 
     QCommandLineOption winMagickPathOption({{"m", "debugMagickWindowsPath"}, "Set the default ImageMagick path on Windows (for debug purpose only!).", "C:\\MagickInstallPath"});

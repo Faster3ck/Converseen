@@ -4,7 +4,7 @@ if(WIN32)
     cmake_policy(SET CMP0135 NEW)
 endif()
 
-set(CONVERSEEN_VERSION 0.14.0.0)
+set(CONVERSEEN_VERSION 0.14.1.0)
 
 project(
     converseen
@@ -131,19 +131,24 @@ if(WIN32)
 
     set(CMAKE_WIN32_EXECUTABLE TRUE)
     add_definitions(${QT_DEFINITIONS})
+	
+	set(CMAKE_INSTALL_BINDIR "${PROJECT_NAME_CAPITALIZED}")
 
-    include(ExternalProject)
-    ExternalProject_Add(
-        OpenSSL_Win32
-        PREFIX ${CMAKE_BINARY_DIR}/external 
-        URL https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip 
-        DOWNLOAD_DIR ${CMAKE_BINARY_DIR}/downloads
-        DOWNLOAD_NAME openssl-1.1.1w.zip
-        CONFIGURE_COMMAND ""
-        BUILD_COMMAND ""
-        INSTALL_COMMAND ""
-        # DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-    )
+	if (NOT USE_QT6)
+		# Download openssl if Qt5 is used!
+		include(ExternalProject)
+		ExternalProject_Add(
+			OpenSSL_Win32
+			PREFIX ${CMAKE_BINARY_DIR}/external 
+			URL https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip 
+			DOWNLOAD_DIR ${CMAKE_BINARY_DIR}/downloads
+			DOWNLOAD_NAME openssl-1.1.1w.zip
+			CONFIGURE_COMMAND ""
+			BUILD_COMMAND ""
+			INSTALL_COMMAND ""
+			# DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+		)
+	endif()
 else()
     add_definitions(
         -Wall
@@ -189,46 +194,39 @@ else()
     )
 endif()
 
-
 if(WIN32)
-    #set(CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS_SKIP TRUE)
-
-    #include(InstallRequiredSystemLibraries)
-
     file(GLOB ImageMagick_DLLs ${ImageMagick_EXECUTABLE_DIR}/CORE_RL_*.dll)
     file(GLOB ImageMagick_Filters ${ImageMagick_EXECUTABLE_DIR}/modules/filters/*.dll)
     file(GLOB ImageMagick_Coders ${ImageMagick_EXECUTABLE_DIR}/modules/coders/*.dll)
     file(GLOB ImageMagick_XMLs ${ImageMagick_EXECUTABLE_DIR}/*.xml)
-    #file(GLOB OpenSSL_x86_DLLs ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/*.dll)
-    #file(GLOB Win32_DLLs ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS}/*.dll)
     file(GLOB Win32_DLLs 
         ${ImageMagick_EXECUTABLE_DIR}/mfc140*.dll
         ${ImageMagick_EXECUTABLE_DIR}/msvcp140*.dll
         ${ImageMagick_EXECUTABLE_DIR}/vc*140.dll
     )
 
-    install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen.exe DESTINATION .)
-    install(FILES package/Windows/qt.conf DESTINATION .)
-    install(FILES ${ImageMagick_DLLs} DESTINATION .)
-    install(FILES ${ImageMagick_Filters} DESTINATION ./modules/filters)
-    install(FILES ${ImageMagick_Coders} DESTINATION ./modules/coders)
-    install(FILES ${ImageMagick_XMLs} DESTINATION .)
-    install(FILES ${ImageMagick_EXECUTABLE_DIR}/sRGB.icc DESTINATION .)
-    install(FILES ${ImageMagick_EXECUTABLE_DIR}/NOTICE.txt RENAME ImageMagick_License.txt DESTINATION .)
-    #install(FILES ${OpenSSL_x86_DLLs} DESTINATION .)
-    install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libcrypto-1_1.dll DESTINATION .)
-	install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libssl-1_1.dll DESTINATION .)
-    install(FILES ${Win32_DLLs} DESTINATION .)
-    #install(FILES ${CMAKE_INSTALL_SYSTEM_RUNTIME_LIBS} DESTINATION .)
+    install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen.exe DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install(FILES ${ImageMagick_DLLs} DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install(FILES ${ImageMagick_Filters} DESTINATION ${CMAKE_INSTALL_BINDIR}/modules/filters)
+    install(FILES ${ImageMagick_Coders} DESTINATION ${CMAKE_INSTALL_BINDIR}/modules/coders)
+    install(FILES ${ImageMagick_XMLs} DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install(FILES ${ImageMagick_EXECUTABLE_DIR}/sRGB.icc DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install(FILES ${ImageMagick_EXECUTABLE_DIR}/NOTICE.txt RENAME ImageMagick_License.txt DESTINATION ${CMAKE_INSTALL_BINDIR})
+    install(FILES ${Win32_DLLs} DESTINATION ${CMAKE_INSTALL_BINDIR})
+	
+	if (NOT USE_QT6)
+		install(FILES package/Windows/qt.conf DESTINATION ${CMAKE_INSTALL_BINDIR})
+		install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libcrypto-1_1.dll DESTINATION ${CMAKE_INSTALL_BINDIR})
+		install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libssl-1_1.dll DESTINATION ${CMAKE_INSTALL_BINDIR})
+	endif()
+	
+	install(SCRIPT ${CMAKE_BINARY_DIR}/windeployqt.cmake)
+	install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/qtdeploy/ DESTINATION ${CMAKE_INSTALL_BINDIR} FILES_MATCHING PATTERN "*")
     
-    install(SCRIPT ${CMAKE_BINARY_DIR}/windeployqt.cmake)
-
-    install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/qtdeploy/ DESTINATION . FILES_MATCHING PATTERN "*")
-
     foreach(LANG ${converseen_LANG})
         string(REGEX REPLACE ".*/" "" TS_FILE ${LANG})
         string(REGEX REPLACE ".ts" ".qm" QM_FILE ${TS_FILE})
-        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION ./loc)
+        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION ${CMAKE_INSTALL_BINDIR}/loc)
     endforeach()
 else()
     install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${GUI} DESTINATION ${CMAKE_INSTALL_BINDIR})
@@ -251,6 +249,8 @@ else()
 endif()
 
     # CPack
+	set(CPACK_INCLUDE_TOPLEVEL_DIRECTORY OFF)
+	
     set(CPACK_PACKAGE_VENDOR "Francesco Mondello")
     set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Converseen the Batch Image Converter and Resizer")
     set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
@@ -277,14 +277,8 @@ if(WIN32)
     set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/COPYING.txt")
     set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/COPYING.txt")
 
-    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000024")
+    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000025")
     set(CPACK_WIX_UPGRADE_GUID "B35C58D3-FBD2-4A81-8371-588F51EC180F")
-
-    configure_file("${CMAKE_CURRENT_SOURCE_DIR}/cmake/wixCheckInnoVersion.xml.in" wixCheckInnoVersion.xml)
-    set(CPACK_WIX_PATCH_FILE "wixCheckInnoVersion.xml")
-
-    configure_file(cmake/RemoveInnoVersion.vbs.in ${CMAKE_BINARY_DIR}/RemoveInnoVersion.vbs)
 
     include(CPack)
 endif()
-

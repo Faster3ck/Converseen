@@ -23,6 +23,7 @@
 
 #include <QColorDialog>
 #include <QTimer>
+#include <QStyleFactory>
 #include <string>
 #include <iostream>
 #include "mainwindowimpl.h"
@@ -726,7 +727,7 @@ void MainWindowImpl::openOutDirectory()
 
 void MainWindowImpl::loadOptions()
 {
-    IniSettings::init();
+    //IniSettings::init();
 
     this->restoreGeometry(IniSettings::windowGeometry());
 
@@ -1141,6 +1142,15 @@ void MainWindowImpl::saveSettings()
     setOverwriteStatus();
 
     IniSettings::settings->sync();
+}
+
+void MainWindowImpl::loadTheme()
+{
+    QString theme = IniSettings::theme();
+
+    if (theme != "none") {
+        QApplication::setStyle(QStyleFactory::create(theme));
+    }
 }
 
 void MainWindowImpl::overwriteDialog(QString baseName)

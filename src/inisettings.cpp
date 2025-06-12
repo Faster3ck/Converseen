@@ -243,6 +243,17 @@ bool IniSettings::isAutoChechUpdates()
     return enabled;
 }
 
+QString IniSettings::theme()
+{
+    QString theme = "none";
+
+    QString path = QDir::homePath();
+    if (settings->contains("Options/Theme"))
+        theme = settings->value("Options/Theme").toString();
+
+    return theme;
+}
+
 //
 
 void IniSettings::setOutputDir(QString path)
@@ -343,6 +354,11 @@ void IniSettings::setLanguage(QString lang)
 void IniSettings::setAutoChechUpdates(bool enabled)
 {
     settings->setValue("Options/Check updates", enabled);
+}
+
+void IniSettings::setTheme(const QString &themeName)
+{
+    settings->setValue("Options/Theme", themeName);
 }
 
 void IniSettings::setIsWebPLosslessCompression(const bool &value)

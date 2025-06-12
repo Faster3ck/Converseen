@@ -121,33 +121,57 @@ void DialogMultipageEditor::analyzeMultipageFile(QString fileName)
 
 void DialogMultipageEditor::checkGsWinInstalled()
 {
-    // Check if Ghostscript is installed on Windows
-    QString command = "gswin32c";
-    QStringList arguments;
-    arguments << "--version";
+    if (isGhostscriptInstalled()) {
+        return;
+    }
+
+    showGhostscriptInstallationDialog();
+}
+
+bool DialogMultipageEditor::isGhostscriptInstalled()
+{
+    const QStringList commands = {"gswin64c", "gswin32c"};
+    const QStringList arguments = {"--version"};
 
     QProcess process;
-    process.start(command, arguments);
-    process.waitForFinished();
+    process.setProcessEnvironment(QProcessEnvironment::systemEnvironment());
 
-    QByteArray output = process.readAllStandardOutput();
+    for (const QString& command : commands) {
+        process.start(command, arguments);
 
-    if (process.exitCode() == 0) {
-        if (output.isNull()) {
-            QString gs_version = "32-bit";
+        if (!process.waitForStarted()) {
+            continue;
+        }
 
-            QString gs_msg = tr("In order to perform the conversion of <b>PDF</b> files to images, <b>Ghostscript for Windows (%1)</b> must be installed on your system.<br><br> \
-                              Please install the correct version of Ghostscript.<br> \
-                              Click on the <b>Help</b> button for more details.")
-                                 .arg(gs_version);
+        if (process.exitCode() == 0) {
+            const QByteArray output = process.readAllStandardOutput();
 
-            int ret = QMessageBox::warning(this, QApplication::applicationName(),
-                                    gs_msg,
-                                    QMessageBox::Help | QMessageBox::Cancel);
+            return true;
+        }
+    }
 
-            if (ret == QMessageBox::Help) {
-                QDesktopServices::openUrl(QUrl("https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/#windows", QUrl::TolerantMode));
-            }
+    return false;
+}
+
+void DialogMultipageEditor::showGhostscriptInstallationDialog()
+{
+    const QString message = tr(
+            "In order to perform the conversion of <b>PDF</b> files to images, <b>Ghostscript for Windows (%1)</b> must be installed on your system.<br><br> \
+            Please install the correct version of <b>Ghostscript</b>.<br> \
+            Click on the <b>Help</b> button for more details."
+        );
+
+    const int response = QMessageBox::warning(
+        this,
+        QApplication::applicationName(),
+        message,
+        QMessageBox::Help | QMessageBox::Cancel
+        );
+
+    if (response == QMessageBox::Help) {
+        const QUrl helpUrl("https://converseen.fasterland.net/converseen-can-convert-pdf-as-image-files/#windows");
+        if (!QDesktopServices::openUrl(helpUrl)) {
+            qWarning() << "Failed to open help URL:" << helpUrl.toString();
         }
     }
 }

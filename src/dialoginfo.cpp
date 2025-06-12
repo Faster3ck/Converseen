@@ -67,7 +67,7 @@ DialogInfo::DialogInfo(QWidget *parent) :
                                    .arg(QT_VERSION_STR);
     labelQtVersion->setText(qt_versionString);
 
-    // This section generates a Text + Png pixmap icon for the donazion button!
+    // This section generates a Text + Png pixmap icon for the donation button!
 
     QString donateText = tr("Make a Donation!");
     QString donateDescriptionText = tr("Donate using PayPal, Ko-Fi or Cryptocurrencies.");
@@ -98,18 +98,34 @@ DialogInfo::DialogInfo(QWidget *parent) :
 
     QTextDocument donateHtmlText;
     donateHtmlText.setHtml(htmlDonationText);
+    donateHtmlText.setUseDesignMetrics(true);
+    donateHtmlText.setDefaultFont(QFont("Arial", -1, QFont::Normal));
 
     QPixmap pixmapDonationText(donateHtmlText.size().width(), donateHtmlText.size().height());
     pixmapDonationText.fill( Qt::transparent );
 
     QPainter painter( &pixmapDonationText );
     painter.setRenderHint(QPainter::Antialiasing, true);
+    painter.setRenderHint(QPainter::TextAntialiasing, true);
+    painter.setRenderHint(QPainter::SmoothPixmapTransform, true);
 
     donateHtmlText.drawContents(&painter, pixmapDonationText.rect());
 
     QIcon donateButtonIcon(pixmapDonationText);
     pushDonatePayPal->setIcon(donateButtonIcon);
     pushDonatePayPal->setIconSize(pixmapDonationText.rect().size());
+    pushDonatePayPal->setStyleSheet(
+        "QPushButton { "
+            "background-color: transparent; "
+            "border: none; "
+        "} "
+            "QPushButton:hover { "
+            "background-color: rgba(200, 200, 200, 30); "
+        "} "
+            "QPushButton:pressed { "
+            "background-color: rgba(150, 150, 150, 50); "
+        "}"
+    );
 
     adjustSize();
     this->resize(512, 800);
@@ -124,4 +140,3 @@ void DialogInfo::on_pushDonatePayPal_clicked()
 {
     QDesktopServices::openUrl(QUrl("https://converseen.fasterland.net/donate/", QUrl::TolerantMode));
 }
-

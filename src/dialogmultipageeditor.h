@@ -38,6 +38,8 @@ private:
     void analyzeMultipageFile(QString fileName);
 
     void checkGsWinInstalled();
+    bool isGhostscriptInstalled();
+    void showGhostscriptInstallationDialog();
 
 private slots:
     void acceptDialog();

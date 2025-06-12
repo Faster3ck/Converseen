@@ -22,6 +22,7 @@
 */
 
 #include <QMessageBox>
+#include <QStyleFactory>
 #include "dialogoptions.h"
 #include "translator.h"
 #include "inisettings.h"
@@ -40,6 +41,9 @@ DialogOptions::DialogOptions(QWidget *parent) :
         comboLangs->addItem(t.loadTranslationFiles().at(i).second);
 
     comboLangs->addItem("English");
+
+    populateStyles();
+
     loadSettings();
 }
 
@@ -83,11 +87,32 @@ void DialogOptions::setAutoUpdates()
     IniSettings::setAutoChechUpdates(enabled);
 }
 
+void DialogOptions::setTheme()
+{
+    const QString currentTheme = IniSettings::theme();
+
+    QString newTheme;
+
+    if (comboStyle->currentIndex() == 0) {
+        newTheme = "none";
+    } else {
+        newTheme = comboStyle->currentText();
+    }
+
+    if (newTheme != currentTheme) {
+        IniSettings::setTheme(newTheme);
+
+        QMessageBox::warning(this, tr("Warning!"),
+                             tr("Please restart Converseen to apply the new theme!"));
+    }
+}
+
 void DialogOptions::saveOptions()
 {
     setLanguage();
     setOverwriteMode();
     setAutoUpdates();
+    setTheme();
 
     IniSettings::settings->sync();
     accept();
@@ -112,4 +137,23 @@ void DialogOptions::loadSettings()
     
     int idx = comboLangs->findText(t.currentLanguage(), Qt::MatchExactly);
     comboLangs->setCurrentIndex(idx);
+}
+
+void DialogOptions::populateStyles()
+{
+    QStringList availableStyles = QStyleFactory::keys();
+    comboStyle->addItem(tr("System"));
+    comboStyle->addItems(availableStyles);
+
+    QString currentTheme = IniSettings::theme();
+    int currentIndex = comboStyle->findText(currentTheme);
+
+    if ((currentIndex != -1) && (currentTheme != "none")) {
+        comboStyle->setCurrentIndex(currentIndex);
+    }
+    else {
+        comboStyle->setCurrentIndex(0);
+    }
+
+    qDebug() << "Current style: " << currentTheme;
 }

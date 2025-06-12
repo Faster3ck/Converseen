@@ -55,6 +55,7 @@ public:
     ~MainWindowImpl();
     void importListFromArgv(QString fileName);
     void printSupportedFormats();
+    void loadTheme();
 
 private:
     void createActions();
