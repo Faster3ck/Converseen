@@ -155,5 +155,5 @@ void DialogOptions::populateStyles()
         comboStyle->setCurrentIndex(0);
     }
 
-    qDebug() << "Current style: " << currentTheme;
+    //qDebug() << "Current style: " << currentTheme;
 }
