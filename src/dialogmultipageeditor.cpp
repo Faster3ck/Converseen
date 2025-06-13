@@ -27,6 +27,7 @@
 #include <QUrl>
 #include <QProcess>
 #include <QMessageBox>
+#include <QDebug>
 #include "dialogmultipageeditor.h"
 #include "ui_dialogmultipageeditor.h"
 
