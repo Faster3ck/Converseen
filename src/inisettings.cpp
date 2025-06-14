@@ -247,7 +247,6 @@ QString IniSettings::theme()
 {
     QString theme = "none";
 
-    QString path = QDir::homePath();
     if (settings->contains("Options/Theme"))
         theme = settings->value("Options/Theme").toString();
 
