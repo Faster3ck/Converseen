@@ -41,6 +41,8 @@ PixTreeWidget::PixTreeWidget(QWidget *parent):QTreeWidget(parent)
     headers.append(tr("Status"));
     headers.append(tr("File name"));
     headers.append(tr("Image type"));
+    headers.append(tr("Image size"));
+    headers.append(tr("Resolution"));
     headers.append(tr("File size"));
     headers.append(tr("File path"));
 
@@ -64,8 +66,10 @@ void PixTreeWidget::addItems(QList<ImageAttributes> *iAList)
         item->setCheckState(0, Qt::Checked);
         item->setText(2, iAList->at(i).fileName);
         item->setText(3, iAList->at(i).suffix);
-        item->setText(4, SizeUtil::simplifyFileSize(iAList->at(i).size));
-		item->setText(5, QDir::toNativeSeparators(iAList->at(i).path));
+        item->setText(4, iAList->at(i).imgSize);
+        item->setText(5, iAList->at(i).imgRes);
+        item->setText(6, SizeUtil::simplifyFileSize(iAList->at(i).size));
+        item->setText(7, QDir::toNativeSeparators(iAList->at(i).path));
     }
 }
 
@@ -144,6 +148,20 @@ void PixTreeWidget::uncheckAllItems()
     QTreeWidgetItemIterator it(this);
     while (*it) {
         (*it)->setCheckState (0, Qt::Unchecked);
+        ++it;
+    }
+}
+
+void PixTreeWidget::invertCheckAllItems()
+{
+    QTreeWidgetItemIterator it(this);
+    while (*it) {
+        Qt::CheckState currentState = (*it)->checkState(0);
+        if (currentState == Qt::Checked)
+            (*it)->setCheckState(0, Qt::Unchecked);
+        else if (currentState == Qt::Unchecked)
+            (*it)->setCheckState(0, Qt::Checked);
+        // PartiallyChecked rimane invariato
         ++it;
     }
 }

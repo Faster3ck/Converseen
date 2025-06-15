@@ -87,7 +87,6 @@ MainWindowImpl::MainWindowImpl(QWidget * parent)
 
     createActions();
     setupMenu();
-    createContextMenu();
 
     loadFormats();
 
@@ -97,6 +96,10 @@ MainWindowImpl::MainWindowImpl(QWidget * parent)
     dockWidget->adjustSize();
 
     treeWidget->header()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+
+    treeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    createContextMenu();
+
 
     loadOptions();
 
@@ -157,6 +160,7 @@ void MainWindowImpl::createActions()
 
     connect(actionUncheckItems, SIGNAL(triggered()), treeWidget, SLOT(uncheckItems()));
     connect(actionUncheckAllItems, SIGNAL(triggered()), treeWidget, SLOT(uncheckAllItems()));
+    connect(actionInvertCheckedItems, SIGNAL(triggered()), treeWidget, SLOT(invertCheckAllItems()));
 
     connect(actionRemoveItems, SIGNAL(triggered()), this, SLOT(removeItems()));
     connect(actionRemoveAllItems, SIGNAL(triggered()), this, SLOT(removeAllItems()));
@@ -206,6 +210,9 @@ void MainWindowImpl::setupMenu()
     menu_Edit->addAction(actionCheckAllItems);
     menu_Edit->addAction(actionUncheckItems);
     menu_Edit->addAction(actionUncheckAllItems);
+    menu_Edit->addSeparator();
+    menu_Edit->addAction(actionInvertCheckedItems);
+    menu_Edit->addSeparator();
 
     menu_Actions->addAction(actionConvert);
 
@@ -214,17 +221,23 @@ void MainWindowImpl::setupMenu()
 
 void MainWindowImpl::createContextMenu()
 {
-    QAction *actionSeparator = new QAction(this);
-    actionSeparator->setSeparator(true);
-
     treeWidget->setContextMenuPolicy(Qt::ActionsContextMenu);
     treeWidget->addAction(actionCheckItems);
     treeWidget->addAction(actionCheckAllItems);
     treeWidget->addAction(actionUncheckItems);
     treeWidget->addAction(actionUncheckAllItems);
-    treeWidget->addAction(actionSeparator);
+    addContextMenuSeparator();
+    treeWidget->addAction(actionInvertCheckedItems);
+    addContextMenuSeparator();
     treeWidget->addAction(actionRemoveItems);
     treeWidget->addAction(actionRemoveAllItems);
+}
+
+void MainWindowImpl::addContextMenuSeparator()
+{
+    QAction* separator = new QAction(this);
+    separator->setSeparator(true);
+    treeWidget->addAction(separator);
 }
 
 void MainWindowImpl::openFiles()
@@ -393,9 +406,20 @@ void MainWindowImpl::loadFiles(QStringList fileNames)
 
         /* Controlla i doppioni! */
         if (!checkDuplicates(fileNames, i)) {
+            Image my_image;
+            my_image.ping(fileNames.at(i).toStdString());
+
             iA.completeFileName = fileNames.at(i).toLocal8Bit();
             iA.fileName = fi.fileName();
             iA.suffix = fi.suffix();
+            iA.imgSize = QString("%1×%2 px").arg(QString::number(my_image.columns()), QString::number(my_image.rows()));
+            if (my_image.xResolution() == 0 || my_image.yResolution() == 0) {
+                iA.imgRes = tr("n/a");
+            } else {
+                iA.imgRes = QString("%1×%2 dpi")
+                                .arg(QString::number(my_image.xResolution()),
+                                     QString::number(my_image.yResolution()));
+            }
             iA.size = fi.size();
             iA.path = fi.path();
             iAList->append(iA);   // aggiunge

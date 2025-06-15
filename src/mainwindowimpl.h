@@ -61,6 +61,7 @@ private:
     void createActions();
     void setupMenu();
     void createContextMenu();
+    void addContextMenuSeparator();
     QStringList loadDirectoryFiles(const QString &directory, const QStringList &readableFiltersList, const QDirIterator::IteratorFlag &flag);
     void loadFiles(QStringList fileNames);
     void setFileInList(QString fileName);
