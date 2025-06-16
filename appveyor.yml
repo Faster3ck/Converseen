@@ -10,7 +10,7 @@ environment:
       USE_QT6: OFF
       GENERATOR: "NMake Makefiles"
     - BUILD_NAME: Qt6-x64
-      QT_DIR: C:\Qt\6.6.3\msvc2019_64
+      QT_DIR: C:\Qt\6.8\msvc2019_64
       ARCH: x64
       USE_QT6: ON
       GENERATOR: "NMake Makefiles"
@@ -56,7 +56,7 @@ build_script:
 
 
 artifacts:
-- path: build/artifact.zip
+- path: build/artifact-*.zip
   name: artifact
 
 
