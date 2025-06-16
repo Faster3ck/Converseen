@@ -3,7 +3,7 @@ skip_non_tags: true
 image: Visual Studio 2022
 environment:
   Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
-  Qt6_INSTALL_DIR: C:\Qt\6.8\msvc2019_64
+  Qt6_INSTALL_DIR: C:\Qt\6.8.1\msvc2022_64
 build_script:
 - ps: |
     $env:PATH += ";$env:$QT5_VERSION\bin;$env:$QT6_VERSION\bin"
