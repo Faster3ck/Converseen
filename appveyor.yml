@@ -6,8 +6,6 @@ environment:
   Qt6_INSTALL_DIR: C:\Qt\6.8.1\msvc2022_64
 build_script:
 - ps: |
-    $env:PATH += ";$env:QT5_VERSION\bin;$env:QT6_VERSION\bin"
-
     # Get latest version number from GitHub
     $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
     $lastTagLine = $gitTags[-1]
@@ -24,6 +22,8 @@ build_script:
     Start-Process -FilePath ".\ImageMagick-Installer-64.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick-64" -NoNewWindow -Wait
     
 - cmd: >-
+    echo %PATH%
+
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
     cd C:\projects\converseen 
