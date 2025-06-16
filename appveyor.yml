@@ -6,22 +6,29 @@ environment:
   QT6_VERSION: 6.9.1
   Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
 
-matrix:
-  fast_finish: true
-  allow_failures: []
-  include:
-    - job_name: Qt5-32bit
-      QT_VERSION: 5
-      ARCH: x86
-      QT_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
-      CMAKE_FLAGS: ""
-      CPACK_FLAGS: "-G ZIP -B package"
-    - job_name: Qt6-64bit
-      QT_VERSION: 6
-      ARCH: x64
-      QT_INSTALL_DIR: C:\Qt\qt$(QT6_VERSION)
-      CMAKE_FLAGS: "-DUSE_QT6=yes"
-      CPACK_FLAGS: ""  # Nessun filtro cpack, crea tutto
+# Definizione dei due job nella build matrix
+for:
+-
+  matrix:
+    only:
+      - job_name: Qt5-32bit
+  environment:
+    QT_VERSION: 5
+    ARCH: x86
+    QT_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
+    CMAKE_FLAGS: ""
+    CPACK_FLAGS: "-G ZIP -B package"
+
+-
+  matrix:
+    only:
+      - job_name: Qt6-64bit
+  environment:
+    QT_VERSION: 6
+    ARCH: x64
+    QT_INSTALL_DIR: C:\Qt\qt%QT6_VERSION%
+    CMAKE_FLAGS: "-DUSE_QT6=yes"
+    CPACK_FLAGS: ""
 
 install:
 - ps: |
@@ -74,6 +81,7 @@ build_script:
 artifacts:
 - path: build/artifact.zip
   name: artifact
+
 
 
 #deploy:
