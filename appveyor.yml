@@ -6,7 +6,7 @@ environment:
   QT6_VERSION: 6.9.1
   Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
 
-# Definizione dei due job nella build matrix
+# Build matrix con due configurazioni: Qt5 32bit e Qt6 64bit
 for:
 -
   matrix:
@@ -32,9 +32,11 @@ for:
 
 install:
 - ps: |
+    # Setup Qt
     if ($env:QT_VERSION -eq "6") {
       $qtZip = "qt$env:QT6_VERSION-windows-msvc2019_64.zip"
       $qtUrl = "https://download.qt.io/official_releases/qt/$($env:QT6_VERSION.Substring(0,3))/$env:QT6_VERSION/$qtZip"
+      Write-Host "Downloading Qt6 from $qtUrl"
       curl -LO $qtUrl
       7z x $qtZip -oC:\Qt
       $env:PATH = "C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH"
@@ -42,12 +44,22 @@ install:
       $env:PATH += ";$env:QT_INSTALL_DIR\bin"
     }
 
-    # Scarica ImageMagick
+    # Scarica ImageMagick (32-bit per Qt5, 64-bit per Qt6)
     $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
     $lastTagLine = $gitTags[-1]
     $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
     Write-Host "---`nLatest ImageMagick Version Found: $lastTagVersion`n---"
-    Invoke-WebRequest -Uri "https://imagemagick.org/archive/binaries/ImageMagick-$lastTagVersion-Q16-HDRI-x86-dll.exe" -OutFile ImageMagick-Installer.exe
+
+    if ($env:ARCH -eq "x64") {
+      $imArch = "x64"
+    } else {
+      $imArch = "x86"
+    }
+
+    $imUrl = "https://imagemagick.org/archive/binaries/ImageMagick-$lastTagVersion-Q16-HDRI-$imArch-dll.exe"
+    Write-Host "Downloading ImageMagick from $imUrl"
+    Invoke-WebRequest -Uri $imUrl -OutFile ImageMagick-Installer.exe
+
     Start-Process -FilePath ".\ImageMagick-Installer.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick" -NoNewWindow -Wait
 
 build_script:
