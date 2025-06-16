@@ -24,7 +24,6 @@ build_script:
     Start-Process -FilePath ".\ImageMagick-Installer-64.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick-64" -NoNewWindow -Wait
     
 - cmd: >-
-    # Build Qt5 32 Bit
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
     cd C:\projects\converseen
@@ -37,7 +36,6 @@ build_script:
     cpack -G ZIP -B package
 
 - cmd: >-
-    # Build Qt6 64 Bit
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
     cd C:\projects\converseen
@@ -50,7 +48,6 @@ build_script:
     cpack -B package
 
 - cmd: >-
-    # Create Artifact
     cd C:\projects\converseen
     mkdir -p artifact/qt5
     mkdir -p artifact/qt6
