@@ -3,99 +3,61 @@ skip_non_tags: true
 image: Visual Studio 2022
 
 environment:
-  QT6_VERSION: 6.9.1
-  Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
-
-# Build matrix con due configurazioni: Qt5 32bit e Qt6 64bit
-for:
--
   matrix:
-    only:
-      - job_name: Qt5-32bit
-  environment:
-    QT_VERSION: 5
-    ARCH: x86
-    QT_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
-    CMAKE_FLAGS: ""
-    CPACK_FLAGS: "-G ZIP -B package"
-
--
-  matrix:
-    only:
-      - job_name: Qt6-64bit
-  environment:
-    QT_VERSION: 6
-    ARCH: x64
-    QT_INSTALL_DIR: C:\Qt\qt%QT6_VERSION%
-    CMAKE_FLAGS: "-DUSE_QT6=yes"
-    CPACK_FLAGS: ""
+    - BUILD_NAME: Qt5-x86
+      QT_DIR: C:\Qt\5.15.2\msvc2019
+      ARCH: x86
+      USE_QT6: OFF
+      GENERATOR: "NMake Makefiles"
+    - BUILD_NAME: Qt6-x64
+      QT_DIR: C:\Qt\6.6.3\msvc2019_64
+      ARCH: x64
+      USE_QT6: ON
+      GENERATOR: "NMake Makefiles"
 
 install:
-- ps: |
-    # Setup Qt
-    if ($env:QT_VERSION -eq "6") {
-      $qtZip = "qt$env:QT6_VERSION-windows-msvc2019_64.zip"
-      $qtUrl = "https://download.qt.io/official_releases/qt/$($env:QT6_VERSION.Substring(0,3))/$env:QT6_VERSION/$qtZip"
-      Write-Host "Downloading Qt6 from $qtUrl"
-      curl -LO $qtUrl
-      7z x $qtZip -oC:\Qt
-      #$env:PATH = "C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH"
-    } else {
-      #$env:PATH += ";$env:QT_INSTALL_DIR\bin"
-    }
+  - ps: |
+      Write-Host "Using Qt version from: $env:QT_DIR"
+      $env:PATH += ";$env:QT_DIR\bin"
 
-    # Scarica ImageMagick (32-bit per Qt5, 64-bit per Qt6)
-    $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
-    $lastTagLine = $gitTags[-1]
-    $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
-    Write-Host "---`nLatest ImageMagick Version Found: $lastTagVersion`n---"
+      # Download latest ImageMagick version
+      $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
+      $lastTagLine = $gitTags[-1]
+      $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
+      Write-Host "---`nLatest ImageMagick Version Found: $lastTagVersion`n---"
 
-    if ($env:ARCH -eq "x64") {
-      $imArch = "x64"
-    } else {
-      $imArch = "x86"
-    }
-
-    $imUrl = "https://imagemagick.org/archive/binaries/ImageMagick-$lastTagVersion-Q16-HDRI-$imArch-dll.exe"
-    Write-Host "Downloading ImageMagick from $imUrl"
-    Invoke-WebRequest -Uri $imUrl -OutFile ImageMagick-Installer.exe
-
-    Start-Process -FilePath ".\ImageMagick-Installer.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick" -NoNewWindow -Wait
+      Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$lastTagVersion-Q16-HDRI-$env:ARCH-dll.exe -OutFile ImageMagick-Installer.exe
+      
+      Start-Process -FilePath ".\ImageMagick-Installer.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick" -NoNewWindow -Wait
 
 build_script:
-- ps: >-
-    $env:PATH += ";C:\Qt\qt$env:QT6_VERSION\bin;$QT_INSTALL_DIR\bin"
+  - cmd: >-
+      call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=%ARCH%
 
-    echo "PATH: $env:PATH"
-    echo "QT_INSTALL_DIR: $QT_INSTALL_DIR"
-    echo "QT6_VERSION: $env:QT6_VERSION"
+      cd C:\projects\converseen
 
-- cmd: >-
-    call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
+      mkdir build
 
-    cd C:\projects\converseen
+      cd build
 
-    mkdir build
+      cmake -G "%GENERATOR%" ^
+        -DCMAKE_BUILD_TYPE=Release ^
+        -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick" ^
+        -DUSE_QT6=%USE_QT6% ^
+        ..
 
-    cd build
+      nmake
 
-    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick" %CMAKE_FLAGS% ..
+      cpack -B package
 
-    nmake
+      mkdir artifact
 
-    if NOT "%CPACK_FLAGS%"=="" (
-      cpack %CPACK_FLAGS%
-    ) else (
-      cpack
-    )
+      copy package\*.msi artifact\
 
-    mkdir artifact
+      copy package\*.zip artifact\
 
-    if exist package\*.msi copy package\*.msi artifact\.
+      7z a -tzip artifact-%BUILD_NAME%.zip artifact\
 
-    if exist package\*.zip copy package\*.zip artifact\.
-
-    7z a -tzip artifact.zip artifact\
 
 artifacts:
 - path: build/artifact.zip
