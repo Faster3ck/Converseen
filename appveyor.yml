@@ -1,24 +1,49 @@
 version: '{branch}-{build}'
 skip_non_tags: true
 image: Visual Studio 2022
-environment:
-  Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
-build_script:
-- ps: |
-    $env:PATH += ";C:\Qt\5.15.2\msvc2019\bin"
 
-    # Get latest version number from GitHub
+environment:
+  QT6_VERSION: 6.9.1
+  Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
+
+matrix:
+  fast_finish: true
+  allow_failures: []
+  include:
+    - job_name: Qt5-32bit
+      QT_VERSION: 5
+      ARCH: x86
+      QT_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
+      CMAKE_FLAGS: ""
+      CPACK_FLAGS: "-G ZIP -B package"
+    - job_name: Qt6-64bit
+      QT_VERSION: 6
+      ARCH: x64
+      QT_INSTALL_DIR: C:\Qt\qt$(QT6_VERSION)
+      CMAKE_FLAGS: "-DUSE_QT6=yes"
+      CPACK_FLAGS: ""  # Nessun filtro cpack, crea tutto
+
+install:
+- ps: |
+    if ($env:QT_VERSION -eq "6") {
+      $qtZip = "qt$env:QT6_VERSION-windows-msvc2019_64.zip"
+      $qtUrl = "https://download.qt.io/official_releases/qt/$($env:QT6_VERSION.Substring(0,3))/$env:QT6_VERSION/$qtZip"
+      curl -LO $qtUrl
+      7z x $qtZip -oC:\Qt
+      $env:PATH = "C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH"
+    } else {
+      $env:PATH += ";$env:QT_INSTALL_DIR\bin"
+    }
+
+    # Scarica ImageMagick
     $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
     $lastTagLine = $gitTags[-1]
     $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
-    $latestVersionNumber = $lastTagVersion
-
-    Write-Host "---`nLatest ImageMagick Version Found: $latestVersionNumber`n---"
-
-    Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x86-dll.exe -OutFile ImageMagick-Installer.exe
-    
+    Write-Host "---`nLatest ImageMagick Version Found: $lastTagVersion`n---"
+    Invoke-WebRequest -Uri "https://imagemagick.org/archive/binaries/ImageMagick-$lastTagVersion-Q16-HDRI-x86-dll.exe" -OutFile ImageMagick-Installer.exe
     Start-Process -FilePath ".\ImageMagick-Installer.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick" -NoNewWindow -Wait
-    
+
+build_script:
 - cmd: >-
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
@@ -28,27 +53,32 @@ build_script:
 
     cd build
 
-    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick" ..
+    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick" %CMAKE_FLAGS% ..
 
     nmake
 
-    cpack -B package
+    if NOT "%CPACK_FLAGS%"=="" (
+      cpack %CPACK_FLAGS%
+    ) else (
+      cpack
+    )
 
     mkdir artifact
 
-    cp package/*.msi artifact/.
-    
-    cp package/*.zip artifact/.
-    
-    7z a -tzip artifact.zip artifact/
+    if exist package\*.msi copy package\*.msi artifact\.
+
+    if exist package\*.zip copy package\*.zip artifact\.
+
+    7z a -tzip artifact.zip artifact\
 
 artifacts:
 - path: build/artifact.zip
   name: artifact
 
-deploy:
-- provider: Webhook
-  url: https://app.signpath.io/API/v1/71fbb5b8-055f-4882-ae15-f3a8a2951f83/Integrations/AppVeyor?ProjectSlug=Converseen&SigningPolicySlug=release-signing&ArtifactConfigurationSlug=initial
-  # url: https://app.signpath.io/API/v1/71fbb5b8-055f-4882-ae15-f3a8a2951f83/Integrations/AppVeyor?ProjectSlug=Converseen&SigningPolicySlug=test-signing&ArtifactConfigurationSlug=initial
-  authorization:
-     secure: YoYalnXJBOqOYvwfVK1CtgGyCk5oeNQNyr+8ru9xjnEbydKxGokat+WO47aGhq6vaT0tx0cWUZBTJYwsaVmWbA==
+
+#deploy:
+#- provider: Webhook
+#  url: https://app.signpath.io/API/v1/71fbb5b8-055f-4882-ae15-f3a8a2951f83/Integrations/AppVeyor?ProjectSlug=Converseen&SigningPolicySlug=release-signing&ArtifactConfigurationSlug=initial
+#  # url: https://app.signpath.io/API/v1/71fbb5b8-055f-4882-ae15-f3a8a2951f83/Integrations/AppVeyor?ProjectSlug=Converseen&SigningPolicySlug=test-signing&ArtifactConfigurationSlug=initial
+#  authorization:
+#     secure: YoYalnXJBOqOYvwfVK1CtgGyCk5oeNQNyr+8ru9xjnEbydKxGokat+WO47aGhq6vaT0tx0cWUZBTJYwsaVmWbA==
