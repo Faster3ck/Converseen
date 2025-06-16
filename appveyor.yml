@@ -24,8 +24,6 @@ build_script:
     Start-Process -FilePath ".\ImageMagick-Installer-64.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick-64" -NoNewWindow -Wait
     
 - cmd: >-
-    echo %PATH%
-
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
     cd C:\projects\converseen 
@@ -43,7 +41,7 @@ build_script:
     cpack -G ZIP -B package
 
 - cmd: >-
-    call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
+    call "C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build\vcvars64.bat"
 
     cd C:\projects\converseen
 
