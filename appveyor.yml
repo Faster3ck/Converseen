@@ -64,7 +64,11 @@ install:
 
 build_script:
 - ps: >-
-    $env:PATH += ";C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH;QT_INSTALL_DIR\bin"
+    $env:PATH += ";C:\Qt\qt$env:$QT6_VERSION\bin;$QT_INSTALL_DIR\bin"
+
+    echo "PATH: $env:PATH"
+    echo "QT_INSTALL_DIR: $QT_INSTALL_DIR"
+    echo "QT6_VERSION: $QT6_VERSION"
 
 - cmd: >-
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
