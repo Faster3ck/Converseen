@@ -26,14 +26,18 @@ build_script:
 - cmd: >-
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
-    cd C:\projects\converseen
+    cd C:\projects\converseen 
 
-    if exist build-qt5 rmdir /s /q build-qt5
-    mkdir build-qt5
-    cd build-qt5
+    if exist build-qt5 rmdir /s /q build-qt5 
+    
+    mkdir build-qt5 
+    
+    cd build-qt5 
 
     cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-32" ..
+    
     nmake
+    
     cpack -G ZIP -B package
 
 - cmd: >-
@@ -42,11 +46,15 @@ build_script:
     cd C:\projects\converseen
 
     if exist build-qt6 rmdir /s /q build-qt6
+    
     mkdir build-qt6
+    
     cd build-qt6
 
     cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-64" -DUSE_QT6=yes ..
+    
     nmake
+    
     cpack -B package
 
 - cmd: >-
