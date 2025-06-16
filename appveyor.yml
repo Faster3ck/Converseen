@@ -39,9 +39,9 @@ install:
       Write-Host "Downloading Qt6 from $qtUrl"
       curl -LO $qtUrl
       7z x $qtZip -oC:\Qt
-      $env:PATH = "C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH"
+      #$env:PATH = "C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH"
     } else {
-      $env:PATH += ";$env:QT_INSTALL_DIR\bin"
+      #$env:PATH += ";$env:QT_INSTALL_DIR\bin"
     }
 
     # Scarica ImageMagick (32-bit per Qt5, 64-bit per Qt6)
@@ -64,7 +64,7 @@ install:
 
 build_script:
 - ps: >-
-    $env:PATH = "C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH;QT_INSTALL_DIR\bin"
+    $env:PATH += ";C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH;QT_INSTALL_DIR\bin"
 
 - cmd: >-
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
