@@ -40,11 +40,7 @@ build_script:
 
       cd build
 
-      cmake -G "%GENERATOR%" ^
-        -DCMAKE_BUILD_TYPE=Release ^
-        -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick" ^
-        -DUSE_QT6=%USE_QT6% ^
-        ..
+      cmake -G "%GENERATOR%" -DCMAKE_BUILD_TYPE=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick" -DUSE_QT6=%USE_QT6% ..
 
       nmake
 
