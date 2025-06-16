@@ -491,7 +491,7 @@
           <x>0</x>
           <y>0</y>
           <width>448</width>
-          <height>782</height>
+          <height>780</height>
          </rect>
         </property>
         <property name="minimumSize">
@@ -1551,6 +1551,17 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>F1</string>
+   </property>
+  </action>
+  <action name="actionInvertCheckedItems">
+   <property name="text">
+    <string>Invert Checked Items</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::MenuRole::NoRole</enum>
    </property>
   </action>
  </widget>

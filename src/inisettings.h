@@ -61,6 +61,7 @@ public:
     static int currentVersion();
 	static QString language();
     static bool isAutoChechUpdates();
+    static QString theme();
 
     static void setOutputDir(QString path);
     static void setWindowGeometry(QByteArray geometry);
@@ -82,12 +83,14 @@ public:
     static void setCurrentVersion(int version);
 	static void setLanguage(QString lang);
     static void setAutoChechUpdates(bool enabled);
+    static void setTheme(const QString &themeName);
 
     static void setIsWebPLosslessCompression(const bool &value);
     static void setWebPCompression(const int &value);
     static void setWebPQuality(const int &value);
     static void setIskWebPDithering(const bool &value);
     static void setIsRemoveMetadata(const bool &value);
+
 
 //private:
     static QSettings *settings;

@@ -35,7 +35,7 @@ class QDragMoveEvent;
 class ImageAttributes
 {
 public:
-    QString completeFileName, fileName, suffix, path, format;
+    QString completeFileName, fileName, suffix, path, format, imgSize, imgRes;
     qint64 size;
 };
 
@@ -62,6 +62,7 @@ class PixTreeWidget : public QTreeWidget {
         void checkAllItems();
         void uncheckItems();
         void uncheckAllItems();
+        void invertCheckAllItems();
 };
 
 #endif // PIXTREEWIDGET_H

@@ -36,7 +36,9 @@ private:
     void setLanguage();
     void setOverwriteMode();
     void setAutoUpdates();
+    void setTheme();
     void loadSettings();
+    void populateStyles();
 
     QSettings *settings;
 private slots:

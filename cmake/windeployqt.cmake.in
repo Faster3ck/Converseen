@@ -1,2 +1,7 @@
 # deploy.cmake.in
-execute_process(COMMAND "@windeployqt_exe@" converseen.exe --dir qtdeploy --release --no-compiler-runtime --verbose 0)
+
+if (USE_QT6)
+	execute_process(COMMAND "@windeployqt_exe@" converseen.exe --dir qtdeploy --release --no-compiler-runtime --no-quick-import --no-system-d3d-compiler  --no-system-dxc-compiler --no-opengl-sw --verbose 0)
+else()
+	execute_process(COMMAND "@windeployqt_exe@" converseen.exe --dir qtdeploy --release --no-compiler-runtime --no-quick-import --no-system-d3d-compiler --no-opengl-sw --verbose 0)
+endif()
