@@ -6,7 +6,7 @@ environment:
   Qt6_INSTALL_DIR: C:\Qt\6.8.1\msvc2022_64
 build_script:
 - ps: |
-    $env:PATH += ";$env:QT5_VERSION\bin;$env:QT6_VERSION\bin"
+    $env:PATH += ";$env:Qt5_INSTALL_DIR\bin;$env:Qt6_INSTALL_DIR\bin"
 
     # Get latest version number from GitHub
     $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
