@@ -1,65 +1,69 @@
 version: '{branch}-{build}'
 skip_non_tags: true
 image: Visual Studio 2022
-
 environment:
-  matrix:
-    - BUILD_NAME: Qt5-x86
-      QT_DIR: C:\Qt\5.15.2\msvc2019
-      ARCH: x86
-      USE_QT6: OFF
-      GENERATOR: "NMake Makefiles"
-    - BUILD_NAME: Qt6-x64
-      QT_DIR: C:\Qt\6.8\msvc2019_64
-      ARCH: x64
-      USE_QT6: ON
-      GENERATOR: "NMake Makefiles"
-
-install:
-  - ps: |
-      Write-Host "Using Qt version from: $env:QT_DIR"
-      $env:PATH += ";$env:QT_DIR\bin"
-
-      # Download latest ImageMagick version
-      $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
-      $lastTagLine = $gitTags[-1]
-      $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
-      Write-Host "---`nLatest ImageMagick Version Found: $lastTagVersion`n---"
-
-      Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$lastTagVersion-Q16-HDRI-$env:ARCH-dll.exe -OutFile ImageMagick-Installer.exe
-      
-      Start-Process -FilePath ".\ImageMagick-Installer.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick" -NoNewWindow -Wait
-
+  Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
+  Qt6_INSTALL_DIR: C:\Qt\6.8\msvc2019_64
 build_script:
-  - cmd: >-
-      call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat" -arch=%ARCH%
+- ps: |
+    $env:PATH += ";$env:$QT5_VERSION\bin;$env:$QT6_VERSION\bin"
 
-      cd C:\projects\converseen
+    # Get latest version number from GitHub
+    $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
+    $lastTagLine = $gitTags[-1]
+    $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
+    $latestVersionNumber = $lastTagVersion
 
-      mkdir build
+    Write-Host "---`nLatest ImageMagick Version Found: $latestVersionNumber`n---"
 
-      cd build
+    # Download ImageMagick 32 bit and 64 bit
+    Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x86-dll.exe -OutFile ImageMagick-Installer-32.exe
+    Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x64-dll.exe -OutFile ImageMagick-Installer-64.exe
+    
+    Start-Process -FilePath ".\ImageMagick-Installer-32.exe.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick-32" -NoNewWindow -Wait
+    Start-Process -FilePath ".\ImageMagick-Installer-64.exe.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick-64" -NoNewWindow -Wait
+    
+- cmd: >-
+    # Build Qt5 32 Bit
+    call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
-      cmake -G "%GENERATOR%" -DCMAKE_BUILD_TYPE=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick" -DUSE_QT6=%USE_QT6% ..
+    cd C:\projects\converseen
 
-      nmake
+    mkdir build-qt5
+    cd build-qt5
 
-      cpack -B package
+    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-32" ..
+    nmake
+    cpack -G ZIP -B package
 
-      mkdir artifact
+- cmd: >-
+    # Build Qt6 64 Bit
+    call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
 
-      copy package\*.msi artifact\
+    cd C:\projects\converseen
 
-      copy package\*.zip artifact\
+    mkdir build-qt6
+    cd build-qt6
 
-      7z a -tzip artifact-%BUILD_NAME%.zip artifact\
+    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-64" -DUSE_QT6=yes ..
+    nmake
+    cpack -B package
 
+- cmd: >-
+    # Create Artifact
+    cd C:\projects\converseen
+    mkdir -p artifact/qt5
+    mkdir -p artifact/qt6
+
+    cp build-qt5/package/*.zip artifact/qt5.
+    cp build-qt6/package/*.msi artifact/qt6.
+    cp build-qt6/package/*.zip artifact/qt6.
+    
+    7z a -tzip artifact.zip artifact/
 
 artifacts:
-- path: build/artifact-*.zip
+- path: artifact.zip
   name: artifact
-
-
 
 #deploy:
 #- provider: Webhook
