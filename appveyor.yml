@@ -64,16 +64,7 @@ install:
 
 build_script:
 - ps: >-
-    if ($env:QT_VERSION -eq "6") {
-          $qtZip = "qt$env:QT6_VERSION-windows-msvc2019_64.zip"
-          $qtUrl = "https://download.qt.io/official_releases/qt/$($env:QT6_VERSION.Substring(0,3))/$env:QT6_VERSION/$qtZip"
-          Write-Host "Downloading Qt6 from $qtUrl"
-          curl -LO $qtUrl
-          7z x $qtZip -oC:\Qt
-          $env:PATH = "C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH"
-      } else {
-        $env:PATH += ";$env:QT_INSTALL_DIR\bin"
-    }
+    $env:PATH = "C:\Qt\qt$env:QT6_VERSION\bin;$env:PATH;QT_INSTALL_DIR\bin"
 
 - cmd: >-
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
