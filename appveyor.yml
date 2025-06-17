@@ -3,7 +3,11 @@ skip_non_tags: true
 image: Visual Studio 2022
 environment:
   Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
-  Qt6_INSTALL_DIR: C:\Qt\6.8.1\msvc2022_64
+  Qt6_INSTALL_DIR: C:\Qt\6.9.1\msvc2022_64
+install:
+  - pip install aqtinstall
+  - aqt install-qt windows desktop 6.9.1 win64_msvc2019_64 --outputdir C:\Qt
+
 build_script:
 - ps: |
     $env:PATH += ";$env:Qt5_INSTALL_DIR\bin;$env:Qt6_INSTALL_DIR\bin"
