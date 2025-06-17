@@ -125,7 +125,11 @@ else ()
 endif()
 
 if(WIN32)
-    find_program(windeployqt_exe windeployqt REQUIRED)
+    if (USE_QT6)
+	find_program(windeployqt_exe windeployqt6 REQUIRED)
+    else ()
+	find_program(windeployqt_exe windeployqt REQUIRED)
+    endif()
     configure_file(cmake/windeployqt.cmake.in ${CMAKE_BINARY_DIR}/windeployqt.cmake @ONLY)
     set(app_icon_resource_windows "converseen.rc")
 
