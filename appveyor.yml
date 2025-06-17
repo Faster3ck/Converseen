@@ -64,13 +64,13 @@ build_script:
     
     mkdir artifact\qt6
 
-    cp build-qt5\package\*.zip artifact\qt5.
+    cp build-qt5/package/*.zip artifact/qt5.
     
-    cp build-qt6\package\*.msi artifact\qt6.
+    cp build-qt6/package/*.msi artifact/qt6.
     
-    cp build-qt6\package\*.zip artifact\qt6.
+    cp build-qt6/package/*.zip artifact/qt6.
     
-    7z a -tzip artifact.zip artifact
+    7z a -tzip artifact.zip artifact/
 
 artifacts:
 - path: artifact.zip
