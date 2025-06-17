@@ -6,7 +6,7 @@ environment:
   Qt6_INSTALL_DIR: C:\Qt\6.9.1\msvc2022_64
 install:
   - pip install aqtinstall
-  - aqt install-qt windows desktop 6.9.1 win64_msvc2019_64 --outputdir C:\Qt
+  - aqt install-qt windows desktop 6.9.1 win64_msvc2022_64 --outputdir C:\Qt
 
 build_script:
 - ps: |
