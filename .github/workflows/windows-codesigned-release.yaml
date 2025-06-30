@@ -69,35 +69,52 @@ jobs:
           $env:versionNumber='${{ steps.converseen-version.outputs.version }}'
           $env:buildNumber='${{ steps.converseen-version.outputs.build }}'
 
-          $env:installerName="Converseen-$env:versionNumber-$env:buildNumber-win32-setup"
-          $env:portableName="converseen-$env:versionNumber-$env:buildNumber-win32-portable"
+          $env:portableNameQt5="converseen-$env:versionNumber-$env:buildNumber-win32-portable"
+          $env:portableNameQt6="converseen-$env:versionNumber-$env:buildNumber-win64-portable"
+          $env:installerNameQt6="Converseen-$env:versionNumber-$env:buildNumber-win64-setup"
+          
 
           Write-Output "--- Version: $env:versionNumber ---"
-          Write-Output "--- Installer Name: $env:installerName ---"
-          Write-Output "--- Portable Name: $env:portableName ---"
+          Write-Output "--- Installer Win64 Name: $env:installerNameQt6 ---"
+          Write-Output "--- Portable Name Win64: $env:portableNameQt6 ---"
+          Write-Output "--- Portable Name Win32: $env:portableNameQt5 ---"
         
           Expand-Archive -Path artifact.zip -DestinationPath . -Force
           cd artifact
 
+          # --- Qt5 Version ---
+          cd qt5
           # Extract portable version
           Expand-Archive -Path Converseen.zip -DestinationPath . -Force
           Remove-Item -Path Converseen.zip
           # Create settings directory for portable version
           mkdir Converseen\settings
+           # Rename files
+          Rename-Item -Path "Converseen" -NewName "$env:portableNameQt5"
+           # Compress portable version
+          Compress-Archive -Path "$env:portableNameQt5" -DestinationPath "$env:portableNameQt5.zip"
 
-          # Rename files
-          Rename-Item -Path "Converseen" -NewName "$env:portableName"
-          Rename-Item -Path "Converseen.msi" -NewName "$env:installerName.msi"
-
-          # Compress portable version
-          Compress-Archive -Path "$env:portableName" -DestinationPath "$env:portableName.zip"
+          # --- Qt6 Version ---
+          cd ../qt6
+          # Rename installer
+          Rename-Item -Path "Converseen.msi" -NewName "$env:installerNameQt6.msi"
+          # Extract portable version
+          Expand-Archive -Path Converseen.zip -DestinationPath . -Force
+          Remove-Item -Path Converseen.zip
+          # Create settings directory for portable version
+          mkdir Converseen\settings
+           # Rename files
+          Rename-Item -Path "Converseen" -NewName "$env:portableNameQt6"
+           # Compress portable version
+          Compress-Archive -Path "$env:portableNameQt6" -DestinationPath "$env:portableNameQt6.zip"
 
           # Prepare release artifact
-          cd ../
+          cd ../../
 
           mkdir release
-          cp artifact\*.zip release
-          cp artifact\*.msi release
+          cp artifact\qt5\*.zip release
+          cp artifact\qt6\*.zip release
+          cp artifact\qt6\*.msi release
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
@@ -136,7 +153,7 @@ jobs:
       with:
         tag_name: "${{ steps.previoustag.outputs.tag }}"
         files: |
-          artifacts/Converseen-*-win32-setup.msi
+          artifacts/Converseen-*-win64-setup.msi
           artifacts/converseen-*.zip
 
   sf-release:
@@ -173,11 +190,12 @@ jobs:
           c_ver=${{ needs.prepare-codesigned-artifacts.outputs.output_version }}
           # v_dir is the SourceForge dest dir in the form X.Y
           v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
-          
-          c_target=$(echo $(ls Converseen-*-win32-setup.msi))
+
+          # Target for windows platform at sf.net is Converseen-*-win64-setup.msi
+          c_target=$(echo $(ls Converseen-*-win64-setup.msi))
           echo "target-file=$c_target" >> $GITHUB_OUTPUT
           
-          rsync -r Converseen-*-win32-setup.msi converseen-*.zip ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
+          rsync -r Converseen-*-win64-setup.msi converseen-*.zip ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
 
       - name: Set Platform
         run: |
