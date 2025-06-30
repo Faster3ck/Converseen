@@ -331,3 +331,37 @@ jobs:
         install_name_tool -change /usr/lib/libbz2.1.0.dylib @rpath/libbz2.1.0.dylib libzip.5.dylib
         install_name_tool -change @loader_path/../../../../opt/xz/lib/liblzma.5.dylib @rpath/liblzma.5.dylib libzip.5.dylib
         install_name_tool -change @loader_path/../../../../opt/zstd/lib/libzstd.1.dylib @rpath/libzstd.1.dylib libzip.5.dylib
+
+    - name: Copy Resources
+      run: |
+        cd build/bin
+
+        gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+_[0-9]+')
+        
+        echo "--- Copying res files ---"
+        cp -RPv ${{ github.workspace }}/im_build/etc/ImageMagick-7 converseen.app/Contents/Resources
+        cp -RPv /usr/local/Cellar/ghostscript/$gs_ver/share/ghostscript converseen.app/Contents/Resources
+        
+        echo "--- Copying loc files ---"
+        mkdir converseen.app/Contents/Resources/loc
+        cp -RPv ../../converseen/loc/*.qm converseen.app/Contents/Resources/loc
+
+        echo "--- Rename Ghostscript Resource Dir ---"
+        cd converseen.app/Contents/Resources/ghostscript
+
+        ls -la
+        
+        gs_ver_t=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+        mv $gs_ver_t gs
+
+    - name: Compress Converseen
+      run: |
+        cd build/bin
+        zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
+        pwd
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ConverseenMacOSIntel
+        path: build/bin/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip
