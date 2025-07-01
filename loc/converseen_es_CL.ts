@@ -365,8 +365,8 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">F1</translation>
     </message>
     <message>
-        <location filename="../src/dialogmultipageeditor.cpp" line="139"/>
-        <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows (%1)&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;                               Please install the correct version of Ghostscript.&lt;br&gt;                               Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
+        <location filename="../src/dialogmultipageeditor.cpp" line="159"/>
+        <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;             Please install the correct version of &lt;b&gt;Ghostscript&lt;/b&gt;.&lt;br&gt;             Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -389,48 +389,69 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="46"/>
-        <source>Overwriting settings</source>
-        <translation>Al sobreescribir</translation>
-    </message>
-    <message>
-        <location filename="../ui/dialogoptions.ui" line="52"/>
-        <source>As&amp;k first</source>
+        <source>Themes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="62"/>
-        <source>O&amp;verwrite all existing images</source>
+        <location filename="../ui/dialogoptions.ui" line="52"/>
+        <source>Style:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="72"/>
+        <source>Overwriting settings</source>
+        <translation>Al sobreescribir</translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogoptions.ui" line="78"/>
+        <source>As&amp;k first</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogoptions.ui" line="88"/>
+        <source>O&amp;verwrite all existing images</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogoptions.ui" line="98"/>
         <source>Updates</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="78"/>
+        <location filename="../ui/dialogoptions.ui" line="104"/>
         <source>Checks for updates automatically</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="103"/>
+        <location filename="../ui/dialogoptions.ui" line="129"/>
         <source>Ok</source>
         <translation>Aceptar</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="110"/>
+        <location filename="../ui/dialogoptions.ui" line="136"/>
         <source>Cancel</source>
         <translation>Cancelar</translation>
     </message>
     <message>
-        <location filename="../src/dialogoptions.cpp" line="61"/>
+        <location filename="../src/dialogoptions.cpp" line="65"/>
+        <location filename="../src/dialogoptions.cpp" line="105"/>
         <source>Warning!</source>
         <translation>Advertencia</translation>
     </message>
     <message>
-        <location filename="../src/dialogoptions.cpp" line="62"/>
+        <location filename="../src/dialogoptions.cpp" line="66"/>
         <source>Please, restart Converseen to apply current language!</source>
         <translation>Reinicia Converseen para aplicar el nuevo idioma.</translation>
+    </message>
+    <message>
+        <location filename="../src/dialogoptions.cpp" line="106"/>
+        <source>Please restart Converseen to apply the new theme!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/dialogoptions.cpp" line="145"/>
+        <source>System</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1097,6 +1118,16 @@ p, li { white-space: pre-wrap; }
         <translation>F1</translation>
     </message>
     <message>
+        <location filename="../ui/mainwindow.ui" line="1558"/>
+        <source>Invert Checked Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1561"/>
+        <source>Ctrl+I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/mainwindow.ui" line="1505"/>
         <source>&amp;Report bug...</source>
         <translation type="unfinished"></translation>
@@ -1150,135 +1181,140 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="243"/>
+        <location filename="../src/mainwindowimpl.cpp" line="257"/>
         <source>Open Image</source>
         <translation>Abrir imagen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="264"/>
+        <location filename="../src/mainwindowimpl.cpp" line="278"/>
         <source>Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="293"/>
+        <location filename="../src/mainwindowimpl.cpp" line="307"/>
         <source>Open Icon file</source>
         <translation>Abrir archivo de ícono</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="293"/>
+        <location filename="../src/mainwindowimpl.cpp" line="307"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Ícono de Microsoft (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="304"/>
+        <location filename="../src/mainwindowimpl.cpp" line="318"/>
         <source>Open Pdf file</source>
         <translation>Abrir archivo PDF</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="304"/>
+        <location filename="../src/mainwindowimpl.cpp" line="318"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="314"/>
+        <location filename="../src/mainwindowimpl.cpp" line="328"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Analizando el archivo. Podría tardar un momento.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="338"/>
+        <location filename="../src/mainwindowimpl.cpp" line="352"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="432"/>
-        <location filename="../src/mainwindowimpl.cpp" line="438"/>
-        <location filename="../src/mainwindowimpl.cpp" line="447"/>
-        <location filename="../src/mainwindowimpl.cpp" line="451"/>
-        <location filename="../src/mainwindowimpl.cpp" line="455"/>
+        <location filename="../src/mainwindowimpl.cpp" line="417"/>
+        <source>n/a</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="457"/>
+        <location filename="../src/mainwindowimpl.cpp" line="463"/>
+        <location filename="../src/mainwindowimpl.cpp" line="472"/>
+        <location filename="../src/mainwindowimpl.cpp" line="476"/>
+        <location filename="../src/mainwindowimpl.cpp" line="480"/>
         <source>Warning</source>
         <translation>Advertencia</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="433"/>
+        <location filename="../src/mainwindowimpl.cpp" line="458"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>La carpeta de destino no existe. ¿Deseas crearla?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="439"/>
+        <location filename="../src/mainwindowimpl.cpp" line="464"/>
         <source>The directory cannot be created!</source>
         <translation>No es posible crear la carpeta.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="448"/>
+        <location filename="../src/mainwindowimpl.cpp" line="473"/>
         <source>Set an output directory!</source>
         <translation>Selecciona una carpeta de destino.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="452"/>
+        <location filename="../src/mainwindowimpl.cpp" line="477"/>
         <source>No image checked!</source>
         <translation>No hay imágenes marcadas.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="456"/>
+        <location filename="../src/mainwindowimpl.cpp" line="481"/>
         <source>No images to convert!</source>
         <translation>No hay imágenes para convertir.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="473"/>
+        <location filename="../src/mainwindowimpl.cpp" line="498"/>
         <source>Processing...</source>
         <translation>Procesando...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="646"/>
+        <location filename="../src/mainwindowimpl.cpp" line="671"/>
         <source>Converted</source>
         <translation type="unfinished">Convertidas</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="651"/>
+        <location filename="../src/mainwindowimpl.cpp" line="676"/>
         <source>Skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="653"/>
+        <location filename="../src/mainwindowimpl.cpp" line="678"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="662"/>
+        <location filename="../src/mainwindowimpl.cpp" line="687"/>
         <source>Processing finished!</source>
         <translation>Proceso terminado.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="835"/>
-        <location filename="../src/mainwindowimpl.cpp" line="853"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1026"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1083"/>
+        <location filename="../src/mainwindowimpl.cpp" line="860"/>
+        <location filename="../src/mainwindowimpl.cpp" line="878"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1051"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1108"/>
         <source>Preview</source>
         <translation>Vista previa</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="257"/>
-        <location filename="../src/mainwindowimpl.cpp" line="716"/>
+        <location filename="../src/mainwindowimpl.cpp" line="271"/>
+        <location filename="../src/mainwindowimpl.cpp" line="741"/>
         <source>Open Directory</source>
         <translation>Abrir carpeta</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1152"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1186"/>
         <source>Suggest a new name!</source>
         <translation>Sugiere un nuevo nombre.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1153"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1187"/>
         <source>New name:</source>
         <translation>Nuevo nombre:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1158"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1192"/>
         <source>Please, specify a name!</source>
         <translation>Por favor, especifica un nombre.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1159"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1193"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1289,23 +1325,23 @@ Haz clic en Ignorar para cancelar esta operación.
 Haz clic en Abortar para cancelar todas las operaciones.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1176"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1181"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1210"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1215"/>
         <source>Warning!</source>
         <translation>Advertencia</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1177"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1211"/>
         <source>The filename should not be empty!</source>
         <translation>El nombre de archivo no debería estar vacío.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1182"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1216"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>El nombre escogido es idéntico al original. ¿Deseas sobreescribir el archivo original?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1198"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1232"/>
         <source>Aborted!</source>
         <translation>Abortado</translation>
     </message>
@@ -1334,11 +1370,21 @@ Haz clic en Abortar para cancelar todas las operaciones.</translation>
     </message>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="44"/>
+        <source>Image size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/pixtreewidget.cpp" line="45"/>
+        <source>Resolution</source>
+        <translation type="unfinished">Resolución</translation>
+    </message>
+    <message>
+        <location filename="../src/pixtreewidget.cpp" line="46"/>
         <source>File size</source>
         <translation>Tamaño del archivo</translation>
     </message>
     <message>
-        <location filename="../src/pixtreewidget.cpp" line="45"/>
+        <location filename="../src/pixtreewidget.cpp" line="47"/>
         <source>File path</source>
         <translation>Ruta del archivo</translation>
     </message>

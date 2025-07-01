@@ -365,8 +365,8 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">F1</translation>
     </message>
     <message>
-        <location filename="../src/dialogmultipageeditor.cpp" line="139"/>
-        <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows (%1)&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;                               Please install the correct version of Ghostscript.&lt;br&gt;                               Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
+        <location filename="../src/dialogmultipageeditor.cpp" line="159"/>
+        <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;             Please install the correct version of &lt;b&gt;Ghostscript&lt;/b&gt;.&lt;br&gt;             Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -389,48 +389,69 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="46"/>
+        <source>Themes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogoptions.ui" line="52"/>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogoptions.ui" line="72"/>
         <source>Overwriting settings</source>
         <translation>文件覆盖</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="52"/>
+        <location filename="../ui/dialogoptions.ui" line="78"/>
         <source>As&amp;k first</source>
         <translation>覆盖前进行确认(&amp;K)</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="62"/>
+        <location filename="../ui/dialogoptions.ui" line="88"/>
         <source>O&amp;verwrite all existing images</source>
         <translation>覆盖所有已存在图像文件(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="72"/>
+        <location filename="../ui/dialogoptions.ui" line="98"/>
         <source>Updates</source>
         <translation>更新</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="78"/>
+        <location filename="../ui/dialogoptions.ui" line="104"/>
         <source>Checks for updates automatically</source>
         <translation>自动检查更新</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="103"/>
+        <location filename="../ui/dialogoptions.ui" line="129"/>
         <source>Ok</source>
         <translation>确定</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="110"/>
+        <location filename="../ui/dialogoptions.ui" line="136"/>
         <source>Cancel</source>
         <translation>取消</translation>
     </message>
     <message>
-        <location filename="../src/dialogoptions.cpp" line="61"/>
+        <location filename="../src/dialogoptions.cpp" line="65"/>
+        <location filename="../src/dialogoptions.cpp" line="105"/>
         <source>Warning!</source>
         <translation>警告！</translation>
     </message>
     <message>
-        <location filename="../src/dialogoptions.cpp" line="62"/>
+        <location filename="../src/dialogoptions.cpp" line="66"/>
         <source>Please, restart Converseen to apply current language!</source>
         <translation>请重新启动 Converseen 以应用当前设定的语言！</translation>
+    </message>
+    <message>
+        <location filename="../src/dialogoptions.cpp" line="106"/>
+        <source>Please restart Converseen to apply the new theme!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/dialogoptions.cpp" line="145"/>
+        <source>System</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -876,6 +897,16 @@ p, li { white-space: pre-wrap; }
         <translation>垂直翻转</translation>
     </message>
     <message>
+        <location filename="../ui/mainwindow.ui" line="1558"/>
+        <source>Invert Checked Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1561"/>
+        <source>Ctrl+I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/mainwindow.ui" line="155"/>
         <source>Output options</source>
         <translation>输出设置</translation>
@@ -1150,120 +1181,125 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="243"/>
+        <location filename="../src/mainwindowimpl.cpp" line="257"/>
         <source>Open Image</source>
         <translation>打开图像</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="293"/>
+        <location filename="../src/mainwindowimpl.cpp" line="307"/>
         <source>Open Icon file</source>
         <translation>打开图标文件</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="293"/>
+        <location filename="../src/mainwindowimpl.cpp" line="307"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Windows 图标  (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="304"/>
+        <location filename="../src/mainwindowimpl.cpp" line="318"/>
         <source>Open Pdf file</source>
         <translation>打开 PDF 文件</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="304"/>
+        <location filename="../src/mainwindowimpl.cpp" line="318"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>PDF 文件 (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="314"/>
+        <location filename="../src/mainwindowimpl.cpp" line="328"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>正在分析文件。这可能需要花费一些时间，请耐心等待…</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="432"/>
-        <location filename="../src/mainwindowimpl.cpp" line="438"/>
-        <location filename="../src/mainwindowimpl.cpp" line="447"/>
-        <location filename="../src/mainwindowimpl.cpp" line="451"/>
-        <location filename="../src/mainwindowimpl.cpp" line="455"/>
+        <location filename="../src/mainwindowimpl.cpp" line="417"/>
+        <source>n/a</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="457"/>
+        <location filename="../src/mainwindowimpl.cpp" line="463"/>
+        <location filename="../src/mainwindowimpl.cpp" line="472"/>
+        <location filename="../src/mainwindowimpl.cpp" line="476"/>
+        <location filename="../src/mainwindowimpl.cpp" line="480"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="433"/>
+        <location filename="../src/mainwindowimpl.cpp" line="458"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>输出目录不存在！是否现在创建？</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="439"/>
+        <location filename="../src/mainwindowimpl.cpp" line="464"/>
         <source>The directory cannot be created!</source>
         <translation>创建目录失败！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="448"/>
+        <location filename="../src/mainwindowimpl.cpp" line="473"/>
         <source>Set an output directory!</source>
         <translation>请指定输出目录！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="452"/>
+        <location filename="../src/mainwindowimpl.cpp" line="477"/>
         <source>No image checked!</source>
         <translation>未勾选任何图像！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="456"/>
+        <location filename="../src/mainwindowimpl.cpp" line="481"/>
         <source>No images to convert!</source>
         <translation>没有需要转换的图像！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="473"/>
+        <location filename="../src/mainwindowimpl.cpp" line="498"/>
         <source>Processing...</source>
         <translation>正在处理…</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="651"/>
+        <location filename="../src/mainwindowimpl.cpp" line="676"/>
         <source>Skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="653"/>
+        <location filename="../src/mainwindowimpl.cpp" line="678"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="662"/>
+        <location filename="../src/mainwindowimpl.cpp" line="687"/>
         <source>Processing finished!</source>
         <translation>处理完成！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="257"/>
-        <location filename="../src/mainwindowimpl.cpp" line="716"/>
+        <location filename="../src/mainwindowimpl.cpp" line="271"/>
+        <location filename="../src/mainwindowimpl.cpp" line="741"/>
         <source>Open Directory</source>
         <translation>打开目录</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="835"/>
-        <location filename="../src/mainwindowimpl.cpp" line="853"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1026"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1083"/>
+        <location filename="../src/mainwindowimpl.cpp" line="860"/>
+        <location filename="../src/mainwindowimpl.cpp" line="878"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1051"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1108"/>
         <source>Preview</source>
         <translation>预览</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1152"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1186"/>
         <source>Suggest a new name!</source>
         <translation>指定新文件名！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1153"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1187"/>
         <source>New name:</source>
         <translation>新文件名：</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1158"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1192"/>
         <source>Please, specify a name!</source>
         <translation>请指定一个新的文件名！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1159"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1193"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1274,38 +1310,38 @@ Click Abort to cancel all operations.</source>
 点击“终止”取消所有操作。</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1176"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1181"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1210"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1215"/>
         <source>Warning!</source>
         <translation>警告！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1177"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1211"/>
         <source>The filename should not be empty!</source>
         <translation>文件名不能为空！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1182"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1216"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>指定的文件名与原文件名相同。确定要覆盖原有文件吗？</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1198"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1232"/>
         <source>Aborted!</source>
         <translation>终止！</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="646"/>
+        <location filename="../src/mainwindowimpl.cpp" line="671"/>
         <source>Converted</source>
         <translation type="unfinished">已转换</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="264"/>
+        <location filename="../src/mainwindowimpl.cpp" line="278"/>
         <source>Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="338"/>
+        <location filename="../src/mainwindowimpl.cpp" line="352"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1334,11 +1370,21 @@ Click Abort to cancel all operations.</source>
     </message>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="44"/>
+        <source>Image size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/pixtreewidget.cpp" line="45"/>
+        <source>Resolution</source>
+        <translation type="unfinished">分辨率</translation>
+    </message>
+    <message>
+        <location filename="../src/pixtreewidget.cpp" line="46"/>
         <source>File size</source>
         <translation>大小</translation>
     </message>
     <message>
-        <location filename="../src/pixtreewidget.cpp" line="45"/>
+        <location filename="../src/pixtreewidget.cpp" line="47"/>
         <source>File path</source>
         <translation>路径</translation>
     </message>

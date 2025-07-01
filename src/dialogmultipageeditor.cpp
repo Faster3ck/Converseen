@@ -157,7 +157,7 @@ bool DialogMultipageEditor::isGhostscriptInstalled()
 void DialogMultipageEditor::showGhostscriptInstallationDialog()
 {
     const QString message = tr(
-            "In order to perform the conversion of <b>PDF</b> files to images, <b>Ghostscript for Windows (%1)</b> must be installed on your system.<br><br> \
+            "In order to perform the conversion of <b>PDF</b> files to images, <b>Ghostscript for Windows</b> must be installed on your system.<br><br> \
             Please install the correct version of <b>Ghostscript</b>.<br> \
             Click on the <b>Help</b> button for more details."
         );

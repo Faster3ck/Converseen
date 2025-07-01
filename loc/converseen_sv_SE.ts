@@ -365,8 +365,8 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">F1</translation>
     </message>
     <message>
-        <location filename="../src/dialogmultipageeditor.cpp" line="139"/>
-        <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows (%1)&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;                               Please install the correct version of Ghostscript.&lt;br&gt;                               Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
+        <location filename="../src/dialogmultipageeditor.cpp" line="159"/>
+        <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;             Please install the correct version of &lt;b&gt;Ghostscript&lt;/b&gt;.&lt;br&gt;             Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -389,48 +389,69 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="46"/>
+        <source>Themes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogoptions.ui" line="52"/>
+        <source>Style:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialogoptions.ui" line="72"/>
         <source>Overwriting settings</source>
         <translation>Skriver över inställningarna</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="52"/>
+        <location filename="../ui/dialogoptions.ui" line="78"/>
         <source>As&amp;k first</source>
         <translation>Fr&amp;åga först</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="62"/>
+        <location filename="../ui/dialogoptions.ui" line="88"/>
         <source>O&amp;verwrite all existing images</source>
         <translation>S&amp;kriv över alla befintliga bilder</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="72"/>
+        <location filename="../ui/dialogoptions.ui" line="98"/>
         <source>Updates</source>
         <translation>Uppdateringar</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="78"/>
+        <location filename="../ui/dialogoptions.ui" line="104"/>
         <source>Checks for updates automatically</source>
         <translation>Sök efter uppdateringar automatiskt</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="103"/>
+        <location filename="../ui/dialogoptions.ui" line="129"/>
         <source>Ok</source>
         <translation>OK</translation>
     </message>
     <message>
-        <location filename="../ui/dialogoptions.ui" line="110"/>
+        <location filename="../ui/dialogoptions.ui" line="136"/>
         <source>Cancel</source>
         <translation>Avbryt</translation>
     </message>
     <message>
-        <location filename="../src/dialogoptions.cpp" line="61"/>
+        <location filename="../src/dialogoptions.cpp" line="65"/>
+        <location filename="../src/dialogoptions.cpp" line="105"/>
         <source>Warning!</source>
         <translation>Varning!</translation>
     </message>
     <message>
-        <location filename="../src/dialogoptions.cpp" line="62"/>
+        <location filename="../src/dialogoptions.cpp" line="66"/>
         <source>Please, restart Converseen to apply current language!</source>
         <translation>Starta om Converseen för att tillämpa aktuellt språk!</translation>
+    </message>
+    <message>
+        <location filename="../src/dialogoptions.cpp" line="106"/>
+        <source>Please restart Converseen to apply the new theme!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/dialogoptions.cpp" line="145"/>
+        <source>System</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1097,6 +1118,16 @@ p, li { white-space: pre-wrap; }
         <translation>F1</translation>
     </message>
     <message>
+        <location filename="../ui/mainwindow.ui" line="1558"/>
+        <source>Invert Checked Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1561"/>
+        <source>Ctrl+I</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/mainwindow.ui" line="1505"/>
         <source>&amp;Report bug...</source>
         <translation>&amp;Rapportera ett fel...</translation>
@@ -1150,135 +1181,140 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="243"/>
+        <location filename="../src/mainwindowimpl.cpp" line="257"/>
         <source>Open Image</source>
         <translation>Öppna bild</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="432"/>
-        <location filename="../src/mainwindowimpl.cpp" line="438"/>
-        <location filename="../src/mainwindowimpl.cpp" line="447"/>
-        <location filename="../src/mainwindowimpl.cpp" line="451"/>
-        <location filename="../src/mainwindowimpl.cpp" line="455"/>
+        <location filename="../src/mainwindowimpl.cpp" line="457"/>
+        <location filename="../src/mainwindowimpl.cpp" line="463"/>
+        <location filename="../src/mainwindowimpl.cpp" line="472"/>
+        <location filename="../src/mainwindowimpl.cpp" line="476"/>
+        <location filename="../src/mainwindowimpl.cpp" line="480"/>
         <source>Warning</source>
         <translation>Varning</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="452"/>
+        <location filename="../src/mainwindowimpl.cpp" line="477"/>
         <source>No image checked!</source>
         <translation>Inga bilder valda!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="456"/>
+        <location filename="../src/mainwindowimpl.cpp" line="481"/>
         <source>No images to convert!</source>
         <translation>Inga bilder att konvertera!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="433"/>
+        <location filename="../src/mainwindowimpl.cpp" line="458"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>Utdatamappen finns inte! Vill du skapa den?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="264"/>
+        <location filename="../src/mainwindowimpl.cpp" line="278"/>
         <source>Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="293"/>
+        <location filename="../src/mainwindowimpl.cpp" line="307"/>
         <source>Open Icon file</source>
         <translation>Öppna ikonfil</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="293"/>
+        <location filename="../src/mainwindowimpl.cpp" line="307"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Microsoft-ikon (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="304"/>
+        <location filename="../src/mainwindowimpl.cpp" line="318"/>
         <source>Open Pdf file</source>
         <translation>Öppna PDF-fil</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="304"/>
+        <location filename="../src/mainwindowimpl.cpp" line="318"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="314"/>
+        <location filename="../src/mainwindowimpl.cpp" line="328"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Analyserar filen. Det kan ta en stund, vänta...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="338"/>
+        <location filename="../src/mainwindowimpl.cpp" line="352"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="439"/>
+        <location filename="../src/mainwindowimpl.cpp" line="417"/>
+        <source>n/a</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="464"/>
         <source>The directory cannot be created!</source>
         <translation>Mappen kan inte skapas!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="448"/>
+        <location filename="../src/mainwindowimpl.cpp" line="473"/>
         <source>Set an output directory!</source>
         <translation>Ange en utdatamapp!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="473"/>
+        <location filename="../src/mainwindowimpl.cpp" line="498"/>
         <source>Processing...</source>
         <translation>Arbetar...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="646"/>
+        <location filename="../src/mainwindowimpl.cpp" line="671"/>
         <source>Converted</source>
         <translation type="unfinished">Konverterat</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="651"/>
+        <location filename="../src/mainwindowimpl.cpp" line="676"/>
         <source>Skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="653"/>
+        <location filename="../src/mainwindowimpl.cpp" line="678"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="662"/>
+        <location filename="../src/mainwindowimpl.cpp" line="687"/>
         <source>Processing finished!</source>
         <translation>Processen slutförd!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="257"/>
-        <location filename="../src/mainwindowimpl.cpp" line="716"/>
+        <location filename="../src/mainwindowimpl.cpp" line="271"/>
+        <location filename="../src/mainwindowimpl.cpp" line="741"/>
         <source>Open Directory</source>
         <translation>Öppna mapp</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="835"/>
-        <location filename="../src/mainwindowimpl.cpp" line="853"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1026"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1083"/>
+        <location filename="../src/mainwindowimpl.cpp" line="860"/>
+        <location filename="../src/mainwindowimpl.cpp" line="878"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1051"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1108"/>
         <source>Preview</source>
         <translation>Förhandsvisning</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1152"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1186"/>
         <source>Suggest a new name!</source>
         <translation>Föreslå ett nytt namn!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1153"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1187"/>
         <source>New name:</source>
         <translation>Nytt namn:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1158"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1192"/>
         <source>Please, specify a name!</source>
         <translation>Ange ett namn!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1159"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1193"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1289,23 +1325,23 @@ Klicka &quot;Ignorera&quot; för att avbryta denna åtgärd.
 Klicka &quot;Avbryt&quot; för att avbryta alla åtgärder.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1176"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1181"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1210"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1215"/>
         <source>Warning!</source>
         <translation>Varning!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1177"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1211"/>
         <source>The filename should not be empty!</source>
         <translation>Filnamnet kan inte vara tomt!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1182"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1216"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Det valda namnet är identiskt med det första. Vill du skriva över originalfilen?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1198"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1232"/>
         <source>Aborted!</source>
         <translation>Avbruten!</translation>
     </message>
@@ -1334,11 +1370,21 @@ Klicka &quot;Avbryt&quot; för att avbryta alla åtgärder.</translation>
     </message>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="44"/>
+        <source>Image size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/pixtreewidget.cpp" line="45"/>
+        <source>Resolution</source>
+        <translation type="unfinished">Upplösning</translation>
+    </message>
+    <message>
+        <location filename="../src/pixtreewidget.cpp" line="46"/>
         <source>File size</source>
         <translation>Filstorlek</translation>
     </message>
     <message>
-        <location filename="../src/pixtreewidget.cpp" line="45"/>
+        <location filename="../src/pixtreewidget.cpp" line="47"/>
         <source>File path</source>
         <translation>Filsökväg</translation>
     </message>
