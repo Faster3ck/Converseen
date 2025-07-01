@@ -204,7 +204,7 @@ jobs:
       uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==3.1.*'
-        version: '6.7.*'
+        version: '6.9.*'
         host: 'mac'
         target: 'desktop'
         arch: 'clang_64'
@@ -336,7 +336,7 @@ jobs:
       run: |
         cd build/bin
 
-        gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+_[0-9]+')
+        gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
         
         echo "--- Copying res files ---"
         cp -RPv ${{ github.workspace }}/im_build/etc/ImageMagick-7 converseen.app/Contents/Resources
