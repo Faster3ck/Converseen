@@ -184,9 +184,9 @@ jobs:
 
         echo "Copy Resources"
         ls /usr/local/Cellar/ghostscript/
-        echo "GS ver: $(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+_[0-9]+')"
+        echo "GS ver: $(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')"
 
-        gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+_[0-9]+')
+        gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
         
         echo "--- Copying res files ---"
         cp -RPv ${{ github.workspace }}/im_build/etc/ImageMagick-7 converseen.app/Contents/Resources
