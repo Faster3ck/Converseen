@@ -409,7 +409,7 @@ void MainWindowImpl::loadFiles(QStringList fileNames)
             Image my_image;
             my_image.ping(fileNames.at(i).toStdString());
 
-            iA.completeFileName = fileNames.at(i).toLocal8Bit();
+            iA.completeFileName = fileNames.at(i).toUtf8();
             iA.fileName = fi.fileName();
             iA.suffix = fi.suffix();
             iA.imgSize = QString("%1×%2 px").arg(QString::number(my_image.columns()), QString::number(my_image.rows()));
@@ -433,7 +433,7 @@ bool MainWindowImpl::checkDuplicates(QStringList fileNames, int e)
     int cnt = iAList->count();
 
     for (int i = 0; i < cnt; i++)
-        if (iAList->at(i).completeFileName == fileNames.at(e).toLocal8Bit())
+        if (iAList->at(i).completeFileName == fileNames.at(e).toUtf8())
             return true;
 
     return false;

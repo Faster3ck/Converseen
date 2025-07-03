@@ -87,10 +87,10 @@ int main(int argc, char ** argv)
     QString gs_fontpath = gs_path + "/Resource/Font/";
     QString gs_options = QString("-sGenericResourceDir=%1/Resource/ -sICCProfilesDir=%1/iccprofiles/").arg(gs_path);
 
-    qputenv("MAGICK_CONFIGURE_PATH", magick_configure_path.toLocal8Bit());
-    qputenv("GS_LIB", gs_lib.toLocal8Bit());
-    qputenv("GS_FONTPATH", gs_fontpath.toLocal8Bit());
-    qputenv("GS_OPTIONS", gs_options.toLocal8Bit());
+    qputenv("MAGICK_CONFIGURE_PATH", magick_configure_path.toUtf8());
+    qputenv("GS_LIB", gs_lib.toUtf8());
+    qputenv("GS_FONTPATH", gs_fontpath.toUtf8());
+    qputenv("GS_OPTIONS", gs_options.toUtf8());
 #endif
 
 #if defined(Q_OS_WIN)
@@ -101,11 +101,11 @@ int main(int argc, char ** argv)
     if (parser.isSet(winMagickPathOption))
         resdir = parser.value(winMagickPathOption);
 
-    qputenv("LD_LIBRARY_PATH", resdir.toLocal8Bit());
-    qputenv("MAGICK_HOME", resdir.toLocal8Bit());
-    qputenv("MAGICK_CONFIGURE_PATH", resdir.toLocal8Bit());
-    qputenv("MAGICK_CODER_MODULE_PATH", resdir.toLocal8Bit() + "\\modules\\coders");
-    qputenv("MAGICK_CODER_FILTER_PATH", resdir.toLocal8Bit() + "\\modules\\filters");
+    qputenv("LD_LIBRARY_PATH", resdir.toUtf8());
+    qputenv("MAGICK_HOME", resdir.toUtf8());
+    qputenv("MAGICK_CONFIGURE_PATH", resdir.toUtf8());
+    qputenv("MAGICK_CODER_MODULE_PATH", resdir.toUtf8() + "\\modules\\coders");
+    qputenv("MAGICK_CODER_FILTER_PATH", resdir.toUtf8() + "\\modules\\filters");
 #endif
 
     // Default traslations for Qt apps

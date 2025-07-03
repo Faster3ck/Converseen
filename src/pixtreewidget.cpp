@@ -100,13 +100,13 @@ void PixTreeWidget::dropEvent(QDropEvent *event)
         fi.setFile(localFile);
 
         if (fi.isDir()) {
-            directories << urls.at(i).toLocalFile().toLocal8Bit();
+            directories << urls.at(i).toLocalFile().toUtf8();
         }
         if (fi.isFile()) {
             QStringList readableFomats = Formats::readableFilters();
 
             if (readableFomats.contains(fi.suffix(), Qt::CaseInsensitive))
-                fileNames << urls.at(i).toLocalFile().toLocal8Bit();
+                fileNames << urls.at(i).toLocalFile().toUtf8();
         }
     }
 
