@@ -118,9 +118,24 @@ jobs:
   build-windows:
     name: Converseen Windows Build
     runs-on: windows-2022
-
+    strategy:
+      matrix:
+        include:
+          - qt_version: '5.15.2'
+            qt_arch: 'win32_msvc2019'
+            imagemagick_arch: 'x86'
+            vs_arch: 'x86'
+            bits: '32bit'
+            cmake_extra_flags: ''
+          - qt_version: '6.9.1'
+            qt_arch: 'win64_msvc2022_64'
+            imagemagick_arch: 'x64'
+            vs_arch: 'x64'
+            bits: '64bit'
+            cmake_extra_flags: '-DUSE_QT6=yes'
+    
     steps:
-      - name: Download ImageMagick for Windows
+      - name: Download ImageMagick for Windows (${{ matrix.bits }})
         shell: powershell
         run: |
           # Get latest version number from GitHub
@@ -131,9 +146,9 @@ jobs:
           
           Write-Host "Latest ImageMagick Version Found: $latestVersionNumber"
           
-          Invoke-WebRequest -Uri "https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x86-dll.exe" -OutFile ImageMagick-Installer.exe
-
-      - name: Install ImageMagick for Windows
+          Invoke-WebRequest -Uri "https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-${{ matrix.imagemagick_arch }}-dll.exe" -OutFile ImageMagick-Installer.exe
+      
+      - name: Install ImageMagick for Windows (${{ matrix.bits }})
         shell: cmd
         run: |
           ImageMagick-Installer.exe /MERGETASKS=install_devel /VERYSILENT /DIR=ImageMagick
@@ -142,47 +157,45 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: Converseen
-
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v3
+      
+      - name: Install Qt ${{ matrix.qt_version }} (${{ matrix.bits }})
+        uses: jurplel/install-qt-action@v4
         with:
-          version: '5.15.2'
+          version: '${{ matrix.qt_version }}'
           host: 'windows'
           target: 'desktop'
-          arch: 'win32_msvc2019'
+          arch: '${{ matrix.qt_arch }}'
           install-deps: 'true'
           set-env: 'true'
-
-      - name: Build Converseen
+      
+      - name: Build Converseen (Qt ${{ matrix.qt_version }} ${{ matrix.bits }})
         shell: cmd
         run: |
-          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat"
+          call "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\Tools\VsDevCmd.bat" -arch=${{ matrix.vs_arch }}
           
           cd Converseen
           mkdir build
           cd build
       
-          cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="${{ github.workspace }}\ImageMagick" ..
+          cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="${{ github.workspace }}\ImageMagick" ${{ matrix.cmake_extra_flags }} ..
           nmake
           cpack -B package
-
-      - name: Prepare Artifacts
+      
+      - name: Prepare Artifacts (Qt ${{ matrix.qt_version }} ${{ matrix.bits }})
         shell: cmd
         run: |
           ls
-
           ls Converseen/build/package/
         
-          mkdir artifacts
-          cp Converseen/build/package/*.msi artifacts/
-          cp Converseen/build/package/*.zip artifacts/
-
-          ls artifacts
-          
+          mkdir artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}
+          cp Converseen/build/package/*.msi artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}/
+          cp Converseen/build/package/*.zip artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}/
+          ls artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}
+      
       - uses: actions/upload-artifact@v4
         with:
-          name: Windows
-          path: 'artifacts'
+          name: Windows-Qt${{ matrix.qt_version }}-${{ matrix.bits }}
+          path: 'artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}'
 
   build-macos:
     name: Converseen macOS Build
