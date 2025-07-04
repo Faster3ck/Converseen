@@ -1,3 +1,8 @@
+0.15.0.1 – 2025-07-05
+- Fixed problem with UTF-8 characters in some languages
+- Updated Chinese translation
+- Various bug fixes
+
 0.15.0.0 – 2025-07-01
 - Windows 64-bit port based on Qt6
 - Added theme selection option

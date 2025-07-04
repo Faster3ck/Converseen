@@ -79,19 +79,18 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.15.0.0" date="2025-07-01">
+        <release version="0.15.0.1" date="2025-07-05">
             <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.15.0.0</p>
+                <p>Changelog for 0.15.0.1</p>
                 <ul>
-                    <li>Added theme selection option</li>
-                    <li>Added image size and resolution info to the main list</li>
-                    <li>Added inverted check selection</li>
-                    <li>Updated Italian translation</li>
+                    <li>Fixed problem with UTF-8 characters in some languages</li>
+                    <li>Updated Chinese translation</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.15.0.0" date="2025-07-01" />
         <release version="0.14.0.0" date="2025-04-25" />
         <release version="0.13.0.1" date="2025-03-24" />
         <release version="0.13.0.0" date="2025-03-20" />
