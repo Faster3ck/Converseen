@@ -18,7 +18,7 @@
     <message>
         <location filename="../src/converter.cpp" line="290"/>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
-        <translation type="unfinished">错误：格式 %1 不支持写入，请选择其他输出格式。跳过！</translation>
+        <translation type="unfinished">错误：格式 %1 不支持写入，请选择其他输出格式。已跳过！</translation>
     </message>
 </context>
 <context>
@@ -50,11 +50,11 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Total:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;全部：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;总计：&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialogconversionstatus.ui" line="96"/>
@@ -136,11 +136,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen is an image batch conversion tool. You can resize and convert images in more than 100 different formats.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8.25pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen 是一个图像批量转换工具。支持超过 100 种不同格式图像的缩放与转换。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Converseen 是一款图像批量转换工具。支持超过 100 种不同格式图像的缩放与转换。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="105"/>
@@ -238,7 +238,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialoginfo.ui" line="265"/>
         <source>&lt;strong&gt;Simplified Chinese translation: &lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</source>
-        <translation type="unfinished">&lt;strong&gt;简体中文：&lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;</translation>
+        <translation type="unfinished">&lt;strong&gt;简体中文：&lt;/strong&gt;myd7349 - &lt;a href=&quot;mailto:myd7349@gmail.com&quot;&gt;myd7349@gmail.com&lt;/a&gt;，大眼仔~旭 - &lt;a href=&quot;mailto:wcxu21@126.com&quot;&gt;wcxu21@126.com&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="111"/>
@@ -447,7 +447,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/dialogoptions.cpp" line="66"/>
         <source>Please, restart Converseen to apply current language!</source>
-        <translation>请重新启动 Converseen 以应用当前设定的语言！</translation>
+        <translation type="unfinished">请重新启动 Converseen 以应用当前设置的语言！</translation>
     </message>
     <message>
         <location filename="../src/dialogoptions.cpp" line="106"/>
@@ -1219,7 +1219,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="417"/>
         <source>n/a</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">n/a</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="457"/>
@@ -1263,12 +1263,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="676"/>
         <source>Skipped</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">已跳过</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="678"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">错误</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="687"/>
@@ -1334,7 +1334,7 @@ Click Abort to cancel all operations.</source>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1232"/>
         <source>Aborted!</source>
-        <translation>终止！</translation>
+        <translation type="unfinished">已终止！</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="671"/>
