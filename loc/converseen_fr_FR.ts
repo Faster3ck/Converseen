@@ -180,7 +180,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialoginfo.ui" line="217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Russian Translation: &lt;/span&gt;&lt;a href=&quot;https://github.com/alevtina-karashokova&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alevtina Karashokova&lt;/span&gt;&lt;/a&gt;, Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;stas_stv@mail.ru&lt;/span&gt;&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;lazy.kent@opensuse.org&lt;/span&gt;&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;ViktorOn&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Traduction Russe : &lt;/span&gt;&lt;a href=&quot;https://github.com/alevtina-karashokova&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alevtina Karashokova&lt;/span&gt;&lt;/a&gt;, Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;stas_stv@mail.ru&lt;/span&gt;&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;lazy.kent@opensuse.org&lt;/span&gt;&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;ViktorOn&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="227"/>
@@ -373,7 +373,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/dialogmultipageeditor.cpp" line="159"/>
         <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;             Please install the correct version of &lt;b&gt;Ghostscript&lt;/b&gt;.&lt;br&gt;             Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
-        <translation type="unfinished"></translation>
+        <translation>Pour convertir des fichiers &lt;b&gt;PDF&lt;/b&gt; en images, &lt;b&gt;Ghostscript pour Windows&lt;/b&gt; doit être installé sur votre système.&lt;br&gt;&lt;br&gt;             Veuillez installer la bonne version de &lt;b&gt;Ghostscript&lt;/b&gt;.&lt;br&gt;             Cliquez sur le bouton &lt;b&gt;Aide&lt;/b&gt; pour plus de détails.</translation>
     </message>
 </context>
 <context>
@@ -396,12 +396,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogoptions.ui" line="46"/>
         <source>Themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Thèmes</translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="52"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Style :</translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="72"/>
@@ -452,12 +452,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/dialogoptions.cpp" line="106"/>
         <source>Please restart Converseen to apply the new theme!</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez redémarrer Converseen pour appliquer le nouveau thème!</translation>
     </message>
     <message>
         <location filename="../src/dialogoptions.cpp" line="145"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Système</translation>
     </message>
 </context>
 <context>
@@ -1141,12 +1141,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1558"/>
         <source>Invert Checked Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Inverser les éléments cochés</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1561"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1505"/>
@@ -1253,7 +1253,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="417"/>
         <source>n/a</source>
-        <translation type="unfinished"></translation>
+        <translation>n/a</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="464"/>
@@ -1377,12 +1377,12 @@ Cliquez sur Abandonner pour annuler toutes les opérations.</translation>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="44"/>
         <source>Image size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille d&apos;image</translation>
     </message>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="45"/>
         <source>Resolution</source>
-        <translation type="unfinished">Résolution</translation>
+        <translation>Résolution</translation>
     </message>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="46"/>
