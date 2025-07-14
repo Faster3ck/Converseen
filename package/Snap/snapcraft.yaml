@@ -2,22 +2,44 @@ name: converseen
 version: '0.15.0.1'
 summary: Converseen - A Batch Image Converter, Resizer and Processor for your Pictures!
 description: |
-  Converseen is a free and cross-platform batch image processor that allows you to convert, resize, rotate, and flip an infinite number of images with a     mouse click. Converseen is also able to transform an entire PDF file into a group of images with the characteristics you prefer: you can choose one of the 100+ formats, set the size, resolution, and the filename.
+  Converseen is a free and cross-platform batch image processor that allows you to convert, resize, rotate, and flip an infinite number of images with a mouse click. Converseen is also able to transform an entire PDF file into a group of images with the characteristics you prefer: you can choose one of the 100+ formats, set the size, resolution, and the filename.
   Converseen, thanks to ImageMagick, supports more than 100 image formats including JPEG, GIF, PNG, TIFF, WEBP, and many others.
-  
+
   Project's Website: https://converseen.fasterland.net/
   GitHub Page: https://github.com/Faster3ck/Converseen
 
 grade: stable
 confinement: strict
-base: core20
+base: core24
 icon: res/converseen.png
 license: GPL-3.0
 compression: lzo
 
-package-repositories:
-  - type: apt
-    ppa: savoury1/graphics
+apps:
+  converseen:
+    common-id: net.fasterland.converseen
+    command: usr/bin/converseen
+    environment:
+      # Set heif plugins path
+      LIBHEIF_PLUGIN_PATH: $SNAP/usr/lib/x86_64-linux-gnu/libheif/plugins
+      # Set Ghostscript env
+      GS_VERSION: "10.02.1"
+      GS_LIB: $SNAP/usr/share/ghostscript/${GS_VERSION}/Resource/Init
+      GS_FONTPATH: $SNAP/usr/share/ghostscript/${GS_VERSION}/Resource/Font
+      GS_OPTIONS: "-sGenericResourceDir=$SNAP/usr/share/ghostscript/${GS_VERSION}/Resource/ -sICCProfilesDir=$SNAP/usr/share/ghostscript/${GS_VERSION}/iccprofiles/"
+    extensions:
+      - kde-neon-6
+    desktop: usr/share/applications/net.fasterland.converseen.desktop
+    plugs:
+      - home
+      - opengl
+      - network
+      - network-bind
+      - pulseaudio
+      - desktop
+      - desktop-legacy
+      - wayland
+      - unity7
 
 # Converseen Main Program
 parts:
@@ -26,24 +48,36 @@ parts:
     source: https://github.com/Faster3ck/Converseen.git
     source-type: git
     source-branch: main
-    build-snaps:
-      - kde-frameworks-5-99-qt-5-15-7-core20-sdk
-      - kde-frameworks-5-99-qt-5-15-7-core20
-    build-packages:
-      - libegl1-mesa-dev
-    stage-packages:
-      - libegl1
-      - libssl1.1
-      - libimath-3-1-29
-      - libopenexr-3-2-31
-      - libraw23
     cmake-parameters:
-      - "-DKDE_INSTALL_USE_QT_SYS_PATHS=ON"
-      - "-DCMAKE_INSTALL_PREFIX=/usr"
-      - "-DCMAKE_BUILD_TYPE=Release"
-      - "-DENABLE_TESTING=OFF"
-      - "-DBUILD_TESTING=OFF"
-      - "-DKDE_SKIP_TEST_SETTINGS=ON"
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DQT_MAJOR_VERSION=6
+      - -DBUILD_WITH_QT6=ON
+      - -DBUILD_TESTING=OFF
+      - -DCMAKE_INSTALL_SYSCONFDIR=/etc
+      - -DCMAKE_INSTALL_LOCALSTATEDIR=/var
+      - -DCMAKE_EXPORT_NO_PACKAGE_REGISTRY=ON
+      - -DCMAKE_FIND_USE_PACKAGE_REGISTRY=OFF
+      - -DCMAKE_FIND_PACKAGE_NO_PACKAGE_REGISTRY=ON
+      - -DCMAKE_INSTALL_RUNSTATEDIR=/run
+      - -DCMAKE_SKIP_INSTALL_ALL_DEPENDENCY=ON
+      - -DCMAKE_VERBOSE_MAKEFILE=ON
+      - -DCMAKE_INSTALL_LIBDIR=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
+      - --log-level=STATUS
+      - -DCMAKE_LIBRARY_PATH=lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR
+      - -DUSE_QT6=yes
+    build-environment: &build-environment
+      - LD_LIBRARY_PATH: >
+         "/snap/mesa-2404/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kde-qt6-core24-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/libproxy:$LD_LIBRARY_PATH"
+    prime:
+      - -usr/lib/*/cmake/*
+      - -usr/include/*
+      - -usr/share/ECM/*
+      - -usr/share/man/*
+      - -usr/bin/X11
+      - -usr/lib/gcc/$CRAFT_ARCH_TRIPLET_BUILD_FOR/6.0.0
+      - -usr/lib/aspell/*
+      - -usr/share/lintian
     after:
       - imagemagick7
 
@@ -65,18 +99,12 @@ parts:
       - "--without-fpx"
       - "--with-heic=yes"
       - "--with-jxl=yes"
-      - "--with-fftw=yes"
+      - "--with-fftw=no"
       - "--with-freetype=yes"
       - "--prefix=/usr"
     build-packages:
-      - libtool
-      - pkg-config
-      - build-essential
-      - libssl-dev
       - libffi-dev
       - zlib1g-dev
-      - libpng-dev
-      - libjpeg-dev
       - liblcms2-dev
       - libtiff-dev
       - libopenjp2-7-dev
@@ -84,21 +112,13 @@ parts:
       - libde265-dev
       - libheif-dev
       - libgif-dev
-      - libfreetype6-dev
       - libfontconfig1-dev
-      - libxext-dev
-      - libx11-dev
       - libdjvulibre-dev
       - libgs-dev
       - libwmf-dev
-      #- libpango1.0-dev
-      #- librsvg2-bin
-      #- librsvg2-dev
       - libxml2-dev
-      - fftw-dev
       - liblqr-1-0-dev
       - libraw-dev
-      #- libilmbase-dev
       - libimath-dev
       - libopenexr-dev
       - libdeflate-dev
@@ -106,55 +126,53 @@ parts:
       - libjxl-dev
       - libx265-dev
     stage-packages:
-      - libffi7
+      - libffi8
       - zlib1g
-      - libpng16-16 
-      - libjpeg8 
       - liblcms2-2
-      - libtiff5
+      - libtiff6
       - libopenjp2-7
-      - libwebp6
+      - libwebp7
       - libde265-0
       - libheif1
       - libgif7
-      - libfreetype6
       - libfontconfig1
-      - libxext6
       - libdjvulibre21
-      - libgs9
+      - libgs10
       - libwmf0.2-7
-      #- libpango1.0-0
-      #- librsvg2-2
       - libxml2
-      - fftw2
       - liblqr-1-0
       - libraw23
-      #- libilmbase24
-      #- libimath
-      - libopenexr-3-2-31
+      - libopenexr-3-1-30
       - libdeflate0
       - libraqm0
-      - libpsm-infinipath1
-      - libgl1-mesa-dri
-      - libx265-209
+      - libx265-199
       - libheif-plugin-aomdec
       - libheif-plugin-aomenc
       - libheif-plugin-dav1d
       - libheif-plugin-libde265
       - libheif-plugin-x265
-      - libjxl0.11
+      - libjxl0.7
+      - libicu74
+      - libicu-dev
 
   cleanup:
-    after: 
+    after:
       - imagemagick7
       - converseen
     plugin: nil
     build-snaps:
-      - core20
-      - kde-frameworks-5-99-qt-5-15-7-core20-sdk
-      - kde-frameworks-5-99-qt-5-15-7-core20
+      - core24
+      - kf6-core24
+
     override-prime: |
       set -eux
+
+      for snap in "core24" "kf6-core24"; do
+        cd "/snap/$snap/current"
+        find . \( -type f -o -type l ! -xtype d \) -print \
+            | sed 's|^./|/root/prime/|' \
+            | xargs -r rm -f
+      done
 
       # Remove ImageMagick-7 unnecessary files:
       rm -f $SNAPCRAFT_PRIME/usr/bin/animate
@@ -180,24 +198,3 @@ parts:
       rm -rf $SNAPCRAFT_PRIME/usr/share/doc/ImageMagick-7/images
       rm -rf $SNAPCRAFT_PRIME/usr/share/doc/ImageMagick-7/www
       rm -rf $SNAPCRAFT_PRIME/usr/share/doc/ImageMagick-7/index.html
-
-apps:
-  converseen:
-    common-id: net.fasterland.converseen
-    command: usr/bin/converseen
-    environment:
-      LIBHEIF_PLUGIN_PATH: $SNAP/usr/lib/x86_64-linux-gnu/libheif/plugins
-    extensions:
-      - kde-neon
-    desktop: usr/share/applications/net.fasterland.converseen.desktop
-    plugs:
-      - home
-      - opengl
-      - network
-      - network-bind
-      - pulseaudio
-      - desktop
-      - desktop-legacy
-      - wayland
-      - unity7
-
