@@ -39,6 +39,8 @@ build_script:
     
     cd build-qt5 
 
+    cmake --version
+
     cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-32" ..
     
     nmake
