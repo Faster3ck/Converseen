@@ -5,6 +5,7 @@ environment:
   Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
   Qt6_INSTALL_DIR: C:\Qt\6.9.1\msvc2022_64
 install:
+  - choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' --yes
   - pip install aqtinstall
   - aqt install-qt windows desktop 6.9.1 win64_msvc2022_64 --outputdir C:\Qt
 
