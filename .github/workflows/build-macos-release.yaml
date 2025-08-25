@@ -32,7 +32,7 @@ jobs:
       uses: jurplel/install-qt-action@v3
       with:
         aqtversion: '==3.1.*'
-        version: '6.9.*'
+        version: '6.9.1'
         host: 'mac'
         target: 'desktop'
         arch: 'clang_64'
@@ -293,3 +293,4 @@ jobs:
           echo "url: $c_url"
           
           curl -H "Accept: application/json" -X PUT -d "default=mac" -d "api_key=${{ secrets.SF_API_KEY }}" $c_url
+
