@@ -49,7 +49,7 @@ jobs:
         uses: jurplel/install-qt-action@v4
         with:
           aqtversion: '==3.1.*'
-          version: '6.9.*'
+          version: '6.9.1'
           host: 'linux'
           target: 'desktop'
           arch: 'linux_gcc_64'
@@ -165,3 +165,4 @@ jobs:
           
           curl -H "Accept: application/json" -X PUT -d "default=linux" -d "api_key=${{ secrets.SF_API_KEY }}" $c_url
   
+
