@@ -38,7 +38,7 @@ build_script:
     
     cd build-qt5 
 
-    curl.exe -fsSL --ssl-no-revoke -o openssl.zip https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip
+    powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri 'https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip' -OutFile 'openssl.zip'"
     
     7z x openssl.zip -o.
 
