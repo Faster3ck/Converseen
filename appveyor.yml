@@ -38,7 +38,7 @@ build_script:
     
     cd build-qt5 
 
-    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-32" ..
+    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-32" -DOpenSSL_Win32_Path="C:\OpenSSL-v111-Win32\bin" ..
     
     nmake
     
@@ -55,7 +55,7 @@ build_script:
     
     cd build-qt6
 
-    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-64" -DOpenSSL_Win32_Path="C:\OpenSSL-v111-Win32\bin" -DUSE_QT6=yes ..
+    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-64" -DUSE_QT6=yes ..
     
     nmake
     
