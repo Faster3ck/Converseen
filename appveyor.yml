@@ -38,7 +38,7 @@ build_script:
     
     cd build-qt5 
 
-    curl -L -o openssl.zip https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip
+    wget https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip -O openssl.zip
     
     7z x openssl.zip -o.
 
