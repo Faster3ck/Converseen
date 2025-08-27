@@ -38,10 +38,6 @@ build_script:
     
     cd build-qt5 
 
-    powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Invoke-WebRequest -Uri 'https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip' -OutFile 'openssl.zip'"
-    
-    7z x openssl.zip -o.
-
     cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-32" ..
     
     nmake
@@ -59,7 +55,7 @@ build_script:
     
     cd build-qt6
 
-    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-64" -DUSE_QT6=yes ..
+    cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-64" -DOpenSSL_Win32_Path="C:\OpenSSL-v111-Win32\bin" -DUSE_QT6=yes ..
     
     nmake
     
