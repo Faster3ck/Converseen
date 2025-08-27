@@ -4,9 +4,7 @@ image: Visual Studio 2022
 environment:
   Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
   Qt6_INSTALL_DIR: C:\Qt\6.9.1\msvc2022_64
-  CMAKE_TLS_VERIFY: 0
 install:
-  - choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' --yes
   - pip install aqtinstall
   - aqt install-qt windows desktop 6.9.1 win64_msvc2022_64 --outputdir C:\Qt
 
@@ -40,7 +38,9 @@ build_script:
     
     cd build-qt5 
 
-    cmake --version
+    curl -L -o openssl.zip https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip
+    
+    7z x openssl.zip -o.
 
     cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="C:\projects\ImageMagick-32" ..
     
