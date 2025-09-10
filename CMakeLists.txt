@@ -139,19 +139,20 @@ if(WIN32)
 	set(CMAKE_INSTALL_BINDIR "${PROJECT_NAME_CAPITALIZED}")
 
 	if (NOT USE_QT6)
-		# Download openssl if Qt5 is used!
-		include(ExternalProject)
-		ExternalProject_Add(
-			OpenSSL_Win32
-			PREFIX ${CMAKE_BINARY_DIR}/external 
-			URL https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip 
-			DOWNLOAD_DIR ${CMAKE_BINARY_DIR}/downloads
-			DOWNLOAD_NAME openssl-1.1.1w.zip
-			CONFIGURE_COMMAND ""
-			BUILD_COMMAND ""
-			INSTALL_COMMAND ""
-			# DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-		)
+		set(OpenSSL_Win32_Path ${CMAKE_BINARY_DIR}/openssl-1.1/x86/bin CACHE PATH "OpenSSL win32 bin path")
+	#	# Download openssl if Qt5 is used!
+	#	include(ExternalProject)
+	#	ExternalProject_Add(
+	#		OpenSSL_Win32
+	#		PREFIX ${CMAKE_BINARY_DIR}/external 
+	#		URL https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip 
+	#		DOWNLOAD_DIR ${CMAKE_BINARY_DIR}/downloads
+	#		DOWNLOAD_NAME openssl-1.1.1w.zip
+	#		CONFIGURE_COMMAND ""
+	#		BUILD_COMMAND ""
+	#		INSTALL_COMMAND ""
+	#		# DOWNLOAD_EXTRACT_TIMESTAMP TRUE
+	#	)
 	endif()
 else()
     add_definitions(
@@ -220,8 +221,8 @@ if(WIN32)
 	
 	if (NOT USE_QT6)
 		install(FILES package/Windows/qt.conf DESTINATION ${CMAKE_INSTALL_BINDIR})
-		install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libcrypto-1_1.dll DESTINATION ${CMAKE_INSTALL_BINDIR})
-		install(FILES ${CMAKE_BINARY_DIR}/external/src/OpenSSL_Win32/x86/bin/libssl-1_1.dll DESTINATION ${CMAKE_INSTALL_BINDIR})
+		install(FILES ${OpenSSL_Win32_Path}/libcrypto-1_1.dll DESTINATION ${CMAKE_INSTALL_BINDIR})
+		install(FILES ${OpenSSL_Win32_Path}/libssl-1_1.dll DESTINATION ${CMAKE_INSTALL_BINDIR})
 	endif()
 	
 	install(SCRIPT ${CMAKE_BINARY_DIR}/windeployqt.cmake)
@@ -286,3 +287,4 @@ if(WIN32)
 
     include(CPack)
 endif()
+
