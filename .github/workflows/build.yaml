@@ -126,7 +126,7 @@ jobs:
             imagemagick_arch: 'x86'
             vs_arch: 'x86'
             bits: '32bit'
-            cmake_extra_flags: ''
+            cmake_extra_flags: '-DOpenSSL_Win32_Path="..\..\openssl-1.1\x86\bin"'
           - qt_version: '6.9.1'
             qt_arch: 'win64_msvc2022_64'
             imagemagick_arch: 'x64'
@@ -167,7 +167,14 @@ jobs:
           arch: '${{ matrix.qt_arch }}'
           install-deps: 'true'
           set-env: 'true'
-      
+
+      - name: Download OpenSSL (32 bit only)
+        shell: powershell
+        if: matrix.vs_arch == 'x86'
+        run: |
+          Invoke-WebRequest -Uri "https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip" -OutFile "openssl-1.1.1w.zip"
+          Expand-Archive -Path "openssl-1.1.1w.zip" -DestinationPath . -Force
+          
       - name: Build Converseen (Qt ${{ matrix.qt_version }} ${{ matrix.bits }})
         shell: cmd
         run: |
@@ -183,14 +190,10 @@ jobs:
       
       - name: Prepare Artifacts (Qt ${{ matrix.qt_version }} ${{ matrix.bits }})
         shell: cmd
-        run: |
-          ls
-          ls Converseen/build/package/
-        
+        run: |       
           mkdir artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}
           cp Converseen/build/package/*.msi artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}/
           cp Converseen/build/package/*.zip artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}/
-          ls artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}
       
       - uses: actions/upload-artifact@v4
         with:
