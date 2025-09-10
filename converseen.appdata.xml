@@ -79,17 +79,17 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.15.0.2" date="2025-07-15">
+        <release version="0.15.0.3" date="2025-09-11">
             <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.15.0.2</p>
+                <p>Changelog for 0.15.0.3</p>
                 <ul>
-                    <li>Updated Chinese translation</li>
-                    <li>Updated French translation</li>
+                    <li>Fixed crashes with images containing inconsistent or corrupted metadata</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.15.0.2" date="2025-07-15" />
         <release version="0.15.0.1" date="2025-07-05" />
         <release version="0.15.0.0" date="2025-07-01" />
         <release version="0.14.0.0" date="2025-04-25" />

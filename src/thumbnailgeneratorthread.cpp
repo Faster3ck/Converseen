@@ -107,6 +107,8 @@ void ThumbnailGeneratorThread::createThumbnail()
     double img_dens_x = 0.0;
     double img_dens_y = 0.0;
 
+    int orientation = 0;
+
     my_image.quiet(true);
 
     if (Formats::isNativeReadable(m_fileName)) {
@@ -116,12 +118,25 @@ void ThumbnailGeneratorThread::createThumbnail()
         img_width = tmpImage.width();
         img_height = tmpImage.height();
 
-        my_image.ping(m_fileName.toStdString());
-        int orientation = my_image.orientation();
-        my_image.autoOrient();
+        try {
+            my_image.ping(m_fileName.toStdString());
 
-        img_dens_x = my_image.xResolution();
-        img_dens_y = my_image.yResolution();
+            orientation = my_image.orientation();
+            my_image.autoOrient();
+
+            img_dens_x = my_image.xResolution();
+            img_dens_y = my_image.yResolution();
+        }
+        catch (Error &error) {
+            QString err_read_status = QString("Error in reading metadata (Generating preview): %1").arg(QString::fromStdString(error.what()));
+            qWarning() << "Read Error: " << err_read_status;
+
+            int dpiX = tmpImage.dotsPerMeterX();
+            int dpiY = tmpImage.dotsPerMeterY();
+
+            img_dens_x = qRound(dpiX * 0.0254);
+            img_dens_y = qRound(dpiY * 0.0254);
+        }
 
         if (m_generateThumbnail) {
             qreal scaleFactor = globals::Globals::scaleFactor();

@@ -1,3 +1,7 @@
+0.15.0.3 – 2025-09-11
+- Fixed crashes with images containing inconsistent or corrupted metadata
+- Various bug fixes
+
 0.15.0.2 – 2025-07-15
 - Updated Chinese translation
 - Updated French translation

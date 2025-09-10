@@ -24,6 +24,7 @@
 #include <QColorDialog>
 #include <QTimer>
 #include <QStyleFactory>
+#include <QImageReader>
 #include <string>
 #include <iostream>
 #include "mainwindowimpl.h"
@@ -404,21 +405,53 @@ void MainWindowImpl::loadFiles(QStringList fileNames)
         QFileInfo fi(fileNames.at(i));
         ImageAttributes iA;
 
+        int w_data = 0;
+        int h_data = 0;
+        int x_dpi_data = 0;
+        int y_dpi_data = 0;
+
         /* Controlla i doppioni! */
         if (!checkDuplicates(fileNames, i)) {
             Image my_image;
-            my_image.ping(fileNames.at(i).toStdString());
+            my_image.quiet(true);
+
+            try {
+                my_image.ping(fileNames.at(i).toStdString());
+
+                w_data = my_image.columns();
+                h_data = my_image.rows();
+                x_dpi_data = my_image.xResolution();
+                y_dpi_data = my_image.yResolution();
+            }
+            catch (Error &error) {
+                QString err_read_status = QString("Error in reading image metadata: %1").arg(QString::fromStdString(error.what()));
+                qWarning() << "Read Error: " << err_read_status;
+                if (Formats::isNativeReadable(fileNames.at(i).toUtf8())) {
+                    QImageReader reader(fileNames.at(i));
+                    QSize size = reader.size();
+                    QImage qimg = reader.read();
+
+                    w_data = size.width();
+                    h_data = size.height();
+
+                    int dpiX = qimg.dotsPerMeterX();
+                    int dpiY = qimg.dotsPerMeterY();
+
+                    x_dpi_data = dpiX * 0.0254;
+                    y_dpi_data = dpiY * 0.0254;
+                }
+            }
 
             iA.completeFileName = fileNames.at(i).toUtf8();
             iA.fileName = fi.fileName();
             iA.suffix = fi.suffix();
-            iA.imgSize = QString("%1×%2 px").arg(QString::number(my_image.columns()), QString::number(my_image.rows()));
-            if (my_image.xResolution() == 0 || my_image.yResolution() == 0) {
+            iA.imgSize = QString("%1×%2 px").arg(QString::number(w_data), QString::number(h_data));
+            if (x_dpi_data == 0 || y_dpi_data == 0) {
                 iA.imgRes = tr("n/a");
             } else {
                 iA.imgRes = QString("%1×%2 dpi")
-                                .arg(QString::number(my_image.xResolution()),
-                                     QString::number(my_image.yResolution()));
+                                .arg(QString::number(x_dpi_data),
+                                     QString::number(y_dpi_data));
             }
             iA.size = fi.size();
             iA.path = fi.path();
