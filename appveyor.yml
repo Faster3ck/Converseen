@@ -10,6 +10,8 @@ install:
 
 build_script:
 - ps: |
+    ls C:\Qt
+
     $env:PATH += ";$env:Qt5_INSTALL_DIR\bin;$env:Qt6_INSTALL_DIR\bin"
 
     # Get latest version number from GitHub
