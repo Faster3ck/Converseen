@@ -137,6 +137,14 @@ void ThumbnailGeneratorThread::createThumbnail()
             img_dens_x = qRound(dpiX * 0.0254);
             img_dens_y = qRound(dpiY * 0.0254);
         }
+        catch( Magick::WarningCoder &warning )
+        {
+            qWarning() << "Read Warning: " << QString("Warning : %1").arg(QString::fromStdString(warning.what()));;
+        }
+        catch( Magick::Warning &warning )
+        {
+            qWarning() << "Read Warning: " << QString("Warning : %1").arg(QString::fromStdString(warning.what()));;
+        }
 
         if (m_generateThumbnail) {
             qreal scaleFactor = globals::Globals::scaleFactor();

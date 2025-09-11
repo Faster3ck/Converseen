@@ -413,7 +413,7 @@ void MainWindowImpl::loadFiles(QStringList fileNames)
         /* Controlla i doppioni! */
         if (!checkDuplicates(fileNames, i)) {
             Image my_image;
-            my_image.quiet(true);
+            //my_image.quiet(true);
 
             try {
                 my_image.ping(fileNames.at(i).toStdString());
@@ -440,6 +440,14 @@ void MainWindowImpl::loadFiles(QStringList fileNames)
                     x_dpi_data = dpiX * 0.0254;
                     y_dpi_data = dpiY * 0.0254;
                 }
+            }
+            catch( Magick::WarningCoder &warning )
+            {
+                qWarning() << "Read Warning: " << QString("Warning : %1").arg(QString::fromStdString(warning.what()));;
+            }
+            catch( Magick::Warning &warning )
+            {
+                qWarning() << "Read Warning: " << QString("Warning : %1").arg(QString::fromStdString(warning.what()));;
             }
 
             iA.completeFileName = fileNames.at(i).toUtf8();
