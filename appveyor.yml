@@ -2,16 +2,15 @@ version: '{branch}-{build}'
 skip_non_tags: true
 image: Visual Studio 2022
 environment:
-  Qt5_INSTALL_DIR: C:\Qt\5.15.2\msvc2019
-  Qt6_INSTALL_DIR: C:\Qt\6.9.2\msvc2022_64
+  Qt5_INSTALL_DIR: C:\aqtQt\5.15.2\msvc2019
+  Qt6_INSTALL_DIR: C:\aqtQt\6.9.2\msvc2022_64
 install:
   - pip install aqtinstall
-  - aqt install-qt windows desktop 6.9.2 win64_msvc2022_64 --outputdir C:\Qt
+  - aqt install-qt windows desktop 5.15.2 win32_msvc2019 --outputdir C:\aqtQt
+  - aqt install-qt windows desktop 6.9.2 win64_msvc2022_64 --outputdir C:\aqtQt
 
 build_script:
 - ps: |
-    ls C:\Qt
-
     $env:PATH += ";$env:Qt5_INSTALL_DIR\bin;$env:Qt6_INSTALL_DIR\bin"
 
     # Get latest version number from GitHub
@@ -31,8 +30,6 @@ build_script:
     
 - cmd: >-
     call "C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\Tools\VsDevCmd.bat"
-
-    ls C:\Qt\5.15.2\msvc2019
 
     cd C:\projects\converseen 
 
