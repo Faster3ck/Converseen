@@ -127,7 +127,7 @@ jobs:
             vs_arch: 'x86'
             bits: '32bit'
             cmake_extra_flags: '-DOpenSSL_Win32_Path="..\..\openssl-1.1\x86\bin"'
-          - qt_version: '6.9.1'
+          - qt_version: '6.9.2'
             qt_arch: 'win64_msvc2022_64'
             imagemagick_arch: 'x64'
             vs_arch: 'x64'

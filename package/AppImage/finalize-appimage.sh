@@ -4,13 +4,9 @@ set -x
 set -e
 
 PROGRAM_NAME="Converseen"
-<<<<<<< HEAD
 PROGRAM_VERSION="0.15.0.3"
 BUILD_VERSION="1"
-=======
-PROGRAM_VERSION="0.15.0.2"
-BUILD_VERSION="2"
->>>>>>> b27bada2ceeda0aec88a680a7d201878b0af6eda
+
 ARCH=$(uname -m)
 
 OUTPUT_NAME=$PROGRAM_NAME-$PROGRAM_VERSION-$BUILD_VERSION-$ARCH.AppImage
