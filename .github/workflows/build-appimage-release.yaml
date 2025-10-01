@@ -140,10 +140,13 @@ jobs:
           SF_HOSTS=$(ssh-keyscan -H frs.sourceforge.net)
           echo "known-hosts=$SF_HOSTS" >> $GITHUB_OUTPUT
 
-      - name: Download artifacts
-        uses: actions/download-artifact@v4.3.0
-        with:
-          name: AppImage
+      - uses: actions/download-artifact@v4.3.0
+          with:
+            name: AppImage-x86_64
+
+        - uses: actions/download-artifact@v4.3.0
+          with:
+            name: AppImage-aarch64
 
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
@@ -155,12 +158,10 @@ jobs:
       - name: rsync over SSH
         id: rsync
         run: |
-          cd artifacts
-
           c_ver=${{ needs.build-appimage.outputs.output_version }}
           v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
 
-          c_target=$(echo $(ls Converseen-*.AppImage))
+          c_target=$(echo $(ls Converseen-*x86_64.AppImage))
           echo "target-file=$c_target" >> $GITHUB_OUTPUT
 
           rsync -r *.AppImage* ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
