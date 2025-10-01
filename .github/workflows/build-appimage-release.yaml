@@ -1,126 +1,124 @@
 name: Build and Release Converseen AppImage
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
 
 on:
   push:
-    tags:        
+    tags:
       - '**'
   workflow_dispatch:
-      
-permissions:
-  contents: write
 
+env:
+  APPIMAGE_DIR: Converseen/package/AppImage/
+  
 jobs:
   build-appimage:
-    runs-on: ubuntu-22.04
+    name: "${{ matrix.name }} (${{ matrix.arch }})"
+    runs-on: ${{ matrix.runs-on }}
     outputs:
       output_version: ${{ steps.converseen-version.outputs.version }}
+    strategy:
+      matrix:
+        include:
+          - runs-on: ubuntu-latest
+            name: Build AppImage
+            arch: x86_64
+          - runs-on: ubuntu-24.04-arm
+            name: Build AppImage
+            arch: aarch64
+    container:
+      image: ghcr.io/pkgforge-dev/archlinux:latest
     steps:
-      - uses: actions/checkout@v4
-      - name: install dependencies
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Create builder user
         run: |
-          sudo add-apt-repository -y ppa:savoury1/graphics
-          
-          sudo apt-get update
-          sudo apt-get upgrade
-          
-          sudo apt install -y binutils coreutils desktop-file-utils fakeroot fuse libgdk-pixbuf2.0-dev patchelf python3-pip python3-setuptools squashfs-tools strace util-linux zsync gnupg2
-          sudo apt install -y git cmake zlib1g-dev libxcb-cursor0 libtool pkg-config build-essential libssl-dev
-          sudo apt install -y libffi8 zlib1g libpng16-16 libjpeg8 liblcms2-2 libtiff6 libopenjp2-7 libwebp7 libde265-0 libx265-199 libheif1 libgif7 libfreetype6 libfontconfig1 libxext6 libdjvulibre21 libgs9 libwmf0.2-7 libpango1.0-0 librsvg2-2 libxml2 liblqr-1-0 libraw23 libimath-3-1-29 libopenexr-3-2-31 libdeflate0 libraqm0 libpsm-infinipath1 libgl1-mesa-dri libxcb-cursor0 
-          sudo apt install -y libffi-dev zlib1g-dev libpng-dev libjpeg-dev liblcms2-dev libtiff-dev libopenjp2-7-dev libwebp-dev libde265-dev libheif-dev libgif-dev libfreetype6-dev libfontconfig1-dev libxext-dev libx11-dev libdjvulibre-dev libgs-dev libwmf-dev libpango1.0-dev librsvg2-dev libxml2-dev fftw-dev liblqr-1-0-dev libraw-dev libopenexr-dev libdeflate-dev libraqm-dev libjxl-dev libimath-dev libopengl-dev libglx-dev libgl-dev
-      
-      - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6
+          pacman -Sy --noconfirm shadow sudo base-devel
+          # useradd -m -u 1000 -s /bin/bash builder
+          useradd -m builder
+          echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+          chown -Rv builder:builder $GITHUB_WORKSPACE
+
+      - name: Run as builder
+        run: |
+          echo "su: "
+          su - builder
+          whoami
+
+          echo "sudo: "
+          sudo -u builder whoami
+
+      - name: Get dependencies
+        run: |
+          cd $APPIMAGE_DIR
+          chmod +x ./get-dependencies.sh && ./get-dependencies.sh
+
+      - name: Install Custom ImageMagick
+        run: |
+          cd $APPIMAGE_DIR
+          chmod +x ./build-imagemagick.sh && ./build-imagemagick.sh
+
+      - name: Build Converseen
+        run: |
+          cd $APPIMAGE_DIR/build
+          sudo -u builder makepkg -si --noconfirm
+
+      - name: Make AppImage
+        run: |
+          cd "$APPIMAGE_DIR"
+          chmod +x ./*-appimage.sh && ./*-appimage.sh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4.6.2
         with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          git_user_signingkey: true
+          name: AppImage-${{ matrix.arch }}
+          path: ${{ env.APPIMAGE_DIR }}/dist
 
-      - name: Get Converseen Version Number
-        id: converseen-version
-        run: | 
-          file_content=$(<package/AppImage/finalize-appimage.sh)
-          VERSION=$(echo "$file_content" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
-  
-          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
-  
-          echo "Version: $VERSION"
+  release:
+      needs: [build-appimage]
+      permissions: write-all
+      runs-on: ubuntu-latest
 
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v4
-        with:
-          aqtversion: '==3.1.*'
-          version: '6.9.1'
-          host: 'linux'
-          target: 'desktop'
-          arch: 'linux_gcc_64'
-          install-deps: 'true'
-          set-env: 'true'
-      
-      - name: Build ImageMagick
-        run: |
-          wget https://mirror.dogado.de/imagemagick/ImageMagick.tar.bz2
-          tar -xvf ImageMagick.tar.bz2
-          cd ImageMagick-*/
-          ./configure --enable-shared --disable-installed --enable-hdri --without-perl --disable-dependency-tracking --with-gslib=yes --with-openjp2 --with-wmf --without-gvc --with-djvu --without-dps --without-fpx --with-heic=yes --prefix=$HOME/ImageMagick7-devel
-          make -j$(nproc)
-          make install
+      steps:
+        - uses: actions/download-artifact@v4.3.0
+          with:
+            name: AppImage-x86_64
 
-      - name: Build AppImage
-        run: |
-          cd package/AppImage
-          
-          chmod a+x build-with-cmake.sh
-          chmod a+x finalize-appimage.sh
-          
-          ./build-with-cmake.sh
-          ./finalize-appimage.sh
+        - uses: actions/download-artifact@v4.3.0
+          with:
+            name: AppImage-aarch64
 
-      - name: Prepare Artifacts
-        run: |
-          mkdir artifacts
-          cp package/AppImage/*.AppImage* artifacts
-          
-      - uses: actions/upload-artifact@v4
-        with:
-          name: AppImage
-          path: 'artifacts'
+        - name: Get Previous tag
+          id: previoustag
+          uses: "WyriHaximus/github-action-get-previous-tag@v1"
+          with:
+            fallback: "v${{ needs.build-appimage.outputs.output_version }}"
 
-  create_release:
-    name: 'Create release'
-    needs:
-      - build-appimage
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout Converseen
-      uses: actions/checkout@v4
-      
-    - name: Download artifacts
-      uses: actions/download-artifact@v4
-      with:
-        name: AppImage
-        path: artifacts
-
-    - name: 'Get Previous tag'
-      id: previoustag
-      uses: "WyriHaximus/github-action-get-previous-tag@v1"
-      with:
-        fallback: "v${{ needs.build-appimage.outputs.output_version }}"
-
-    - name: Publish Release
-      uses: softprops/action-gh-release@v1
-      with:
-        tag_name: "${{ steps.previoustag.outputs.tag }}"
-        files: |
-          artifacts/*.AppImage*
+        - name: Publish Release
+          uses: softprops/action-gh-release@v2.2.2
+          with:
+            tag_name: "${{ steps.previoustag.outputs.tag }}"
+            prerelease: false
+            draft: false
+            generate_release_notes: false
+            fail_on_unmatched_files: false
+            make_latest: true
+            files: |
+              *.AppImage*
 
   sf-release:
     name: Sourceforge Release
     needs:
       - build-appimage
     runs-on: ubuntu-latest
-  
+
     steps:
+      - uses: actions/download-artifact@v4.3.0
+        with:
+          name: AppImage-x86_64
+
       - name: Known Hosts
         id: known-hosts
         run: |
@@ -128,41 +126,38 @@ jobs:
           echo "known-hosts=$SF_HOSTS" >> $GITHUB_OUTPUT
 
       - name: Download artifacts
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v4.3.0
         with:
           name: AppImage
-          path: artifacts
-        
+
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
           key: ${{ secrets.SF_SSH_KEY }}
           known_hosts: ${{ steps.known-hosts.outputs.known-hosts }}
           if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
-          
+
       - name: rsync over SSH
         id: rsync
         run: |
           cd artifacts
-        
+
           c_ver=${{ needs.build-appimage.outputs.output_version }}
           v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
-          
+
           c_target=$(echo $(ls Converseen-*.AppImage))
           echo "target-file=$c_target" >> $GITHUB_OUTPUT
-          
+
           rsync -r *.AppImage* ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
 
       - name: Set Platform
         run: |
           c_ver=${{ needs.build-appimage.outputs.output_version }}
           c_target=${{ steps.rsync.outputs.target-file }}
-          
+
           v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
           c_url=https://sourceforge.net/projects/converseen/files/Converseen/Converseen%20${v_dir}/$c_target
 
           echo "url: $c_url"
-          
-          curl -H "Accept: application/json" -X PUT -d "default=linux" -d "api_key=${{ secrets.SF_API_KEY }}" $c_url
-  
 
+          curl -H "Accept: application/json" -X PUT -d "default=linux" -d "api_key=${{ secrets.SF_API_KEY }}" $c_url

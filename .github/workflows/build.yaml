@@ -6,72 +6,65 @@ on:
 
 jobs:
   build-linux:
-    name: Converseen Linux Build (AppImage)
-    runs-on: ubuntu-22.04
+    name: "${{ matrix.name }} (${{ matrix.arch }})"
+    runs-on: ${{ matrix.runs-on }}
+    strategy:
+      matrix:
+        include:
+          - runs-on: ubuntu-latest
+            name: Build AppImage
+            arch: x86_64
+          - runs-on: ubuntu-24.04-arm
+            name: Build AppImage
+            arch: aarch64
+    container:
+      image: ghcr.io/pkgforge-dev/archlinux:latest
     steps:
-      - name: Checkout Converseen
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install Dependencies
+      - name: Create builder user
         run: |
-          sudo add-apt-repository -y ppa:savoury1/graphics
-          
-          sudo apt-get update
-          sudo apt-get upgrade
-          
-          sudo apt install -y binutils coreutils desktop-file-utils fakeroot fuse libgdk-pixbuf2.0-dev patchelf python3-pip python3-setuptools squashfs-tools strace util-linux zsync gnupg2
-          sudo apt install -y git cmake zlib1g-dev libxcb-cursor0 libtool pkg-config build-essential libssl-dev
-          sudo apt install -y libffi8 zlib1g libpng16-16 libjpeg8 liblcms2-2 libtiff6 libopenjp2-7 libwebp7 libde265-0 libx265-199 libheif1 libgif7 libfreetype6 libfontconfig1 libxext6 libdjvulibre21 libgs9 libwmf0.2-7 libpango1.0-0 librsvg2-2 libxml2 liblqr-1-0 libraw23 libimath-3-1-29 libopenexr-3-2-31 libdeflate0 libraqm0 libpsm-infinipath1 libgl1-mesa-dri libxcb-cursor0 
-          sudo apt install -y libffi-dev zlib1g-dev libpng-dev libjpeg-dev liblcms2-dev libtiff-dev libopenjp2-7-dev libwebp-dev libde265-dev libheif-dev libgif-dev libfreetype6-dev libfontconfig1-dev libxext-dev libx11-dev libdjvulibre-dev libgs-dev libwmf-dev libpango1.0-dev librsvg2-dev libxml2-dev fftw-dev liblqr-1-0-dev libraw-dev libopenexr-dev libdeflate-dev libraqm-dev libjxl-dev libimath-dev libopengl-dev libglx-dev libgl-dev
-      
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v4
-        with:
-          aqtversion: '==3.1.*'
-          version: '6.9.*'
-          host: 'linux'
-          target: 'desktop'
-          arch: 'linux_gcc_64'
-          install-deps: 'true'
-          set-env: 'true'
-      
-      - name: Build ImageMagick
-        run: |
-          wget https://mirror.dogado.de/imagemagick/ImageMagick.tar.bz2
-          tar -xvf ImageMagick.tar.bz2
-          cd ImageMagick-*/
-          ./configure --enable-shared --disable-installed --enable-hdri --without-perl --disable-dependency-tracking --with-gslib=yes --with-openjp2 --with-wmf --without-gvc --with-djvu --without-dps --without-fpx --with-heic=yes --prefix=$HOME/ImageMagick7-devel
-          make -j$(nproc)
-          make install
+          pacman -Sy --noconfirm shadow sudo base-devel
+          # useradd -m -u 1000 -s /bin/bash builder
+          useradd -m builder
+          echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+          chown -Rv builder:builder $GITHUB_WORKSPACE
 
-      - name: Import GPG key
-        uses: crazy-max/ghaction-import-gpg@v6
-        with:
-          gpg_private_key: ${{ secrets.GPG_PRIVATE_KEY }}
-          passphrase: ${{ secrets.GPG_PASSPHRASE }}
-          git_user_signingkey: true
-
-      - name: Build AppImage
+      - name: Run as builder
         run: |
-          find . -type f -exec chmod -v -x {} \;
-          
-          cd package/AppImage
-          
-          chmod a+x build-with-cmake.sh
-          chmod a+x finalize-appimage.sh
-          
-          ./build-with-cmake.sh
-          ./finalize-appimage.sh
+          echo "su: "
+          su - builder
+          whoami
 
-      - name: Prepare Artifacts
+          echo "sudo: "
+          sudo -u builder whoami
+
+      - name: Get dependencies
         run: |
-          mkdir artifacts
-          cp package/AppImage/*.AppImage* artifacts
-          
-      - uses: actions/upload-artifact@v4
+          cd $APPIMAGE_DIR
+          chmod +x ./get-dependencies.sh && ./get-dependencies.sh
+
+      - name: Install Custom ImageMagick
+        run: |
+          cd $APPIMAGE_DIR
+          chmod +x ./build-imagemagick.sh && ./build-imagemagick.sh
+
+      - name: Build Converseen
+        run: |
+          cd $APPIMAGE_DIR/build
+          sudo -u builder makepkg -si --noconfirm
+
+      - name: Make AppImage
+        run: |
+          cd "$APPIMAGE_DIR"
+          chmod +x ./*-appimage.sh && ./*-appimage.sh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4.6.2
         with:
-          name: AppImage
-          path: 'artifacts'
+          name: AppImage-${{ matrix.arch }}
+          path: ${{ env.APPIMAGE_DIR }}/dist
 
   build-linux-qt6-im6:
     name: Converseen Linux Build (Qt6 + ImageMagick6)
