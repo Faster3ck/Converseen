@@ -5,3 +5,4 @@
 *.DS_Store
 converseen.pro.user
 build/
+!package/AppImage/build/

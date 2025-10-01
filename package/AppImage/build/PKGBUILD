@@ -1,0 +1,23 @@
+pkgname=converseen
+pkgver=0.15.0.3
+pkgrel=1
+pkgdesc='Batch image converter and resizer'
+arch=('x86_64')
+url="https://github.com/Faster3ck/Converseen"
+license=('GPL3')
+depends=('hicolor-icon-theme')
+makedepends=('cmake' 'qt6-tools')
+source=("git+$url.git#tag=v$pkgver")
+md5sums=('SKIP')
+options=('!debug')
+
+build() {
+  cmake -B build -S Converseen \
+    -DCMAKE_INSTALL_PREFIX=/usr \
+    -DUSE_QT6=ON
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+}
