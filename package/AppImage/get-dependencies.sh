@@ -34,10 +34,13 @@ pacman -Syu --noconfirm \
 	wget             \
 	xorg-server-xvfb \
 	rav1e            \
-	svt-av1          \
 	ghostscript      \
 	ffmpeg           \
 	zsync
+
+	if [ "$(uname -m)" = "x86_64" ]; then
+	  pacman -S --noconfirm --needed svt-av1
+	fi
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
