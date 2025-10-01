@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 env:
-  APPIMAGE_DIR: Converseen/package/AppImage/
+  APPIMAGE_DIR: package/AppImage
   
 jobs:
   build-appimage:
