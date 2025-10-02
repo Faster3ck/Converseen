@@ -38,6 +38,7 @@ pacman -Syu --noconfirm \
 	ffmpeg           \
 	zsync
 
+	# At the moment, the svt-av1 package is not available on aarch64
 	if [ "$(uname -m)" = "x86_64" ]; then
 	  pacman -S --noconfirm --needed svt-av1
 	fi
