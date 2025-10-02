@@ -51,15 +51,6 @@ jobs:
           echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
           chown -Rv builder:builder $GITHUB_WORKSPACE
 
-      - name: Run as builder
-        run: |
-          echo "su: "
-          su - builder
-          whoami
-
-          echo "sudo: "
-          sudo -u builder whoami
-
       - name: Get dependencies
         run: |
           cd $APPIMAGE_DIR
@@ -94,6 +85,9 @@ jobs:
       runs-on: ubuntu-latest
 
       steps:
+        - name: Checkout Converseen
+          uses: actions/checkout@v4
+      
         - uses: actions/download-artifact@v4.3.0
           with:
             name: AppImage-x86_64
@@ -101,9 +95,6 @@ jobs:
         - uses: actions/download-artifact@v4.3.0
           with:
             name: AppImage-aarch64
-
-        - name: Checkout Converseen
-          uses: actions/checkout@v4
 
         - name: Get Previous tag
           id: previoustag
@@ -121,7 +112,7 @@ jobs:
             fail_on_unmatched_files: false
             make_latest: true
             files: |
-              *.AppImage*
+              -*.AppImage*
 
   sf-release:
     name: Sourceforge Release
@@ -141,12 +132,12 @@ jobs:
           echo "known-hosts=$SF_HOSTS" >> $GITHUB_OUTPUT
 
       - uses: actions/download-artifact@v4.3.0
-          with:
-            name: AppImage-x86_64
+        with:
+          name: AppImage-x86_64
 
-        - uses: actions/download-artifact@v4.3.0
-          with:
-            name: AppImage-aarch64
+      - uses: actions/download-artifact@v4.3.0
+        with:
+          name: AppImage-aarch64
 
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
