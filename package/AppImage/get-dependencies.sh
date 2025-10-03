@@ -36,6 +36,7 @@ pacman -Syu --noconfirm \
 	rav1e            \
 	ghostscript      \
 	ffmpeg           \
+	kvantum          \
 	zsync
 
 	# At the moment, the svt-av1 package is not available on aarch64
