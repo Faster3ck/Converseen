@@ -281,10 +281,19 @@ void Converter::setRemoveMetadata(const bool &value)
 
 bool Converter::writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status)
 {
-    QString inputFormat = QString::fromLocal8Bit(my_image.magick().c_str());
+    bool is_writable = true;
 
-    Magick::CoderInfo formatCoderInfo(format.toUpper().toStdString());
-    bool is_writable = formatCoderInfo.isWritable();
+    // TODO: This will be fixed in 1.0 version :^)
+    if (format == "hif")
+        my_image.magick("HEIF");
+    else if (format == "jfif")
+        my_image.magick("JPEG");
+    else {
+        Magick::CoderInfo formatCoderInfo(format.toUpper().toStdString());
+        is_writable = formatCoderInfo.isWritable();
+
+        my_image.magick(format.toUpper().toStdString());
+    }
 
     if (!is_writable) {
         error_status = tr("ERROR: Format %1 is not supported for writing, choose another output format. Skipping!")
@@ -293,7 +302,7 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
         return false;
     }
 
-    my_image.magick(format.toUpper().toStdString());
+    QString inputFormat = QString::fromLocal8Bit(my_image.magick().c_str());
 
     if (inputFormat == "PDF") {
         my_image = convertPDFtoImage(my_image);
