@@ -17,17 +17,11 @@ export OUTNAME=Converseen-"$VERSION"-anylinux-"$ARCH".AppImage
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
 chmod +x ./quick-sharun
 ./quick-sharun \
-	/usr/bin/converseen                \
-	/usr/lib/libheif/libheif-dav1d.so  \
-	/usr/lib/libheif/libheif-rav1e.so  \
-	/usr/lib/libheif/libheif-svtenc.so \
-	/usr/lib/libSvtAv1Enc.so           \
+	/usr/bin/converseen       \
+	/usr/lib/libSvtAv1Enc.so  \
 	/usr/lib/libavcodec.so
 
 cat >> ./AppDir/.env << 'EOF'
-# Set heif plugins dir
-LIBHEIF_PLUGIN_PATH=${SHARUN_DIR}/lib/libheif
-
 # Set Ghostscript env
 GS_LIB="${SHARUN_DIR}/share/ghostscript/Resource/Init"
 GS_FONTPATH="${SHARUN_DIR}/share/ghostscript/Resource/Font"
