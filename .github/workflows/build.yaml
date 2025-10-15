@@ -4,10 +4,15 @@ name: Build
 on:
   workflow_dispatch:
 
+env:
+  APPIMAGE_DIR: package/AppImage
+  
 jobs:
-  build-linux:
+  build-appimage:
     name: "${{ matrix.name }} (${{ matrix.arch }})"
     runs-on: ${{ matrix.runs-on }}
+    outputs:
+      output_version: ${{ steps.converseen-version.outputs.version }}
     strategy:
       matrix:
         include:
@@ -23,6 +28,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Get Converseen Version Number
+        id: converseen-version
+        run: | 
+          file_content=$(<package/AppImage/build/PKGBUILD)
+          VERSION=$(echo "$file_content" | grep -oE '[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+  
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+  
+          echo "Version: $VERSION"
+        
       - name: Create builder user
         run: |
           pacman -Sy --noconfirm shadow sudo base-devel
@@ -30,15 +45,6 @@ jobs:
           useradd -m builder
           echo "builder ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
           chown -Rv builder:builder $GITHUB_WORKSPACE
-
-      - name: Run as builder
-        run: |
-          echo "su: "
-          su - builder
-          whoami
-
-          echo "sudo: "
-          sudo -u builder whoami
 
       - name: Get dependencies
         run: |
