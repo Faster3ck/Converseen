@@ -144,7 +144,7 @@ jobs:
           $latestVersionNumber = $lastTagVersion
           
           Write-Host "Latest ImageMagick Version Found: $latestVersionNumber"
-          
+
           Invoke-WebRequest -Uri "https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-${{ matrix.imagemagick_arch }}-dll.exe" -OutFile ImageMagick-Installer.exe
       
       - name: Install ImageMagick for Windows (${{ matrix.bits }})
