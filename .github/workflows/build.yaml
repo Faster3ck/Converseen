@@ -140,7 +140,7 @@ jobs:
           # Get latest version number from GitHub
           $gitTags = git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git
           $lastTagLine = $gitTags[-1]
-          $lastTagVersion = $lastTagLine -replace '.*refs/tags/(.*)', '$1'
+          $lastTagVersion = $lastTagLine -replace '.*?(\d+\.\d+\.\d+-\d+).*', '$1'
           $latestVersionNumber = $lastTagVersion
           
           Write-Host "Latest ImageMagick Version Found: $latestVersionNumber"
