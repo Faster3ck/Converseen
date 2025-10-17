@@ -1,6 +1,6 @@
 pkgname=converseen
-pkgver=0.15.0.3
-pkgrel=3
+pkgver=0.15.1.0
+pkgrel=1
 pkgdesc='Batch image converter and resizer'
 arch=('x86_64' 'aarch64')
 url="https://github.com/Faster3ck/Converseen"
