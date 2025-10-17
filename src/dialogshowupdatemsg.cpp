@@ -3,7 +3,7 @@
 
 #include "inisettings.h"
 
-DialogShowUpdateMsg::DialogShowUpdateMsg(QWidget *parent, const QString &caption, const QString &message) :
+DialogShowUpdateMsg::DialogShowUpdateMsg(QWidget *parent, const QString &caption, const QString &message, const bool &isChecked) :
     QDialog(parent),
     ui(new Ui::DialogShowUpdateMsg)
 {
@@ -11,6 +11,7 @@ DialogShowUpdateMsg::DialogShowUpdateMsg(QWidget *parent, const QString &caption
 
     this->setWindowTitle(caption);
     ui->labelMsg->setText(message);
+    ui->checkBoxDisable->setChecked(!isChecked);
 }
 
 DialogShowUpdateMsg::~DialogShowUpdateMsg()

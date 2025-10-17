@@ -24,15 +24,15 @@
 #include <QDesktopServices>
 
 #include "updatechecker.h"
-#include "dialogshowupdatemsg.h"
 #include "globals.h"
 
-#define VERSION_URL "https://fasterland.net/software-updates/converseen-version.txt"
-#define DESTINATION_URL "https://converseen.fasterland.net/update/"
+
 
 UpdateChecker::UpdateChecker(QObject *parent) :
     QObject(parent)
 {
+    m_update_available = false;
+
     mNetworkManager = new QNetworkAccessManager(this);
     QObject::connect(mNetworkManager, SIGNAL(finished(QNetworkReply*)), this, SLOT(onNetworkReply(QNetworkReply*)));
 }
@@ -44,6 +44,11 @@ void UpdateChecker::checkForUpdates()
     netReq.setAttribute(QNetworkRequest::RedirectPolicyAttribute, true);    // Autoredirect
 
     mNetworkManager->get(netReq);
+}
+
+bool UpdateChecker::isUpdateAvailable()
+{
+    return m_update_available;
 }
 
 void UpdateChecker::onNetworkReply(QNetworkReply* reply)
@@ -77,15 +82,10 @@ void UpdateChecker::onNetworkReply(QNetworkReply* reply)
 
 void UpdateChecker::checkIfIsNewVersion(int version)
 {
-    if (version > globals::CURRENT_INTERNAL_VERSION) {
-        QString caption = QString(tr("New version is available!"));
-        QString message = QString(tr("A new version of %1 is available!\nWould you download it?"))
-                .arg(globals::PROGRAM_NAME);
+    m_update_available = false;
 
-        DialogShowUpdateMsg dlg(0, caption, message);
+    if (version > globals::CURRENT_INTERNAL_VERSION)
+        m_update_available = true;
 
-        if (dlg.exec()) {
-            QDesktopServices::openUrl(QUrl(DESTINATION_URL, QUrl::TolerantMode));
-        }
-    }
+    emit updateAvailable(m_update_available);
 }

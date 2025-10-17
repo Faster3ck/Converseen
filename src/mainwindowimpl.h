@@ -43,6 +43,7 @@
 #include "pixtreewidget.h"
 #include "mylabelpreviewer.h"
 #include "cachingsystem.h"
+#include "updatechecker.h"
 #include "magickdefine.h"
 
 class QDropEvent;
@@ -82,6 +83,7 @@ private:
     void checkVersion();
 
     void saveSettings();    // This method is called when the program is closed
+    void showUpdateDialog();
 
     QString renameFileNameOnPrefixSuffix(QString oldFileName);
     QString renameFileNameOnProgressiveN(QString oldFileName);
@@ -91,6 +93,8 @@ private:
 
     Converter *convertThread;
     DialogConversionStatus *dlgCStatus;
+    UpdateChecker *updateChecker;
+
     int curr_index;             // Indice dell'immagine che si sta processando dalla lista iAList
 
     int m_jpgQuality;             // Imposta la qualità jpg anche nel file ini
@@ -164,6 +168,8 @@ private slots:
     void openPaypalLink();
 
     void checkForUpdates();
+    void manualCheckForUpdate();
+    void updateAvailable(const bool &isAvailable);
     void bugReport();
     void onlineHelp();
 

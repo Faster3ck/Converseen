@@ -16,7 +16,7 @@
         <translation>Fehler:%1</translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="290"/>
+        <location filename="../src/converter.cpp" line="299"/>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -600,12 +600,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Formats</name>
     <message>
-        <location filename="../src/formats.cpp" line="105"/>
+        <location filename="../src/formats.cpp" line="110"/>
         <source>All Supported Filters (%1)</source>
         <translation>Alle unterstützten Filter (%1)</translation>
     </message>
     <message>
-        <location filename="../src/formats.cpp" line="112"/>
+        <location filename="../src/formats.cpp" line="119"/>
         <source>Don&apos;t change the format</source>
         <translation>Das Format nicht verändern</translation>
     </message>
@@ -1182,140 +1182,161 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="257"/>
+        <location filename="../src/mainwindowimpl.cpp" line="252"/>
         <source>Open Image</source>
         <translation>Bild Öffne</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="457"/>
-        <location filename="../src/mainwindowimpl.cpp" line="463"/>
-        <location filename="../src/mainwindowimpl.cpp" line="472"/>
-        <location filename="../src/mainwindowimpl.cpp" line="476"/>
-        <location filename="../src/mainwindowimpl.cpp" line="480"/>
+        <location filename="../src/mainwindowimpl.cpp" line="492"/>
+        <location filename="../src/mainwindowimpl.cpp" line="498"/>
+        <location filename="../src/mainwindowimpl.cpp" line="507"/>
+        <location filename="../src/mainwindowimpl.cpp" line="511"/>
+        <location filename="../src/mainwindowimpl.cpp" line="515"/>
         <source>Warning</source>
         <translation>Warnung</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="477"/>
+        <location filename="../src/mainwindowimpl.cpp" line="512"/>
         <source>No image checked!</source>
         <translation>Kein Bild ausgewählt!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="481"/>
+        <location filename="../src/mainwindowimpl.cpp" line="516"/>
         <source>No images to convert!</source>
         <translation>Keine Bilder zum konvertieren!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="458"/>
+        <location filename="../src/mainwindowimpl.cpp" line="493"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>Das Ausgabe-Verzeichnis existiert nicht! Willst du es erstellen?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="278"/>
+        <location filename="../src/mainwindowimpl.cpp" line="273"/>
         <source>Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="307"/>
+        <location filename="../src/mainwindowimpl.cpp" line="302"/>
         <source>Open Icon file</source>
         <translation>Öffne Icon-Datei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="307"/>
+        <location filename="../src/mainwindowimpl.cpp" line="302"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Microsoft Icon (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="318"/>
+        <location filename="../src/mainwindowimpl.cpp" line="313"/>
         <source>Open Pdf file</source>
         <translation>Öffne PDF-Datei</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="318"/>
+        <location filename="../src/mainwindowimpl.cpp" line="313"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="328"/>
+        <location filename="../src/mainwindowimpl.cpp" line="323"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Analysieren der Datei. Es kann eine Weile dauern, bitte warten...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="352"/>
+        <location filename="../src/mainwindowimpl.cpp" line="347"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="417"/>
+        <location filename="../src/mainwindowimpl.cpp" line="452"/>
         <source>n/a</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="464"/>
+        <location filename="../src/mainwindowimpl.cpp" line="499"/>
         <source>The directory cannot be created!</source>
         <translation>Das Verzeichnis konnte nciht erstellt werden!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="473"/>
+        <location filename="../src/mainwindowimpl.cpp" line="508"/>
         <source>Set an output directory!</source>
         <translation>Ausgabe-Verzeichnis angeben!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="498"/>
+        <location filename="../src/mainwindowimpl.cpp" line="533"/>
         <source>Processing...</source>
         <translation>Berechne...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="671"/>
+        <location filename="../src/mainwindowimpl.cpp" line="706"/>
         <source>Converted</source>
         <translation type="unfinished">Konvertiert</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="676"/>
+        <location filename="../src/mainwindowimpl.cpp" line="711"/>
         <source>Skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="678"/>
+        <location filename="../src/mainwindowimpl.cpp" line="713"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="687"/>
+        <location filename="../src/mainwindowimpl.cpp" line="722"/>
         <source>Processing finished!</source>
         <translation>Berechnung beendet!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="271"/>
-        <location filename="../src/mainwindowimpl.cpp" line="741"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1316"/>
+        <source>No updates available!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="1317"/>
+        <source>%1 is already updated to the most recent version.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="1334"/>
+        <source>New version is available!</source>
+        <translation type="unfinished">Neue Version ist verfügbar!</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="1335"/>
+        <source>A new version of %1 is available!
+Would you download it?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="266"/>
+        <location filename="../src/mainwindowimpl.cpp" line="776"/>
         <source>Open Directory</source>
         <translation>Verzeichnis öffnen</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="860"/>
-        <location filename="../src/mainwindowimpl.cpp" line="878"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1051"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1108"/>
+        <location filename="../src/mainwindowimpl.cpp" line="895"/>
+        <location filename="../src/mainwindowimpl.cpp" line="913"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1086"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1143"/>
         <source>Preview</source>
         <translation>Vorschau</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1186"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1221"/>
         <source>Suggest a new name!</source>
         <translation>Schlage einen neuen Namen vor!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1187"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1222"/>
         <source>New name:</source>
         <translation>Neuer Name:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1192"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1227"/>
         <source>Please, specify a name!</source>
         <translation>Bitte gib einen Namen an!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1193"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1228"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1326,23 +1347,23 @@ Klicke &quot;Ignorieren&quot;, um diese Operation abzubrechen.
 Klicke &quot;Abbrechen&quot;, um alle Operationen abzubrechen.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1210"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1215"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1245"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1250"/>
         <source>Warning!</source>
         <translation>Warnung!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1211"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1246"/>
         <source>The filename should not be empty!</source>
         <translation>Der Dateiname muss angegeben werden!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1216"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1251"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Der ausgewählte Name ist identisch mit dem vorherigen. Willst du die Originaldatei überschreiben?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1232"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1267"/>
         <source>Aborted!</source>
         <translation>Abgebrochen!</translation>
     </message>
@@ -1397,20 +1418,6 @@ Klicke &quot;Abbrechen&quot;, um alle Operationen abzubrechen.</translation>
         <location filename="../src/translator.cpp" line="142"/>
         <source>English</source>
         <translation>Deutsch</translation>
-    </message>
-</context>
-<context>
-    <name>UpdateChecker</name>
-    <message>
-        <location filename="../src/updatechecker.cpp" line="81"/>
-        <source>New version is available!</source>
-        <translation>Neue Version ist verfügbar!</translation>
-    </message>
-    <message>
-        <location filename="../src/updatechecker.cpp" line="82"/>
-        <source>A new version of %1 is available!
-Would you download it?</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

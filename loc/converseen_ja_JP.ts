@@ -16,7 +16,7 @@
         <translation>エラー: %1</translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="290"/>
+        <location filename="../src/converter.cpp" line="299"/>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -599,12 +599,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Formats</name>
     <message>
-        <location filename="../src/formats.cpp" line="105"/>
+        <location filename="../src/formats.cpp" line="110"/>
         <source>All Supported Filters (%1)</source>
         <translation>すべて (%1)</translation>
     </message>
     <message>
-        <location filename="../src/formats.cpp" line="112"/>
+        <location filename="../src/formats.cpp" line="119"/>
         <source>Don&apos;t change the format</source>
         <translation>フォーマットを変えない</translation>
     </message>
@@ -1181,37 +1181,37 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="257"/>
+        <location filename="../src/mainwindowimpl.cpp" line="252"/>
         <source>Open Image</source>
         <translation>画像を開く</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="473"/>
+        <location filename="../src/mainwindowimpl.cpp" line="508"/>
         <source>Set an output directory!</source>
         <translation>出力ディレクトリーを設定!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="676"/>
+        <location filename="../src/mainwindowimpl.cpp" line="711"/>
         <source>Skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="678"/>
+        <location filename="../src/mainwindowimpl.cpp" line="713"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1192"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1227"/>
         <source>Please, specify a name!</source>
         <translation>名前を入れてください!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="687"/>
+        <location filename="../src/mainwindowimpl.cpp" line="722"/>
         <source>Processing finished!</source>
         <translation>変換終了!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1193"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1228"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1222,126 +1222,148 @@ Ignoreで続行。
 Abortで操作の取り消し。</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1186"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1221"/>
         <source>Suggest a new name!</source>
         <translation>名前を変えては!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="860"/>
-        <location filename="../src/mainwindowimpl.cpp" line="878"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1051"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1108"/>
+        <location filename="../src/mainwindowimpl.cpp" line="895"/>
+        <location filename="../src/mainwindowimpl.cpp" line="913"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1086"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1143"/>
         <source>Preview</source>
         <translation>プレビュー</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="481"/>
+        <location filename="../src/mainwindowimpl.cpp" line="516"/>
         <source>No images to convert!</source>
         <translation>変換する画像がありません!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1210"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1215"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1245"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1250"/>
         <source>Warning!</source>
         <translation>警告!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1232"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1267"/>
         <source>Aborted!</source>
         <translation>中止!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1187"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1222"/>
         <source>New name:</source>
         <translation>新しい名前:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="458"/>
+        <location filename="../src/mainwindowimpl.cpp" line="493"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>出力ディレクトリーが存在しません。作成しますか?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1216"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1251"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>名前が同じです。上書きしますか?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="457"/>
-        <location filename="../src/mainwindowimpl.cpp" line="463"/>
-        <location filename="../src/mainwindowimpl.cpp" line="472"/>
-        <location filename="../src/mainwindowimpl.cpp" line="476"/>
-        <location filename="../src/mainwindowimpl.cpp" line="480"/>
+        <location filename="../src/mainwindowimpl.cpp" line="492"/>
+        <location filename="../src/mainwindowimpl.cpp" line="498"/>
+        <location filename="../src/mainwindowimpl.cpp" line="507"/>
+        <location filename="../src/mainwindowimpl.cpp" line="511"/>
+        <location filename="../src/mainwindowimpl.cpp" line="515"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="477"/>
+        <location filename="../src/mainwindowimpl.cpp" line="512"/>
         <source>No image checked!</source>
         <translation>画像がチェックされていません!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="464"/>
+        <location filename="../src/mainwindowimpl.cpp" line="499"/>
         <source>The directory cannot be created!</source>
         <translation>ディレクトリーが作成できません!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1211"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1246"/>
         <source>The filename should not be empty!</source>
         <translation>ファイル名がありません!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="498"/>
+        <location filename="../src/mainwindowimpl.cpp" line="533"/>
         <source>Processing...</source>
         <translation>実行中...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="271"/>
-        <location filename="../src/mainwindowimpl.cpp" line="741"/>
+        <location filename="../src/mainwindowimpl.cpp" line="266"/>
+        <location filename="../src/mainwindowimpl.cpp" line="776"/>
         <source>Open Directory</source>
         <translation>出力ディレクトリー</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="307"/>
+        <location filename="../src/mainwindowimpl.cpp" line="302"/>
         <source>Open Icon file</source>
         <translation>アイコンファイルを開く</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="307"/>
+        <location filename="../src/mainwindowimpl.cpp" line="302"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Microsoft icon (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="318"/>
+        <location filename="../src/mainwindowimpl.cpp" line="313"/>
         <source>Open Pdf file</source>
         <translation>PDFファイルを開く</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="318"/>
+        <location filename="../src/mainwindowimpl.cpp" line="313"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="328"/>
+        <location filename="../src/mainwindowimpl.cpp" line="323"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>ファイルを解析中、しばらく時間がかかります...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="417"/>
+        <location filename="../src/mainwindowimpl.cpp" line="452"/>
         <source>n/a</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="671"/>
+        <location filename="../src/mainwindowimpl.cpp" line="706"/>
         <source>Converted</source>
         <translation type="unfinished">変換済み</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="278"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1316"/>
+        <source>No updates available!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="1317"/>
+        <source>%1 is already updated to the most recent version.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="1334"/>
+        <source>New version is available!</source>
+        <translation type="unfinished">新しいバージョンがあります!</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="1335"/>
+        <source>A new version of %1 is available!
+Would you download it?</source>
+        <translation type="unfinished">%1 の新しいバージョンが利用可能です!
+ダウンロードしますか?</translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="273"/>
         <source>Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="352"/>
+        <location filename="../src/mainwindowimpl.cpp" line="347"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1397,21 +1419,6 @@ Abortで操作の取り消し。</translation>
         <source>English</source>
         <translatorcomment>アプリの翻訳者の多いドイツやロシアがうらやましい</translatorcomment>
         <translation>Japanese</translation>
-    </message>
-</context>
-<context>
-    <name>UpdateChecker</name>
-    <message>
-        <location filename="../src/updatechecker.cpp" line="81"/>
-        <source>New version is available!</source>
-        <translation>新しいバージョンがあります!</translation>
-    </message>
-    <message>
-        <location filename="../src/updatechecker.cpp" line="82"/>
-        <source>A new version of %1 is available!
-Would you download it?</source>
-        <translation type="unfinished">%1 の新しいバージョンが利用可能です!
-ダウンロードしますか?</translation>
     </message>
 </context>
 <context>
