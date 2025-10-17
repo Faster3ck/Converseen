@@ -59,6 +59,7 @@ jobs:
       - name: Build Converseen
         run: |
           cd $APPIMAGE_DIR/build
+          sed -i 's|git+\$url.git#tag=v\$pkgver|git+\$url.git|' PKGBUILD
           sudo -u builder makepkg -si --noconfirm
 
       - name: Make AppImage
