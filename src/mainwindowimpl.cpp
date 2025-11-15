@@ -102,6 +102,18 @@ MainWindowImpl::MainWindowImpl(QWidget * parent)
 
     resetDisplays();
 
+    spin_resX->setValue(0);
+    spin_resY->setValue(0);
+
+    if (comboResizeValues->currentText() == "%") {
+        spin_geoWidth->setValue(100);
+        spin_geoHeight->setValue(100);
+    }
+    if (comboResizeValues->currentText() == "px") {
+        spin_geoWidth->setValue(1);
+        spin_geoHeight->setValue(1);
+    }
+
     checkForUpdates();
 
     checkVersion();
@@ -1151,7 +1163,7 @@ void MainWindowImpl::resetDisplays()
     m_xResolution = 0;
     m_yResolution = 0;
 
-    spin_resX->setValue(0);
+    /*spin_resX->setValue(0);
     spin_resY->setValue(0);
 
     if (comboResizeValues->currentText() == "%") {
@@ -1161,7 +1173,7 @@ void MainWindowImpl::resetDisplays()
     if (comboResizeValues->currentText() == "px") {
         spin_geoWidth->setValue(1);
         spin_geoHeight->setValue(1);
-    }
+    }*/
 
     labelType->setText(" - ");
     label_ImageSize->setText(" - ");
