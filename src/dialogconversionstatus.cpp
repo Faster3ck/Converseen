@@ -113,6 +113,7 @@ void DialogConversionStatus::abort()
 void DialogConversionStatus::resetButtons()
 {
     pushClose->setEnabled(true);
+    pushClose->setFocus();
     pushAbort->setEnabled(false);
 }
 
