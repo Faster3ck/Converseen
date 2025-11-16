@@ -1,3 +1,8 @@
+0.15.1.1 – 2025-11-16
+- Fixed scale spinbox resetting when images in the list are manually removed
+- Added automatic focus to the Close button in the status dialog when the conversion is completed
+- Various Bugfixes
+
 0.15.1.0 – 2025-10-17
 - Added support for the HIF format (read/write) when HEIC is available in ImageMagick, and for the JFIF format (write only)
 - Improved the user experience of the update dialog

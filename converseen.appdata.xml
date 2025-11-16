@@ -79,18 +79,18 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.15.1.0" date="2025-10-17">
+        <release version="0.15.1.1" date="2025-11-16">
             <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
                 <p>Changelog for 0.15.1.0</p>
                 <ul>
-                    <li>Added support for the HIF format (read/write) when HEIC is available in ImageMagick, and for the JFIF format (write only)</li>
-                    <li>Improved the user experience of the update dialog</li>
-                    <li>Updated Italian translation</li>
+                    <li>Fixed scale spinbox resetting when images in the list are manually removed</li>
+                    <li>Added automatic focus to the Close button in the status dialog when the conversion is completed</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.15.1.0" date="2025-10-17" />
         <release version="0.15.0.3" date="2025-09-11" />
         <release version="0.15.0.2" date="2025-07-15" />
         <release version="0.15.0.1" date="2025-07-05" />
