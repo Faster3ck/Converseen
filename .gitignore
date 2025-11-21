@@ -5,4 +5,5 @@
 *.DS_Store
 converseen.pro.user
 build/
+.qtcreator/
 !package/AppImage/build/

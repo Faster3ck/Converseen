@@ -1,3 +1,8 @@
+0.15.1.2 – 2025-11-21
+- Fixed a bug with the scaling spinbox not handling the value 0 correctly
+- Updated French translation
+- Various Bugfixes
+
 0.15.1.1 – 2025-11-16
 - Fixed scale spinbox resetting when images in the list are manually removed
 - Added automatic focus to the Close button in the status dialog when the conversion is completed

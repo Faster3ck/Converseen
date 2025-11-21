@@ -79,17 +79,18 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.15.1.1" date="2025-11-16">
+        <release version="0.15.1.2" date="2025-11-21">
             <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.15.1.0</p>
+                <p>Changelog for 0.15.1.2</p>
                 <ul>
-                    <li>Fixed scale spinbox resetting when images in the list are manually removed</li>
-                    <li>Added automatic focus to the Close button in the status dialog when the conversion is completed</li>
+                    <li>Fixed a bug with the scaling spinbox not handling the value 0 correctly</li>
+                    <li>Updated French translation</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.15.1.1" date="2025-11-16" />
         <release version="0.15.1.0" date="2025-10-17" />
         <release version="0.15.0.3" date="2025-09-11" />
         <release version="0.15.0.2" date="2025-07-15" />
