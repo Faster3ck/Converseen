@@ -1343,23 +1343,23 @@ Cliquez sur Abandonner pour annuler toutes les opérations.</translation>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1316"/>
         <source>No updates available!</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucune mise à jour disponible!</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1317"/>
         <source>%1 is already updated to the most recent version.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 est déjà à jour avec la version la plus récente.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1334"/>
         <source>New version is available!</source>
-        <translation type="unfinished">Une nouvelle version est disponible !</translation>
+        <translation>Une nouvelle version est disponible !</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1335"/>
         <source>A new version of %1 is available!
 Would you download it?</source>
-        <translation type="unfinished">Une nouvelle version de %1 est disponible !
+        <translation>Une nouvelle version de %1 est disponible !
 Voulez-vous la télécharger ?</translation>
     </message>
     <message>
