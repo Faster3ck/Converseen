@@ -6,7 +6,7 @@
     <message>
         <location filename="../src/converter.cpp" line="69"/>
         <source>Skipped: %1 already esists.</source>
-        <translation type="unfinished"></translation>
+        <translation>Atlandı: %1 zaten var.</translation>
     </message>
     <message>
         <location filename="../src/converter.cpp" line="89"/>
@@ -125,7 +125,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialoginfo.ui" line="26"/>
         <source>About Converseen...</source>
-        <translation>Converseen hakkında...</translation>
+        <translation>Converseen Hakkında...</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="105"/>
@@ -203,7 +203,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialoginfo.ui" line="217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Russian Translation: &lt;/span&gt;&lt;a href=&quot;https://github.com/alevtina-karashokova&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alevtina Karashokova&lt;/span&gt;&lt;/a&gt;, Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;stas_stv@mail.ru&lt;/span&gt;&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;lazy.kent@opensuse.org&lt;/span&gt;&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;ViktorOn&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Rusça Çeviri: &lt;/span&gt;&lt;a href=&quot;https://github.com/alevtina-karashokova&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alevtina Karashokova&lt;/span&gt;&lt;/a&gt;, Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;stas_stv@mail.ru&lt;/span&gt;&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;lazy.kent@opensuse.org&lt;/span&gt;&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;ViktorOn&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="237"/>
@@ -270,22 +270,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialoginfo.ui" line="207"/>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</source>
-        <translation>&lt;strong&gt;Türkçe çeviri: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</translation>
+        <translation>&lt;strong&gt;Türkçe çeviri: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:yakushabb@gmail.com&quot;&gt;yakushabb@gmail.com&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../src/dialoginfo.cpp" line="41"/>
         <source>Qt Version:</source>
-        <translation type="unfinished"></translation>
+        <translation>Qt Sürümü:</translation>
     </message>
     <message>
         <location filename="../src/dialoginfo.cpp" line="72"/>
         <source>Make a Donation!</source>
-        <translation type="unfinished"></translation>
+        <translation>Bağış Yap!</translation>
     </message>
     <message>
         <location filename="../src/dialoginfo.cpp" line="73"/>
         <source>Donate using PayPal, Ko-Fi or Cryptocurrencies.</source>
-        <translation type="unfinished"></translation>
+        <translation>PayPal, Ko-Fi ya da Kripto Para Birimleriyle bağış yap.</translation>
     </message>
 </context>
 <context>
@@ -293,7 +293,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogmultipageeditor.ui" line="20"/>
         <source>Check the pages or subimages you want to import</source>
-        <translation>İçe aktarmak istediğiniz sayfaları veya alt görüntüleri işaretleyin</translation>
+        <translation>İçe aktarmak istediğiniz sayfaları ya da alt görüntüleri işaretleyin</translation>
     </message>
     <message>
         <location filename="../ui/dialogmultipageeditor.ui" line="42"/>
@@ -374,7 +374,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/dialogmultipageeditor.cpp" line="159"/>
         <source>In order to perform the conversion of &lt;b&gt;PDF&lt;/b&gt; files to images, &lt;b&gt;Ghostscript for Windows&lt;/b&gt; must be installed on your system.&lt;br&gt;&lt;br&gt;             Please install the correct version of &lt;b&gt;Ghostscript&lt;/b&gt;.&lt;br&gt;             Click on the &lt;b&gt;Help&lt;/b&gt; button for more details.</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;b&gt;PDF&lt;/b&gt; dosyalarını görüntüye dönüştürmek için, sisteminizde &lt;b&gt;Windows için Ghostscript&lt;/b&gt; kurulu olmalıdır.&lt;br&gt;&lt;br&gt;             Lütfen doğru &lt;b&gt;Ghostscript&lt;/b&gt; sürümünü kurun.&lt;br&gt;             Daha çok bilgi için &lt;b&gt;Yardım&lt;/b&gt; düğmesine tıklayın.</translation>
     </message>
 </context>
 <context>
@@ -392,12 +392,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/dialogoptions.cpp" line="106"/>
         <source>Please restart Converseen to apply the new theme!</source>
-        <translation type="unfinished"></translation>
+        <translation>Yeni temayı uygulamak için Converseen&apos;i yeniden başlatın!</translation>
     </message>
     <message>
         <location filename="../src/dialogoptions.cpp" line="145"/>
         <source>System</source>
-        <translation type="unfinished"></translation>
+        <translation>Sistem</translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="136"/>
@@ -433,12 +433,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialogoptions.ui" line="46"/>
         <source>Themes</source>
-        <translation type="unfinished"></translation>
+        <translation>Temalar</translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="52"/>
         <source>Style:</source>
-        <translation type="unfinished"></translation>
+        <translation>Biçem:</translation>
     </message>
     <message>
         <location filename="../ui/dialogoptions.ui" line="78"/>
@@ -846,37 +846,37 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="316"/>
         <source>File Overwrite Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Dosya Üzerine Yazma Ayarları</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="324"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the destination folder, you will be prompted to choose an action manually.&lt;/p&gt;&lt;p&gt;You can either rename it or overwrite the existing file.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşlenen çıktı dosyasının adı hedef klasördeki var olan bir dosyanın adıyla aynıysa, bir eylem seçmeniz istenir.&lt;/p&gt;&lt;p&gt;Adını değiştirebilir ya da var olan dosyanın üzerine yazabilirsiniz.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="327"/>
         <source>Always Ask</source>
-        <translation type="unfinished"></translation>
+        <translation>Her Zaman Sor</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="350"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the same folder, the conversion process will automatically &lt;span style=&quot; font-weight:700;&quot;&gt;skip&lt;/span&gt; it to &lt;span style=&quot; font-weight:700;&quot;&gt;preserve&lt;/span&gt; the one in the destination directory.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşlenen çıktı dosyası, aynı klasördeki var olan bir dosyayla aynı ada sahipse, dönüştürme işlemi hedef klasördeki dosyayı &lt;span style=&quot; font-weight:700;&quot;&gt;korumak&lt;/span&gt; için otomatik olarak &lt;span style=&quot; font-weight:700;&quot;&gt;atlayacak&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="353"/>
         <source>Skip Existing Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Var Olan Dosyaları Atla</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="376"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If the processed output file has the same name as an existing file in the same folder, the conversion process will &lt;span style=&quot; font-weight:700;&quot;&gt;overwrite&lt;/span&gt; the original file, &lt;span style=&quot; font-weight:700;&quot;&gt;permanently deleting it&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Please, use caution when selecting this option!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;İşlenen çıktı dosyası, aynı klasördeki var olan bir dosyayla aynı ada sahipse, dönüştürme işlemi özgün dosyanın &lt;span style=&quot; font-weight:700;&quot;&gt;üzerine yazarak&lt;/span&gt; &lt;span style=&quot; font-weight:700;&quot;&gt;onu kalıcı olarak siler&lt;/span&gt;.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Bu seçeneği seçerken lütfen dikkatli olun!&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="379"/>
         <source>Overwrite Existing Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Var Olan Dosyaların Üzerine Yaz</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="801"/>
@@ -1039,12 +1039,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1558"/>
         <source>Invert Checked Items</source>
-        <translation type="unfinished"></translation>
+        <translation>İşaretli Ögeleri Tersine Çevir</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1561"/>
         <source>Ctrl+I</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+I</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1128"/>
@@ -1151,7 +1151,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1464"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1535"/>
@@ -1167,27 +1167,27 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="951"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Load Image Sizes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;px&apos;&lt;/span&gt; is selected, the original image sizes will be loaded into the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields. &lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; is selected, it restores the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields to &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Görüntü Boyutlarını Yükle&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;&apos;px&apos;&lt;/span&gt; seçilirse, özgün görüntü boyutları &lt;span style=&quot; font-weight:700;&quot;&gt;Genişlik/Yükseklik&lt;/span&gt; alanlarına yüklenir. &lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; seçilirse, &lt;span style=&quot; font-weight:700;&quot;&gt;Genişlik/Yükseklik&lt;/span&gt; alanları &lt;span style=&quot; font-weight:700;&quot;&gt;%100&lt;/span&gt;&apos;e geri yüklenir &lt;span style=&quot; font-weight:700;&quot;&gt;.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="965"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Seçilen Görüntü ile En Boy Oranını Bağla&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Genişlik/Yükseklik&lt;/span&gt; alanlarına bir değer girdiğinizde en boy oranı değerlerini otomatik olarak ayarlar.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1497"/>
         <source>&amp;Donate!</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Bağış!</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1500"/>
         <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
-        <translation type="unfinished"></translation>
+        <translation>Paypal, Ko-Fi, Kripto para birimleriyle bağış yap</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1547"/>
         <source>&amp;Online Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ç&amp;evrim İçi Yardım</translation>
     </message>
 </context>
 <context>
@@ -1231,7 +1231,7 @@ Tüm işlemleri iptal etmek için Vazgeç&apos;e tıklayın.</translation>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="452"/>
         <source>n/a</source>
-        <translation type="unfinished"></translation>
+        <translation>yok</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="516"/>
@@ -1241,12 +1241,12 @@ Tüm işlemleri iptal etmek için Vazgeç&apos;e tıklayın.</translation>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="711"/>
         <source>Skipped</source>
-        <translation type="unfinished"></translation>
+        <translation>Atlandı</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="713"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Hata</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1245"/>
@@ -1262,23 +1262,23 @@ Tüm işlemleri iptal etmek için Vazgeç&apos;e tıklayın.</translation>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1316"/>
         <source>No updates available!</source>
-        <translation type="unfinished"></translation>
+        <translation>Güncelleme yok!</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1317"/>
         <source>%1 is already updated to the most recent version.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1 zaten en son sürüme güncellendi.</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1334"/>
         <source>New version is available!</source>
-        <translation type="unfinished">Yeni sürüm var!</translation>
+        <translation>Yeni sürüm var!</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1335"/>
         <source>A new version of %1 is available!
 Would you download it?</source>
-        <translation type="unfinished">Yeni %1 sürümü var!
+        <translation>Yeni %1 sürümü var!
 İndirilsin mi?</translation>
     </message>
     <message>
@@ -1406,12 +1406,12 @@ Would you download it?</source>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="44"/>
         <source>Image size</source>
-        <translation type="unfinished"></translation>
+        <translation>Görüntü boyutu</translation>
     </message>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="45"/>
         <source>Resolution</source>
-        <translation type="unfinished">Çözünürlük</translation>
+        <translation>Çözünürlük</translation>
     </message>
     <message>
         <location filename="../src/pixtreewidget.cpp" line="46"/>
