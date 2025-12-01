@@ -277,37 +277,37 @@ jobs:
         
         # Define the folders to scan
         folders_to_scan = [
-            "/usr/local/Cellar/aom",
-            "/usr/local/Cellar/brotli",
-            "/usr/local/Cellar/fontconfig",
-            "/usr/local/Cellar/freetype",
-            "/usr/local/Cellar/gettext",
-            "/usr/local/Cellar/ghostscript",
-            "/usr/local/Cellar/giflib",
-            "/usr/local/Cellar/highway",
-            "/usr/local/Cellar/imath",
-            "/usr/local/Cellar/jasper",
-            "/usr/local/Cellar/jbig2dec",
-            "/usr/local/Cellar/jpeg-turbo",
-            "/usr/local/Cellar/jpeg-xl",
-            "/usr/local/Cellar/libde265",
-            "/usr/local/Cellar/libheif",
-            "/usr/local/Cellar/libidn",
-            "/usr/local/Cellar/libomp",
-            "/usr/local/Cellar/libpng",
-            "/usr/local/Cellar/libraw",
-            "/usr/local/Cellar/libtiff",
-            "/usr/local/Cellar/libtool",
-            "/usr/local/Cellar/libvmaf",
-            "/usr/local/Cellar/little-cms2",
-            "/usr/local/Cellar/lz4",
-            "/usr/local/Cellar/openexr",
-            "/usr/local/Cellar/openjpeg",
-            "/usr/local/Cellar/pcre2",
-            "/usr/local/Cellar/webp",
-            "/usr/local/Cellar/x265",
-            "/usr/local/Cellar/xz",
-            "/usr/local/Cellar/zstd"
+            "/opt/homebrew/Cellar/aom",
+            "/opt/homebrew/Cellar/brotli",
+            "/opt/homebrew/Cellar/fontconfig",
+            "/opt/homebrew/Cellar/freetype",
+            "/opt/homebrew/Cellar/gettext",
+            "/opt/homebrew/Cellar/ghostscript",
+            "/opt/homebrew/Cellar/giflib",
+            "/opt/homebrew/Cellar/highway",
+            "/opt/homebrew/Cellar/imath",
+            "/opt/homebrew/Cellar/jasper",
+            "/opt/homebrew/Cellar/jbig2dec",
+            "/opt/homebrew/Cellar/jpeg-turbo",
+            "/opt/homebrew/Cellar/jpeg-xl",
+            "/opt/homebrew/Cellar/libde265",
+            "/opt/homebrew/Cellar/libheif",
+            "/opt/homebrew/Cellar/libidn",
+            "/opt/homebrew/Cellar/libomp",
+            "/opt/homebrew/Cellar/libpng",
+            "/opt/homebrew/Cellar/libraw",
+            "/opt/homebrew/Cellar/libtiff",
+            "/opt/homebrew/Cellar/libtool",
+            "/opt/homebrew/Cellar/libvmaf",
+            "/opt/homebrew/Cellar/little-cms2",
+            "/opt/homebrew/Cellar/lz4",
+            "/opt/homebrew/Cellar/openexr",
+            "/opt/homebrew/Cellar/openjpeg",
+            "/opt/homebrew/Cellar/pcre2",
+            "/opt/homebrew/Cellar/webp",
+            "/opt/homebrew/Cellar/x265",
+            "/opt/homebrew/Cellar/xz",
+            "/opt/homebrew/Cellar/zstd"
         ]
         
         # Function to find and copy symbolic links with a dylib extension
@@ -351,13 +351,11 @@ jobs:
     - name: Copy Resources
       run: |
         cd build/bin
-        ls -la /usr/local/Cellar/
-
-        gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+        gs_ver=$(echo $(ls /opt/homebrew/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
         
         echo "--- Copying res files ---"
         cp -RPv ${{ github.workspace }}/im_build/etc/ImageMagick-7 converseen.app/Contents/Resources
-        cp -RPv /usr/local/Cellar/ghostscript/$gs_ver/share/ghostscript converseen.app/Contents/Resources
+        cp -RPv /opt/homebrew/Cellar/ghostscript/$gs_ver/share/ghostscript converseen.app/Contents/Resources
         
         echo "--- Copying loc files ---"
         mkdir converseen.app/Contents/Resources/loc
@@ -365,8 +363,6 @@ jobs:
 
         echo "--- Rename Ghostscript Resource Dir ---"
         cd converseen.app/Contents/Resources/ghostscript
-
-        ls -la
         
         gs_ver_t=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
         mv $gs_ver_t gs
