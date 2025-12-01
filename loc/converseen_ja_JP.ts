@@ -201,6 +201,11 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../ui/dialoginfo.ui" line="207"/>
+        <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:yakushabb@gmail.com&quot;&gt;yakushabb@gmail.com&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../ui/dialoginfo.ui" line="217"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Russian Translation: &lt;/span&gt;&lt;a href=&quot;https://github.com/alevtina-karashokova&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;Alevtina Karashokova&lt;/span&gt;&lt;/a&gt;, Stasik Savorovsky - &lt;a href=&quot;mailto:stas_stv@mail.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;stas_stv@mail.ru&lt;/span&gt;&lt;/a&gt;, Kyrill Detinov - &lt;a href=&quot;mailto:lazy.kent@opensuse.org&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;lazy.kent@opensuse.org&lt;/span&gt;&lt;/a&gt;, ViktorOn - &lt;a href=&quot;https://github.com/ViktorOn&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;ViktorOn&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -259,11 +264,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialoginfo.ui" line="200"/>
         <source>&lt;strong&gt;Spanish (Chile) Translation: &lt;/strong&gt;Nelson Álvarez Sáez - &lt;a href=&quot;mailto:alvareznelson@gmail.com&quot;&gt;alvareznelson@gmail.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../ui/dialoginfo.ui" line="207"/>
-        <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -612,12 +612,12 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindow</name>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1553"/>
+        <location filename="../ui/mainwindow.ui" line="1579"/>
         <source>F1</source>
         <translation>F1</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1448"/>
+        <location filename="../ui/mainwindow.ui" line="1474"/>
         <source>F5</source>
         <translation>F5</translation>
     </message>
@@ -627,7 +627,7 @@ p, li { white-space: pre-wrap; }
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1388"/>
+        <location filename="../ui/mainwindow.ui" line="1414"/>
         <source>Del</source>
         <translation>削除</translation>
     </message>
@@ -637,7 +637,7 @@ p, li { white-space: pre-wrap; }
         <translation>編集(&amp;E)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1461"/>
+        <location filename="../ui/mainwindow.ui" line="1487"/>
         <source>&amp;Exit</source>
         <translation>終了(&amp;E)</translation>
     </message>
@@ -652,17 +652,17 @@ p, li { white-space: pre-wrap; }
         <translation>ヘルプ(&amp;H)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1415"/>
+        <location filename="../ui/mainwindow.ui" line="1441"/>
         <source>Check selected items</source>
         <translation>選択したアイテムをチェック</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1480"/>
+        <location filename="../ui/mainwindow.ui" line="1506"/>
         <source>Uncheck selected items</source>
         <translation>選択したアイテムのチェックを外す</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1477"/>
+        <location filename="../ui/mainwindow.ui" line="1503"/>
         <source>&amp;Uncheck Items</source>
         <translation>チェックを外す(&amp;U)</translation>
     </message>
@@ -680,7 +680,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;種類:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1400"/>
+        <location filename="../ui/mainwindow.ui" line="1426"/>
         <source>Remove all pictures</source>
         <translation>全て削除</translation>
     </message>
@@ -706,12 +706,12 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt; - &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1058"/>
+        <location filename="../ui/mainwindow.ui" line="1084"/>
         <source>Resolution X:</source>
         <translation>解像度 X:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1065"/>
+        <location filename="../ui/mainwindow.ui" line="1091"/>
         <source>Resolution Y:</source>
         <translation>解像度 Y:</translation>
     </message>
@@ -721,7 +721,7 @@ p, li { white-space: pre-wrap; }
         <translation>変換フォーマット</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1456"/>
+        <location filename="../ui/mainwindow.ui" line="1482"/>
         <source>Open the settings dialog</source>
         <translation>設定を開く</translation>
     </message>
@@ -731,17 +731,17 @@ p, li { white-space: pre-wrap; }
         <translation>#_copy</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1488"/>
+        <location filename="../ui/mainwindow.ui" line="1514"/>
         <source>&amp;About</source>
         <translation>情報(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1412"/>
+        <location filename="../ui/mainwindow.ui" line="1438"/>
         <source>&amp;Check</source>
         <translation>チェック(&amp;C)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1257"/>
+        <location filename="../ui/mainwindow.ui" line="1283"/>
         <source>Horizontally</source>
         <translation>水平</translation>
     </message>
@@ -761,27 +761,27 @@ p, li { white-space: pre-wrap; }
         <translation>カラー選択</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1358"/>
+        <location filename="../ui/mainwindow.ui" line="1384"/>
         <source>&amp;Open images</source>
         <translation>画像を開く(&amp;O)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1418"/>
+        <location filename="../ui/mainwindow.ui" line="1444"/>
         <source>Ctrl+H</source>
         <translation>Ctrl+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1483"/>
+        <location filename="../ui/mainwindow.ui" line="1509"/>
         <source>Ctrl+J</source>
         <translation>Ctrl+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1361"/>
+        <location filename="../ui/mainwindow.ui" line="1387"/>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1239"/>
+        <location filename="../ui/mainwindow.ui" line="1265"/>
         <source>No flip</source>
         <translation>反転なし</translation>
     </message>
@@ -804,7 +804,7 @@ p, li { white-space: pre-wrap; }
         <translation>幅:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1430"/>
+        <location filename="../ui/mainwindow.ui" line="1456"/>
         <source>Check all items</source>
         <translation>全てチェック</translation>
     </message>
@@ -814,22 +814,22 @@ p, li { white-space: pre-wrap; }
         <translation>初期値:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1042"/>
+        <location filename="../ui/mainwindow.ui" line="1068"/>
         <source>Resolution</source>
         <translation>解像度</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1230"/>
+        <location filename="../ui/mainwindow.ui" line="1256"/>
         <source>Flip image:</source>
         <translation>画像の反転:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1370"/>
+        <location filename="../ui/mainwindow.ui" line="1396"/>
         <source>&amp;Add images</source>
         <translation>画像を追加(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1158"/>
+        <location filename="../ui/mainwindow.ui" line="1184"/>
         <source>No rotation</source>
         <translation>回転なし</translation>
     </message>
@@ -844,17 +844,17 @@ p, li { white-space: pre-wrap; }
         <translation>動作(&amp;A)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1385"/>
+        <location filename="../ui/mainwindow.ui" line="1411"/>
         <source>Remove selected pictures</source>
         <translation>選択した画像を削除</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1403"/>
+        <location filename="../ui/mainwindow.ui" line="1429"/>
         <source>Alt+Del</source>
         <translation>Alt+Del</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1008"/>
+        <location filename="../ui/mainwindow.ui" line="1011"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
@@ -867,7 +867,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 ピクセル&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1021"/>
+        <location filename="../ui/mainwindow.ui" line="1024"/>
         <source>Mantain aspect ratio</source>
         <translation>アスペクト比を保持</translation>
     </message>
@@ -882,12 +882,12 @@ p, li { white-space: pre-wrap; }
         <translation>保存先:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1427"/>
+        <location filename="../ui/mainwindow.ui" line="1453"/>
         <source>Check a&amp;ll</source>
         <translation>全てチェック(&amp;L)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1442"/>
+        <location filename="../ui/mainwindow.ui" line="1468"/>
         <source>&amp;Convert</source>
         <translation>変換(&amp;C)</translation>
     </message>
@@ -897,12 +897,12 @@ p, li { white-space: pre-wrap; }
         <translation>出力オプション</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1271"/>
+        <location filename="../ui/mainwindow.ui" line="1297"/>
         <source>Vertically</source>
         <translation>垂直</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1328"/>
+        <location filename="../ui/mainwindow.ui" line="1354"/>
         <source>toolBar</source>
         <translation>ツールバー</translation>
     </message>
@@ -951,7 +951,7 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;right&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt; color:#828282;&quot;&gt;画像サイズ:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1397"/>
+        <location filename="../ui/mainwindow.ui" line="1423"/>
         <source>Remove &amp;all</source>
         <translation>全て削除(&amp;A)</translation>
     </message>
@@ -961,7 +961,7 @@ p, li { white-space: pre-wrap; }
         <translation>サイズ</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1453"/>
+        <location filename="../ui/mainwindow.ui" line="1479"/>
         <source>&amp;Settings</source>
         <translation>設定(&amp;S)</translation>
     </message>
@@ -981,12 +981,12 @@ p, li { white-space: pre-wrap; }
         <translation>背景を透過</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1445"/>
+        <location filename="../ui/mainwindow.ui" line="1471"/>
         <source>Start the conversion process</source>
         <translation>変換プロセス開始</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1382"/>
+        <location filename="../ui/mainwindow.ui" line="1408"/>
         <source>&amp;Remove images</source>
         <translation>削除(&amp;R)</translation>
     </message>
@@ -996,28 +996,28 @@ p, li { white-space: pre-wrap; }
         <translation>高さ:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1469"/>
+        <location filename="../ui/mainwindow.ui" line="1495"/>
         <source>Uncheck all &amp;items</source>
         <translation>全てチェックを外す(&amp;I)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1128"/>
-        <location filename="../ui/mainwindow.ui" line="1134"/>
+        <location filename="../ui/mainwindow.ui" line="1154"/>
+        <location filename="../ui/mainwindow.ui" line="1160"/>
         <source>Rotate and flip</source>
         <translation>回転と反転</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1433"/>
+        <location filename="../ui/mainwindow.ui" line="1459"/>
         <source>Ctrl+Alt+H</source>
         <translation>Ctrl+Alt+H</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1472"/>
+        <location filename="../ui/mainwindow.ui" line="1498"/>
         <source>Ctrl+Alt+J</source>
         <translation>Ctrl+Alt+J</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1373"/>
+        <location filename="../ui/mainwindow.ui" line="1399"/>
         <source>Ctrl+Alt+O</source>
         <translation>Ctrl+Alt+O</translation>
     </message>
@@ -1027,22 +1027,22 @@ p, li { white-space: pre-wrap; }
         <translation>画像のディレクトリー</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1149"/>
+        <location filename="../ui/mainwindow.ui" line="1175"/>
         <source>Rotate image:</source>
         <translation>画像の回転:</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1510"/>
+        <location filename="../ui/mainwindow.ui" line="1536"/>
         <source>Import PDF file</source>
         <translation>PDFファイルのインポート</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1515"/>
+        <location filename="../ui/mainwindow.ui" line="1541"/>
         <source>Import windows icon (*.ico)</source>
         <translation>Windowsアイコン (*.ico) のインポート</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1518"/>
+        <location filename="../ui/mainwindow.ui" line="1544"/>
         <source>Import windows icon (*.ico *.icon)</source>
         <translation>Windowsアイコン (*.ico *.icon)</translation>
     </message>
@@ -1057,17 +1057,17 @@ p, li { white-space: pre-wrap; }
         <translation>連番(&amp;V)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1505"/>
+        <location filename="../ui/mainwindow.ui" line="1531"/>
         <source>&amp;Report bug...</source>
         <translation>バグを報告(&amp;R)...</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1526"/>
+        <location filename="../ui/mainwindow.ui" line="1552"/>
         <source>Check if a new version of Converseen is available</source>
         <translation>Converseenの新しいバージョンが利用可能か確認する</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1523"/>
+        <location filename="../ui/mainwindow.ui" line="1549"/>
         <source>&amp;Check for updates</source>
         <translation>アップデートを確認(&amp;C)</translation>
     </message>
@@ -1112,68 +1112,78 @@ p, li { white-space: pre-wrap; }
         <translation>動作パネル(&amp;N)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1175"/>
+        <location filename="../ui/mainwindow.ui" line="1034"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Maintain Aspect Ratio&lt;/span&gt;&lt;br/&gt;Keeps the image proportions unchanged.&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Prioritize Width or Height&lt;/span&gt;&lt;br/&gt;Enter &lt;span style=&quot; font-weight:700;&quot;&gt;0&lt;/span&gt; for the side to ignore. The other value is kept constant, and the ignored dimension is calculated automatically.&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Example:&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt; Height 800 px, Width 0 px&lt;/span&gt; → height stays &lt;span style=&quot; font-style:italic;&quot;&gt;800 px&lt;/span&gt;, width is calculated &lt;span style=&quot; font-style:italic;&quot;&gt;automatically&lt;/span&gt;.&lt;br/&gt;Works the same in &lt;span style=&quot; font-weight:700;&quot;&gt;percentage&lt;/span&gt; mode. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1037"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1201"/>
         <source>+ &amp;90°</source>
         <translation>+ 90°(&amp;9)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1189"/>
+        <location filename="../ui/mainwindow.ui" line="1215"/>
         <source>- 9&amp;0°</source>
         <translation>- 90°(&amp;0)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1205"/>
+        <location filename="../ui/mainwindow.ui" line="1231"/>
         <source>&amp;180°</source>
         <translation>180°(&amp;1)</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1464"/>
+        <location filename="../ui/mainwindow.ui" line="1490"/>
         <source>Ctrl+Q</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1535"/>
-        <location filename="../ui/mainwindow.ui" line="1538"/>
+        <location filename="../ui/mainwindow.ui" line="1561"/>
+        <location filename="../ui/mainwindow.ui" line="1564"/>
         <source>Import directory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1550"/>
+        <location filename="../ui/mainwindow.ui" line="1576"/>
         <source>Open online help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1558"/>
+        <location filename="../ui/mainwindow.ui" line="1584"/>
         <source>Invert Checked Items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1561"/>
+        <location filename="../ui/mainwindow.ui" line="1587"/>
         <source>Ctrl+I</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="951"/>
+        <location filename="../ui/mainwindow.ui" line="954"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Load Image Sizes&lt;/span&gt;&lt;/p&gt;&lt;p&gt;If &apos;&lt;span style=&quot; font-weight:700;&quot;&gt;px&apos;&lt;/span&gt; is selected, the original image sizes will be loaded into the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields. &lt;/p&gt;&lt;p&gt;If &lt;span style=&quot; font-weight:700;&quot;&gt;&apos;%&apos;&lt;/span&gt; is selected, it restores the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields to &lt;span style=&quot; font-weight:700;&quot;&gt;100%&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="965"/>
+        <location filename="../ui/mainwindow.ui" line="968"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1497"/>
+        <location filename="../ui/mainwindow.ui" line="1523"/>
         <source>&amp;Donate!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1500"/>
+        <location filename="../ui/mainwindow.ui" line="1526"/>
         <source>Donate via Paypal, Ko-Fi, Cryptocurrencies</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1547"/>
+        <location filename="../ui/mainwindow.ui" line="1573"/>
         <source>&amp;Online Help</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1181,37 +1191,37 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="252"/>
+        <location filename="../src/mainwindowimpl.cpp" line="264"/>
         <source>Open Image</source>
         <translation>画像を開く</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="508"/>
+        <location filename="../src/mainwindowimpl.cpp" line="520"/>
         <source>Set an output directory!</source>
         <translation>出力ディレクトリーを設定!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="711"/>
+        <location filename="../src/mainwindowimpl.cpp" line="723"/>
         <source>Skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="713"/>
+        <location filename="../src/mainwindowimpl.cpp" line="725"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1227"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1239"/>
         <source>Please, specify a name!</source>
         <translation>名前を入れてください!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="722"/>
+        <location filename="../src/mainwindowimpl.cpp" line="734"/>
         <source>Processing finished!</source>
         <translation>変換終了!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1228"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1240"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1222,148 +1232,148 @@ Ignoreで続行。
 Abortで操作の取り消し。</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1221"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1233"/>
         <source>Suggest a new name!</source>
         <translation>名前を変えては!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="895"/>
-        <location filename="../src/mainwindowimpl.cpp" line="913"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1086"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1143"/>
+        <location filename="../src/mainwindowimpl.cpp" line="907"/>
+        <location filename="../src/mainwindowimpl.cpp" line="925"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1098"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1155"/>
         <source>Preview</source>
         <translation>プレビュー</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="516"/>
+        <location filename="../src/mainwindowimpl.cpp" line="528"/>
         <source>No images to convert!</source>
         <translation>変換する画像がありません!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1245"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1250"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1257"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1262"/>
         <source>Warning!</source>
         <translation>警告!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1267"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1279"/>
         <source>Aborted!</source>
         <translation>中止!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1222"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1234"/>
         <source>New name:</source>
         <translation>新しい名前:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="493"/>
+        <location filename="../src/mainwindowimpl.cpp" line="505"/>
         <source>The output directory doesn&apos;t exists! Would you create it?</source>
         <translation>出力ディレクトリーが存在しません。作成しますか?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1251"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1263"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>名前が同じです。上書きしますか?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="492"/>
-        <location filename="../src/mainwindowimpl.cpp" line="498"/>
-        <location filename="../src/mainwindowimpl.cpp" line="507"/>
-        <location filename="../src/mainwindowimpl.cpp" line="511"/>
-        <location filename="../src/mainwindowimpl.cpp" line="515"/>
+        <location filename="../src/mainwindowimpl.cpp" line="504"/>
+        <location filename="../src/mainwindowimpl.cpp" line="510"/>
+        <location filename="../src/mainwindowimpl.cpp" line="519"/>
+        <location filename="../src/mainwindowimpl.cpp" line="523"/>
+        <location filename="../src/mainwindowimpl.cpp" line="527"/>
         <source>Warning</source>
         <translation>警告</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="512"/>
+        <location filename="../src/mainwindowimpl.cpp" line="524"/>
         <source>No image checked!</source>
         <translation>画像がチェックされていません!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="499"/>
+        <location filename="../src/mainwindowimpl.cpp" line="511"/>
         <source>The directory cannot be created!</source>
         <translation>ディレクトリーが作成できません!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1246"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1258"/>
         <source>The filename should not be empty!</source>
         <translation>ファイル名がありません!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="533"/>
+        <location filename="../src/mainwindowimpl.cpp" line="545"/>
         <source>Processing...</source>
         <translation>実行中...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="266"/>
-        <location filename="../src/mainwindowimpl.cpp" line="776"/>
+        <location filename="../src/mainwindowimpl.cpp" line="278"/>
+        <location filename="../src/mainwindowimpl.cpp" line="788"/>
         <source>Open Directory</source>
         <translation>出力ディレクトリー</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="302"/>
+        <location filename="../src/mainwindowimpl.cpp" line="314"/>
         <source>Open Icon file</source>
         <translation>アイコンファイルを開く</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="302"/>
+        <location filename="../src/mainwindowimpl.cpp" line="314"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Microsoft icon (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="313"/>
+        <location filename="../src/mainwindowimpl.cpp" line="325"/>
         <source>Open Pdf file</source>
         <translation>PDFファイルを開く</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="313"/>
+        <location filename="../src/mainwindowimpl.cpp" line="325"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="323"/>
+        <location filename="../src/mainwindowimpl.cpp" line="335"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>ファイルを解析中、しばらく時間がかかります...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="452"/>
+        <location filename="../src/mainwindowimpl.cpp" line="464"/>
         <source>n/a</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="706"/>
+        <location filename="../src/mainwindowimpl.cpp" line="718"/>
         <source>Converted</source>
         <translation type="unfinished">変換済み</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1316"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1328"/>
         <source>No updates available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1317"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1329"/>
         <source>%1 is already updated to the most recent version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1334"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1346"/>
         <source>New version is available!</source>
         <translation type="unfinished">新しいバージョンがあります!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1335"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1347"/>
         <source>A new version of %1 is available!
 Would you download it?</source>
         <translation type="unfinished">%1 の新しいバージョンが利用可能です!
 ダウンロードしますか?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="273"/>
+        <location filename="../src/mainwindowimpl.cpp" line="285"/>
         <source>Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="347"/>
+        <location filename="../src/mainwindowimpl.cpp" line="359"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>

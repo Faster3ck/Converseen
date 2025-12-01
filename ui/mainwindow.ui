@@ -489,7 +489,7 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>0</y>
+          <y>-13</y>
           <width>448</width>
           <height>780</height>
          </rect>
@@ -1017,7 +1017,7 @@ p, li { white-space: pre-wrap; }
                  </widget>
                 </item>
                 <item>
-                 <layout class="QVBoxLayout" name="verticalLayout_19">
+                 <layout class="QHBoxLayout" name="horizontalLayout_20">
                   <item>
                    <widget class="QCheckBox" name="checkRelative">
                     <property name="text">
@@ -1027,6 +1027,29 @@ p, li { white-space: pre-wrap; }
                      <bool>true</bool>
                     </property>
                    </widget>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="labelAspectRatioHelp">
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Maintain Aspect Ratio&lt;/span&gt;&lt;br/&gt;Keeps the image proportions unchanged.&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Prioritize Width or Height&lt;/span&gt;&lt;br/&gt;Enter &lt;span style=&quot; font-weight:700;&quot;&gt;0&lt;/span&gt; for the side to ignore. The other value is kept constant, and the ignored dimension is calculated automatically.&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Example:&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt; Height 800 px, Width 0 px&lt;/span&gt; → height stays &lt;span style=&quot; font-style:italic;&quot;&gt;800 px&lt;/span&gt;, width is calculated &lt;span style=&quot; font-style:italic;&quot;&gt;automatically&lt;/span&gt;.&lt;br/&gt;Works the same in &lt;span style=&quot; font-weight:700;&quot;&gt;percentage&lt;/span&gt; mode. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="horizontalSpacer_7">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>40</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
                   </item>
                  </layout>
                 </item>

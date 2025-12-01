@@ -150,7 +150,7 @@ p, li { white-space: pre-wrap; }
          <property name="geometry">
           <rect>
            <x>0</x>
-           <y>-112</y>
+           <y>-48</y>
            <width>882</width>
            <height>348</height>
           </rect>
@@ -204,7 +204,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <widget class="QLabel" name="label_14">
             <property name="text">
-             <string>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:libreajans@gmail.com&quot;&gt;libreajans@gmail.com&lt;/a&gt;</string>
+             <string>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:yakushabb@gmail.com&quot;&gt;yakushabb@gmail.com&lt;/a&gt;</string>
             </property>
             <property name="openExternalLinks">
              <bool>true</bool>

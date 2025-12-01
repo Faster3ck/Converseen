@@ -79,17 +79,19 @@
     <url type="help">https://converseen.fasterland.net/help/</url>
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <releases>
-        <release version="0.15.1.2" date="2025-11-21">
+        <release version="0.15.1.3" date="2025-12-01">
             <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.15.1.2</p>
+                <p>Changelog for 0.15.1.3</p>
                 <ul>
-                    <li>Fixed a bug with the scaling spinbox not handling the value 0 correctly</li>
-                    <li>Updated French translation</li>
+                    <li>Added a detailed instruction tooltip for the Maintain aspect ratio feature</li>
+                    <li>Updated Turkish translation</li>
+                    <li>Updated Italian translation</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.15.1.2" date="2025-11-21" />
         <release version="0.15.1.1" date="2025-11-16" />
         <release version="0.15.1.0" date="2025-10-17" />
         <release version="0.15.0.3" date="2025-09-11" />
