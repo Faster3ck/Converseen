@@ -351,6 +351,7 @@ jobs:
     - name: Copy Resources
       run: |
         cd build/bin
+        ls -la /usr/local/Cellar/
 
         gs_ver=$(echo $(ls /usr/local/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
         
@@ -363,8 +364,6 @@ jobs:
         cp -RPv ../../converseen/loc/*.qm converseen.app/Contents/Resources/loc
 
         echo "--- Rename Ghostscript Resource Dir ---"
-        ls -la converseen.app/Contents/Resources
-        
         cd converseen.app/Contents/Resources/ghostscript
 
         ls -la
