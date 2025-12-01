@@ -127,7 +127,7 @@ jobs:
             vs_arch: 'x86'
             bits: '32bit'
             cmake_extra_flags: '-DOpenSSL_Win32_Path="..\..\openssl-1.1\x86\bin"'
-          - qt_version: '6.10.*'
+          - qt_version: '6.10.1'
             qt_arch: 'win64_msvc2022_64'
             imagemagick_arch: 'x64'
             vs_arch: 'x64'
@@ -214,10 +214,10 @@ jobs:
         set -e
         
         export HOMEBREW_NO_AUTO_UPDATE=1
-        brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool openexr openexr openjpeg webp libraw ghostscript
+        brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool libzip openexr openjpeg webp libraw ghostscript
 
     - name: Install Qt
-      uses: jurplel/install-qt-action@v3
+      uses: jurplel/install-qt-action@v4
       with:
         aqtversion: '==3.1.*'
         version: '6.9.*'
