@@ -363,6 +363,8 @@ jobs:
         cp -RPv ../../converseen/loc/*.qm converseen.app/Contents/Resources/loc
 
         echo "--- Rename Ghostscript Resource Dir ---"
+        ls -la converseen.app/Contents/Resources
+        
         cd converseen.app/Contents/Resources/ghostscript
 
         ls -la
