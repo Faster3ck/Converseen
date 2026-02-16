@@ -250,7 +250,8 @@ jobs:
                               --with-gslib=yes \
                               --disable-openmp \
                               --disable-silent-rules \
-                              --disable-opencl
+                              --disable-opencl \
+                              --without-jxl
 
         make
         make install
