@@ -248,7 +248,9 @@ jobs:
                               --enable-shared \
                               --with-flif=yes \
                               --with-gslib=yes \
-                              --disable-openmp
+                              --disable-openmp \
+                              --disable-silent-rules \
+                              --disable-opencl
 
         make
         make install
