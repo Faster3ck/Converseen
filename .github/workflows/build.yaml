@@ -216,15 +216,6 @@ jobs:
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool libzip openexr openjpeg webp libraw ghostscript
 
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v4
-      with:
-        aqtversion: '==3.1.*'
-        version: '6.10.*'
-        host: 'mac'
-        target: 'desktop'
-        arch: 'clang_64'
-
     - name: Checkout Converseen
       uses: actions/checkout@v4
       with:
@@ -235,7 +226,7 @@ jobs:
         # wget https://imagemagick.org/archive/ImageMagick.tar.gz
         # tar -xzvf ImageMagick.tar.gz
 
-        git clone https://github.com/ImageMagick/ImageMagick.git -b 7.1.2-9
+        git clone https://github.com/ImageMagick/ImageMagick.git -b 7.1.2-12
         
     - name: Build ImageMagick
       run: |
@@ -255,6 +246,15 @@ jobs:
 
         make
         make install
+
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v4
+      with:
+        aqtversion: '==3.1.*'
+        version: '6.10.*'
+        host: 'mac'
+        target: 'desktop'
+        arch: 'clang_64'
       
     - name: Build Converseen
       run: |
