@@ -231,6 +231,10 @@ jobs:
     - name: Build ImageMagick
       run: |
         cd ImageMagick-*
+
+        export LDFLAGS="-lomp -lz"
+        export ac_cv_prog_c_openmp="-Xpreprocessor -fopenmp"
+        export ac_cv_prog_cxx_openmp="-Xpreprocessor -fopenmp"
         
         ./configure --prefix=${{ github.workspace }}/im_build \
                               --with-quantum-depth=16 \
@@ -242,10 +246,7 @@ jobs:
                               --enable-shared \
                               --with-flif=yes \
                               --with-gslib=yes \
-                              --disable-silent-rules \
-                              "ac_cv_prog_c_openmp=-Xpreprocessor -fopenmp" \
-                              "ac_cv_prog_cxx_openmp=-Xpreprocessor -fopenmp" \
-                              "LDFLAGS=-lomp -lz"
+                              --disable-silent-rules
 
         make
         make install
