@@ -243,9 +243,9 @@ jobs:
                               --with-flif=yes \
                               --with-gslib=yes \
                               --disable-silent-rules \
-                              ac_cv_prog_c_openmp=-Xpreprocessor -fopenmp \
-                              ac_cv_prog_cxx_openmp=-Xpreprocessor -fopenmp \
-                              LDFLAGS=-lomp -lz
+                              "ac_cv_prog_c_openmp=-Xpreprocessor -fopenmp" \
+                              "ac_cv_prog_cxx_openmp=-Xpreprocessor -fopenmp" \
+                              "LDFLAGS=-lomp -lz"
 
         make
         make install
