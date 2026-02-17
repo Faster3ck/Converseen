@@ -214,7 +214,7 @@ jobs:
         set -e
         
         export HOMEBREW_NO_AUTO_UPDATE=1
-        brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool libzip openexr openjpeg webp libraw ghostscript
+        brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool libzip openexr openjpeg webp libraw ghostscript libomp
 
     - name: Checkout Converseen
       uses: actions/checkout@v4
@@ -223,15 +223,15 @@ jobs:
 
     - name: Download ImageMagick
       run: |
-        # wget https://imagemagick.org/archive/ImageMagick.tar.gz
-        # tar -xzvf ImageMagick.tar.gz
+        wget https://imagemagick.org/archive/ImageMagick.tar.gz
+        tar -xzvf ImageMagick.tar.gz
 
-        git clone https://github.com/ImageMagick/ImageMagick.git -b 7.1.2-12
+        # git clone https://github.com/ImageMagick/ImageMagick.git -b 7.1.2-12
         
     - name: Build ImageMagick
       run: |
-        # cd ImageMagick-*
-        cd ImageMagick
+        cd ImageMagick-*
+        
         ./configure --prefix=${{ github.workspace }}/im_build \
                               --with-quantum-depth=16 \
                               --disable-dependency-tracking \
@@ -242,7 +242,10 @@ jobs:
                               --enable-shared \
                               --with-flif=yes \
                               --with-gslib=yes \
-                              --disable-silent-rules
+                              --disable-silent-rules \
+                              ac_cv_prog_c_openmp=-Xpreprocessor -fopenmp \
+                              ac_cv_prog_cxx_openmp=-Xpreprocessor -fopenmp \
+                              LDFLAGS=-lomp -lz
 
         make
         make install
