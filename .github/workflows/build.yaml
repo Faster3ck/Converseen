@@ -251,7 +251,6 @@ jobs:
                               --enable-shared \
                               --with-flif=yes \
                               --with-gslib=yes \
-                              --disable-openmp \
                               --disable-silent-rules
 
         make
