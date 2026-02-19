@@ -214,7 +214,7 @@ jobs:
         set -e
         
         export HOMEBREW_NO_AUTO_UPDATE=1
-        brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool libzip openexr openjpeg webp libraw ghostscript libomp
+        brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool libzip openexr openjpeg webp libraw ghostscript
 
     - name: Checkout Converseen
       uses: actions/checkout@v4
@@ -225,30 +225,39 @@ jobs:
       run: |
         wget https://imagemagick.org/archive/ImageMagick.tar.gz
         tar -xzvf ImageMagick.tar.gz
-
-        # git clone https://github.com/ImageMagick/ImageMagick.git -b 7.1.2-12
         
     - name: Build ImageMagick
       run: |
         cd ImageMagick-*
 
-        export CPPFLAGS="-Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include"
-        export LDFLAGS="-L/opt/homebrew/opt/libomp/lib -lomp -lz"
-      
-        export ac_cv_prog_c_openmp="-Xpreprocessor -fopenmp"
-        export ac_cv_prog_cxx_openmp="-Xpreprocessor -fopenmp"
+        # Fix openmp compile error with libraw
+        sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw.pc
+        sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw_r.pc
         
         ./configure --prefix=${{ github.workspace }}/im_build \
-                              --with-quantum-depth=16 \
-                              --disable-dependency-tracking \
-                              --without-perl \
-                              --without-x \
-                              --disable-static \
-                              --disable-installed \
-                              --enable-shared \
-                              --with-flif=yes \
-                              --with-gslib=yes \
-                              --disable-silent-rules
+                    --disable-silent-rules \
+                    --disable-dependency-tracking \
+                    --without-perl \
+                    --disable-installed \
+                    --with-quantum-depth=16 \
+                    --disable-opencl \
+                    --enable-shared \
+                    --with-freetype=yes \
+                    --with-gvc=no \
+                    --with-openjp2 \
+                    --with-openexr \
+                    --with-webp=yes \
+                    --with-heic=yes \
+                    --with-raw=yes \
+                    --with-zip=yes \
+                    --with-gslib \
+                    --with-gs-font-dir=/usr/local/share/ghostscript/fonts \
+                    --without-djvu \
+                    --without-fftw \
+                    --without-pango \
+                    --without-wmf \
+                    --without-x \
+                    --disable-openmp
 
         make
         make install
