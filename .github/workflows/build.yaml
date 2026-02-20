@@ -380,11 +380,11 @@ jobs:
         mkdir converseen.app/Contents/Resources/loc
         cp -RPv ../../converseen/loc/*.qm converseen.app/Contents/Resources/loc
 
-        echo "--- Rename Ghostscript Resource Dir ---"
-        cd converseen.app/Contents/Resources/ghostscript
+        # echo "--- Rename Ghostscript Resource Dir ---"
+        # cd converseen.app/Contents/Resources/ghostscript
         
-        gs_ver_t=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')_1
-        mv $gs_ver_t gs
+        # gs_ver_t=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')_1
+        # mv $gs_ver_t gs
 
     - name: Compress Converseen
       run: |
