@@ -230,6 +230,10 @@ jobs:
       run: |
         cd ImageMagick-*
 
+        export CFLAGS="-O2"
+        export CXXFLAGS="-O2"
+        export LDFLAGS="-Wl,-headerpad_max_install_names -Wl,-headerpad,0x2000"
+
         # Fix openmp compile error with libraw
         sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw.pc
         sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw_r.pc
@@ -276,119 +280,22 @@ jobs:
         mkdir build
         cd build
 
-        qmake ../converseen/converseen.pro -spec macx-clang IM_INSTALL_PREFIX=${{ github.workspace }}/im_build
+        cmake \
+         -DUSE_QT6=ON \
+         -DCMAKE_BUILD_TYPE=Release \
+         -DCMAKE_PREFIX_PATH="${{ github.workspace }}/im_build" \
+         -DCMAKE_INSTALL_PREFIX=install ..
+         
         make
 
-    - name: Copy Dependencies
-      shell: python {0}
+    - name: Deploy Converseen
       run: |
-        import os
-        import shutil
-
-        working_dir = os.environ['WORKING_DIR']
-        os.chdir(working_dir + "/build/bin")
-
-        print("Working dir:" + working_dir + "/build/bin")
-        
-        # Define the destination folder where symbolic links will be copied
-        destination_folder = "converseen.app/Contents/Frameworks"
-        os.mkdir(destination_folder)
-        
-        # Define the folders to scan
-        folders_to_scan = [
-            "/opt/homebrew/Cellar/aom",
-            "/opt/homebrew/Cellar/brotli",
-            "/opt/homebrew/Cellar/fontconfig",
-            "/opt/homebrew/Cellar/freetype",
-            "/opt/homebrew/Cellar/gettext",
-            "/opt/homebrew/Cellar/ghostscript",
-            "/opt/homebrew/Cellar/giflib",
-            "/opt/homebrew/Cellar/highway",
-            "/opt/homebrew/Cellar/imath",
-            "/opt/homebrew/Cellar/jasper",
-            "/opt/homebrew/Cellar/jbig2dec",
-            "/opt/homebrew/Cellar/jpeg-turbo",
-            "/opt/homebrew/Cellar/jpeg-xl",
-            "/opt/homebrew/Cellar/libde265",
-            "/opt/homebrew/Cellar/libheif",
-            "/opt/homebrew/Cellar/libidn",
-            "/opt/homebrew/Cellar/libomp",
-            "/opt/homebrew/Cellar/libpng",
-            "/opt/homebrew/Cellar/libraw",
-            "/opt/homebrew/Cellar/libtiff",
-            "/opt/homebrew/Cellar/libtool",
-            "/opt/homebrew/Cellar/libvmaf",
-            "/opt/homebrew/Cellar/little-cms2",
-            "/opt/homebrew/Cellar/lz4",
-            "/opt/homebrew/Cellar/openexr",
-            "/opt/homebrew/Cellar/openjpeg",
-            "/opt/homebrew/Cellar/pcre2",
-            "/opt/homebrew/Cellar/webp",
-            "/opt/homebrew/Cellar/x265",
-            "/opt/homebrew/Cellar/xz",
-            "/opt/homebrew/Cellar/zstd"
-        ]
-        
-        # Function to find and copy symbolic links with a dylib extension
-        def copy_dylib_from_folder(folder):
-            try:
-                if os.path.exists(folder):
-                    for root, dirs, files in os.walk(folder):
-                        for file in files:
-                            if file.endswith(".dylib"): 
-                                dylib_path = os.path.join(root, file)
-                                dylib_name = os.path.basename(dylib_path)
-                                if os.path.islink(os.path.join(root, file)):
-                                    # Copy the symbolic link to the destination folder
-                                    shutil.copy(dylib_path, os.path.join(destination_folder, dylib_name), follow_symlinks=False)
-                                    print(f"Copied link {dylib_name} from {folder} to {destination_folder}")
-                                else:
-                                    # Copy library to the destination folder
-                                    shutil.copy(dylib_path, os.path.join(destination_folder, dylib_name))
-                                    print(f"Copied file {dylib_name} from {folder} to {destination_folder}")
-                else:
-                    print(f"The folder {folder} does not exist.")
-            except Exception as e:
-                print(f"An error occurred: {str(e)} while copying from {folder}")
-        
-        # Execute the function for each folder to scan
-        for folder in folders_to_scan:
-            copy_dylib_from_folder(folder)
-
-    - name: Deploy Qt
-      run: |
-        cd build/bin
-        sudo chmod -Rv a+rwx converseen.app/Contents/Frameworks/
-        macdeployqt converseen.app -libpath=${{ github.workspace }}/im_build/lib
-
-        # Fix libzip rpaths
-        cd converseen.app/Contents/Frameworks/
-        install_name_tool -change /usr/lib/libbz2.1.0.dylib @rpath/libbz2.1.0.dylib libzip.5.dylib
-        install_name_tool -change @loader_path/../../../../opt/xz/lib/liblzma.5.dylib @rpath/liblzma.5.dylib libzip.5.dylib
-        install_name_tool -change @loader_path/../../../../opt/zstd/lib/libzstd.1.dylib @rpath/libzstd.1.dylib libzip.5.dylib
-
-    - name: Copy Resources
-      run: |
-        cd build/bin
-        gs_ver=$(echo $(ls /opt/homebrew/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')_1
-        
-        echo "--- Copying res files ---"
-        cp -RPv ${{ github.workspace }}/im_build/etc/ImageMagick-7 converseen.app/Contents/Resources
-        cp -RPv /opt/homebrew/Cellar/ghostscript/$gs_ver/share/ghostscript converseen.app/Contents/Resources
-        
-        echo "--- Copying loc files ---"
-        mkdir converseen.app/Contents/Resources/loc
-        cp -RPv ../../converseen/loc/*.qm converseen.app/Contents/Resources/loc
-
-        # echo "--- Rename Ghostscript Resource Dir ---"
-        # cd converseen.app/Contents/Resources/ghostscript
-        
-        # gs_ver_t=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')_1
-        # mv $gs_ver_t gs
+        cd build
+        cmake --install .
 
     - name: Compress Converseen
       run: |
-        cd build/bin
+        cd build/install
         zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
         pwd
 
