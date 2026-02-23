@@ -2,7 +2,7 @@
 * This file is part of Converseen, an open-source batch image converter
 * and resizer.
 *
-* (C) Francesco Mondello 2009 - 2025
+* (C) Francesco Mondello 2009 - 2026
 *
 * This program is free software: you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -24,6 +24,7 @@
 #include <QMessageBox>
 #include <QInputDialog>
 #include <QFileInfo>
+#include <QDir>
 #include <QDebug>
 #include "converter.h"
 
@@ -113,6 +114,8 @@ void Converter::run()
             rotate(my_image);
         if (m_flip)
             flip(my_image);
+
+        out = QDir::toNativeSeparators(out);
 
         if (writeImage(my_image, m_format, m_quality, out, err_write_status)) {
             m_conv_status = 1;
@@ -282,6 +285,7 @@ void Converter::setRemoveMetadata(const bool &value)
 bool Converter::writeImage(Image &my_image, const QString &format, const int &quality, const QString &out, QString &error_status)
 {
     bool is_writable = true;
+    QString inputFormat = QString::fromLocal8Bit(my_image.magick().c_str());
 
     // TODO: This will be fixed in 1.0 version :^)
     if (format == "hif")
@@ -301,8 +305,6 @@ bool Converter::writeImage(Image &my_image, const QString &format, const int &qu
 
         return false;
     }
-
-    QString inputFormat = QString::fromLocal8Bit(my_image.magick().c_str());
 
     if (inputFormat == "PDF") {
         my_image = convertPDFtoImage(my_image);

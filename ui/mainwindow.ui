@@ -489,7 +489,7 @@
         <property name="geometry">
          <rect>
           <x>0</x>
-          <y>-13</y>
+          <y>0</y>
           <width>448</width>
           <height>780</height>
          </rect>
@@ -1021,7 +1021,7 @@ p, li { white-space: pre-wrap; }
                   <item>
                    <widget class="QCheckBox" name="checkRelative">
                     <property name="text">
-                     <string>Mantain aspect ratio</string>
+                     <string>Maintain aspect ratio</string>
                     </property>
                     <property name="checked">
                      <bool>true</bool>
@@ -1613,7 +1613,7 @@ p, li { white-space: pre-wrap; }
  </resources>
  <connections/>
  <buttongroups>
-  <buttongroup name="buttonGroup"/>
   <buttongroup name="buttonGroup_2"/>
+  <buttongroup name="buttonGroup"/>
  </buttongroups>
 </ui>

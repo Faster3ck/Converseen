@@ -1,35 +1,47 @@
-cmake_minimum_required(VERSION 3.16.0)
+cmake_minimum_required(VERSION 3.16)
 
-if(WIN32)
-    cmake_policy(SET CMP0135 NEW)
-endif()
+project(converseen
+    VERSION 0.15.1.3
+    LANGUAGES CXX
+)
 
-set(CONVERSEEN_VERSION 0.15.1.3)
-
-project(
-    converseen
-    VERSION ${CONVERSEEN_VERSION}
-    LANGUAGES CXX)
 set(PROJECT_NAME_CAPITALIZED "Converseen")
-
-option(USE_QT6 "Enable this if you want to use Qt6, instead of Qt5" NO)
-
-set(GUI "converseen")
-set(QT_USE_QTNETWORK TRUE)
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+option(USE_QT6 "Build with Qt6 (default ON)" ON)
 
 include(GNUInstallDirs)
 
-if (USE_QT6)
-    find_package(Qt6 COMPONENTS Core Gui Network Widgets LinguistTools REQUIRED)
-else ()
-    find_package(Qt5 COMPONENTS Core Gui Network Widgets LinguistTools REQUIRED)
+# =========================
+# Qt selection (Qt6-first)
+# =========================
+if(USE_QT6)
+    find_package(Qt6 REQUIRED COMPONENTS Core Gui Network Widgets LinguistTools)
+    set(QT_LIBS Qt6::Core Qt6::Gui Qt6::Network Qt6::Widgets)
+    set(QT_LUPDATE Qt6::lupdate)
+else()
+    find_package(Qt5 REQUIRED COMPONENTS Core Gui Network Widgets LinguistTools)
+    set(QT_LIBS Qt5::Core Qt5::Gui Qt5::Network Qt5::Widgets)
 endif()
 
-find_package(ImageMagick REQUIRED COMPONENTS Magick++ MagickWand MagickCore)
+# =========================
+# ImageMagick
+# =========================
+find_package(ImageMagick REQUIRED COMPONENTS Magick++ MagickCore MagickWand)
 
-set(converseen_SOURCES
+# =========================
+# Global CMake Modern Setup
+# =========================
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+
+set(CMAKE_AUTOUIC_SEARCH_PATHS
+    ${CMAKE_CURRENT_SOURCE_DIR}/ui
+)
+
+# =========================
+# Sources
+# =========================
+set(SRC
     src/main.cpp
     src/cachingsystem.cpp
     src/combofilters.cpp
@@ -55,32 +67,7 @@ set(converseen_SOURCES
     src/Modules/multipageconverter.cpp
 )
 
-set(converseen_HEADERS
-    src/cachingsystem.h
-    src/combofilters.h
-    src/converter.h
-    src/dialogconversionstatus.h
-    src/dialoginfo.h
-    src/dialogmultipageeditor.h
-    src/dialogoptions.h
-    src/dialogquality.h
-    src/dialogshowupdatemsg.h
-    src/formats.h
-    src/globals.h
-    src/inisettings.h
-    src/mainwindowimpl.h
-    src/mylabelpreviewer.h
-    src/pixtreewidget.h
-    src/pushcolorchooser.h
-    src/sizeutil.h
-    src/thumbnailgeneratorthread.h
-    src/translator.h
-    src/updatechecker.h
-    src/magickdefine.h
-    src/Modules/multipageconverter.h
-)
-
-set(converseen_UIS
+set(UI
     ui/dialogconversionstatus.ui
     ui/dialoginfo.ui
     ui/dialogmultipageeditor.ui
@@ -90,11 +77,9 @@ set(converseen_UIS
     ui/mainwindow.ui
 )
 
-set(converseen_RESOURCES
-    resources.qrc
-)
+set(RESOURCES resources.qrc)
 
-set(converseen_LANG
+set(LANG_TS
     loc/converseen_tr_TR.ts
     loc/converseen_fr_FR.ts
     loc/converseen_es_CL.ts
@@ -112,171 +97,274 @@ set(converseen_LANG
     loc/converseen_zh_CN.ts
 )
 
-if (USE_QT6)
-    qt6_wrap_ui(converseen_UIS_H ${converseen_UIS})
-    qt6_wrap_cpp(converseen_MOC_SRCS ${converseen_HEADERS})
-    qt6_add_resources(converseen_RESOURCES ${converseen_RESOURCES})
-    qt6_add_translation(converseen_RESOURCES ${converseen_LANG})
-else ()
-    qt5_wrap_ui(converseen_UIS_H ${converseen_UIS})
-    qt5_wrap_cpp(converseen_MOC_SRCS ${converseen_HEADERS})
-    qt5_add_resources(converseen_RESOURCES ${converseen_RESOURCES})
-    qt5_add_translation(converseen_RESOURCES ${converseen_LANG})
-endif()
+# =========================
+# Executable
+# =========================
+if(APPLE)
 
-if(WIN32)
-    if (USE_QT6)
-	find_program(windeployqt_exe windeployqt6 REQUIRED)
-    else ()
-	find_program(windeployqt_exe windeployqt REQUIRED)
-    endif()
-    configure_file(cmake/windeployqt.cmake.in ${CMAKE_BINARY_DIR}/windeployqt.cmake @ONLY)
-    set(app_icon_resource_windows "converseen.rc")
+    set(APP_ICON "${CMAKE_CURRENT_SOURCE_DIR}/res/converseen.icns")
 
-    set(CMAKE_WIN32_EXECUTABLE TRUE)
-    add_definitions(${QT_DEFINITIONS})
-	
-	set(CMAKE_INSTALL_BINDIR "${PROJECT_NAME_CAPITALIZED}")
+    set(CMAKE_MACOSX_RPATH ON)
 
-	if (NOT USE_QT6)
-		set(OpenSSL_Win32_Path ${CMAKE_BINARY_DIR}/openssl-1.1/x86/bin CACHE PATH "OpenSSL win32 bin path")
-	#	# Download openssl if Qt5 is used!
-	#	include(ExternalProject)
-	#	ExternalProject_Add(
-	#		OpenSSL_Win32
-	#		PREFIX ${CMAKE_BINARY_DIR}/external 
-	#		URL https://download.firedaemon.com/FireDaemon-OpenSSL/openssl-1.1.1w.zip 
-	#		DOWNLOAD_DIR ${CMAKE_BINARY_DIR}/downloads
-	#		DOWNLOAD_NAME openssl-1.1.1w.zip
-	#		CONFIGURE_COMMAND ""
-	#		BUILD_COMMAND ""
-	#		INSTALL_COMMAND ""
-	#		# DOWNLOAD_EXTRACT_TIMESTAMP TRUE
-	#	)
-	endif()
-else()
-    add_definitions(
-        -Wall
-        -std=c++17
-        -fPIC
-        -DMAGICKCORE_HDRI_ENABLE=0
-        -DMAGICKCORE_QUANTUM_DEPTH=16
-        ${QT_DEFINITIONS}
+    add_executable(converseen MACOSX_BUNDLE
+        ${SRC}
+        ${UI}
+        ${RESOURCES}
+        ${APP_ICON}
     )
+
+    set_source_files_properties(${APP_ICON} PROPERTIES
+        MACOSX_PACKAGE_LOCATION "Resources"
+    )
+
+    set_target_properties(converseen PROPERTIES
+        MACOSX_BUNDLE_ICON_FILE "converseen.icns"
+    )
+
+else()
+    add_executable(converseen
+        ${SRC} ${UI} ${RESOURCES}
+    )
+
 endif()
 
-include_directories(
-    ${CMAKE_CURRENT_BINARY_DIR}
+# =========================
+# Target Properties
+# =========================
+target_compile_features(converseen PRIVATE cxx_std_17)
+
+target_compile_definitions(converseen PRIVATE
+    MAGICKCORE_HDRI_ENABLE=0
+    MAGICKCORE_QUANTUM_DEPTH=16
+)
+
+target_include_directories(converseen PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
+    ${CMAKE_CURRENT_SOURCE_DIR}/src
     ${ImageMagick_INCLUDE_DIRS}
-    ${ImageMagick_Magick++_INCLUDE_DIRS}
-    ${ImageMagick_MagickCore_INCLUDE_DIRS}
-    .
 )
 
-add_executable(${GUI}
-    ${converseen_SOURCES}
-    ${converseen_UIS_H}
-    ${converseen_MOC_SRCS}
-    ${converseen_RESOURCES}
-    $<$<BOOL:${WIN32}>:${app_icon_resource_windows}>
+target_link_libraries(converseen PRIVATE
+    ${QT_LIBS}
+    ${ImageMagick_LIBRARIES}
 )
 
-if (USE_QT6)
-    target_link_libraries(${GUI}
-        Qt6::Core
-        Qt6::Gui
-        Qt6::Network
-        Qt6::Widgets
-        ${ImageMagick_LIBRARIES}
+# =========================
+# Translations
+# =========================
+
+if(USE_QT6)
+
+    qt_add_translations(converseen
+        TS_FILES ${LANG_TS}
+        QM_FILES_OUTPUT_VARIABLE QM_FILES
     )
+
 else()
-    target_link_libraries(${GUI}
-        Qt5::Core
-        Qt5::Gui
-        Qt5::Network
-        Qt5::Widgets
-        ${ImageMagick_LIBRARIES}
-    )
+
+    qt5_add_translation(QM_FILES ${LANG_TS})
+
 endif()
+
+# =========================
+# Windows Packaging
+# =========================
+if(WIN32)
+
+    set(CMAKE_INSTALL_BINDIR "${PROJECT_NAME_CAPITALIZED}")
+
+    install(TARGETS converseen
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+    # ----------------------------
+    # ImageMagick runtime
+    # ----------------------------
+    file(GLOB IM_DLLS "${ImageMagick_EXECUTABLE_DIR}/CORE_RL_*.dll")
+    file(GLOB IM_XML  "${ImageMagick_EXECUTABLE_DIR}/*.xml")
+    file(GLOB IM_FILTERS "${ImageMagick_EXECUTABLE_DIR}/modules/filters/*.dll")
+    file(GLOB IM_CODERS  "${ImageMagick_EXECUTABLE_DIR}/modules/coders/*.dll")
+
+    install(FILES ${IM_DLLS}
+        DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+    install(FILES ${IM_XML}
+        DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+    install(FILES ${ImageMagick_EXECUTABLE_DIR}/sRGB.icc
+        DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+    install(FILES ${ImageMagick_EXECUTABLE_DIR}/NOTICE.txt
+        DESTINATION ${CMAKE_INSTALL_BINDIR}
+        RENAME ImageMagick_License.txt)
+
+    install(FILES ${IM_FILTERS}
+        DESTINATION ${CMAKE_INSTALL_BINDIR}/modules/filters)
+
+    install(FILES ${IM_CODERS}
+        DESTINATION ${CMAKE_INSTALL_BINDIR}/modules/coders)
+
+    # Languages
+    install(FILES ${QM_FILES}
+        DESTINATION ${CMAKE_INSTALL_BINDIR}/loc)
+
+    # ----------------------------
+    # windeployqt
+    # ----------------------------
+    if(USE_QT6)
+        find_program(WINDEPLOYQT_EXECUTABLE windeployqt6 REQUIRED)
+    else()
+        find_program(WINDEPLOYQT_EXECUTABLE windeployqt REQUIRED)
+    endif()
+
+    install(CODE "
+        execute_process(
+            COMMAND \"${WINDEPLOYQT_EXECUTABLE}\"
+                    \"\${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/converseen.exe\"
+        )
+    ")
+
+endif()
+
+# =========================
+# Linux Install
+# =========================
+if(UNIX AND NOT APPLE)
+
+    install(TARGETS converseen
+        RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
+
+    # Desktop entry
+    install(FILES res/net.fasterland.converseen.desktop
+        DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
+
+    # KDE service menu
+    install(FILES res/converseen_import.desktop
+        DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/kio/servicemenus)
+
+    # AppStream metadata
+    install(FILES converseen.appdata.xml
+        DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo)
+
+    # Icons
+    foreach(size 16 32 48 64 128 256 512)
+        install(FILES res/icons/${size}x${size}/converseen.png
+            DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/${size}x${size}/apps)
+    endforeach()
+
+    # Languages
+    install(FILES ${QM_FILES}
+        DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
+
+endif()
+
+# =========================
+# macOS Bundle + Deploy
+# =========================
+if(APPLE)
+
+    # ----------------------------
+    # RPATH
+    # ----------------------------
+    set_target_properties(converseen PROPERTIES
+        INSTALL_RPATH "@executable_path/../Frameworks"
+        BUILD_WITH_INSTALL_RPATH TRUE
+    )
+
+    # ----------------------------
+    # Install bundle
+    # ----------------------------
+    install(TARGETS converseen
+        BUNDLE DESTINATION .)
+
+    # ----------------------------
+    # ImageMagick config
+    # ----------------------------
+    get_filename_component(IM_LIB_DIR
+        ${ImageMagick_MagickCore_LIBRARY}
+        DIRECTORY)
+
+    get_filename_component(IM_PREFIX
+        ${IM_LIB_DIR}
+        DIRECTORY)
+
+    set(IM_CONFIG_DIR "${IM_PREFIX}/etc/ImageMagick-7")
+
+    if(EXISTS "${IM_CONFIG_DIR}")
+        install(DIRECTORY ${IM_CONFIG_DIR}
+            DESTINATION converseen.app/Contents/Resources)
+    endif()
+
+    # ----------------------------
+    # Languages
+    # ----------------------------
+    install(FILES ${QM_FILES}
+        DESTINATION converseen.app/Contents/Resources/loc)
+
+    # ----------------------------
+    # Ghostscript
+    # ----------------------------
+    find_library(GS_LIBRARY NAMES gs)
+
+    if(GS_LIBRARY)
+        get_filename_component(GS_LIB_DIR ${GS_LIBRARY} DIRECTORY)
+        get_filename_component(GS_PREFIX ${GS_LIB_DIR} DIRECTORY)
+
+        file(GLOB GS_VERSION_DIR
+            "${GS_PREFIX}/share/ghostscript/[0-9]*")
+
+        list(GET GS_VERSION_DIR 0 GS_RESOURCE_DIR)
+
+        if(EXISTS "${GS_RESOURCE_DIR}")
+            install(DIRECTORY "${GS_RESOURCE_DIR}/"
+                DESTINATION "converseen.app/Contents/Resources/ghostscript")
+        endif()
+    endif()
+
+    # ----------------------------
+    # Qt deploy
+    # ----------------------------
+    if(USE_QT6)
+
+        qt_generate_deploy_app_script(
+            TARGET converseen
+            OUTPUT_SCRIPT qt_deploy_script
+            NO_UNSUPPORTED_PLATFORM_ERROR
+        )
+
+        install(SCRIPT ${qt_deploy_script})
+
+    endif()
+
+endif()
+
+# =========================
+# CPack
+# =========================
+set(CPACK_INCLUDE_TOPLEVEL_DIRECTORY OFF)
+
+set(CPACK_PACKAGE_VENDOR "Francesco Mondello")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Converseen - Batch Image Converter")
+set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
+set(CPACK_PACKAGE_HOMEPAGE_URL "https://converseen.fasterland.net")
+set(CPACK_PACKAGE_CONTACT "faster3ck@gmail.net")
+set(CPACK_PACKAGE_NAME "${PROJECT_NAME_CAPITALIZED}")
+set(CPACK_PACKAGE_FILE_NAME "${PROJECT_NAME_CAPITALIZED}")
 
 if(WIN32)
-    file(GLOB ImageMagick_DLLs ${ImageMagick_EXECUTABLE_DIR}/CORE_RL_*.dll)
-    file(GLOB ImageMagick_Filters ${ImageMagick_EXECUTABLE_DIR}/modules/filters/*.dll)
-    file(GLOB ImageMagick_Coders ${ImageMagick_EXECUTABLE_DIR}/modules/coders/*.dll)
-    file(GLOB ImageMagick_XMLs ${ImageMagick_EXECUTABLE_DIR}/*.xml)
-    file(GLOB Win32_DLLs 
-        ${ImageMagick_EXECUTABLE_DIR}/mfc140*.dll
-        ${ImageMagick_EXECUTABLE_DIR}/msvcp140*.dll
-        ${ImageMagick_EXECUTABLE_DIR}/vc*140.dll
-    )
 
-    install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/converseen.exe DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install(FILES ${ImageMagick_DLLs} DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install(FILES ${ImageMagick_Filters} DESTINATION ${CMAKE_INSTALL_BINDIR}/modules/filters)
-    install(FILES ${ImageMagick_Coders} DESTINATION ${CMAKE_INSTALL_BINDIR}/modules/coders)
-    install(FILES ${ImageMagick_XMLs} DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install(FILES ${ImageMagick_EXECUTABLE_DIR}/sRGB.icc DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install(FILES ${ImageMagick_EXECUTABLE_DIR}/NOTICE.txt RENAME ImageMagick_License.txt DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install(FILES ${Win32_DLLs} DESTINATION ${CMAKE_INSTALL_BINDIR})
-	
-	if (NOT USE_QT6)
-		install(FILES package/Windows/qt.conf DESTINATION ${CMAKE_INSTALL_BINDIR})
-		install(FILES ${OpenSSL_Win32_Path}/libcrypto-1_1.dll DESTINATION ${CMAKE_INSTALL_BINDIR})
-		install(FILES ${OpenSSL_Win32_Path}/libssl-1_1.dll DESTINATION ${CMAKE_INSTALL_BINDIR})
-	endif()
-	
-	install(SCRIPT ${CMAKE_BINARY_DIR}/windeployqt.cmake)
-	install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/qtdeploy/ DESTINATION ${CMAKE_INSTALL_BINDIR} FILES_MATCHING PATTERN "*")
-    
-    foreach(LANG ${converseen_LANG})
-        string(REGEX REPLACE ".*/" "" TS_FILE ${LANG})
-        string(REGEX REPLACE ".ts" ".qm" QM_FILE ${TS_FILE})
-        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION ${CMAKE_INSTALL_BINDIR}/loc)
-    endforeach()
-else()
-    install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${GUI} DESTINATION ${CMAKE_INSTALL_BINDIR})
-    install(FILES res/net.fasterland.converseen.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/applications)
-    install(FILES res/converseen_import.desktop DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/kio/servicemenus)
-    install(FILES converseen.appdata.xml DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/metainfo/)
-    install(FILES res/icons/16x16/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/16x16/apps)
-    install(FILES res/icons/32x32/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/32x32/apps)
-    install(FILES res/icons/48x48/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/48x48/apps)
-    install(FILES res/icons/64x64/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/64x64/apps)
-    install(FILES res/icons/128x128/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/128x128/apps)
-    install(FILES res/icons/256x256/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/256x256/apps)
-    install(FILES res/icons/512x512/converseen.png DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/icons/hicolor/512x512/apps)
-
-    foreach(LANG ${converseen_LANG})
-        string(REGEX REPLACE ".*/" "" TS_FILE ${LANG})
-        string(REGEX REPLACE ".ts" ".qm" QM_FILE ${TS_FILE})
-        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/converseen/loc)
-    endforeach()
-endif()
-
-    # CPack
-	set(CPACK_INCLUDE_TOPLEVEL_DIRECTORY OFF)
-	
-    set(CPACK_PACKAGE_VENDOR "Francesco Mondello")
-    set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Converseen the Batch Image Converter and Resizer")
-    set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
-    set(CPACK_PACKAGE_HOMEPAGE_URL "https:/converseen.fasterland.net")
-    set(CPACK_PACKAGE_CONTACT "Contact Author <faster3ck@gmail.net>")
-    set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/COPYING.txt")
     set(CPACK_GENERATOR WIX ZIP)
-    set(CPACK_PACKAGE_NAME "${PROJECT_NAME_CAPITALIZED}")
-    set(CPACK_PACKAGE_INSTALL_DIRECTORY "${PROJECT_NAME_CAPITALIZED}")
-    set(CPACK_PACKAGE_EXECUTABLES ${PROJECT_NAME} "${PROJECT_NAME_CAPITALIZED}")
-    set(CPACK_CREATE_DESKTOP_LINKS ${PROJECT_NAME} "${PROJECT_NAME_CAPITALIZED}")
-    set(CPACK_PACKAGE_FILE_NAME "${PROJECT_NAME_CAPITALIZED}")
 
-if(WIN32)
-    # WIX (Windows .msi installer)
+    # -------------------------
+    # WIX Configuration
+    # -------------------------
     set(CPACK_WIX_PRODUCT_ICON "${CMAKE_SOURCE_DIR}/res/converseen.ico")
     set(CPACK_WIX_UI_BANNER "${CMAKE_SOURCE_DIR}/package/Windows/wix/CPACK_WIX_UI_BANNER.BMP")
     set(CPACK_WIX_UI_DIALOG "${CMAKE_SOURCE_DIR}/package/Windows/wix/CPACK_WIX_UI_DIALOG.BMP")
+
     set(CPACK_WIX_PROPERTY_ARPHELPLINK "${CPACK_PACKAGE_HOMEPAGE_URL}")
     set(CPACK_WIX_PROPERTY_ARPURLINFOABOUT "${CPACK_PACKAGE_HOMEPAGE_URL}")
     set(CPACK_WIX_ROOT_FEATURE_DESCRIPTION "${CPACK_PACKAGE_DESCRIPTION_SUMMARY}")
+
     set(CPACK_WIX_LIGHT_EXTRA_FLAGS "-dcl:high")
 
     set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/COPYING.txt")
@@ -285,5 +373,7 @@ if(WIN32)
     set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000032")
     set(CPACK_WIX_UPGRADE_GUID "B35C58D3-FBD2-4A81-8371-588F51EC180F")
 
-    include(CPack)
 endif()
+
+include(CPack)
+
