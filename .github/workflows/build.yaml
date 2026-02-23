@@ -126,13 +126,13 @@ jobs:
             imagemagick_arch: 'x86'
             vs_arch: 'x86'
             bits: '32bit'
-            cmake_extra_flags: '-DOpenSSL_Win32_Path="..\..\openssl-1.1\x86\bin"'
+            cmake_extra_flags: '-DOpenSSL_Win32_Path="..\..\openssl-1.1\x86\bin" -DUSE_QT6=OFF'
           - qt_version: '6.10.1'
             qt_arch: 'win64_msvc2022_64'
             imagemagick_arch: 'x64'
             vs_arch: 'x64'
             bits: '64bit'
-            cmake_extra_flags: '-DUSE_QT6=yes'
+            cmake_extra_flags: ''
     
     steps:
       - name: Download ImageMagick for Windows (${{ matrix.bits }})
@@ -277,11 +277,11 @@ jobs:
       
     - name: Build Converseen
       run: |
+        cd Converseen
         mkdir build
         cd build
 
         cmake \
-         -DUSE_QT6=ON \
          -DCMAKE_BUILD_TYPE=Release \
          -DCMAKE_PREFIX_PATH="${{ github.workspace }}/im_build" \
          -DCMAKE_INSTALL_PREFIX=install ..
@@ -290,12 +290,12 @@ jobs:
 
     - name: Deploy Converseen
       run: |
-        cd build
+        cd Converseen/build
         cmake --install .
 
     - name: Compress Converseen
       run: |
-        cd build/install
+        cd Converseen/build/install
         zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
         pwd
 
