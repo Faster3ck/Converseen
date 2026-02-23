@@ -282,6 +282,7 @@ jobs:
         cd build
 
         cmake \
+         -DUSE_QT6=yes \
          -DCMAKE_BUILD_TYPE=Release \
          -DCMAKE_PREFIX_PATH="${{ github.workspace }}/im_build" \
          -DCMAKE_INSTALL_PREFIX=install ..
