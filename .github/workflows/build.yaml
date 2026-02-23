@@ -126,13 +126,13 @@ jobs:
             imagemagick_arch: 'x86'
             vs_arch: 'x86'
             bits: '32bit'
-            cmake_extra_flags: '-DOpenSSL_Win32_Path="..\..\openssl-1.1\x86\bin" -DUSE_QT6=OFF'
+            cmake_extra_flags: '-DOpenSSL_Win32_Path="..\..\openssl-1.1\x86\bin"'
           - qt_version: '6.10.1'
             qt_arch: 'win64_msvc2022_64'
             imagemagick_arch: 'x64'
             vs_arch: 'x64'
             bits: '64bit'
-            cmake_extra_flags: ''
+            cmake_extra_flags: '-DUSE_QT6=yes'
     
     steps:
       - name: Download ImageMagick for Windows (${{ matrix.bits }})
