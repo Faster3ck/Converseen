@@ -16,10 +16,16 @@ export OUTNAME=Converseen-"$VERSION"-anylinux-"$ARCH".AppImage
 # Deploy dependencies
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
 chmod +x ./quick-sharun
-./quick-sharun \
-	/usr/bin/converseen       \
-	/usr/lib/libSvtAv1Enc.so  \
-	/usr/lib/libavcodec.so
+if [ "$(uname -m)" = "x86_64" ]; then
+    ./quick-sharun \
+    /usr/bin/converseen \
+    /usr/lib/libSvtAv1Enc.so \
+    /usr/lib/libavcodec.so
+else
+    ./quick-sharun \
+    /usr/bin/converseen \
+    /usr/lib/libavcodec.so
+fi
 
 cat >> ./AppDir/.env << 'EOF'
 # Set Ghostscript env

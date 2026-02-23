@@ -216,15 +216,6 @@ jobs:
         export HOMEBREW_NO_AUTO_UPDATE=1
         brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool libzip openexr openjpeg webp libraw ghostscript
 
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v4
-      with:
-        aqtversion: '==3.1.*'
-        version: '6.9.*'
-        host: 'mac'
-        target: 'desktop'
-        arch: 'clang_64'
-
     - name: Checkout Converseen
       uses: actions/checkout@v4
       with:
@@ -236,28 +227,56 @@ jobs:
         tar -xzvf ImageMagick.tar.gz
         
     - name: Build ImageMagick
-      run: |      
+      run: |
         cd ImageMagick-*
+
+        # Fix openmp compile error with libraw
+        sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw.pc
+        sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw_r.pc
+        
         ./configure --prefix=${{ github.workspace }}/im_build \
-                              --with-quantum-depth=16 \
-                              --disable-dependency-tracking \
-                              --without-perl \
-                              --without-x \
-                              --disable-static \
-                              --disable-installed \
-                              --enable-shared \
-                              --with-flif=yes \
-                              --with-gslib=yes
+                    --disable-silent-rules \
+                    --disable-dependency-tracking \
+                    --without-perl \
+                    --disable-installed \
+                    --with-quantum-depth=16 \
+                    --disable-opencl \
+                    --enable-shared \
+                    --with-freetype=yes \
+                    --with-gvc=no \
+                    --with-openjp2 \
+                    --with-openexr \
+                    --with-webp=yes \
+                    --with-heic=yes \
+                    --with-raw=yes \
+                    --with-zip=yes \
+                    --with-gslib \
+                    --with-gs-font-dir=/usr/local/share/ghostscript/fonts \
+                    --without-djvu \
+                    --without-fftw \
+                    --without-pango \
+                    --without-wmf \
+                    --without-x \
+                    --disable-openmp
 
         make
         make install
+
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v4
+      with:
+        aqtversion: '==3.1.*'
+        version: '6.10.*'
+        host: 'mac'
+        target: 'desktop'
+        arch: 'clang_64'
       
     - name: Build Converseen
       run: |
         mkdir build
         cd build
 
-        qmake ../converseen/converseen.pro -spec macx-clang QMAKE_MACOSX_DEPLOYMENT_TARGET=12.0 IM_INSTALL_PREFIX=${{ github.workspace }}/im_build
+        qmake ../converseen/converseen.pro -spec macx-clang IM_INSTALL_PREFIX=${{ github.workspace }}/im_build
         make
 
     - name: Copy Dependencies
@@ -351,7 +370,7 @@ jobs:
     - name: Copy Resources
       run: |
         cd build/bin
-        gs_ver=$(echo $(ls /opt/homebrew/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+        gs_ver=$(echo $(ls /opt/homebrew/Cellar/ghostscript/) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')_1
         
         echo "--- Copying res files ---"
         cp -RPv ${{ github.workspace }}/im_build/etc/ImageMagick-7 converseen.app/Contents/Resources
@@ -361,11 +380,11 @@ jobs:
         mkdir converseen.app/Contents/Resources/loc
         cp -RPv ../../converseen/loc/*.qm converseen.app/Contents/Resources/loc
 
-        echo "--- Rename Ghostscript Resource Dir ---"
-        cd converseen.app/Contents/Resources/ghostscript
+        # echo "--- Rename Ghostscript Resource Dir ---"
+        # cd converseen.app/Contents/Resources/ghostscript
         
-        gs_ver_t=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
-        mv $gs_ver_t gs
+        # gs_ver_t=$(echo $(ls) | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')_1
+        # mv $gs_ver_t gs
 
     - name: Compress Converseen
       run: |
