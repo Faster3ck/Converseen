@@ -158,11 +158,15 @@ if(USE_QT6)
     qt_add_translations(converseen
         TS_FILES ${LANG_TS}
         QM_FILES_OUTPUT_VARIABLE QM_FILES
+        OUTPUT_LOCATION ${CMAKE_CURRENT_BINARY_DIR}
     )
 
 else()
 
     qt5_add_translation(QM_FILES ${LANG_TS})
+    set_source_files_properties(${QM_FILES} PROPERTIES
+        GENERATED TRUE
+    )
 
 endif()
 
@@ -376,4 +380,5 @@ if(WIN32)
 endif()
 
 include(CPack)
+
 
