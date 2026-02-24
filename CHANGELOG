@@ -1,3 +1,10 @@
+0.15.2.0 – 2026-02-24
+- Fixed conversion and resolution issues with certain formats
+- Fixed a potential issue with file paths
+- Corrected a typo in the main window
+- Updated Italian translation
+- Various Bugfixes
+
 0.15.1.3 – 2025-12-01
 - Added a detailed instruction tooltip for the "Maintain aspect ratio" feature
 - Updated Turkish translation

@@ -4,19 +4,19 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../src/converter.cpp" line="69"/>
+        <location filename="../src/converter.cpp" line="70"/>
         <source>Skipped: %1 already esists.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="89"/>
-        <location filename="../src/converter.cpp" line="99"/>
-        <location filename="../src/converter.cpp" line="106"/>
+        <location filename="../src/converter.cpp" line="90"/>
+        <location filename="../src/converter.cpp" line="100"/>
+        <location filename="../src/converter.cpp" line="107"/>
         <source>Error: %1</source>
         <translation>Помилка: %1</translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="299"/>
+        <location filename="../src/converter.cpp" line="303"/>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -852,11 +852,6 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 піксель&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1024"/>
-        <source>Mantain aspect ratio</source>
-        <translation>Зберегти пропорції</translation>
-    </message>
-    <message>
         <location filename="../ui/mainwindow.ui" line="1034"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Maintain Aspect Ratio&lt;/span&gt;&lt;br/&gt;Keeps the image proportions unchanged.&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Prioritize Width or Height&lt;/span&gt;&lt;br/&gt;Enter &lt;span style=&quot; font-weight:700;&quot;&gt;0&lt;/span&gt; for the side to ignore. The other value is kept constant, and the ignored dimension is calculated automatically.&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Example:&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt; Height 800 px, Width 0 px&lt;/span&gt; → height stays &lt;span style=&quot; font-style:italic;&quot;&gt;800 px&lt;/span&gt;, width is calculated &lt;span style=&quot; font-style:italic;&quot;&gt;automatically&lt;/span&gt;.&lt;br/&gt;Works the same in &lt;span style=&quot; font-weight:700;&quot;&gt;percentage&lt;/span&gt; mode. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
@@ -1040,6 +1035,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/mainwindow.ui" line="783"/>
         <source>Dimensions</source>
         <translation>Розміри</translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1024"/>
+        <source>Maintain aspect ratio</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1154"/>

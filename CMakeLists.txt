@@ -4,7 +4,7 @@ if(WIN32)
     cmake_policy(SET CMP0135 NEW)
 endif()
 
-set(CONVERSEEN_VERSION 0.15.1.3)
+set(CONVERSEEN_VERSION 0.15.2.0)
 
 project(
     converseen
@@ -321,7 +321,7 @@ endif()
     set(CPACK_PACKAGE_VENDOR "Francesco Mondello")
     set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Converseen the Batch Image Converter and Resizer")
     set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
-    set(CPACK_PACKAGE_HOMEPAGE_URL "https:/converseen.fasterland.net")
+    set(CPACK_PACKAGE_HOMEPAGE_URL "https://converseen.fasterland.net")
     set(CPACK_PACKAGE_CONTACT "Contact Author <faster3ck@gmail.net>")
     set(CPACK_PACKAGE_DESCRIPTION_FILE "${CMAKE_SOURCE_DIR}/COPYING.txt")
     set(CPACK_GENERATOR WIX ZIP)
@@ -344,7 +344,7 @@ if(WIN32)
     set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/COPYING.txt")
     set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/COPYING.txt")
 
-    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000032")
+    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000033")
     set(CPACK_WIX_UPGRADE_GUID "B35C58D3-FBD2-4A81-8371-588F51EC180F")
 
     include(CPack)
@@ -373,3 +373,7 @@ if(APPLE AND USE_QT6)
     )
     install(SCRIPT ${qt_deploy_script})
 endif()
+
+# ======================================================================================= #
+# This CMakeLists.txt file will be refactored and modernized as soon as possible! :D      #
+# ======================================================================================= #

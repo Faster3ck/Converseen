@@ -4,19 +4,19 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../src/converter.cpp" line="69"/>
+        <location filename="../src/converter.cpp" line="70"/>
         <source>Skipped: %1 already esists.</source>
         <translation>Ignoré : %1 existe déjà.</translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="89"/>
-        <location filename="../src/converter.cpp" line="99"/>
-        <location filename="../src/converter.cpp" line="106"/>
+        <location filename="../src/converter.cpp" line="90"/>
+        <location filename="../src/converter.cpp" line="100"/>
+        <location filename="../src/converter.cpp" line="107"/>
         <source>Error: %1</source>
         <translation>Erreur : %1</translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="299"/>
+        <location filename="../src/converter.cpp" line="303"/>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
         <translation>ERREUR : le format %1 n&apos;est pas pris en charge pour l&apos;écriture, choisissez un autre format de sortie. Ignoré!</translation>
     </message>
@@ -777,11 +777,6 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 pixel&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1024"/>
-        <source>Mantain aspect ratio</source>
-        <translation>Conserver les proportions</translation>
-    </message>
-    <message>
         <location filename="../ui/mainwindow.ui" line="1201"/>
         <source>+ &amp;90°</source>
         <translation>+ &amp;90°</translation>
@@ -961,6 +956,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/mainwindow.ui" line="968"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Link Aspect Ratio with Selected Image&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Automatically adjusts the aspect ratio values when you enter a value in the &lt;span style=&quot; font-weight:700;&quot;&gt;Width/Height&lt;/span&gt; fields.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Lier les proportions avec l’image sélectionnée&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Ajuste automatiquement les valeurs de proportion lorsque vous entrez une valeur dans les champs &lt;span style=&quot; font-weight:700;&quot;&gt;Largeur/Hauteur&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1024"/>
+        <source>Maintain aspect ratio</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1034"/>

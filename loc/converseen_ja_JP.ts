@@ -4,19 +4,19 @@
 <context>
     <name>Converter</name>
     <message>
-        <location filename="../src/converter.cpp" line="69"/>
+        <location filename="../src/converter.cpp" line="70"/>
         <source>Skipped: %1 already esists.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="89"/>
-        <location filename="../src/converter.cpp" line="99"/>
-        <location filename="../src/converter.cpp" line="106"/>
+        <location filename="../src/converter.cpp" line="90"/>
+        <location filename="../src/converter.cpp" line="100"/>
+        <location filename="../src/converter.cpp" line="107"/>
         <source>Error: %1</source>
         <translation>エラー: %1</translation>
     </message>
     <message>
-        <location filename="../src/converter.cpp" line="299"/>
+        <location filename="../src/converter.cpp" line="303"/>
         <source>ERROR: Format %1 is not supported for writing, choose another output format. Skipping!</source>
         <translation type="unfinished"></translation>
     </message>
@@ -867,11 +867,6 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;0 x 0 ピクセル&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/mainwindow.ui" line="1024"/>
-        <source>Mantain aspect ratio</source>
-        <translation>アスペクト比を保持</translation>
-    </message>
-    <message>
         <location filename="../ui/mainwindow.ui" line="244"/>
         <source>Rename:</source>
         <translation>新しい名前:</translation>
@@ -1110,6 +1105,11 @@ p, li { white-space: pre-wrap; }
         <location filename="../ui/mainwindow.ui" line="458"/>
         <source>Actio&amp;ns Panel</source>
         <translation>動作パネル(&amp;N)</translation>
+    </message>
+    <message>
+        <location filename="../ui/mainwindow.ui" line="1024"/>
+        <source>Maintain aspect ratio</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1034"/>

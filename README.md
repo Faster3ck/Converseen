@@ -19,7 +19,7 @@ With **Converseen** you can:
 
 ## Installing
 
-**Converseen** is available for free for several operating systems including **Windows 7/8/10/11**, all versions of **Linux** such as **Ubuntu, Mint, Fedora, Arch Linux, openSUSE** either through the **official repos** or through **AppImage**, **Snap** and **Flatpak** packages, **macOS 12+**, but also **FreeBSD**.
+**Converseen** is available for free for several operating systems including **Windows 7/8/10/11**, all versions of **Linux** such as **Ubuntu, Mint, Fedora, Arch Linux, openSUSE** either through the **official repos** or through **AppImage**, **Snap** and **Flatpak** packages, **macOS 13+**, but also **FreeBSD**.
 
 * [Download for Windows](https://converseen.fasterland.net/download-for-windows/)
 * [Download for Linux](https://converseen.fasterland.net/download-for-linux/)
@@ -46,7 +46,7 @@ For the **Windows** binaries for **Converseen**, this program uses free code sig
 ## License
 
     Converseen - The image batch converter and resizer
-    Copyright (C) 2009 - 2025  Francesco Mondello
+    Copyright (C) 2009 - 2026  Francesco Mondello
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
