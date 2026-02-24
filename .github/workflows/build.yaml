@@ -221,6 +221,27 @@ jobs:
       with:
         path: Converseen
 
+    - name: Set Environment
+      id: set-env
+      run: |
+        file_content=$(tr -d '\r' <converseen/package/macOS/version.txt)
+
+        VERSION=$(echo "$file_content" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+        BUILD=$(echo "$file_content" | grep -oE '[0-9]+$')
+
+        export LIB_DIR="${BASE_DIR}/lib"
+        export LOCAL_LIB="/usr/local/lib"
+
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+        echo "BUILD=$BUILD" >> $GITHUB_ENV
+        echo "LIB_DIR=$LIB_DIR" >> $GITHUB_ENV
+        echo "LOCAL_LIB=$LOCAL_LIB" >> $GITHUB_ENV
+
+        echo "ver=$VERSION" >> "$GITHUB_OUTPUT"
+
+        echo "Version: $VERSION"
+        echo "Build Number: $BUILD"
+
     - name: Download ImageMagick
       run: |
         wget https://imagemagick.org/archive/ImageMagick.tar.gz
