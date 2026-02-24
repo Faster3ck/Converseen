@@ -960,17 +960,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1024"/>
         <source>Maintain aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation>Conserver les proportions</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1034"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Maintain Aspect Ratio&lt;/span&gt;&lt;br/&gt;Keeps the image proportions unchanged.&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Prioritize Width or Height&lt;/span&gt;&lt;br/&gt;Enter &lt;span style=&quot; font-weight:700;&quot;&gt;0&lt;/span&gt; for the side to ignore. The other value is kept constant, and the ignored dimension is calculated automatically.&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Example:&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt; Height 800 px, Width 0 px&lt;/span&gt; → height stays &lt;span style=&quot; font-style:italic;&quot;&gt;800 px&lt;/span&gt;, width is calculated &lt;span style=&quot; font-style:italic;&quot;&gt;automatically&lt;/span&gt;.&lt;br/&gt;Works the same in &lt;span style=&quot; font-weight:700;&quot;&gt;percentage&lt;/span&gt; mode. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Conserver les proportions&lt;/span&gt;&lt;br/&gt;Conserve les proportions de l&apos;image.&lt;br/&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Privilégiez la largeur ou la hauteur&lt;/span&gt;&lt;br/&gt;Entrer &lt;span style=&quot; font-weight:700;&quot;&gt;0&lt;/span&gt; pour le côté à ignorer. L&apos;autre valeur est maintenue constante, et la dimension ignorée est calculée automatiquement.&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Exemple :&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt; Hauteur 800 px, Largeur 0 px&lt;/span&gt; → la hauteur reste &lt;span style=&quot; font-style:italic;&quot;&gt;800 px&lt;/span&gt;, la largeur est calculée &lt;span style=&quot; font-style:italic;&quot;&gt;automatiquement&lt;/span&gt;.&lt;br/&gt;Fonctionne de la même manière &lt;span style=&quot; font-weight:700;&quot;&gt;en mode&lt;/span&gt; pourcentage. &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1037"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;#&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4; vertical-align:super;&quot;&gt;?&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1354"/>
