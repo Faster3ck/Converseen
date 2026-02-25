@@ -69,7 +69,7 @@ jobs:
         cmake \
          -DUSE_QT6=yes \
          -DCMAKE_BUILD_TYPE=Release \
-         -DCMAKE_PREFIX_PATH="/Users/github-runner/Qt/6.6.2/macos;${{ github.workspace }}/im_build" \
+         -DCMAKE_PREFIX_PATH="/Users/github-runner/Qt/6.9.2/macos;${{ github.workspace }}/im_build" \
          -DCMAKE_INSTALL_PREFIX=install ..
          
         make
