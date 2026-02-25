@@ -101,15 +101,14 @@ jobs:
 
     - name: Compress Converseen
       run: |
-        cd build/bin
+        cd Converseen/build/install
         zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
-        pwd
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v4
       with:
         name: ConverseenMacOSIntel
-        path: build/bin/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip
+        path: Converseen/build/install/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip
         
   create_release:
     name: 'Create Release'
