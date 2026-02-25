@@ -1,0 +1,191 @@
+name: Build and Release Converseen for MacOS (Intel)
+
+on:
+  workflow_dispatch:
+      
+permissions:
+  contents: write
+
+jobs:
+  build_converseen_macos:
+    name: Converseen macOS Build (Intel)
+    runs-on: self-hosted
+    outputs:
+      output_version: ${{ steps.set-env.outputs.ver }}
+
+    env:
+      BASE_DIR: ${{ github.workspace }}/im_build 
+      WORKING_DIR: ${{ github.workspace }}
+
+    steps:
+    - name: Checkout Converseen
+      uses: actions/checkout@v4
+      with:
+        path: converseen
+
+    - name: Set Environment
+      id: set-env
+      run: |
+        file_content=$(tr -d '\r' <converseen/package/macOS/version.txt)
+
+        VERSION=$(echo "$file_content" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+        BUILD=$(echo "$file_content" | grep -oE '[0-9]+$')
+
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+        echo "BUILD=$BUILD" >> $GITHUB_ENV
+
+        echo "ver=$VERSION" >> "$GITHUB_OUTPUT"
+
+        echo "Version: $VERSION"
+        echo "Build Number: $BUILD"
+
+    - name: Download ImageMagick
+      run: |
+        wget https://imagemagick.org/archive/ImageMagick.tar.gz
+        tar -xzvf ImageMagick.tar.gz
+        
+    - name: Build ImageMagick
+      run: |
+        cd ImageMagick-*
+
+        export CFLAGS="-O2"
+        export CXXFLAGS="-O2"
+        export LDFLAGS="-Wl,-headerpad_max_install_names -Wl,-headerpad,0x2000"
+        
+        ./configure --prefix=${{ github.workspace }}/im_build \
+                    --disable-silent-rules \
+                    --disable-dependency-tracking \
+                    --without-perl \
+                    --disable-installed \
+                    --with-quantum-depth=16 \
+                    --disable-opencl \
+                    --enable-shared \
+                    --with-freetype=yes \
+                    --with-gvc=no \
+                    --with-openjp2 \
+                    --with-openexr \
+                    --with-webp=yes \
+                    --with-heic=yes \
+                    --with-raw=yes \
+                    --with-zip=yes \
+                    --with-gslib \
+                    --with-gs-font-dir=/usr/local/share/ghostscript/fonts \
+                    --without-djvu \
+                    --without-fftw \
+                    --without-pango \
+                    --without-wmf \
+                    --without-x \
+                    --disable-openmp
+
+        make
+        make install
+      
+    - name: Build Converseen
+      run: |
+        cd Converseen
+        mkdir build
+        cd build
+
+        cmake \
+         -DUSE_QT6=yes \
+         -DCMAKE_BUILD_TYPE=Release \
+         -DCMAKE_PREFIX_PATH="/Users/github-runner/Qt/6.9.2/macos;${{ github.workspace }}/im_build" \
+         -DCMAKE_INSTALL_PREFIX=install ..
+         
+        make
+      
+    - name: Deploy Converseen
+      run: |
+        cd Converseen/build
+        cmake --install .
+
+    - name: Compress Converseen
+      run: |
+        cd build/bin
+        zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
+        pwd
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: ConverseenMacOSIntel
+        path: build/bin/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip
+        
+  create_release:
+    name: 'Create Release'
+    needs:
+      - build_converseen_macos
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Converseen
+      uses: actions/checkout@v4
+      
+    - name: Download artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: ConverseenMacOSIntel
+
+    - name: 'Get Previous tag'
+      id: previoustag
+      uses: "WyriHaximus/github-action-get-previous-tag@v1"
+      with:
+        fallback: "v${{ needs.build_converseen_macos.outputs.output_version }}"
+
+    - name: Publish Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: "${{ steps.previoustag.outputs.tag }}"
+        files: |
+          *macos-x86_64.zip
+
+  sf-release:
+    name: Sourceforge Release
+    needs:
+      - build_converseen_macos
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Known Hosts
+        id: known-hosts
+        run: |
+          SF_HOSTS=$(ssh-keyscan -H frs.sourceforge.net)
+          echo "known-hosts=$SF_HOSTS" >> $GITHUB_OUTPUT
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: ConverseenMacOSIntel
+          path: artifacts
+        
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SF_SSH_KEY }}
+          known_hosts: ${{ steps.known-hosts.outputs.known-hosts }}
+          if_key_exists: fail # replace / ignore / fail; optional (defaults to fail)
+          
+      - name: rsync over SSH
+        id: rsync
+        run: |
+          cd artifacts
+        
+          c_ver=${{ needs.build_converseen_macos.outputs.output_version }}
+          v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
+          
+          c_target=$(echo $(ls converseen-*macos-x86_64.zip))
+          echo "target-file=$c_target" >> $GITHUB_OUTPUT
+          
+          rsync -r *.zip* ${{ secrets.SF_USERHOST }}:"${{ secrets.SF_PATH }}/Converseen $v_dir/"
+
+      - name: Set Platform
+        run: |
+          c_ver=${{ needs.build_converseen_macos.outputs.output_version }}
+          c_target=${{ steps.rsync.outputs.target-file }}
+          
+          v_dir=$(echo "$c_ver" | grep -oE '^[0-9]+\.[0-9]+')
+          c_url=https://sourceforge.net/projects/converseen/files/Converseen/Converseen%20${v_dir}/$c_target
+
+          echo "url: $c_url"
+          
+          curl -H "Accept: application/json" -X PUT -d "default=mac" -d "api_key=${{ secrets.SF_API_KEY }}" $c_url
