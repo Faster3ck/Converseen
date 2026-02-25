@@ -31,10 +31,6 @@ jobs:
         export CFLAGS="-O2"
         export CXXFLAGS="-O2"
         export LDFLAGS="-Wl,-headerpad_max_install_names -Wl,-headerpad,0x2000"
-
-        # Fix openmp compile error with libraw
-        sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw.pc
-        sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw_r.pc
         
         ./configure --prefix=${{ github.workspace }}/im_build \
                     --disable-silent-rules \
@@ -63,15 +59,6 @@ jobs:
 
         make
         make install
-
-    - name: Install Qt
-      uses: jurplel/install-qt-action@v4
-      with:
-        aqtversion: '==3.1.*'
-        version: '6.10.*'
-        host: 'mac'
-        target: 'desktop'
-        arch: 'clang_64'
       
     - name: Build Converseen
       run: |
@@ -82,7 +69,7 @@ jobs:
         cmake \
          -DUSE_QT6=yes \
          -DCMAKE_BUILD_TYPE=Release \
-         -DCMAKE_PREFIX_PATH="${{ github.workspace }}/im_build" \
+         -DCMAKE_PREFIX_PATH="/Users/github-runner/Qt/6.6.2/macos;${{ github.workspace }}/im_build" \
          -DCMAKE_INSTALL_PREFIX=install ..
          
         make
