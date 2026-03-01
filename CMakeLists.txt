@@ -13,6 +13,7 @@ project(
 set(PROJECT_NAME_CAPITALIZED "Converseen")
 
 option(USE_QT6 "Enable this if you want to use Qt6, instead of Qt5" NO)
+option(MACOS_DEPLOY "Enable this if you want to deploy the program on MacOS" NO)
 
 set(GUI "converseen")
 set(QT_USE_QTNETWORK TRUE)
@@ -29,7 +30,9 @@ endif()
 
 find_package(ImageMagick REQUIRED COMPONENTS Magick++ MagickWand MagickCore)
 
-if (APPLE)
+if (APPLE AND MACOS_DEPLOY)
+message(STATUS "--- MacOS Deploy Build ---")
+
 find_library(GS_LIBRARY NAMES gs)
     if(GS_LIBRARY)
         get_filename_component(GS_LIB_DIR ${GS_LIBRARY} DIRECTORY)
@@ -207,7 +210,7 @@ include_directories(
     .
 )
 
-if(APPLE)
+if(APPLE AND MACOS_DEPLOY)
     set(APP_ICON ${CMAKE_CURRENT_SOURCE_DIR}/res/converseen.icns)
     set_source_files_properties(${APP_ICON} PROPERTIES
         MACOSX_PACKAGE_LOCATION "Resources"
@@ -289,11 +292,17 @@ if(WIN32)
     endforeach()
 
 
-elseif(APPLE)
+elseif(APPLE AND MACOS_DEPLOY)
 
     install(TARGETS ${GUI}
             BUNDLE DESTINATION .
             RUNTIME DESTINATION bin)
+
+    foreach(LANG ${converseen_LANG})
+        string(REGEX REPLACE ".*/" "" TS_FILE ${LANG})
+        string(REGEX REPLACE ".ts" ".qm" QM_FILE ${TS_FILE})
+        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION "${GUI}.app/Contents/Resources/loc")
+    endforeach()
 
 else()
     install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/${GUI} DESTINATION ${CMAKE_INSTALL_BINDIR})
@@ -354,13 +363,7 @@ endif()
 # macOS Bundle Fix
 # =========================
 
-if(APPLE AND USE_QT6)
-    foreach(LANG ${converseen_LANG})
-        string(REGEX REPLACE ".*/" "" TS_FILE ${LANG})
-        string(REGEX REPLACE ".ts" ".qm" QM_FILE ${TS_FILE})
-        install(FILES ${CMAKE_CURRENT_BINARY_DIR}/${QM_FILE} DESTINATION "${GUI}.app/Contents/Resources/loc")
-    endforeach()
-
+if(APPLE AND MACOS_DEPLOY AND USE_QT6)
     set_target_properties(${GUI} PROPERTIES
         INSTALL_RPATH "@executable_path/../Frameworks"
         BUILD_WITH_INSTALL_RPATH TRUE
