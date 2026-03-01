@@ -353,7 +353,7 @@ if(WIN32)
     set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/COPYING.txt")
     set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/COPYING.txt")
 
-    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000033")
+    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000034")
     set(CPACK_WIX_UPGRADE_GUID "B35C58D3-FBD2-4A81-8371-588F51EC180F")
 
     include(CPack)
@@ -380,3 +380,4 @@ endif()
 # ======================================================================================= #
 # This CMakeLists.txt file will be refactored and modernized as soon as possible! :D      #
 # ======================================================================================= #
+
