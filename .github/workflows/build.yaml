@@ -304,6 +304,7 @@ jobs:
 
         cmake \
          -DUSE_QT6=yes \
+         -DMACOS_DEPLOY=yes \
          -DCMAKE_BUILD_TYPE=Release \
          -DCMAKE_PREFIX_PATH="${{ github.workspace }}/im_build" \
          -DCMAKE_INSTALL_PREFIX=install ..

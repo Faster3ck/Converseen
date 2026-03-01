@@ -1,3 +1,8 @@
+0.15.2.1 – 2026-03-01
+- Fixed problem with MacPorts build
+- Updated French translation
+- Various Bugfixes
+
 0.15.2.0 – 2026-02-24
 - Fixed conversion and resolution issues with certain formats
 - Fixed a potential issue with file paths
