@@ -183,7 +183,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/dialoginfo.ui" line="207"/>
         <source>&lt;strong&gt;Turkish Translation: &lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:yakushabb@gmail.com&quot;&gt;yakushabb@gmail.com&lt;/a&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&lt;strong&gt;土耳其语翻译：&lt;/strong&gt;Zeugma - &lt;a href=&quot;mailto:sunder67@hotmail.com&quot;&gt;sunder67@hotmail.com&lt;/a&gt; - Sabri Ünal - &lt;a href=&quot;mailto:yakushabb@gmail.com&quot;&gt;yakushabb@gmail.com&lt;/a&gt;</translation>
     </message>
     <message>
         <location filename="../ui/dialoginfo.ui" line="217"/>
@@ -1288,12 +1288,12 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1328"/>
         <source>No updates available!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">暂无更新！</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1329"/>
         <source>%1 is already updated to the most recent version.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">%1 已更新至最新版本。</translation>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="1346"/>
