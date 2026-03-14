@@ -30,7 +30,6 @@ pacman -Syu --noconfirm \
 	libxrandr        \
 	libxtst          \
 	qt6ct            \
-	qt6-wayland      \
 	wget             \
 	xorg-server-xvfb \
 	rav1e            \
