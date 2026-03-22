@@ -41,7 +41,7 @@ void IniSettings::init()
 #if defined(Q_OS_WIN)
     const QDir portableDir(QDir::currentPath() + "/settings");
 
-    if (isDirWritable(portableDir)) {
+    if (IniSettings::isDirWritable(portableDir)) {
         iniPath = portableDir.filePath(INIFILENAME);
     } else {
         const QString configPath =
