@@ -26,6 +26,7 @@
 
 #include <QObject>
 #include <QSettings>
+#include <QDir>
 
 class IniSettings : public QObject
 {
@@ -35,6 +36,7 @@ public:
 
     static void init();
 
+    static bool isDirWritable(const QDir &dir);
     static QString outputDir();
     static QByteArray windowGeometry();
     static int latestWrittenFormatIndex();

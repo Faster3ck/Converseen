@@ -21,7 +21,6 @@
 *
 */
 
-#include <QDir>
 #include <QStandardPaths>
 #include "inisettings.h"
 
@@ -37,19 +36,41 @@ IniSettings::IniSettings(QObject *parent) :
 
 void IniSettings::init()
 {
-    QString configLocationPath = QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
-    QString iniPath = QString("%1/converseen/%2").arg(configLocationPath).arg(INIFILENAME);
+    QString iniPath;
 
 #if defined(Q_OS_WIN)
-	QDir portableConfigDir(QDir::currentPath() + "/settings");
+    const QDir portableDir(QDir::currentPath() + "/settings");
 
-	if (portableConfigDir.exists())
-        configLocationPath = portableConfigDir.absolutePath();
-
-    iniPath = QString("%1/%2").arg(configLocationPath).arg(INIFILENAME);
+    if (isDirWritable(portableDir)) {
+        iniPath = portableDir.filePath(INIFILENAME);
+    } else {
+        const QString configPath =
+            QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
+        iniPath = QDir(configPath + "/converseen").filePath(INIFILENAME);
+    }
+#else
+    const QString configPath =
+        QStandardPaths::writableLocation(QStandardPaths::ConfigLocation);
+    iniPath = QDir(configPath + "/converseen").filePath(INIFILENAME);
 #endif
 
     settings = new QSettings(iniPath, QSettings::IniFormat);
+}
+
+bool isDirWritable(const QDir &dir)
+{
+    if (!dir.exists())
+        return false;
+
+    const QString testFilePath = dir.filePath("write_test.tmp");
+    QFile testFile(testFilePath);
+
+    if (!testFile.open(QIODevice::WriteOnly))
+        return false;
+
+    testFile.close();
+    testFile.remove();
+    return true;
 }
 
 QString IniSettings::outputDir()

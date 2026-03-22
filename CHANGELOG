@@ -1,3 +1,8 @@
+0.15.2.2 – 2026-03-22
+- Fixed a potential bug with the settings directory
+- Updated Chinese translation
+- Various Bugfixes
+
 0.15.2.1 – 2026-03-01
 - Fixed problem with MacPorts build
 - Updated French translation

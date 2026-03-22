@@ -80,16 +80,18 @@
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <url type="vcs-browser">https://github.com/Faster3ck/Converseen</url>
     <releases>
-        <release version="0.15.2.1" date="2026-03-01">
+        <release version="0.15.2.2" date="2026-03-22">
             <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.15.2.1</p>
+                <p>Changelog for 0.15.2.2</p>
                 <ul>
-                    <li>Updated French translation</li>
+                    <li>Fixed a potential bug with the settings directory</li>
+                    <li>Updated Chinese translation</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.15.2.1" date="2026-03-01" />
         <release version="0.15.2.0" date="2026-02-24" />
         <release version="0.15.1.3" date="2025-12-01" />
         <release version="0.15.1.2" date="2025-11-21" />
