@@ -43,6 +43,7 @@ find_library(GS_LIBRARY NAMES gs)
 
         list(GET GS_VERSION_DIR 0 GS_RESOURCE_DIR)
 
+        message(STATUS "Ghostscript dir: ${GS_PREFIX}")
         message(STATUS "Ghostscript resource dir: ${GS_RESOURCE_DIR}")
 
         install(DIRECTORY "${GS_RESOURCE_DIR}/"
