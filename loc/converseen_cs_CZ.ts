@@ -1316,7 +1316,7 @@ Would you download it?</source>
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="505"/>
-        <source>The output directory doesn&apos;t exists! Would you create it?</source>
+        <source>The output directory does not exist! Would you like to create it?</source>
         <translation>Výstupní adresář neexistuje! Chcete jej vytvořit?</translation>
     </message>
     <message>
