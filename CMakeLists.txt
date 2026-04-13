@@ -35,37 +35,35 @@ message(STATUS "--- MacOS Deploy Build ---")
 
 find_library(GS_LIBRARY NAMES gs)
     if(GS_LIBRARY)
-        get_filename_component(GS_LIB_DIR ${GS_LIBRARY} DIRECTORY)
-        get_filename_component(GS_PREFIX ${GS_LIB_DIR} DIRECTORY)
-
-        file(GLOB GS_VERSION_DIR
-         "${GS_PREFIX}/share/ghostscript/[0-9]*")
-
-        list(GET GS_VERSION_DIR 0 GS_RESOURCE_DIR)
-
-        message(STATUS "Ghostscript dir: ${GS_PREFIX}")
-        message(STATUS "Ghostscript resource dir: ${GS_RESOURCE_DIR}")
-
-        install(DIRECTORY "${GS_RESOURCE_DIR}/"
-                DESTINATION "${GUI}.app/Contents/Resources/ghostscript")
-
-        # ImageMagick
-        get_filename_component(IMAGEMAGICK_LIB_DIR
-                       ${ImageMagick_MagickCore_LIBRARY}
-                       DIRECTORY)
-
-        get_filename_component(IMAGEMAGICK_PREFIX
-                            ${IMAGEMAGICK_LIB_DIR}
-                            DIRECTORY)
-
-        message(STATUS "ImageMagick prefix: ${IMAGEMAGICK_PREFIX}")
-
-        set(IMAGEMAGICK_CONFIG_DIR
-            "${IMAGEMAGICK_PREFIX}/etc/ImageMagick-7")
-
-        install(DIRECTORY ${IMAGEMAGICK_CONFIG_DIR}
-                DESTINATION "${GUI}.app/Contents/Resources")
-    endif()
+	    get_filename_component(GS_LIB_DIR "${GS_LIBRARY}" DIRECTORY)
+	    get_filename_component(GS_PREFIX "${GS_LIB_DIR}" DIRECTORY)
+	
+	    set(GS_RESOURCE_DIR "")
+	
+	    set(GS_SEARCH_PATTERNS
+	        "${GS_PREFIX}/share/ghostscript/[0-9]*"
+	        "${GS_PREFIX}/Cellar/ghostscript/[0-9]*"
+	    )
+	
+	    foreach(PATTERN IN LISTS GS_SEARCH_PATTERNS)
+	        file(GLOB GS_CANDIDATES "${PATTERN}")
+	
+	        if(GS_CANDIDATES)
+	            list(GET GS_CANDIDATES 0 GS_RESOURCE_DIR)
+	            break()
+	        endif()
+	    endforeach()
+	
+	    if(GS_RESOURCE_DIR)
+	        message(STATUS "Ghostscript dir: ${GS_PREFIX}")
+	        message(STATUS "Ghostscript resource dir: ${GS_RESOURCE_DIR}")
+	
+	        install(DIRECTORY "${GS_RESOURCE_DIR}/"
+	                DESTINATION "${GUI}.app/Contents/Resources/ghostscript")
+	    else()
+	        message(WARNING "Ghostscript resource directory not found")
+	    endif()
+	endif()
 endif()
 
 set(converseen_SOURCES
