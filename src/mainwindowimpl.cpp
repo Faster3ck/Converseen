@@ -502,7 +502,7 @@ void MainWindowImpl::elabora()
                 }
                 else {
                     int ret = QMessageBox::warning(0, tr("Warning"),
-                                                   tr("The output directory doesn't exists! Would you create it?"),
+                                                   tr("The output directory does not exist! Would you like to create it?"),
                                                    QMessageBox::Ok | QMessageBox::Cancel);
 
                     if (ret == QMessageBox::Ok) {

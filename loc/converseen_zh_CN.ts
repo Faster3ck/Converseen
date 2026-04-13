@@ -1242,7 +1242,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../src/mainwindowimpl.cpp" line="505"/>
-        <source>The output directory doesn&apos;t exists! Would you create it?</source>
+        <source>The output directory does not exist! Would you like to create it?</source>
         <translation>输出目录不存在！是否现在创建？</translation>
     </message>
     <message>
