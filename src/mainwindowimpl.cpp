@@ -646,7 +646,7 @@ void MainWindowImpl::convert()
         /*
             For further details:
             http://www.imagemagick.org/script/command-line-options.php#quality
-        **/
+        */
 
         // Compression level 1-100
         if ((out_format == "jpg") || (out_format == "jpeg") || (out_format == "mpeg") || (out_format == "mpg")) {
@@ -658,13 +658,19 @@ void MainWindowImpl::convert()
             quality = m_pngQuality * 10;
         }
 
-        if ((out_format == "webp")) {
+        if (out_format == "webp") {
             quality = m_webPQuality;
 
             // magick, key, value
             magickDefines << MagickDefine("webp", "lossless", (m_isWebPLosslessCompression) ? "true" : "false");
             magickDefines << MagickDefine("webp", "method", QString::number(m_webPCompression));
             magickDefines << MagickDefine("webp", "preprocessing", (m_iskWebPDithering) ? "1" : "0");
+        }
+
+        if (out_format == "avif") {
+            quality = 100;
+            magickDefines << MagickDefine("avif", "speed", "0");
+            magickDefines << MagickDefine("heic", "chroma", "444");
         }
 
         convertThread->setInputPicture(inputFilename);
