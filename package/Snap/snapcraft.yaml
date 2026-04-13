@@ -80,7 +80,7 @@ parts:
 
   imagemagick7:
     plugin: autotools
-    source: https://imagemagick.org/download/ImageMagick.tar.gz
+    source: https://imagemagick.org/archive/ImageMagick.tar.gz
     autotools-configure-parameters:
       - "--enable-shared"
       - "--disable-installed"
