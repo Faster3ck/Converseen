@@ -12,6 +12,7 @@ export ICON=/usr/share/icons/hicolor/256x256/apps/converseen.png
 export DESKTOP=/usr/share/applications/net.fasterland.converseen.desktop
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export OUTNAME=Converseen-"$VERSION"-anylinux-"$ARCH".AppImage
+export OUTPATH=./dist
 
 # Deploy dependencies
 wget --retry-connrefused --tries=30 "$SHARUN" -O ./quick-sharun
@@ -51,9 +52,4 @@ rm ./AppDir/bin/convert
 rm ./AppDir/bin/magick
 
 # MAKE APPIMAGE WITH URUNTIME
-wget --retry-connrefused --tries=30 "$URUNTIME" -O ./uruntime2appimage
-chmod +x ./uruntime2appimage
-./uruntime2appimage
-
-mkdir -p ./dist
-mv -v ./*.AppImage* ./dist
+./quick-sharun --make-appimage
