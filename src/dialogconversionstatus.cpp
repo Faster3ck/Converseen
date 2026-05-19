@@ -26,6 +26,7 @@
 #include <QList>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QScrollBar>
 #include "dialogconversionstatus.h"
 
 DialogConversionStatus::DialogConversionStatus(QWidget *parent) :
@@ -71,6 +72,11 @@ void DialogConversionStatus::setup(int n_images)
 
 void DialogConversionStatus::conversionStatus(int conv_status, QString fileName)
 {
+    QScrollBar *sb = treeWidget->verticalScrollBar();
+
+    bool wasAtBottom =
+        sb->value() == sb->maximum();
+
     QTreeWidgetItem *item = new QTreeWidgetItem(treeWidget);
 
     if (conv_status == 1)
@@ -78,6 +84,9 @@ void DialogConversionStatus::conversionStatus(int conv_status, QString fileName)
 
     item->setText(0, fileName);
     item->setText(1, m_msg);
+
+    if (wasAtBottom)
+        treeWidget->scrollToBottom();
 }
 
 void DialogConversionStatus::counter(int conv_status)
