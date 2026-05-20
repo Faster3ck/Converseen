@@ -11,7 +11,7 @@ pacman -Syu --noconfirm \
 	git              \
 	djvulibre        \
 	jbigkit          \
-	libheif          \
+	#libheif          \
 	libjpeg-turbo    \
 	libjxl           \
 	libraw           \
@@ -38,9 +38,15 @@ pacman -Syu --noconfirm \
 	kvantum          \
 	zsync
 
+	
+
 	# At the moment, the svt-av1 package is not available on aarch64
 	if [ "$(uname -m)" = "x86_64" ]; then
 	  pacman -S --noconfirm --needed svt-av1
+
+	  # temporary fix for libheif, will be removed soon
+	  pacman -U https://archive.archlinux.org/packages/l/libheif/libheif-1.21.2-2-x86_64.pkg.tar.zst
+	  pacman -S --ignore libheif
 	fi
 
 echo "Installing debloated packages..."
