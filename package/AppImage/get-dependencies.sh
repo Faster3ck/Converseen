@@ -45,7 +45,6 @@ pacman -Syu --noconfirm \
 
 	  # temporary fix for libheif, will be removed soon
 	  pacman -U --noconfirm https://archive.archlinux.org/packages/l/libheif/libheif-1.21.2-2-x86_64.pkg.tar.zst
-	  pacman -S --ignore libheif
 	fi
 
 echo "Installing debloated packages..."
