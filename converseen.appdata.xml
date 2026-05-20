@@ -80,16 +80,18 @@
     <url type="contact">https://converseen.fasterland.net/contact-me/</url>
     <url type="vcs-browser">https://github.com/Faster3ck/Converseen</url>
     <releases>
-        <release version="0.15.2.3" date="2026-04-13">
+        <release version="0.15.2.4" date="2026-05-20">
             <url type="details">https://converseen.fasterland.net/changelog/</url>
             <description>
-                <p>Changelog for 0.15.2.3</p>
+                <p>Changelog for 0.15.2.4</p>
                 <ul>
-                    <li>Fixed quality issue with AVIF files</li>
+                    <li>Added autoscroll to the conversion dialog</li>
+                    <li>Fixed grammar in prompt for creating an output directory</li>
                     <li>Various Bugfixes</li>
                 </ul>
             </description>
         </release>
+        <release version="0.15.2.3" date="2026-04-13" />
         <release version="0.15.2.2" date="2026-03-22" />
         <release version="0.15.2.1" date="2026-03-01" />
         <release version="0.15.2.0" date="2026-02-24" />

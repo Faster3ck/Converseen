@@ -1,3 +1,8 @@
+0.15.2.4 – 2026-05-20
+- Added autoscroll to the conversion dialog
+- Fixed grammar in prompt for creating an output directory
+- Various Bugfixes
+
 0.15.2.3 – 2026-04-13
 - Fixed quality issue with AVIF files
 - Various Bugfixes
