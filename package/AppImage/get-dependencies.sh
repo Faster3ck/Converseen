@@ -11,7 +11,6 @@ pacman -Syu --noconfirm \
 	git              \
 	djvulibre        \
 	jbigkit          \
-	#libheif          \
 	libjpeg-turbo    \
 	libjxl           \
 	libraw           \
