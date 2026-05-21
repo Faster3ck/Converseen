@@ -970,7 +970,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1024"/>
         <source>Maintain aspect ratio</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保持纵横比</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1354"/>
@@ -1130,7 +1130,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../ui/mainwindow.ui" line="1490"/>
         <source>Ctrl+Q</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ctrl+Q</translation>
     </message>
     <message>
         <location filename="../ui/mainwindow.ui" line="1536"/>
