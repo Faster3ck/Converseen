@@ -35,7 +35,8 @@ pacman -Syu --noconfirm \
 	ghostscript      \
 	ffmpeg           \
 	kvantum          \
-	zsync
+	zsync			 \
+	libheif
 
 	
 
@@ -44,7 +45,7 @@ pacman -Syu --noconfirm \
 	  pacman -S --noconfirm --needed svt-av1
 
 	  # temporary fix for libheif, will be removed soon
-	  pacman -U --noconfirm https://archive.archlinux.org/packages/l/libheif/libheif-1.21.2-2-x86_64.pkg.tar.zst
+	  # pacman -U --noconfirm https://archive.archlinux.org/packages/l/libheif/libheif-1.21.2-2-x86_64.pkg.tar.zst
 	fi
 
 echo "Installing debloated packages..."
