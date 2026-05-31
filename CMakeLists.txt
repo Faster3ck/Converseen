@@ -23,9 +23,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include(GNUInstallDirs)
 
 if (USE_QT6)
-    find_package(Qt6 COMPONENTS Core Gui Network Widgets LinguistTools REQUIRED)
+    find_package(Qt6 COMPONENTS Core Gui Network Widgets LinguistTools Concurrent REQUIRED)
 else ()
-    find_package(Qt5 COMPONENTS Core Gui Network Widgets LinguistTools REQUIRED)
+    find_package(Qt5 COMPONENTS Core Gui Network Widgets LinguistTools Concurrent REQUIRED)
 endif()
 
 find_package(ImageMagick REQUIRED COMPONENTS Magick++ MagickWand MagickCore)
@@ -244,6 +244,7 @@ if (USE_QT6)
         Qt6::Gui
         Qt6::Network
         Qt6::Widgets
+		Qt6::Concurrent
         ${ImageMagick_LIBRARIES}
     )
 else()
@@ -252,6 +253,7 @@ else()
         Qt5::Gui
         Qt5::Network
         Qt5::Widgets
+		Qt5::Concurrent
         ${ImageMagick_LIBRARIES}
     )
 endif()
