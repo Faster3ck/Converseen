@@ -105,12 +105,12 @@ p, li { white-space: pre-wrap; }
         <translation>Otevřít cíl</translation>
     </message>
     <message>
-        <location filename="../src/dialogconversionstatus.cpp" line="41"/>
+        <location filename="../src/dialogconversionstatus.cpp" line="42"/>
         <source>Open all the destination folders</source>
         <translation>Otevřít všechny složky cíle</translation>
     </message>
     <message>
-        <location filename="../src/dialogconversionstatus.cpp" line="77"/>
+        <location filename="../src/dialogconversionstatus.cpp" line="83"/>
         <source>Converted</source>
         <translation>Převedeno</translation>
     </message>
@@ -141,7 +141,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Překladatelé:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="455"/>
+        <location filename="../ui/dialoginfo.ui" line="468"/>
         <source>Close</source>
         <translation>Zavřít</translation>
     </message>
@@ -201,7 +201,12 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="369"/>
+        <location filename="../ui/dialoginfo.ui" line="272"/>
+        <source>&lt;strong&gt;Korean translation: &lt;/strong&gt;JungHee Lee - &lt;a href=&quot;https://github.com/MarongHappy&quot;&gt;MarongHappy (GitHub)&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="382"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -226,7 +231,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="281"/>
+        <location filename="../ui/dialoginfo.ui" line="294"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1187,82 +1192,87 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="264"/>
+        <location filename="../src/mainwindowimpl.cpp" line="267"/>
         <source>Open Image</source>
         <translation>Otevřít obrázek</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="504"/>
-        <location filename="../src/mainwindowimpl.cpp" line="510"/>
-        <location filename="../src/mainwindowimpl.cpp" line="519"/>
-        <location filename="../src/mainwindowimpl.cpp" line="523"/>
-        <location filename="../src/mainwindowimpl.cpp" line="527"/>
+        <location filename="../src/mainwindowimpl.cpp" line="549"/>
+        <location filename="../src/mainwindowimpl.cpp" line="555"/>
+        <location filename="../src/mainwindowimpl.cpp" line="564"/>
+        <location filename="../src/mainwindowimpl.cpp" line="568"/>
+        <location filename="../src/mainwindowimpl.cpp" line="572"/>
         <source>Warning</source>
         <translation>Varování</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="524"/>
+        <location filename="../src/mainwindowimpl.cpp" line="569"/>
         <source>No image checked!</source>
         <translation>Není označen žádný obrázek!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="520"/>
+        <location filename="../src/mainwindowimpl.cpp" line="565"/>
         <source>Set an output directory!</source>
         <translation>Nastavit výstupní adresář!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="528"/>
+        <location filename="../src/mainwindowimpl.cpp" line="573"/>
         <source>No images to convert!</source>
         <translation>Žádné obrázky pro převedení!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="545"/>
+        <location filename="../src/mainwindowimpl.cpp" line="590"/>
         <source>Processing...</source>
         <translation>Probíhá zpracování...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="734"/>
+        <location filename="../src/mainwindowimpl.cpp" line="785"/>
         <source>Processing finished!</source>
         <translation>Zpracování dokončeno!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="278"/>
-        <location filename="../src/mainwindowimpl.cpp" line="788"/>
+        <location filename="../src/mainwindowimpl.cpp" line="281"/>
+        <location filename="../src/mainwindowimpl.cpp" line="839"/>
         <source>Open Directory</source>
         <translation>Otevřít adresář</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="464"/>
+        <location filename="../src/mainwindowimpl.cpp" line="397"/>
+        <source>Scanning folders for images...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="509"/>
         <source>n/a</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="723"/>
+        <location filename="../src/mainwindowimpl.cpp" line="774"/>
         <source>Skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="725"/>
+        <location filename="../src/mainwindowimpl.cpp" line="776"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1233"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1284"/>
         <source>Suggest a new name!</source>
         <translation>Navrhnout nový název!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1234"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1285"/>
         <source>New name:</source>
         <translation>Nový název:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1239"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1290"/>
         <source>Please, specify a name!</source>
         <translation>Zadejte, prosím, název!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1240"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1291"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1273,102 +1283,102 @@ Klepněte na Přehlížet pro zrušení této operace.
 Klepněte na Zrušit pro zrušení všech operací.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1257"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1262"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1308"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1313"/>
         <source>Warning!</source>
         <translation>Varování!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1258"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1309"/>
         <source>The filename should not be empty!</source>
         <translation>Název souboru nesmí být prázdný!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1263"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1314"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Vybraný název se shoduje se začátečním. Chcete přepsat původní soubor?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1279"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1330"/>
         <source>Aborted!</source>
         <translation>Zrušeno!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1328"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1379"/>
         <source>No updates available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1329"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1380"/>
         <source>%1 is already updated to the most recent version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1346"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1397"/>
         <source>New version is available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1347"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1398"/>
         <source>A new version of %1 is available!
 Would you download it?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="505"/>
+        <location filename="../src/mainwindowimpl.cpp" line="550"/>
         <source>The output directory does not exist! Would you like to create it?</source>
         <translation>Výstupní adresář neexistuje! Chcete jej vytvořit?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="511"/>
+        <location filename="../src/mainwindowimpl.cpp" line="556"/>
         <source>The directory cannot be created!</source>
         <translation>Adresář nelze vytvořit!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="907"/>
-        <location filename="../src/mainwindowimpl.cpp" line="925"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1098"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1155"/>
+        <location filename="../src/mainwindowimpl.cpp" line="958"/>
+        <location filename="../src/mainwindowimpl.cpp" line="976"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1149"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1206"/>
         <source>Preview</source>
         <translation>Náhled</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="314"/>
+        <location filename="../src/mainwindowimpl.cpp" line="319"/>
         <source>Open Icon file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="314"/>
+        <location filename="../src/mainwindowimpl.cpp" line="319"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="325"/>
+        <location filename="../src/mainwindowimpl.cpp" line="330"/>
         <source>Open Pdf file</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="325"/>
+        <location filename="../src/mainwindowimpl.cpp" line="330"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="335"/>
+        <location filename="../src/mainwindowimpl.cpp" line="340"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="718"/>
+        <location filename="../src/mainwindowimpl.cpp" line="769"/>
         <source>Converted</source>
         <translation type="unfinished">Převedeno</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="285"/>
+        <location filename="../src/mainwindowimpl.cpp" line="288"/>
         <source>Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="359"/>
+        <location filename="../src/mainwindowimpl.cpp" line="364"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>

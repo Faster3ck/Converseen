@@ -105,12 +105,12 @@ p, li { white-space: pre-wrap; }
         <translation>Зупинити</translation>
     </message>
     <message>
-        <location filename="../src/dialogconversionstatus.cpp" line="41"/>
+        <location filename="../src/dialogconversionstatus.cpp" line="42"/>
         <source>Open all the destination folders</source>
         <translation>Відкрити всі теки призначення</translation>
     </message>
     <message>
-        <location filename="../src/dialogconversionstatus.cpp" line="77"/>
+        <location filename="../src/dialogconversionstatus.cpp" line="83"/>
         <source>Converted</source>
         <translation>Перетворено</translation>
     </message>
@@ -118,7 +118,7 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>DialogInfo</name>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="455"/>
+        <location filename="../ui/dialoginfo.ui" line="468"/>
         <source>Close</source>
         <translation>Зачинити</translation>
     </message>
@@ -191,7 +191,7 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;strong&gt;Переклад на німецьку мову: &lt;/strong&gt;Marco Nickolai — &lt;a href=&quot;mailto:nickolai@iad.tu-darmstadt.de&quot;&gt;nickolai@iad.tu-darmstadt.de&lt;/a&gt;</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="369"/>
+        <location filename="../ui/dialoginfo.ui" line="382"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Follow Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;Следите за Converseen:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -226,7 +226,12 @@ p, li { white-space: pre-wrap; }
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Датський переклад: &lt;/span&gt;Martin Eilsoe - &lt;a href=&quot;mailto:martin.eilsoe@gmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; &quot;&gt;martin.eilsoe@gmail.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html</translation>
     </message>
     <message>
-        <location filename="../ui/dialoginfo.ui" line="281"/>
+        <location filename="../ui/dialoginfo.ui" line="272"/>
+        <source>&lt;strong&gt;Korean translation: &lt;/strong&gt;JungHee Lee - &lt;a href=&quot;https://github.com/MarongHappy&quot;&gt;MarongHappy (GitHub)&lt;/a&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ui/dialoginfo.ui" line="294"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;If you appreciate this work and would like to support the project, you are welcome to donate via PayPal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Якщо Ви цінуєте цю роботу та бажаєте підтримати проект, Ви можете пожертвувати нам через Paypal&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -1187,98 +1192,103 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MainWindowImpl</name>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="264"/>
+        <location filename="../src/mainwindowimpl.cpp" line="267"/>
         <source>Open Image</source>
         <translation>Відкрити зображення</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="520"/>
+        <location filename="../src/mainwindowimpl.cpp" line="565"/>
         <source>Set an output directory!</source>
         <translation>Встановити вихідну теку!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="734"/>
+        <location filename="../src/mainwindowimpl.cpp" line="785"/>
         <source>Processing finished!</source>
         <translation>Обробка завершена!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1233"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1284"/>
         <source>Suggest a new name!</source>
         <translation>Введіть нове ім&apos;я!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="528"/>
+        <location filename="../src/mainwindowimpl.cpp" line="573"/>
         <source>No images to convert!</source>
         <translation>Немає зображень для перетворення!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1257"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1262"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1308"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1313"/>
         <source>Warning!</source>
         <translation>Попередження!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1234"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1285"/>
         <source>New name:</source>
         <translation>Нове ім&apos;я:</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="504"/>
-        <location filename="../src/mainwindowimpl.cpp" line="510"/>
-        <location filename="../src/mainwindowimpl.cpp" line="519"/>
-        <location filename="../src/mainwindowimpl.cpp" line="523"/>
-        <location filename="../src/mainwindowimpl.cpp" line="527"/>
+        <location filename="../src/mainwindowimpl.cpp" line="549"/>
+        <location filename="../src/mainwindowimpl.cpp" line="555"/>
+        <location filename="../src/mainwindowimpl.cpp" line="564"/>
+        <location filename="../src/mainwindowimpl.cpp" line="568"/>
+        <location filename="../src/mainwindowimpl.cpp" line="572"/>
         <source>Warning</source>
         <translation>Попередження</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="524"/>
+        <location filename="../src/mainwindowimpl.cpp" line="569"/>
         <source>No image checked!</source>
         <translation>Зображення не вибрані!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="545"/>
+        <location filename="../src/mainwindowimpl.cpp" line="590"/>
         <source>Processing...</source>
         <translation>Обробка…</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="278"/>
-        <location filename="../src/mainwindowimpl.cpp" line="788"/>
+        <location filename="../src/mainwindowimpl.cpp" line="281"/>
+        <location filename="../src/mainwindowimpl.cpp" line="839"/>
         <source>Open Directory</source>
         <translation>Відкрити теку</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="464"/>
+        <location filename="../src/mainwindowimpl.cpp" line="397"/>
+        <source>Scanning folders for images...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../src/mainwindowimpl.cpp" line="509"/>
         <source>n/a</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="505"/>
+        <location filename="../src/mainwindowimpl.cpp" line="550"/>
         <source>The output directory does not exist! Would you like to create it?</source>
         <translation>Тека призначення не створена! Створити теку?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="511"/>
+        <location filename="../src/mainwindowimpl.cpp" line="556"/>
         <source>The directory cannot be created!</source>
         <translation>Тека не створена!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="723"/>
+        <location filename="../src/mainwindowimpl.cpp" line="774"/>
         <source>Skipped</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="725"/>
+        <location filename="../src/mainwindowimpl.cpp" line="776"/>
         <source>Error</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1239"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1290"/>
         <source>Please, specify a name!</source>
         <translation>Будь ласка, вкажіть ім&apos;я!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1240"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1291"/>
         <source>You should specify a name.
 Click Retry to specify a new name.
 Click Ignore to cancel this operation.
@@ -1289,87 +1299,87 @@ Click Abort to cancel all operations.</source>
 Натисніть Скасувати для відміни усіх операцій.</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1258"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1309"/>
         <source>The filename should not be empty!</source>
         <translation>І&apos;мя файлу не може бути порожнім!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1263"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1314"/>
         <source>The name chosen is identical to the initial one. Do you want to overwrite the original file?</source>
         <translation>Выбране і&apos;мя співпадає з початковим файлом. Ви бажаєте замінити оригінальний файл?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1279"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1330"/>
         <source>Aborted!</source>
         <translation>Скасовано!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1328"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1379"/>
         <source>No updates available!</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1329"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1380"/>
         <source>%1 is already updated to the most recent version.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1346"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1397"/>
         <source>New version is available!</source>
         <translation type="unfinished">Маємо нову версію!</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="1347"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1398"/>
         <source>A new version of %1 is available!
 Would you download it?</source>
         <translation type="unfinished">Маємо нову версію %1!
 Ви бажаєте завантажити її?</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="907"/>
-        <location filename="../src/mainwindowimpl.cpp" line="925"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1098"/>
-        <location filename="../src/mainwindowimpl.cpp" line="1155"/>
+        <location filename="../src/mainwindowimpl.cpp" line="958"/>
+        <location filename="../src/mainwindowimpl.cpp" line="976"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1149"/>
+        <location filename="../src/mainwindowimpl.cpp" line="1206"/>
         <source>Preview</source>
         <translation>Передогляд</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="314"/>
+        <location filename="../src/mainwindowimpl.cpp" line="319"/>
         <source>Open Icon file</source>
         <translation>Відкрити файл іконки</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="314"/>
+        <location filename="../src/mainwindowimpl.cpp" line="319"/>
         <source>Microsoft icon (*.ico *.icon)</source>
         <translation>Значок Microsoft (*.ico *.icon)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="325"/>
+        <location filename="../src/mainwindowimpl.cpp" line="330"/>
         <source>Open Pdf file</source>
         <translation>Відкрити Pdf файл</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="325"/>
+        <location filename="../src/mainwindowimpl.cpp" line="330"/>
         <source>Portable Document Format (*.pdf)</source>
         <translation>Portable Document Format (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="335"/>
+        <location filename="../src/mainwindowimpl.cpp" line="340"/>
         <source>Analyzing the file. It may take a while, please wait...</source>
         <translation>Аналіз файлу. Це може зайняти деякий час, будь ласка, зачекайте...</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="718"/>
+        <location filename="../src/mainwindowimpl.cpp" line="769"/>
         <source>Converted</source>
         <translation type="unfinished">Перетворено</translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="285"/>
+        <location filename="../src/mainwindowimpl.cpp" line="288"/>
         <source>Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../src/mainwindowimpl.cpp" line="359"/>
+        <location filename="../src/mainwindowimpl.cpp" line="364"/>
         <source>You are going to import %1 directories. Do you want to import subfolders as well?</source>
         <translation type="unfinished"></translation>
     </message>

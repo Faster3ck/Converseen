@@ -272,7 +272,7 @@ p, li { white-space: pre-wrap; }
              <string>&lt;strong&gt;Korean translation: &lt;/strong&gt;JungHee Lee - &lt;a href=&quot;https://github.com/MarongHappy&quot;&gt;MarongHappy (GitHub)&lt;/a&gt;</string>
             </property>
             <property name="textFormat">
-             <enum>Qt::TextFormat::PlainText</enum>
+             <enum>Qt::TextFormat::RichText</enum>
             </property>
             <property name="openExternalLinks">
              <bool>true</bool>
