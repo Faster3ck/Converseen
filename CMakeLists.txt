@@ -4,7 +4,7 @@ if(WIN32)
     cmake_policy(SET CMP0135 NEW)
 endif()
 
-set(CONVERSEEN_VERSION 0.15.2.4)
+set(CONVERSEEN_VERSION 0.15.2.5)
 
 project(
     converseen
@@ -147,6 +147,7 @@ set(converseen_LANG
     loc/converseen_uk_UA.ts
     loc/converseen_sv_SE.ts
     loc/converseen_zh_CN.ts
+    loc/converseen_ko_KR.ts
 )
 
 if (USE_QT6)
@@ -352,7 +353,7 @@ if(WIN32)
     set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_SOURCE_DIR}/COPYING.txt")
     set(CPACK_RESOURCE_FILE_README "${CMAKE_SOURCE_DIR}/COPYING.txt")
 
-    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000037")
+    set(CPACK_WIX_PRODUCT_GUID "B35C58D3-FBD2-4A81-8371-588F51000038")
     set(CPACK_WIX_UPGRADE_GUID "B35C58D3-FBD2-4A81-8371-588F51EC180F")
 
     include(CPack)

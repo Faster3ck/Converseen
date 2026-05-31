@@ -25,6 +25,9 @@
 #include <QTimer>
 #include <QStyleFactory>
 #include <QImageReader>
+#include <QtConcurrent>
+#include <QFutureWatcher>
+#include <QProgressDialog>
 #include <string>
 #include "mainwindowimpl.h"
 #include "dialogoptions.h"
@@ -278,13 +281,13 @@ void MainWindowImpl::openImportDirectoryDialog()
     QString dir = QFileDialog::getExistingDirectory(this, tr("Open Directory"),
                                                     QDir::homePath(),
                                                     QFileDialog::ShowDirsOnly
-                                                    | QFileDialog::DontResolveSymlinks);
+                                                        | QFileDialog::DontResolveSymlinks);
 
     if (!dir.isNull()) {
         int ret = QMessageBox::question(this, QApplication::applicationName(),
-                                       tr("Do you want to import subfolders as well?"),
-                                       QMessageBox::Yes | QMessageBox::No
-                                       | QMessageBox::Cancel);
+                                        tr("Do you want to import subfolders as well?"),
+                                        QMessageBox::Yes | QMessageBox::No
+                                            | QMessageBox::Cancel);
 
         switch (ret) {
         case QMessageBox::Yes:
@@ -299,10 +302,12 @@ void MainWindowImpl::openImportDirectoryDialog()
             return;
         }
 
-        fileNames = loadDirectoryFiles(dir, readableFiltersList, flag);
+        loadDirectoryFiles(dir, readableFiltersList, flag);
+
+        /*fileNames = loadDirectoryFiles(dir, readableFiltersList, flag);
 
         if (!fileNames.isEmpty())
-            loadFiles(fileNames);
+            loadFiles(fileNames);*/
     }
 }
 
@@ -378,26 +383,66 @@ void MainWindowImpl::dropped(QStringList fileNames, QStringList directories)
         }
 
         for (int i = 0; i < directories.count(); i++) {
-            fileNames = loadDirectoryFiles(directories.at(i), readableFiltersList, flag);
-
-            if (!fileNames.isEmpty())
-                loadFiles(fileNames);
+            loadDirectoryFiles(directories.at(i), readableFiltersList, flag);
         }
     }
 }
 
-QStringList MainWindowImpl::loadDirectoryFiles(const QString &directory, const QStringList &readableFiltersList, const QDirIterator::IteratorFlag &flag)
+void MainWindowImpl::loadDirectoryFiles(
+    const QString &directory,
+    const QStringList &readableFiltersList,
+    const QDirIterator::IteratorFlag &flag)
 {
-    QStringList fileNames;
-    QDirIterator it(directory, readableFiltersList, QDir::Files, flag);
+    auto *progress = new QProgressDialog(
+        tr("Scanning folders for images..."),
+        QString(),
+        0,
+        0,
+        this);
 
-    while (it.hasNext())
-        fileNames << it.next();
+    progress->setWindowTitle(QApplication::applicationName());
+    progress->setSizeGripEnabled(false);
+    progress->setFixedSize(progress->sizeHint());
+    progress->setWindowModality(Qt::ApplicationModal);
+    progress->setCancelButton(nullptr);
+    progress->setMinimumDuration(0);
 
-    if (!fileNames.isEmpty())
-        loadFiles(fileNames);
+    QApplication::setOverrideCursor(Qt::WaitCursor);
+    progress->show();
 
-    return fileNames;
+    auto *watcher = new QFutureWatcher<QStringList>(this);
+
+    connect(watcher, &QFutureWatcher<QStringList>::finished,
+            this, [this, watcher, progress]()
+            {
+                const QStringList fileNames = watcher->result();
+
+                if (!fileNames.isEmpty())
+                    loadFiles(fileNames);
+
+                progress->close();
+                progress->deleteLater();
+
+                QApplication::restoreOverrideCursor();
+
+                watcher->deleteLater();
+            });
+
+    watcher->setFuture(QtConcurrent::run(
+        [directory, readableFiltersList, flag]()
+        {
+            QStringList fileNames;
+
+            QDirIterator it(directory,
+                            readableFiltersList,
+                            QDir::Files,
+                            flag);
+
+            while (it.hasNext())
+                fileNames << it.next();
+
+            return fileNames;
+        }));
 }
 
 void MainWindowImpl::loadFiles(QStringList fileNames)
