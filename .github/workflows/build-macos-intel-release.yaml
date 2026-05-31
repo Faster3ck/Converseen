@@ -106,7 +106,7 @@ jobs:
         zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: ConverseenMacOSIntel
         path: Converseen/build/install/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip

@@ -26,7 +26,7 @@ jobs:
       image: ghcr.io/pkgforge-dev/archlinux:latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Get Converseen Version Number
         id: converseen-version
@@ -68,7 +68,7 @@ jobs:
           chmod +x ./*-appimage.sh && ./*-appimage.sh
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v7
         with:
           name: AppImage-${{ matrix.arch }}
           path: ${{ env.APPIMAGE_DIR }}/dist
@@ -78,7 +78,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Converseen
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: Converseen
 
@@ -107,7 +107,7 @@ jobs:
     name: Converseen Snap Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       
       - name: Build Snap
         uses: snapcore/action-build@v1
@@ -154,7 +154,7 @@ jobs:
           ImageMagick-Installer.exe /MERGETASKS=install_devel /VERYSILENT /DIR=ImageMagick
     
       - name: Checkout Converseen
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: Converseen
       
@@ -195,7 +195,7 @@ jobs:
           cp Converseen/build/package/*.msi artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}/
           cp Converseen/build/package/*.zip artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}/
       
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: Windows-Qt${{ matrix.qt_version }}-${{ matrix.bits }}
           path: 'artifacts-qt${{ matrix.qt_version }}-${{ matrix.bits }}'
@@ -217,7 +217,7 @@ jobs:
         brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool libzip openexr openjpeg webp libraw ghostscript
 
     - name: Checkout Converseen
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         path: Converseen
 
@@ -323,7 +323,7 @@ jobs:
         pwd
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: ConverseenMacOSIntel
         path: build/bin/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip
