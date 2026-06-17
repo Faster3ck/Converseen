@@ -28,6 +28,7 @@ pacman -Syu --noconfirm \
 	libxkbcommon-x11 \
 	libxrandr        \
 	libxtst          \
+	patchelf         \
 	qt6ct            \
 	wget             \
 	xorg-server-xvfb \
