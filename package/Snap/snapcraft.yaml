@@ -26,6 +26,7 @@ apps:
     common-id: net.fasterland.converseen
     command: usr/bin/converseen
     environment:
+      LD_LIBRARY_PATH: $SNAP/usr/lib:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$LD_LIBRARY_PATH
       # Set heif plugins path
       LIBHEIF_PLUGIN_PATH: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/libheif/plugins
       # Set Ghostscript env
