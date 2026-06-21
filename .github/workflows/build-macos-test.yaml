@@ -6,18 +6,45 @@ on:
 jobs:
   build-macos:
     name: Converseen macOS Build
-    runs-on: self-hosted
+    runs-on: macos-14
 
     env:
       BASE_DIR: ${{ github.workspace }}/im_build 
       WORKING_DIR: ${{ github.workspace }}
 
     steps:
+    - name: Install dependencies
+      run: |
+        set -e
+        
+        export HOMEBREW_NO_AUTO_UPDATE=1
+        brew install pkg-config freetype jpeg-turbo libheif libpng libtiff libtool libzip openexr openjpeg webp libraw ghostscript
+
     - name: Checkout Converseen
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
-        repository: Faster3ck/Converseen
         path: Converseen
+
+    - name: Set Environment
+      id: set-env
+      run: |
+        file_content=$(tr -d '\r' <converseen/package/macOS/version.txt)
+
+        VERSION=$(echo "$file_content" | grep -oE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+')
+        BUILD=$(echo "$file_content" | grep -oE '[0-9]+$')
+
+        export LIB_DIR="${BASE_DIR}/lib"
+        export LOCAL_LIB="/usr/local/lib"
+
+        echo "VERSION=$VERSION" >> $GITHUB_ENV
+        echo "BUILD=$BUILD" >> $GITHUB_ENV
+        echo "LIB_DIR=$LIB_DIR" >> $GITHUB_ENV
+        echo "LOCAL_LIB=$LOCAL_LIB" >> $GITHUB_ENV
+
+        echo "ver=$VERSION" >> "$GITHUB_OUTPUT"
+
+        echo "Version: $VERSION"
+        echo "Build Number: $BUILD"
 
     - name: Download ImageMagick
       run: |
@@ -31,6 +58,10 @@ jobs:
         export CFLAGS="-O2"
         export CXXFLAGS="-O2"
         export LDFLAGS="-Wl,-headerpad_max_install_names -Wl,-headerpad,0x2000"
+
+        # Fix openmp compile error with libraw
+        sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw.pc
+        sed -i '' 's/-fopenmp//g' $(brew --prefix libraw)/lib/pkgconfig/libraw_r.pc
         
         ./configure --prefix=${{ github.workspace }}/im_build \
                     --disable-silent-rules \
@@ -59,6 +90,15 @@ jobs:
 
         make
         make install
+
+    - name: Install Qt
+      uses: jurplel/install-qt-action@v4
+      with:
+        aqtversion: '==3.3.*'
+        version: '6.11.*'
+        host: 'mac'
+        target: 'desktop'
+        arch: 'clang_64'
       
     - name: Build Converseen
       run: |
@@ -68,8 +108,9 @@ jobs:
 
         cmake \
          -DUSE_QT6=yes \
+         -DMACOS_DEPLOY=yes \
          -DCMAKE_BUILD_TYPE=Release \
-         -DCMAKE_PREFIX_PATH="/Users/github-runner/Qt/6.9.2/macos;${{ github.workspace }}/im_build" \
+         -DCMAKE_PREFIX_PATH="${{ github.workspace }}/im_build" \
          -DCMAKE_INSTALL_PREFIX=install ..
          
         make
@@ -82,17 +123,12 @@ jobs:
     - name: Compress Converseen
       run: |
         cd Converseen/build/install
-        zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
-        pwd
-
-    - name: Compress Converseen
-      run: |
-        cd Converseen/build/install
-        zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
+        zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-arm64.zip converseen.app
         pwd
 
     - name: Upload Artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v7
       with:
         name: ConverseenMacOSIntel
-        path: build/bin/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip
+        path: Converseen/build/install/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-arm64.zip
+        
