@@ -291,8 +291,8 @@ jobs:
     - name: Install Qt
       uses: jurplel/install-qt-action@v4
       with:
-        aqtversion: '==3.1.*'
-        version: '6.10.*'
+        aqtversion: '==3.3.*'
+        version: '6.11.*'
         host: 'mac'
         target: 'desktop'
         arch: 'clang_64'
@@ -320,11 +320,11 @@ jobs:
     - name: Compress Converseen
       run: |
         cd Converseen/build/install
-        zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip converseen.app
+        zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-arm64.zip converseen.app
         pwd
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v7
       with:
         name: ConverseenMacOSIntel
-        path: build/bin/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip
+        path: Converseen/build/install/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-arm64.zip
