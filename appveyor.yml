@@ -22,8 +22,8 @@ build_script:
     Write-Host "---`nLatest ImageMagick Version Found: $latestVersionNumber`n---"
 
     # Download ImageMagick 32 bit and 64 bit
-    Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x86-dll.exe -OutFile ImageMagick-Installer-32.exe
-    Invoke-WebRequest -Uri https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-x64-dll.exe -OutFile ImageMagick-Installer-64.exe
+    Invoke-WebRequest -Uri https://github.com/ImageMagick/ImageMagick/releases/download/$latestVersionNumber/ImageMagick-$latestVersionNumber-Q16-HDRI-x86-dll.exe -OutFile ImageMagick-Installer-32.exe
+    Invoke-WebRequest -Uri https://github.com/ImageMagick/ImageMagick/releases/download/$latestVersionNumber/ImageMagick-$latestVersionNumber-Q16-HDRI-x64-dll.exe -OutFile ImageMagick-Installer-64.exe
     
     Start-Process -FilePath ".\ImageMagick-Installer-32.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick-32" -NoNewWindow -Wait
     Start-Process -FilePath ".\ImageMagick-Installer-64.exe" -ArgumentList "/MERGETASKS=install_devel", "/VERYSILENT", "/DIR=C:\projects\ImageMagick-64" -NoNewWindow -Wait
