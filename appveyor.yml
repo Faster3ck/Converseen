@@ -3,11 +3,11 @@ skip_non_tags: true
 image: Visual Studio 2022
 environment:
   Qt5_INSTALL_DIR: C:\aqtQt\5.15.2\msvc2019
-  Qt6_INSTALL_DIR: C:\aqtQt\6.10.3\msvc2022_64
+  Qt6_INSTALL_DIR: C:\aqtQt\6.11.1\msvc2022_64
 install:
-  - pip install aqtinstall
+  - pip install git+https://github.com/miurahr/aqtinstall.git@refs/pull/1000/head
   - aqt install-qt windows desktop 5.15.2 win32_msvc2019 --outputdir C:\aqtQt
-  - aqt install-qt windows desktop 6.10.3 win64_msvc2022_64 --outputdir C:\aqtQt
+  - aqt install-qt windows desktop 6.11.1 win64_msvc2022_64 --outputdir C:\aqtQt
 
 build_script:
 - ps: |
