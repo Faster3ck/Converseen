@@ -5,7 +5,8 @@ on:
   workflow_dispatch:
 
 env:
-  APPIMAGE_DIR: package/AppImage
+  APPIMAGE_DIR: "package/AppImage"
+  IM_REPO: "https://github.com/ImageMagick/ImageMagick/releases/download/"
   
 jobs:
   build-appimage:
@@ -151,7 +152,7 @@ jobs:
           
           Write-Host "Latest ImageMagick Version Found: $latestVersionNumber"
 
-          Invoke-WebRequest -Uri "https://imagemagick.org/archive/binaries/ImageMagick-$latestVersionNumber-Q16-HDRI-${{ matrix.imagemagick_arch }}-dll.exe" -OutFile ImageMagick-Installer.exe
+          Invoke-WebRequest -Uri "$IM_REPO/$latestVersionNumber/ImageMagick-$latestVersionNumber-Q16-HDRI-${{ matrix.imagemagick_arch }}-dll.exe" -OutFile ImageMagick-Installer.exe
       
       - name: Install ImageMagick for Windows (${{ matrix.bits }})
         shell: cmd
@@ -250,8 +251,13 @@ jobs:
 
     - name: Download ImageMagick
       run: |
-        wget https://imagemagick.org/archive/ImageMagick.tar.gz
-        tar -xzvf ImageMagick.tar.gz
+        # Get latest version number from GitHub
+        gitTags=$(git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git)
+        lastTagLine=$(echo "$gitTags" | tail -n 1)
+        latestVersionNumber=$(echo "$lastTagLine" | sed -E 's/.*([0-9]+\.[0-9]+\.[0-9]+-[0-9]+).*/\1/')
+        
+        wget $IM_REPO/$latestVersionNumber/ImageMagick-$latestVersionNumber.tar.xz
+        tar -xvf ImageMagick-*.tar.gz
         
     - name: Build ImageMagick
       run: |
