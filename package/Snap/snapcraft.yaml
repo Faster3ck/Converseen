@@ -79,7 +79,6 @@ parts:
     after:
       - imagemagick7
 
-  parts:
   imagemagick7:
     plugin: autotools
     source: https://github.com/ImageMagick/ImageMagick.git
