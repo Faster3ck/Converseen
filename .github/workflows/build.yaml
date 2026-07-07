@@ -257,7 +257,7 @@ jobs:
         latestVersionNumber=$(echo "$lastTagLine" | sed -E 's/.*([0-9]+\.[0-9]+\.[0-9]+-[0-9]+).*/\1/')
         
         wget $IM_REPO/$latestVersionNumber/ImageMagick-$latestVersionNumber.tar.xz
-        tar -xvf ImageMagick-*.tar.gz
+        tar -xvf ImageMagick-*.tar.xz
         
     - name: Build ImageMagick
       run: |
