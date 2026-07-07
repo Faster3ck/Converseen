@@ -128,7 +128,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: snap
-          path: ${{ steps.snapcraft.outputs.snap }}
+          path: "package/Snap/${{ steps.snapcraft.outputs.snap }}"
 
   build-windows:
     name: Converseen Windows Build
