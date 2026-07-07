@@ -4,7 +4,7 @@ if(WIN32)
     cmake_policy(SET CMP0135 NEW)
 endif()
 
-set(CONVERSEEN_VERSION 0.15.2.5)
+set(CONVERSEEN_VERSION 0.15.2.6)
 
 project(
     converseen

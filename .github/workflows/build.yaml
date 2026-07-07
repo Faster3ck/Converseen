@@ -115,6 +115,11 @@ jobs:
         with:
           path: package/Snap
 
+      - run: |
+        sudo snap install --dangerous ${{ steps.snapcraft.outputs.snap }}
+
+        converseen -p
+
   build-windows:
     name: Converseen Windows Build
     runs-on: windows-2022
@@ -321,10 +326,9 @@ jobs:
       run: |
         cd Converseen/build/install
         zip -r --symlinks -9 converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-arm64.zip converseen.app
-        pwd
 
     - name: Upload Artifact
       uses: actions/upload-artifact@v7
       with:
-        name: ConverseenMacOSIntel
+        name: ConverseenMacOS_arm64
         path: Converseen/build/install/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-arm64.zip

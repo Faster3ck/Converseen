@@ -1,5 +1,5 @@
 pkgname=converseen
-pkgver=0.15.2.5
+pkgver=0.15.2.6
 pkgrel=1
 pkgdesc='Batch image converter and resizer'
 arch=('x86_64' 'aarch64')
