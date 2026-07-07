@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 
 set -euo pipefail
-
-IM_URL="https://mirror.dogado.de/imagemagick/ImageMagick.tar.bz2"
-IM_ARCHIVE="ImageMagick.tar.bz2"
+        
+IM_REPO="https://github.com/ImageMagick/ImageMagick/releases/download/"
 INSTALL_PREFIX="/usr"
 SYSCONF_DIR="/etc"
 
@@ -13,12 +12,17 @@ msg() {
 
 # === SCRIPT ===
 
+# Get latest ImageMagick version number from GitHub
+gitTags=$(git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git)
+lastTagLine=$(echo "$gitTags" | tail -n 1)
+latestVersionNumber=$(echo "$lastTagLine" | sed -E 's/.*([0-9]+\.[0-9]+\.[0-9]+-[0-9]+).*/\1/')
+
 # Download ImageMagick
 msg "Download ImageMagick..."
-wget -O "$IM_ARCHIVE" "$IM_URL"
+wget $IM_REPO/$latestVersionNumber/ImageMagick-$latestVersionNumber.tar.xz
 
 msg "Extracting archive..."
-tar -xvf "$IM_ARCHIVE"
+tar -xvf ImageMagick-*.tar.gz
 
 cd ImageMagick-*/
 
