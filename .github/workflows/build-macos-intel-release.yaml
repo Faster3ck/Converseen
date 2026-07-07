@@ -16,7 +16,8 @@ jobs:
     env:
       BASE_DIR: ${{ github.workspace }}/im_build 
       WORKING_DIR: ${{ github.workspace }}
-
+      IM_REPO: "https://github.com/ImageMagick/ImageMagick/releases/download/"
+      
     steps:
     - name: Checkout Converseen
       uses: actions/checkout@v4
@@ -41,8 +42,13 @@ jobs:
 
     - name: Download ImageMagick
       run: |
-        wget https://imagemagick.org/archive/ImageMagick.tar.gz
-        tar -xzvf ImageMagick.tar.gz
+        # Get latest version number from GitHub
+        gitTags=$(git ls-remote --sort="version:refname" --tags https://github.com/ImageMagick/ImageMagick.git)
+        lastTagLine=$(echo "$gitTags" | tail -n 1)
+        latestVersionNumber=$(echo "$lastTagLine" | sed -E 's/.*([0-9]+\.[0-9]+\.[0-9]+-[0-9]+).*/\1/')
+        
+        wget $IM_REPO/$latestVersionNumber/ImageMagick-$latestVersionNumber.tar.xz
+        tar -xvf ImageMagick-*.tar.xz
         
     - name: Build ImageMagick
       run: |
