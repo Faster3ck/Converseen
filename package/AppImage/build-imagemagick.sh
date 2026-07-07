@@ -22,7 +22,7 @@ msg "Download ImageMagick..."
 wget $IM_REPO/$latestVersionNumber/ImageMagick-$latestVersionNumber.tar.xz
 
 msg "Extracting archive..."
-tar -xvf ImageMagick-*.tar.gz
+tar -xvf ImageMagick-*.tar.xz
 
 cd ImageMagick-*/
 
