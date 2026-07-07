@@ -79,9 +79,25 @@ parts:
     after:
       - imagemagick7
 
+  parts:
   imagemagick7:
     plugin: autotools
-    source: https://imagemagick.org/archive/ImageMagick.tar.gz
+    source: https://github.com/ImageMagick/ImageMagick.git
+    source-type: git
+    override-pull: |
+      # 1. Run the standard pull process to fetch the repository
+      craftctl default
+      
+      # 2. Find the latest stable tag (matches patterns like '7.1.2-27')
+      LATEST_TAG=$(git tag -l | grep -E '^[0-9]+\.[0-9]+\.[0-9]+-[0-9]+$' | sort -V | tail -n1)
+      
+      echo "Latest stable tag found: $LATEST_TAG"
+      
+      # 3. Force checkout to the latest stable tag found
+      git checkout $LATEST_TAG
+      
+      # 4. Dynamically set the snap version using the tag name
+      craftctl set version=$LATEST_TAG
     autotools-configure-parameters:
       - "--enable-shared"
       - "--disable-installed"
