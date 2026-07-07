@@ -115,10 +115,10 @@ jobs:
         with:
           path: package/Snap
 
-      - run: |
-        sudo snap install --dangerous ${{ steps.snapcraft.outputs.snap }}
-
-        converseen -p
+      - name: Snap Test Run
+        run: |
+          sudo snap install --dangerous ${{ steps.snapcraft.outputs.snap }}
+          converseen -p
 
   build-windows:
     name: Converseen Windows Build
