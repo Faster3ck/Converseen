@@ -68,6 +68,14 @@ parts:
       - libproxy-dev
     stage-packages:
       - libxkbcommon0
+      - libxkbcommon-x11-0
+      - libxcb-cursor0
+      - libxcb-shape0
+      - libxcb-icccm4
+      - libxcb-image0
+      - libxcb-keysyms1
+      - libxcb-render-util0
+      - libxcb-xinerama0
     build-environment:
       - CMAKE_PREFIX_PATH: >
           /snap/kf6-core24-sdk/current/usr
@@ -84,19 +92,25 @@ parts:
     source: https://github.com/ImageMagick/ImageMagick.git
     source-type: git
     override-pull: |
-      # 1. Run the standard pull process to fetch the repository
       craftctl default
-      
-      # 2. Find the latest stable tag (matches patterns like '7.1.2-27')
-      LATEST_TAG=$(git tag -l | grep -E '^[0-9]+\.[0-9]+\.[0-9]+-[0-9]+$' | sort -V | tail -n1)
-      
-      echo "Latest stable tag found: $LATEST_TAG"
-      
-      # 3. Force checkout to the latest stable tag found
-      git checkout $LATEST_TAG
-      
-      # 4. Dynamically set the snap version using the tag name
-      craftctl set version=$LATEST_TAG
+
+      git fetch --tags
+
+      LATEST_TAG=$(
+        git tag -l |
+        grep -E '^[0-9]+\.[0-9]+\.[0-9]+-[0-9]+$' |
+        sort -V |
+        tail -n1
+      )
+
+      if [ -z "$LATEST_TAG" ]; then
+          echo "No stable ImageMagick release found."
+          exit 1
+      fi
+
+      echo "Building ImageMagick $LATEST_TAG"
+
+      git checkout "$LATEST_TAG"
     autotools-configure-parameters:
       - "--enable-shared"
       - "--disable-installed"
