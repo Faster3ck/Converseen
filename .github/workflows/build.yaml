@@ -125,6 +125,11 @@ jobs:
           sudo snap install --dangerous ${{ steps.snapcraft.outputs.snap }}
           converseen -p
 
+      - uses: actions/upload-artifact@v3
+        with:
+          name: snap
+          path: ${{ steps.snapcraft.outputs.snap }}
+
   build-windows:
     name: Converseen Windows Build
     runs-on: windows-2022
