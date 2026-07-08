@@ -222,10 +222,10 @@ jobs:
           cpack -B package
 
       - name: Windows Test Run
-        shell: cmd
+        shell: powershell
         run: |
           cd Converseen/build/package/Converseen/
-          converseen.exe -p
+          .\converseen.exe -p
       
       - name: Prepare Artifacts (Qt ${{ matrix.qt_version }} ${{ matrix.bits }})
         shell: cmd
@@ -362,7 +362,7 @@ jobs:
 
     - name: MacOS Converseen Test
       run: |
-        cd Converseen/build
+        cd Converseen/build/install
         chmod +x ./converseen.app/Contents/MacOS/converseen
         ./converseen.app/Contents/MacOS/converseen -p
 
