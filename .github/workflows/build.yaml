@@ -224,7 +224,12 @@ jobs:
       - name: Windows Test Run
         shell: powershell
         run: |
-          cd Converseen/build/package/Converseen/
+          cd Converseen/build/package
+          ls
+          
+          Expand-Archive -Path "Converseen.zip" -DestinationPath "."
+          cp Converseen
+          
           .\converseen.exe -p
       
       - name: Prepare Artifacts (Qt ${{ matrix.qt_version }} ${{ matrix.bits }})
