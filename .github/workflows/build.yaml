@@ -228,7 +228,7 @@ jobs:
           ls
           
           Expand-Archive -Path "Converseen.zip" -DestinationPath "."
-          cp Converseen
+          cd Converseen
           
           .\converseen.exe -p
       
