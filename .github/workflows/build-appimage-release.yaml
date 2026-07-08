@@ -11,6 +11,7 @@ on:
 
 env:
   APPIMAGE_DIR: package/AppImage
+  QT_QPA_PLATFORM: offscreen
   
 jobs:
   build-appimage:
@@ -70,6 +71,17 @@ jobs:
         run: |
           cd "$APPIMAGE_DIR"
           chmod +x ./*-appimage.sh && ./*-appimage.sh
+
+      - name: AppImage Test run
+        run: |
+          cd "${{ env.APPIMAGE_DIR }}/dist"
+
+          APP_TEST=$(ls Converseen-*.AppImage)
+
+          echo "AppImage found: $APP_TEST"
+          
+          chmod +x $APP_TEST
+          ./$APP_TEST -p
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
