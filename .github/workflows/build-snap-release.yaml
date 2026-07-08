@@ -9,9 +9,22 @@ on:
 permissions:
   contents: write
 
+env:
+  QT_QPA_PLATFORM: offscreen
+
 jobs:
   snap-build-release:
-    runs-on: ubuntu-latest
+    name: Converseen Snap Build (${{ matrix.arch }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - arch: amd64
+            os: ubuntu-latest
+          - arch: arm64
+            os: ubuntu-24.04-arm
+
     steps:
       - uses: actions/checkout@v6
       
@@ -20,6 +33,11 @@ jobs:
         id: snapcraft
         with:
           path: package/Snap
+    
+      - name: Snap Test Run
+        run: |
+          sudo snap install --dangerous ${{ steps.snapcraft.outputs.snap }}
+          converseen -p
 
       - name: Publish Snap
         uses: snapcore/action-publish@v1
