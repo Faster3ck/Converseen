@@ -71,9 +71,14 @@ jobs:
 
       - name: AppImage Test run
         run: |
-          cd "$APPIMAGE_DIR"
-          chmod +x AppImage-${{ matrix.arch }}
-          ./AppImage-${{ matrix.arch }} -p
+          cd "${{ env.APPIMAGE_DIR }}/dist"
+
+          APP_TEST=$(ls Converseen-*.AppImage)
+
+          echo "AppImage found: $APP_TEST"
+          
+          chmod +x $APP_TEST
+          ./$APP_TEST -p
 
       - name: Upload artifact
         uses: actions/upload-artifact@v7
@@ -225,7 +230,6 @@ jobs:
         shell: powershell
         run: |
           cd Converseen/build/package
-          ls
           
           Expand-Archive -Path "Converseen.zip" -DestinationPath "."
           cd Converseen
