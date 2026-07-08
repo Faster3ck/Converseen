@@ -7,6 +7,7 @@ on:
 env:
   APPIMAGE_DIR: "package/AppImage"
   IM_REPO: "https://github.com/ImageMagick/ImageMagick/releases/download/"
+  QT_QPA_PLATFORM: offscreen
   
 jobs:
   build-appimage:
@@ -68,6 +69,12 @@ jobs:
           cd "$APPIMAGE_DIR"
           chmod +x ./*-appimage.sh && ./*-appimage.sh
 
+      - name: AppImage Test run
+        run: |
+          cd "$APPIMAGE_DIR"
+          chmod +x AppImage-${{ matrix.arch }}
+          ./AppImage-${{ matrix.arch }} -p
+
       - name: Upload artifact
         uses: actions/upload-artifact@v7
         with:
@@ -105,8 +112,17 @@ jobs:
           make
 
   snap-build:
-    name: Converseen Snap Build
-    runs-on: ubuntu-latest
+    name: Converseen Snap Build (${{ matrix.arch }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        include:
+          - arch: amd64
+            os: ubuntu-latest
+          - arch: arm64
+            os: ubuntu-24.04-arm
+
     steps:
       - uses: actions/checkout@v6
       
@@ -115,20 +131,17 @@ jobs:
         id: snapcraft
         with:
           path: package/Snap
-
+    
       - name: Snap Test Run
         run: |
-          pwd
-          ls
-
-          cd package/Snap
           sudo snap install --dangerous ${{ steps.snapcraft.outputs.snap }}
           converseen -p
-
-      - uses: actions/upload-artifact@v3
+      
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v7
         with:
-          name: snap
-          path: "package/Snap/${{ steps.snapcraft.outputs.snap }}"
+          name: snap-${{ matrix.arch }}
+          path: ${{ steps.snapcraft.outputs.snap }}
 
   build-windows:
     name: Converseen Windows Build
@@ -207,6 +220,12 @@ jobs:
           cmake -G "NMake Makefiles" -DCMAKE_BUILD_TYPE:STRING=Release -DImageMagick_EXECUTABLE_DIR="${{ github.workspace }}\ImageMagick" ${{ matrix.cmake_extra_flags }} ..
           nmake
           cpack -B package
+
+      - name: Windows Test Run
+        shell: cmd
+        run: |
+          cd Converseen/build/package/Converseen/
+          converseen.exe -p
       
       - name: Prepare Artifacts (Qt ${{ matrix.qt_version }} ${{ matrix.bits }})
         shell: cmd
@@ -340,6 +359,12 @@ jobs:
       run: |
         cd Converseen/build
         cmake --install .
+
+    - name: MacOS Converseen Test
+      run: |
+        cd Converseen/build
+        chmod +x ./converseen.app/Contents/MacOS/converseen
+        ./converseen.app/Contents/MacOS/converseen -p
 
     - name: Compress Converseen
       run: |
