@@ -125,10 +125,6 @@ jobs:
       with:
         name: ConverseenMacOSIntel
         path: Converseen/build/install/converseen-${{ env.VERSION }}-${{ env.BUILD }}_beta_macos-x86_64.zip
-
-    - name: Remove Workspace
-      run: |
-        rm -rf ~/actions-runner/_work
         
   create_release:
     name: 'Create Release'
