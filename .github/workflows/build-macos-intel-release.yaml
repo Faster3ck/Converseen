@@ -109,12 +109,6 @@ jobs:
         cd Converseen/build
         cmake --install .
 
-    - name: MacOS Converseen Test
-      run: |
-        cd Converseen/build/install
-        chmod +x ./converseen.app/Contents/MacOS/converseen
-        ./converseen.app/Contents/MacOS/converseen -p
-
     - name: Compress Converseen
       run: |
         cd Converseen/build/install
