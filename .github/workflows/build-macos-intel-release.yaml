@@ -17,7 +17,6 @@ jobs:
       BASE_DIR: ${{ github.workspace }}/im_build 
       WORKING_DIR: ${{ github.workspace }}
       IM_REPO: "https://github.com/ImageMagick/ImageMagick/releases/download/"
-      QT_QPA_PLATFORM: offscreen
       
     steps:
     - name: Checkout Converseen
