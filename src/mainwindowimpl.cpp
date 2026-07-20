@@ -713,9 +713,13 @@ void MainWindowImpl::convert()
         }
 
         if (out_format == "avif") {
-            quality = 100;
-            magickDefines << MagickDefine("avif", "speed", "0");
-            magickDefines << MagickDefine("heic", "chroma", "444");
+            // ImageMagick maybe maps quality=100 to lossless (?) AVIF.
+            // Recent libaom versions reject the default chroma delta-q
+            // configuration in this mode.
+
+            quality = 99;
+            magickDefines << MagickDefine("avif", "speed", "6");
+            magickDefines << MagickDefine("heic", "chroma", "420");
         }
 
         convertThread->setInputPicture(inputFilename);

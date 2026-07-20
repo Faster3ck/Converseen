@@ -1,3 +1,7 @@
+0.15.2.7 – 2026-07-20
+- Fixed AOM encoder error during AVIF conversions
+- Various Bugfixes
+
 0.15.2.6 – 2026-07-07
 - Updated French translation
 - Various Bugfixes
