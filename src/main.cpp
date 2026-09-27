@@ -27,6 +27,11 @@
 #include <QCommandLineParser>
 #include <QWidget>
 #include <QStyleFactory>
+
+#if defined(Q_OS_WIN)
+#include <windows.h>
+#endif
+
 #include <Magick++.h>
 
 #include "mainwindowimpl.h"
@@ -39,8 +44,38 @@
 #include "translator.h"
 #include "globals.h"
 
+#if defined(Q_OS_WIN)
+namespace
+{
+
+void restrictDllSearchPath()
+{
+    HMODULE kernel32 = GetModuleHandleW(L"kernel32.dll");
+
+    if (kernel32 == nullptr)
+        return;
+
+    using SetDefaultDllDirectoriesFunction = BOOL (WINAPI *)(DWORD);
+
+    auto setDefaultDllDirectories =
+        reinterpret_cast<SetDefaultDllDirectoriesFunction>(
+            GetProcAddress(kernel32, "SetDefaultDllDirectories")
+        );
+
+    if (setDefaultDllDirectories != nullptr) {
+        setDefaultDllDirectories(LOAD_LIBRARY_SEARCH_DEFAULT_DIRS);
+    }
+}
+
+}
+#endif
+
 int main(int argc, char ** argv)
 {
+#if defined(Q_OS_WIN)
+    restrictDllSearchPath();
+#endif
+
 	InitializeMagick(*argv);
 
     QCoreApplication::setApplicationName("Converseen");
