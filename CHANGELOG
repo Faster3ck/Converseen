@@ -1,4 +1,8 @@
-0.15.2.8 – 2026-08-07
+0.15.2.9 – 2026-10-05
+- Fixed potential DLL conflicts on Windows by restricting the DLL search path before initializing ImageMagick
+- Various Bugfixes
+
+0.15.2.8 – 2026-09-07
 - Added Georgian translation
 - Various Bugfixes
 
