@@ -35,7 +35,9 @@ public:
 private:
     void setLanguage();
     void setOverwriteMode();
+#ifndef DISABLE_CHECK_UPDATES
     void setAutoUpdates();
+#endif
     void setTheme();
     void loadSettings();
     void populateStyles();

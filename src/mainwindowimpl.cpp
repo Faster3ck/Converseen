@@ -36,7 +36,9 @@
 #include "inisettings.h"
 #include "sizeutil.h"
 #include "dialogmultipageeditor.h"
+#ifndef DISABLE_CHECK_UPDATES
 #include "dialogshowupdatemsg.h"
+#endif
 #include "globals.h"
 
 using namespace Magick;
@@ -50,7 +52,9 @@ MainWindowImpl::MainWindowImpl(QWidget * parent)
     iAList = new QList<ImageAttributes>;
     convertThread = new Converter(this);
     dlgCStatus = new DialogConversionStatus(this);
+#ifndef DISABLE_CHECK_UPDATES
     updateChecker = new UpdateChecker();
+#endif
 
     CachingSystem::init();
 
@@ -84,7 +88,9 @@ MainWindowImpl::MainWindowImpl(QWidget * parent)
     connect(labelPreview, SIGNAL(previewReady(int, int, double, double)), this, SLOT(showImageInformations(int, int, double, double)));
 
     connect(checkRelative, SIGNAL(stateChanged(int)), this, SLOT(setRelativeSizeCheckboxes(int)));
+#ifndef DISABLE_CHECK_UPDATES
     connect(updateChecker, SIGNAL(updateAvailable(bool)), this, SLOT(updateAvailable(bool)));
+#endif
 
     createActions();
     setupMenu();
@@ -117,7 +123,9 @@ MainWindowImpl::MainWindowImpl(QWidget * parent)
         spin_geoHeight->setValue(1);
     }
 
+#ifndef DISABLE_CHECK_UPDATES
     checkForUpdates();
+#endif
 
     checkVersion();
 }
@@ -181,7 +189,11 @@ void MainWindowImpl::createActions()
     connect(actionInfo, SIGNAL(triggered()), this, SLOT(about()));
     connect(actionDonatePaypal, SIGNAL(triggered()), this, SLOT(openPaypalLink()));
     connect(actionReportBug, SIGNAL(triggered()), this, SLOT(bugReport()));
+#ifndef DISABLE_CHECK_UPDATES
     connect(actionCheckForUpdates, SIGNAL(triggered()), this, SLOT(manualCheckForUpdate()));
+#else
+    actionCheckForUpdates->setVisible(false);
+#endif
     connect(actionHelp, SIGNAL(triggered()), this, SLOT(onlineHelp()));
 
     // Create first toolbar button
@@ -1366,6 +1378,7 @@ void MainWindowImpl::openPaypalLink()
     QDesktopServices::openUrl(QUrl("https://converseen.fasterland.net/donate/", QUrl::TolerantMode));
 }
 
+#ifndef DISABLE_CHECK_UPDATES
 void MainWindowImpl::checkForUpdates()
 {
     // Checks for updates at program startup
@@ -1408,6 +1421,7 @@ void MainWindowImpl::showUpdateDialog()
         QDesktopServices::openUrl(QUrl(DESTINATION_URL, QUrl::TolerantMode));
     }
 }
+#endif
 
 void MainWindowImpl::bugReport()
 {

@@ -44,6 +44,10 @@ DialogOptions::DialogOptions(QWidget *parent) :
 
     populateStyles();
 
+#ifdef DISABLE_CHECK_UPDATES
+    groupBox_3->setVisible(false);  // "Updates" group box
+#endif
+
     loadSettings();
 }
 
@@ -75,6 +79,7 @@ void DialogOptions::setOverwriteMode()
         IniSettings::setOverwriteMode(true);
 }
 
+#ifndef DISABLE_CHECK_UPDATES
 void DialogOptions::setAutoUpdates()
 {
     bool enabled;
@@ -86,6 +91,7 @@ void DialogOptions::setAutoUpdates()
 
     IniSettings::setAutoChechUpdates(enabled);
 }
+#endif
 
 void DialogOptions::setTheme()
 {
@@ -111,7 +117,9 @@ void DialogOptions::saveOptions()
 {
     setLanguage();
     setOverwriteMode();
+#ifndef DISABLE_CHECK_UPDATES
     setAutoUpdates();
+#endif
     setTheme();
 
     IniSettings::settings->sync();
@@ -127,11 +135,13 @@ void DialogOptions::loadSettings()
     else
         radioAskFirst->setChecked(true);
 
+#ifndef DISABLE_CHECK_UPDATES
     bool autoUpdates = IniSettings::isAutoChechUpdates();
     if (autoUpdates)
         checkCheckUpdates->setCheckState(Qt::Checked);
     else
         checkCheckUpdates->setCheckState(Qt::Unchecked);
+#endif
 
     Translator t;
     

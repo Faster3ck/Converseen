@@ -14,18 +14,22 @@ set(PROJECT_NAME_CAPITALIZED "Converseen")
 
 option(USE_QT6 "Enable this if you want to use Qt6, instead of Qt5" NO)
 option(MACOS_DEPLOY "Enable this if you want to deploy the program on MacOS" NO)
+option(DISABLE_CHECK_UPDATES "Enable this if you want to disable checking for updates" NO)
 
 set(GUI "converseen")
-set(QT_USE_QTNETWORK TRUE)
+if (NOT DISABLE_CHECK_UPDATES)
+    set(QT_NETWORK_COMPONENT Network)
+    set(QT_USE_QTNETWORK TRUE)
+endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(GNUInstallDirs)
 
 if (USE_QT6)
-    find_package(Qt6 COMPONENTS Core Gui Network Widgets LinguistTools Concurrent REQUIRED)
+    find_package(Qt6 COMPONENTS Core Gui ${QT_NETWORK_COMPONENT} Widgets LinguistTools Concurrent REQUIRED)
 else ()
-    find_package(Qt5 COMPONENTS Core Gui Network Widgets LinguistTools Concurrent REQUIRED)
+    find_package(Qt5 COMPONENTS Core Gui ${QT_NETWORK_COMPONENT} Widgets LinguistTools Concurrent REQUIRED)
 endif()
 
 find_package(ImageMagick REQUIRED COMPONENTS Magick++ MagickWand MagickCore)
@@ -76,7 +80,6 @@ set(converseen_SOURCES
     src/dialogmultipageeditor.cpp
     src/dialogoptions.cpp
     src/dialogquality.cpp
-    src/dialogshowupdatemsg.cpp
     src/formats.cpp
     src/globals.cpp
     src/inisettings.cpp
@@ -87,7 +90,6 @@ set(converseen_SOURCES
     src/sizeutil.cpp
     src/thumbnailgeneratorthread.cpp
     src/translator.cpp
-    src/updatechecker.cpp
     src/magickdefine.cpp
     src/Modules/multipageconverter.cpp
 )
@@ -101,7 +103,6 @@ set(converseen_HEADERS
     src/dialogmultipageeditor.h
     src/dialogoptions.h
     src/dialogquality.h
-    src/dialogshowupdatemsg.h
     src/formats.h
     src/globals.h
     src/inisettings.h
@@ -112,7 +113,6 @@ set(converseen_HEADERS
     src/sizeutil.h
     src/thumbnailgeneratorthread.h
     src/translator.h
-    src/updatechecker.h
     src/magickdefine.h
     src/Modules/multipageconverter.h
 )
@@ -121,11 +121,26 @@ set(converseen_UIS
     ui/dialogconversionstatus.ui
     ui/dialoginfo.ui
     ui/dialogmultipageeditor.ui
-    ui/dialogshowupdatemsg.ui
     ui/dialogoptions.ui
     ui/dialogquality.ui
     ui/mainwindow.ui
 )
+
+if (NOT DISABLE_CHECK_UPDATES)
+    list(APPEND converseen_SOURCES
+        src/dialogshowupdatemsg.cpp
+        src/updatechecker.cpp
+    )
+    list(APPEND converseen_HEADERS
+        src/dialogshowupdatemsg.h
+        src/updatechecker.h
+    )
+    list(APPEND converseen_UIS
+        ui/dialogshowupdatemsg.ui
+    )
+else()
+    add_definitions(-DDISABLE_CHECK_UPDATES)
+endif()
 
 set(converseen_RESOURCES
     resources.qrc
@@ -239,11 +254,19 @@ else()
 endif()
 
 
+if (NOT DISABLE_CHECK_UPDATES)
+    if (USE_QT6)
+        set(QT_NETWORK_LIB Qt6::Network)
+    else()
+        set(QT_NETWORK_LIB Qt5::Network)
+    endif()
+endif()
+
 if (USE_QT6)
     target_link_libraries(${GUI}
         Qt6::Core
         Qt6::Gui
-        Qt6::Network
+        ${QT_NETWORK_LIB}
         Qt6::Widgets
 		Qt6::Concurrent
         ${ImageMagick_LIBRARIES}
@@ -252,7 +275,7 @@ else()
     target_link_libraries(${GUI}
         Qt5::Core
         Qt5::Gui
-        Qt5::Network
+        ${QT_NETWORK_LIB}
         Qt5::Widgets
 		Qt5::Concurrent
         ${ImageMagick_LIBRARIES}
