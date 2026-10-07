@@ -43,7 +43,9 @@
 #include "pixtreewidget.h"
 #include "mylabelpreviewer.h"
 #include "cachingsystem.h"
+#ifndef DISABLE_CHECK_UPDATES
 #include "updatechecker.h"
+#endif
 #include "magickdefine.h"
 
 class QDropEvent;
@@ -83,7 +85,9 @@ private:
     void checkVersion();
 
     void saveSettings();    // This method is called when the program is closed
+#ifndef DISABLE_CHECK_UPDATES
     void showUpdateDialog();
+#endif
 
     QString renameFileNameOnPrefixSuffix(QString oldFileName);
     QString renameFileNameOnProgressiveN(QString oldFileName);
@@ -93,7 +97,9 @@ private:
 
     Converter *convertThread;
     DialogConversionStatus *dlgCStatus;
+#ifndef DISABLE_CHECK_UPDATES
     UpdateChecker *updateChecker;
+#endif
 
     int curr_index;             // Indice dell'immagine che si sta processando dalla lista iAList
 
@@ -167,9 +173,11 @@ private slots:
 
     void openPaypalLink();
 
+#ifndef DISABLE_CHECK_UPDATES
     void checkForUpdates();
     void manualCheckForUpdate();
     void updateAvailable(const bool &isAvailable);
+#endif
     void bugReport();
     void onlineHelp();
 
