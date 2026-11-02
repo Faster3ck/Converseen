@@ -130,6 +130,15 @@ parts:
       - "--with-freetype=yes"
       - "--with-x=no"
       - "--prefix=/usr"
+    # Workaround for the KDE Core24 SDK: its GCC toolchain is missing
+    # some compiler support files (e.g. crtbeginS.o and libgcc.a).
+    # Explicitly point GCC to the system toolchain to ensure successful linking.
+    # Revisit this workaround if the SDK updates its bundled GCC toolchain.
+    build-environment:
+      - CC: "gcc -B/usr/lib/gcc/$CRAFT_ARCH_TRIPLET_BUILD_FOR/13/"
+      - CFLAGS: "${CFLAGS:-}"
+      - CXXFLAGS: "${CXXFLAGS:-} -B/usr/lib/gcc/$CRAFT_ARCH_TRIPLET_BUILD_FOR/13/"
+      - LDFLAGS: "${LDFLAGS:-} -L/usr/lib/gcc/$CRAFT_ARCH_TRIPLET_BUILD_FOR/13/ -L/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/"
     build-packages:
       - libffi-dev
       - zlib1g-dev
