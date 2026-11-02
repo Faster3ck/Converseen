@@ -250,7 +250,7 @@ jobs:
 
   build-macos:
     name: Converseen macOS Build
-    runs-on: macos-14
+    runs-on: macos-15
 
     env:
       BASE_DIR: ${{ github.workspace }}/im_build 
