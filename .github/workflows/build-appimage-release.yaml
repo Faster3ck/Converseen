@@ -144,9 +144,12 @@ jobs:
       - name: Known Hosts
         id: known-hosts
         run: |
-          SF_HOSTS=$(ssh-keyscan -H frs.sourceforge.net)
-          echo "known-hosts=$SF_HOSTS" >> $GITHUB_OUTPUT
-
+          {
+            echo 'known-hosts<<EOF'
+            ssh-keyscan -H frs.sourceforge.net
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+  
       - name: Install SSH key
         uses: shimataro/ssh-key-action@v2
         with:
